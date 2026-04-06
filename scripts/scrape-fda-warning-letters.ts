@@ -17,6 +17,8 @@
  *   npx tsx scripts/scrape-fda-warning-letters.ts --dry-run       # don't write
  *   npx tsx scripts/scrape-fda-warning-letters.ts --verbose       # noisy logs
  *   npx tsx scripts/scrape-fda-warning-letters.ts --limit 5       # cap results
+ *   npx tsx scripts/scrape-fda-warning-letters.ts --enrich        # back-fill content on existing letters
+ *   npx tsx scripts/scrape-fda-warning-letters.ts --enrich --slug join-josie-717986
  *   npx tsx scripts/scrape-fda-warning-letters.ts --help          # this help
  */
 
@@ -46,9 +48,15 @@ const args = process.argv.slice(2);
 const DRY_RUN = args.includes("--dry-run");
 const VERBOSE = args.includes("--verbose");
 const HELP = args.includes("--help") || args.includes("-h");
+const ENRICH = args.includes("--enrich");
 const LIMIT_IDX = args.indexOf("--limit");
 const LIMIT =
   LIMIT_IDX >= 0 ? parseInt(args[LIMIT_IDX + 1] ?? "0", 10) : 0;
+const SLUG_IDX = args.indexOf("--slug");
+const SLUG_FILTER =
+  SLUG_IDX >= 0 ? (args[SLUG_IDX + 1] ?? "").trim() : "";
+
+const LETTER_REQUEST_TIMEOUT_MS = 30_000;
 
 // ---------------- constants ----------------
 
@@ -323,6 +331,244 @@ function rowToLetter(row: RawIndexRow): WarningLetter | null {
   };
 }
 
+// ---------------- letter content extraction ----------------
+
+interface LetterContent {
+  subject: string;
+  violationsSummary: string;
+  issuingOffice: string;
+  rawText: string;
+}
+
+/**
+ * Fetch and parse an individual FDA warning letter page. Returns null on
+ * any error (404, timeout, parse failure). Strips the FDA nav/footer
+ * boilerplate and extracts:
+ *   - subject:           the "Subject:" line from the letter header
+ *   - violationsSummary: a verbatim 2-3 sentence opening quote, or the
+ *                        first ~300 chars of body if no clean summary
+ *   - issuingOffice:     the FDA office that issued the letter
+ *   - rawText:           first ~1500 chars of body for human review
+ *
+ * The browser `page` argument is a Playwright Page instance; caller owns
+ * browser lifecycle so we can reuse one context across many letters.
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function fetchLetterContent(page: any, url: string): Promise<LetterContent | null> {
+  try {
+    vlog(`  fetching letter: ${url}`);
+    const resp = await page.goto(url, {
+      waitUntil: "domcontentloaded",
+      timeout: LETTER_REQUEST_TIMEOUT_MS,
+    });
+    if (!resp || !resp.ok()) {
+      elog(
+        `  letter fetch failed: HTTP ${resp ? resp.status() : "no response"} for ${url}`,
+      );
+      return null;
+    }
+    try {
+      await page.waitForLoadState("networkidle", { timeout: 5000 });
+    } catch {
+      // tolerate slow network idle
+    }
+
+    const extracted: LetterContent | null = await page.evaluate(() => {
+      // Find the main article/content region, fall back to <main>/<body>.
+      const main =
+        (document.querySelector("article") as HTMLElement | null) ||
+        (document.querySelector("main") as HTMLElement | null) ||
+        (document.querySelector(".main-content") as HTMLElement | null) ||
+        document.body;
+      if (!main) return null;
+
+      // Strip navigation / footer / side-bars that live inside main on
+      // fda.gov. We mutate a clone so we don't affect the live DOM.
+      const clone = main.cloneNode(true) as HTMLElement;
+      const stripSelectors = [
+        "nav",
+        "header",
+        "footer",
+        ".breadcrumb",
+        ".lcds-breadcrumb",
+        ".usa-breadcrumb",
+        ".lcds-sidenav",
+        ".lcds-section-nav",
+        "aside",
+        "script",
+        "style",
+        "noscript",
+      ];
+      for (const sel of stripSelectors) {
+        clone.querySelectorAll(sel).forEach((el) => el.remove());
+      }
+
+      const text = (clone.textContent || "")
+        .replace(/\r/g, "")
+        .replace(/\u00a0/g, " ")
+        .replace(/[ \t]+/g, " ")
+        .replace(/\n{3,}/g, "\n\n")
+        .trim();
+
+      // Subject: look for "Subject:" line — FDA puts it in the letter
+      // header block near the top of the body.
+      let subject = "";
+      const subjectMatch = text.match(/Subject:\s*([^\n]+)/i);
+      if (subjectMatch) {
+        subject = subjectMatch[1].trim();
+      }
+
+      // Issuing office: FDA typically stamps the letter "Office of ..."
+      // or "Center for ..." near the top. We grab the first matching line.
+      let issuingOffice = "";
+      const officePatterns = [
+        /\b(Office of [A-Z][A-Za-z ,&\-]+?)(?=\s{2,}|\n|,\s*[A-Z]{2}\b)/,
+        /\b(Center for [A-Z][A-Za-z ,&\-]+?)(?=\s{2,}|\n|,\s*[A-Z]{2}\b)/,
+        /\b(Division of [A-Z][A-Za-z ,&\-]+?)(?=\s{2,}|\n|,\s*[A-Z]{2}\b)/,
+      ];
+      for (const pat of officePatterns) {
+        const m = text.match(pat);
+        if (m) {
+          issuingOffice = m[1].trim().replace(/\s+/g, " ");
+          break;
+        }
+      }
+
+      // Violations summary: prefer the first paragraph that begins with
+      // "This letter" / "The U.S. Food and Drug Administration" — that's
+      // FDA's standard opening sentence that names the violation.
+      let violationsSummary = "";
+      const openingPatterns = [
+        /((?:This (?:letter|is to|warning letter|correspondence)|The United States Food and Drug Administration|The U\.?S\.? Food and Drug Administration|This is to advise)[^\n]{40,600}?[.?!])(?:\s|$)/i,
+      ];
+      for (const pat of openingPatterns) {
+        const m = text.match(pat);
+        if (m) {
+          violationsSummary = m[1].trim();
+          break;
+        }
+      }
+      if (!violationsSummary) {
+        // Fall back: first 300 chars of the body text after the subject
+        // line (or after the header if no subject found).
+        const cutIdx = subjectMatch
+          ? text.indexOf(subjectMatch[0]) + subjectMatch[0].length
+          : 0;
+        violationsSummary = text.slice(cutIdx, cutIdx + 300).trim();
+      }
+
+      const rawText = text.slice(0, 1500);
+
+      return {
+        subject,
+        violationsSummary,
+        issuingOffice,
+        rawText,
+      };
+    });
+
+    if (!extracted) {
+      elog(`  letter parse returned null for ${url}`);
+      return null;
+    }
+    return extracted;
+  } catch (err) {
+    elog(`  letter fetch error for ${url}: ${(err as Error).message}`);
+    return null;
+  }
+}
+
+/**
+ * Enrich mode: walk existing letters in the JSON and back-fill their
+ * subject, violations_summary, and issuing_office from the live FDA page.
+ * Never overwrites with empty strings — if extraction fails or produces
+ * nothing useful, the original value is preserved.
+ */
+async function runEnrich(): Promise<void> {
+  const existing = loadExisting();
+  log(`Loaded ${existing.length} existing letters for enrichment.`);
+
+  const targets = SLUG_FILTER
+    ? existing.filter((l) => l.id === SLUG_FILTER)
+    : existing;
+  if (SLUG_FILTER && targets.length === 0) {
+    elog(`No letter with id "${SLUG_FILTER}" found.`);
+    return;
+  }
+  log(`Enriching ${targets.length} letter${targets.length === 1 ? "" : "s"}.`);
+
+  const pw = await loadPlaywright();
+  if (!pw) {
+    elog(
+      "Playwright is not installed. Install with `npm install -D playwright && npx playwright install chromium`.",
+    );
+    return;
+  }
+
+  const browser = await pw.chromium.launch({ headless: true });
+  let updatedCount = 0;
+  const failures: string[] = [];
+  try {
+    const ctx = await browser.newContext({ userAgent: REAL_CHROME_UA });
+    const page = await ctx.newPage();
+
+    for (const letter of targets) {
+      log(`  * ${letter.id}`);
+      const content = await fetchLetterContent(page, letter.fda_url);
+      if (!content) {
+        failures.push(letter.id);
+        await sleep(REQUEST_DELAY_MS);
+        continue;
+      }
+
+      // Only overwrite when we actually have something substantive.
+      if (content.subject && content.subject.length > 3) {
+        letter.subject = content.subject;
+      }
+      if (
+        content.violationsSummary &&
+        content.violationsSummary.length > 40
+      ) {
+        letter.violations_summary = content.violationsSummary;
+      }
+      if (content.issuingOffice && content.issuingOffice.length > 3) {
+        letter.issuing_office = content.issuingOffice;
+      }
+      updatedCount += 1;
+      log(`    subject: ${letter.subject.slice(0, 100)}`);
+      await sleep(REQUEST_DELAY_MS);
+    }
+
+    await ctx.close();
+  } finally {
+    await browser.close();
+  }
+
+  log("");
+  log(`Enriched ${updatedCount}/${targets.length} letters.`);
+  if (failures.length > 0) {
+    log(`Failures (${failures.length}):`);
+    for (const id of failures) log(`  - ${id}`);
+  }
+
+  if (DRY_RUN) {
+    log("--dry-run set; not modifying the JSON.");
+    return;
+  }
+  if (updatedCount === 0) {
+    log("Nothing updated; JSON left untouched.");
+    return;
+  }
+
+  // Write the full list back (not just targets) so slug-filtered runs
+  // don't drop the unfiltered entries.
+  const merged = [...existing].sort((a, b) =>
+    b.letter_date.localeCompare(a.letter_date),
+  );
+  writeFileSync(DATA_PATH, JSON.stringify(merged, null, 2) + "\n");
+  log(`Wrote ${merged.length} letters to ${DATA_PATH}.`);
+}
+
 // ---------------- main ----------------
 
 function printHelp() {
@@ -336,10 +582,13 @@ USAGE
   npx tsx scripts/scrape-fda-warning-letters.ts [flags]
 
 FLAGS
-  --dry-run    Show what would be added but don't write the JSON
-  --verbose    Print detailed progress for each row
-  --limit N    Stop after adding N new letters
-  --help, -h   Show this help
+  --dry-run      Show what would be added but don't write the JSON
+  --verbose      Print detailed progress for each row
+  --limit N      Stop after adding N new letters
+  --enrich       Back-fill subject/violations_summary/issuing_office on
+                 letters already in the JSON by fetching their pages
+  --slug <id>    (with --enrich) enrich only the letter with this id
+  --help, -h     Show this help
 
 NOTES
   - Requires Playwright (npm install -D playwright && npx playwright install chromium)
@@ -353,6 +602,16 @@ NOTES
 async function main() {
   if (HELP) {
     printHelp();
+    return;
+  }
+
+  if (ENRICH) {
+    log("FDA Warning Letters scraper — enrich mode");
+    log(`  data file:  ${DATA_PATH}`);
+    log(`  dry run:    ${DRY_RUN}`);
+    log(`  slug:       ${SLUG_FILTER || "(all)"}`);
+    log("");
+    await runEnrich();
     return;
   }
 
