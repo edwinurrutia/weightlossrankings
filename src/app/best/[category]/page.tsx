@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAllProviders } from "@/lib/data";
@@ -13,6 +12,9 @@ import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import DYORCallout from "@/components/marketing/DYORCallout";
+import Citation from "@/components/research/Citation";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 interface CategoryDef {
   label: string;
@@ -211,30 +213,8 @@ const CATEGORY_MAP: Record<string, CategoryDef> = {
   },
 };
 
-// Cohesive editorial photography — same warm, natural-light,
-// cream-palette aesthetic used on the homepage hero and category cards.
-const CATEGORY_HERO_IMAGE: Record<string, string> = {
-  "semaglutide-providers":
-    "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1600&q=80&auto=format&fit=crop",
-  "tirzepatide-providers":
-    "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1600&q=80&auto=format&fit=crop",
-  "compounded-semaglutide":
-    "https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=1600&q=80&auto=format&fit=crop",
-  "compounded-tirzepatide":
-    "https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=1600&q=80&auto=format&fit=crop",
-  "cheapest-semaglutide":
-    "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=1600&q=80&auto=format&fit=crop",
-  "cheapest-tirzepatide":
-    "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=1600&q=80&auto=format&fit=crop",
-  "weight-loss-programs":
-    "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?w=1600&q=80&auto=format&fit=crop",
-  "weight-loss-supplements":
-    "https://images.unsplash.com/photo-1576086265779-619d2f54d96b?w=1600&q=80&auto=format&fit=crop",
-  "meal-delivery-for-weight-loss":
-    "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&q=80&auto=format&fit=crop",
-  "fitness-apps-for-weight-loss":
-    "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?w=1600&q=80&auto=format&fit=crop",
-};
+// Editorial brand: type-driven hero, no stock photography. Matches the
+// homepage and the rest of the site.
 
 export function generateStaticParams() {
   return Object.keys(CATEGORY_MAP).map((category) => ({ category }));
@@ -353,65 +333,83 @@ export default async function RankingsPage({
           { name: label, url: `/best/${category}` },
         ]}
       />
-      {CATEGORY_HERO_IMAGE[category] && (
-        <div className="relative w-full h-[260px] sm:h-[300px] overflow-hidden bg-brand-text-primary">
-          <Image
-            src={CATEGORY_HERO_IMAGE[category]}
-            alt={label}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-80"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0">
-            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-8">
-              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-white/80 mb-2">
-                Updated {updatedDate} · Expert Reviewed
-              </span>
-              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.1] tracking-tight max-w-3xl">
-                {label.startsWith("Best") || label.startsWith("Cheapest") || label.startsWith("Compounded")
-                  ? label
-                  : `Best ${label}`}{" "}
-                in 2026
-              </h1>
-            </div>
-          </div>
-        </div>
-      )}
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
 
-        {!CATEGORY_HERO_IMAGE[category] && (
-          <PageHero
-            badges={[
-              { icon: "📅", text: `Updated ${updatedDate}` },
-              { icon: "✅", text: "Expert Reviewed" },
-            ]}
-            title={
-              <>
-                {label.startsWith("Best") || label.startsWith("Cheapest") || label.startsWith("Compounded")
-                  ? label
-                  : `Best ${label}`}{" "}
-                in 2026 —{" "}
-                <span className="bg-brand-gradient bg-clip-text text-transparent">
-                  Ranked &amp; Reviewed
-                </span>
-              </>
-            }
-            subtitle={intro}
-          >
-            <AffiliateDisclosure />
-          </PageHero>
-        )}
+        <PageHero
+          title={
+            <>
+              {label.startsWith("Best") || label.startsWith("Cheapest") || label.startsWith("Compounded")
+                ? label
+                : `Best ${label}`}{" "}
+              in 2026 —{" "}
+              <span className="bg-brand-gradient bg-clip-text text-transparent">
+                Ranked &amp; Reviewed
+              </span>
+            </>
+          }
+          subtitle={intro}
+        >
+          <AffiliateDisclosure />
+        </PageHero>
 
-        {CATEGORY_HERO_IMAGE[category] && (
-          <div className="space-y-4">
-            <p className="text-lg text-brand-text-secondary leading-relaxed max-w-3xl">
-              {intro}
-            </p>
-            <AffiliateDisclosure />
-          </div>
-        )}
+        {/* Methodology & regulatory grounding — cites the registry */}
+        <section
+          aria-labelledby="methodology-heading"
+          className="rounded-2xl border border-brand-violet/15 bg-white p-5 text-sm text-brand-text-secondary leading-relaxed space-y-3"
+        >
+          <h2
+            id="methodology-heading"
+            className="text-sm font-semibold uppercase tracking-wider text-brand-text-primary"
+          >
+            How we rank &amp; what counts as &ldquo;legit&rdquo;
+          </h2>
+          <p>
+            Every provider in this ranking is scored against our published{" "}
+            <Link
+              href="/methodology"
+              className="text-brand-violet underline font-semibold"
+            >
+              six-factor rubric
+            </Link>
+            <Citation source="wlr-pricing-index" n={1} /> — value, effectiveness,
+            user experience, trust &amp; safety, accessibility, and support.
+            {(category === "compounded-semaglutide" ||
+              category === "compounded-tirzepatide" ||
+              category === "semaglutide-providers" ||
+              category === "tirzepatide-providers") && (
+              <>
+                {" "}Compounded GLP-1s from licensed 503A and 503B pharmacies
+                are legal under federal compounding law
+                <Citation source="fda-503a-compounding" n={2} />, with
+                additional tolerances historically allowed while semaglutide
+                and tirzepatide were on the FDA Drug Shortage List
+                <Citation source="fda-drug-shortage-list" n={3} />.
+              </>
+            )}
+          </p>
+          <p>
+            Brand-name Wegovy, Zepbound, Ozempic, and Mounjaro are separately
+            FDA-approved under their own NDA numbers
+            <Citation source="fda-wegovy-approval" n={4} />
+            <Citation source="fda-zepbound-approval" n={5} />. Published Phase
+            3 efficacy for semaglutide 2.4 mg (~14.9% mean weight loss over 68
+            weeks) comes from the STEP 1 trial
+            <Citation source="step1-nejm-2021" n={6} />, and for tirzepatide
+            (~20.9% at the 15 mg dose over 72 weeks) from SURMOUNT-1
+            <Citation source="surmount1-nejm-2022" n={7} />; the SURMOUNT-5
+            head-to-head published in 2025 compared the two directly
+            <Citation source="surmount5-nejm-2025" n={8} />.
+          </p>
+          <p>
+            Insurance coverage for anti-obesity medications varies widely by
+            state Medicaid program and commercial plan
+            <Citation source="kff-medicaid-obesity-drug-coverage" n={9} />
+            <Citation source="cms-medicaid-prescription-drugs" n={10} />.
+            Compounded and brand-name GLP-1s are generally FSA/HSA eligible
+            with a prescription under IRS Publication 502
+            <Citation source="irs-pub-502-medical-expenses" n={11} />.
+          </p>
+        </section>
 
         <DYORCallout variant="compact" />
 
@@ -534,6 +532,25 @@ export default async function RankingsPage({
         )}
 
         <FAQSection items={FAQ_ITEMS} />
+
+        {/* Central citation registry — matches the numbering used above */}
+        <SourcesPanel
+          sourceIds={[
+            "wlr-pricing-index", // 1
+            "fda-503a-compounding", // 2
+            "fda-drug-shortage-list", // 3
+            "fda-wegovy-approval", // 4
+            "fda-zepbound-approval", // 5
+            "step1-nejm-2021", // 6
+            "surmount1-nejm-2022", // 7
+            "surmount5-nejm-2025", // 8
+            "kff-medicaid-obesity-drug-coverage", // 9
+            "cms-medicaid-prescription-drugs", // 10
+            "irs-pub-502-medical-expenses", // 11
+          ]}
+          heading="Sources & methodology"
+          dataAsOf={getLatestVerificationDate()}
+        />
       </div>
     </main>
   );

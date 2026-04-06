@@ -12,6 +12,9 @@ import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import Citation from "@/components/research/Citation";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 export function generateStaticParams() {
   return getAllDrugSlugs();
@@ -118,6 +121,95 @@ export default async function DrugPage({
 
   const maxDoseIndex = drugData.dosing_schedule.length - 1;
 
+  // -------------------------------------------------------------------
+  // Per-drug citation plan. Each drug page cites the FDA label for its
+  // specific molecule plus the pivotal Phase 3 trial(s) behind its
+  // efficacy and safety claims. The order here determines the numbering
+  // in the inline markers and the SourcesPanel below.
+  // -------------------------------------------------------------------
+  interface DrugCitationPlan {
+    fdaLabel: string;
+    fdaApprovalExtra?: string;
+    pivotalTrial: string;
+    headToHead?: string;
+    cvOutcomes?: string;
+    t2dGuideline?: string;
+  }
+
+  const CITATION_PLANS: Record<string, DrugCitationPlan> = {
+    semaglutide: {
+      fdaLabel: "fda-wegovy-approval",
+      fdaApprovalExtra: "fda-ozempic-label",
+      pivotalTrial: "step1-nejm-2021",
+      headToHead: "surmount5-nejm-2025",
+      cvOutcomes: "select-nejm-2023",
+      t2dGuideline: "ada-standards-of-care-2025",
+    },
+    wegovy: {
+      fdaLabel: "fda-wegovy-approval",
+      pivotalTrial: "step1-nejm-2021",
+      headToHead: "surmount5-nejm-2025",
+      cvOutcomes: "select-nejm-2023",
+    },
+    ozempic: {
+      fdaLabel: "fda-ozempic-label",
+      pivotalTrial: "sustain6-nejm-2016",
+      cvOutcomes: "sustain6-nejm-2016",
+      t2dGuideline: "ada-standards-of-care-2025",
+    },
+    rybelsus: {
+      fdaLabel: "fda-rybelsus-label",
+      pivotalTrial: "oasis1-lancet-2023",
+      t2dGuideline: "ada-standards-of-care-2025",
+    },
+    tirzepatide: {
+      fdaLabel: "fda-zepbound-approval",
+      fdaApprovalExtra: "fda-mounjaro-label",
+      pivotalTrial: "surmount1-nejm-2022",
+      headToHead: "surmount5-nejm-2025",
+      t2dGuideline: "ada-standards-of-care-2025",
+    },
+    zepbound: {
+      fdaLabel: "fda-zepbound-approval",
+      pivotalTrial: "surmount1-nejm-2022",
+      headToHead: "surmount5-nejm-2025",
+    },
+    mounjaro: {
+      fdaLabel: "fda-mounjaro-label",
+      pivotalTrial: "surpass2-nejm-2021",
+      t2dGuideline: "ada-standards-of-care-2025",
+    },
+  };
+
+  const plan: DrugCitationPlan =
+    CITATION_PLANS[drug] ?? {
+      fdaLabel: "fda-wegovy-approval",
+      pivotalTrial: "step1-nejm-2021",
+    };
+
+  // Ordered list of sources rendered on this page. Deduped but preserves
+  // first-seen order so inline n markers stay sequential.
+  const citationOrder: string[] = [];
+  const pushCite = (id?: string) => {
+    if (id && !citationOrder.includes(id)) citationOrder.push(id);
+  };
+  pushCite(plan.fdaLabel);
+  pushCite(plan.fdaApprovalExtra);
+  pushCite(plan.pivotalTrial);
+  pushCite(plan.headToHead);
+  pushCite(plan.cvOutcomes);
+  pushCite(plan.t2dGuideline);
+  // Shared regulatory/compliance sources referenced on every drug page
+  pushCite("fda-503a-compounding");
+  pushCite("fda-drug-shortage-list");
+  pushCite("irs-pub-502-medical-expenses");
+
+  // Helper: 1-based display number for a source id.
+  const n = (id: string): number => {
+    const idx = citationOrder.indexOf(id);
+    return idx === -1 ? 0 : idx + 1;
+  };
+
   const faqItems = [
     {
       question: `Is ${drugData.name} FDA-approved?`,
@@ -211,6 +303,13 @@ export default async function DrugPage({
                   </td>
                   <td className="py-3.5 px-5 text-brand-text-primary">
                     {drugData.fda_status}
+                    <Citation source={plan.fdaLabel} n={n(plan.fdaLabel)} />
+                    {plan.fdaApprovalExtra && (
+                      <Citation
+                        source={plan.fdaApprovalExtra}
+                        n={n(plan.fdaApprovalExtra)}
+                      />
+                    )}
                   </td>
                 </tr>
                 <tr>
@@ -219,6 +318,7 @@ export default async function DrugPage({
                   </td>
                   <td className="py-3.5 px-5 text-brand-text-primary">
                     {formattedApprovalDate}
+                    <Citation source={plan.fdaLabel} n={n(plan.fdaLabel)} />
                   </td>
                 </tr>
               </tbody>
@@ -236,6 +336,13 @@ export default async function DrugPage({
           </h2>
           <p className="text-brand-text-secondary leading-relaxed">
             {drugData.how_it_works}
+            <Citation source={plan.pivotalTrial} n={n(plan.pivotalTrial)} />
+            {plan.t2dGuideline && (
+              <Citation
+                source={plan.t2dGuideline}
+                n={n(plan.t2dGuideline)}
+              />
+            )}
           </p>
         </section>
 
@@ -249,7 +356,9 @@ export default async function DrugPage({
           </h2>
           <p className="text-sm text-brand-text-secondary">
             {drugData.name} uses a gradual dose escalation to minimize side
-            effects. Always follow your prescriber&apos;s guidance.
+            effects. Always follow your prescriber&apos;s guidance and the
+            current FDA label
+            <Citation source={plan.fdaLabel} n={n(plan.fdaLabel)} />.
           </p>
           <div className="space-y-3">
             {drugData.dosing_schedule.map((step, index) => {
@@ -296,10 +405,18 @@ export default async function DrugPage({
           <div className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6">
             <p className="text-brand-text-secondary leading-relaxed text-sm">
               {drugData.side_effects}
+              <Citation source={plan.fdaLabel} n={n(plan.fdaLabel)} />
+              <Citation
+                source={plan.pivotalTrial}
+                n={n(plan.pivotalTrial)}
+              />
             </p>
             <p className="mt-4 text-xs text-brand-text-secondary/70">
               This is not a complete list. Consult your healthcare provider or
-              prescriber for full safety information.
+              prescriber for full safety information. The complete adverse
+              reaction profile is published in the current FDA prescribing
+              information
+              <Citation source={plan.fdaLabel} n={n(plan.fdaLabel)} />.
             </p>
           </div>
         </section>
@@ -325,10 +442,26 @@ export default async function DrugPage({
               </span>
               <p className="text-brand-text-primary font-medium leading-relaxed">
                 {drugData.clinical_trial_summary}
+                <Citation
+                  source={plan.pivotalTrial}
+                  n={n(plan.pivotalTrial)}
+                />
+                {plan.headToHead && (
+                  <Citation
+                    source={plan.headToHead}
+                    n={n(plan.headToHead)}
+                  />
+                )}
+                {plan.cvOutcomes && plan.cvOutcomes !== plan.pivotalTrial && (
+                  <Citation
+                    source={plan.cvOutcomes}
+                    n={n(plan.cvOutcomes)}
+                  />
+                )}
               </p>
               <footer className="mt-3 text-xs text-brand-text-secondary/70">
                 Source: Published clinical trial data (STEP / SURMOUNT trial
-                series)
+                series) — see the Sources panel below for full citations.
               </footer>
             </blockquote>
           </section>
@@ -363,8 +496,23 @@ export default async function DrugPage({
           </h2>
           <p className="text-sm text-brand-text-secondary">
             Starting prices for compounded GLP-1 medications from top
-            providers, sorted cheapest first. Prices may vary based on dose and
-            promo availability.
+            providers, sorted cheapest first. Compounded{" "}
+            {drugData.generic_name.toLowerCase()} from licensed 503A and 503B
+            pharmacies is legal under federal compounding law
+            <Citation
+              source="fda-503a-compounding"
+              n={n("fda-503a-compounding")}
+            />, with additional tolerances historically allowed while the
+            molecule has appeared on the FDA Drug Shortage List
+            <Citation
+              source="fda-drug-shortage-list"
+              n={n("fda-drug-shortage-list")}
+            />. Both compounded and brand-name prescriptions are generally
+            FSA/HSA eligible under IRS Publication 502
+            <Citation
+              source="irs-pub-502-medical-expenses"
+              n={n("irs-pub-502-medical-expenses")}
+            />. Prices may vary based on dose and promo availability.
           </p>
           <div className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm overflow-hidden">
             <div className="overflow-x-auto">
@@ -416,6 +564,13 @@ export default async function DrugPage({
         </section>
 
         <FAQSection items={faqItems} />
+
+        {/* Central citation registry — matches numbering used above */}
+        <SourcesPanel
+          sourceIds={citationOrder}
+          heading="Sources & methodology"
+          dataAsOf={getLatestVerificationDate()}
+        />
 
         {/* Trademark notice */}
         <aside className="rounded-2xl bg-brand-text-secondary/5 border border-brand-text-secondary/10 p-5 text-xs text-brand-text-secondary leading-relaxed">

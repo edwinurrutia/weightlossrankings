@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllDrugs } from "@/lib/drugs";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 export const metadata: Metadata = {
   title: "GLP-1 Drug Guides — Semaglutide, Tirzepatide & More",
@@ -47,6 +49,21 @@ export default function DrugsIndexPage() {
             </p>
           </Link>
         ))}
+      </div>
+
+      {/* Sources — FDA labels behind every drug listed on this index */}
+      <div className="mt-12">
+        <SourcesPanel
+          sourceIds={[
+            "fda-wegovy-approval",
+            "fda-zepbound-approval",
+            "fda-ozempic-label",
+            "fda-mounjaro-label",
+            "fda-rybelsus-label",
+          ]}
+          heading="Sources & methodology"
+          dataAsOf={getLatestVerificationDate()}
+        />
       </div>
     </div>
   );
