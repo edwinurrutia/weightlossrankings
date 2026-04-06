@@ -1,0 +1,802 @@
+{
+  "AL": {
+    "name": "Alabama",
+    "slug": "alabama",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 199,
+    "top_cities": ["Birmingham", "Montgomery", "Mobile", "Huntsville"],
+    "obesity_rate": 39.9,
+    "obesity_rank": 2,
+    "regulatory_notes": "Alabama allows telehealth prescriptions for GLP-1 medications. Compounded semaglutide is legally available through licensed compounding pharmacies registered with the Alabama Board of Pharmacy.",
+    "key_facts": [
+      "Alabama has the 2nd-highest adult obesity rate in the US at 39.9%",
+      "Alabama Medicaid covers GLP-1s only for type 2 diabetes diagnosis",
+      "Telehealth visits are legally recognized for GLP-1 prescriptions statewide"
+    ]
+  },
+  "AK": {
+    "name": "Alaska",
+    "slug": "alaska",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 229,
+    "top_cities": ["Anchorage", "Fairbanks", "Juneau", "Wasilla"],
+    "obesity_rate": 32.7,
+    "obesity_rank": 24,
+    "regulatory_notes": "Alaska permits telehealth GLP-1 prescriptions, which is essential given the state's vast rural geography. Compounded semaglutide can be shipped statewide from licensed pharmacies.",
+    "key_facts": [
+      "Alaska's adult obesity rate is 32.7%, near the US median",
+      "Telehealth is critical in Alaska due to limited rural clinic access",
+      "Alaska Medicaid restricts GLP-1 coverage to diabetes diagnosis"
+    ]
+  },
+  "AZ": {
+    "name": "Arizona",
+    "slug": "arizona",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Limited",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Phoenix", "Tucson", "Mesa", "Chandler", "Scottsdale"],
+    "obesity_rate": 31.3,
+    "obesity_rank": 28,
+    "regulatory_notes": "Arizona has a robust telehealth framework that supports GLP-1 prescribing through online providers. AHCCCS (Arizona Medicaid) coverage of GLP-1s for obesity is limited and typically requires diabetes diagnosis.",
+    "key_facts": [
+      "Arizona's adult obesity rate is 31.3%",
+      "AHCCCS Medicaid coverage of GLP-1s is limited to diabetes",
+      "Phoenix is one of the largest telehealth markets in the Southwest"
+    ]
+  },
+  "AR": {
+    "name": "Arkansas",
+    "slug": "arkansas",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 195,
+    "top_cities": ["Little Rock", "Fort Smith", "Fayetteville", "Springdale"],
+    "obesity_rate": 38.7,
+    "obesity_rank": 4,
+    "regulatory_notes": "Arkansas allows telehealth GLP-1 prescriptions. The state has one of the highest obesity rates in the country, driving strong demand for compounded semaglutide and brand-name GLP-1s.",
+    "key_facts": [
+      "Arkansas has the 4th-highest adult obesity rate in the US at 38.7%",
+      "Arkansas Medicaid covers GLP-1s only for type 2 diabetes",
+      "Compounded semaglutide is widely available through telehealth"
+    ]
+  },
+  "CA": {
+    "name": "California",
+    "slug": "california",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 219,
+    "top_cities": ["Los Angeles", "San Diego", "San Jose", "San Francisco", "Sacramento"],
+    "obesity_rate": 28.1,
+    "obesity_rank": 44,
+    "regulatory_notes": "California has one of the most progressive telehealth regulations in the country and actively supports GLP-1 prescribing through licensed online providers. Medi-Cal covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "California's adult obesity rate is 28.1%, among the lowest in the US",
+      "Medi-Cal covers GLP-1s for obesity with prior authorization",
+      "California has the largest telehealth GLP-1 market in the country"
+    ]
+  },
+  "CO": {
+    "name": "Colorado",
+    "slug": "colorado",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Limited",
+    "average_compounded_price_monthly": 209,
+    "top_cities": ["Denver", "Colorado Springs", "Aurora", "Fort Collins"],
+    "obesity_rate": 25.1,
+    "obesity_rank": 50,
+    "regulatory_notes": "Colorado has a strong telehealth framework for GLP-1 prescribing. Health First Colorado (Medicaid) limits GLP-1 coverage primarily to diabetes patients.",
+    "key_facts": [
+      "Colorado has the lowest adult obesity rate in the US at 25.1%",
+      "Health First Colorado covers GLP-1s mainly for diabetes",
+      "Telehealth GLP-1 services are widely available statewide"
+    ]
+  },
+  "CT": {
+    "name": "Connecticut",
+    "slug": "connecticut",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 224,
+    "top_cities": ["Bridgeport", "New Haven", "Stamford", "Hartford"],
+    "obesity_rate": 29.1,
+    "obesity_rank": 41,
+    "regulatory_notes": "Connecticut allows telehealth GLP-1 prescribing through licensed providers. HUSKY Health Medicaid offers GLP-1 coverage for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Connecticut's adult obesity rate is 29.1%",
+      "HUSKY Health Medicaid covers GLP-1s with prior authorization",
+      "Telehealth GLP-1 services are legally protected statewide"
+    ]
+  },
+  "DE": {
+    "name": "Delaware",
+    "slug": "delaware",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 215,
+    "top_cities": ["Wilmington", "Dover", "Newark", "Middletown"],
+    "obesity_rate": 33.9,
+    "obesity_rank": 17,
+    "regulatory_notes": "Delaware permits telehealth GLP-1 prescriptions. Delaware Medicaid (Diamond State Health Plan) covers GLP-1s primarily for type 2 diabetes.",
+    "key_facts": [
+      "Delaware's adult obesity rate is 33.9%",
+      "Delaware Medicaid limits GLP-1 coverage to diabetes",
+      "Compounded semaglutide is available through licensed pharmacies"
+    ]
+  },
+  "FL": {
+    "name": "Florida",
+    "slug": "florida",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Jacksonville", "Miami", "Tampa", "Orlando", "St. Petersburg"],
+    "obesity_rate": 30.1,
+    "obesity_rank": 33,
+    "regulatory_notes": "Florida has one of the largest telehealth GLP-1 markets in the US, with many providers headquartered in the state. Florida Medicaid covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Florida's adult obesity rate is 30.1%",
+      "Florida Medicaid does not cover GLP-1s for obesity alone",
+      "Florida is a top state for telehealth GLP-1 provider headquarters"
+    ]
+  },
+  "GA": {
+    "name": "Georgia",
+    "slug": "georgia",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 195,
+    "top_cities": ["Atlanta", "Augusta", "Columbus", "Macon", "Savannah"],
+    "obesity_rate": 34.1,
+    "obesity_rank": 15,
+    "regulatory_notes": "Georgia allows telehealth GLP-1 prescribing. Georgia Medicaid covers GLP-1s only for type 2 diabetes with prior authorization.",
+    "key_facts": [
+      "Georgia's adult obesity rate is 34.1%",
+      "Georgia Medicaid restricts GLP-1 coverage to diabetes",
+      "Atlanta is a major hub for telehealth weight loss providers"
+    ]
+  },
+  "HI": {
+    "name": "Hawaii",
+    "slug": "hawaii",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 235,
+    "top_cities": ["Honolulu", "Hilo", "Kailua", "Kaneohe"],
+    "obesity_rate": 25.9,
+    "obesity_rank": 49,
+    "regulatory_notes": "Hawaii allows telehealth GLP-1 prescriptions, which is critical given the state's island geography. Med-QUEST Medicaid covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Hawaii has the 2nd-lowest adult obesity rate in the US at 25.9%",
+      "Med-QUEST covers GLP-1s with prior authorization",
+      "Telehealth is essential for Hawaii's outer-island residents"
+    ]
+  },
+  "ID": {
+    "name": "Idaho",
+    "slug": "idaho",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 199,
+    "top_cities": ["Boise", "Meridian", "Nampa", "Idaho Falls"],
+    "obesity_rate": 31.1,
+    "obesity_rank": 30,
+    "regulatory_notes": "Idaho allows telehealth GLP-1 prescribing through licensed providers. Idaho Medicaid covers GLP-1s only for type 2 diabetes diagnosis.",
+    "key_facts": [
+      "Idaho's adult obesity rate is 31.1%",
+      "Idaho Medicaid limits GLP-1 coverage to diabetes",
+      "Telehealth is widely used across rural Idaho"
+    ]
+  },
+  "IL": {
+    "name": "Illinois",
+    "slug": "illinois",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 209,
+    "top_cities": ["Chicago", "Aurora", "Naperville", "Joliet", "Rockford"],
+    "obesity_rate": 32.4,
+    "obesity_rank": 26,
+    "regulatory_notes": "Illinois has a strong telehealth framework for GLP-1 prescribing. Illinois Medicaid (HFS) covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Illinois's adult obesity rate is 32.4%",
+      "Illinois Medicaid covers GLP-1s with prior authorization",
+      "Chicago is one of the largest telehealth GLP-1 markets in the Midwest"
+    ]
+  },
+  "IN": {
+    "name": "Indiana",
+    "slug": "indiana",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
+    "obesity_rate": 36.4,
+    "obesity_rank": 9,
+    "regulatory_notes": "Indiana allows telehealth GLP-1 prescriptions through licensed providers. Indiana Medicaid covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Indiana's adult obesity rate is 36.4%, in the top 10 nationally",
+      "Indiana Medicaid limits GLP-1 coverage to diabetes",
+      "Compounded semaglutide is widely available statewide"
+    ]
+  },
+  "IA": {
+    "name": "Iowa",
+    "slug": "iowa",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 185,
+    "top_cities": ["Des Moines", "Cedar Rapids", "Davenport", "Sioux City"],
+    "obesity_rate": 35.3,
+    "obesity_rank": 12,
+    "regulatory_notes": "Iowa permits telehealth GLP-1 prescribing. Iowa Medicaid (IA Health Link) covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Iowa's adult obesity rate is 35.3%",
+      "Iowa Medicaid restricts GLP-1 coverage to diabetes",
+      "Telehealth is widely used in rural Iowa"
+    ]
+  },
+  "KS": {
+    "name": "Kansas",
+    "slug": "kansas",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Wichita", "Overland Park", "Kansas City", "Topeka"],
+    "obesity_rate": 34.4,
+    "obesity_rank": 14,
+    "regulatory_notes": "Kansas allows telehealth GLP-1 prescriptions. KanCare Medicaid covers GLP-1s only for type 2 diabetes diagnosis.",
+    "key_facts": [
+      "Kansas's adult obesity rate is 34.4%",
+      "KanCare Medicaid restricts GLP-1 coverage to diabetes",
+      "Compounded semaglutide is available via telehealth statewide"
+    ]
+  },
+  "KY": {
+    "name": "Kentucky",
+    "slug": "kentucky",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Louisville", "Lexington", "Bowling Green", "Owensboro"],
+    "obesity_rate": 36.6,
+    "obesity_rank": 8,
+    "regulatory_notes": "Kentucky permits telehealth GLP-1 prescriptions. Kentucky Medicaid covers GLP-1s only for type 2 diabetes diagnosis.",
+    "key_facts": [
+      "Kentucky's adult obesity rate is 36.6%, in the top 10 nationally",
+      "Kentucky Medicaid limits GLP-1 coverage to diabetes",
+      "Telehealth GLP-1 services are widely available statewide"
+    ]
+  },
+  "LA": {
+    "name": "Louisiana",
+    "slug": "louisiana",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 195,
+    "top_cities": ["New Orleans", "Baton Rouge", "Shreveport", "Lafayette"],
+    "obesity_rate": 38.6,
+    "obesity_rank": 5,
+    "regulatory_notes": "Louisiana allows telehealth GLP-1 prescribing. Louisiana Medicaid (Healthy Louisiana) covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Louisiana has the 5th-highest adult obesity rate in the US at 38.6%",
+      "Louisiana Medicaid restricts GLP-1 coverage to diabetes",
+      "Compounded semaglutide is widely available through telehealth"
+    ]
+  },
+  "ME": {
+    "name": "Maine",
+    "slug": "maine",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Limited",
+    "average_compounded_price_monthly": 215,
+    "top_cities": ["Portland", "Lewiston", "Bangor", "South Portland"],
+    "obesity_rate": 30.4,
+    "obesity_rank": 32,
+    "regulatory_notes": "Maine allows telehealth GLP-1 prescribing. MaineCare Medicaid offers limited GLP-1 coverage, primarily for diabetes patients.",
+    "key_facts": [
+      "Maine's adult obesity rate is 30.4%",
+      "MaineCare offers limited GLP-1 coverage",
+      "Telehealth is essential for rural Maine residents"
+    ]
+  },
+  "MD": {
+    "name": "Maryland",
+    "slug": "maryland",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 219,
+    "top_cities": ["Baltimore", "Frederick", "Rockville", "Gaithersburg"],
+    "obesity_rate": 32.3,
+    "obesity_rank": 27,
+    "regulatory_notes": "Maryland has a robust telehealth framework supporting GLP-1 prescribing. Maryland Medicaid covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Maryland's adult obesity rate is 32.3%",
+      "Maryland Medicaid covers GLP-1s with prior authorization",
+      "Telehealth GLP-1 services are widely available statewide"
+    ]
+  },
+  "MA": {
+    "name": "Massachusetts",
+    "slug": "massachusetts",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 229,
+    "top_cities": ["Boston", "Worcester", "Springfield", "Cambridge"],
+    "obesity_rate": 27.2,
+    "obesity_rank": 47,
+    "regulatory_notes": "Massachusetts has progressive telehealth laws supporting GLP-1 prescribing. MassHealth (Medicaid) covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Massachusetts's adult obesity rate is 27.2%, among the lowest in the US",
+      "MassHealth covers GLP-1s for obesity with prior authorization",
+      "Boston is a major hub for telehealth medicine and innovation"
+    ]
+  },
+  "MI": {
+    "name": "Michigan",
+    "slug": "michigan",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 199,
+    "top_cities": ["Detroit", "Grand Rapids", "Warren", "Sterling Heights"],
+    "obesity_rate": 34.5,
+    "obesity_rank": 13,
+    "regulatory_notes": "Michigan allows telehealth GLP-1 prescriptions. Michigan Medicaid covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Michigan's adult obesity rate is 34.5%",
+      "Michigan Medicaid covers GLP-1s with prior authorization",
+      "Detroit is a major telehealth GLP-1 market in the Midwest"
+    ]
+  },
+  "MN": {
+    "name": "Minnesota",
+    "slug": "minnesota",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 209,
+    "top_cities": ["Minneapolis", "Saint Paul", "Rochester", "Duluth"],
+    "obesity_rate": 30.8,
+    "obesity_rank": 31,
+    "regulatory_notes": "Minnesota allows telehealth GLP-1 prescribing. Minnesota Medical Assistance covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Minnesota's adult obesity rate is 30.8%",
+      "Minnesota Medicaid covers GLP-1s with prior authorization",
+      "Minnesota has strong telehealth provider availability"
+    ]
+  },
+  "MS": {
+    "name": "Mississippi",
+    "slug": "mississippi",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Jackson", "Gulfport", "Southaven", "Hattiesburg"],
+    "obesity_rate": 40.1,
+    "obesity_rank": 1,
+    "regulatory_notes": "Mississippi allows telehealth GLP-1 prescriptions. Mississippi Medicaid covers GLP-1s only for type 2 diabetes diagnosis.",
+    "key_facts": [
+      "Mississippi has the highest adult obesity rate in the US at 40.1%",
+      "Mississippi Medicaid restricts GLP-1 coverage to diabetes",
+      "Telehealth GLP-1 demand is extremely high statewide"
+    ]
+  },
+  "MO": {
+    "name": "Missouri",
+    "slug": "missouri",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Kansas City", "Saint Louis", "Springfield", "Columbia"],
+    "obesity_rate": 35.0,
+    "obesity_rank": 13,
+    "regulatory_notes": "Missouri permits telehealth GLP-1 prescribing. MO HealthNet Medicaid covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Missouri's adult obesity rate is 35.0%",
+      "MO HealthNet Medicaid restricts GLP-1 coverage to diabetes",
+      "Compounded semaglutide is widely available via telehealth"
+    ]
+  },
+  "MT": {
+    "name": "Montana",
+    "slug": "montana",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 215,
+    "top_cities": ["Billings", "Missoula", "Great Falls", "Bozeman"],
+    "obesity_rate": 28.5,
+    "obesity_rank": 43,
+    "regulatory_notes": "Montana allows telehealth GLP-1 prescriptions, which is critical given the state's rural geography. Montana Medicaid covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Montana's adult obesity rate is 28.5%",
+      "Telehealth is essential in rural Montana",
+      "Montana Medicaid limits GLP-1 coverage to diabetes"
+    ]
+  },
+  "NE": {
+    "name": "Nebraska",
+    "slug": "nebraska",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Omaha", "Lincoln", "Bellevue", "Grand Island"],
+    "obesity_rate": 33.9,
+    "obesity_rank": 17,
+    "regulatory_notes": "Nebraska allows telehealth GLP-1 prescribing. Nebraska Medicaid covers GLP-1s only for type 2 diabetes diagnosis.",
+    "key_facts": [
+      "Nebraska's adult obesity rate is 33.9%",
+      "Nebraska Medicaid limits GLP-1 coverage to diabetes",
+      "Telehealth is widely used across rural Nebraska"
+    ]
+  },
+  "NV": {
+    "name": "Nevada",
+    "slug": "nevada",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 199,
+    "top_cities": ["Las Vegas", "Henderson", "Reno", "North Las Vegas"],
+    "obesity_rate": 30.6,
+    "obesity_rank": 31,
+    "regulatory_notes": "Nevada allows telehealth GLP-1 prescriptions. Nevada Medicaid covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Nevada's adult obesity rate is 30.6%",
+      "Nevada Medicaid restricts GLP-1 coverage to diabetes",
+      "Las Vegas is a major telehealth GLP-1 market in the Southwest"
+    ]
+  },
+  "NH": {
+    "name": "New Hampshire",
+    "slug": "new-hampshire",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Limited",
+    "average_compounded_price_monthly": 219,
+    "top_cities": ["Manchester", "Nashua", "Concord", "Dover"],
+    "obesity_rate": 30.2,
+    "obesity_rank": 34,
+    "regulatory_notes": "New Hampshire permits telehealth GLP-1 prescribing. New Hampshire Medicaid offers limited GLP-1 coverage, primarily for diabetes patients.",
+    "key_facts": [
+      "New Hampshire's adult obesity rate is 30.2%",
+      "NH Medicaid offers limited GLP-1 coverage",
+      "Telehealth GLP-1 services are widely available statewide"
+    ]
+  },
+  "NJ": {
+    "name": "New Jersey",
+    "slug": "new-jersey",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 224,
+    "top_cities": ["Newark", "Jersey City", "Paterson", "Elizabeth"],
+    "obesity_rate": 28.7,
+    "obesity_rank": 42,
+    "regulatory_notes": "New Jersey allows telehealth GLP-1 prescribing. NJ FamilyCare Medicaid covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "New Jersey's adult obesity rate is 28.7%",
+      "NJ FamilyCare covers GLP-1s with prior authorization",
+      "Newark is a major Northeast telehealth market"
+    ]
+  },
+  "NM": {
+    "name": "New Mexico",
+    "slug": "new-mexico",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 199,
+    "top_cities": ["Albuquerque", "Las Cruces", "Rio Rancho", "Santa Fe"],
+    "obesity_rate": 31.7,
+    "obesity_rank": 29,
+    "regulatory_notes": "New Mexico allows telehealth GLP-1 prescriptions. New Mexico Medicaid (Centennial Care) covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "New Mexico's adult obesity rate is 31.7%",
+      "Centennial Care covers GLP-1s with prior authorization",
+      "Telehealth is essential for rural New Mexico"
+    ]
+  },
+  "NY": {
+    "name": "New York",
+    "slug": "new-york",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 229,
+    "top_cities": ["New York City", "Buffalo", "Rochester", "Yonkers", "Syracuse"],
+    "obesity_rate": 28.9,
+    "obesity_rank": 41,
+    "regulatory_notes": "New York has a strong telehealth framework supporting GLP-1 prescribing. New York Medicaid covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "New York's adult obesity rate is 28.9%",
+      "New York Medicaid covers GLP-1s with prior authorization",
+      "NYC is the largest telehealth GLP-1 market in the Northeast"
+    ]
+  },
+  "NC": {
+    "name": "North Carolina",
+    "slug": "north-carolina",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 195,
+    "top_cities": ["Charlotte", "Raleigh", "Greensboro", "Durham"],
+    "obesity_rate": 33.6,
+    "obesity_rank": 19,
+    "regulatory_notes": "North Carolina allows telehealth GLP-1 prescribing. NC Medicaid covers GLP-1s only for type 2 diabetes diagnosis.",
+    "key_facts": [
+      "North Carolina's adult obesity rate is 33.6%",
+      "NC Medicaid limits GLP-1 coverage to diabetes",
+      "Charlotte and Raleigh are major Southeast telehealth markets"
+    ]
+  },
+  "ND": {
+    "name": "North Dakota",
+    "slug": "north-dakota",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 199,
+    "top_cities": ["Fargo", "Bismarck", "Grand Forks", "Minot"],
+    "obesity_rate": 35.4,
+    "obesity_rank": 11,
+    "regulatory_notes": "North Dakota allows telehealth GLP-1 prescriptions. North Dakota Medicaid covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "North Dakota's adult obesity rate is 35.4%",
+      "ND Medicaid restricts GLP-1 coverage to diabetes",
+      "Telehealth is critical for rural North Dakota residents"
+    ]
+  },
+  "OH": {
+    "name": "Ohio",
+    "slug": "ohio",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Columbus", "Cleveland", "Cincinnati", "Toledo", "Akron"],
+    "obesity_rate": 35.5,
+    "obesity_rank": 11,
+    "regulatory_notes": "Ohio permits telehealth GLP-1 prescribing. Ohio Medicaid covers GLP-1s only for type 2 diabetes diagnosis.",
+    "key_facts": [
+      "Ohio's adult obesity rate is 35.5%",
+      "Ohio Medicaid limits GLP-1 coverage to diabetes",
+      "Columbus and Cleveland are major Midwest telehealth markets"
+    ]
+  },
+  "OK": {
+    "name": "Oklahoma",
+    "slug": "oklahoma",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Oklahoma City", "Tulsa", "Norman", "Broken Arrow"],
+    "obesity_rate": 36.8,
+    "obesity_rank": 7,
+    "regulatory_notes": "Oklahoma allows telehealth GLP-1 prescriptions. Oklahoma Medicaid (SoonerCare) covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Oklahoma's adult obesity rate is 36.8%, in the top 10 nationally",
+      "SoonerCare restricts GLP-1 coverage to diabetes",
+      "Compounded semaglutide is widely available via telehealth"
+    ]
+  },
+  "OR": {
+    "name": "Oregon",
+    "slug": "oregon",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 209,
+    "top_cities": ["Portland", "Eugene", "Salem", "Gresham"],
+    "obesity_rate": 30.1,
+    "obesity_rank": 33,
+    "regulatory_notes": "Oregon has progressive telehealth laws supporting GLP-1 prescribing. Oregon Health Plan covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Oregon's adult obesity rate is 30.1%",
+      "Oregon Health Plan covers GLP-1s with prior authorization",
+      "Portland is a major West Coast telehealth GLP-1 market"
+    ]
+  },
+  "PA": {
+    "name": "Pennsylvania",
+    "slug": "pennsylvania",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 209,
+    "top_cities": ["Philadelphia", "Pittsburgh", "Allentown", "Erie"],
+    "obesity_rate": 33.4,
+    "obesity_rank": 20,
+    "regulatory_notes": "Pennsylvania allows telehealth GLP-1 prescriptions. Pennsylvania Medical Assistance covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Pennsylvania's adult obesity rate is 33.4%",
+      "PA Medical Assistance covers GLP-1s with prior authorization",
+      "Philadelphia is a major Northeast telehealth market"
+    ]
+  },
+  "RI": {
+    "name": "Rhode Island",
+    "slug": "rhode-island",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 219,
+    "top_cities": ["Providence", "Warwick", "Cranston", "Pawtucket"],
+    "obesity_rate": 30.0,
+    "obesity_rank": 35,
+    "regulatory_notes": "Rhode Island allows telehealth GLP-1 prescribing. Rhode Island Medicaid covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Rhode Island's adult obesity rate is 30.0%",
+      "RI Medicaid covers GLP-1s with prior authorization",
+      "Providence is a regional Northeast telehealth hub"
+    ]
+  },
+  "SC": {
+    "name": "South Carolina",
+    "slug": "south-carolina",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 195,
+    "top_cities": ["Charleston", "Columbia", "North Charleston", "Mount Pleasant"],
+    "obesity_rate": 35.4,
+    "obesity_rank": 11,
+    "regulatory_notes": "South Carolina permits telehealth GLP-1 prescriptions. South Carolina Medicaid (Healthy Connections) covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "South Carolina's adult obesity rate is 35.4%",
+      "Healthy Connections Medicaid restricts GLP-1 coverage to diabetes",
+      "Charleston is a growing Southeast telehealth market"
+    ]
+  },
+  "SD": {
+    "name": "South Dakota",
+    "slug": "south-dakota",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 199,
+    "top_cities": ["Sioux Falls", "Rapid City", "Aberdeen", "Brookings"],
+    "obesity_rate": 33.2,
+    "obesity_rank": 21,
+    "regulatory_notes": "South Dakota allows telehealth GLP-1 prescribing. South Dakota Medicaid covers GLP-1s only for type 2 diabetes diagnosis.",
+    "key_facts": [
+      "South Dakota's adult obesity rate is 33.2%",
+      "SD Medicaid limits GLP-1 coverage to diabetes",
+      "Telehealth is essential for rural South Dakota residents"
+    ]
+  },
+  "TN": {
+    "name": "Tennessee",
+    "slug": "tennessee",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "obesity_rate": 36.4,
+    "obesity_rank": 9,
+    "regulatory_notes": "Tennessee allows telehealth GLP-1 prescriptions. Tennessee Medicaid (TennCare) covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Tennessee's adult obesity rate is 36.4%, in the top 10 nationally",
+      "TennCare restricts GLP-1 coverage to diabetes",
+      "Nashville is a growing Southeast telehealth market"
+    ]
+  },
+  "TX": {
+    "name": "Texas",
+    "slug": "texas",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Houston", "San Antonio", "Dallas", "Austin", "Fort Worth"],
+    "obesity_rate": 34.0,
+    "obesity_rank": 16,
+    "regulatory_notes": "Texas has one of the largest telehealth GLP-1 markets in the country. Texas Medicaid covers GLP-1s only for type 2 diabetes diagnosis.",
+    "key_facts": [
+      "Texas's adult obesity rate is 34.0%",
+      "Texas Medicaid restricts GLP-1 coverage to diabetes",
+      "Texas is a major hub for telehealth GLP-1 provider headquarters"
+    ]
+  },
+  "UT": {
+    "name": "Utah",
+    "slug": "utah",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 199,
+    "top_cities": ["Salt Lake City", "West Valley City", "Provo", "West Jordan"],
+    "obesity_rate": 27.6,
+    "obesity_rank": 46,
+    "regulatory_notes": "Utah allows telehealth GLP-1 prescribing. Utah Medicaid covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Utah's adult obesity rate is 27.6%, among the lowest in the US",
+      "Utah Medicaid restricts GLP-1 coverage to diabetes",
+      "Salt Lake City is a growing telehealth market"
+    ]
+  },
+  "VT": {
+    "name": "Vermont",
+    "slug": "vermont",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 219,
+    "top_cities": ["Burlington", "Essex", "South Burlington", "Colchester"],
+    "obesity_rate": 27.0,
+    "obesity_rank": 48,
+    "regulatory_notes": "Vermont allows telehealth GLP-1 prescriptions. Vermont Medicaid (Green Mountain Care) covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Vermont's adult obesity rate is 27.0%, among the lowest in the US",
+      "Green Mountain Care covers GLP-1s with prior authorization",
+      "Telehealth is critical in rural Vermont"
+    ]
+  },
+  "VA": {
+    "name": "Virginia",
+    "slug": "virginia",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 199,
+    "top_cities": ["Virginia Beach", "Norfolk", "Chesapeake", "Richmond", "Arlington"],
+    "obesity_rate": 32.0,
+    "obesity_rank": 28,
+    "regulatory_notes": "Virginia allows telehealth GLP-1 prescribing. Virginia Medicaid covers GLP-1s only for type 2 diabetes diagnosis.",
+    "key_facts": [
+      "Virginia's adult obesity rate is 32.0%",
+      "Virginia Medicaid limits GLP-1 coverage to diabetes",
+      "Northern Virginia is a major telehealth market"
+    ]
+  },
+  "WA": {
+    "name": "Washington",
+    "slug": "washington",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes + obesity (with prior auth)",
+    "average_compounded_price_monthly": 215,
+    "top_cities": ["Seattle", "Spokane", "Tacoma", "Vancouver", "Bellevue"],
+    "obesity_rate": 28.4,
+    "obesity_rank": 43,
+    "regulatory_notes": "Washington has a progressive telehealth framework supporting GLP-1 prescribing. Apple Health (Medicaid) covers GLP-1s for both diabetes and obesity with prior authorization.",
+    "key_facts": [
+      "Washington's adult obesity rate is 28.4%",
+      "Apple Health covers GLP-1s with prior authorization",
+      "Seattle is a major Pacific Northwest telehealth GLP-1 market"
+    ]
+  },
+  "WV": {
+    "name": "West Virginia",
+    "slug": "west-virginia",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 189,
+    "top_cities": ["Charleston", "Huntington", "Morgantown", "Parkersburg"],
+    "obesity_rate": 39.7,
+    "obesity_rank": 3,
+    "regulatory_notes": "West Virginia allows telehealth GLP-1 prescriptions. West Virginia Medicaid covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "West Virginia has the 3rd-highest adult obesity rate in the US at 39.7%",
+      "WV Medicaid restricts GLP-1 coverage to diabetes",
+      "Telehealth is essential for rural West Virginia residents"
+    ]
+  },
+  "WI": {
+    "name": "Wisconsin",
+    "slug": "wisconsin",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 199,
+    "top_cities": ["Milwaukee", "Madison", "Green Bay", "Kenosha"],
+    "obesity_rate": 33.9,
+    "obesity_rank": 17,
+    "regulatory_notes": "Wisconsin allows telehealth GLP-1 prescribing. Wisconsin Medicaid (BadgerCare Plus) covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Wisconsin's adult obesity rate is 33.9%",
+      "BadgerCare Plus restricts GLP-1 coverage to diabetes",
+      "Milwaukee and Madison are growing Midwest telehealth markets"
+    ]
+  },
+  "WY": {
+    "name": "Wyoming",
+    "slug": "wyoming",
+    "telehealth_legal": true,
+    "medicaid_glp1_coverage": "Diabetes only",
+    "average_compounded_price_monthly": 209,
+    "top_cities": ["Cheyenne", "Casper", "Laramie", "Gillette"],
+    "obesity_rate": 30.7,
+    "obesity_rank": 30,
+    "regulatory_notes": "Wyoming allows telehealth GLP-1 prescriptions, which is critical given the state's vast rural geography. Wyoming Medicaid covers GLP-1s only for type 2 diabetes.",
+    "key_facts": [
+      "Wyoming's adult obesity rate is 30.7%",
+      "Telehealth is essential for Wyoming's rural communities",
+      "Wyoming Medicaid limits GLP-1 coverage to diabetes"
+    ]
+  }
+}
