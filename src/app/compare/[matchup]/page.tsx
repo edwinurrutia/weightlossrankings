@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getAllProviders, getProviderBySlug } from "@/lib/data";
 import { computeOverallScore } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";

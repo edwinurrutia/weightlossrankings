@@ -268,6 +268,21 @@ export default async function SavingsComparisonPage({
 
         <FAQSection items={faqs} />
 
+        {/* Trademark notice */}
+        <aside className="rounded-2xl bg-brand-text-secondary/5 border border-brand-text-secondary/10 p-5 text-xs text-brand-text-secondary leading-relaxed">
+          <p>
+            <strong className="text-brand-text-primary">Trademark Notice:</strong> Wegovy®, Ozempic®, and Rybelsus® are
+            registered trademarks of Novo Nordisk A/S. Mounjaro® and Zepbound® are registered trademarks of Eli Lilly and
+            Company. Compounded {c.generic_name} is not Wegovy®, Ozempic®, Mounjaro®, or Zepbound® — it is a separate
+            preparation made by a licensed compounding pharmacy that contains the same active molecule.
+            WeightLossRankings.org uses these brand names only to identify the products discussed in this comparison. We
+            are not affiliated with Novo Nordisk, Eli Lilly, or any pharmaceutical manufacturer.{" "}
+            <Link href="/trademarks" className="text-brand-violet underline">
+              Full trademark disclaimer →
+            </Link>
+          </p>
+        </aside>
+
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
           <CTAButton href="/savings-calculator" size="lg">

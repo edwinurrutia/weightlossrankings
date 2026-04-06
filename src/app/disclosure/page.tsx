@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Affiliate Disclosure",
@@ -96,6 +97,21 @@ export default function DisclosurePage() {
           medication or weight loss program. Prices, availability, features,
           and regulatory status change frequently — verify current details on
           the provider&apos;s own website before making a purchase.
+        </p>
+
+        <p>
+          <strong className="text-brand-text-primary">Trademark disclaimer.</strong>{" "}
+          Names and marks including Wegovy®, Ozempic®, Rybelsus® (Novo Nordisk
+          A/S), Mounjaro®, and Zepbound® (Eli Lilly and Company) are the
+          property of their respective owners. WeightLossRankings.org uses
+          these names only to identify the products discussed. Use of these
+          marks does not imply endorsement or affiliation.
+          WeightLossRankings.org is not affiliated with Novo Nordisk, Eli
+          Lilly, or any other pharmaceutical manufacturer. See our{" "}
+          <Link href="/trademarks" className="text-brand-violet underline">
+            full trademark disclaimer
+          </Link>{" "}
+          for the complete list of marks referenced on this site.
         </p>
 
         <p className="text-sm text-brand-text-secondary/70 pt-4 border-t border-brand-violet/10">

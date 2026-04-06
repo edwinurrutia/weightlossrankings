@@ -43,6 +43,13 @@ export async function POST(req: NextRequest) {
   }
 
   const res = NextResponse.json({ ok: true });
+  const host = req.headers.get("host") || "";
+  // In production, scope the cookie to .weightlossrankings.org so it's
+  // shared across apex (weightlossrankings.org) and www subdomain.
+  // In dev/preview, omit domain so it defaults to the exact host.
+  const cookieDomain = host.endsWith("weightlossrankings.org")
+    ? ".weightlossrankings.org"
+    : undefined;
   res.cookies.set({
     name: SESSION_CONFIG.cookieName,
     value: token,
@@ -51,6 +58,7 @@ export async function POST(req: NextRequest) {
     sameSite: "lax",
     path: "/",
     maxAge: SESSION_CONFIG.ttlSeconds,
+    ...(cookieDomain ? { domain: cookieDomain } : {}),
   });
   return res;
 }
