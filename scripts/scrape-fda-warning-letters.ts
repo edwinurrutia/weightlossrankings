@@ -405,6 +405,19 @@ async function fetchLetterContent(page: any, url: string): Promise<LetterContent
 
     // String-based evaluator (avoids tsx __name helper injection that
     // crashes function-literal page.evaluate calls).
+    //
+    // Strategy:
+    //   1. Clone the article body, strip nav/header/footer/aside chrome
+    //   2. Read the flattened textContent for subject + issuing-office regex
+    //   3. Read the actual <p> elements for the body excerpt — splitting
+    //      flattened text by double-newline merges the metadata sidebar
+    //      ("Delivery Method: ... Reference #: ... Product: ...") into a
+    //      single block that the old version was incorrectly emitting as
+    //      the "From the letter" excerpt
+    //   4. Walk paragraphs in document order, find the salutation
+    //      ("Dear Mr/Ms/Mrs/Dr/<Name>:"), and start the excerpt AFTER it
+    //   5. Take the next 8 substantive paragraphs, skipping metadata,
+    //      navigation, signoff, and copy lines
     const extracted = (await page.evaluate(`(() => {
       var main = document.querySelector("article")
         || document.querySelector("main")
@@ -453,20 +466,53 @@ async function fetchLetterContent(page: any, url: string): Promise<LetterContent
         violationsSummary = text.slice(cutIdx, cutIdx + 300).trim();
       }
 
-      // Extract a paragraph excerpt for the per-letter detail page.
-      // FDA letters use paragraph breaks marked by double-newline. Take
-      // the first 6 substantive paragraphs (>= 80 chars, < 1200 chars
-      // each) skipping headers/closing boilerplate. Cap total at 6.
+      // ---- body excerpt: walk real <p> elements in document order ----
+      var pNodes = clone.querySelectorAll("p");
+      var paragraphs = [];
+      for (var pn = 0; pn < pNodes.length; pn++) {
+        var raw = (pNodes[pn].textContent || "")
+          .replace(/\\u00a0/g, " ")
+          .replace(/\\s+/g, " ")
+          .trim();
+        if (raw.length > 0) paragraphs.push(raw);
+      }
+
+      // Find the salutation — body starts on the next paragraph.
+      var startIdx = -1;
+      var salutation = /^Dear\\s+(?:Mr\\.?|Ms\\.?|Mrs\\.?|Dr\\.?|Messrs\\.?|Sir|Madam|[A-Z][a-z]+)/i;
+      for (var si = 0; si < paragraphs.length; si++) {
+        if (salutation.test(paragraphs[si])) {
+          startIdx = si + 1;
+          break;
+        }
+      }
+      // Fallback: if no salutation, start at the first paragraph that
+      // looks like real prose ("This Warning Letter informs you…",
+      // "This letter is to advise you…", etc.).
+      if (startIdx < 0) {
+        var prose = /^(This (?:Warning )?[Ll]etter|The United States Food and Drug Administration|The U\\.?S\\.? Food and Drug Administration|This is to advise)/;
+        for (var pi2 = 0; pi2 < paragraphs.length; pi2++) {
+          if (prose.test(paragraphs[pi2])) { startIdx = pi2; break; }
+        }
+      }
+      if (startIdx < 0) startIdx = 0;
+
+      // Patterns for paragraphs we never want to surface as excerpts.
+      var META_PREFIX = /^(Delivery Method|Issuing Office|Reference #|Product:|Recipient:|United States|FDA|CDER|CBER|CDRH|WARNING LETTER|More Warning Letters|Subject:|Sincerely|Cc:|cc:|Enclosure|Reference Number)/i;
+      var ADDRESS_LIKE = /^[A-Z][a-z]+ \\d{1,2},\\s*\\d{4}$/;
+      var ZIP_LIKE = /\\b[A-Z]{2}\\s+\\d{5}(?:-\\d{4})?\\s*$/;
+
       var bodyExcerpt = [];
-      var rawParas = text.split(/\\n{2,}/);
-      for (var pi = 0; pi < rawParas.length && bodyExcerpt.length < 6; pi++) {
-        var p = rawParas[pi].trim();
-        if (p.length < 80 || p.length > 1200) continue;
-        // Skip header / metadata lines (Sincerely, copy lines, footer).
-        if (/^(Sincerely|Cc:|cc:|Enclosure|Reference Number)/i.test(p)) continue;
+      var MAX_EXCERPT = 8;
+      for (var bi = startIdx; bi < paragraphs.length && bodyExcerpt.length < MAX_EXCERPT; bi++) {
+        var p = paragraphs[bi];
+        if (p.length < 100) continue;
+        if (p.length > 2500) continue;
+        if (META_PREFIX.test(p)) continue;
+        if (ADDRESS_LIKE.test(p)) continue;
+        if (ZIP_LIKE.test(p) && p.length < 200) continue;
+        // Drop short office/division lines that slipped past the prefix filter.
         if (/Enforcement Division|Office of Compliance/.test(p) && p.length < 200) continue;
-        // Skip address-block-style lines (state abbreviation + zip).
-        if (/^[A-Z][a-z]+ \\d{1,2},\\s*\\d{4}$/.test(p)) continue;
         bodyExcerpt.push(p);
       }
 
