@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getProvidersByCategory } from "@/lib/data";
+import { getAllProviders } from "@/lib/data";
 import { computeOverallScore, SCORE_DIMENSIONS } from "@/lib/scoring";
-import type { Provider } from "@/lib/types";
+import type { Provider, DrugType } from "@/lib/types";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import CTAButton from "@/components/shared/CTAButton";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
@@ -11,12 +12,201 @@ import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
-const CATEGORY_MAP: Record<string, string> = {
-  "semaglutide-providers": "GLP-1 Provider",
-  "weight-loss-programs": "Weight Loss Program",
-  "weight-loss-supplements": "Supplement",
-  "meal-delivery-for-weight-loss": "Meal Delivery",
-  "fitness-apps-for-weight-loss": "Fitness App",
+interface CategoryDef {
+  label: string;
+  filter: (providers: Provider[]) => Provider[];
+  targetKeyword: string;
+  title: string;
+  description: string;
+  intro: string;
+  drugFilter?: DrugType;
+  related: string[];
+}
+
+function minPriceForDrug(p: Provider, drug: DrugType): number {
+  const entries = p.pricing.filter((pr) => pr.drug === drug);
+  if (entries.length === 0) return Infinity;
+  return Math.min(...entries.map((pr) => pr.promo_price ?? pr.monthly_cost));
+}
+
+const CATEGORY_MAP: Record<string, CategoryDef> = {
+  "semaglutide-providers": {
+    label: "Semaglutide Providers",
+    filter: (providers) =>
+      providers.filter((p) =>
+        p.pricing.some((pr) => pr.drug === "semaglutide")
+      ),
+    targetKeyword: "semaglutide providers",
+    title: "Best Semaglutide Providers in 2026 | Compare Prices & Reviews",
+    description:
+      "Compare 25+ semaglutide providers ranked by price, trust, and effectiveness. See real monthly costs, score breakdowns, and the cheapest legit options for 2026.",
+    intro:
+      "Looking for a trusted semaglutide provider? We independently scored every major telehealth clinic offering compounded and brand-name semaglutide in 2026. Each provider is evaluated on pricing transparency, clinical oversight, shipping, and user experience — so you can find a legitimate, affordable option without falling for sketchy ads.",
+    drugFilter: "semaglutide",
+    related: [
+      "cheapest-semaglutide",
+      "compounded-semaglutide",
+      "tirzepatide-providers",
+    ],
+  },
+  "tirzepatide-providers": {
+    label: "Tirzepatide Providers",
+    filter: (providers) =>
+      providers.filter((p) =>
+        p.pricing.some((pr) => pr.drug === "tirzepatide")
+      ),
+    targetKeyword: "tirzepatide providers",
+    title: "Best Tirzepatide Providers in 2026 | Compare Prices & Reviews",
+    description:
+      "Best tirzepatide telehealth providers of 2026. Compare monthly costs, trust scores, and the cheapest compounded and brand-name tirzepatide options ranked by experts.",
+    intro:
+      "Tirzepatide (the active ingredient in Mounjaro and Zepbound) is the most effective GLP-1 medication on the market for weight loss. We ranked every major US telehealth provider offering tirzepatide in 2026 — compounded and brand-name — based on price, clinical care, shipping speed, and reputation. Use this list to find a legitimate provider before paying retail.",
+    drugFilter: "tirzepatide",
+    related: [
+      "cheapest-tirzepatide",
+      "compounded-tirzepatide",
+      "semaglutide-providers",
+    ],
+  },
+  "compounded-semaglutide": {
+    label: "Compounded Semaglutide Providers",
+    filter: (providers) =>
+      providers.filter((p) =>
+        p.pricing.some(
+          (pr) => pr.drug === "semaglutide" && pr.form === "compounded"
+        )
+      ),
+    targetKeyword: "compounded semaglutide",
+    title: "Compounded Semaglutide: Best Telehealth Providers 2026",
+    description:
+      "The best compounded semaglutide telehealth providers in 2026. LegitScript-verified pharmacies, transparent pricing, monthly costs, and expert rankings.",
+    intro:
+      "Compounded semaglutide is a low-cost alternative to brand-name Wegovy and Ozempic, made by 503A and 503B pharmacies under physician supervision. We ranked the most reputable telehealth clinics offering compounded semaglutide in 2026 by price, pharmacy verification, clinical care, and shipping. Every provider on this list ships nationwide.",
+    drugFilter: "semaglutide",
+    related: [
+      "semaglutide-providers",
+      "cheapest-semaglutide",
+      "compounded-tirzepatide",
+    ],
+  },
+  "compounded-tirzepatide": {
+    label: "Compounded Tirzepatide Providers",
+    filter: (providers) =>
+      providers.filter((p) =>
+        p.pricing.some(
+          (pr) => pr.drug === "tirzepatide" && pr.form === "compounded"
+        )
+      ),
+    targetKeyword: "compounded tirzepatide",
+    title: "Compounded Tirzepatide: Best Telehealth Providers 2026",
+    description:
+      "Top compounded tirzepatide providers ranked for 2026. Compare prices, pharmacy verification, and trust scores. Cheaper than brand-name Mounjaro and Zepbound.",
+    intro:
+      "Compounded tirzepatide gives you the same active ingredient found in Mounjaro and Zepbound at a fraction of the retail price. We ranked the most trusted telehealth providers shipping compounded tirzepatide in 2026 by clinical oversight, pharmacy reputation, monthly cost, and user experience.",
+    drugFilter: "tirzepatide",
+    related: [
+      "tirzepatide-providers",
+      "cheapest-tirzepatide",
+      "compounded-semaglutide",
+    ],
+  },
+  "cheapest-semaglutide": {
+    label: "Cheapest Semaglutide Providers",
+    filter: (providers) =>
+      providers
+        .filter((p) =>
+          p.pricing.some((pr) => pr.drug === "semaglutide")
+        )
+        .sort(
+          (a, b) =>
+            minPriceForDrug(a, "semaglutide") -
+            minPriceForDrug(b, "semaglutide")
+        ),
+    targetKeyword: "cheapest semaglutide",
+    title: "Cheapest Semaglutide: Lowest Prices from 25+ Providers (2026)",
+    description:
+      "The absolute cheapest semaglutide providers in 2026 — ranked by lowest monthly price. Real costs, no hidden fees, only legitimate telehealth clinics.",
+    intro:
+      "Looking for the cheapest semaglutide in 2026? We ranked every legitimate telehealth provider in our database by their lowest published monthly price for semaglutide. No bait-and-switch teaser pricing — only providers that publish real, transparent costs. Compare and pick the lowest legit option below.",
+    drugFilter: "semaglutide",
+    related: [
+      "semaglutide-providers",
+      "compounded-semaglutide",
+      "cheapest-tirzepatide",
+    ],
+  },
+  "cheapest-tirzepatide": {
+    label: "Cheapest Tirzepatide Providers",
+    filter: (providers) =>
+      providers
+        .filter((p) =>
+          p.pricing.some((pr) => pr.drug === "tirzepatide")
+        )
+        .sort(
+          (a, b) =>
+            minPriceForDrug(a, "tirzepatide") -
+            minPriceForDrug(b, "tirzepatide")
+        ),
+    targetKeyword: "cheapest tirzepatide",
+    title: "Cheapest Tirzepatide: Lowest Prices from 25+ Providers (2026)",
+    description:
+      "The cheapest tirzepatide telehealth providers of 2026 ranked by lowest monthly price. Compounded and brand-name. No teaser pricing — real monthly costs only.",
+    intro:
+      "Tirzepatide is the most effective GLP-1 weight loss medication, but retail prices can hit $1,000+/month. We ranked every legitimate telehealth provider offering tirzepatide by their lowest published monthly cost for 2026 — so you can find a real, affordable option without falling for hidden-fee pricing.",
+    drugFilter: "tirzepatide",
+    related: [
+      "tirzepatide-providers",
+      "compounded-tirzepatide",
+      "cheapest-semaglutide",
+    ],
+  },
+  "weight-loss-programs": {
+    label: "Weight Loss Programs",
+    filter: (providers) =>
+      providers.filter((p) => p.category === "Weight Loss Program"),
+    targetKeyword: "weight loss programs",
+    title: "Best Weight Loss Programs in 2026 — Ranked & Reviewed",
+    description:
+      "We independently tested and ranked the top weight loss programs of 2026. See scores, pricing, pros and cons, and expert picks.",
+    intro:
+      "We independently evaluated and scored the top weight loss programs of 2026 based on value, effectiveness, user experience, and more.",
+    related: ["semaglutide-providers", "meal-delivery-for-weight-loss"],
+  },
+  "weight-loss-supplements": {
+    label: "Weight Loss Supplements",
+    filter: (providers) => providers.filter((p) => p.category === "Supplement"),
+    targetKeyword: "weight loss supplements",
+    title: "Best Weight Loss Supplements in 2026 — Ranked & Reviewed",
+    description:
+      "We independently tested and ranked the top weight loss supplements of 2026. See scores, pricing, pros and cons, and expert picks.",
+    intro:
+      "We independently evaluated and scored the top weight loss supplements of 2026 based on value, effectiveness, user experience, and more.",
+    related: ["weight-loss-programs", "fitness-apps-for-weight-loss"],
+  },
+  "meal-delivery-for-weight-loss": {
+    label: "Meal Delivery for Weight Loss",
+    filter: (providers) =>
+      providers.filter((p) => p.category === "Meal Delivery"),
+    targetKeyword: "meal delivery for weight loss",
+    title: "Best Meal Delivery for Weight Loss in 2026 — Ranked & Reviewed",
+    description:
+      "We independently tested and ranked the top meal delivery services for weight loss in 2026. See pricing, pros and cons, and expert picks.",
+    intro:
+      "We independently evaluated and scored the top meal delivery services for weight loss in 2026.",
+    related: ["weight-loss-programs", "weight-loss-supplements"],
+  },
+  "fitness-apps-for-weight-loss": {
+    label: "Fitness Apps for Weight Loss",
+    filter: (providers) =>
+      providers.filter((p) => p.category === "Fitness App"),
+    targetKeyword: "fitness apps for weight loss",
+    title: "Best Fitness Apps for Weight Loss in 2026 — Ranked & Reviewed",
+    description:
+      "We independently tested and ranked the top fitness apps for weight loss in 2026. See pricing, pros and cons, and expert picks.",
+    intro:
+      "We independently evaluated and scored the top fitness apps for weight loss in 2026.",
+    related: ["weight-loss-programs", "weight-loss-supplements"],
+  },
 };
 
 export function generateStaticParams() {
@@ -29,11 +219,10 @@ export async function generateMetadata({
   params: Promise<{ category: string }>;
 }): Promise<Metadata> {
   const { category } = await params;
-  const label = CATEGORY_MAP[category];
-  if (!label) return {};
+  const def = CATEGORY_MAP[category];
+  if (!def) return {};
 
-  const title = `Best ${label}s in 2026 — Ranked & Reviewed`;
-  const description = `We independently tested and ranked the top ${label.toLowerCase()}s of 2026. See scores, pricing, pros and cons, and expert picks to find the best option for you.`;
+  const { title, description } = def;
 
   return {
     title,
@@ -72,9 +261,15 @@ const FAQ_ITEMS = [
   },
 ];
 
-function getMinPrice(provider: Provider): string {
+function getMinPrice(provider: Provider, drug?: DrugType): string {
   if (!provider.pricing || provider.pricing.length === 0) return "—";
-  const min = Math.min(...provider.pricing.map((p) => p.monthly_cost));
+  const entries = drug
+    ? provider.pricing.filter((p) => p.drug === drug)
+    : provider.pricing;
+  if (entries.length === 0) return "—";
+  const min = Math.min(
+    ...entries.map((p) => p.promo_price ?? p.monthly_cost)
+  );
   return `$${min}/mo`;
 }
 
@@ -84,17 +279,24 @@ export default async function RankingsPage({
   params: Promise<{ category: string }>;
 }) {
   const { category } = await params;
-  const label = CATEGORY_MAP[category];
+  const def = CATEGORY_MAP[category];
 
-  if (!label) {
+  if (!def) {
     notFound();
   }
 
-  const providers: Provider[] = await getProvidersByCategory(label);
+  const { label, filter, drugFilter, intro, related } = def;
+  const all = await getAllProviders();
+  const providers: Provider[] = filter(all);
 
-  const sorted = [...providers].sort(
-    (a, b) => computeOverallScore(b.scores) - computeOverallScore(a.scores)
-  );
+  // For "cheapest-*" the filter already sorts by price; preserve that.
+  // For all others, sort by overall score descending.
+  const isCheapest = category.startsWith("cheapest-");
+  const sorted = isCheapest
+    ? providers
+    : [...providers].sort(
+        (a, b) => computeOverallScore(b.scores) - computeOverallScore(a.scores)
+      );
 
   const top5 = sorted.slice(0, 5);
   const updatedDate = new Date().toLocaleDateString("en-US", {
@@ -121,7 +323,7 @@ export default async function RankingsPage({
         items={[
           { name: "Home", url: "/" },
           { name: "Best", url: "/best" },
-          { name: `Best ${label}s`, url: `/best/${category}` },
+          { name: label, url: `/best/${category}` },
         ]}
       />
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
@@ -133,16 +335,44 @@ export default async function RankingsPage({
           ]}
           title={
             <>
-              Best {label}s in 2026 —{" "}
+              {label.startsWith("Best") || label.startsWith("Cheapest") || label.startsWith("Compounded")
+                ? label
+                : `Best ${label}`}{" "}
+              in 2026 —{" "}
               <span className="bg-brand-gradient bg-clip-text text-transparent">
                 Ranked &amp; Reviewed
               </span>
             </>
           }
-          subtitle={`We independently evaluated and scored the top ${label.toLowerCase()}s of 2026 based on value, effectiveness, user experience, and more. Here are our expert picks.`}
+          subtitle={intro}
         >
           <AffiliateDisclosure />
         </PageHero>
+
+        {/* Quick links to sibling money pages */}
+        {related.length > 0 && (
+          <nav
+            aria-label="Related rankings"
+            className="flex flex-wrap gap-2"
+          >
+            <span className="text-xs uppercase tracking-wide text-brand-text-secondary font-semibold mr-1 self-center">
+              Related:
+            </span>
+            {related.map((slug) => {
+              const r = CATEGORY_MAP[slug];
+              if (!r) return null;
+              return (
+                <Link
+                  key={slug}
+                  href={`/best/${slug}`}
+                  className="text-xs px-3 py-1.5 rounded-full bg-white border border-brand-violet/20 text-brand-text-primary hover:border-brand-violet/50 hover:bg-brand-violet/5 transition"
+                >
+                  {r.label}
+                </Link>
+              );
+            })}
+          </nav>
+        )}
 
         {/* Quick picks table */}
         {top5.length > 0 && (
@@ -193,7 +423,7 @@ export default async function RankingsPage({
                             {provider.best_for ?? "—"}
                           </td>
                           <td className="py-3 px-4 text-brand-text-secondary hidden md:table-cell">
-                            {getMinPrice(provider)}
+                            {getMinPrice(provider, drugFilter)}
                           </td>
                           <td className="py-3 px-4 text-right">
                             <CTAButton
@@ -357,7 +587,7 @@ export default async function RankingsPage({
                     <div className="text-sm text-brand-text-secondary">
                       Starting from{" "}
                       <span className="font-semibold text-brand-text-primary">
-                        {getMinPrice(provider)}
+                        {getMinPrice(provider, drugFilter)}
                       </span>
                     </div>
                     <CTAButton
@@ -381,6 +611,42 @@ export default async function RankingsPage({
           <div className="bg-white rounded-2xl border border-brand-violet/10 p-12 text-center text-brand-text-secondary">
             No providers found in this category yet. Check back soon.
           </div>
+        )}
+
+        {/* Related rankings */}
+        {related.length > 0 && (
+          <section
+            aria-labelledby="related-rankings-heading"
+            className="bg-white rounded-2xl border border-brand-violet/10 p-6"
+          >
+            <h2
+              id="related-rankings-heading"
+              className="text-lg font-bold text-brand-text-primary mb-4"
+            >
+              Related Rankings
+            </h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {related.map((slug) => {
+                const r = CATEGORY_MAP[slug];
+                if (!r) return null;
+                return (
+                  <li key={slug}>
+                    <Link
+                      href={`/best/${slug}`}
+                      className="block p-3 rounded-xl border border-brand-violet/10 hover:border-brand-violet/40 hover:bg-brand-violet/5 transition"
+                    >
+                      <div className="font-semibold text-brand-text-primary text-sm">
+                        {r.label}
+                      </div>
+                      <div className="text-xs text-brand-text-secondary mt-1">
+                        {r.targetKeyword}
+                      </div>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
         )}
 
         <FAQSection items={FAQ_ITEMS} />

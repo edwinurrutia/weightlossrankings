@@ -10,7 +10,18 @@ import { US_STATES } from "@/lib/states";
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
 
-const CATEGORY_KEYS = ["semaglutide-providers", "weight-loss-programs"];
+const CATEGORY_KEYS = [
+  "semaglutide-providers",
+  "tirzepatide-providers",
+  "compounded-semaglutide",
+  "compounded-tirzepatide",
+  "cheapest-semaglutide",
+  "cheapest-tirzepatide",
+  "weight-loss-programs",
+  "weight-loss-supplements",
+  "meal-delivery-for-weight-loss",
+  "fitness-apps-for-weight-loss",
+];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
