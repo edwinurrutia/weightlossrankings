@@ -131,6 +131,27 @@ function slugify(s: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+// The APC compounder locator includes some non-pharmacy entries —
+// the APC organization itself, trade associations, and the like.
+// These name patterns flag entries we should NOT import as
+// pharmacies. University hospital pharmacies are NOT on this list
+// because they really are legitimate compounding pharmacies that
+// happen to be inside a teaching hospital.
+const NON_PHARMACY_PATTERNS: RegExp[] = [
+  /\balliance for pharmacy\b/i,
+  /\bassociation\b/i,
+  /\bfoundation\b/i,
+  /\binstitute\b/i,
+  /\bschool of pharmacy\b/i,
+  /\bboard of pharmacy\b/i,
+  /\bdepartment of\b/i,
+  /\bsociety of\b/i,
+];
+
+function looksLikeOrganizationNotPharmacy(name: string): boolean {
+  return NON_PHARMACY_PATTERNS.some((re) => re.test(name));
+}
+
 function loadJsonArray<T>(path: string): T[] {
   if (!existsSync(path)) return [];
   try {
@@ -341,9 +362,15 @@ async function main() {
 
   let added = 0;
   let skippedExisting = 0;
+  let skippedNonPharmacy = 0;
   const newPharmacies: Pharmacy[] = [];
 
   for (const r of deduped) {
+    if (looksLikeOrganizationNotPharmacy(r.name)) {
+      skippedNonPharmacy += 1;
+      vlog(`  skip (not a pharmacy): ${r.name}`);
+      continue;
+    }
     const slug = slugify(r.name);
     if (!slug) continue;
     if (seenSlugs.has(slug) || seenNames.has(normalizeName(r.name))) {
@@ -395,6 +422,7 @@ async function main() {
   console.log(`Summary:`);
   console.log(`  + ${added} new pharmacies discovered`);
   console.log(`  • ${skippedExisting} already known (live or pending) — skipped`);
+  console.log(`  • ${skippedNonPharmacy} non-pharmacy entries (orgs/associations) — skipped`);
   console.log("");
 
   if (added === 0) {

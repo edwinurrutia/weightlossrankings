@@ -363,39 +363,6 @@
     }
   },
   {
-    "_id": "alliance-for-pharmacy-compounding",
-    "name": "Alliance for Pharmacy Compounding",
-    "slug": "alliance-for-pharmacy-compounding",
-    "city": "Alexandria",
-    "state": "VA",
-    "established": null,
-    "type": "503A",
-    "certifications": [
-      "APC"
-    ],
-    "states_licensed": [
-      "VA"
-    ],
-    "produces_semaglutide": null,
-    "produces_tirzepatide": null,
-    "linked_providers": [],
-    "website": "&urlR=https://iacprx.bullseyelocations.com/pages/compounders",
-    "phone": "(281) 933-8400",
-    "regulatory_actions": [],
-    "external_reviews": {},
-    "internal_score": null,
-    "description": "Listed in the Alliance for Pharmacy Compounding (APC) compounder locator. Auto-imported from the public a4pc.org locator widget.",
-    "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "pcab-scraper",
-      "source_urls": [
-        "https://a4pc.org/find-a-compounder"
-      ],
-      "confidence": "low",
-      "notes": "Auto-imported from APC compounder locator. PCAB accreditation status, production claims, type (503A vs 503B), and any additional certifications all require editorial verification before this entry should be relied on."
-    }
-  },
-  {
     "_id": "alpine-apothecary",
     "name": "Alpine Apothecary",
     "slug": "alpine-apothecary",
@@ -789,39 +756,6 @@
       ],
       "confidence": "low",
       "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
-    }
-  },
-  {
-    "_id": "assure-infusions",
-    "name": "Assure Infusions",
-    "slug": "assure-infusions",
-    "city": "Bartow",
-    "state": "FL",
-    "established": null,
-    "type": "503A",
-    "certifications": [
-      "APC"
-    ],
-    "states_licensed": [
-      "FL"
-    ],
-    "produces_semaglutide": null,
-    "produces_tirzepatide": null,
-    "linked_providers": [],
-    "website": "&urlR=https://iacprx.bullseyelocations.com/pages/compounders",
-    "phone": "(863) 292-2211",
-    "regulatory_actions": [],
-    "external_reviews": {},
-    "internal_score": null,
-    "description": "Listed in the Alliance for Pharmacy Compounding (APC) compounder locator. Auto-imported from the public a4pc.org locator widget.",
-    "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "pcab-scraper",
-      "source_urls": [
-        "https://a4pc.org/find-a-compounder"
-      ],
-      "confidence": "low",
-      "notes": "Auto-imported from APC compounder locator. PCAB accreditation status, production claims, type (503A vs 503B), and any additional certifications all require editorial verification before this entry should be relied on."
     }
   },
   {
@@ -1713,39 +1647,6 @@
       ],
       "confidence": "low",
       "notes": "Auto-imported from APC compounder locator. PCAB accreditation status, production claims, type (503A vs 503B), and any additional certifications all require editorial verification before this entry should be relied on."
-    }
-  },
-  {
-    "_id": "central-admixture-pharmacy-services",
-    "name": "Central Admixture Pharmacy Services",
-    "slug": "central-admixture-pharmacy-services",
-    "city": "Phoenix",
-    "state": "AZ",
-    "established": null,
-    "type": "503B",
-    "certifications": [
-      "503B"
-    ],
-    "states_licensed": [
-      "AZ"
-    ],
-    "produces_semaglutide": null,
-    "produces_tirzepatide": null,
-    "linked_providers": [],
-    "website": null,
-    "phone": "(551) 204-4178",
-    "regulatory_actions": [],
-    "external_reviews": {},
-    "internal_score": null,
-    "description": "Registered with FDA as a 503B outsourcing facility since 2018-03-29, most recently re-registered 2025-11-21. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-09-05. FDA issued a Form 483 (inspectional observations) at the last inspection.",
-    "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "fda-503b-scraper",
-      "source_urls": [
-        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
-      ],
-      "confidence": "low",
-      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
     }
   },
   {
