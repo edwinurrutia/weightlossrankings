@@ -264,26 +264,31 @@ export default async function PharmacyDetailPage({
           <span className="text-brand-text-primary">{pharmacy.name}</span>
         </nav>
 
-        <PageHero
-          badges={[
-            ...(pharmacy.established
-              ? [{ icon: "📅", text: `Est. ${pharmacy.established}` }]
-              : []),
-            { icon: "📍", text: `${pharmacy.city}, ${pharmacy.state}` },
-            { icon: "🧪", text: pharmacy.type },
-          ]}
-          title={
-            <>
-              <span className="bg-brand-gradient bg-clip-text text-transparent">
-                {pharmacy.name}
-              </span>{" "}
-              Review
-            </>
-          }
-          subtitle={pharmacy.description}
-        >
+        <header className="flex flex-col gap-4">
+          <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold">
+            Compounding Pharmacy ·{" "}
+            {[
+              pharmacy.established ? `Est. ${pharmacy.established}` : null,
+              `${pharmacy.city}, ${pharmacy.state}`,
+              pharmacy.type,
+            ]
+              .filter(Boolean)
+              .join(" · ")}
+          </p>
+          <h1
+            className="font-heading font-black text-brand-text-primary tracking-tight leading-[1.05]"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
+          >
+            <span className="bg-brand-gradient bg-clip-text text-transparent">
+              {pharmacy.name}
+            </span>{" "}
+            Review
+          </h1>
+          <p className="text-lg text-brand-text-secondary leading-relaxed max-w-3xl">
+            {pharmacy.description}
+          </p>
           <AffiliateDisclosure />
-        </PageHero>
+        </header>
 
         {/* Hero trust card */}
         <section className="rounded-2xl border border-brand-violet/10 bg-white p-6 sm:p-8">
@@ -291,19 +296,12 @@ export default async function PharmacyDetailPage({
             <div className="space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <TypeBadge type={pharmacy.type} />
-                {(pharmacy.type === "503A" || pharmacy.type === "Both") && (
-                  <Citation source={SOURCE_FDA_503A} n={1} />
-                )}
-                {(pharmacy.type === "503B" || pharmacy.type === "Both") && (
-                  <Citation source={SOURCE_FDA_503B} n={2} />
-                )}
                 {pharmacy.certifications.map((c) => (
                   <span
                     key={c}
                     className="inline-flex items-center text-xs font-semibold uppercase tracking-wide border border-sky-200 bg-sky-50 text-sky-700 rounded-full px-3 py-1"
                   >
                     {c}
-                    {c === "PCAB" && <Citation source={SOURCE_PCAB} n={3} />}
                   </span>
                 ))}
               </div>

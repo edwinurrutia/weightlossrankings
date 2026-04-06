@@ -51,23 +51,28 @@ export default function PharmaciesIndexPage() {
       />
 
       <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
-        <PageHero
-          badges={[
-            { icon: "🧪", text: `${pharmacies.length} Pharmacies` },
-            { icon: "✅", text: "Independently Researched" },
-          ]}
-          title={
-            <>
-              Compounding Pharmacies for{" "}
-              <span className="bg-brand-gradient bg-clip-text text-transparent">
-                GLP-1 Medications
-              </span>
-            </>
-          }
-          subtitle="Telehealth providers don't make compounded semaglutide or tirzepatide themselves — licensed compounding pharmacies do. This directory tracks the US 503A and 503B pharmacies known to supply the GLP-1 telehealth market, with certifications, state licensure, and regulatory standing."
-        >
+        <header className="flex flex-col gap-4">
+          <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold">
+            Compounding Directory · {pharmacies.length} Pharmacies Tracked
+          </p>
+          <h1
+            className="font-heading font-black text-brand-text-primary tracking-tight leading-[1.05]"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
+          >
+            Compounding Pharmacies for{" "}
+            <span className="bg-brand-gradient bg-clip-text text-transparent">
+              GLP-1 Medications
+            </span>
+          </h1>
+          <p className="text-lg text-brand-text-secondary leading-relaxed max-w-3xl">
+            Telehealth providers don&apos;t make compounded semaglutide or
+            tirzepatide themselves — licensed compounding pharmacies do.
+            This directory tracks the US 503A and 503B pharmacies known to
+            supply the GLP-1 telehealth market, with certifications, state
+            licensure, and regulatory standing.
+          </p>
           <AffiliateDisclosure />
-        </PageHero>
+        </header>
 
         <PharmacyDirectory pharmacies={pharmacies} />
 
