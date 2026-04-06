@@ -36,6 +36,7 @@
 
 import { getAllBlogPosts } from "@/lib/data";
 import { RESEARCH_ARTICLES } from "@/lib/research";
+import { getAllWarningLetters } from "@/lib/fda-warning-letters";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
@@ -97,6 +98,35 @@ export async function GET() {
       url: `${BASE_URL}/research/${article.slug}`,
       title: article.title,
       publishedAt: published,
+    });
+  }
+
+  // Pull FDA warning letters added to the dataset in the last 48
+  // hours. These are exactly the kind of timely regulatory news
+  // Google News and Top Stories actively reward — surfacing them
+  // via the news sitemap (rather than waiting for the regular
+  // sitemap crawl) accelerates Discover and Top Stories indexing
+  // by hours.
+  //
+  // We use `added_date` (when the scraper imported the letter into
+  // our dataset) rather than `letter_date` (when FDA actually
+  // issued the letter) because Google News uses publication-date
+  // freshness, and the date we publish IS the added_date — most
+  // FDA letters get added within days of issuance, but some
+  // editorial backfills add older letters that should not be
+  // pitched as fresh news.
+  const letters = getAllWarningLetters();
+  for (const letter of letters) {
+    const added = safeDate(letter.added_date ?? letter.letter_date);
+    if (!added) continue;
+    if (added < cutoff) continue;
+    const headline = `FDA Warning Letter: ${letter.company_name}${
+      letter.subject ? ` — ${letter.subject}` : ""
+    }`;
+    items.push({
+      url: `${BASE_URL}/fda-warning-letters/${letter.id}`,
+      title: headline,
+      publishedAt: added,
     });
   }
 

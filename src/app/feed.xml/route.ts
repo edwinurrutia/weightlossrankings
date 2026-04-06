@@ -31,6 +31,7 @@
 
 import { getAllBlogPosts } from "@/lib/data";
 import { RESEARCH_ARTICLES } from "@/lib/research";
+import { getAllWarningLetters } from "@/lib/fda-warning-letters";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
@@ -95,8 +96,28 @@ export async function GET() {
     category: a.kind === "data-investigation" ? "Data Investigation" : "Research",
   }));
 
+  // Pull FDA warning letters as feed items — these are timely
+  // regulatory news. Apple News, Discover, AI crawlers, and
+  // newsreaders all benefit from seeing them in the feed.
+  const letters = getAllWarningLetters();
+  const letterItems: FeedItem[] = letters.map((letter) => {
+    const headline = `FDA Warning Letter: ${letter.company_name}${
+      letter.subject ? ` — ${letter.subject}` : ""
+    }`;
+    return {
+      title: headline,
+      link: `${BASE_URL}/fda-warning-letters/${letter.id}`,
+      description:
+        letter.violations_summary?.slice(0, 500) ??
+        `FDA issued a warning letter to ${letter.company_name}.`,
+      pubDate: safeDate(letter.added_date ?? letter.letter_date),
+      guid: `${BASE_URL}/fda-warning-letters/${letter.id}`,
+      category: "FDA Enforcement",
+    };
+  });
+
   // Merge, sort newest first, cap at 50
-  const items = [...blogItems, ...researchItems]
+  const items = [...blogItems, ...researchItems, ...letterItems]
     .sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime())
     .slice(0, 50);
 
