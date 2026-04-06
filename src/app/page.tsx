@@ -14,8 +14,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+// Cohesive editorial product photography — warm, natural light,
+// cream/off-white palette, single focal subject, minimal props.
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1400&q=80&auto=format&fit=crop";
+  "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=1400&q=80&auto=format&fit=crop";
 
 const categories = [
   {
@@ -23,7 +25,7 @@ const categories = [
     slug: "semaglutide-providers",
     description: "Telehealth clinics for semaglutide and tirzepatide.",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&q=80&auto=format&fit=crop",
     comingSoon: false,
   },
   {
@@ -31,7 +33,7 @@ const categories = [
     slug: "weight-loss-programs",
     description: "Coaching, accountability, and structured plans.",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?w=800&q=80&auto=format&fit=crop",
     comingSoon: false,
   },
   {
@@ -39,7 +41,7 @@ const categories = [
     slug: "weight-loss-supplements",
     description: "Science-backed over-the-counter options.",
     image:
-      "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1576086265779-619d2f54d96b?w=800&q=80&auto=format&fit=crop",
     comingSoon: false,
   },
   {
@@ -47,7 +49,7 @@ const categories = [
     slug: "meal-delivery-for-weight-loss",
     description: "Portion-controlled meals shipped to your door.",
     image:
-      "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80&auto=format&fit=crop",
     comingSoon: false,
   },
 ];

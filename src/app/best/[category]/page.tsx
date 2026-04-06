@@ -211,27 +211,29 @@ const CATEGORY_MAP: Record<string, CategoryDef> = {
   },
 };
 
+// Cohesive editorial photography — same warm, natural-light,
+// cream-palette aesthetic used on the homepage hero and category cards.
 const CATEGORY_HERO_IMAGE: Record<string, string> = {
   "semaglutide-providers":
     "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1600&q=80&auto=format&fit=crop",
   "tirzepatide-providers":
-    "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=1600&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1600&q=80&auto=format&fit=crop",
   "compounded-semaglutide":
-    "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1600&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=1600&q=80&auto=format&fit=crop",
   "compounded-tirzepatide":
-    "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1600&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=1600&q=80&auto=format&fit=crop",
   "cheapest-semaglutide":
     "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=1600&q=80&auto=format&fit=crop",
   "cheapest-tirzepatide":
     "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=1600&q=80&auto=format&fit=crop",
   "weight-loss-programs":
-    "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?w=1600&q=80&auto=format&fit=crop",
   "weight-loss-supplements":
-    "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1576086265779-619d2f54d96b?w=1600&q=80&auto=format&fit=crop",
   "meal-delivery-for-weight-loss":
-    "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1600&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&q=80&auto=format&fit=crop",
   "fitness-apps-for-weight-loss":
-    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?w=1600&q=80&auto=format&fit=crop",
 };
 
 export function generateStaticParams() {
