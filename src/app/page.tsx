@@ -77,13 +77,6 @@ export default async function HomePage() {
       ? Math.min(...semaCompoundedPrices)
       : 99;
 
-  // States covered = unique union of every provider's states_available.
-  const statesCoveredSet = new Set<string>();
-  for (const p of allProviders) {
-    for (const s of p.states_available || []) statesCoveredSet.add(s);
-  }
-  const statesCovered = statesCoveredSet.size || 50;
-
   // Slim provider projection for the QuickMatch client widget. Only the
   // fields the matcher and result card need — keeps the client bundle
   // small and avoids shipping review bodies.
@@ -202,8 +195,6 @@ export default async function HomePage() {
       <HomeSavingsHeadline
         cheapestCompoundedMonthly={cheapestCompoundedMonthly}
         brandMonthly={WEGOVY_BRAND_MONTHLY}
-        providerCountLabel={providerCountLabel}
-        statesCovered={statesCovered}
       />
 
       {/* ── Quick Match — 3-question wizard that surfaces a top match ── */}

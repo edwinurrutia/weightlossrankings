@@ -9,8 +9,9 @@ interface LogoProps {
  * Editorial masthead logo (variation 10B).
  *
  * Wordmark: "WEIGHT LOSS" in deep indigo primary ink, a thin vertical violet
- * bar separator, "RANKINGS" in brand violet. All-caps, tightly tracked,
- * set in the site's heading face — newsroom masthead vibe.
+ * accent bar, "RANKINGS" in the same deep hero purple used throughout the
+ * brand — keeps the masthead reading as ONE brand mark instead of a button-
+ * colored hyperlink, and ties it visually to the hero gradient below.
  *
  * When `showText={false}`, renders a compact 32px favicon-like mark:
  * a deep indigo rounded square with a violet accent bar on the left
@@ -62,7 +63,7 @@ export default function Logo({ size = "md", showText = true }: LogoProps) {
             style={{ background: "#8b5cf6" }}
             aria-hidden="true"
           />
-          <span style={{ color: "#8b5cf6" }}>Rankings</span>
+          <span style={{ color: "#4c1d95" }}>Rankings</span>
         </span>
       ) : (
         <span

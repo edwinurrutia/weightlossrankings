@@ -23,6 +23,36 @@ function getCheapestMonthly(p: Provider): number | null {
 }
 
 /**
+ * Phrases that are table-stakes for any legitimate telehealth Rx in this
+ * category — listing them as a "differentiator" looks naive and undermines
+ * the editorial voice. Filtered out of pull quotes and feature chips so
+ * the hero only highlights things that actually distinguish a provider.
+ */
+const COMMODITY_PATTERNS = [
+  /legitscript/i,
+  /\bbbb\b/i,
+  /\bhipaa\b/i,
+  /accredited/i,
+  /board[\s-]?certified/i,
+  /licensed pharmac/i,
+  /licensed (provider|physician)s?/i,
+  /\bus[\s-]based\b/i,
+];
+
+const isCommodity = (s: string) =>
+  COMMODITY_PATTERNS.some((re) => re.test(s));
+
+/**
+ * Pick the first pro that actually differentiates the provider — skipping
+ * table-stakes claims like "LegitScript certified" that every legit
+ * pharmacy carries.
+ */
+function pickPullQuote(p: Provider): string | null {
+  const pros = p.pros ?? [];
+  return pros.find((pro) => !isCommodity(pro)) ?? pros[0] ?? null;
+}
+
+/**
  * Hero "Top Rated" section: the #1 provider gets a large editorial card
  * with an Editor's Pick treatment, the next two render as a stacked
  * runner-up column to its right. Visually establishes a clear ranking
@@ -39,7 +69,10 @@ export default function HomeHeroProviders({
 
   const pickScore = computeOverallScore(pick.scores);
   const pickPrice = getCheapestMonthly(pick);
-  const pickFeatures = (pick.features || []).slice(0, 4);
+  const pullQuote = pickPullQuote(pick);
+  const pickFeatures = (pick.features || [])
+    .filter((f) => !isCommodity(f))
+    .slice(0, 4);
 
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
@@ -90,10 +123,10 @@ export default function HomeHeroProviders({
               </p>
             )}
 
-            {/* Pull quote — first pro */}
-            {pick.pros && pick.pros.length > 0 && (
+            {/* Pull quote — first non-commodity pro (skips LegitScript etc.) */}
+            {pullQuote && (
               <blockquote className="mt-6 border-l-2 border-brand-violet/40 pl-4 text-base text-brand-text-primary leading-relaxed italic">
-                &ldquo;{pick.pros[0]}&rdquo;
+                &ldquo;{pullQuote}&rdquo;
               </blockquote>
             )}
 
