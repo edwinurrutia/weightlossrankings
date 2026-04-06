@@ -41,7 +41,12 @@ export default function PriceDistributionChart({
       ) : (
         <ul className="flex flex-col gap-3">
           {buckets.map((b) => {
-            const widthPct = (b.count / max) * 100;
+            // Bar fill is proportional to the SECOND-largest count rather than
+            // the absolute max so the label sitting after the bar always has
+            // room. The "max" of 100% is reserved for the visually largest
+            // bucket; all others get capped at 92% so the label fits.
+            const rawPct = (b.count / max) * 100;
+            const widthPct = b.count === 0 ? 0 : Math.max(rawPct, 4);
             const sharePct = total > 0 ? (b.count / total) * 100 : 0;
             return (
               <li
@@ -51,15 +56,20 @@ export default function PriceDistributionChart({
                 <span className="font-mono text-xs text-brand-text-secondary text-right tabular-nums">
                   {b.label}
                 </span>
-                <div className="relative h-7 bg-brand-violet/[0.06] rounded-md overflow-hidden">
+                <div className="relative h-7 bg-brand-violet/[0.06] rounded-md flex items-center">
                   <div
-                    className="absolute inset-y-0 left-0 bg-brand-violet/80 rounded-md transition-all"
+                    className="absolute inset-y-0 left-0 bg-brand-violet rounded-md"
                     style={{ width: `${widthPct}%` }}
                     aria-hidden
                   />
-                  <span className="relative z-10 px-2 h-full flex items-center font-semibold text-brand-text-primary">
-                    {b.count > 0 ? `${b.count} provider${b.count === 1 ? "" : "s"}` : ""}
-                  </span>
+                  {b.count > 0 && (
+                    <span
+                      className="relative z-10 ml-3 text-xs font-semibold text-brand-text-primary whitespace-nowrap"
+                      style={{ marginLeft: `calc(${widthPct}% + 0.5rem)` }}
+                    >
+                      {b.count} provider{b.count === 1 ? "" : "s"}
+                    </span>
+                  )}
                 </div>
                 <span className="text-xs text-brand-text-secondary tabular-nums text-right">
                   {sharePct.toFixed(0)}%

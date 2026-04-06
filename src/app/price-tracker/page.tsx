@@ -226,6 +226,8 @@ export default async function PriceTrackerPage() {
             description="Be the first to know when providers drop their prices."
             buttonText="Get Alerts"
             source="price_tracker"
+            successHeading="You're on the price-alert list."
+            successMessage="We'll email you when any tracked provider drops a monthly price."
           />
         </section>
       </div>

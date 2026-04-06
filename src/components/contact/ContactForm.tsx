@@ -153,16 +153,30 @@ export default function ContactForm() {
         </label>
       </div>
 
-      <div className="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
-        <button
-          type="submit"
-          disabled={submitting}
-          className="inline-flex items-center justify-center rounded-xl bg-brand-violet px-6 py-3 text-white font-semibold hover:bg-brand-violet/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
-        >
-          {submitting ? "Sending..." : "Send message"}
-        </button>
+      <div className="sm:col-span-2 flex flex-col gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+          <button
+            type="submit"
+            disabled={submitting}
+            className="inline-flex items-center justify-center rounded-xl bg-brand-violet px-6 py-3 text-white font-semibold hover:bg-brand-violet/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            {submitting ? "Sending..." : "Send message"}
+          </button>
+          {status.kind === "error" && (
+            <p className="text-sm text-red-600">{status.message}</p>
+          )}
+        </div>
         {status.kind === "error" && (
-          <p className="text-sm text-red-600">{status.message}</p>
+          <p className="text-xs text-brand-text-secondary leading-relaxed">
+            Having trouble? Email us directly at{" "}
+            <a
+              href="mailto:hello@weightlossrankings.org?subject=Contact%20form%20fallback"
+              className="text-brand-violet font-semibold underline"
+            >
+              hello@weightlossrankings.org
+            </a>{" "}
+            and we&apos;ll get back to you within one business day.
+          </p>
         )}
       </div>
     </form>

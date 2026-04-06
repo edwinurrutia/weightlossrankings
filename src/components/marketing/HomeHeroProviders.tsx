@@ -173,23 +173,17 @@ export default function HomeHeroProviders({
               </ul>
             )}
 
-            {/* CTAs */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            {/* CTA */}
+            <div className="mt-8">
               <TrackedAffiliateLink
                 href={pick.affiliate_url}
                 provider={pick.slug}
                 source={trackingSource}
                 position={1}
-                className="inline-flex items-center justify-center bg-brand-violet hover:bg-brand-violet/90 text-white font-bold text-base px-6 py-3.5 rounded-full transition-colors flex-1"
+                className="inline-flex items-center justify-center bg-brand-violet hover:bg-brand-violet/90 text-white font-bold text-base px-6 py-3.5 rounded-full transition-colors w-full sm:w-auto"
               >
                 Get Started with {pick.name}
               </TrackedAffiliateLink>
-              <Link
-                href={`/providers/${pick.slug}`}
-                className="inline-flex items-center justify-center text-brand-text-primary font-semibold text-sm px-5 py-3.5 rounded-full border border-brand-violet/20 hover:border-brand-violet/40 hover:text-brand-violet transition"
-              >
-                Read review
-              </Link>
             </div>
           </div>
         </article>
@@ -233,22 +227,16 @@ export default function HomeHeroProviders({
                     </span>
                   </div>
                 )}
-                <div className="mt-auto pt-5 flex gap-2">
+                <div className="mt-auto pt-5">
                   <TrackedAffiliateLink
                     href={p.affiliate_url}
                     provider={p.slug}
                     source={trackingSource}
                     position={idx + 2}
-                    className="flex-1 inline-flex items-center justify-center bg-brand-violet/10 hover:bg-brand-violet hover:text-white text-brand-violet font-semibold text-sm px-4 py-2.5 rounded-full transition-colors"
+                    className="w-full inline-flex items-center justify-center bg-brand-violet/10 hover:bg-brand-violet hover:text-white text-brand-violet font-semibold text-sm px-4 py-2.5 rounded-full transition-colors"
                   >
                     Get started
                   </TrackedAffiliateLink>
-                  <Link
-                    href={`/providers/${p.slug}`}
-                    className="inline-flex items-center justify-center text-brand-text-secondary hover:text-brand-violet text-sm px-3 py-2.5 rounded-full"
-                  >
-                    Review
-                  </Link>
                 </div>
               </article>
             );

@@ -10,6 +10,10 @@ interface EmailCaptureProps {
   buttonText?: string;
   className?: string;
   source?: string;
+  /** Headline shown after a successful submission. */
+  successHeading?: string;
+  /** Body shown after a successful submission. */
+  successMessage?: string;
 }
 
 export default function EmailCapture({
@@ -18,6 +22,8 @@ export default function EmailCapture({
   buttonText = "Send Me the Guide",
   className = "",
   source = "homepage",
+  successHeading = "You're in!",
+  successMessage = "Thanks — we'll be in touch within a day.",
 }: EmailCaptureProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
@@ -52,9 +58,9 @@ export default function EmailCapture({
         className={`rounded-2xl bg-brand-success/10 border border-brand-success/30 p-6 text-center ${className}`}
       >
         <p className="text-2xl mb-2">✅</p>
-        <p className="font-semibold text-brand-success">You&apos;re in!</p>
+        <p className="font-semibold text-brand-success">{successHeading}</p>
         <p className="text-sm text-brand-text-secondary mt-1">
-          Check your inbox for the GLP-1 Starter Guide.
+          {successMessage}
         </p>
       </div>
     );

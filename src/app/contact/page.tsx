@@ -66,7 +66,7 @@ export default function ContactPage() {
           ? Great — most common questions are answered there.
         </p>
         <h1 className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary mb-3">
-          Contact WeightLossRankings
+          Contact Weight Loss Rankings
         </h1>
         <p className="text-brand-text-secondary leading-relaxed max-w-3xl">
           We read every message and respond to most within one business day.
@@ -114,7 +114,7 @@ export default function ContactPage() {
           What we can&apos;t do
         </h2>
         <p className="text-sm text-brand-text-secondary leading-relaxed">
-          WeightLossRankings is an independent publisher, not a medical
+          Weight Loss Rankings is an independent publisher, not a medical
           provider. We cannot provide medical advice, review your symptoms,
           prescribe medications, fill prescriptions, or help with insurance
           disputes. For medical questions please contact a licensed healthcare

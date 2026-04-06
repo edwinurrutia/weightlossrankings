@@ -28,10 +28,16 @@ export async function POST(request: NextRequest) {
   try {
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      console.error("Contact route: RESEND_API_KEY missing");
+      // Production env var missing — fall through with a user-friendly
+      // error so the form's inline fallback link surfaces. The /contact
+      // page already shows a mailto: fallback when this happens.
+      console.error("Contact route: RESEND_API_KEY missing in environment");
       return NextResponse.json(
-        { error: "Email service is not configured." },
-        { status: 500 },
+        {
+          error:
+            "Our form is temporarily unavailable. Please email us directly at hello@weightlossrankings.org.",
+        },
+        { status: 503 },
       );
     }
 
