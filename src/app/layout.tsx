@@ -74,6 +74,21 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  // Auto-discovery for RSS readers, Apple News, Feedly, and AI
+  // crawlers (Perplexity / ChatGPT / Claude) that look for
+  // <link rel="alternate" type="application/rss+xml"> in the head.
+  // The feed itself lives at src/app/feed.xml/route.ts.
+  alternates: {
+    canonical: "/",
+    types: {
+      "application/rss+xml": [
+        {
+          url: "/feed.xml",
+          title: "Weight Loss Rankings — Latest articles",
+        },
+      ],
+    },
+  },
 };
 
 export default function RootLayout({
