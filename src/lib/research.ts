@@ -183,6 +183,20 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 3,
     tags: ["Compounded GLP-1", "Wegovy", "Practical guide"],
   },
+  {
+    slug: "select-trial-cardiovascular-benefits-non-diabetics",
+    title:
+      "What SELECT Showed: Semaglutide Cuts Heart Attack Risk by 20% in Non-Diabetics with Cardiovascular Disease",
+    description:
+      "The SELECT trial (Lincoff et al., NEJM 2023) randomized 17,604 non-diabetic adults with established cardiovascular disease to weekly semaglutide 2.4 mg or placebo for nearly four years. The primary cardiovascular endpoint dropped 20% — and the benefit appears largely independent of weight loss. Here's what the trial actually measured and what it should change about how we think about GLP-1 therapy.",
+    excerpt:
+      "SELECT was the first major cardiovascular outcomes trial of a GLP-1 receptor agonist in non-diabetic patients. The trial randomized 17,604 adults with overweight/obesity and established cardiovascular disease to weekly semaglutide 2.4 mg or placebo for a mean 39.8 months of follow-up. The primary MACE composite (CV death, nonfatal MI, nonfatal stroke) dropped from 8.0% on placebo to 6.5% on semaglutide — a 20% relative risk reduction (HR 0.80, 95% CI 0.72–0.90, P<0.001). Crucially, the cardiovascular benefit appeared largely independent of how much weight participants actually lost. This article walks through every verified number from the published NEJM paper and the FDA approval that followed.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 13,
+    citations: 5,
+    tags: ["Semaglutide", "Cardiovascular", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
