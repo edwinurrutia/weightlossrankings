@@ -41,6 +41,7 @@ export interface Provider {
   affiliate_url: string;
   affiliate_network?: string;
   fda_warnings: FdaWarning[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   review_content?: any;
   pros: string[];
   cons: string[];
@@ -78,6 +79,7 @@ export interface BlogPost {
   title: string;
   slug: string;
   excerpt: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   body: any;
   author: string;
   published_date: string;

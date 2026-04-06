@@ -54,7 +54,7 @@ export default function CostStep({ value, onNext, onBack }: CostStepProps) {
           onClick={() => onNext(null)}
           className="w-full rounded-full border border-brand-violet/20 text-brand-text-secondary font-medium px-6 py-3 text-sm hover:border-brand-violet/40 hover:text-brand-violet transition-all"
         >
-          I don't know — skip
+          I don&apos;t know — skip
         </button>
       </div>
 

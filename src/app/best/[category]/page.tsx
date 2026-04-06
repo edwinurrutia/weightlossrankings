@@ -4,7 +4,6 @@ import { sanityClient } from "@/lib/sanity/client";
 import { PROVIDERS_BY_CATEGORY_QUERY } from "@/lib/sanity/queries";
 import { computeOverallScore, SCORE_DIMENSIONS } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
-import ProviderCard from "@/components/providers/ProviderCard";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import CTAButton from "@/components/shared/CTAButton";
 import TrustBadge from "@/components/shared/TrustBadge";
@@ -194,7 +193,6 @@ export default async function RankingsPage({
             </h2>
 
             {sorted.map((provider, index) => {
-              const score = computeOverallScore(provider.scores);
               return (
                 <div
                   key={provider._id}

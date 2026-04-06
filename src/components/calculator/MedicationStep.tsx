@@ -19,7 +19,7 @@ export default function MedicationStep({ value, onNext }: MedicationStepProps) {
           Which medication are you taking?
         </h2>
         <p className="text-brand-text-secondary mt-1 text-sm">
-          We'll find you the best compounded alternative price.
+          We&apos;ll find you the best compounded alternative price.
         </p>
       </div>
       <div className="flex flex-col gap-3">

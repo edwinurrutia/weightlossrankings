@@ -50,7 +50,7 @@ export default function EmailCapture({
         className={`rounded-2xl bg-brand-success/10 border border-brand-success/30 p-6 text-center ${className}`}
       >
         <p className="text-2xl mb-2">✅</p>
-        <p className="font-semibold text-brand-success">You're in!</p>
+        <p className="font-semibold text-brand-success">You&apos;re in!</p>
         <p className="text-sm text-brand-text-secondary mt-1">
           Check your inbox for the GLP-1 Starter Guide.
         </p>
