@@ -6,18 +6,38 @@
     "description": "CoreAge Rx offers LegitScript-verified compounded semaglutide and tirzepatide with free 2-day shipping to all 50 states. Backed by licensed physicians and 24/7 support, it delivers the most competitive pricing in the compounded GLP-1 space.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 149 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "1mg", "form": "compounded", "monthly_cost": 249 },
-      { "dose": "1.7mg", "form": "compounded", "monthly_cost": 299 },
-      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 349 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 149
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "1.7mg",
+        "form": "compounded",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "monthly_cost": 349
+      }
     ],
     "scores": {
       "value": 9.5,
       "effectiveness": 8.5,
-      "ux": 9.0,
-      "trust": 9.0,
-      "accessibility": 9.0,
+      "ux": 9,
+      "trust": 9,
+      "accessibility": 9,
       "support": 8.5
     },
     "features": [
@@ -29,11 +49,56 @@
       "Tirzepatide"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.coreagerx.com",
     "affiliate_network": "direct",
@@ -55,6 +120,15 @@
     "external_reviews": {
       "trustpilot_score": 4.7,
       "trustpilot_count": 850
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.coreagerx.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -64,16 +138,30 @@
     "description": "Hims is a well-known telehealth platform offering compounded semaglutide to all 50 states. Its slick app, FSA/HSA acceptance, and frequent promotional pricing make it the go-to choice for budget-conscious buyers.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 199, "promo_code": "SAVE50", "promo_price": 149 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 299 },
-      { "dose": "1mg", "form": "compounded", "monthly_cost": 399 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 199,
+        "promo_code": "SAVE50",
+        "promo_price": 149
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "monthly_cost": 399
+      }
     ],
     "scores": {
       "value": 8.5,
-      "effectiveness": 8.0,
-      "ux": 9.0,
+      "effectiveness": 8,
+      "ux": 9,
       "trust": 8.5,
-      "accessibility": 9.0,
+      "accessibility": 9,
       "support": 7.5
     },
     "features": [
@@ -83,11 +171,56 @@
       "All 50 States"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.forhims.com/weight-loss",
     "affiliate_network": "direct",
@@ -109,6 +242,15 @@
     "external_reviews": {
       "trustpilot_score": 4.5,
       "trustpilot_count": 12500
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.forhims.com/weight-loss"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -118,17 +260,29 @@
     "description": "Ro Body pairs licensed physicians with both brand-name and compounded GLP-1 options. Available in 20 states, Ro's holistic care model — combining medication, nutrition, and coaching — sets the bar for comprehensive telehealth weight management.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 249 },
-      { "dose": "0.25mg", "form": "brand", "monthly_cost": 1350 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "0.25mg",
+        "form": "brand",
+        "monthly_cost": 1350
+      }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 8.5,
       "ux": 8.5,
-      "trust": 9.0,
+      "trust": 9,
       "accessibility": 8.5,
-      "support": 8.0
+      "support": 8
     },
     "features": [
       "Compounded",
@@ -137,8 +291,26 @@
       "Licensed Physicians"
     ],
     "states_available": [
-      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
-      "NC","NJ","NY","OH","PA","TX","VA","WA","WI","AZ"
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "IL",
+      "MA",
+      "MD",
+      "MI",
+      "MN",
+      "NC",
+      "NJ",
+      "NY",
+      "OH",
+      "PA",
+      "TX",
+      "VA",
+      "WA",
+      "WI",
+      "AZ"
     ],
     "affiliate_url": "https://www.ro.co/weight-loss",
     "affiliate_network": "direct",
@@ -160,6 +332,15 @@
     "external_reviews": {
       "trustpilot_score": 4.3,
       "trustpilot_count": 8900
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.ro.co/weight-loss"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -169,15 +350,19 @@
     "description": "Found combines prescription weight-loss medication with 1-on-1 coaching and registered dietitian access, starting at just $129/month — the lowest entry price among full-service GLP-1 providers. Available in 25 states.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Starting dose", "form": "compounded", "monthly_cost": 129 }
+      {
+        "dose": "Starting dose",
+        "form": "compounded",
+        "monthly_cost": 129
+      }
     ],
     "scores": {
-      "value": 9.0,
-      "effectiveness": 8.0,
-      "ux": 8.0,
-      "trust": 8.0,
+      "value": 9,
+      "effectiveness": 8,
+      "ux": 8,
+      "trust": 8,
       "accessibility": 7.5,
-      "support": 9.0
+      "support": 9
     },
     "features": [
       "Coaching Included",
@@ -186,9 +371,31 @@
       "Lowest Entry Price"
     ],
     "states_available": [
-      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
-      "NC","NJ","NY","OH","PA","TX","VA","WA","AZ","NV",
-      "OR","UT","WI","TN","MO"
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "IL",
+      "MA",
+      "MD",
+      "MI",
+      "MN",
+      "NC",
+      "NJ",
+      "NY",
+      "OH",
+      "PA",
+      "TX",
+      "VA",
+      "WA",
+      "AZ",
+      "NV",
+      "OR",
+      "UT",
+      "WI",
+      "TN",
+      "MO"
     ],
     "affiliate_url": "https://www.joinfound.com",
     "affiliate_network": "direct",
@@ -210,6 +417,15 @@
     "external_reviews": {
       "trustpilot_score": 4.1,
       "trustpilot_count": 3200
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.joinfound.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -219,17 +435,29 @@
     "description": "Henry Meds is a no-frills telehealth platform focused on fast, affordable access to compounded GLP-1 medications. With quick onboarding and service in 30 states, it suits patients who want medication without the extras.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 197 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 247 },
-      { "dose": "1mg", "form": "compounded", "monthly_cost": 297 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 197
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 247
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "monthly_cost": 297
+      }
     ],
     "scores": {
       "value": 8.5,
       "effectiveness": 7.5,
       "ux": 7.5,
       "trust": 7.5,
-      "accessibility": 8.0,
-      "support": 7.0
+      "accessibility": 8,
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -238,9 +466,36 @@
       "Subscription Model"
     ],
     "states_available": [
-      "AL","AZ","CA","CO","CT","FL","GA","IL","IN","KY",
-      "LA","MA","MD","MI","MN","MO","NC","NJ","NV","NY",
-      "OH","OK","OR","PA","TN","TX","UT","VA","WA","WI"
+      "AL",
+      "AZ",
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "IL",
+      "IN",
+      "KY",
+      "LA",
+      "MA",
+      "MD",
+      "MI",
+      "MN",
+      "MO",
+      "NC",
+      "NJ",
+      "NV",
+      "NY",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "WA",
+      "WI"
     ],
     "affiliate_url": "https://www.henrymeds.com",
     "affiliate_network": "direct",
@@ -259,8 +514,17 @@
     "best_for": "fast, no-frills access",
     "is_featured": false,
     "external_reviews": {
-      "trustpilot_score": 4.0,
+      "trustpilot_score": 4,
       "trustpilot_count": 1800
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.henrymeds.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -270,16 +534,24 @@
     "description": "Sesame is a unique marketplace offering both video telehealth and in-person physician visits for GLP-1 prescriptions. Available in 10 states, it's the best option for patients who want face-to-face flexibility alongside telehealth convenience.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Consultation", "form": "compounded", "monthly_cost": 49 },
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 249 }
+      {
+        "dose": "Consultation",
+        "form": "compounded",
+        "monthly_cost": 49
+      },
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 249
+      }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
       "ux": 8.5,
       "trust": 8.5,
-      "accessibility": 7.0,
-      "support": 7.0
+      "accessibility": 7,
+      "support": 7
     },
     "features": [
       "In-Person Option",
@@ -288,7 +560,16 @@
       "Compounded"
     ],
     "states_available": [
-      "CA","FL","IL","NY","PA","TX","GA","AZ","NC","WA"
+      "CA",
+      "FL",
+      "IL",
+      "NY",
+      "PA",
+      "TX",
+      "GA",
+      "AZ",
+      "NC",
+      "WA"
     ],
     "affiliate_url": "https://sesamecare.com/weight-loss",
     "affiliate_network": "direct",
@@ -309,6 +590,15 @@
     "external_reviews": {
       "trustpilot_score": 4.6,
       "trustpilot_count": 5400
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://sesamecare.com/weight-loss"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -318,11 +608,15 @@
     "description": "Calibrate is a premium metabolic health program pairing brand-name GLP-1 medications with year-long physician oversight, health coaching, and behavior change curriculum. At $349/month, it targets patients who want the gold-standard clinical experience.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Brand GLP-1", "form": "brand", "monthly_cost": 349 }
+      {
+        "dose": "Brand GLP-1",
+        "form": "brand",
+        "monthly_cost": 349
+      }
     ],
     "scores": {
-      "value": 6.0,
-      "effectiveness": 9.0,
+      "value": 6,
+      "effectiveness": 9,
       "ux": 8.5,
       "trust": 9.5,
       "accessibility": 6.5,
@@ -335,8 +629,26 @@
       "Physician Oversight"
     ],
     "states_available": [
-      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
-      "NC","NJ","NY","OH","PA","TX","VA","WA","AZ","WI",
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "IL",
+      "MA",
+      "MD",
+      "MI",
+      "MN",
+      "NC",
+      "NJ",
+      "NY",
+      "OH",
+      "PA",
+      "TX",
+      "VA",
+      "WA",
+      "AZ",
+      "WI",
       "OR"
     ],
     "affiliate_url": "https://www.joincalibrate.com",
@@ -359,6 +671,15 @@
     "external_reviews": {
       "trustpilot_score": 4.4,
       "trustpilot_count": 2100
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.joincalibrate.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -368,16 +689,24 @@
     "description": "PlushCare is a telehealth platform that accepts most major insurance plans, making it the best path for patients who want to use insurance coverage for their GLP-1 prescription. Board-certified doctors available same-day.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Consultation", "form": "brand", "monthly_cost": 19 },
-      { "dose": "GLP-1 Rx", "form": "brand", "monthly_cost": 299 }
+      {
+        "dose": "Consultation",
+        "form": "brand",
+        "monthly_cost": 19
+      },
+      {
+        "dose": "GLP-1 Rx",
+        "form": "brand",
+        "monthly_cost": 299
+      }
     ],
     "scores": {
       "value": 7.5,
-      "effectiveness": 8.0,
-      "ux": 8.0,
-      "trust": 9.0,
-      "accessibility": 8.0,
-      "support": 8.0
+      "effectiveness": 8,
+      "ux": 8,
+      "trust": 9,
+      "accessibility": 8,
+      "support": 8
     },
     "features": [
       "Insurance Accepted",
@@ -386,10 +715,46 @@
       "Brand Available"
     ],
     "states_available": [
-      "AL","AZ","CA","CO","CT","FL","GA","IL","IN","KY",
-      "LA","MA","MD","MI","MN","MO","NC","NJ","NV","NY",
-      "OH","OK","OR","PA","TN","TX","UT","VA","WA","WI",
-      "DE","NH","NM","RI","SC","ID","MT","WY","ND","SD"
+      "AL",
+      "AZ",
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "IL",
+      "IN",
+      "KY",
+      "LA",
+      "MA",
+      "MD",
+      "MI",
+      "MN",
+      "MO",
+      "NC",
+      "NJ",
+      "NV",
+      "NY",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "WA",
+      "WI",
+      "DE",
+      "NH",
+      "NM",
+      "RI",
+      "SC",
+      "ID",
+      "MT",
+      "WY",
+      "ND",
+      "SD"
     ],
     "affiliate_url": "https://plushcare.com/weight-management",
     "affiliate_network": "direct",
@@ -411,6 +776,15 @@
     "external_reviews": {
       "trustpilot_score": 4.2,
       "trustpilot_count": 6700
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://plushcare.com/weight-management"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -420,16 +794,28 @@
     "description": "Mochi Health connects patients with board-certified obesity medicine specialists — not just general practitioners — for GLP-1 prescriptions and ongoing management. Ideal for patients with complex metabolic health needs.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 159 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "1mg", "form": "compounded", "monthly_cost": 249 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 159
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "monthly_cost": 249
+      }
     ],
     "scores": {
       "value": 7.5,
       "effectiveness": 8.5,
-      "ux": 8.0,
+      "ux": 8,
       "trust": 8.5,
-      "accessibility": 7.0,
+      "accessibility": 7,
       "support": 8.5
     },
     "features": [
@@ -439,9 +825,36 @@
       "Personalized Dosing"
     ],
     "states_available": [
-      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
-      "NC","NJ","NY","OH","PA","TX","VA","WA","AZ","NV",
-      "OR","UT","WI","TN","MO","IN","KY","LA","SC","DE"
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "IL",
+      "MA",
+      "MD",
+      "MI",
+      "MN",
+      "NC",
+      "NJ",
+      "NY",
+      "OH",
+      "PA",
+      "TX",
+      "VA",
+      "WA",
+      "AZ",
+      "NV",
+      "OR",
+      "UT",
+      "WI",
+      "TN",
+      "MO",
+      "IN",
+      "KY",
+      "LA",
+      "SC",
+      "DE"
     ],
     "affiliate_url": "https://www.mochihealth.com",
     "affiliate_network": "direct",
@@ -463,6 +876,15 @@
     "external_reviews": {
       "trustpilot_score": 4.5,
       "trustpilot_count": 980
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.mochihealth.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -472,14 +894,22 @@
     "description": "Noom is a psychology-based weight loss app using cognitive behavioral techniques to drive lasting behavior change — no medication required. At $17/month on an annual plan, it's the most accessible structured weight-loss program available.",
     "category": "Weight Loss Program",
     "pricing": [
-      { "dose": "Monthly Plan", "form": "compounded", "monthly_cost": 70 },
-      { "dose": "Annual Plan", "form": "compounded", "monthly_cost": 17 }
+      {
+        "dose": "Monthly Plan",
+        "form": "compounded",
+        "monthly_cost": 70
+      },
+      {
+        "dose": "Annual Plan",
+        "form": "compounded",
+        "monthly_cost": 17
+      }
     ],
     "scores": {
       "value": 7.5,
-      "effectiveness": 7.0,
+      "effectiveness": 7,
       "ux": 8.5,
-      "trust": 8.0,
+      "trust": 8,
       "accessibility": 9.5,
       "support": 7.5
     },
@@ -491,11 +921,56 @@
       "All 50 States"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.noom.com/weight",
     "affiliate_network": "direct",
@@ -517,6 +992,15 @@
     "external_reviews": {
       "trustpilot_score": 3.8,
       "trustpilot_count": 45000
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.noom.com/weight"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -526,15 +1010,27 @@
     "description": "WeightWatchers combines its proven Points system with community workshops and, increasingly, GLP-1 clinical support. From $23/month digital to $99/month GLP-1 clinic, it offers the broadest tier range of any program on this list.",
     "category": "Weight Loss Program",
     "pricing": [
-      { "dose": "Digital", "form": "compounded", "monthly_cost": 23 },
-      { "dose": "Workshops", "form": "compounded", "monthly_cost": 43 },
-      { "dose": "GLP-1 Clinic", "form": "compounded", "monthly_cost": 99 }
+      {
+        "dose": "Digital",
+        "form": "compounded",
+        "monthly_cost": 23
+      },
+      {
+        "dose": "Workshops",
+        "form": "compounded",
+        "monthly_cost": 43
+      },
+      {
+        "dose": "GLP-1 Clinic",
+        "form": "compounded",
+        "monthly_cost": 99
+      }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
       "ux": 7.5,
-      "trust": 9.0,
+      "trust": 9,
       "accessibility": 9.5,
       "support": 8.5
     },
@@ -546,11 +1042,56 @@
       "70+ Year Track Record"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.weightwatchers.com/us",
     "affiliate_network": "direct",
@@ -573,6 +1114,15 @@
     "external_reviews": {
       "trustpilot_score": 3.5,
       "trustpilot_count": 18000
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.weightwatchers.com/us"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -582,15 +1132,19 @@
     "description": "Transparent Labs Fat Burner is a premium thermogenic supplement formulated with third-party tested, clinically dosed ingredients. Designed for serious gym-goers who want a clean, no-proprietary-blend fat burner backed by a money-back guarantee.",
     "category": "Supplement",
     "pricing": [
-      { "dose": "60 capsules", "form": "compounded", "monthly_cost": 49 }
+      {
+        "dose": "60 capsules",
+        "form": "compounded",
+        "monthly_cost": 49
+      }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
       "ux": 8.5,
-      "trust": 9.0,
+      "trust": 9,
       "accessibility": 9.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Third-Party Tested",
@@ -598,11 +1152,56 @@
       "Money-Back Guarantee"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.transparentlabs.com/products/fat-burner",
     "affiliate_network": "direct",
@@ -624,6 +1223,15 @@
     "external_reviews": {
       "trustpilot_score": 4.5,
       "trustpilot_count": 3200
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.transparentlabs.com/products/fat-burner"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -633,14 +1241,18 @@
     "description": "MitoQ delivers a clinically studied form of CoQ10 that targets mitochondria directly, supporting metabolic energy and cellular health. Made in New Zealand with pharmaceutical-grade manufacturing standards.",
     "category": "Supplement",
     "pricing": [
-      { "dose": "60 capsules", "form": "compounded", "monthly_cost": 59 }
+      {
+        "dose": "60 capsules",
+        "form": "compounded",
+        "monthly_cost": 59
+      }
     ],
     "scores": {
       "value": 7.5,
-      "effectiveness": 7.0,
-      "ux": 8.0,
+      "effectiveness": 7,
+      "ux": 8,
       "trust": 8.5,
-      "accessibility": 9.0,
+      "accessibility": 9,
       "support": 6.5
     },
     "features": [
@@ -649,11 +1261,56 @@
       "Subscription Model"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.mitoq.com",
     "affiliate_network": "direct",
@@ -675,6 +1332,15 @@
     "external_reviews": {
       "trustpilot_score": 4.3,
       "trustpilot_count": 1800
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.mitoq.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -684,15 +1350,19 @@
     "description": "Lean Hybrid Protein is a high-protein meal replacement powder with 25g of protein and minimal carbs per serving. Designed for weight loss through satiety, it doubles as an FSA/HSA-eligible supplement for eligible buyers.",
     "category": "Supplement",
     "pricing": [
-      { "dose": "30 servings", "form": "compounded", "monthly_cost": 39 }
+      {
+        "dose": "30 servings",
+        "form": "compounded",
+        "monthly_cost": 39
+      }
     ],
     "scores": {
       "value": 8.5,
-      "effectiveness": 7.0,
-      "ux": 8.0,
-      "trust": 8.0,
+      "effectiveness": 7,
+      "ux": 8,
+      "trust": 8,
       "accessibility": 9.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "25g Protein",
@@ -700,11 +1370,56 @@
       "FSA/HSA"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.leanhybrid.com",
     "affiliate_network": "direct",
@@ -726,6 +1441,15 @@
     "external_reviews": {
       "trustpilot_score": 4.2,
       "trustpilot_count": 890
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.leanhybrid.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -735,14 +1459,18 @@
     "description": "Thorne's Metabolic Health Bundle combines NSF-certified, practitioner-grade supplements targeting blood sugar regulation, metabolism, and body composition. The gold standard for patients who want doctor-recommended supplement quality.",
     "category": "Supplement",
     "pricing": [
-      { "dose": "Monthly Bundle", "form": "compounded", "monthly_cost": 129 }
+      {
+        "dose": "Monthly Bundle",
+        "form": "compounded",
+        "monthly_cost": 129
+      }
     ],
     "scores": {
-      "value": 7.0,
-      "effectiveness": 8.0,
+      "value": 7,
+      "effectiveness": 8,
       "ux": 7.5,
       "trust": 9.5,
-      "accessibility": 9.0,
+      "accessibility": 9,
       "support": 7.5
     },
     "features": [
@@ -751,11 +1479,56 @@
       "Bundle Savings"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.thorne.com",
     "affiliate_network": "direct",
@@ -777,6 +1550,15 @@
     "external_reviews": {
       "trustpilot_score": 4.6,
       "trustpilot_count": 5400
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.thorne.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -786,14 +1568,18 @@
     "description": "Factor delivers fresh, chef-prepared meals dietitian-designed for weight loss — fully cooked and ready in under 2 minutes. With keto, calorie-smart, and protein-plus options, it's the top pick for busy people who want zero meal prep.",
     "category": "Meal Delivery",
     "pricing": [
-      { "dose": "6 meals/week", "form": "compounded", "monthly_cost": 107 }
+      {
+        "dose": "6 meals/week",
+        "form": "compounded",
+        "monthly_cost": 107
+      }
     ],
     "scores": {
       "value": 7.5,
-      "effectiveness": 8.0,
-      "ux": 9.0,
+      "effectiveness": 8,
+      "ux": 9,
       "trust": 8.5,
-      "accessibility": 9.0,
+      "accessibility": 9,
       "support": 7.5
     },
     "features": [
@@ -803,11 +1589,56 @@
       "Free Shipping"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.factor75.com",
     "affiliate_network": "direct",
@@ -829,6 +1660,15 @@
     "external_reviews": {
       "trustpilot_score": 4.4,
       "trustpilot_count": 12500
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.factor75.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -838,15 +1678,19 @@
     "description": "BistroMD was founded by a bariatric physician and features meal plans specifically designed for medical weight loss, including programs for diabetes, menopause, and gluten-free needs. The most clinically rigorous meal delivery option.",
     "category": "Meal Delivery",
     "pricing": [
-      { "dose": "Weekly Plan", "form": "compounded", "monthly_cost": 155 }
+      {
+        "dose": "Weekly Plan",
+        "form": "compounded",
+        "monthly_cost": 155
+      }
     ],
     "scores": {
       "value": 6.5,
       "effectiveness": 8.5,
       "ux": 7.5,
       "trust": 9.5,
-      "accessibility": 9.0,
-      "support": 8.0
+      "accessibility": 9,
+      "support": 8
     },
     "features": [
       "MD-Designed",
@@ -855,11 +1699,56 @@
       "Menopause Plan"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.bistromd.com",
     "affiliate_network": "direct",
@@ -881,6 +1770,15 @@
     "external_reviews": {
       "trustpilot_score": 4.1,
       "trustpilot_count": 4200
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.bistromd.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -890,10 +1788,14 @@
     "description": "Nutrisystem is the original portion-controlled meal delivery system with a 30-year track record of clinically validated weight loss. Shelf-stable and fresh meal combos ship directly to your door with a structured daily eating plan.",
     "category": "Meal Delivery",
     "pricing": [
-      { "dose": "Daily Plan", "form": "compounded", "monthly_cost": 360 }
+      {
+        "dose": "Daily Plan",
+        "form": "compounded",
+        "monthly_cost": 360
+      }
     ],
     "scores": {
-      "value": 6.0,
+      "value": 6,
       "effectiveness": 7.5,
       "ux": 6.5,
       "trust": 8.5,
@@ -906,11 +1808,56 @@
       "Diabetic Plan"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.nutrisystem.com",
     "affiliate_network": "direct",
@@ -932,6 +1879,15 @@
     "external_reviews": {
       "trustpilot_score": 3.9,
       "trustpilot_count": 28000
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.nutrisystem.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -941,15 +1897,19 @@
     "description": "Green Chef is a USDA Certified Organic meal kit service with a dedicated Keto & Calorie Smart plan for weight loss. Pre-prepped organic ingredients arrive weekly with simple 30-minute recipes designed by professional chefs.",
     "category": "Meal Delivery",
     "pricing": [
-      { "dose": "2 servings/3 meals/week", "form": "compounded", "monthly_cost": 109 }
+      {
+        "dose": "2 servings/3 meals/week",
+        "form": "compounded",
+        "monthly_cost": 109
+      }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 8.0,
+      "ux": 8,
       "trust": 8.5,
       "accessibility": 8.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "USDA Organic",
@@ -957,11 +1917,56 @@
       "30-Min Prep"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.greenchef.com",
     "affiliate_network": "direct",
@@ -981,8 +1986,17 @@
     "best_for": "organic ingredients",
     "is_featured": false,
     "external_reviews": {
-      "trustpilot_score": 4.0,
+      "trustpilot_score": 4,
       "trustpilot_count": 6700
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.greenchef.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -992,14 +2006,22 @@
     "description": "MyFitnessPal Premium is the world's most popular calorie tracking app with 200M+ users, a barcode scanner database of 14M+ foods, and advanced macro tracking. Premium unlocks meal plans, calorie goal guidance, and priority support.",
     "category": "Fitness App",
     "pricing": [
-      { "dose": "Monthly", "form": "compounded", "monthly_cost": 20 },
-      { "dose": "Annual", "form": "compounded", "monthly_cost": 7 }
+      {
+        "dose": "Monthly",
+        "form": "compounded",
+        "monthly_cost": 20
+      },
+      {
+        "dose": "Annual",
+        "form": "compounded",
+        "monthly_cost": 7
+      }
     ],
     "scores": {
       "value": 7.5,
-      "effectiveness": 7.0,
-      "ux": 9.0,
-      "trust": 8.0,
+      "effectiveness": 7,
+      "ux": 9,
+      "trust": 8,
       "accessibility": 9.5,
       "support": 7.5
     },
@@ -1009,11 +2031,56 @@
       "Macro Tracking"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.myfitnesspal.com",
     "affiliate_network": "direct",
@@ -1035,6 +2102,15 @@
     "external_reviews": {
       "trustpilot_score": 4.3,
       "trustpilot_count": 45000
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.myfitnesspal.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1044,15 +2120,19 @@
     "description": "Lose It! is a focused calorie tracking app with a unique Snap-It food photo recognition feature and a clean, beginner-friendly interface. At $40/year, it's one of the best value calorie trackers for weight loss.",
     "category": "Fitness App",
     "pricing": [
-      { "dose": "Annual", "form": "compounded", "monthly_cost": 4 }
+      {
+        "dose": "Annual",
+        "form": "compounded",
+        "monthly_cost": 4
+      }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
       "ux": 8.5,
       "trust": 7.5,
       "accessibility": 9.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Snap-It Food Photo",
@@ -1060,11 +2140,56 @@
       "Progress Reports"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.loseit.com",
     "affiliate_network": "direct",
@@ -1086,6 +2211,15 @@
     "external_reviews": {
       "trustpilot_score": 4.4,
       "trustpilot_count": 18000
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.loseit.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1095,15 +2229,19 @@
     "description": "Noom Med integrates GLP-1 medication access with Noom's proven cognitive behavioral therapy curriculum, 1-on-1 dietitian coaching, and dedicated care team — the most comprehensive psychology-plus-medication program available.",
     "category": "Fitness App",
     "pricing": [
-      { "dose": "Monthly", "form": "compounded", "monthly_cost": 99 }
+      {
+        "dose": "Monthly",
+        "form": "compounded",
+        "monthly_cost": 99
+      }
     ],
     "scores": {
       "value": 8.5,
-      "effectiveness": 8.0,
-      "ux": 9.0,
-      "trust": 9.0,
-      "accessibility": 9.0,
-      "support": 9.0
+      "effectiveness": 8,
+      "ux": 9,
+      "trust": 9,
+      "accessibility": 9,
+      "support": 9
     },
     "features": [
       "GLP-1 Integration",
@@ -1111,11 +2249,47 @@
       "Dietitian"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","NE","NV","NH","NJ",
-      "NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VA","WA","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "WA",
+      "WI"
     ],
     "affiliate_url": "https://www.noom.com/med",
     "affiliate_network": "direct",
@@ -1137,6 +2311,15 @@
     "external_reviews": {
       "trustpilot_score": 4.2,
       "trustpilot_count": 8900
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.noom.com/med"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1146,12 +2329,16 @@
     "description": "Fitbit Premium unlocks advanced health analytics, guided workouts, sleep tracking insights, and personalized wellness reports for Fitbit device owners. At $10/month, it's the best activity-based weight management subscription.",
     "category": "Fitness App",
     "pricing": [
-      { "dose": "Monthly", "form": "compounded", "monthly_cost": 10 }
+      {
+        "dose": "Monthly",
+        "form": "compounded",
+        "monthly_cost": 10
+      }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 6.5,
-      "ux": 9.0,
+      "ux": 9,
       "trust": 8.5,
       "accessibility": 9.5,
       "support": 7.5
@@ -1162,11 +2349,56 @@
       "Wellness Reports"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.fitbit.com/premium",
     "affiliate_network": "direct",
@@ -1186,8 +2418,17 @@
     "best_for": "activity-based tracking",
     "is_featured": false,
     "external_reviews": {
-      "trustpilot_score": 4.0,
+      "trustpilot_score": 4,
       "trustpilot_count": 32000
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.fitbit.com/premium"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1197,15 +2438,19 @@
     "description": "Apple Fitness+ is a guided workout subscription with 1,000+ on-demand classes spanning HIIT, yoga, strength, cycling, and more. Powered by Apple Watch metrics in real-time, it's the most polished workout app available.",
     "category": "Fitness App",
     "pricing": [
-      { "dose": "Monthly", "form": "compounded", "monthly_cost": 10 }
+      {
+        "dose": "Monthly",
+        "form": "compounded",
+        "monthly_cost": 10
+      }
     ],
     "scores": {
       "value": 6.5,
-      "effectiveness": 7.0,
+      "effectiveness": 7,
       "ux": 9.5,
-      "trust": 9.0,
+      "trust": 9,
       "accessibility": 8.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "1000+ Workouts",
@@ -1213,11 +2458,56 @@
       "Family Sharing"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.apple.com/apple-fitness-plus",
     "affiliate_network": "direct",
@@ -1239,6 +2529,15 @@
     "external_reviews": {
       "trustpilot_score": 4.6,
       "trustpilot_count": 12000
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.apple.com/apple-fitness-plus"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1248,15 +2547,32 @@
     "description": "Eden offers flat-rate compounded semaglutide and tirzepatide through tryeden.com with no dose-based price hikes and no membership fees. Shipping is included and plans scale down when you commit to a multi-month package.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 149, "promo_price": 129 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 249 },
-      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 229 },
-      { "dose": "5mg", "form": "compounded", "monthly_cost": 349 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 149,
+        "promo_price": 129
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "monthly_cost": 229
+      },
+      {
+        "dose": "5mg",
+        "form": "compounded",
+        "monthly_cost": 349
+      }
     ],
     "scores": {
       "value": 8.5,
-      "effectiveness": 8.0,
-      "ux": 8.0,
+      "effectiveness": 8,
+      "ux": 8,
       "trust": 7.5,
       "accessibility": 8.5,
       "support": 7.5
@@ -1270,11 +2586,56 @@
       "No Membership Fee"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.tryeden.com",
     "affiliate_network": "direct",
@@ -1295,6 +2656,15 @@
     "external_reviews": {
       "trustpilot_score": 4.4,
       "trustpilot_count": 2100
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.tryeden.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1304,12 +2674,16 @@
     "description": "Form Health is an insurance-first obesity medicine clinic led by board-certified obesity medicine physicians paired with registered dietitians. It focuses on FDA-approved GLP-1s like Wegovy, Zepbound, and Mounjaro rather than compounded alternatives.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Self-pay monthly", "form": "brand", "monthly_cost": 299 }
+      {
+        "dose": "Self-pay monthly",
+        "form": "brand",
+        "monthly_cost": 299
+      }
     ],
     "scores": {
-      "value": 7.0,
-      "effectiveness": 9.0,
-      "ux": 8.0,
+      "value": 7,
+      "effectiveness": 9,
+      "ux": 8,
       "trust": 9.5,
       "accessibility": 7.5,
       "support": 9.5
@@ -1322,11 +2696,56 @@
       "Unlimited Messaging"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.formhealth.co",
     "affiliate_network": "direct",
@@ -1348,6 +2767,15 @@
     "external_reviews": {
       "trustpilot_score": 4.2,
       "trustpilot_count": 450
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.formhealth.co"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1357,14 +2785,27 @@
     "description": "Zealthy bundles medical care, prescriber visits, and compounded semaglutide into a flat membership. Multi-month commitments bring per-month costs down to the low end of the market.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 217, "promo_price": 151 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 297 },
-      { "dose": "1mg", "form": "compounded", "monthly_cost": 297 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 217,
+        "promo_price": 151
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 297
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "monthly_cost": 297
+      }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
-      "ux": 8.0,
+      "ux": 8,
       "trust": 7.5,
       "accessibility": 8.5,
       "support": 7.5
@@ -1377,11 +2818,56 @@
       "Multi-Month Discount"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://getzealthy.com/weight-loss",
     "affiliate_network": "direct",
@@ -1403,6 +2889,15 @@
     "external_reviews": {
       "trustpilot_score": 4.1,
       "trustpilot_count": 1800
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://getzealthy.com/weight-loss"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1412,19 +2907,41 @@
     "description": "LifeMD is a publicly traded telehealth company offering both compounded and brand-name GLP-1s through partnerships with Novo Nordisk and Eli Lilly. Its Weight Management program includes provider consults, coaching, and free delivery.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 249, "promo_price": 149 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 249 },
-      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 339, "promo_price": 239 },
-      { "dose": "2.5mg", "form": "brand", "monthly_cost": 349 },
-      { "dose": "5mg", "form": "brand", "monthly_cost": 499 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 249,
+        "promo_price": 149
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "monthly_cost": 339,
+        "promo_price": 239
+      },
+      {
+        "dose": "2.5mg",
+        "form": "brand",
+        "monthly_cost": 349
+      },
+      {
+        "dose": "5mg",
+        "form": "brand",
+        "monthly_cost": 499
+      }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 8.5,
-      "ux": 8.0,
+      "ux": 8,
       "trust": 8.5,
-      "accessibility": 9.0,
-      "support": 8.0
+      "accessibility": 9,
+      "support": 8
     },
     "features": [
       "Compounded",
@@ -1436,11 +2953,56 @@
       "Novo Nordisk Partner"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://lifemd.com/weight-management",
     "affiliate_network": "direct",
@@ -1462,6 +3024,15 @@
     "external_reviews": {
       "trustpilot_score": 4.4,
       "trustpilot_count": 6500
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://lifemd.com/weight-management"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1471,18 +3042,34 @@
     "description": "Lavender Sky Health is a concierge-style GLP-1 clinic with access to ten compounding pharmacy partners and physician-led titration. Designed for patients who want flexible dosing and personalized medical supervision.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 250 },
-      { "dose": "5mg", "form": "compounded", "monthly_cost": 299 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "monthly_cost": 250
+      },
+      {
+        "dose": "5mg",
+        "form": "compounded",
+        "monthly_cost": 299
+      }
     ],
     "scores": {
       "value": 7.5,
       "effectiveness": 8.5,
       "ux": 7.5,
       "trust": 8.5,
-      "accessibility": 7.0,
-      "support": 9.0
+      "accessibility": 7,
+      "support": 9
     },
     "features": [
       "Compounded",
@@ -1492,11 +3079,50 @@
       "Physician-Led"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://lavenderskyhealth.com",
     "affiliate_network": "direct",
@@ -1518,6 +3144,15 @@
     "external_reviews": {
       "trustpilot_score": 4.6,
       "trustpilot_count": 320
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://lavenderskyhealth.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1527,19 +3162,41 @@
     "description": "Joi (women's health) and Blokes (men's health) share a unified GLP-1 program offering compounded semaglutide, compounded tirzepatide, and Lilly Direct Zepbound. Plans include clinician consultations and health coaching.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 199, "promo_price": 99 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 299, "promo_price": 149 },
-      { "dose": "5mg", "form": "compounded", "monthly_cost": 299 },
-      { "dose": "2.5mg", "form": "brand", "monthly_cost": 349 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 199,
+        "promo_price": 99
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "monthly_cost": 299,
+        "promo_price": 149
+      },
+      {
+        "dose": "5mg",
+        "form": "compounded",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "2.5mg",
+        "form": "brand",
+        "monthly_cost": 349
+      }
     ],
     "scores": {
-      "value": 8.0,
-      "effectiveness": 8.0,
+      "value": 8,
+      "effectiveness": 8,
       "ux": 7.5,
-      "trust": 8.0,
-      "accessibility": 8.0,
-      "support": 8.0
+      "trust": 8,
+      "accessibility": 8,
+      "support": 8
     },
     "features": [
       "Compounded",
@@ -1550,11 +3207,50 @@
       "Quarterly Billing"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://joiandblokes.com/glp-1",
     "affiliate_network": "direct",
@@ -1576,6 +3272,15 @@
     "external_reviews": {
       "trustpilot_score": 4.3,
       "trustpilot_count": 680
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://joiandblokes.com/glp-1"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1585,14 +3290,26 @@
     "description": "Everlywell Weight Care+ pairs the at-home lab-testing company's infrastructure with compounded semaglutide and clinician oversight. Baseline labs are included, making it attractive to patients who want medical rigor.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "1mg", "form": "compounded", "monthly_cost": 199 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "monthly_cost": 199
+      }
     ],
     "scores": {
       "value": 6.5,
-      "effectiveness": 8.0,
-      "ux": 8.0,
+      "effectiveness": 8,
+      "ux": 8,
       "trust": 8.5,
       "accessibility": 8.5,
       "support": 7.5
@@ -1605,11 +3322,55 @@
       "At-Home Testing"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.everlywell.com/compound-weight-loss-medication",
     "affiliate_network": "direct",
@@ -1631,6 +3392,15 @@
     "external_reviews": {
       "trustpilot_score": 4.3,
       "trustpilot_count": 3200
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.everlywell.com/compound-weight-loss-medication"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1640,18 +3410,36 @@
     "description": "GoodRx Care for Weight Loss is GoodRx's telemedicine weight-management subscription with Novo Nordisk partnership pricing on Ozempic and Wegovy. It's one of the cheapest routes to brand-name semaglutide in 2026.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Monthly visit", "form": "brand", "monthly_cost": 119, "promo_price": 39 },
-      { "dose": "0.25mg", "form": "brand", "monthly_cost": 349, "promo_price": 199 },
-      { "dose": "1.5mg pill", "form": "brand", "monthly_cost": 149 },
-      { "dose": "4mg pill", "form": "brand", "monthly_cost": 199 }
+      {
+        "dose": "Monthly visit",
+        "form": "brand",
+        "monthly_cost": 119,
+        "promo_price": 39
+      },
+      {
+        "dose": "0.25mg",
+        "form": "brand",
+        "monthly_cost": 349,
+        "promo_price": 199
+      },
+      {
+        "dose": "1.5mg pill",
+        "form": "brand",
+        "monthly_cost": 149
+      },
+      {
+        "dose": "4mg pill",
+        "form": "brand",
+        "monthly_cost": 199
+      }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 8.5,
       "ux": 8.5,
-      "trust": 9.0,
-      "accessibility": 9.0,
-      "support": 7.0
+      "trust": 9,
+      "accessibility": 9,
+      "support": 7
     },
     "features": [
       "Brand Available",
@@ -1662,11 +3450,56 @@
       "FSA/HSA"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.goodrx.com/care/services/glp-1-weight-loss",
     "affiliate_network": "direct",
@@ -1688,6 +3521,15 @@
     "external_reviews": {
       "trustpilot_score": 4.2,
       "trustpilot_count": 7400
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.goodrx.com/care/services/glp-1-weight-loss"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1697,19 +3539,39 @@
     "description": "Fridays (joinfridays.com) is a dose-inclusive GLP-1 telehealth clinic where price stays flat no matter how high your dose goes. Annual plans drop compounded semaglutide to as low as $150/month.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Monthly", "form": "compounded", "monthly_cost": 240 },
-      { "dose": "3-month plan", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "12-month plan", "form": "compounded", "monthly_cost": 150 },
-      { "dose": "Tirzepatide monthly", "form": "compounded", "monthly_cost": 359 },
-      { "dose": "Tirzepatide 12mo", "form": "compounded", "monthly_cost": 240 }
+      {
+        "dose": "Monthly",
+        "form": "compounded",
+        "monthly_cost": 240
+      },
+      {
+        "dose": "3-month plan",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "12-month plan",
+        "form": "compounded",
+        "monthly_cost": 150
+      },
+      {
+        "dose": "Tirzepatide monthly",
+        "form": "compounded",
+        "monthly_cost": 359
+      },
+      {
+        "dose": "Tirzepatide 12mo",
+        "form": "compounded",
+        "monthly_cost": 240
+      }
     ],
     "scores": {
-      "value": 9.0,
-      "effectiveness": 8.0,
-      "ux": 8.0,
-      "trust": 8.0,
+      "value": 9,
+      "effectiveness": 8,
+      "ux": 8,
+      "trust": 8,
       "accessibility": 8.5,
-      "support": 8.0
+      "support": 8
     },
     "features": [
       "Compounded",
@@ -1720,11 +3582,56 @@
       "Annual Plan Discount"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.joinfridays.com",
     "affiliate_network": "direct",
@@ -1746,6 +3653,15 @@
     "external_reviews": {
       "trustpilot_score": 4.5,
       "trustpilot_count": 1900
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.joinfridays.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1755,17 +3671,33 @@
     "description": "Remedy Meds is a nationwide compounded GLP-1 clinic available in 49 states with flat-rate pricing and unlimited video visits included in the monthly fee. A solid mid-tier option with broad coverage.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 299 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 299 },
-      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 399 },
-      { "dose": "5mg", "form": "compounded", "monthly_cost": 399 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "monthly_cost": 399
+      },
+      {
+        "dose": "5mg",
+        "form": "compounded",
+        "monthly_cost": 399
+      }
     ],
     "scores": {
       "value": 7.5,
-      "effectiveness": 8.0,
-      "ux": 8.0,
-      "trust": 8.0,
-      "accessibility": 9.0,
+      "effectiveness": 8,
+      "ux": 8,
+      "trust": 8,
+      "accessibility": 9,
       "support": 8.5
     },
     "features": [
@@ -1777,11 +3709,55 @@
       "Flat-Rate Pricing"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.remedymeds.com",
     "affiliate_network": "direct",
@@ -1803,6 +3779,15 @@
     "external_reviews": {
       "trustpilot_score": 4.4,
       "trustpilot_count": 2200
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.remedymeds.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1812,16 +3797,37 @@
     "description": "Lemonaid Health, a 23andMe company, offers compounded semaglutide and microdose options alongside brand Ozempic and Wegovy. Its microdosing-first approach emphasizes tolerability over max-dose escalation.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Microdose", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 299, "promo_price": 129 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 249 },
-      { "dose": "Ozempic", "form": "brand", "monthly_cost": 1199 },
-      { "dose": "Wegovy", "form": "brand", "monthly_cost": 1599 }
+      {
+        "dose": "Microdose",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 299,
+        "promo_price": 129
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "Ozempic",
+        "form": "brand",
+        "monthly_cost": 1199
+      },
+      {
+        "dose": "Wegovy",
+        "form": "brand",
+        "monthly_cost": 1599
+      }
     ],
     "scores": {
       "value": 7.5,
       "effectiveness": 7.5,
-      "ux": 8.0,
+      "ux": 8,
       "trust": 8.5,
       "accessibility": 8.5,
       "support": 7.5
@@ -1834,11 +3840,56 @@
       "23andMe Backed"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.lemonaidhealth.com/services/weight-loss",
     "affiliate_network": "direct",
@@ -1860,6 +3911,15 @@
     "external_reviews": {
       "trustpilot_score": 4.3,
       "trustpilot_count": 2800
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.lemonaidhealth.com/services/weight-loss"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1869,13 +3929,31 @@
     "description": "Orderly Meds provides all-inclusive compounded GLP-1 plans with telehealth consultation, medication, syringes, shipping, and unlimited provider messaging bundled into one monthly fee. One of the cheapest entry points for semaglutide.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 149, "promo_price": 83 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 149 },
-      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 299, "promo_price": 149 },
-      { "dose": "5mg", "form": "compounded", "monthly_cost": 299 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 149,
+        "promo_price": 83
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 149
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "monthly_cost": 299,
+        "promo_price": 149
+      },
+      {
+        "dose": "5mg",
+        "form": "compounded",
+        "monthly_cost": 299
+      }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
       "ux": 7.5,
       "trust": 7.5,
@@ -1891,11 +3969,50 @@
       "Free Shipping"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://orderlymeds.com",
     "affiliate_network": "direct",
@@ -1917,6 +4034,15 @@
     "external_reviews": {
       "trustpilot_score": 4.2,
       "trustpilot_count": 540
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://orderlymeds.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1926,17 +4052,34 @@
     "description": "Hers (the women-focused sister brand to Hims) offers compounded semaglutide as part of its Weight Loss Membership. Plans start at $199/month when paid upfront for 12 months, making it competitive for long-term commitments.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Monthly membership", "form": "compounded", "monthly_cost": 149, "promo_price": 39 },
-      { "dose": "0.25mg (12-month plan)", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 299 },
-      { "dose": "1mg", "form": "compounded", "monthly_cost": 399 }
+      {
+        "dose": "Monthly membership",
+        "form": "compounded",
+        "monthly_cost": 149,
+        "promo_price": 39
+      },
+      {
+        "dose": "0.25mg (12-month plan)",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "monthly_cost": 399
+      }
     ],
     "scores": {
-      "value": 8.0,
-      "effectiveness": 8.0,
-      "ux": 9.0,
+      "value": 8,
+      "effectiveness": 8,
+      "ux": 9,
       "trust": 8.5,
-      "accessibility": 9.0,
+      "accessibility": 9,
       "support": 7.5
     },
     "features": [
@@ -1947,11 +4090,56 @@
       "All 50 States"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.forhers.com/weight-loss",
     "affiliate_network": "direct",
@@ -1973,6 +4161,15 @@
     "external_reviews": {
       "trustpilot_score": 4.4,
       "trustpilot_count": 9800
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.forhers.com/weight-loss"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -1982,18 +4179,41 @@
     "description": "MEDVi is a telehealth provider offering both injectable and tablet formulations of compounded semaglutide and tirzepatide. Its flat monthly pricing and tablet alternatives stand out for patients who prefer avoiding needles.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg injection", "form": "compounded", "monthly_cost": 299, "promo_price": 179 },
-      { "dose": "0.5mg injection", "form": "compounded", "monthly_cost": 299 },
-      { "dose": "Semaglutide tablet", "form": "compounded", "monthly_cost": 369, "promo_price": 249 },
-      { "dose": "2.5mg tirzepatide", "form": "compounded", "monthly_cost": 399, "promo_price": 279 },
-      { "dose": "5mg tirzepatide", "form": "compounded", "monthly_cost": 399 }
+      {
+        "dose": "0.25mg injection",
+        "form": "compounded",
+        "monthly_cost": 299,
+        "promo_price": 179
+      },
+      {
+        "dose": "0.5mg injection",
+        "form": "compounded",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "Semaglutide tablet",
+        "form": "compounded",
+        "monthly_cost": 369,
+        "promo_price": 249
+      },
+      {
+        "dose": "2.5mg tirzepatide",
+        "form": "compounded",
+        "monthly_cost": 399,
+        "promo_price": 279
+      },
+      {
+        "dose": "5mg tirzepatide",
+        "form": "compounded",
+        "monthly_cost": 399
+      }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
       "ux": 7.5,
       "trust": 7.5,
-      "accessibility": 8.0,
+      "accessibility": 8,
       "support": 7.5
     },
     "features": [
@@ -2004,11 +4224,50 @@
       "Flat-Rate Pricing"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://home.medvi.org",
     "affiliate_network": "direct",
@@ -2030,6 +4289,15 @@
     "external_reviews": {
       "trustpilot_score": 3.9,
       "trustpilot_count": 780
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://home.medvi.org"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2039,16 +4307,28 @@
     "description": "Strut Health is a custom-compounding telehealth service offering both injectable and under-the-tongue (sublingual) semaglutide for men and women. One of the few providers with oral semaglutide drops and lozenges.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Sublingual lozenge/drop", "form": "compounded", "monthly_cost": 130 },
-      { "dose": "0.25mg injection", "form": "compounded", "monthly_cost": 250 },
-      { "dose": "0.5mg injection", "form": "compounded", "monthly_cost": 300 }
+      {
+        "dose": "Sublingual lozenge/drop",
+        "form": "compounded",
+        "monthly_cost": 130
+      },
+      {
+        "dose": "0.25mg injection",
+        "form": "compounded",
+        "monthly_cost": 250
+      },
+      {
+        "dose": "0.5mg injection",
+        "form": "compounded",
+        "monthly_cost": 300
+      }
     ],
     "scores": {
-      "value": 8.0,
-      "effectiveness": 7.0,
+      "value": 8,
+      "effectiveness": 7,
       "ux": 7.5,
       "trust": 7.5,
-      "accessibility": 8.0,
+      "accessibility": 8,
       "support": 7.5
     },
     "features": [
@@ -2059,11 +4339,50 @@
       "Free Consultation"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://www.struthealth.com/womens-weight-loss",
     "affiliate_network": "direct",
@@ -2085,6 +4404,15 @@
     "external_reviews": {
       "trustpilot_score": 4.1,
       "trustpilot_count": 420
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.struthealth.com/womens-weight-loss"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2094,12 +4422,16 @@
     "description": "WeightWatchers Clinic, formerly Sequence, is the medical arm of WW International. It pairs board-certified clinicians with the WW behavior-change program and prescribes FDA-approved GLP-1s like Wegovy, Zepbound, Ozempic, and Mounjaro through insurance when possible.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Membership (medication billed separately)", "form": "brand", "monthly_cost": 99 }
+      {
+        "dose": "Membership (medication billed separately)",
+        "form": "brand",
+        "monthly_cost": 99
+      }
     ],
     "scores": {
       "value": 7.5,
       "effectiveness": 8.5,
-      "ux": 8.0,
+      "ux": 8,
       "trust": 8.5,
       "accessibility": 8.5,
       "support": 8.5
@@ -2112,11 +4444,55 @@
       "WW Workshops Included"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.weightwatchers.com/us/clinic",
     "affiliate_network": "direct",
@@ -2138,6 +4514,15 @@
     "external_reviews": {
       "trustpilot_score": 3.8,
       "trustpilot_count": 1900
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.weightwatchers.com/us/clinic"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2147,15 +4532,27 @@
     "description": "Push Health is a peer-to-peer telehealth marketplace where licensed providers can prescribe compounded semaglutide and tirzepatide directly to patients. Pricing varies by provider, but visit fees typically run $75 and medication is filled by partner compounding pharmacies.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Visit fee", "form": "compounded", "monthly_cost": 75 },
-      { "dose": "Compounded semaglutide (typical)", "form": "compounded", "monthly_cost": 250 },
-      { "dose": "Compounded tirzepatide (typical)", "form": "compounded", "monthly_cost": 350 }
+      {
+        "dose": "Visit fee",
+        "form": "compounded",
+        "monthly_cost": 75
+      },
+      {
+        "dose": "Compounded semaglutide (typical)",
+        "form": "compounded",
+        "monthly_cost": 250
+      },
+      {
+        "dose": "Compounded tirzepatide (typical)",
+        "form": "compounded",
+        "monthly_cost": 350
+      }
     ],
     "scores": {
       "value": 7.5,
-      "effectiveness": 7.0,
-      "ux": 7.0,
-      "trust": 7.0,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 8.5,
       "support": 6.5
     },
@@ -2167,11 +4564,48 @@
       "Low Visit Fee"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MO","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://www.pushhealth.com",
     "affiliate_network": "direct",
@@ -2192,6 +4626,15 @@
     "external_reviews": {
       "trustpilot_score": 3.5,
       "trustpilot_count": 540
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.pushhealth.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2201,17 +4644,29 @@
     "description": "SteadyMD is a telehealth infrastructure company that also offers a direct-to-consumer GLP-1 weight-loss program with board-certified clinicians. It focuses on continuity of care — patients are matched to one primary clinician for the duration of treatment.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 297 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 347 },
-      { "dose": "1mg", "form": "compounded", "monthly_cost": 397 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 297
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 347
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "monthly_cost": 397
+      }
     ],
     "scores": {
-      "value": 7.0,
-      "effectiveness": 8.0,
+      "value": 7,
+      "effectiveness": 8,
       "ux": 7.5,
-      "trust": 8.0,
+      "trust": 8,
       "accessibility": 8.5,
-      "support": 8.0
+      "support": 8
     },
     "features": [
       "Compounded",
@@ -2221,11 +4676,56 @@
       "All 50 States"
     ],
     "states_available": [
-      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
-      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.steadymd.com",
     "affiliate_network": "direct",
@@ -2246,6 +4746,15 @@
     "external_reviews": {
       "trustpilot_score": 4.2,
       "trustpilot_count": 310
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.steadymd.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2255,16 +4764,24 @@
     "description": "Kickoff Health pairs GLP-1 medication with a dedicated 1-on-1 human coach who checks in daily via text. The coaching-first model is designed to maximize long-term weight maintenance after the medication tapers.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Coaching + compounded semaglutide", "form": "compounded", "monthly_cost": 297 },
-      { "dose": "Coaching + compounded tirzepatide", "form": "compounded", "monthly_cost": 397 }
+      {
+        "dose": "Coaching + compounded semaglutide",
+        "form": "compounded",
+        "monthly_cost": 297
+      },
+      {
+        "dose": "Coaching + compounded tirzepatide",
+        "form": "compounded",
+        "monthly_cost": 397
+      }
     ],
     "scores": {
       "value": 7.5,
-      "effectiveness": 8.0,
-      "ux": 8.0,
+      "effectiveness": 8,
+      "ux": 8,
       "trust": 7.5,
-      "accessibility": 8.0,
-      "support": 9.0
+      "accessibility": 8,
+      "support": 9
     },
     "features": [
       "Compounded",
@@ -2274,11 +4791,48 @@
       "Tirzepatide"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MO","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://www.kickoffhealth.com",
     "affiliate_network": "direct",
@@ -2299,6 +4853,15 @@
     "external_reviews": {
       "trustpilot_score": 4.4,
       "trustpilot_count": 480
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.kickoffhealth.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2308,17 +4871,29 @@
     "description": "Ivim Health is a physician-founded telehealth weight-loss clinic offering compounded semaglutide and tirzepatide alongside a structured 6-month metabolic reset program. Available in 40+ states with both telehealth and in-person clinic locations.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 269 },
-      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 319 },
-      { "dose": "Tirzepatide starter", "form": "compounded", "monthly_cost": 399 }
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "monthly_cost": 269
+      },
+      {
+        "dose": "0.5mg",
+        "form": "compounded",
+        "monthly_cost": 319
+      },
+      {
+        "dose": "Tirzepatide starter",
+        "form": "compounded",
+        "monthly_cost": 399
+      }
     ],
     "scores": {
       "value": 7.5,
-      "effectiveness": 8.0,
+      "effectiveness": 8,
       "ux": 7.5,
-      "trust": 8.0,
-      "accessibility": 8.0,
-      "support": 8.0
+      "trust": 8,
+      "accessibility": 8,
+      "support": 8
     },
     "features": [
       "Compounded",
@@ -2328,11 +4903,48 @@
       "Metabolic Program"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MO","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://www.ivimhealth.com",
     "affiliate_network": "direct",
@@ -2353,6 +4965,15 @@
     "external_reviews": {
       "trustpilot_score": 4.3,
       "trustpilot_count": 360
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.ivimhealth.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2362,16 +4983,24 @@
     "description": "Voy Health is a clinician-led weight-loss program offering branded GLP-1s like Wegovy and Mounjaro along with one-on-one nutritionist support. Originally launched in the UK, Voy expanded to the US with a focus on FDA-approved medications rather than compounded.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Wegovy starter", "form": "brand", "monthly_cost": 299 },
-      { "dose": "Mounjaro starter", "form": "brand", "monthly_cost": 449 }
+      {
+        "dose": "Wegovy starter",
+        "form": "brand",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "Mounjaro starter",
+        "form": "brand",
+        "monthly_cost": 449
+      }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 8.5,
       "ux": 8.5,
-      "trust": 8.0,
-      "accessibility": 7.0,
-      "support": 8.0
+      "trust": 8,
+      "accessibility": 7,
+      "support": 8
     },
     "features": [
       "Brand Available",
@@ -2381,9 +5010,31 @@
       "App-Based"
     ],
     "states_available": [
-      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
-      "NC","NJ","NY","OH","PA","TX","VA","WA","WI","AZ",
-      "NV","OR","UT","TN","MO"
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "IL",
+      "MA",
+      "MD",
+      "MI",
+      "MN",
+      "NC",
+      "NJ",
+      "NY",
+      "OH",
+      "PA",
+      "TX",
+      "VA",
+      "WA",
+      "WI",
+      "AZ",
+      "NV",
+      "OR",
+      "UT",
+      "TN",
+      "MO"
     ],
     "affiliate_url": "https://joinvoy.com",
     "affiliate_network": "direct",
@@ -2404,6 +5055,15 @@
     "external_reviews": {
       "trustpilot_score": 4.5,
       "trustpilot_count": 1700
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://joinvoy.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2413,15 +5073,23 @@
     "description": "Knownwell is a weight-inclusive primary care and obesity medicine clinic offering virtual and in-person visits. It accepts most major insurance plans and prescribes FDA-approved GLP-1s like Wegovy, Zepbound, and Mounjaro alongside primary care.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Visit (insurance billed)", "form": "brand", "monthly_cost": 0 },
-      { "dose": "Self-pay visit", "form": "brand", "monthly_cost": 175 }
+      {
+        "dose": "Visit (insurance billed)",
+        "form": "brand",
+        "monthly_cost": 0
+      },
+      {
+        "dose": "Self-pay visit",
+        "form": "brand",
+        "monthly_cost": 175
+      }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 8.5,
       "ux": 7.5,
       "trust": 8.5,
-      "accessibility": 7.0,
+      "accessibility": 7,
       "support": 8.5
     },
     "features": [
@@ -2432,8 +5100,26 @@
       "Weight-Inclusive Care"
     ],
     "states_available": [
-      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
-      "NC","NJ","NY","OH","PA","TX","VA","WA","WI","AZ"
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "IL",
+      "MA",
+      "MD",
+      "MI",
+      "MN",
+      "NC",
+      "NJ",
+      "NY",
+      "OH",
+      "PA",
+      "TX",
+      "VA",
+      "WA",
+      "WI",
+      "AZ"
     ],
     "affiliate_url": "https://www.knownwell.health",
     "affiliate_network": "direct",
@@ -2454,6 +5140,15 @@
     "external_reviews": {
       "trustpilot_score": 4.2,
       "trustpilot_count": 180
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.knownwell.health"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2463,8 +5158,16 @@
     "description": "Shed Rx is a Utah-based telehealth provider offering compounded semaglutide and tirzepatide with transparent flat-rate pricing and no monthly membership fees. Known for fast onboarding and free shipping nationwide.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Compounded semaglutide", "form": "compounded", "monthly_cost": 199 },
-      { "dose": "Compounded tirzepatide", "form": "compounded", "monthly_cost": 349 }
+      {
+        "dose": "Compounded semaglutide",
+        "form": "compounded",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Compounded tirzepatide",
+        "form": "compounded",
+        "monthly_cost": 349
+      }
     ],
     "scores": {
       "value": 8.5,
@@ -2472,7 +5175,7 @@
       "ux": 7.5,
       "trust": 7.5,
       "accessibility": 8.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2483,11 +5186,48 @@
       "No Membership Fee"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MO","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://www.shedrx.com",
     "affiliate_network": "direct",
@@ -2508,6 +5248,15 @@
     "external_reviews": {
       "trustpilot_score": 4.3,
       "trustpilot_count": 520
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.shedrx.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2517,15 +5266,19 @@
     "description": "Juniper is a women-focused weight-loss program combining branded GLP-1 medication with a dedicated health coach, dietitian, and personalized lifestyle program. Originally Australian, it expanded to the US with a strong clinical research backbone.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Program + medication", "form": "brand", "monthly_cost": 349 }
+      {
+        "dose": "Program + medication",
+        "form": "brand",
+        "monthly_cost": 349
+      }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 8.5,
       "ux": 8.5,
-      "trust": 8.0,
-      "accessibility": 7.0,
-      "support": 9.0
+      "trust": 8,
+      "accessibility": 7,
+      "support": 9
     },
     "features": [
       "Brand Available",
@@ -2535,9 +5288,31 @@
       "App-Based"
     ],
     "states_available": [
-      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
-      "NC","NJ","NY","OH","PA","TX","VA","WA","WI","AZ",
-      "NV","OR","UT","TN","MO"
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "IL",
+      "MA",
+      "MD",
+      "MI",
+      "MN",
+      "NC",
+      "NJ",
+      "NY",
+      "OH",
+      "PA",
+      "TX",
+      "VA",
+      "WA",
+      "WI",
+      "AZ",
+      "NV",
+      "OR",
+      "UT",
+      "TN",
+      "MO"
     ],
     "affiliate_url": "https://www.myjuniper.com",
     "affiliate_network": "direct",
@@ -2558,6 +5333,15 @@
     "external_reviews": {
       "trustpilot_score": 4.4,
       "trustpilot_count": 2200
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.myjuniper.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2567,14 +5351,18 @@
     "description": "Embla is a behavior-change-first weight-loss clinic that pairs GLP-1 medication with cognitive-behavioral coaching from licensed psychologists. The program emphasizes long-term habit formation alongside pharmacotherapy.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Program + compounded semaglutide", "form": "compounded", "monthly_cost": 299 }
+      {
+        "dose": "Program + compounded semaglutide",
+        "form": "compounded",
+        "monthly_cost": 299
+      }
     ],
     "scores": {
-      "value": 7.0,
-      "effectiveness": 8.0,
-      "ux": 8.0,
+      "value": 7,
+      "effectiveness": 8,
+      "ux": 8,
       "trust": 7.5,
-      "accessibility": 7.0,
+      "accessibility": 7,
       "support": 8.5
     },
     "features": [
@@ -2585,8 +5373,26 @@
       "Long-Term Focus"
     ],
     "states_available": [
-      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
-      "NC","NJ","NY","OH","PA","TX","VA","WA","WI","AZ"
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "IL",
+      "MA",
+      "MD",
+      "MI",
+      "MN",
+      "NC",
+      "NJ",
+      "NY",
+      "OH",
+      "PA",
+      "TX",
+      "VA",
+      "WA",
+      "WI",
+      "AZ"
     ],
     "affiliate_url": "https://www.embla.com",
     "affiliate_network": "direct",
@@ -2607,6 +5413,15 @@
     "external_reviews": {
       "trustpilot_score": 4.3,
       "trustpilot_count": 410
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.embla.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2616,16 +5431,24 @@
     "description": "Reliem is a direct-to-consumer compounded GLP-1 provider offering semaglutide and tirzepatide at flat monthly rates with no membership fees. Designed for cost-conscious patients who want straightforward pricing and fast shipping.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Compounded semaglutide", "form": "compounded", "monthly_cost": 179 },
-      { "dose": "Compounded tirzepatide", "form": "compounded", "monthly_cost": 329 }
+      {
+        "dose": "Compounded semaglutide",
+        "form": "compounded",
+        "monthly_cost": 179
+      },
+      {
+        "dose": "Compounded tirzepatide",
+        "form": "compounded",
+        "monthly_cost": 329
+      }
     ],
     "scores": {
       "value": 8.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 8.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2635,11 +5458,48 @@
       "No Membership Fee"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MO","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://www.reliem.com",
     "affiliate_network": "direct",
@@ -2658,8 +5518,17 @@
     "best_for": "cheapest flat-rate compounded semaglutide",
     "is_featured": false,
     "external_reviews": {
-      "trustpilot_score": 4.0,
+      "trustpilot_score": 4,
       "trustpilot_count": 220
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.reliem.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   },
   {
@@ -2669,16 +5538,24 @@
     "description": "Klinic is a telehealth marketplace connecting patients with licensed clinicians for GLP-1 weight-loss prescriptions. Patients can choose from semaglutide or tirzepatide, fulfilled through partner compounding pharmacies with transparent flat pricing.",
     "category": "GLP-1 Provider",
     "pricing": [
-      { "dose": "Compounded semaglutide", "form": "compounded", "monthly_cost": 229 },
-      { "dose": "Compounded tirzepatide", "form": "compounded", "monthly_cost": 379 }
+      {
+        "dose": "Compounded semaglutide",
+        "form": "compounded",
+        "monthly_cost": 229
+      },
+      {
+        "dose": "Compounded tirzepatide",
+        "form": "compounded",
+        "monthly_cost": 379
+      }
     ],
     "scores": {
       "value": 7.5,
       "effectiveness": 7.5,
       "ux": 7.5,
-      "trust": 7.0,
-      "accessibility": 8.0,
-      "support": 7.0
+      "trust": 7,
+      "accessibility": 8,
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2688,11 +5565,48 @@
       "Flat-Rate Pricing"
     ],
     "states_available": [
-      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
-      "IL","IN","IA","KS","KY","LA","ME","MD",
-      "MA","MI","MN","MO","NE","NV","NH","NJ",
-      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
-      "TN","TX","UT","VT","VA","WA","WV","WI"
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI"
     ],
     "affiliate_url": "https://www.klinic.com",
     "affiliate_network": "direct",
@@ -2711,8 +5625,17 @@
     "best_for": "marketplace-style clinician choice",
     "is_featured": false,
     "external_reviews": {
-      "trustpilot_score": 4.0,
+      "trustpilot_score": 4,
       "trustpilot_count": 290
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.klinic.com"
+      ],
+      "confidence": "low",
+      "notes": "Initial seed data — needs manual verification"
     }
   }
 ]

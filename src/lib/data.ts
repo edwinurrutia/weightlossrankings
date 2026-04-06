@@ -1,6 +1,7 @@
 import type { Provider, BlogPost } from "@/lib/types";
 import providersData from "@/data/providers.json";
 import blogPostsData from "@/data/blog-posts.json";
+import { validateProvider } from "@/lib/schema";
 
 const providers = providersData as unknown as Provider[];
 const blogPosts = blogPostsData as unknown as BlogPost[];
@@ -62,4 +63,88 @@ export async function getBlogPostBySlug(
 
 export async function getAllBlogSlugs(): Promise<{ slug: string }[]> {
   return blogPosts.map((p) => ({ slug: p.slug }));
+}
+
+export interface ValidationReport {
+  total: number;
+  valid: number;
+  invalid: number;
+  issues: Array<{ slug: string; name: string; errors: string[] }>;
+  stale: Array<{
+    slug: string;
+    name: string;
+    days_since_verified: number;
+    last_verified: string;
+  }>;
+  unverified: Array<{ slug: string; name: string }>;
+  recently_verified: Array<{
+    slug: string;
+    name: string;
+    last_verified: string;
+  }>;
+}
+
+export async function getValidationReport(): Promise<ValidationReport> {
+  const issues: ValidationReport["issues"] = [];
+  const stale: ValidationReport["stale"] = [];
+  const unverified: ValidationReport["unverified"] = [];
+  const recently_verified: ValidationReport["recently_verified"] = [];
+
+  let valid = 0;
+  let invalid = 0;
+  const now = Date.now();
+  const DAY_MS = 1000 * 60 * 60 * 24;
+
+  for (const provider of providers) {
+    const result = validateProvider(provider);
+    if (result.valid) {
+      valid++;
+    } else {
+      invalid++;
+      issues.push({
+        slug: provider.slug,
+        name: provider.name,
+        errors: result.errors,
+      });
+    }
+
+    if (!provider.verification) {
+      unverified.push({ slug: provider.slug, name: provider.name });
+    } else {
+      const verifiedTime = new Date(
+        provider.verification.last_verified
+      ).getTime();
+      const days = Math.floor((now - verifiedTime) / DAY_MS);
+      if (days > 30) {
+        stale.push({
+          slug: provider.slug,
+          name: provider.name,
+          days_since_verified: days,
+          last_verified: provider.verification.last_verified,
+        });
+      }
+      if (days <= 7) {
+        recently_verified.push({
+          slug: provider.slug,
+          name: provider.name,
+          last_verified: provider.verification.last_verified,
+        });
+      }
+    }
+  }
+
+  stale.sort((a, b) => b.days_since_verified - a.days_since_verified);
+  recently_verified.sort((a, b) =>
+    b.last_verified.localeCompare(a.last_verified)
+  );
+
+  return {
+    total: providers.length,
+    valid,
+    invalid,
+    issues,
+    stale,
+    unverified,
+    recently_verified,
+  };
 }

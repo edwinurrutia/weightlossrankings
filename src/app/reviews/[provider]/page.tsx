@@ -139,6 +139,18 @@ export default async function ProviderReviewPage({
               <TrustBadge icon="✓" text="Expert Reviewed" />
               <TrustBadge icon="🔒" text="Independently Rated" />
               <TrustBadge icon="📅" text="Updated 2026" />
+              {provider.verification && (
+                <TrustBadge
+                  icon="✓"
+                  text={`Verified ${new Date(
+                    provider.verification.last_verified
+                  ).toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })}`}
+                />
+              )}
             </div>
 
             {/* H1 + best_for */}
@@ -354,7 +366,7 @@ export default async function ProviderReviewPage({
                   <ProviderCard
                     key={alt._id}
                     provider={alt}
-                    trackingSource="review_page"
+                    trackingSource={`review_${provider.slug}`}
                   />
                 ))}
               </div>
