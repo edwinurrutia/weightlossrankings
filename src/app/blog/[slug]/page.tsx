@@ -91,25 +91,59 @@ export default async function BlogPostPage({
     ],
   };
 
+  // Author entity. Schema.org Article expects either an Organization
+  // OR a Person — Person is significantly stronger for E-E-A-T because
+  // Google's medical guidelines specifically reward identifiable
+  // human authors with verifiable credentials. If post.author is the
+  // brand string "Weight Loss Rankings" we fall back to an Organization
+  // entity, but any real author name renders as a Person.
+  const isOrgByline =
+    !post.author || post.author === "Weight Loss Rankings";
+  const authorEntity = isOrgByline
+    ? {
+        "@type": "Organization",
+        name: "Weight Loss Rankings",
+        url: "https://weightlossrankings.org",
+      }
+    : {
+        "@type": "Person",
+        name: post.author,
+        url: `https://weightlossrankings.org/about#${
+          post.author.toLowerCase().replace(/\s+/g, "-")
+        }`,
+        // Identifies the author as part of the WLR editorial team
+        worksFor: {
+          "@type": "Organization",
+          name: "Weight Loss Rankings",
+          url: "https://weightlossrankings.org",
+        },
+      };
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
+    image: `https://weightlossrankings.org/blog/${slug}/opengraph-image`,
     datePublished: post.published_date,
     dateModified: post.updated_date ?? post.published_date,
-    author: {
-      "@type": "Organization",
-      name: "Weight Loss Rankings",
-    },
+    author: authorEntity,
     publisher: {
       "@type": "Organization",
       name: "Weight Loss Rankings",
       logo: {
         "@type": "ImageObject",
-        url: "https://weightlossrankings.org/icon.svg",
+        url: "https://weightlossrankings.org/logo-600.png",
+        width: 600,
+        height: 600,
       },
     },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://weightlossrankings.org/blog/${slug}`,
+    },
+    ...(post.category && { articleSection: post.category }),
+    ...(post.tags && post.tags.length > 0 && { keywords: post.tags.join(", ") }),
   };
 
   return (
