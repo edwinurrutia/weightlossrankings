@@ -22,10 +22,8 @@ export default function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Capture the form element before any awaits — React nulls out
-    // e.currentTarget after the synthetic event handler returns, so
-    // touching it post-await throws and the throw lands in the catch
-    // below, masking real success as a fake "Network error".
+    // Capture the form element before any awaits — React invalidates
+    // e.currentTarget once the synthetic handler returns.
     const formEl = e.currentTarget;
     setStatus({ kind: "submitting" });
 
@@ -39,27 +37,48 @@ export default function ContactForm() {
       company: formData.get("company"),
     };
 
+    // Isolate the fetch call so only true network failures show
+    // "Network error". Don't wrap response-body parsing in the same
+    // try/catch — a Grammarly/adblocker/extension that mangles the
+    // response body would otherwise mask a real success (email sent,
+    // 200 OK) as a fake network error.
+    let res: Response;
     try {
-      const res = await fetch("/api/contact", {
+      res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      const data = await res.json();
-      if (!res.ok) {
-        setStatus({
-          kind: "error",
-          message: data?.error || "Something went wrong. Please try again.",
-        });
-        return;
-      }
-      setStatus({ kind: "success" });
-      formEl.reset();
     } catch {
       setStatus({
         kind: "error",
         message: "Network error. Please try again.",
       });
+      return;
+    }
+
+    if (!res.ok) {
+      let errorMessage = "Something went wrong. Please try again.";
+      try {
+        const data = await res.json();
+        if (data && typeof data.error === "string") errorMessage = data.error;
+      } catch {
+        // Response body wasn't JSON — fall back to the generic message.
+      }
+      setStatus({ kind: "error", message: errorMessage });
+      return;
+    }
+
+    // Success: do NOT parse the response body. The server already
+    // returned 200 OK, which means the email was queued/sent. Reading
+    // the body here would re-introduce the bug if anything in the
+    // browser pipeline (extensions, service workers, antivirus shims)
+    // intercepts the response stream.
+    setStatus({ kind: "success" });
+    try {
+      formEl.reset();
+    } catch {
+      // Defensive — never let a reset() failure mask a real success.
     }
   }
 
