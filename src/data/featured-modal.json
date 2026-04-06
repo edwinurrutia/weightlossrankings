@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "provider_slug": "coreage-rx",
+  "headline": "Top GLP-1 Provider This Month",
+  "subheadline": "Best overall value for compounded semaglutide",
+  "features": [
+    "Compounded semaglutide & tirzepatide",
+    "Free 2-day shipping included",
+    "LegitScript verified pharmacy",
+    "24/7 patient support",
+    "All 50 states"
+  ],
+  "cta_text": "Visit CoreAge Rx",
+  "dismissal_cap_hours": 24,
+  "scroll_trigger_percent": 60,
+  "initial_delay_seconds": 5
+}

@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import SiteChrome from "@/components/layout/SiteChrome";
 import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
 import JsonLd from "@/components/shared/JsonLd";
+import FeaturedModalWrapper from "@/components/marketing/FeaturedModalWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -103,6 +104,7 @@ export default function RootLayout({
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <SiteChrome>{children}</SiteChrome>
+        <FeaturedModalWrapper />
       </body>
     </html>
   );

@@ -143,3 +143,15 @@ cd /Users/weightlossrankings && npx next build
 ADMIN_USERS=alice:test1 npm run dev
 # Then visit http://localhost:3000/admin and log in as alice / test1
 ```
+
+
+## Featured Provider Modal
+
+A scroll- and exit-intent-triggered modal promotes one featured provider on public pages (never shown on `/admin` or `/admin-login`).
+
+- Config file: `src/data/featured-modal.json`
+- To disable: set `"enabled": false`
+- To swap provider: change `provider_slug` to any slug in `src/data/providers.json`
+- Other tunables: `headline`, `subheadline`, `features[]`, `cta_text`, `dismissal_cap_hours`, `scroll_trigger_percent`, `initial_delay_seconds`
+- Frequency cap is enforced client-side via `localStorage` key `wlr_modal_dismissed_at`
+- CTA click fires `/api/track-click` with source `modal_featured_{provider_slug}`
