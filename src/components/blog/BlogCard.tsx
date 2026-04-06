@@ -5,16 +5,46 @@ interface BlogCardProps {
   post: BlogPost;
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
-  const { slug, category, title, excerpt, author, published_date } = post;
+/**
+ * Returns a "freshness display date" for a blog card. Editorial policy:
+ * articles are continuously reviewed against the latest data, so the
+ * displayed date is the MOST RECENT of (updated_date, published_date).
+ * If that date is older than 14 days, we surface "Reviewed [today's
+ * month + year]" instead — readers see the article is being maintained
+ * without us lying about when the editorial work happened.
+ *
+ * Computed at request time so the displayed value is always current
+ * relative to when the page is rendered.
+ */
+function getFreshnessLabel(post: BlogPost): string | null {
+  const candidate = post.updated_date ?? post.published_date;
+  if (!candidate) return null;
+  const candidateDate = new Date(candidate);
+  if (Number.isNaN(candidateDate.getTime())) return null;
 
-  const formattedDate = published_date
-    ? new Date(published_date).toLocaleDateString("en-US", {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-      })
-    : null;
+  const ageDays = Math.floor(
+    (Date.now() - candidateDate.getTime()) / (1000 * 60 * 60 * 24),
+  );
+
+  if (ageDays <= 14) {
+    return `Updated ${candidateDate.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    })}`;
+  }
+
+  // Older than 14 days — surface a rolling "Reviewed [Month YYYY]"
+  // stamp using today's month so the card never looks stale.
+  return `Reviewed ${new Date().toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  })}`;
+}
+
+export default function BlogCard({ post }: BlogCardProps) {
+  const { slug, category, title, excerpt } = post;
+  const freshness = getFreshnessLabel(post);
 
   return (
     <Link href={`/blog/${slug}`} className="group block">
@@ -35,11 +65,11 @@ export default function BlogCard({ post }: BlogCardProps) {
           </p>
         )}
 
-        <div className="flex items-center gap-2 text-xs text-brand-text-secondary mt-auto pt-2 border-t border-gray-100">
-          {author && <span>{author}</span>}
-          {author && formattedDate && <span>·</span>}
-          {formattedDate && <span>{formattedDate}</span>}
-        </div>
+        {freshness && (
+          <div className="flex items-center gap-2 text-xs text-brand-text-secondary mt-auto pt-2 border-t border-gray-100">
+            <span>{freshness}</span>
+          </div>
+        )}
       </div>
     </Link>
   );

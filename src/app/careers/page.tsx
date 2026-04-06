@@ -131,13 +131,6 @@ export default function CareersPage() {
         <p>
           Send a short note and a link to your work to{" "}
           <a
-            href="mailto:careers@weightlossrankings.org?subject=Careers"
-            className="text-brand-violet underline"
-          >
-            careers@weightlossrankings.org
-          </a>{" "}
-          or{" "}
-          <a
             href="mailto:hello@weightlossrankings.org?subject=Careers"
             className="text-brand-violet underline"
           >

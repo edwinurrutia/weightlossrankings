@@ -220,10 +220,10 @@ export default function PrivacyPage() {
         <p>
           Regardless of where you live, you may contact us at{" "}
           <a
-            href="mailto:privacy@weightlossrankings.org"
+            href="mailto:hello@weightlossrankings.org?subject=Privacy%20Request"
             className="text-brand-violet underline"
           >
-            privacy@weightlossrankings.org
+            hello@weightlossrankings.org
           </a>{" "}
           to ask what personal information we hold about you, request that we
           correct or delete it, unsubscribe from our newsletter, or opt out
@@ -264,10 +264,10 @@ export default function PrivacyPage() {
           share personal information of minors under 16 for cross-context
           behavioral advertising. To exercise any of the above rights, email{" "}
           <a
-            href="mailto:privacy@weightlossrankings.org"
+            href="mailto:hello@weightlossrankings.org?subject=Privacy%20Request"
             className="text-brand-violet underline"
           >
-            privacy@weightlossrankings.org
+            hello@weightlossrankings.org
           </a>{" "}
           with &quot;California Privacy Request&quot; in the subject line.
         </p>

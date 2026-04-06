@@ -26,11 +26,19 @@ export const metadata: Metadata = {
 
 // Editorial category cards — no images, just type. Each card uses the same
 // white background with a subtle violet accent so they read as one set.
+// Semaglutide and tirzepatide get their own cards because they're the two
+// dominant GLP-1 drug classes and visitors typically know which one they
+// want before they land on the site.
 const categories = [
   {
-    label: "GLP-1 Providers",
+    label: "Semaglutide",
     slug: "semaglutide-providers",
-    description: "Telehealth Rx for semaglutide & tirzepatide",
+    description: "Wegovy, Ozempic & compounded semaglutide telehealth",
+  },
+  {
+    label: "Tirzepatide",
+    slug: "tirzepatide-providers",
+    description: "Zepbound, Mounjaro & compounded tirzepatide telehealth",
   },
   {
     label: "Weight Loss Programs",
@@ -41,11 +49,6 @@ const categories = [
     label: "Supplements",
     slug: "weight-loss-supplements",
     description: "Over-the-counter weight loss aids",
-  },
-  {
-    label: "Meal Delivery",
-    slug: "meal-delivery-for-weight-loss",
-    description: "Calorie-controlled prepared meals",
   },
 ];
 
