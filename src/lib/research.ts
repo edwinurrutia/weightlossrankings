@@ -113,6 +113,20 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 8,
     tags: ["Pricing", "Compounded GLP-1", "Live dataset"],
   },
+  {
+    slug: "compounded-glp1-price-movement-12-months",
+    title:
+      "How Compounded GLP-1 Prices Moved Over the Last 16 Months: Provider-by-Provider Trajectories",
+    description:
+      "We tracked monthly cash prices for compounded semaglutide across the largest telehealth providers from January 2025 onward. Every provider in our tracked set has cut prices — but at very different rates, with the biggest movers converging on a $199 floor.",
+    excerpt:
+      "The compounded GLP-1 telehealth market is one of the most volatile cash-pay drug markets in modern US healthcare. We track monthly prices across the major providers and plot the trajectory for each. Every tracked provider has cut prices since January 2025 — but at dramatically different rates, with the biggest movers converging on what looks like a structural floor around $199.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-06",
+    readMinutes: 10,
+    citations: 6,
+    tags: ["Pricing", "Compounded GLP-1", "Live dataset"],
+  },
 ];
 
 export function getResearchArticleBySlug(
