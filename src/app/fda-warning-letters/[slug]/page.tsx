@@ -78,30 +78,79 @@ export default async function FdaWarningLetterDetailPage({
 
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    // NewsArticle (instead of plain Article) — these are timely
+    // regulatory news. Google News and Top Stories specifically
+    // surface NewsArticle entities, not generic Article.
+    "@type": "NewsArticle",
     headline: `${display} FDA Warning Letter (${formatDate(letter.letter_date)})`,
     description: letter.violations_summary,
+    image: `https://weightlossrankings.org/fda-warning-letters/${letter.id}/opengraph-image`,
     datePublished: letter.added_date,
     dateModified: letter.added_date,
     author: {
       "@type": "Organization",
       name: "Weight Loss Rankings",
+      url: "https://weightlossrankings.org",
     },
     publisher: {
       "@type": "Organization",
       name: "Weight Loss Rankings",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://weightlossrankings.org/logo-600.png",
+        width: 600,
+        height: 600,
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://weightlossrankings.org/fda-warning-letters/${letter.id}`,
     },
+    articleSection: "FDA Enforcement",
+    keywords: [
+      "FDA warning letter",
+      "compounded GLP-1",
+      "compounded semaglutide",
+      "compounded tirzepatide",
+      letter.company_name,
+    ].join(", "),
     citation: {
-      "@type": "CreativeWork",
+      "@type": "GovernmentService",
       name: `FDA Warning Letter #${letter.letter_number}`,
       url: letter.fda_url,
-      publisher: {
-        "@type": "Organization",
+      provider: {
+        "@type": "GovernmentOrganization",
         name: "U.S. Food and Drug Administration",
+        url: "https://www.fda.gov",
+      },
+    },
+    // Voice-search / Discover-audio support — assistant reads the
+    // headline + the violations summary when surfacing this letter.
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "[data-speakable='violations']"],
+    },
+    // The "subject" of this article is the regulatory action itself —
+    // a GovernmentService entity that links the company being warned
+    // to the FDA office that issued the warning. This is exactly the
+    // structure Google's medical knowledge graph uses to surface
+    // FDA enforcement in YMYL queries.
+    about: {
+      "@type": "GovernmentService",
+      name: `FDA Warning Letter to ${display}`,
+      serviceType: "Pharmaceutical compliance enforcement",
+      provider: {
+        "@type": "GovernmentOrganization",
+        name: letter.issuing_office || "U.S. Food and Drug Administration",
+        parentOrganization: {
+          "@type": "GovernmentOrganization",
+          name: "U.S. Food and Drug Administration",
+          url: "https://www.fda.gov",
+        },
+      },
+      audience: {
+        "@type": "Organization",
+        name: display,
       },
     },
   };
@@ -220,7 +269,10 @@ export default async function FdaWarningLetterDetailPage({
               <h3 className="text-[10px] uppercase tracking-wider font-semibold text-brand-text-secondary">
                 What FDA cited
               </h3>
-              <p className="mt-2 text-base text-brand-text-secondary leading-relaxed">
+              <p
+                data-speakable="violations"
+                className="mt-2 text-base text-brand-text-secondary leading-relaxed"
+              >
                 {letter.violations_summary}
               </p>
             </div>
