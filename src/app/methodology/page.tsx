@@ -84,6 +84,13 @@ export default function MethodologyPage() {
           service quality shifts are identified. If you find a score that
           seems out of date or inaccurate, please let us know.
         </p>
+        <p className="text-gray-600 text-sm">
+          For the story behind the site and how it stays independent, see{" "}
+          <a href="/about" className="text-brand-violet underline">
+            About WeightLossRankings
+          </a>
+          .
+        </p>
       </div>
     </div>
   );

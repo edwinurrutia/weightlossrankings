@@ -88,6 +88,12 @@ export default async function HomePage() {
           <span className="inline-flex items-center gap-1.5">
             <span className="text-brand-success">✓</span> Updated monthly
           </span>
+          <Link
+            href="/press"
+            className="inline-flex items-center gap-1.5 hover:text-brand-violet transition-colors"
+          >
+            <span className="text-brand-success">✓</span> Press &amp; media
+          </Link>
         </div>
       </section>
 
