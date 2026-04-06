@@ -7,20 +7,21 @@ const footerColumns = [
     heading: "Compare",
     links: [
       { label: "Compare Providers", href: "/compare" },
-      { label: "Compounding Pharmacies", href: "/pharmacies" },
       { label: "Savings Calculator", href: "/savings-calculator" },
-      { label: "Best Weight Loss Programs", href: "/best/weight-loss-programs" },
+      { label: "Best Semaglutide", href: "/best/semaglutide-providers" },
+      { label: "Best Tirzepatide", href: "/best/tirzepatide-providers" },
+      { label: "Best Programs", href: "/best/weight-loss-programs" },
     ],
   },
   {
-    heading: "Best Of",
+    heading: "Browse",
     links: [
-      { label: "Best Semaglutide", href: "/best/semaglutide-providers" },
-      { label: "Best Tirzepatide", href: "/best/tirzepatide-providers" },
-      { label: "Cheapest Semaglutide", href: "/best/cheapest-semaglutide" },
-      { label: "Cheapest Tirzepatide", href: "/best/cheapest-tirzepatide" },
-      { label: "Compounded Semaglutide", href: "/best/compounded-semaglutide" },
-      { label: "Compounded Tirzepatide", href: "/best/compounded-tirzepatide" },
+      { label: "By Category", href: "/best" },
+      { label: "By State", href: "/states" },
+      { label: "By City", href: "/cities" },
+      { label: "By Drug", href: "/drugs" },
+      { label: "By Insurance", href: "/insurance" },
+      { label: "By Pharmacy", href: "/pharmacies" },
     ],
   },
   {
@@ -38,15 +39,7 @@ const footerColumns = [
       { label: "Drug Guides", href: "/drugs" },
       { label: "Methodology", href: "/methodology" },
       { label: "FAQ", href: "/faq" },
-    ],
-  },
-  {
-    heading: "Browse",
-    links: [
-      { label: "By City", href: "/cities" },
-      { label: "By State", href: "/states" },
-      { label: "By Insurance", href: "/insurance" },
-      { label: "By Drug", href: "/drugs" },
+      { label: "Nature of Reviews", href: "/nature-of-reviews" },
     ],
   },
   {
@@ -58,7 +51,6 @@ const footerColumns = [
       { label: "Press", href: "/press" },
       { label: "Advertise", href: "/advertise" },
       { label: "Disclosure", href: "/disclosure" },
-      { label: "Nature of Reviews", href: "/nature-of-reviews" },
       { label: "Code of Conduct", href: "/code-of-conduct" },
       { label: "Privacy", href: "/privacy" },
       { label: "Terms", href: "/terms" },
@@ -73,7 +65,7 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
           {/* Logo column */}
           <div className="space-y-4">
             <Logo size="sm" />
