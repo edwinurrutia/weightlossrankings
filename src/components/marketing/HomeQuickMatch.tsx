@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import TrackedAffiliateLink from "@/components/shared/TrackedAffiliateLink";
 
 /** Slim provider shape — just enough fields to match and render. The
