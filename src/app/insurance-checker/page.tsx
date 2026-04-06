@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Insurance Coverage Checker — GLP-1 Medications",
   description:
     "Check if your insurance covers Wegovy, Ozempic, Mounjaro, or Zepbound. Get a personalized coverage estimate and see compounded alternatives if you're not covered.",
+  alternates: { canonical: "/insurance-checker" },
 };
 
 export default async function InsuranceCheckerPage() {

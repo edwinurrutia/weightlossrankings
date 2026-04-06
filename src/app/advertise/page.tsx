@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Advertise on WeightLossRankings",
   description:
     "Reach thousands of high-intent weight loss buyers. Featured listings, sponsored placements, and newsletter sponsorships.",
+  alternates: { canonical: "/advertise" },
 };
 
 const OFFERINGS = [

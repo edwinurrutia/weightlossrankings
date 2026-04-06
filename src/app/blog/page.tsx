@@ -5,6 +5,9 @@ import BlogCard from "@/components/blog/BlogCard";
 
 export const metadata: Metadata = {
   title: "Blog — Weight Loss News, Reviews & Guides",
+  description:
+    "Weight loss news, GLP-1 provider reviews, drug guides, and expert tips from the WeightLossRankings editorial team.",
+  alternates: { canonical: "/blog" },
 };
 
 export default async function BlogIndexPage() {

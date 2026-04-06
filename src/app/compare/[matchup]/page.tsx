@@ -96,9 +96,25 @@ export async function generateMetadata({
 
   if (!providerA || !providerB) return { title: "Comparison Not Found" };
 
+  const title = `${providerA.name} vs ${providerB.name}: Which is Better in 2026?`;
+  const description = `Compare ${providerA.name} vs ${providerB.name} side-by-side — pricing, scores, features, pros & cons, and our expert verdict on which ${providerA.category} is right for you.`;
+
   return {
-    title: `${providerA.name} vs ${providerB.name}: Which is Better in 2026?`,
-    description: `Compare ${providerA.name} vs ${providerB.name} side-by-side — pricing, scores, features, pros & cons, and our expert verdict on which ${providerA.category} is right for you.`,
+    title,
+    description,
+    alternates: { canonical: `/compare/${matchup}` },
+    openGraph: {
+      title,
+      description,
+      url: `/compare/${matchup}`,
+      type: "article",
+      siteName: "WeightLossRankings",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
@@ -161,6 +177,7 @@ export default async function MatchupPage({
         "@type": "ListItem",
         position: 3,
         name: `${providerA.name} vs ${providerB.name}`,
+        item: `https://weightlossrankings.org/compare/${matchup}`,
       },
     ],
   };

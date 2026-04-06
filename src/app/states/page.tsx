@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Weight Loss Providers by State — Browse All 50 States",
   description:
     "Find GLP-1 providers and weight loss programs available in your state. Compare pricing, availability, and coverage across all 50 US states.",
+  alternates: { canonical: "/states" },
 };
 
 export default function StatesIndexPage() {

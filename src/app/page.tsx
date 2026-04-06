@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getFeaturedProviders, getAllBlogPosts } from "@/lib/data";
 import type { Provider, BlogPost } from "@/lib/types";
@@ -5,6 +6,10 @@ import ProviderCard from "@/components/providers/ProviderCard";
 import CTAButton from "@/components/shared/CTAButton";
 import EmailCapture from "@/components/shared/EmailCapture";
 import BlogCard from "@/components/blog/BlogCard";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const categories = [
   {

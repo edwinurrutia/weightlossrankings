@@ -31,9 +31,25 @@ export async function generateMetadata({
   const label = CATEGORY_MAP[category];
   if (!label) return {};
 
+  const title = `Best ${label}s in 2026 — Ranked & Reviewed`;
+  const description = `We independently tested and ranked the top ${label.toLowerCase()}s of 2026. See scores, pricing, pros and cons, and expert picks to find the best option for you.`;
+
   return {
-    title: `Best ${label}s in 2026 — Ranked & Reviewed`,
-    description: `We independently tested and ranked the top ${label.toLowerCase()}s of 2026. See scores, pricing, pros and cons, and expert picks to find the best option for you.`,
+    title,
+    description,
+    alternates: { canonical: `/best/${category}` },
+    openGraph: {
+      title,
+      description,
+      url: `/best/${category}`,
+      type: "article",
+      siteName: "WeightLossRankings",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
@@ -97,9 +113,35 @@ export default async function RankingsPage({
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://weightlossrankings.org",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Best",
+        item: "https://weightlossrankings.org/best",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `Best ${label}s`,
+        item: `https://weightlossrankings.org/best/${category}`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg">
       <JsonLd data={itemListSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
 
         {/* Trust badges */}

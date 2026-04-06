@@ -24,9 +24,25 @@ export async function generateMetadata({
   const drugData = getDrugBySlug(drug);
   if (!drugData) return {};
 
+  const title = `${drugData.name} Guide: Cost, Side Effects & Where to Get It`;
+  const description = `Everything you need to know about ${drugData.name}: FDA status, how it works, dosing schedule, side effects, clinical trial results, and where to get it at the best price.`;
+
   return {
-    title: `${drugData.name} Guide: Cost, Side Effects & Where to Get It`,
-    description: `Everything you need to know about ${drugData.name}: FDA status, how it works, dosing schedule, side effects, clinical trial results, and where to get it at the best price.`,
+    title,
+    description,
+    alternates: { canonical: `/drugs/${drug}` },
+    openGraph: {
+      title,
+      description,
+      url: `/drugs/${drug}`,
+      type: "article",
+      siteName: "WeightLossRankings",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
@@ -127,12 +143,38 @@ export default async function DrugPage({
     description: drugData.description,
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://weightlossrankings.org",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Drug Guides",
+        item: "https://weightlossrankings.org/drugs",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: drugData.name,
+        item: `https://weightlossrankings.org/drugs/${drug}`,
+      },
+    ],
+  };
+
   const topProvider = topProviders[0];
   const topProviderMinPrice = topProvider ? getMinPrice(topProvider) : null;
 
   return (
     <main className="min-h-screen bg-brand-bg pb-24 lg:pb-0">
       <JsonLd data={drugSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
 
         {/* Trust Badges */}

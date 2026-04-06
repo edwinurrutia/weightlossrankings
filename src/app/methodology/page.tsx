@@ -3,6 +3,9 @@ import { SCORE_DIMENSIONS } from "@/lib/scoring";
 
 export const metadata: Metadata = {
   title: "How We Rank — Our Methodology",
+  description:
+    "Our independent methodology for scoring and ranking GLP-1 providers, weight loss programs, and supplements across six weighted dimensions.",
+  alternates: { canonical: "/methodology" },
 };
 
 const DIMENSION_DESCRIPTIONS: Record<string, string> = {

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "GLP-1 Drug Guides — Semaglutide, Tirzepatide & More",
   description:
     "Comprehensive guides to GLP-1 medications: Semaglutide, Tirzepatide, Wegovy, Ozempic, Mounjaro, and Zepbound. Costs, side effects, and where to buy.",
+  alternates: { canonical: "/drugs" },
 };
 
 export default function DrugsIndexPage() {

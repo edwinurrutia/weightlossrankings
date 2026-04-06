@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About WeightLossRankings",
+  description:
+    "WeightLossRankings is an independent review site that evaluates GLP-1 telehealth providers, weight loss programs, and supplements.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

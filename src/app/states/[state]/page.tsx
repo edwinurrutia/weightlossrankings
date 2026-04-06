@@ -30,10 +30,25 @@ export async function generateMetadata({
   const glpProviders = providers.filter((p) => GLP1_CATEGORIES.has(p.category));
   const price = content?.average_compounded_price_monthly ?? 199;
 
+  const title = `Best GLP-1 Providers in ${stateData.name} (2026) | Compare Prices & Reviews`;
+  const description = `Compare ${glpProviders.length} GLP-1 telehealth providers available in ${stateData.name}. Average compounded semaglutide cost: $${price}/mo. See reviews, prices, and insurance coverage.`;
+
   return {
-    title: `Best GLP-1 Providers in ${stateData.name} (2026) | Compare Prices & Reviews`,
-    description: `Compare ${glpProviders.length} GLP-1 telehealth providers available in ${stateData.name}. Average compounded semaglutide cost: $${price}/mo. See reviews, prices, and insurance coverage.`,
+    title,
+    description,
     alternates: { canonical: `/states/${stateData.slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `/states/${stateData.slug}`,
+      type: "article",
+      siteName: "WeightLossRankings",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
@@ -104,6 +119,31 @@ export default async function StatePage({
     description: `Compare ${providers.length} GLP-1 telehealth providers available in ${stateName}. Average compounded semaglutide cost: $${avgPrice}/mo.`,
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://weightlossrankings.org",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "States",
+        item: "https://weightlossrankings.org/states",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: stateName,
+        item: `https://weightlossrankings.org/states/${stateData.slug}`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg">
       <script
@@ -113,6 +153,10 @@ export default async function StatePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">

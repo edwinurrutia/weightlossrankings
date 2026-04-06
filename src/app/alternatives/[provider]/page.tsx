@@ -8,6 +8,7 @@ import {
 import { computeOverallScore } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
+import JsonLd from "@/components/shared/JsonLd";
 import CTAButton from "@/components/shared/CTAButton";
 import FaqAccordion from "@/components/shared/FaqAccordion";
 import EmailCapture from "@/components/shared/EmailCapture";
@@ -32,9 +33,25 @@ export async function generateMetadata({
     return { title: "Provider Not Found" };
   }
 
+  const title = `${provider.name} Alternatives: Best Competitors in 2026`;
+  const description = `Looking for ${provider.name} alternatives? Compare the top-rated competitors by price, effectiveness, and user experience. Find the best GLP-1 provider for you.`;
+
   return {
-    title: `${provider.name} Alternatives: Best Competitors in 2026`,
-    description: `Looking for ${provider.name} alternatives? Compare the top-rated competitors by price, effectiveness, and user experience. Find the best GLP-1 provider for you.`,
+    title,
+    description,
+    alternates: { canonical: `/alternatives/${slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `/alternatives/${slug}`,
+      type: "article",
+      siteName: "WeightLossRankings",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
@@ -137,8 +154,34 @@ export default async function AlternativesPage({
 
   const whyLookContent = buildWhyLookSection(provider);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://weightlossrankings.org",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Alternatives",
+        item: "https://weightlossrankings.org/alternatives",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${provider.name} Alternatives`,
+        item: `https://weightlossrankings.org/alternatives/${slug}`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-brand-gradient-light">
+      <JsonLd data={breadcrumbSchema} />
       <div className="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-10">
 
         {/* Hero */}

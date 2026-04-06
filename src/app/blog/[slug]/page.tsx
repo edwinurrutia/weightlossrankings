@@ -27,6 +27,21 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `/blog/${slug}`,
+      type: "article",
+      siteName: "WeightLossRankings",
+      ...(post.published_date ? { publishedTime: post.published_date } : {}),
+      ...(post.updated_date ? { modifiedTime: post.updated_date } : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 }
 
@@ -50,6 +65,31 @@ export default async function BlogPostPage({
         year: "numeric",
       })
     : null;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://weightlossrankings.org",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://weightlossrankings.org/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `https://weightlossrankings.org/blog/${slug}`,
+      },
+    ],
+  };
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -75,6 +115,7 @@ export default async function BlogPostPage({
   return (
     <main className="min-h-screen bg-brand-bg">
       <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8 flex flex-col gap-8">
         {/* Trust badges */}
         <div className="flex flex-wrap gap-2">

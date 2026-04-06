@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Affiliate Disclosure",
   description:
     "How WeightLossRankings earns revenue and the role of commercial relationships in our content.",
+  alternates: { canonical: "/disclosure" },
 };
 
 export default function DisclosurePage() {

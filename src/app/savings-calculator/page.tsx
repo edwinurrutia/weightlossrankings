@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "GLP-1 Savings Calculator — See How Much You Could Save",
   description:
     "Find out how much you could save by switching from brand-name Wegovy, Ozempic, Mounjaro, or Zepbound to a compounded GLP-1 provider. Takes less than 60 seconds.",
+  alternates: { canonical: "/savings-calculator" },
 };
 
 export default async function SavingsCalculatorPage() {

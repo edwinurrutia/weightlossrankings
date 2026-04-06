@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "GLP-1 Price Tracker — Monitor Provider Price History",
   description:
     "Track how GLP-1 medication prices have changed over time across top providers. See recent price drops, best current deals, and 12-month price history charts. Updated monthly.",
+  alternates: { canonical: "/price-tracker" },
 };
 
 export default async function PriceTrackerPage() {
