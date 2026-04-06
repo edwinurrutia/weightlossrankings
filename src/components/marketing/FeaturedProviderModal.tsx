@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { computeOverallScore } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import type { FeaturedModalConfig } from "@/lib/featured-modal";
+import { buildOutboundLink } from "@/lib/affiliate-link";
 
 function fireTracking(provider: string, source: string) {
   if (typeof window === "undefined") return;
@@ -277,10 +278,14 @@ export default function FeaturedProviderModal({ config, provider }: Props) {
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* CTA — UTM-tagged via buildOutboundLink so the destination
+            provider's analytics can attribute the click back to us. */}
         <a
           ref={ctaRef}
-          href={provider.affiliate_url}
+          href={buildOutboundLink(provider.affiliate_url, {
+            source: trackSource,
+            provider: provider.slug,
+          })}
           target="_blank"
           rel="noopener noreferrer sponsored"
           onClick={() => fireTracking(provider.slug, trackSource)}

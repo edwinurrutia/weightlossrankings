@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { buildOutboundLink } from "@/lib/affiliate-link";
 
 type CTAButtonSize = "sm" | "md" | "lg";
 type CTAButtonVariant = "primary" | "outline" | "white";
@@ -97,9 +98,17 @@ export default function CTAButton({
   };
 
   if (external) {
+    // Tag the outbound URL with UTM params so the destination
+    // provider's analytics can attribute the visit back to us.
+    // See src/lib/affiliate-link.ts for the full rationale.
+    const outboundHref = buildOutboundLink(href, {
+      source: trackSource ?? "unknown",
+      provider: trackProvider,
+      position: trackPosition,
+    });
     return (
       <a
-        href={href}
+        href={outboundHref}
         target="_blank"
         rel="noopener noreferrer sponsored"
         className={classes}

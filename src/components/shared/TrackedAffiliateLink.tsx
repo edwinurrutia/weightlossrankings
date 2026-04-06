@@ -1,5 +1,7 @@
 "use client";
 
+import { buildOutboundLink } from "@/lib/affiliate-link";
+
 interface TrackedAffiliateLinkProps {
   href: string;
   provider: string;
@@ -53,9 +55,16 @@ export default function TrackedAffiliateLink({
   children,
 }: TrackedAffiliateLinkProps) {
   const onClick = () => fireTracking(provider, source, position);
+  // Tag with UTM params so the destination provider's analytics can
+  // attribute the visit back to us. See src/lib/affiliate-link.ts.
+  const outboundHref = buildOutboundLink(href, {
+    source,
+    provider,
+    position,
+  });
   return (
     <a
-      href={href}
+      href={outboundHref}
       target="_blank"
       rel="nofollow sponsored noopener"
       className={className}
