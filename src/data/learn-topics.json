@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "glp-1-medications",
+    "title": "GLP-1 Medications: The Complete Guide",
+    "short_title": "GLP-1 Medications",
+    "description": "In-depth guides to semaglutide, tirzepatide, and the rest of the GLP-1 family — how they work, dosing, comparisons, and what the clinical evidence actually shows.",
+    "target_keyword": "glp-1 medications",
+    "related_money_pages": [
+      { "label": "Semaglutide drug guide", "href": "/drugs/semaglutide" },
+      { "label": "Tirzepatide drug guide", "href": "/drugs/tirzepatide" },
+      { "label": "Best GLP-1 providers 2026", "href": "/best/semaglutide-providers" },
+      { "label": "Compare providers", "href": "/compare" }
+    ]
+  },
+  {
+    "slug": "cost-and-insurance",
+    "title": "GLP-1 Cost & Insurance Guide",
+    "short_title": "Cost & Insurance",
+    "description": "How to actually afford GLP-1 weight loss medications in 2026 — insurance, manufacturer coupons, compounded options, savings hacks, and the math behind every option.",
+    "target_keyword": "glp-1 cost",
+    "related_money_pages": [
+      { "label": "GLP-1 savings calculator", "href": "/savings-calculator" },
+      { "label": "Insurance checker", "href": "/insurance-checker" },
+      { "label": "Best GLP-1 providers 2026", "href": "/best/semaglutide-providers" },
+      { "label": "Live price tracker", "href": "/price-tracker" }
+    ]
+  },
+  {
+    "slug": "side-effects-and-safety",
+    "title": "GLP-1 Side Effects & Safety",
+    "short_title": "Side Effects & Safety",
+    "description": "Honest, sourced explanations of GLP-1 side effects, safety data, contraindications, and how to manage symptoms — written for patients, citing FDA and peer-reviewed research.",
+    "target_keyword": "glp-1 side effects",
+    "related_money_pages": [
+      { "label": "Semaglutide drug guide", "href": "/drugs/semaglutide" },
+      { "label": "Tirzepatide drug guide", "href": "/drugs/tirzepatide" },
+      { "label": "Our methodology", "href": "/methodology" },
+      { "label": "Best GLP-1 providers 2026", "href": "/best/semaglutide-providers" }
+    ]
+  }
+]
