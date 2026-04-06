@@ -56,20 +56,31 @@ export default async function HomePage() {
           <br className="hidden sm:block" />
           {" "}for You
         </h1>
-        <p className="text-lg text-brand-text-secondary mb-8 max-w-2xl mx-auto">
-          Compare GLP-1 providers, programs, and costs side by side — so you
-          can make the right choice with confidence.
+        <p className="text-lg sm:text-xl text-brand-text-secondary mb-8 max-w-2xl mx-auto">
+          Save up to <strong className="text-brand-text-primary">$800/mo</strong> on GLP-1s. Compare 50+ telehealth providers, prices, and reviews in 60 seconds.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <CTAButton href="/compare" size="lg">
-            Compare Providers
+            Compare All Providers
           </CTAButton>
           <Link
             href="/savings-calculator"
-            className="inline-flex items-center justify-center rounded-full border-2 border-brand-violet text-brand-violet font-semibold px-8 py-4 text-lg hover:bg-brand-violet hover:text-white transition-colors tap-target"
+            className="inline-flex items-center justify-center text-brand-violet font-semibold text-lg hover:text-brand-blue transition-colors tap-target"
           >
-            Calculate Your Savings
+            Calculate your savings →
           </Link>
+        </div>
+        {/* Trust strip */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-brand-text-secondary">
+          <span className="inline-flex items-center gap-1.5">
+            <span className="text-brand-success">✓</span> Independently researched
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <span className="text-brand-success">✓</span> 50+ providers tracked
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <span className="text-brand-success">✓</span> Updated monthly
+          </span>
         </div>
       </section>
 

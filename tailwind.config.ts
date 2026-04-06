@@ -21,6 +21,14 @@ const config: Config = {
         sans: ["Inter", "system-ui", "sans-serif"],
         heading: ["'Plus Jakarta Sans'", "Inter", "system-ui", "sans-serif"],
       },
+      // Override Tailwind's default line-height: 1 on display sizes
+      // so leading-tight / leading-snug actually work on hero headlines.
+      fontSize: {
+        "4xl": ["2.25rem", { lineHeight: "1.15" }],
+        "5xl": ["3rem", { lineHeight: "1.1" }],
+        "6xl": ["3.75rem", { lineHeight: "1.05" }],
+        "7xl": ["4.5rem", { lineHeight: "1.05" }],
+      },
       backgroundImage: {
         "brand-gradient": "linear-gradient(135deg, #8b5cf6, #3b82f6)",
         "brand-gradient-light":
