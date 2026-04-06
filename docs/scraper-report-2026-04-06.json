@@ -1,0 +1,484 @@
+{
+  "generated_at": "2026-04-06T04:23:26.325Z",
+  "summary": {
+    "total": 5,
+    "matched": 2,
+    "mismatched": 2,
+    "no_data": 1,
+    "failed": 0
+  },
+  "results": [
+    {
+      "slug": "coreage-rx",
+      "name": "CoreAge Rx",
+      "url": "https://www.coreagerx.com",
+      "fetched_at": "2026-04-06T04:23:10.218Z",
+      "fetched_urls": [
+        "https://www.coreagerx.com",
+        "https://www.coreagerx.com/glp-1"
+      ],
+      "found_prices": [
+        {
+          "amount": 99,
+          "currency": "USD",
+          "period": "month",
+          "context": "elehealth Login Weight Loss It’s about science, not willpower! Semaglutide From $99 / Month All doses. Same Price. No Membership Fee. No Hidden Fees Everything Included 0.",
+          "drug_hint": "semaglutide",
+          "source_url": "https://www.coreagerx.com/glp-1",
+          "source": "static"
+        },
+        {
+          "amount": 149,
+          "currency": "USD",
+          "period": "month",
+          "context": "thing Included 0.25 mg | .5 mg | 1 mg | 1.5 mg | 2 mg | 2.5 mg Tirzepatide From $149 / Month All doses. Same Price. No Membership Fee. No Hidden Fees Everything Included 2.",
+          "drug_hint": "tirzepatide",
+          "source_url": "https://www.coreagerx.com/glp-1",
+          "source": "static"
+        }
+      ],
+      "stored_prices": [
+        {
+          "dose": "0.25mg",
+          "form": "compounded",
+          "monthly_cost": 149
+        },
+        {
+          "dose": "0.5mg",
+          "form": "compounded",
+          "monthly_cost": 199
+        },
+        {
+          "dose": "1mg",
+          "form": "compounded",
+          "monthly_cost": 249
+        },
+        {
+          "dose": "1.7mg",
+          "form": "compounded",
+          "monthly_cost": 299
+        },
+        {
+          "dose": "2.5mg",
+          "form": "compounded",
+          "monthly_cost": 349
+        }
+      ],
+      "match_status": "match",
+      "diff": "Stored prices [149, 199, 249, 299, 349] — matched on [149]",
+      "used_browser": false,
+      "http_status": 200
+    },
+    {
+      "slug": "hims",
+      "name": "Hims",
+      "url": "https://www.forhims.com/weight-loss",
+      "fetched_at": "2026-04-06T04:23:11.879Z",
+      "fetched_urls": [
+        "https://www.forhims.com",
+        "https://www.forhims.com/cost",
+        "https://www.forhims.com/price"
+      ],
+      "found_prices": [
+        {
+          "amount": 149,
+          "currency": "USD",
+          "period": "month",
+          "context": "* Get started Access a range of GLP-1 medications New Wegovy ® Pill Starting at $149/mo* Semaglutide New Wegovy ® Pen Starting at $199/mo* Semaglutide Ozempic ® Starti",
+          "drug_hint": "semaglutide",
+          "source_url": "https://www.forhims.com",
+          "source": "static"
+        },
+        {
+          "amount": 199,
+          "currency": "USD",
+          "period": "month",
+          "context": "New Wegovy ® Pill Starting at $149/mo* Semaglutide New Wegovy ® Pen Starting at $199/mo* Semaglutide Ozempic ® Starting at $199/mo* Semaglutide Mounjaro ® $1,899/mo Ti",
+          "drug_hint": "tirzepatide",
+          "source_url": "https://www.forhims.com",
+          "source": "static"
+        },
+        {
+          "amount": 299,
+          "currency": "USD",
+          "period": "month",
+          "context": "mo Tirzepatide Zepbound ® $1,899/mo Tirzepatide Generic Liraglutide Starting at $299/mo* Liraglutide Required membership fee not included. Billed separately. Ozempic ®",
+          "drug_hint": "tirzepatide",
+          "source_url": "https://www.forhims.com",
+          "source": "static"
+        },
+        {
+          "amount": 29,
+          "currency": "USD",
+          "period": "month",
+          "context": "right for me New Rx Finasteride & Minoxidil + Supplement Blend Pill Starting at $29 per month Doctor-trusted Rx to stop hair loss and regrow hair, with established supplemen",
+          "drug_hint": null,
+          "source_url": "https://www.forhims.com/cost",
+          "source": "static"
+        },
+        {
+          "amount": 33,
+          "currency": "USD",
+          "period": "month",
+          "context": "earn more Fresh scent Rx Rx Hair Loss Spray + Ketoconazole + Biotin Starting at $33 per month Proven regrowth ingredients with moisturizing glycerin and a fresh eucalyptus s",
+          "drug_hint": null,
+          "source_url": "https://www.forhims.com/cost",
+          "source": "static"
+        },
+        {
+          "amount": 22,
+          "currency": "USD",
+          "period": "month",
+          "context": "fety information Get started Learn more FDA-approved Rx Finasteride Starting at $22 per month Effective and quick routine Important safety information Get started Learn more",
+          "drug_hint": "brand",
+          "source_url": "https://www.forhims.com/cost",
+          "source": "static"
+        },
+        {
+          "amount": 60,
+          "currency": "USD",
+          "period": "month",
+          "context": " information Get started Learn more FDA-approved Rx Hair Power Pack Starting at $60 per month A complete hair growth routine for total support Important safety information G",
+          "drug_hint": "brand",
+          "source_url": "https://www.forhims.com/cost",
+          "source": "static"
+        },
+        {
+          "amount": 958,
+          "currency": "USD",
+          "period": "month",
+          "context": "ric form of Viagra® Get Started Learn More Important safety information Cialis® $958 per month Cialis helps you get and keep stronger erections with a daily pill. Get Started",
+          "drug_hint": null,
+          "source_url": "https://www.forhims.com/price",
+          "source": "static"
+        },
+        {
+          "amount": 40,
+          "currency": "USD",
+          "period": "month",
+          "context": " More Important safety information Tadalafil (Daily) (Generic for Cialis®) From $40 per month A simple, daily treatment to help get and keep erections Get Started Learn More",
+          "drug_hint": null,
+          "source_url": "https://www.forhims.com/price",
+          "source": "static"
+        },
+        {
+          "amount": 135,
+          "currency": "USD",
+          "period": "month",
+          "context": ", in a 3-in-1 mint. Get Started Learn more Important safety information Viagra® From $135 per use The OG, first prescription ED treatment—the “little blue pill” Get Star",
+          "drug_hint": null,
+          "source_url": "https://www.forhims.com/price",
+          "source": "static"
+        }
+      ],
+      "stored_prices": [
+        {
+          "dose": "0.25mg",
+          "form": "compounded",
+          "monthly_cost": 199,
+          "promo_code": "SAVE50",
+          "promo_price": 149
+        },
+        {
+          "dose": "0.5mg",
+          "form": "compounded",
+          "monthly_cost": 299
+        },
+        {
+          "dose": "1mg",
+          "form": "compounded",
+          "monthly_cost": 399
+        }
+      ],
+      "match_status": "match",
+      "diff": "Stored prices [199, 299, 399] — matched on [199, 299]",
+      "used_browser": false,
+      "http_status": 200
+    },
+    {
+      "slug": "ro",
+      "name": "Ro",
+      "url": "https://www.ro.co/weight-loss",
+      "fetched_at": "2026-04-06T04:23:19.846Z",
+      "fetched_urls": [
+        "https://www.ro.co",
+        "https://www.ro.co/pricing"
+      ],
+      "found_prices": [
+        {
+          "amount": 48,
+          "currency": "USD",
+          "period": "month",
+          "context": "for ED is right for you. Ro Sparks Sildenafil 55mg, Tadalafil 22mg 4x dose plan $48/mo 6x dose plan $72/mo 8x dose plan $96/mo 10x dose plan $120/mo Get started Quart",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 72,
+          "currency": "USD",
+          "period": "month",
+          "context": "you. Ro Sparks Sildenafil 55mg, Tadalafil 22mg 4x dose plan $48/mo 6x dose plan $72/mo 8x dose plan $96/mo 10x dose plan $120/mo Get started Quarterly plans are offer",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 96,
+          "currency": "USD",
+          "period": "month",
+          "context": "nafil 55mg, Tadalafil 22mg 4x dose plan $48/mo 6x dose plan $72/mo 8x dose plan $96/mo 10x dose plan $120/mo Get started Quarterly plans are offered at a $15 discount",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 120,
+          "currency": "USD",
+          "period": "month",
+          "context": " 22mg 4x dose plan $48/mo 6x dose plan $72/mo 8x dose plan $96/mo 10x dose plan $120/mo Get started Quarterly plans are offered at a $15 discount every 3 months. Side ",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 89,
+          "currency": "USD",
+          "period": "month",
+          "context": "mportant safety information Daily Rise Gummies Tadalafil 7mg 1-month (30 doses) $89/mo 3-month (90 doses) $69/mo Get started Quarterly plans are offered at a $20 disc",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 69,
+          "currency": "USD",
+          "period": "month",
+          "context": "n Daily Rise Gummies Tadalafil 7mg 1-month (30 doses) $89/mo 3-month (90 doses) $69/mo Get started Quarterly plans are offered at a $20 discount every 3 months. Impor",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 50,
+          "currency": "USD",
+          "period": "month",
+          "context": " allows us to lower your final cost. Ro Mane Spray Ro Mane Spray Quarterly plan $50 / mo 6-month plan $43 / mo Get started Compounded medication. Not FDA-approved. Impo",
+          "drug_hint": "compounded",
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 43,
+          "currency": "USD",
+          "period": "month",
+          "context": "ur final cost. Ro Mane Spray Ro Mane Spray Quarterly plan $50 / mo 6-month plan $43 / mo Get started Compounded medication. Not FDA-approved. Important Safety Informati",
+          "drug_hint": "compounded",
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 20,
+          "currency": "USD",
+          "period": "month",
+          "context": "roved. Important Safety Information Finasteride Generic Propecia Quarterly plan $20 / mo 6-month plan $18 / mo 12-month plan $16 / mo Get started Finasteride is for mal",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 30,
+          "currency": "USD",
+          "period": "month",
+          "context": "ren. Important Safety Information Oral Minoxidil Generic Loniten Quarterly plan $30 / mo 6-month plan $27 / mo 12-month plan $24 / mo Get started Oral minoxidil is a Bl",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 27,
+          "currency": "USD",
+          "period": "month",
+          "context": "Information Oral Minoxidil Generic Loniten Quarterly plan $30 / mo 6-month plan $27 / mo 12-month plan $24 / mo Get started Oral minoxidil is a Black Box Warning drug, ",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 24,
+          "currency": "USD",
+          "period": "month",
+          "context": "dil Generic Loniten Quarterly plan $30 / mo 6-month plan $27 / mo 12-month plan $24 / mo Get started Oral minoxidil is a Black Box Warning drug, requires a prescription",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 22,
+          "currency": "USD",
+          "period": "month",
+          "context": " Roman Swipes 4% benzocaine wipes Monthly $27 / mo Save $60 / year Most popular $22 / mo Get started Side effects Learn about the study Sertraline Generic Zoloft Monthl",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 35,
+          "currency": "USD",
+          "period": "month",
+          "context": " with your new healthy routine. Get $15 off your first order Available monthly ($35/mo.) and quarterly ($87/3 mo.) Ro Daily Men s daily multivitamin Monthly plan $35 ",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 29,
+          "currency": "USD",
+          "period": "month",
+          "context": "ily Men s daily multivitamin Monthly plan $35 / mo Quarterly plan (3 mo supply) $29 / mo Get started Testosterone support Created by doctors, backed by science. You can",
+          "drug_hint": null,
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 29,
+          "currency": "USD",
+          "period": "month",
+          "context": "one Support Daily supplement Monthly plan $35 / mo Quarterly plan (3 mo supply) $29 / mo Get started Weight management Ro prescribes medications like Ozempic, Wegovy an",
+          "drug_hint": "semaglutide",
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 40,
+          "currency": "USD",
+          "period": "month",
+          "context": "or cardiac side effects Important safety information Hair Solution Rx Quarterly $40/ mo Get started Hair Solution Rx is a compounded topical medication that is formula",
+          "drug_hint": "compounded",
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 45,
+          "currency": "USD",
+          "period": "first_month",
+          "context": "ep the weight off. Learn more Ro Body Weight loss medication Monthly membership $45 first month, $145 thereafter Get started Longer lashes The first and only FDA-approved trea",
+          "drug_hint": "brand",
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        },
+        {
+          "amount": 145,
+          "currency": "USD",
+          "period": "month",
+          "context": ". Learn more Ro Body Weight loss medication Monthly membership $45 first month, $145 thereafter Get started Longer lashes The first and only FDA-approved treatment to grow eye",
+          "drug_hint": "brand",
+          "source_url": "https://www.ro.co/pricing",
+          "source": "static"
+        }
+      ],
+      "stored_prices": [
+        {
+          "dose": "0.25mg",
+          "form": "compounded",
+          "monthly_cost": 199
+        },
+        {
+          "dose": "0.5mg",
+          "form": "compounded",
+          "monthly_cost": 249
+        },
+        {
+          "dose": "0.25mg",
+          "form": "brand",
+          "monthly_cost": 1350
+        }
+      ],
+      "match_status": "mismatch",
+      "diff": "Stored [199, 249, 1350], scraped [48, 72, 96, 120, 89, 69, 50, 43, 20, 30, 27, 24, 22, 35, 29, 40, 45, 145]",
+      "used_browser": false,
+      "http_status": 200
+    },
+    {
+      "slug": "found",
+      "name": "Found",
+      "url": "https://www.joinfound.com",
+      "fetched_at": "2026-04-06T04:23:20.556Z",
+      "fetched_urls": [
+        "https://www.joinfound.com"
+      ],
+      "found_prices": [
+        {
+          "amount": 1100,
+          "currency": "USD",
+          "period": "month",
+          "context": ". 300K+ members served Wide, affordable medication toolkit semaglutide Ozempic® $1100/mo Get started Learn more Important safety information semaglutide Wegovy® from $6",
+          "drug_hint": "semaglutide",
+          "source_url": "https://www.joinfound.com",
+          "source": "static"
+        },
+        {
+          "amount": 650,
+          "currency": "USD",
+          "period": "month",
+          "context": "mo Get started Learn more Important safety information semaglutide Wegovy® from $650/mo+ Get started Learn more Important safety information tirzepatide Zepbound® from",
+          "drug_hint": "tirzepatide",
+          "source_url": "https://www.joinfound.com",
+          "source": "static"
+        },
+        {
+          "amount": 1100,
+          "currency": "USD",
+          "period": "month",
+          "context": "/mo+ Get started Learn more Important safety information tirzepatide Mounjaro® ~$1100/mo Get started Learn more Important safety information liraglutide Saxenda® Pricin",
+          "drug_hint": "tirzepatide",
+          "source_url": "https://www.joinfound.com",
+          "source": "static"
+        }
+      ],
+      "stored_prices": [
+        {
+          "dose": "Starting dose",
+          "form": "compounded",
+          "monthly_cost": 129
+        }
+      ],
+      "match_status": "mismatch",
+      "diff": "Stored [129], scraped [1100, 650]",
+      "used_browser": false,
+      "http_status": 404
+    },
+    {
+      "slug": "henry-meds",
+      "name": "Henry Meds",
+      "url": "https://www.henrymeds.com",
+      "fetched_at": "2026-04-06T04:23:24.150Z",
+      "fetched_urls": [
+        "https://www.henrymeds.com",
+        "https://www.henrymeds.com/semaglutide"
+      ],
+      "found_prices": [],
+      "stored_prices": [
+        {
+          "dose": "0.25mg",
+          "form": "compounded",
+          "monthly_cost": 197
+        },
+        {
+          "dose": "0.5mg",
+          "form": "compounded",
+          "monthly_cost": 247
+        },
+        {
+          "dose": "1mg",
+          "form": "compounded",
+          "monthly_cost": 297
+        }
+      ],
+      "match_status": "no_data_found",
+      "diff": "Fetched OK but no price patterns matched (likely JS-rendered)",
+      "used_browser": false,
+      "http_status": 404
+    }
+  ]
+}
