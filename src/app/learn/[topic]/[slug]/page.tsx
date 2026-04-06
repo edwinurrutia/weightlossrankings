@@ -225,15 +225,23 @@ export default async function LearnArticlePage({
           <LearnArticleBody content={secondHalf} />
         </div>
 
-        {/* Sources */}
+        {/* References */}
         {article.sources.length > 0 && (
-          <section className="rounded-2xl bg-white border border-brand-violet/10 shadow-sm p-6">
-            <h2 className="text-xl font-semibold font-heading text-brand-text-primary mb-4">
-              Sources
+          <section
+            id="references"
+            className="rounded-2xl bg-white border border-brand-violet/10 shadow-sm p-6"
+          >
+            <h2 className="text-xl font-semibold font-heading text-brand-text-primary mb-1">
+              References
             </h2>
-            <ol className="list-decimal pl-6 flex flex-col gap-2 text-sm">
+            <p className="text-xs text-brand-text-secondary mb-4">
+              All clinical claims in this guide are sourced from peer-reviewed
+              medical literature, FDA documents, and primary scientific data.
+              Last reviewed {formatDate(article.updated_date)}.
+            </p>
+            <ol className="list-decimal pl-6 flex flex-col gap-3 text-sm">
               {article.sources.map((s, i) => (
-                <li key={i}>
+                <li key={i} id={`ref-${i + 1}`} className="leading-relaxed">
                   <a
                     href={s.url}
                     target="_blank"
