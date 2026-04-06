@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-gradient-light text-brand-text-primary font-sans;
+    font-size: 16px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+  .tap-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
