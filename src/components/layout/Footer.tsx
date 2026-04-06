@@ -13,18 +13,20 @@ const footerColumns = [
     ],
   },
   {
+    heading: "Tools",
+    links: [
+      { label: "Price Tracker", href: "/price-tracker" },
+      { label: "Insurance Checker", href: "/insurance-checker" },
+      { label: "Dose Timeline", href: "/dose-timeline" },
+    ],
+  },
+  {
     heading: "Learn",
     links: [
       { label: "Blog", href: "/blog" },
+      { label: "Drug Guides", href: "/drugs" },
+      { label: "Browse by State", href: "/states" },
       { label: "Methodology", href: "/methodology" },
-      { label: "Semaglutide Guide", href: "/drugs/semaglutide" },
-      { label: "Tirzepatide Guide", href: "/drugs/tirzepatide" },
-      { label: "Wegovy Guide", href: "/drugs/wegovy" },
-      { label: "Ozempic Guide", href: "/drugs/ozempic" },
-      { label: "Texas", href: "/states/texas" },
-      { label: "California", href: "/states/california" },
-      { label: "Florida", href: "/states/florida" },
-      { label: "New York", href: "/states/new-york" },
     ],
   },
   {
