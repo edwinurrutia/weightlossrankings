@@ -13,6 +13,9 @@ import JsonLd from "@/components/shared/JsonLd";
 const CATEGORY_MAP: Record<string, string> = {
   "semaglutide-providers": "GLP-1 Provider",
   "weight-loss-programs": "Weight Loss Program",
+  "weight-loss-supplements": "Supplement",
+  "meal-delivery-for-weight-loss": "Meal Delivery",
+  "fitness-apps-for-weight-loss": "Fitness App",
 };
 
 export function generateStaticParams() {

@@ -574,5 +574,671 @@
       "trustpilot_score": 3.5,
       "trustpilot_count": 18000
     }
+  },
+  {
+    "_id": "transparent-labs-fat-burner",
+    "name": "Transparent Labs Fat Burner",
+    "slug": "transparent-labs-fat-burner",
+    "description": "Transparent Labs Fat Burner is a premium thermogenic supplement formulated with third-party tested, clinically dosed ingredients. Designed for serious gym-goers who want a clean, no-proprietary-blend fat burner backed by a money-back guarantee.",
+    "category": "Supplement",
+    "pricing": [
+      { "dose": "60 capsules", "form": "compounded", "monthly_cost": 49 }
+    ],
+    "scores": {
+      "value": 8.0,
+      "effectiveness": 7.5,
+      "ux": 8.5,
+      "trust": 9.0,
+      "accessibility": 9.5,
+      "support": 7.0
+    },
+    "features": [
+      "Third-Party Tested",
+      "No Artificial Sweeteners",
+      "Money-Back Guarantee"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.transparentlabs.com/products/fat-burner",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Third-party tested for purity and potency",
+      "No proprietary blends — full label transparency",
+      "No artificial sweeteners or fillers",
+      "Backed by a money-back guarantee",
+      "Ships to all 50 states"
+    ],
+    "cons": [
+      "Supplements are not FDA-approved weight loss drugs",
+      "Requires consistent gym routine to maximize results",
+      "Limited peer-reviewed clinical trials on the specific formula"
+    ],
+    "best_for": "serious gym-goers",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.5,
+      "trustpilot_count": 3200
+    }
+  },
+  {
+    "_id": "mitoq",
+    "name": "MitoQ",
+    "slug": "mitoq",
+    "description": "MitoQ delivers a clinically studied form of CoQ10 that targets mitochondria directly, supporting metabolic energy and cellular health. Made in New Zealand with pharmaceutical-grade manufacturing standards.",
+    "category": "Supplement",
+    "pricing": [
+      { "dose": "60 capsules", "form": "compounded", "monthly_cost": 59 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.0,
+      "ux": 8.0,
+      "trust": 8.5,
+      "accessibility": 9.0,
+      "support": 6.5
+    },
+    "features": [
+      "NZ-Made",
+      "Clinically Studied",
+      "Subscription Model"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.mitoq.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Clinically studied mitochondria-targeted CoQ10",
+      "Pharmaceutical-grade New Zealand manufacturing",
+      "Subscription model with convenient auto-refill",
+      "Supported by peer-reviewed research",
+      "Ships to all 50 states"
+    ],
+    "cons": [
+      "Premium price point compared to standard CoQ10",
+      "Metabolic benefits take weeks to notice",
+      "Not a direct weight loss product"
+    ],
+    "best_for": "metabolic energy support",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.3,
+      "trustpilot_count": 1800
+    }
+  },
+  {
+    "_id": "lean-hybrid-protein",
+    "name": "Lean Hybrid Protein",
+    "slug": "lean-hybrid-protein",
+    "description": "Lean Hybrid Protein is a high-protein meal replacement powder with 25g of protein and minimal carbs per serving. Designed for weight loss through satiety, it doubles as an FSA/HSA-eligible supplement for eligible buyers.",
+    "category": "Supplement",
+    "pricing": [
+      { "dose": "30 servings", "form": "compounded", "monthly_cost": 39 }
+    ],
+    "scores": {
+      "value": 8.5,
+      "effectiveness": 7.0,
+      "ux": 8.0,
+      "trust": 8.0,
+      "accessibility": 9.5,
+      "support": 7.0
+    },
+    "features": [
+      "25g Protein",
+      "Low Carb",
+      "FSA/HSA"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.leanhybrid.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "25g protein per serving for high satiety",
+      "Low carb formula supports ketogenic diets",
+      "FSA/HSA eligible for qualifying buyers",
+      "Very competitive price per serving",
+      "Versatile — works as meal replacement or post-workout"
+    ],
+    "cons": [
+      "Smaller brand with fewer independent reviews",
+      "Not a medication — results depend on overall diet",
+      "Flavor options are limited"
+    ],
+    "best_for": "meal replacement",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.2,
+      "trustpilot_count": 890
+    }
+  },
+  {
+    "_id": "thorne-metabolic-health-bundle",
+    "name": "Thorne Metabolic Health Bundle",
+    "slug": "thorne-metabolic-health-bundle",
+    "description": "Thorne's Metabolic Health Bundle combines NSF-certified, practitioner-grade supplements targeting blood sugar regulation, metabolism, and body composition. The gold standard for patients who want doctor-recommended supplement quality.",
+    "category": "Supplement",
+    "pricing": [
+      { "dose": "Monthly Bundle", "form": "compounded", "monthly_cost": 129 }
+    ],
+    "scores": {
+      "value": 7.0,
+      "effectiveness": 8.0,
+      "ux": 7.5,
+      "trust": 9.5,
+      "accessibility": 9.0,
+      "support": 7.5
+    },
+    "features": [
+      "NSF Certified",
+      "Practitioner Grade",
+      "Bundle Savings"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.thorne.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "NSF Certified — highest third-party verification standard",
+      "Practitioner-grade quality trusted by physicians",
+      "Bundle pricing saves vs. buying individual supplements",
+      "Highest trust score in the supplement category",
+      "Comprehensive metabolic support in one order"
+    ],
+    "cons": [
+      "Most expensive supplement option at $129/mo",
+      "Bundle is fixed — can't customize individual products",
+      "Premium price may not suit all budgets"
+    ],
+    "best_for": "doctor-recommended quality",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.6,
+      "trustpilot_count": 5400
+    }
+  },
+  {
+    "_id": "factor",
+    "name": "Factor",
+    "slug": "factor",
+    "description": "Factor delivers fresh, chef-prepared meals dietitian-designed for weight loss — fully cooked and ready in under 2 minutes. With keto, calorie-smart, and protein-plus options, it's the top pick for busy people who want zero meal prep.",
+    "category": "Meal Delivery",
+    "pricing": [
+      { "dose": "6 meals/week", "form": "compounded", "monthly_cost": 107 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 8.0,
+      "ux": 9.0,
+      "trust": 8.5,
+      "accessibility": 9.0,
+      "support": 7.5
+    },
+    "features": [
+      "Dietitian-Designed",
+      "No Prep",
+      "Keto Options",
+      "Free Shipping"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.factor75.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Fully cooked meals — heat and eat in 2 minutes",
+      "Dietitian-designed menus for weight loss",
+      "Multiple diet plans including keto and high-protein",
+      "Free shipping on all orders",
+      "Ships to all 50 states"
+    ],
+    "cons": [
+      "Premium price vs. cooking at home",
+      "Fixed weekly menus with limited customization",
+      "Requires consistent subscription for best results"
+    ],
+    "best_for": "ready-to-eat convenience",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.4,
+      "trustpilot_count": 12500
+    }
+  },
+  {
+    "_id": "bistromd",
+    "name": "BistroMD",
+    "slug": "bistromd",
+    "description": "BistroMD was founded by a bariatric physician and features meal plans specifically designed for medical weight loss, including programs for diabetes, menopause, and gluten-free needs. The most clinically rigorous meal delivery option.",
+    "category": "Meal Delivery",
+    "pricing": [
+      { "dose": "Weekly Plan", "form": "compounded", "monthly_cost": 155 }
+    ],
+    "scores": {
+      "value": 6.5,
+      "effectiveness": 8.5,
+      "ux": 7.5,
+      "trust": 9.5,
+      "accessibility": 9.0,
+      "support": 8.0
+    },
+    "features": [
+      "MD-Designed",
+      "Diabetic-Friendly",
+      "Gluten-Free",
+      "Menopause Plan"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.bistromd.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Founded by a bariatric physician — highest medical credibility",
+      "Specialized plans for diabetes, menopause, and gluten-free",
+      "Highest trust score in the meal delivery category",
+      "Clinically calibrated macros and calorie targets",
+      "Dedicated dietitian support included"
+    ],
+    "cons": [
+      "Most expensive meal delivery option at $155/mo",
+      "Smaller menu variety vs. newer services",
+      "Delivery days may be limited in some areas"
+    ],
+    "best_for": "medically-designed nutrition",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.1,
+      "trustpilot_count": 4200
+    }
+  },
+  {
+    "_id": "nutrisystem",
+    "name": "Nutrisystem",
+    "slug": "nutrisystem",
+    "description": "Nutrisystem is the original portion-controlled meal delivery system with a 30-year track record of clinically validated weight loss. Shelf-stable and fresh meal combos ship directly to your door with a structured daily eating plan.",
+    "category": "Meal Delivery",
+    "pricing": [
+      { "dose": "Daily Plan", "form": "compounded", "monthly_cost": 360 }
+    ],
+    "scores": {
+      "value": 6.0,
+      "effectiveness": 7.5,
+      "ux": 6.5,
+      "trust": 8.5,
+      "accessibility": 9.5,
+      "support": 7.5
+    },
+    "features": [
+      "Portion Control",
+      "30-Year Track Record",
+      "Diabetic Plan"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.nutrisystem.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "30-year proven track record of weight loss results",
+      "Structured daily plan removes decision fatigue",
+      "Specialized diabetic-friendly meal plan available",
+      "Highest accessibility score — ships everywhere",
+      "Large volume of real-world user reviews"
+    ],
+    "cons": [
+      "Most expensive per-month at ~$360",
+      "Older UX and app experience vs. newer competitors",
+      "Shelf-stable meals are less gourmet"
+    ],
+    "best_for": "proven weight loss system",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 3.9,
+      "trustpilot_count": 28000
+    }
+  },
+  {
+    "_id": "green-chef",
+    "name": "Green Chef",
+    "slug": "green-chef",
+    "description": "Green Chef is a USDA Certified Organic meal kit service with a dedicated Keto & Calorie Smart plan for weight loss. Pre-prepped organic ingredients arrive weekly with simple 30-minute recipes designed by professional chefs.",
+    "category": "Meal Delivery",
+    "pricing": [
+      { "dose": "2 servings/3 meals/week", "form": "compounded", "monthly_cost": 109 }
+    ],
+    "scores": {
+      "value": 7.0,
+      "effectiveness": 7.5,
+      "ux": 8.0,
+      "trust": 8.5,
+      "accessibility": 8.5,
+      "support": 7.0
+    },
+    "features": [
+      "USDA Organic",
+      "Keto Plan",
+      "30-Min Prep"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.greenchef.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "USDA Certified Organic — highest ingredient standard",
+      "Dedicated keto plan for low-carb weight loss",
+      "Fast 30-minute recipes with pre-prepped ingredients",
+      "Professional chef-developed recipes",
+      "Carbon-offset shipping"
+    ],
+    "cons": [
+      "Requires cooking — not as convenient as fully prepared meals",
+      "Fewer meal options per week than competitors",
+      "Organic premium adds to cost"
+    ],
+    "best_for": "organic ingredients",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.0,
+      "trustpilot_count": 6700
+    }
+  },
+  {
+    "_id": "myfitnesspal-premium",
+    "name": "MyFitnessPal Premium",
+    "slug": "myfitnesspal-premium",
+    "description": "MyFitnessPal Premium is the world's most popular calorie tracking app with 200M+ users, a barcode scanner database of 14M+ foods, and advanced macro tracking. Premium unlocks meal plans, calorie goal guidance, and priority support.",
+    "category": "Fitness App",
+    "pricing": [
+      { "dose": "Monthly", "form": "compounded", "monthly_cost": 20 },
+      { "dose": "Annual", "form": "compounded", "monthly_cost": 7 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.0,
+      "ux": 9.0,
+      "trust": 8.0,
+      "accessibility": 9.5,
+      "support": 7.5
+    },
+    "features": [
+      "Barcode Scanner",
+      "Recipe Importer",
+      "Macro Tracking"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.myfitnesspal.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Largest food database — 14M+ foods with barcode scanner",
+      "Best-in-class UX and app design",
+      "Annual plan is extremely affordable at $7/mo",
+      "Integrates with 50+ fitness apps and wearables",
+      "Recipe importer for easy home meal logging"
+    ],
+    "cons": [
+      "Free version has significant feature limitations",
+      "Database relies on user submissions — accuracy can vary",
+      "No built-in coaching or accountability features"
+    ],
+    "best_for": "calorie counting",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.3,
+      "trustpilot_count": 45000
+    }
+  },
+  {
+    "_id": "lose-it",
+    "name": "Lose It!",
+    "slug": "lose-it",
+    "description": "Lose It! is a focused calorie tracking app with a unique Snap-It food photo recognition feature and a clean, beginner-friendly interface. At $40/year, it's one of the best value calorie trackers for weight loss.",
+    "category": "Fitness App",
+    "pricing": [
+      { "dose": "Annual", "form": "compounded", "monthly_cost": 4 }
+    ],
+    "scores": {
+      "value": 8.0,
+      "effectiveness": 7.5,
+      "ux": 8.5,
+      "trust": 7.5,
+      "accessibility": 9.5,
+      "support": 7.0
+    },
+    "features": [
+      "Snap-It Food Photo",
+      "Exercise Tracking",
+      "Progress Reports"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.loseit.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Snap-It AI food photo recognition is highly accurate",
+      "Cleanest, most beginner-friendly UI in category",
+      "Exceptional value at $40/year ($4/mo effective)",
+      "Comprehensive exercise tracking with 1,300+ activities",
+      "Detailed weekly and monthly progress reports"
+    ],
+    "cons": [
+      "Smaller food database than MyFitnessPal",
+      "Limited third-party app integrations",
+      "No coaching or human accountability features"
+    ],
+    "best_for": "simple calorie tracking",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.4,
+      "trustpilot_count": 18000
+    }
+  },
+  {
+    "_id": "noom-med",
+    "name": "Noom Med",
+    "slug": "noom-med",
+    "description": "Noom Med integrates GLP-1 medication access with Noom's proven cognitive behavioral therapy curriculum, 1-on-1 dietitian coaching, and dedicated care team — the most comprehensive psychology-plus-medication program available.",
+    "category": "Fitness App",
+    "pricing": [
+      { "dose": "Monthly", "form": "compounded", "monthly_cost": 99 }
+    ],
+    "scores": {
+      "value": 8.5,
+      "effectiveness": 8.0,
+      "ux": 9.0,
+      "trust": 9.0,
+      "accessibility": 9.0,
+      "support": 9.0
+    },
+    "features": [
+      "GLP-1 Integration",
+      "CBT Coaching",
+      "Dietitian"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","NE","NV","NH","NJ",
+      "NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VA","WA","WI"
+    ],
+    "affiliate_url": "https://www.noom.com/med",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Combines GLP-1 medication with CBT behavior change",
+      "Dedicated dietitian included in every plan",
+      "Highest support score in fitness app category",
+      "Integrated care team for medication and coaching",
+      "Noom's proven behavioral curriculum"
+    ],
+    "cons": [
+      "Available in only 40 states — excludes AK, HI, ID, MT, NM, SD, VT, WV, WY, ND",
+      "More expensive than app-only alternatives",
+      "Requires commitment to both medication and coaching program"
+    ],
+    "best_for": "psychology + medication combo",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.2,
+      "trustpilot_count": 8900
+    }
+  },
+  {
+    "_id": "fitbit-premium",
+    "name": "Fitbit Premium",
+    "slug": "fitbit-premium",
+    "description": "Fitbit Premium unlocks advanced health analytics, guided workouts, sleep tracking insights, and personalized wellness reports for Fitbit device owners. At $10/month, it's the best activity-based weight management subscription.",
+    "category": "Fitness App",
+    "pricing": [
+      { "dose": "Monthly", "form": "compounded", "monthly_cost": 10 }
+    ],
+    "scores": {
+      "value": 7.0,
+      "effectiveness": 6.5,
+      "ux": 9.0,
+      "trust": 8.5,
+      "accessibility": 9.5,
+      "support": 7.5
+    },
+    "features": [
+      "Sleep Tracking",
+      "Workouts",
+      "Wellness Reports"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.fitbit.com/premium",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Best sleep tracking and analysis in the category",
+      "Seamless integration with all Fitbit wearables",
+      "Excellent UX and dashboard design",
+      "Affordable at $10/month",
+      "Personalized daily wellness scores and recommendations"
+    ],
+    "cons": [
+      "Requires a Fitbit device — not standalone",
+      "Lower effectiveness score vs. dedicated weight loss apps",
+      "Feature set tied to Google/Fitbit ecosystem"
+    ],
+    "best_for": "activity-based tracking",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.0,
+      "trustpilot_count": 32000
+    }
+  },
+  {
+    "_id": "apple-fitness-plus",
+    "name": "Apple Fitness+",
+    "slug": "apple-fitness-plus",
+    "description": "Apple Fitness+ is a guided workout subscription with 1,000+ on-demand classes spanning HIIT, yoga, strength, cycling, and more. Powered by Apple Watch metrics in real-time, it's the most polished workout app available.",
+    "category": "Fitness App",
+    "pricing": [
+      { "dose": "Monthly", "form": "compounded", "monthly_cost": 10 }
+    ],
+    "scores": {
+      "value": 6.5,
+      "effectiveness": 7.0,
+      "ux": 9.5,
+      "trust": 9.0,
+      "accessibility": 8.5,
+      "support": 7.0
+    },
+    "features": [
+      "1000+ Workouts",
+      "Apple Watch Required",
+      "Family Sharing"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.apple.com/apple-fitness-plus",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Highest UX score — best-in-class Apple design",
+      "1,000+ workouts across all fitness types",
+      "Real-time Apple Watch metrics shown on screen",
+      "Family Sharing for up to 6 members",
+      "New content added weekly"
+    ],
+    "cons": [
+      "Requires Apple Watch — excludes Android users",
+      "Not a dedicated weight loss or calorie tracking tool",
+      "Lower value score vs. cheaper alternatives"
+    ],
+    "best_for": "guided workouts",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.6,
+      "trustpilot_count": 12000
+    }
   }
 ]

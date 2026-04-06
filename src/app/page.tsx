@@ -22,14 +22,14 @@ const categories = [
   {
     emoji: "🧬",
     label: "Supplements",
-    slug: null,
-    comingSoon: true,
+    slug: "weight-loss-supplements",
+    comingSoon: false,
   },
   {
     emoji: "🥗",
     label: "Meal Delivery",
-    slug: null,
-    comingSoon: true,
+    slug: "meal-delivery-for-weight-loss",
+    comingSoon: false,
   },
 ];
 
