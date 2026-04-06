@@ -17,7 +17,6 @@ import PricingTable from "@/components/providers/PricingTable";
 import StarRating from "@/components/providers/StarRating";
 import FeatureBadge from "@/components/providers/FeatureBadge";
 import BlogContent from "@/components/blog/BlogContent";
-import TrustBadgesRow from "@/components/marketing/TrustBadgesRow";
 import BottomLineCard from "@/components/marketing/BottomLineCard";
 import DYORCallout from "@/components/marketing/DYORCallout";
 import ProsConsGrid from "@/components/marketing/ProsConsGrid";
@@ -197,20 +196,6 @@ export default async function ProviderReviewPage({
     },
   ];
 
-  const heroBadges: Array<{ icon: string; text: string }> = [
-    { icon: "✓", text: "Expert Reviewed" },
-    { icon: "🔒", text: "Independently Rated" },
-    { icon: "📅", text: "Updated 2026" },
-  ];
-  if (provider.verification) {
-    heroBadges.push({
-      icon: "✓",
-      text: `Verified ${new Date(
-        provider.verification.last_verified
-      ).toLocaleDateString("en-US", { month: "short", year: "numeric" })}`,
-    });
-  }
-
   return (
     <>
       <JsonLd data={productJsonLd} />
@@ -220,8 +205,6 @@ export default async function ProviderReviewPage({
         <div className="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-10">
           {/* Hero card */}
           <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-5">
-            <TrustBadgesRow badges={heroBadges} />
-
             {/* H1 + best_for */}
             <div className="flex flex-col gap-1">
               <h1 className="font-heading text-3xl md:text-4xl font-bold text-brand-text-primary">

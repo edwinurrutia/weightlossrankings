@@ -10,7 +10,6 @@ import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import EmailCapture from "@/components/shared/EmailCapture";
 import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
-import StatGrid from "@/components/marketing/StatGrid";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
@@ -284,19 +283,6 @@ export default async function StatePage({
             <h2 className="text-2xl font-bold text-brand-text-primary">
               Obesity in {stateName}
             </h2>
-            <StatGrid
-              columns={2}
-              stats={[
-                {
-                  label: "Adult Obesity Rate",
-                  value: `${content.obesity_rate}%`,
-                },
-                {
-                  label: "US Rank",
-                  value: `#${content.obesity_rank} of 50`,
-                },
-              ]}
-            />
             <p className="text-brand-text-secondary leading-relaxed">
               According to CDC data, {content.obesity_rate}% of {stateName}{" "}
               adults have obesity (BMI of 30 or higher). This places {stateName}{" "}

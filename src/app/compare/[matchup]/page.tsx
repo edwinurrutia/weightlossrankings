@@ -10,7 +10,6 @@ import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import StarRating from "@/components/providers/StarRating";
 import FeatureBadge from "@/components/providers/FeatureBadge";
-import TrustBadgesRow from "@/components/marketing/TrustBadgesRow";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import DYORCallout from "@/components/marketing/DYORCallout";
 
@@ -172,17 +171,6 @@ export default async function MatchupPage({
         ]}
       />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-
-        {/* ── Trust badges ── */}
-        <div className="mb-6">
-          <TrustBadgesRow
-            badges={[
-              { icon: "✓", text: "Expert Reviewed" },
-              { icon: "📅", text: "Updated April 2026" },
-              { icon: "🔒", text: "Independently Researched" },
-            ]}
-          />
-        </div>
 
         <div className="mb-6">
           <DYORCallout variant="compact" />

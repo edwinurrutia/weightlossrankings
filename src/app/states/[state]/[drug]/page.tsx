@@ -13,7 +13,6 @@ import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
-import TrustBadgesRow from "@/components/marketing/TrustBadgesRow";
 import DYORCallout from "@/components/marketing/DYORCallout";
 import StateDrugFactSheet from "@/components/marketing/StateDrugFactSheet";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
@@ -252,15 +251,6 @@ export default async function StateDrugPage({
             </li>
           </ol>
         </nav>
-
-        <TrustBadgesRow
-          badges={[
-            { icon: "✓", text: "Licensed US providers" },
-            { icon: "✓", text: "FDA-registered pharmacies" },
-            { icon: "✓", text: "Updated 2026" },
-            { icon: "✓", text: "No insurance required" },
-          ]}
-        />
 
         <DYORCallout variant="compact" />
 

@@ -16,7 +16,6 @@ import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import EmailCapture from "@/components/shared/EmailCapture";
 import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
-import StatGrid from "@/components/marketing/StatGrid";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
@@ -152,27 +151,6 @@ export default async function CityPage({
             About GLP-1 Access in {city.city}
           </h2>
           <p className="text-brand-text-secondary leading-relaxed">{city.intro}</p>
-        </section>
-
-        {/* Hero stats */}
-        <section className="space-y-4">
-          <StatGrid
-            columns={3}
-            stats={[
-              {
-                label: "City Population",
-                value: city.population.toLocaleString(),
-              },
-              {
-                label: "Metro Population",
-                value: city.metro_population.toLocaleString(),
-              },
-              {
-                label: "Adult Obesity Rate",
-                value: `${city.obesity_rate.toFixed(1)}%`,
-              },
-            ]}
-          />
         </section>
 
         {/* Drug-specific sub-pages */}
