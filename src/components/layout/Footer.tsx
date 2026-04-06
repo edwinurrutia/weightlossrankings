@@ -7,6 +7,7 @@ const footerColumns = [
     heading: "Compare",
     links: [
       { label: "Compare Providers", href: "/compare" },
+      { label: "Compounding Pharmacies", href: "/pharmacies" },
       { label: "Savings Calculator", href: "/savings-calculator" },
       { label: "Best Weight Loss Programs", href: "/best/weight-loss-programs" },
     ],
@@ -36,6 +37,7 @@ const footerColumns = [
       { label: "Blog", href: "/blog" },
       { label: "Drug Guides", href: "/drugs" },
       { label: "Methodology", href: "/methodology" },
+      { label: "FAQ", href: "/faq" },
     ],
   },
   {
@@ -51,9 +53,14 @@ const footerColumns = [
     heading: "Company",
     links: [
       { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
+      { label: "Careers", href: "/careers" },
       { label: "Press", href: "/press" },
-      { label: "Disclosure", href: "/disclosure" },
       { label: "Advertise", href: "/advertise" },
+      { label: "Disclosure", href: "/disclosure" },
+      { label: "Code of Conduct", href: "/code-of-conduct" },
+      { label: "Privacy", href: "/privacy" },
+      { label: "Terms", href: "/terms" },
     ],
   },
 ];

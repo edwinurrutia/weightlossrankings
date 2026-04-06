@@ -10,6 +10,7 @@ import { getAllVariantPaths } from "@/lib/variants";
 import { getAllCities, CITY_DRUG_SLUGS } from "@/lib/cities";
 import { SAVINGS_COMPARISONS } from "@/lib/savings-comparisons";
 import { getAllInsurers } from "@/lib/insurers";
+import { getAllPharmacies } from "@/lib/pharmacies";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
@@ -108,6 +109,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
+    {
+      url: `${BASE_URL}/pharmacies`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
     // Trust pages
     {
       url: `${BASE_URL}/methodology`,
@@ -138,6 +145,43 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.5,
+    },
+    // Legal & info pages
+    {
+      url: `${BASE_URL}/faq`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/contact`,
+      lastModified: now,
+      changeFrequency: "yearly" as const,
+      priority: 0.5,
+    },
+    {
+      url: `${BASE_URL}/careers`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.4,
+    },
+    {
+      url: `${BASE_URL}/code-of-conduct`,
+      lastModified: now,
+      changeFrequency: "yearly" as const,
+      priority: 0.4,
+    },
+    {
+      url: `${BASE_URL}/privacy`,
+      lastModified: now,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/terms`,
+      lastModified: now,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
     },
   ];
 
@@ -257,6 +301,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  // Dynamic: /pharmacies/[slug]
+  const pharmacyPages: MetadataRoute.Sitemap = getAllPharmacies().map((p) => ({
+    url: `${BASE_URL}/pharmacies/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   // Dynamic: /blog/[slug]
   const blogSlugs = await getAllBlogSlugs();
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map(({ slug }) => ({
@@ -279,6 +331,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...cityDrugPages,
     ...savingsPages,
     ...insurerPages,
+    ...pharmacyPages,
     ...blogPages,
   ];
 }
