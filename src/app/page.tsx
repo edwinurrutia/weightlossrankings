@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getFeaturedProviders, getAllBlogPosts } from "@/lib/data";
 import type { Provider, BlogPost } from "@/lib/types";
 import CTAButton from "@/components/shared/CTAButton";
@@ -13,29 +14,40 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+const HERO_IMAGE =
+  "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1400&q=80&auto=format&fit=crop";
+
 const categories = [
   {
-    emoji: "💊",
     label: "GLP-1 Providers",
     slug: "semaglutide-providers",
+    description: "Telehealth clinics for semaglutide and tirzepatide.",
+    image:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80&auto=format&fit=crop",
     comingSoon: false,
   },
   {
-    emoji: "📋",
     label: "Weight Loss Programs",
     slug: "weight-loss-programs",
+    description: "Coaching, accountability, and structured plans.",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&auto=format&fit=crop",
     comingSoon: false,
   },
   {
-    emoji: "🧬",
     label: "Supplements",
     slug: "weight-loss-supplements",
+    description: "Science-backed over-the-counter options.",
+    image:
+      "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=800&q=80&auto=format&fit=crop",
     comingSoon: false,
   },
   {
-    emoji: "🥗",
     label: "Meal Delivery",
     slug: "meal-delivery-for-weight-loss",
+    description: "Portion-controlled meals shipped to your door.",
+    image:
+      "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80&auto=format&fit=crop",
     comingSoon: false,
   },
 ];
@@ -47,73 +59,110 @@ export default async function HomePage() {
   ]);
 
   return (
-    <main className="min-h-screen bg-brand-bg-purple">
+    <main className="min-h-screen bg-white">
       {/* ── Hero ── */}
-      <section className="max-w-4xl mx-auto px-4 pt-20 pb-24 text-center">
-        <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-text-primary leading-[1.15] tracking-tight mb-6">
-          Find the Best{" "}
-          <span
-            className="text-transparent bg-clip-text inline-block pb-1"
-            style={{
-              backgroundImage: "linear-gradient(135deg, #8b5cf6, #3b82f6)",
-            }}
-          >
-            Weight Loss Solution
-          </span>
-          <br className="hidden sm:block" />
-          {" "}for You
-        </h1>
-        <p className="text-lg sm:text-xl text-brand-text-secondary mb-8 max-w-2xl mx-auto">
-          Save up to <strong className="text-brand-text-primary">$800/mo</strong> on GLP-1s. Compare 50+ telehealth providers, prices, and reviews in 60 seconds.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <CTAButton href="/compare" size="lg">
-            Compare All Providers
-          </CTAButton>
-          <Link
-            href="/savings-calculator"
-            className="inline-flex items-center justify-center text-brand-violet font-semibold text-lg hover:text-brand-blue transition-colors tap-target"
-          >
-            Calculate your savings →
-          </Link>
-        </div>
-        {/* Trust strip */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-brand-text-secondary">
-          <span className="inline-flex items-center gap-1.5">
-            <span className="text-brand-success">✓</span> Independently researched
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <span className="text-brand-success">✓</span> 50+ providers tracked
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <span className="text-brand-success">✓</span> Updated monthly
-          </span>
-          <Link
-            href="/press"
-            className="inline-flex items-center gap-1.5 hover:text-brand-violet transition-colors"
-          >
-            <span className="text-brand-success">✓</span> Press &amp; media
-          </Link>
-          <Link
-            href="/nature-of-reviews"
-            className="inline-flex items-center gap-1.5 hover:text-brand-violet transition-colors"
-          >
-            <span className="text-brand-success">✓</span> How our reviews work
-          </Link>
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-bg-purple to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-24 pb-16 lg:pb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Copy column */}
+            <div className="lg:col-span-7">
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-violet mb-5">
+                <span className="h-px w-8 bg-brand-violet" />
+                Independent Editorial Rankings
+              </span>
+              <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold text-brand-text-primary leading-[1.05] tracking-tight">
+                Find the Best{" "}
+                <span
+                  className="text-transparent bg-clip-text"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(135deg, #8b5cf6, #3b82f6)",
+                  }}
+                >
+                  Weight Loss Solution
+                </span>{" "}
+                for You
+              </h1>
+              <p className="text-xl sm:text-2xl text-brand-text-secondary leading-relaxed mt-6 max-w-2xl">
+                Save up to{" "}
+                <strong className="text-brand-text-primary">$800/mo</strong>{" "}
+                on GLP-1s. Compare 50+ telehealth providers, prices, and
+                reviews in 60 seconds.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row gap-5 sm:items-center">
+                <CTAButton href="/compare" size="lg">
+                  Compare All Providers
+                </CTAButton>
+                <Link
+                  href="/savings-calculator"
+                  className="inline-flex items-center justify-center sm:justify-start text-brand-text-primary font-semibold text-lg hover:text-brand-violet transition-colors tap-target"
+                >
+                  Calculate your savings →
+                </Link>
+              </div>
+              {/* Trust strip */}
+              <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-brand-text-secondary">
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="text-brand-success">✓</span> Independently researched
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="text-brand-success">✓</span> 50+ providers tracked
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="text-brand-success">✓</span> Updated monthly
+                </span>
+                <Link
+                  href="/press"
+                  className="inline-flex items-center gap-1.5 hover:text-brand-violet transition-colors"
+                >
+                  <span className="text-brand-success">✓</span> Press &amp; media
+                </Link>
+                <Link
+                  href="/nature-of-reviews"
+                  className="inline-flex items-center gap-1.5 hover:text-brand-violet transition-colors"
+                >
+                  <span className="text-brand-success">✓</span> How our reviews work
+                </Link>
+              </div>
+            </div>
+
+            {/* Image column */}
+            <div className="lg:col-span-5">
+              <div className="relative aspect-[4/5] w-full rounded-3xl overflow-hidden bg-gray-100 shadow-xl ring-1 ring-black/5">
+                <Image
+                  src={HERO_IMAGE}
+                  alt="Fresh produce and wellness lifestyle"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover"
+                />
+                {/* subtle purple tint overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-brand-violet/10 via-transparent to-transparent pointer-events-none" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── Category Nav ── */}
-      <section className="max-w-5xl mx-auto px-4 pb-16">
-        <h2 className="font-heading text-2xl font-semibold text-brand-text-primary text-center mb-6">
-          Browse by Category
-        </h2>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="flex items-end justify-between mb-10">
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-wider text-brand-violet mb-2">
+              Browse
+            </span>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary tracking-tight">
+              Explore by Category
+            </h2>
+          </div>
+        </div>
         <CategoryNavCards categories={categories} />
       </section>
 
       {/* ── Top Rated Providers ── */}
       {featured.length > 0 && (
-        <section className="max-w-5xl mx-auto px-4 pb-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <RelatedProvidersSection
             title="Top Rated Providers"
             providers={featured}
@@ -124,7 +173,7 @@ export default async function HomePage() {
       )}
 
       {/* ── Tools Banner ── */}
-      <section className="max-w-5xl mx-auto px-4 pb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <GradientCTACallout
           heading="Free Tools to Save You Money"
           description="Use our savings calculator to see what you could pay — then compare providers side by side to find the best deal."
@@ -135,9 +184,9 @@ export default async function HomePage() {
 
       {/* ── Blog ── */}
       {posts.length > 0 && (
-        <section className="max-w-5xl mx-auto px-4 pb-16">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="font-heading text-2xl font-semibold text-brand-text-primary">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="font-heading text-3xl font-bold text-brand-text-primary tracking-tight">
               Latest Articles
             </h2>
             <Link
