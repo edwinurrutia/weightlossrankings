@@ -21,16 +21,16 @@ export function computeOverallScore(scores: Scores): number {
 }
 
 export function getScoreColor(score: number): string {
-  if (score >= 8) return "green";
-  if (score >= 6) return "amber";
-  return "red";
+  if (score >= 8) return "text-brand-success";
+  if (score >= 6) return "text-brand-warning";
+  return "text-red-500";
 }
 
-export const SCORE_DIMENSIONS: { key: keyof Scores; label: string; weight: number }[] = [
-  { key: "value", label: "Value", weight: WEIGHTS.value },
-  { key: "effectiveness", label: "Effectiveness", weight: WEIGHTS.effectiveness },
-  { key: "ux", label: "User Experience", weight: WEIGHTS.ux },
-  { key: "trust", label: "Trust", weight: WEIGHTS.trust },
-  { key: "accessibility", label: "Accessibility", weight: WEIGHTS.accessibility },
-  { key: "support", label: "Support", weight: WEIGHTS.support },
+export const SCORE_DIMENSIONS = [
+  { key: "value" as const, label: "Value", weight: "25%" },
+  { key: "effectiveness" as const, label: "Effectiveness", weight: "25%" },
+  { key: "ux" as const, label: "User Experience", weight: "15%" },
+  { key: "trust" as const, label: "Trust & Safety", weight: "15%" },
+  { key: "accessibility" as const, label: "Accessibility", weight: "10%" },
+  { key: "support" as const, label: "Support", weight: "10%" },
 ];
