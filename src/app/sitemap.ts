@@ -12,6 +12,7 @@ import { SAVINGS_COMPARISONS } from "@/lib/savings-comparisons";
 import { getAllInsurers } from "@/lib/insurers";
 import { getAllPharmacies } from "@/lib/pharmacies";
 import { RESEARCH_ARTICLES } from "@/lib/research";
+import { getAllWarningLetterSlugs } from "@/lib/fda-warning-letters";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
@@ -208,7 +209,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "yearly" as const,
       priority: 0.3,
     },
+    {
+      url: `${BASE_URL}/fda-warning-letters`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
   ];
+
+  // Dynamic: /fda-warning-letters/[slug]
+  const fdaWarningLetterPages: MetadataRoute.Sitemap =
+    getAllWarningLetterSlugs().map((slug) => ({
+      url: `${BASE_URL}/fda-warning-letters/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }));
 
   // Dynamic: /reviews/[provider]
   const providerSlugs = await getAllProviderSlugs();
@@ -367,5 +383,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...pharmacyPages,
     ...blogPages,
     ...researchPages,
+    ...fdaWarningLetterPages,
   ];
 }

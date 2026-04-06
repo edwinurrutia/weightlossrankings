@@ -24,6 +24,8 @@ import GradientCTACallout from "@/components/marketing/GradientCTACallout";
 import RelatedProvidersSection from "@/components/marketing/RelatedProvidersSection";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import FdaWarningFlag from "@/components/marketing/FdaWarningFlag";
+import { getWarningLetterByProviderSlug } from "@/lib/fda-warning-letters";
 
 export async function generateStaticParams() {
   const slugs = await getAllProviderSlugs();
@@ -203,6 +205,15 @@ export default async function ProviderReviewPage({
 
       <main className="min-h-screen bg-brand-gradient-light pb-24 lg:pb-0">
         <div className="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-10">
+          {(() => {
+            const warningLetter = getWarningLetterByProviderSlug(provider.slug);
+            return warningLetter ? (
+              <FdaWarningFlag
+                letter={warningLetter}
+                providerName={provider.name}
+              />
+            ) : null;
+          })()}
           {/* Hero card */}
           <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-5">
             {/* H1 + best_for */}
