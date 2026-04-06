@@ -112,6 +112,20 @@ const CITATIONS_LIST: CitationEntry[] = [
     accessedDate: "2026-04-06",
     dataYear: "2026",
   },
+  {
+    // Our own per-insurer coverage dataset — manually curated from each
+    // insurer's published formulary, prior-authorization rules, and
+    // step-therapy requirements. Verified continuously and reviewed
+    // monthly by the editorial team.
+    id: "wlr-insurer-coverage-index",
+    label:
+      "Weight Loss Rankings insurer coverage index (manually curated formulary data)",
+    publisher: "Weight Loss Rankings",
+    url: "/insurance",
+    category: "statistics",
+    accessedDate: "2026-04-06",
+    dataYear: "2026",
+  },
 
   // ── Regulatory ────────────────────────────────────────────────────────────
 

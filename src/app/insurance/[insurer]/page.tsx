@@ -106,9 +106,7 @@ export default async function InsurerPage({
   const SOURCE_ERISA = "erisa-employer-health-plans";
   const SOURCE_FDA_503A = "fda-503a-compounding";
 
-  // TODO(citations): there is no registered source for our own per-insurer
-  // coverage database (the `insurer.*_coverage` free-text fields). Consider
-  // adding a "wlr-insurer-coverage-index" entry analogous to wlr-pricing-index.
+  const SOURCE_WLR_INSURER_COVERAGE = "wlr-insurer-coverage-index";
 
   const sourceIds: string[] = [
     SOURCE_KFF_EMPLOYER,
@@ -118,6 +116,7 @@ export default async function InsurerPage({
     SOURCE_IRS_PUB_502,
     SOURCE_ERISA,
     SOURCE_FDA_503A,
+    SOURCE_WLR_INSURER_COVERAGE,
   ];
 
   const faqs = [
@@ -230,6 +229,7 @@ export default async function InsurerPage({
         <section className="space-y-4">
           <h2 className="text-2xl font-bold text-brand-text-primary">
             Coverage by Medication
+            <Citation source={SOURCE_WLR_INSURER_COVERAGE} n={8} />
           </h2>
           <div className="overflow-hidden rounded-xl border border-brand-border bg-white">
             <table className="w-full text-sm">
