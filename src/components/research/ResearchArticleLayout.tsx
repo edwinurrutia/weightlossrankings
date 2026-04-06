@@ -28,11 +28,17 @@ export default function ResearchArticleLayout({
   dataAsOf,
   children,
 }: ResearchArticleLayoutProps) {
+  // Research articles use ScholarlyArticle (a more specific Article
+  // subtype) because they are first-party data investigations and
+  // scientific deep-dives, not editorial blog posts. ScholarlyArticle
+  // is what Google Scholar indexes, and Google's medical/YMYL
+  // guidelines treat it as a higher-trust signal than plain Article.
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "ScholarlyArticle",
     headline: article.title,
     description: article.description,
+    image: `${SITE_URL}/research/${article.slug}/opengraph-image`,
     datePublished: article.publishedDate,
     dateModified: dataAsOf ?? article.publishedDate,
     author: {
@@ -46,12 +52,29 @@ export default function ResearchArticleLayout({
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/icon.svg`,
+        url: `${SITE_URL}/logo-600.png`,
+        width: 600,
+        height: 600,
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${SITE_URL}/research/${article.slug}`,
+    },
+    articleSection:
+      article.kind === "data-investigation"
+        ? "Data Investigation"
+        : "Scientific Deep-Dive",
+    keywords: article.tags.join(", "),
+    // Citation count is a real signal — research papers with more
+    // citations rank higher in Scholar and in Google's medical
+    // knowledge graph. We expose ours via citationCount.
+    citationCount: article.citations,
+    // Mark the headline + lead description as speakable so voice
+    // assistants and Discover audio surface this content.
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "[data-speakable='lead']"],
     },
   };
 
@@ -82,7 +105,10 @@ export default function ResearchArticleLayout({
         >
           {article.title}
         </h1>
-        <p className="mt-5 text-lg text-brand-text-secondary leading-relaxed">
+        <p
+          data-speakable="lead"
+          className="mt-5 text-lg text-brand-text-secondary leading-relaxed"
+        >
           {article.description}
         </p>
 
