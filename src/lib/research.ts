@@ -197,6 +197,20 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 5,
     tags: ["Semaglutide", "Cardiovascular", "PubMed sourced"],
   },
+  {
+    slug: "surmount-osa-tirzepatide-sleep-apnea",
+    title:
+      "Tirzepatide for Sleep Apnea: What SURMOUNT-OSA Showed and the FDA's First-Ever OSA Drug Approval",
+    description:
+      "SURMOUNT-OSA (Malhotra et al., NEJM 2024) is the trial that made Zepbound the first medication ever approved by the FDA for obstructive sleep apnea. We walk through the verified trial data: a 25–29 events-per-hour reduction in AHI, both with and without concurrent CPAP, in adults with moderate-to-severe OSA and obesity.",
+    excerpt:
+      "Until 2024, the standard pharmacological treatment for obstructive sleep apnea was nothing — there wasn't one. CPAP and oral appliances were the only options, and roughly two-thirds of patients prescribed CPAP don't tolerate it long-term. The SURMOUNT-OSA trial, published in NEJM in October 2024, changed that. Tirzepatide cut the apnea-hypopnea index by 25–29 events per hour from a baseline of ~50, both in patients on CPAP and patients off CPAP. The FDA followed with the first-ever approval of a prescription medication for OSA. Here's what the trial actually showed and what it changes for the millions of obese adults living with sleep apnea.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 11,
+    citations: 4,
+    tags: ["Tirzepatide", "Sleep apnea", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
