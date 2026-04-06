@@ -152,6 +152,40 @@ export default async function StatePage({
           <AffiliateDisclosure />
         </PageHero>
 
+        {/* See by medication */}
+        <section className="space-y-3">
+          <h2 className="text-2xl font-bold text-brand-text-primary">
+            See by medication
+          </h2>
+          <p className="text-brand-text-secondary">
+            Looking for a specific GLP-1? Browse {stateName} providers by drug.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a
+              href={`/states/${stateData.slug}/semaglutide`}
+              className="rounded-xl border border-brand-border bg-brand-surface p-5 hover:border-brand-primary transition-colors"
+            >
+              <div className="text-lg font-bold text-brand-text-primary">
+                {stateName} Semaglutide Providers →
+              </div>
+              <div className="text-sm text-brand-text-secondary mt-1">
+                Compare every Semaglutide (Wegovy/Ozempic) provider serving {stateName}.
+              </div>
+            </a>
+            <a
+              href={`/states/${stateData.slug}/tirzepatide`}
+              className="rounded-xl border border-brand-border bg-brand-surface p-5 hover:border-brand-primary transition-colors"
+            >
+              <div className="text-lg font-bold text-brand-text-primary">
+                {stateName} Tirzepatide Providers →
+              </div>
+              <div className="text-sm text-brand-text-secondary mt-1">
+                Compare every Tirzepatide (Zepbound/Mounjaro) provider serving {stateName}.
+              </div>
+            </a>
+          </div>
+        </section>
+
         {/* About GLP-1s in [State] */}
         {content && (
           <section className="space-y-4">

@@ -144,6 +144,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
+  // Dynamic: /states/[state]/[drug] — 50 states × 2 drugs = 100 pages
+  const stateDrugPages: MetadataRoute.Sitemap = US_STATES.flatMap((state) =>
+    (["semaglutide", "tirzepatide"] as const).map((drug) => ({
+      url: `${BASE_URL}/states/${state.slug}/${drug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    }))
+  );
+
   // Dynamic: /compare/[matchup] — all pairs within the same category
   const allProviders = await getAllProviders();
   const comparePages: MetadataRoute.Sitemap = [];
@@ -184,6 +194,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...alternativesPages,
     ...drugPages,
     ...statePages,
+    ...stateDrugPages,
     ...comparePages,
     ...blogPages,
   ];
