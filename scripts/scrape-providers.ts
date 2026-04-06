@@ -92,13 +92,19 @@ const PRICE_PATTERNS: Array<{
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:\/|per\s+)\s*(?:week|wk)\b/gi, period: "week", multiplier: 4 },
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:\/|per\s+)\s*(?:4\s*weeks|28\s*days)\b/gi, period: "4weeks", multiplier: 1 },
   { re: /(?:starting|start|from|as\s+low\s+as)\s+(?:at\s+)?\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:\/\s*(?:mo|month))?/gi, period: "month", multiplier: 1 },
+  { re: /\bfrom\s+\$\s?(\d{2,4})(?:\.\d{2})?\b/gi, period: "month", multiplier: 1 },
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s+first\s+month/gi, period: "first_month", multiplier: 1 },
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s+(?:then|after\s+that|thereafter)/gi, period: "month", multiplier: 1 },
+  // Quarterly / 3-month pricing: "$X for 3 months" or "$X / 3 months"
+  { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s+for\s+(?:3|three)\s+months?\b/gi, period: "3month", multiplier: 1 / 3 },
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:\/|per\s+)?\s*3[- ]?month/gi, period: "3month", multiplier: 1 / 3 },
+  { re: /(?:3|three)[- ]?months?\s+(?:for|at|plan)\s+\$\s?(\d{2,4})/gi, period: "3month", multiplier: 1 / 3 },
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:to|–|—|-)\s*\$?\d{2,4}\s*\/\s*(?:mo|month)/gi, period: "month", multiplier: 1 },
 ];
 
-const GLP1_KEYWORDS = /\b(?:glp[- ]?1|semaglutide|tirzepatide|wegovy|ozempic|zepbound|mounjaro|rybelsus|compounded|weight[- ]?loss|injectable|microdos|oral\s+glp)\b/i;
+// Tight proximity keywords — price must be near one of these to be considered GLP-1 relevant.
+const GLP1_KEYWORDS = /\b(?:semaglutide|tirzepatide|glp[- ]?1|glp|weight[- ]?loss|compounded|injection|injectable|mounjaro|wegovy|ozempic|zepbound|rybelsus|microdos|oral\s+glp)\b/i;
+const PROXIMITY_RADIUS = 125; // ±125 chars = 250 char window as per spec
 
 const DRUG_HINTS: Array<{ key: FoundPrice["drug_hint"]; words: RegExp }> = [
   { key: "tirzepatide", words: /tirzepatide|mounjaro|zepbound/i },
@@ -133,9 +139,21 @@ const REQUEST_DELAY_MS = 600;
 
 // ---------------- helpers ----------------
 
+// Rotating realistic User-Agents — Chrome 122, Firefox 122, Safari 17 on desktop
+const USER_AGENTS = [
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0",
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0",
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15",
+];
+
+let uaIndex = 0;
 function userAgent() {
-  // Realistic recent Chrome on macOS — many sites block obvious bot UAs
-  return "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
+  // Round-robin rotation across requests
+  const ua = USER_AGENTS[uaIndex % USER_AGENTS.length];
+  uaIndex += 1;
+  return ua;
 }
 
 function normalizeBase(url: string): string {
@@ -164,27 +182,45 @@ function altHostBases(baseUrl: string): string[] {
   }
 }
 
-async function staticFetch(url: string): Promise<{ status: number; html: string } | null> {
+async function staticFetch(url: string, attempt = 0): Promise<{ status: number; html: string } | null> {
   try {
+    const ua = userAgent();
+    // Derive a plausible referrer so sites that key on Referer (Cloudflare, etc.) see
+    // traffic coming from Google — the most common real-world referrer.
+    const headers: Record<string, string> = {
+      "User-Agent": ua,
+      Accept:
+        "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Cache-Control": "no-cache",
+      Pragma: "no-cache",
+      Referer: "https://www.google.com/",
+      "Sec-Fetch-Dest": "document",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-Site": "cross-site",
+      "Sec-Fetch-User": "?1",
+      "Upgrade-Insecure-Requests": "1",
+    };
+    // Add Chrome client hints only when using a Chrome UA (best-effort).
+    if (/Chrome\/122/.test(ua)) {
+      headers["sec-ch-ua"] = '"Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"';
+      headers["sec-ch-ua-mobile"] = "?0";
+      headers["sec-ch-ua-platform"] = /Macintosh/.test(ua) ? '"macOS"' : '"Windows"';
+    }
     const res = await fetch(url, {
-      headers: {
-        "User-Agent": userAgent(),
-        Accept:
-          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "none",
-        "Sec-Fetch-User": "?1",
-        "Upgrade-Insecure-Requests": "1",
-      },
+      headers,
       redirect: "follow",
       signal: AbortSignal.timeout(15000),
     });
     const html = await res.text();
     return { status: res.status, html };
   } catch {
+    // One retry with a fresh UA helps transient DNS / TLS resets.
+    if (attempt === 0) {
+      await sleep(500);
+      return staticFetch(url, 1);
+    }
     return null;
   }
 }
@@ -221,13 +257,17 @@ function extractPrices(text: string, sourceUrl: string, source: "static" | "brow
       const raw = parseInt(m[1], 10);
       if (Number.isNaN(raw) || raw < 20 || raw > 5000) continue;
       const monthly = Math.round(raw * pat.multiplier);
-      // Use a wider window for context attribution (look both forward & back)
+      // Tight proximity window — match only keywords within PROXIMITY_RADIUS chars of the price
+      const tightStart = Math.max(0, m.index - PROXIMITY_RADIUS);
+      const tightEnd = Math.min(text.length, m.index + m[0].length + PROXIMITY_RADIUS);
+      const tightCtx = text.slice(tightStart, tightEnd);
+      // Wider window retained for debugging / display
       const start = Math.max(0, m.index - 200);
       const end = Math.min(text.length, m.index + m[0].length + 200);
       const ctx = text.slice(start, end);
-      const drug = detectDrug(ctx);
-      // GLP-1 keyword proximity check
-      const proximity = GLP1_KEYWORDS.test(ctx);
+      const drug = detectDrug(tightCtx);
+      // GLP-1 keyword proximity check — strictly within the tight window
+      const proximity = GLP1_KEYWORDS.test(tightCtx);
       prices.push({
         amount: monthly,
         currency: "USD",
@@ -490,8 +530,22 @@ function applyAutoUpdate(providers: Provider[], results: ProviderResult[]) {
     if (r.match_status === "match") {
       v.last_verified = today;
       v.verified_by = "scraper";
-      v.confidence = bumpConfidence(v.confidence);
-      v.notes = `Auto-verified by scraper on ${today}`;
+      // Conservative "high" confidence: only upgrade to high when we have
+      //   (a) at least one price with GLP-1 proximity, AND
+      //   (b) that price matches a stored value within ±10%.
+      const glp1Prices = r.found_prices.filter((p) => p.glp1_proximity || p.drug_hint);
+      const storedAmounts = r.stored_prices.map((p) => p.monthly_cost);
+      const tightMatch = glp1Prices.some((p) =>
+        storedAmounts.some((s) => approxMatch(s, p.amount))
+      );
+      if (tightMatch) {
+        v.confidence = "high";
+        v.notes = `Auto-verified by scraper on ${today} (GLP-1 price match)`;
+      } else {
+        // Keep or bump to medium — don't claim high without GLP-1 context
+        v.confidence = v.confidence === "high" ? "high" : "medium";
+        v.notes = `Auto-verified by scraper on ${today} (match without GLP-1 context)`;
+      }
     } else {
       v.confidence = dropConfidence(v.confidence);
       v.notes = `Scraper mismatch on ${today}: ${r.diff}`;
