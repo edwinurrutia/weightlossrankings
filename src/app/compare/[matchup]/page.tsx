@@ -11,6 +11,7 @@ import StarRating from "@/components/providers/StarRating";
 import FeatureBadge from "@/components/providers/FeatureBadge";
 import TrustBadgesRow from "@/components/marketing/TrustBadgesRow";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import DYORCallout from "@/components/marketing/DYORCallout";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -180,6 +181,10 @@ export default async function MatchupPage({
               { icon: "🔒", text: "Independently Researched" },
             ]}
           />
+        </div>
+
+        <div className="mb-6">
+          <DYORCallout variant="compact" />
         </div>
 
         {/* ── H1 ── */}

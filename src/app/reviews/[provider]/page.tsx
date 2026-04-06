@@ -19,6 +19,7 @@ import FeatureBadge from "@/components/providers/FeatureBadge";
 import BlogContent from "@/components/blog/BlogContent";
 import TrustBadgesRow from "@/components/marketing/TrustBadgesRow";
 import BottomLineCard from "@/components/marketing/BottomLineCard";
+import DYORCallout from "@/components/marketing/DYORCallout";
 import ProsConsGrid from "@/components/marketing/ProsConsGrid";
 import GradientCTACallout from "@/components/marketing/GradientCTACallout";
 import RelatedProvidersSection from "@/components/marketing/RelatedProvidersSection";
@@ -292,6 +293,8 @@ export default async function ProviderReviewPage({
             bestFor={provider.best_for}
             fromPrice={displayPrice}
           />
+
+          <DYORCallout providerName={provider.name} />
 
           {/* Score breakdown */}
           <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-4">

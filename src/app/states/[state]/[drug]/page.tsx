@@ -15,6 +15,7 @@ import StatGrid from "@/components/marketing/StatGrid";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import TrustBadgesRow from "@/components/marketing/TrustBadgesRow";
+import DYORCallout from "@/components/marketing/DYORCallout";
 
 const DRUGS = ["semaglutide", "tirzepatide"] as const;
 type DrugSlug = (typeof DRUGS)[number];
@@ -314,6 +315,8 @@ export default async function StateDrugPage({
             { icon: "✓", text: "No insurance required" },
           ]}
         />
+
+        <DYORCallout variant="compact" />
 
         <PageHero
           title={

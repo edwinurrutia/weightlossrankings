@@ -16,6 +16,7 @@ import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import DYORCallout from "@/components/marketing/DYORCallout";
 
 export function generateStaticParams() {
   return ALL_VARIANTS.map(({ category, variant }) => ({ category, variant }));
@@ -175,6 +176,8 @@ export default async function VariantPage({
         >
           <AffiliateDisclosure />
         </PageHero>
+
+        <DYORCallout variant="compact" />
 
         <QuickPicksTable
           rows={top5.map((provider) => ({

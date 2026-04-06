@@ -16,6 +16,7 @@ import FeatureBadge from "@/components/providers/FeatureBadge";
 import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import DYORCallout from "@/components/marketing/DYORCallout";
 
 export async function generateStaticParams() {
   const slugs = await getAllProviderSlugs();
@@ -183,6 +184,8 @@ export default async function AlternativesPage({
         >
           <AffiliateDisclosure />
         </PageHero>
+
+        <DYORCallout variant="compact" providerName={provider.name} />
 
         {/* Why look for alternatives */}
         <section className="rounded-2xl bg-white border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-3">

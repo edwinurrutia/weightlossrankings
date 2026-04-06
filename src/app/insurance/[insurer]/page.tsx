@@ -15,6 +15,7 @@ import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import DYORCallout from "@/components/marketing/DYORCallout";
 
 export function generateStaticParams() {
   return getAllInsurers().map((i) => ({ insurer: i.slug }));
@@ -151,6 +152,8 @@ export default async function InsurerPage({
         >
           <AffiliateDisclosure />
         </PageHero>
+
+        <DYORCallout variant="compact" />
 
         {/* Coverage summary card */}
         <section className="rounded-2xl border border-brand-border bg-white p-6 sm:p-8">

@@ -19,6 +19,7 @@ import PageHero from "@/components/marketing/PageHero";
 import StatGrid from "@/components/marketing/StatGrid";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import DYORCallout from "@/components/marketing/DYORCallout";
 
 const GLP1_CATEGORIES = new Set(["GLP-1 Provider", "Weight Loss Program"]);
 
@@ -190,6 +191,8 @@ export default async function CityDrugPage({
           </div>
           <AffiliateDisclosure />
         </PageHero>
+
+        <DYORCallout variant="compact" />
 
         {/* Intro */}
         <section className="space-y-4">

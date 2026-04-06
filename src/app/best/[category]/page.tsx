@@ -11,6 +11,7 @@ import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import DYORCallout from "@/components/marketing/DYORCallout";
 
 interface CategoryDef {
   label: string;
@@ -348,6 +349,8 @@ export default async function RankingsPage({
         >
           <AffiliateDisclosure />
         </PageHero>
+
+        <DYORCallout variant="compact" />
 
         {/* Quick links to sibling money pages */}
         {related.length > 0 && (

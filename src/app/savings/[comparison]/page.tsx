@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   SAVINGS_COMPARISONS,
   getComparisonBySlug,
@@ -15,6 +16,7 @@ import PageHero from "@/components/marketing/PageHero";
 import StatGrid from "@/components/marketing/StatGrid";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import DYORCallout from "@/components/marketing/DYORCallout";
 
 export function generateStaticParams() {
   return SAVINGS_COMPARISONS.map((c) => ({ comparison: c.slug }));
@@ -130,6 +132,8 @@ export default async function SavingsComparisonPage({
         >
           <AffiliateDisclosure />
         </PageHero>
+
+        <DYORCallout variant="compact" />
 
         {/* Big savings stat */}
         <section className="rounded-2xl bg-brand-gradient p-8 text-center text-white">
