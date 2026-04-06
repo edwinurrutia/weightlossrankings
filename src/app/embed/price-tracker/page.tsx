@@ -30,8 +30,15 @@ export const metadata: Metadata = {
   title: "GLP-1 Price Tracker — Embeddable Widget",
   description: "Live GLP-1 pricing data from Weight Loss Rankings.",
   // Robots: noindex but follow. The embeddable widget itself
-  // shouldn't compete with /price-tracker in search results.
+  // shouldn't compete with /price-tracker in search results, but
+  // we DO want Googlebot to follow the attribution links back to
+  // /price-tracker and /methodology — those are how the widget
+  // earns backlinks.
   robots: { index: false, follow: true },
+  // Canonical points to the full /price-tracker page so Google
+  // consolidates any ranking signal earned by embeds back into
+  // the canonical URL rather than diluting it across two pages.
+  alternates: { canonical: "/price-tracker" },
 };
 
 export const dynamic = "force-static";
