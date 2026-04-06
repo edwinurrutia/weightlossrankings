@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Compare", href: "/compare" },
   { label: "Best GLP-1", href: "/best/semaglutide-providers" },
   { label: "Programs", href: "/best/weight-loss-programs" },
+  { label: "Prices", href: "/price-tracker" },
   { label: "Savings Calculator", href: "/savings-calculator" },
   { label: "Insurance Check", href: "/insurance-checker" },
   { label: "Blog", href: "/blog" },
