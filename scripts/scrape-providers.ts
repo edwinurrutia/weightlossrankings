@@ -45,9 +45,10 @@ interface Provider {
 interface FoundPrice {
   amount: number;
   currency: "USD";
-  period: "month" | "week" | "4weeks" | "first_month" | "unknown";
+  period: "month" | "week" | "4weeks" | "first_month" | "3month" | "unknown";
   context: string;
   drug_hint?: "semaglutide" | "tirzepatide" | "compounded" | "brand" | null;
+  glp1_proximity: boolean;
   source_url: string;
   source: "static" | "browser";
 }
@@ -60,8 +61,14 @@ interface ProviderResult {
   fetched_urls: string[];
   found_prices: FoundPrice[];
   stored_prices: PricingEntry[];
-  match_status: "match" | "mismatch" | "no_data_found" | "fetch_failed";
+  match_status:
+    | "match"
+    | "mismatch"
+    | "no_data_found"
+    | "fetch_failed"
+    | "stale_match";
   diff: string;
+  recommendation: string;
   used_browser: boolean;
   http_status?: number;
 }
@@ -84,10 +91,14 @@ const PRICE_PATTERNS: Array<{
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:\/|per\s+)\s*(?:mo|month|monthly|mth)\b/gi, period: "month", multiplier: 1 },
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:\/|per\s+)\s*(?:week|wk)\b/gi, period: "week", multiplier: 4 },
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:\/|per\s+)\s*(?:4\s*weeks|28\s*days)\b/gi, period: "4weeks", multiplier: 1 },
-  { re: /(?:starting|start|from|as\s+low\s+as)\s+(?:at\s+)?\$\s?(\d{2,4})(?:\.\d{2})?/gi, period: "month", multiplier: 1 },
+  { re: /(?:starting|start|from|as\s+low\s+as)\s+(?:at\s+)?\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:\/\s*(?:mo|month))?/gi, period: "month", multiplier: 1 },
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s+first\s+month/gi, period: "first_month", multiplier: 1 },
   { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s+(?:then|after\s+that|thereafter)/gi, period: "month", multiplier: 1 },
+  { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:\/|per\s+)?\s*3[- ]?month/gi, period: "3month", multiplier: 1 / 3 },
+  { re: /\$\s?(\d{2,4})(?:\.\d{2})?\s*(?:to|–|—|-)\s*\$?\d{2,4}\s*\/\s*(?:mo|month)/gi, period: "month", multiplier: 1 },
 ];
+
+const GLP1_KEYWORDS = /\b(?:glp[- ]?1|semaglutide|tirzepatide|wegovy|ozempic|zepbound|mounjaro|rybelsus|compounded|weight[- ]?loss|injectable|microdos|oral\s+glp)\b/i;
 
 const DRUG_HINTS: Array<{ key: FoundPrice["drug_hint"]; words: RegExp }> = [
   { key: "tirzepatide", words: /tirzepatide|mounjaro|zepbound/i },
@@ -109,12 +120,22 @@ const CANDIDATE_PATHS = [
   "/tirzepatide",
   "/weight-loss",
   "/glp-1",
+  "/treatments",
+  "/products",
+  "/medications",
+  "/get-started",
+  "/how-it-works",
+  "/membership",
 ];
+
+const MAX_REQUESTS_PER_PROVIDER = 3;
+const REQUEST_DELAY_MS = 600;
 
 // ---------------- helpers ----------------
 
 function userAgent() {
-  return "Mozilla/5.0 (compatible; WLR-Scraper/1.0; +https://weightlossrankings.org)";
+  // Realistic recent Chrome on macOS — many sites block obvious bot UAs
+  return "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 }
 
 function normalizeBase(url: string): string {
@@ -126,12 +147,37 @@ function normalizeBase(url: string): string {
   }
 }
 
+function altHostBases(baseUrl: string): string[] {
+  // Generate www. <-> apex alternates so we can retry on hostname-level failures.
+  try {
+    const u = new URL(baseUrl);
+    const out = new Set<string>();
+    out.add(`${u.protocol}//${u.host}`);
+    if (u.host.startsWith("www.")) {
+      out.add(`${u.protocol}//${u.host.slice(4)}`);
+    } else {
+      out.add(`${u.protocol}//www.${u.host}`);
+    }
+    return Array.from(out);
+  } catch {
+    return [baseUrl];
+  }
+}
+
 async function staticFetch(url: string): Promise<{ status: number; html: string } | null> {
   try {
     const res = await fetch(url, {
       headers: {
         "User-Agent": userAgent(),
-        Accept: "text/html,application/xhtml+xml",
+        Accept:
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-User": "?1",
+        "Upgrade-Insecure-Requests": "1",
       },
       redirect: "follow",
       signal: AbortSignal.timeout(15000),
@@ -141,6 +187,10 @@ async function staticFetch(url: string): Promise<{ status: number; html: string 
   } catch {
     return null;
   }
+}
+
+function sleep(ms: number) {
+  return new Promise((r) => setTimeout(r, ms));
 }
 
 function stripTags(html: string): string {
@@ -170,16 +220,21 @@ function extractPrices(text: string, sourceUrl: string, source: "static" | "brow
     while ((m = re.exec(text)) !== null) {
       const raw = parseInt(m[1], 10);
       if (Number.isNaN(raw) || raw < 20 || raw > 5000) continue;
-      const monthly = raw * pat.multiplier;
-      const start = Math.max(0, m.index - 80);
-      const end = Math.min(text.length, m.index + m[0].length + 80);
+      const monthly = Math.round(raw * pat.multiplier);
+      // Use a wider window for context attribution (look both forward & back)
+      const start = Math.max(0, m.index - 200);
+      const end = Math.min(text.length, m.index + m[0].length + 200);
       const ctx = text.slice(start, end);
+      const drug = detectDrug(ctx);
+      // GLP-1 keyword proximity check
+      const proximity = GLP1_KEYWORDS.test(ctx);
       prices.push({
         amount: monthly,
         currency: "USD",
         period: pat.period,
         context: ctx,
-        drug_hint: detectDrug(ctx),
+        drug_hint: drug,
+        glp1_proximity: proximity,
         source_url: sourceUrl,
         source,
       });
@@ -193,6 +248,20 @@ function extractPrices(text: string, sourceUrl: string, source: "static" | "brow
     seen.add(key);
     return true;
   });
+}
+
+// Filter to GLP-1-relevant prices when available; otherwise fall back to all.
+function glp1Filtered(prices: FoundPrice[]): FoundPrice[] {
+  const relevant = prices.filter((p) => p.glp1_proximity || p.drug_hint);
+  return relevant.length > 0 ? relevant : prices;
+}
+
+function approxMatch(stored: number, found: number): boolean {
+  if (stored === found) return true;
+  const diff = Math.abs(stored - found);
+  if (diff <= 10) return true;
+  if (diff / Math.max(stored, found) <= 0.1) return true;
+  return false;
 }
 
 // ---------------- Playwright (optional) ----------------
@@ -268,48 +337,66 @@ async function scrapeProvider(provider: Provider): Promise<ProviderResult> {
     stored_prices: stored,
     match_status: "no_data_found",
     diff: "",
+    recommendation: "",
     used_browser: false,
   };
 
   if (!baseUrl) {
     result.match_status = "fetch_failed";
     result.diff = "No affiliate_url in providers.json";
+    result.recommendation = "Add affiliate_url field to providers.json";
     return result;
   }
 
-  const base = normalizeBase(baseUrl);
+  const bases = altHostBases(baseUrl);
   let anySuccess = false;
   let lastStatus: number | undefined;
+  let requestCount = 0;
 
-  // Layer 1: static
-  for (const path of CANDIDATE_PATHS) {
-    const url = base + path;
-    const fetched = await staticFetch(url);
-    if (!fetched) continue;
-    lastStatus = fetched.status;
-    if (fetched.status !== 200) continue;
-    anySuccess = true;
-    result.fetched_urls.push(url);
-    const text = stripTags(fetched.html);
-    const prices = extractPrices(text, url, "static");
-    result.found_prices.push(...prices);
-    if (result.found_prices.length >= 8) break;
+  // Layer 1: static — only try paths until we exhaust budget or find prices
+  outer: for (const base of bases) {
+    for (const path of CANDIDATE_PATHS) {
+      if (requestCount >= MAX_REQUESTS_PER_PROVIDER) break outer;
+      const url = base + path;
+      requestCount += 1;
+      const fetched = await staticFetch(url);
+      if (requestCount < MAX_REQUESTS_PER_PROVIDER) await sleep(REQUEST_DELAY_MS);
+      if (!fetched) continue;
+      lastStatus = fetched.status;
+      if (fetched.status !== 200) continue;
+      anySuccess = true;
+      result.fetched_urls.push(url);
+      const text = stripTags(fetched.html);
+      const prices = extractPrices(text, url, "static");
+      result.found_prices.push(...prices);
+      // Stop early if we have at least one GLP-1-relevant price
+      if (result.found_prices.some((p) => p.glp1_proximity || p.drug_hint)) {
+        if (result.found_prices.length >= 4) break outer;
+      }
+    }
+    if (anySuccess) break; // first base worked
   }
   result.http_status = lastStatus;
 
-  // Layer 2: browser fallback
-  if (result.found_prices.length === 0 && anySuccess && !NO_BROWSER) {
+  // Layer 2: browser fallback — trigger if no prices OR no GLP-1-relevant prices
+  const hasGlp1Prices = result.found_prices.some((p) => p.glp1_proximity || p.drug_hint);
+  const shouldUseBrowser =
+    !NO_BROWSER && (result.found_prices.length === 0 || (anySuccess && !hasGlp1Prices));
+
+  if (shouldUseBrowser) {
     const pw = await loadPlaywright();
     if (pw.available) {
       result.used_browser = true;
+      const browserBase = bases[0];
       for (const path of ["", "/pricing", "/plans"]) {
-        const url = base + path;
+        const url = browserBase + path;
         const text = await browserFetch(url);
         if (!text) continue;
         result.fetched_urls.push(url + " (browser)");
+        anySuccess = true;
         const prices = extractPrices(text, url, "browser");
         result.found_prices.push(...prices);
-        if (result.found_prices.length >= 5) break;
+        if (result.found_prices.some((p) => p.glp1_proximity || p.drug_hint)) break;
       }
     }
   }
@@ -318,26 +405,62 @@ async function scrapeProvider(provider: Provider): Promise<ProviderResult> {
   if (!anySuccess && result.found_prices.length === 0) {
     result.match_status = "fetch_failed";
     result.diff = `All fetches failed (last status: ${lastStatus ?? "n/a"})`;
+    result.recommendation =
+      lastStatus === 403
+        ? "Bot-protected (Cloudflare/etc). Manually verify pricing."
+        : "Site unreachable. Check URL or manually verify.";
     return result;
   }
 
   if (result.found_prices.length === 0) {
     result.match_status = "no_data_found";
-    result.diff = "Fetched OK but no price patterns matched (likely JS-rendered)";
+    result.diff = "Fetched OK but no price patterns matched (likely JS-rendered or no public pricing)";
+    result.recommendation = "Manually verify pricing on provider site.";
     return result;
   }
 
+  // Prefer GLP-1-relevant prices for matching
+  const relevantPrices = glp1Filtered(result.found_prices);
   const storedAmounts = stored.map((p) => p.monthly_cost);
-  const foundAmounts = Array.from(new Set(result.found_prices.map((p) => p.amount)));
+  const foundAmounts = Array.from(new Set(relevantPrices.map((p) => p.amount)));
 
-  const matched = storedAmounts.some((s) => foundAmounts.includes(s));
-  if (matched) {
-    const sharedAmounts = storedAmounts.filter((s) => foundAmounts.includes(s));
-    result.match_status = "match";
-    result.diff = `Stored prices [${storedAmounts.join(", ")}] — matched on [${sharedAmounts.join(", ")}]`;
-  } else {
+  if (storedAmounts.length === 0) {
+    // No stored prices to compare against — report what we found
     result.match_status = "mismatch";
-    result.diff = `Stored [${storedAmounts.join(", ") || "none"}], scraped [${foundAmounts.join(", ")}]`;
+    result.diff = `No stored prices. Scraped: [${foundAmounts.slice(0, 6).join(", ")}]`;
+    result.recommendation = `Add pricing to providers.json from scraped values: ${foundAmounts
+      .slice(0, 4)
+      .map((a) => "$" + a)
+      .join(", ")}`;
+    return result;
+  }
+
+  const exactMatches = storedAmounts.filter((s) => foundAmounts.includes(s));
+  const approxMatches = storedAmounts.filter((s) => foundAmounts.some((f) => approxMatch(s, f)));
+
+  if (exactMatches.length > 0) {
+    result.match_status = "match";
+    result.diff = `Exact match on [${exactMatches.join(", ")}]`;
+    result.recommendation = "No action needed.";
+  } else if (approxMatches.length > 0) {
+    result.match_status = "match";
+    result.diff = `Approx match: stored [${storedAmounts.join(", ")}] vs scraped [${foundAmounts.slice(0, 6).join(", ")}]`;
+    result.recommendation = "Within 10% — no action needed.";
+  } else {
+    // Genuine mismatch — but distinguish stale_match if GLP-1 keywords present
+    const hasGlp1Context = relevantPrices.some((p) => p.glp1_proximity || p.drug_hint);
+    if (hasGlp1Context) {
+      result.match_status = "stale_match";
+      result.diff = `Stored [${storedAmounts.join(", ")}], scraped GLP-1 prices [${foundAmounts.slice(0, 6).join(", ")}]`;
+      result.recommendation = `Stored prices appear stale. Review and update to: ${foundAmounts
+        .slice(0, 4)
+        .map((a) => "$" + a)
+        .join(", ")}`;
+    } else {
+      result.match_status = "mismatch";
+      result.diff = `Stored [${storedAmounts.join(", ")}], scraped [${foundAmounts.slice(0, 6).join(", ")}] (no GLP-1 context)`;
+      result.recommendation = "Low confidence — manually verify, scraped prices may not be GLP-1.";
+    }
   }
   return result;
 }

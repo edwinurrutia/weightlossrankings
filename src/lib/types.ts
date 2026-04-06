@@ -95,7 +95,7 @@ export interface BlogPost {
   updated_date?: string;
   category: string;
   tags: string[];
-  featured_image?: string;
+  featured_image?: string | null;
 }
 
 export interface USState {

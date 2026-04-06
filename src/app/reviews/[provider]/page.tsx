@@ -5,13 +5,15 @@ import {
   getProviderBySlug,
   getProvidersByCategory,
 } from "@/lib/data";
-import { computeOverallScore, SCORE_DIMENSIONS } from "@/lib/scoring";
+import { computeOverallScore } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import JsonLd from "@/components/shared/JsonLd";
 import CTAButton from "@/components/shared/CTAButton";
 import StickyCTABar from "@/components/shared/StickyCTABar";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import ScoreBadge from "@/components/providers/ScoreBadge";
+import ScoreBreakdownBars from "@/components/providers/ScoreBreakdownBars";
+import PricingTable from "@/components/providers/PricingTable";
 import StarRating from "@/components/providers/StarRating";
 import FeatureBadge from "@/components/providers/FeatureBadge";
 import BlogContent from "@/components/blog/BlogContent";
@@ -296,28 +298,7 @@ export default async function ProviderReviewPage({
             <h2 className="font-heading text-xl font-bold text-brand-text-primary">
               Score Breakdown
             </h2>
-            <div className="flex flex-col gap-3">
-              {SCORE_DIMENSIONS.map(({ key, label }) => {
-                const score = provider.scores[key];
-                const widthPercent = (score / 10) * 100;
-                return (
-                  <div key={key} className="flex items-center gap-3">
-                    <span className="w-36 text-sm text-brand-text-secondary shrink-0">
-                      {label}
-                    </span>
-                    <div className="flex-1 h-2.5 rounded-full bg-gray-100 overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-brand-gradient"
-                        style={{ width: `${widthPercent}%` }}
-                      />
-                    </div>
-                    <span className="w-8 text-sm font-semibold text-brand-text-primary text-right shrink-0">
-                      {score}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
+            <ScoreBreakdownBars scores={provider.scores} />
           </section>
 
           {/* Pricing table */}
@@ -326,58 +307,7 @@ export default async function ProviderReviewPage({
               <h2 className="font-heading text-xl font-bold text-brand-text-primary">
                 Pricing
               </h2>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-gray-100">
-                      <th className="text-left py-2 pr-4 font-semibold text-brand-text-primary">
-                        Dose
-                      </th>
-                      <th className="text-left py-2 pr-4 font-semibold text-brand-text-primary">
-                        Form
-                      </th>
-                      <th className="text-left py-2 pr-4 font-semibold text-brand-text-primary">
-                        Price/mo
-                      </th>
-                      <th className="text-left py-2 font-semibold text-brand-text-primary">
-                        Promo
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {provider.pricing.map((p, i) => (
-                      <tr
-                        key={i}
-                        className="border-b border-gray-50 last:border-0"
-                      >
-                        <td className="py-2.5 pr-4 text-brand-text-secondary">
-                          {p.dose}
-                        </td>
-                        <td className="py-2.5 pr-4 text-brand-text-secondary capitalize">
-                          {p.form}
-                        </td>
-                        <td className="py-2.5 pr-4 font-medium text-brand-text-primary">
-                          ${p.monthly_cost}
-                          {p.promo_price && (
-                            <span className="ml-2 text-brand-success font-semibold">
-                              ${p.promo_price}
-                            </span>
-                          )}
-                        </td>
-                        <td className="py-2.5 text-brand-text-secondary">
-                          {p.promo_code ? (
-                            <span className="text-xs font-medium text-brand-success bg-brand-success/10 rounded-full px-2 py-0.5">
-                              {p.promo_code}
-                            </span>
-                          ) : (
-                            <span className="text-brand-text-secondary/40">—</span>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <PricingTable pricing={provider.pricing} />
             </section>
           )}
 
