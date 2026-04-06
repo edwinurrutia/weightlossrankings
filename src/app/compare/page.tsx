@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { Provider } from "@/lib/types";
 import { computeOverallScore } from "@/lib/scoring";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
@@ -8,6 +9,7 @@ import ProviderGrid from "@/components/providers/ProviderGrid";
 
 type SortKey = "score" | "price" | "name";
 type CategoryKey = string | "all";
+type DrugKey = "semaglutide" | "tirzepatide" | "all";
 
 const CATEGORY_OPTIONS: { value: CategoryKey; label: string }[] = [
   { value: "all", label: "All categories" },
@@ -60,6 +62,8 @@ interface FilterControlsProps {
   setSearchQuery: (v: string) => void;
   selectedCategory: CategoryKey;
   setSelectedCategory: (v: CategoryKey) => void;
+  selectedDrug: DrugKey;
+  setSelectedDrug: (v: DrugKey) => void;
   selectedForms: string[];
   toggleForm: (v: string) => void;
   topFeatures: string[];
@@ -69,6 +73,12 @@ interface FilterControlsProps {
   setPriceMax: (v: number) => void;
   onReset: () => void;
 }
+
+const DRUG_OPTIONS: { value: DrugKey; label: string }[] = [
+  { value: "all", label: "All drugs" },
+  { value: "semaglutide", label: "Semaglutide" },
+  { value: "tirzepatide", label: "Tirzepatide" },
+];
 
 function FilterControls(props: FilterControlsProps) {
   return (
@@ -103,6 +113,30 @@ function FilterControls(props: FilterControlsProps) {
                 name="category"
                 checked={props.selectedCategory === opt.value}
                 onChange={() => props.setSelectedCategory(opt.value)}
+                className="text-brand-primary focus:ring-brand-primary"
+              />
+              {opt.label}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Drug */}
+      <div>
+        <h3 className="text-sm font-semibold text-brand-text-primary mb-2">
+          Drug
+        </h3>
+        <div className="space-y-1.5">
+          {DRUG_OPTIONS.map((opt) => (
+            <label
+              key={opt.value}
+              className="flex items-center gap-2 text-sm text-brand-text-secondary cursor-pointer hover:text-brand-text-primary"
+            >
+              <input
+                type="radio"
+                name="drug"
+                checked={props.selectedDrug === opt.value}
+                onChange={() => props.setSelectedDrug(opt.value)}
                 className="text-brand-primary focus:ring-brand-primary"
               />
               {opt.label}
@@ -192,18 +226,97 @@ function FilterControls(props: FilterControlsProps) {
   );
 }
 
-export default function ComparePage() {
+function ComparePageInner() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
   const [allProviders, setAllProviders] = useState<Provider[]>([]);
   const [loading, setLoading] = useState(true);
+  const [shareCopied, setShareCopied] = useState(false);
 
-  // Filter state
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<CategoryKey>("all");
-  const [selectedForms, setSelectedForms] = useState<string[]>([]);
-  const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
+  // Filter state — initialized from URL searchParams
+  const [searchQuery, setSearchQuery] = useState(
+    () => searchParams.get("q") ?? "",
+  );
+  const [selectedCategory, setSelectedCategory] = useState<CategoryKey>(
+    () => searchParams.get("category") ?? "all",
+  );
+  const [selectedDrug, setSelectedDrug] = useState<DrugKey>(() => {
+    const d = searchParams.get("drug");
+    return d === "semaglutide" || d === "tirzepatide" ? d : "all";
+  });
+  const [selectedForms, setSelectedForms] = useState<string[]>(() => {
+    const f = searchParams.get("form");
+    return f === "compounded" || f === "brand" ? [f] : [];
+  });
+  const [selectedState, setSelectedState] = useState<string>(
+    () => (searchParams.get("state") ?? "").toUpperCase(),
+  );
+  const [selectedFeatures, setSelectedFeatures] = useState<string[]>(
+    () => searchParams.getAll("features"),
+  );
   const [priceMax, setPriceMax] = useState<number>(PRICE_MAX);
-  const [selectedSort, setSelectedSort] = useState<SortKey>("score");
+  const [selectedSort, setSelectedSort] = useState<SortKey>(() => {
+    const s = searchParams.get("sort");
+    return s === "price" || s === "name" || s === "score" ? s : "score";
+  });
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
+  // Sync filters → URL searchParams
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (searchQuery) params.set("q", searchQuery);
+    if (selectedCategory !== "all") params.set("category", selectedCategory);
+    if (selectedDrug !== "all") params.set("drug", selectedDrug);
+    // Form is single-value in the URL contract; we still allow array internally
+    // but only persist the first selected form to keep URLs clean and rankable.
+    if (selectedForms.length === 1) params.set("form", selectedForms[0]);
+    if (selectedState) params.set("state", selectedState.toUpperCase());
+    for (const f of selectedFeatures) params.append("features", f);
+    if (selectedSort !== "score") params.set("sort", selectedSort);
+
+    const qs = params.toString();
+    const next = qs ? `/compare?${qs}` : "/compare";
+    // Avoid pushing if URL is already in sync (prevents loops on mount)
+    const current =
+      window.location.pathname +
+      (window.location.search ? window.location.search : "");
+    if (current !== next) {
+      router.replace(next, { scroll: false });
+    }
+  }, [
+    router,
+    searchQuery,
+    selectedCategory,
+    selectedDrug,
+    selectedForms,
+    selectedState,
+    selectedFeatures,
+    selectedSort,
+  ]);
+
+  // Manage canonical link tag client-side. Strips q, sort, features.
+  // Note: client-side canonicals are weaker than server-rendered, but the
+  // dedicated /best/[category]/[variant] money pages are the primary SEO target.
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (selectedDrug !== "all") params.set("drug", selectedDrug);
+    if (selectedForms.length === 1) params.set("form", selectedForms[0]);
+    if (selectedState) params.set("state", selectedState.toUpperCase());
+    const qs = params.toString();
+    const canonicalPath = qs ? `/compare?${qs}` : "/compare";
+    const href = `https://weightlossrankings.org${canonicalPath}`;
+
+    let link = document.querySelector<HTMLLinkElement>(
+      'link[rel="canonical"]',
+    );
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      document.head.appendChild(link);
+    }
+    link.href = href;
+  }, [selectedDrug, selectedForms, selectedState]);
 
   useEffect(() => {
     async function fetchProviders() {
@@ -247,10 +360,23 @@ export default function ComparePage() {
   const resetFilters = () => {
     setSearchQuery("");
     setSelectedCategory("all");
+    setSelectedDrug("all");
     setSelectedForms([]);
+    setSelectedState("");
     setSelectedFeatures([]);
     setPriceMax(PRICE_MAX);
+    setSelectedSort("score");
   };
+
+  const handleShare = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setShareCopied(true);
+      setTimeout(() => setShareCopied(false), 2000);
+    } catch {
+      // ignore
+    }
+  }, []);
 
   // Filter + sort
   const filtered = useMemo(() => {
@@ -264,6 +390,15 @@ export default function ComparePage() {
           selectedForms.includes(pr.form),
         );
         if (!hasForm) return false;
+      }
+      if (selectedDrug !== "all") {
+        const hasDrug = (p.pricing ?? []).some(
+          (pr) => pr.drug === selectedDrug,
+        );
+        if (!hasDrug) return false;
+      }
+      if (selectedState) {
+        if (!p.states_available?.includes(selectedState)) return false;
       }
       if (selectedFeatures.length > 0) {
         const pf = p.features ?? [];
@@ -289,7 +424,9 @@ export default function ComparePage() {
     allProviders,
     searchQuery,
     selectedCategory,
+    selectedDrug,
     selectedForms,
+    selectedState,
     selectedFeatures,
     priceMax,
     selectedSort,
@@ -324,7 +461,9 @@ export default function ComparePage() {
   const activeFilterCount =
     (searchQuery ? 1 : 0) +
     (selectedCategory !== "all" ? 1 : 0) +
+    (selectedDrug !== "all" ? 1 : 0) +
     selectedForms.length +
+    (selectedState ? 1 : 0) +
     selectedFeatures.length +
     (priceMax < PRICE_MAX ? 1 : 0);
 
@@ -348,6 +487,30 @@ export default function ComparePage() {
             independent score, lowest price, or alphabetically.
           </p>
           <AffiliateDisclosure />
+          {activeFilterCount > 0 && (
+            <div className="mt-4">
+              <button
+                onClick={handleShare}
+                className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-brand-primary/30 rounded-lg text-xs font-semibold text-brand-primary hover:bg-brand-primary/5 transition shadow-sm"
+                aria-label="Copy shareable link to this filtered view"
+              >
+                <svg
+                  className="w-3.5 h-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                  />
+                </svg>
+                {shareCopied ? "Link copied!" : "Share this view"}
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Mobile filter button */}
@@ -391,6 +554,8 @@ export default function ComparePage() {
                 setSearchQuery={setSearchQuery}
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
+                selectedDrug={selectedDrug}
+                setSelectedDrug={setSelectedDrug}
                 selectedForms={selectedForms}
                 toggleForm={toggleForm}
                 topFeatures={topFeatures}
@@ -533,6 +698,8 @@ export default function ComparePage() {
                 setSearchQuery={setSearchQuery}
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
+                selectedDrug={selectedDrug}
+                setSelectedDrug={setSelectedDrug}
                 selectedForms={selectedForms}
                 toggleForm={toggleForm}
                 topFeatures={topFeatures}
@@ -555,5 +722,22 @@ export default function ComparePage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function ComparePage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-brand-gradient-light">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div className="h-8 w-72 bg-gray-200 rounded animate-pulse mb-4" />
+            <div className="h-4 w-96 bg-gray-100 rounded animate-pulse" />
+          </div>
+        </div>
+      }
+    >
+      <ComparePageInner />
+    </Suspense>
   );
 }
