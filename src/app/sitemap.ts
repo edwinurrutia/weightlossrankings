@@ -11,6 +11,7 @@ import { getAllCities, CITY_DRUG_SLUGS } from "@/lib/cities";
 import { SAVINGS_COMPARISONS } from "@/lib/savings-comparisons";
 import { getAllInsurers } from "@/lib/insurers";
 import { getAllPharmacies } from "@/lib/pharmacies";
+import { RESEARCH_ARTICLES } from "@/lib/research";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
@@ -83,6 +84,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/research`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
     },
     // Listing pages
     {
@@ -330,6 +337,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  // Dynamic: /research/[slug]
+  const researchPages: MetadataRoute.Sitemap = RESEARCH_ARTICLES.map((a) => ({
+    url: `${BASE_URL}/research/${a.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
   return [
     ...staticPages,
     ...reviewPages,
@@ -345,5 +360,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...insurerPages,
     ...pharmacyPages,
     ...blogPages,
+    ...researchPages,
   ];
 }
