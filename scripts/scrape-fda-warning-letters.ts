@@ -360,7 +360,14 @@ interface LetterContent {
   subject: string;
   violationsSummary: string;
   issuingOffice: string;
+  /** First ~1500 chars of cleaned body for human review. */
   rawText: string;
+  /**
+   * 3–6 verbatim FDA paragraphs from the letter body, ready to render
+   * with attribution on the per-letter detail page. Empty if extraction
+   * couldn't find a clean paragraph structure.
+   */
+  bodyExcerpt: string[];
 }
 
 /**
@@ -446,11 +453,29 @@ async function fetchLetterContent(page: any, url: string): Promise<LetterContent
         violationsSummary = text.slice(cutIdx, cutIdx + 300).trim();
       }
 
+      // Extract a paragraph excerpt for the per-letter detail page.
+      // FDA letters use paragraph breaks marked by double-newline. Take
+      // the first 6 substantive paragraphs (>= 80 chars, < 1200 chars
+      // each) skipping headers/closing boilerplate. Cap total at 6.
+      var bodyExcerpt = [];
+      var rawParas = text.split(/\\n{2,}/);
+      for (var pi = 0; pi < rawParas.length && bodyExcerpt.length < 6; pi++) {
+        var p = rawParas[pi].trim();
+        if (p.length < 80 || p.length > 1200) continue;
+        // Skip header / metadata lines (Sincerely, copy lines, footer).
+        if (/^(Sincerely|Cc:|cc:|Enclosure|Reference Number)/i.test(p)) continue;
+        if (/Enforcement Division|Office of Compliance/.test(p) && p.length < 200) continue;
+        // Skip address-block-style lines (state abbreviation + zip).
+        if (/^[A-Z][a-z]+ \\d{1,2},\\s*\\d{4}$/.test(p)) continue;
+        bodyExcerpt.push(p);
+      }
+
       return {
         subject: subject,
         violationsSummary: violationsSummary,
         issuingOffice: issuingOffice,
-        rawText: text.slice(0, 1500)
+        rawText: text.slice(0, 1500),
+        bodyExcerpt: bodyExcerpt
       };
     })()`)) as LetterContent | null;
 
@@ -520,6 +545,14 @@ async function runEnrich(): Promise<void> {
       }
       if (content.issuingOffice && content.issuingOffice.length > 3) {
         letter.issuing_office = content.issuingOffice;
+      }
+      // Multi-paragraph excerpt for the per-letter detail page.
+      if (
+        content.bodyExcerpt &&
+        Array.isArray(content.bodyExcerpt) &&
+        content.bodyExcerpt.length > 0
+      ) {
+        letter.letter_excerpt = content.bodyExcerpt;
       }
       updatedCount += 1;
       log(`    subject: ${letter.subject.slice(0, 100)}`);
@@ -665,20 +698,62 @@ async function main() {
     return;
   }
 
+  // Auto-enrich every newly discovered letter so the saved entry has
+  // real verbatim FDA content from the start. This makes the bi-weekly
+  // cron a single command (no separate --enrich step required).
+  log("");
+  log("Auto-enriching new letters with letter content from fda.gov…");
+  const pw = await loadPlaywright();
+  if (pw) {
+    const browser = await pw.chromium.launch({ headless: true });
+    try {
+      const ctx = await browser.newContext({ userAgent: REAL_CHROME_UA });
+      const page = await ctx.newPage();
+      let enriched = 0;
+      for (const letter of newLetters) {
+        vlog(`  enriching ${letter.id}`);
+        const content = await fetchLetterContent(page, letter.fda_url);
+        if (content) {
+          if (content.subject && content.subject.length > 3) {
+            letter.subject = content.subject;
+          }
+          if (content.violationsSummary && content.violationsSummary.length > 40) {
+            letter.violations_summary = content.violationsSummary;
+          }
+          if (content.issuingOffice && content.issuingOffice.length > 3) {
+            letter.issuing_office = content.issuingOffice;
+          }
+          if (content.bodyExcerpt && content.bodyExcerpt.length > 0) {
+            letter.letter_excerpt = content.bodyExcerpt;
+          }
+          enriched += 1;
+        }
+        await sleep(REQUEST_DELAY_MS);
+      }
+      await ctx.close();
+      log(`  → enriched ${enriched}/${newLetters.length} new letters`);
+    } finally {
+      await browser.close();
+    }
+  } else {
+    elog("  Playwright unavailable — new letters keep boilerplate content.");
+  }
+
   const merged = [...existing, ...newLetters].sort((a, b) =>
     b.letter_date.localeCompare(a.letter_date),
   );
   writeFileSync(DATA_PATH, JSON.stringify(merged, null, 2) + "\n");
+  log("");
   log(`Wrote ${merged.length} letters to ${DATA_PATH}.`);
   log("");
-  log("EDITORIAL REVIEW REQUIRED:");
+  log("EDITORIAL REVIEW RECOMMENDED:");
   log(
-    "  Each new entry has a boilerplate violations_summary. Open the FDA",
+    "  New entries are enriched with verbatim FDA opening sentences. Spot-check",
   );
   log(
-    "  letter, copy the actual subject line and a brief verbatim quote of",
+    "  the violations_summary on each new letter and adjust if FDA's prose got",
   );
-  log("  the violations, and update the JSON before publishing.");
+  log("  truncated or the wrong opening paragraph was captured.");
 }
 
 main().catch((err) => {
