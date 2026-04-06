@@ -5,6 +5,7 @@ import type { BlogPost } from "@/lib/types";
 import BlogContent from "@/components/blog/BlogContent";
 import TrustBadge from "@/components/shared/TrustBadge";
 import EmailCapture from "@/components/shared/EmailCapture";
+import JsonLd from "@/components/shared/JsonLd";
 
 export async function generateStaticParams() {
   const slugs = await getAllBlogSlugs();
@@ -50,8 +51,30 @@ export default async function BlogPostPage({
       })
     : null;
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.published_date,
+    dateModified: post.updated_date ?? post.published_date,
+    author: {
+      "@type": "Organization",
+      name: "WeightLossRankings",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "WeightLossRankings",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://weightlossrankings.org/icon.svg",
+      },
+    },
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg">
+      <JsonLd data={articleSchema} />
       <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8 flex flex-col gap-8">
         {/* Trust badges */}
         <div className="flex flex-wrap gap-2">

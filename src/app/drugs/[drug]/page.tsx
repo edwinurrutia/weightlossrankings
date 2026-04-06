@@ -8,6 +8,7 @@ import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import FaqAccordion from "@/components/shared/FaqAccordion";
 import ProviderGrid from "@/components/providers/ProviderGrid";
 import CTAButton from "@/components/shared/CTAButton";
+import JsonLd from "@/components/shared/JsonLd";
 
 export function generateStaticParams() {
   return getAllDrugSlugs();
@@ -117,8 +118,17 @@ export default async function DrugPage({
     },
   ];
 
+  const drugSchema = {
+    "@context": "https://schema.org",
+    "@type": "Drug",
+    name: drugData.name,
+    activeIngredient: drugData.generic_name,
+    description: drugData.description,
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg">
+      <JsonLd data={drugSchema} />
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
 
         {/* Trust Badges */}

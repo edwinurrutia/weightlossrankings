@@ -9,6 +9,7 @@ import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import StarRating from "@/components/providers/StarRating";
 import FeatureBadge from "@/components/providers/FeatureBadge";
+import JsonLd from "@/components/shared/JsonLd";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -139,8 +140,33 @@ export default async function MatchupPage({
     providerB.external_reviews?.google_score ??
     null;
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://weightlossrankings.org",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Compare",
+        item: "https://weightlossrankings.org/compare",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${providerA.name} vs ${providerB.name}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-brand-gradient-light">
+      <JsonLd data={breadcrumbSchema} />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
         {/* ── Trust badges ── */}

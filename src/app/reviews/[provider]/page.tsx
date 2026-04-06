@@ -81,29 +81,54 @@ export default async function ProviderReviewPage({
       .slice(0, 3);
   }
 
-  const reviewJsonLd = {
+  const hasTrustpilot =
+    provider.external_reviews?.trustpilot_score !== undefined &&
+    provider.external_reviews?.trustpilot_count !== undefined;
+
+  const productJsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "Review",
-    itemReviewed: {
-      "@type": "Organization",
-      name: provider.name,
+    "@type": "Product",
+    name: provider.name,
+    description: provider.description,
+    brand: { "@type": "Brand", name: provider.name },
+    ...(displayPrice !== null && provider.affiliate_url
+      ? {
+          offers: {
+            "@type": "Offer",
+            price: String(displayPrice),
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: provider.affiliate_url,
+          },
+        }
+      : {}),
+    review: {
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(overallScore),
+        bestRating: "10",
+      },
+      author: {
+        "@type": "Organization",
+        name: "WeightLossRankings",
+      },
     },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: overallScore,
-      bestRating: "10",
-      worstRating: "0",
-    },
-    author: {
-      "@type": "Organization",
-      name: "WeightLossRankings",
-    },
-    reviewBody: provider.description,
+    ...(hasTrustpilot
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: String(provider.external_reviews!.trustpilot_score),
+            reviewCount: String(provider.external_reviews!.trustpilot_count),
+            bestRating: "5",
+          },
+        }
+      : {}),
   };
 
   return (
     <>
-      <JsonLd data={reviewJsonLd} />
+      <JsonLd data={productJsonLd} />
 
       <main className="min-h-screen bg-brand-gradient-light">
         <div className="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-10">

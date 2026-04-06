@@ -8,6 +8,7 @@ import CTAButton from "@/components/shared/CTAButton";
 import TrustBadge from "@/components/shared/TrustBadge";
 import FaqAccordion from "@/components/shared/FaqAccordion";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
+import JsonLd from "@/components/shared/JsonLd";
 
 const CATEGORY_MAP: Record<string, string> = {
   "semaglutide-providers": "GLP-1 Provider",
@@ -82,8 +83,20 @@ export default async function RankingsPage({
     year: "numeric",
   });
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: sorted.map((provider, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: provider.name,
+      url: `https://weightlossrankings.org/reviews/${provider.slug}`,
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg">
+      <JsonLd data={itemListSchema} />
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
 
         {/* Trust badges */}
