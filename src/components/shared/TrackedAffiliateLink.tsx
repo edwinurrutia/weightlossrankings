@@ -55,13 +55,15 @@ export default function TrackedAffiliateLink({
   children,
 }: TrackedAffiliateLinkProps) {
   const onClick = () => fireTracking(provider, source, position);
-  // Tag with UTM params so the destination provider's analytics can
-  // attribute the visit back to us. See src/lib/affiliate-link.ts.
-  const outboundHref = buildOutboundLink(href, {
-    source,
-    provider,
-    position,
-  });
+  // Route through /go/[slug] for reliable server-side click logging.
+  // Falls back to direct UTM-tagged href if no provider slug is set
+  // (which shouldn't happen for this component, since `provider` is
+  // a required prop — but defensive in case the prop is empty).
+  const outboundHref = provider
+    ? `/go/${encodeURIComponent(provider)}?src=${encodeURIComponent(source)}${
+        typeof position === "number" ? `&pos=${position}` : ""
+      }`
+    : buildOutboundLink(href, { source, provider, position });
   return (
     <a
       href={outboundHref}

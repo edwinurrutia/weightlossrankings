@@ -98,14 +98,29 @@ export default function CTAButton({
   };
 
   if (external) {
-    // Tag the outbound URL with UTM params so the destination
-    // provider's analytics can attribute the visit back to us.
-    // See src/lib/affiliate-link.ts for the full rationale.
-    const outboundHref = buildOutboundLink(href, {
-      source: trackSource ?? "unknown",
-      provider: trackProvider,
-      position: trackPosition,
-    });
+    // When the link points to a provider we know by slug, route it
+    // through /go/[slug] so we get reliable server-side click logging
+    // (the existing /api/track-click beacon can be blocked by ad
+    // blockers). The /go endpoint applies the same UTM tagging on
+    // the server before 302-ing to the real provider URL, so the
+    // destination provider's analytics still attributes the visit.
+    //
+    // For external links that aren't tied to a known provider slug
+    // (rare — non-affiliate outbound links), fall back to tagging
+    // the href directly here.
+    const outboundHref = trackProvider
+      ? `/go/${encodeURIComponent(trackProvider)}?src=${encodeURIComponent(
+          trackSource ?? "unknown",
+        )}${
+          typeof trackPosition === "number"
+            ? `&pos=${trackPosition}`
+            : ""
+        }`
+      : buildOutboundLink(href, {
+          source: trackSource ?? "unknown",
+          provider: trackProvider,
+          position: trackPosition,
+        });
     return (
       <a
         href={outboundHref}
