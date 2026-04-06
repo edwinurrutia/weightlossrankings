@@ -174,7 +174,10 @@ export default async function AlternativesPage({
             You&apos;re looking at:
           </p>
           <div className="opacity-70">
-            <ProviderCard provider={provider} />
+            <ProviderCard
+              provider={provider}
+              trackingSource={`alternatives_${provider.slug}`}
+            />
           </div>
         </section>
 
@@ -246,7 +249,13 @@ export default async function AlternativesPage({
                         </div>
                       )}
                       {alt.affiliate_url && (
-                        <CTAButton href={alt.affiliate_url} external size="md">
+                        <CTAButton
+                          href={alt.affiliate_url}
+                          external
+                          size="md"
+                          trackProvider={alt.slug}
+                          trackSource={`alternatives_${provider.slug}`}
+                        >
                           Visit {alt.name}
                         </CTAButton>
                       )}
@@ -312,6 +321,8 @@ export default async function AlternativesPage({
                               href={alt.affiliate_url}
                               external
                               size="sm"
+                              trackProvider={alt.slug}
+                              trackSource={`alternatives_${provider.slug}`}
                             >
                               Visit
                             </CTAButton>

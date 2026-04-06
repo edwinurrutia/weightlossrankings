@@ -180,6 +180,8 @@ export default async function RankingsPage({
                               href={provider.affiliate_url}
                               external
                               size="sm"
+                              trackProvider={provider.slug}
+                              trackSource={`rankings_${category}`}
                             >
                               Visit
                             </CTAButton>
@@ -338,7 +340,13 @@ export default async function RankingsPage({
                         {getMinPrice(provider)}
                       </span>
                     </div>
-                    <CTAButton href={provider.affiliate_url} external size="md">
+                    <CTAButton
+                      href={provider.affiliate_url}
+                      external
+                      size="md"
+                      trackProvider={provider.slug}
+                      trackSource={`rankings_${category}`}
+                    >
                       Visit {provider.name} →
                     </CTAButton>
                   </div>

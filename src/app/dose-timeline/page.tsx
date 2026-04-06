@@ -358,6 +358,8 @@ export default function DoseTimelinePage() {
               size="lg"
               variant="white"
               className="w-full"
+              trackProvider={selectedProvider.slug}
+              trackSource="dose_timeline"
             >
               Get Started with {selectedProvider.name}
             </CTAButton>
@@ -372,7 +374,11 @@ export default function DoseTimelinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {alternativeProviders.map((provider) => (
-                <ProviderCard key={provider._id} provider={provider} />
+                <ProviderCard
+                  key={provider._id}
+                  provider={provider}
+                  trackingSource="dose_timeline"
+                />
               ))}
             </div>
           </div>

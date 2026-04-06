@@ -83,7 +83,11 @@ export default function CoverageResults({ state, providers }: CoverageResultsPro
             </p>
           </div>
           {topProviders.map((provider) => (
-            <ProviderCard key={provider._id} provider={provider} />
+            <ProviderCard
+              key={provider._id}
+              provider={provider}
+              trackingSource="insurance_results"
+            />
           ))}
         </div>
       )}

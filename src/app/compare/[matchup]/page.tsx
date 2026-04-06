@@ -249,6 +249,8 @@ export default async function MatchupPage({
                   external
                   size="md"
                   className="mt-auto w-full"
+                  trackProvider={p.slug}
+                  trackSource={`vs_${matchup}`}
                 >
                   Visit {p.name} →
                 </CTAButton>
@@ -543,7 +545,14 @@ export default async function MatchupPage({
 
         {/* ── Final CTAs ── */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <CTAButton href={providerA.affiliate_url} external size="lg" className="w-full">
+          <CTAButton
+            href={providerA.affiliate_url}
+            external
+            size="lg"
+            className="w-full"
+            trackProvider={providerA.slug}
+            trackSource={`vs_${matchup}`}
+          >
             Get Started with {providerA.name} →
           </CTAButton>
           <CTAButton
@@ -552,6 +561,8 @@ export default async function MatchupPage({
             size="lg"
             variant="outline"
             className="w-full"
+            trackProvider={providerB.slug}
+            trackSource={`vs_${matchup}`}
           >
             Get Started with {providerB.name} →
           </CTAButton>
