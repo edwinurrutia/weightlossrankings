@@ -8,15 +8,20 @@ import {
 import { computeOverallScore, SCORE_DIMENSIONS } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import JsonLd from "@/components/shared/JsonLd";
-import TrustBadge from "@/components/shared/TrustBadge";
 import CTAButton from "@/components/shared/CTAButton";
 import StickyCTABar from "@/components/shared/StickyCTABar";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import StarRating from "@/components/providers/StarRating";
 import FeatureBadge from "@/components/providers/FeatureBadge";
-import ProviderCard from "@/components/providers/ProviderCard";
 import BlogContent from "@/components/blog/BlogContent";
+import TrustBadgesRow from "@/components/marketing/TrustBadgesRow";
+import BottomLineCard from "@/components/marketing/BottomLineCard";
+import ProsConsGrid from "@/components/marketing/ProsConsGrid";
+import GradientCTACallout from "@/components/marketing/GradientCTACallout";
+import RelatedProvidersSection from "@/components/marketing/RelatedProvidersSection";
+import FAQSection from "@/components/marketing/FAQSection";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 export async function generateStaticParams() {
   const slugs = await getAllProviderSlugs();
@@ -163,57 +168,56 @@ export default async function ProviderReviewPage({
       : {}),
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://weightlossrankings.org",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Reviews",
-        item: "https://weightlossrankings.org/reviews",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: provider.name,
-        item: `https://weightlossrankings.org/reviews/${slug}`,
-      },
-    ],
-  };
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Reviews", url: "/reviews" },
+    { name: provider.name, url: `/reviews/${slug}` },
+  ];
+
+  const faqItems = [
+    {
+      question: `Is ${provider.name} legit?`,
+      answer: `Yes, ${provider.name} is a legitimate provider. Our team independently evaluated it and gave it an overall score of ${overallScore.toFixed(
+        1
+      )}/10. As with any healthcare service, we recommend consulting with a licensed medical professional before starting any new treatment.`,
+    },
+    {
+      question: `How much does ${provider.name} cost?`,
+      answer:
+        displayPrice !== null
+          ? `${provider.name} starts at $${displayPrice} per month.${
+              provider.pricing && provider.pricing.length > 1
+                ? ` Pricing varies by dose and formulation — see the pricing table above for a full breakdown.`
+                : ""
+            }`
+          : `Pricing information for ${provider.name} is available on their official website. We recommend visiting their site directly for the most up-to-date pricing.`,
+    },
+  ];
+
+  const heroBadges: Array<{ icon: string; text: string }> = [
+    { icon: "✓", text: "Expert Reviewed" },
+    { icon: "🔒", text: "Independently Rated" },
+    { icon: "📅", text: "Updated 2026" },
+  ];
+  if (provider.verification) {
+    heroBadges.push({
+      icon: "✓",
+      text: `Verified ${new Date(
+        provider.verification.last_verified
+      ).toLocaleDateString("en-US", { month: "short", year: "numeric" })}`,
+    });
+  }
 
   return (
     <>
       <JsonLd data={productJsonLd} />
-      <JsonLd data={breadcrumbSchema} />
+      <BreadcrumbSchema items={breadcrumbItems} />
 
       <main className="min-h-screen bg-brand-gradient-light pb-24 lg:pb-0">
         <div className="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-10">
           {/* Hero card */}
           <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-5">
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-2">
-              <TrustBadge icon="✓" text="Expert Reviewed" />
-              <TrustBadge icon="🔒" text="Independently Rated" />
-              <TrustBadge icon="📅" text="Updated 2026" />
-              {provider.verification && (
-                <TrustBadge
-                  icon="✓"
-                  text={`Verified ${new Date(
-                    provider.verification.last_verified
-                  ).toLocaleDateString("en-US", {
-                    month: "short",
-                    year: "numeric",
-                  })}`}
-                />
-              )}
-            </div>
+            <TrustBadgesRow badges={heroBadges} />
 
             {/* H1 + best_for */}
             <div className="flex flex-col gap-1">
@@ -280,33 +284,12 @@ export default async function ProviderReviewPage({
             <AffiliateDisclosure />
           </section>
 
-          {/* Bottom Line callout */}
-          <section className="rounded-2xl bg-brand-violet/5 border border-brand-violet/20 p-6">
-            <p className="text-xs font-bold uppercase tracking-wide text-brand-violet mb-2">
-              The Bottom Line
-            </p>
-            <p className="text-lg font-semibold text-brand-text-primary mb-3">
-              {oneLineVerdict}
-            </p>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-brand-text-secondary">
-              <span>
-                <strong className="text-brand-text-primary">Score:</strong>{" "}
-                {overallScore}/10
-              </span>
-              {provider.best_for && (
-                <span>
-                  <strong className="text-brand-text-primary">Best for:</strong>{" "}
-                  {provider.best_for}
-                </span>
-              )}
-              {displayPrice !== null && (
-                <span>
-                  <strong className="text-brand-text-primary">From:</strong> $
-                  {displayPrice}/mo
-                </span>
-              )}
-            </div>
-          </section>
+          <BottomLineCard
+            verdict={oneLineVerdict}
+            score={overallScore}
+            bestFor={provider.best_for}
+            fromPrice={displayPrice}
+          />
 
           {/* Score breakdown */}
           <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-4">
@@ -398,72 +381,21 @@ export default async function ProviderReviewPage({
             </section>
           )}
 
-          {/* Pros / Cons (side-by-side) */}
-          {((provider.pros && provider.pros.length > 0) ||
-            (provider.cons && provider.cons.length > 0)) && (
-            <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {provider.pros && provider.pros.length > 0 && (
-                <div className="rounded-2xl bg-brand-success/5 border border-brand-success/20 p-6">
-                  <h2 className="font-heading text-xl font-bold text-brand-text-primary mb-4 flex items-center gap-2">
-                    <span className="text-brand-success">✓</span> Pros
-                  </h2>
-                  <ul className="space-y-2">
-                    {provider.pros.map((pro, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-sm text-brand-text-secondary"
-                      >
-                        <span className="text-brand-success mt-0.5">•</span>
-                        <span>{pro}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {provider.cons && provider.cons.length > 0 && (
-                <div className="rounded-2xl bg-red-50 border border-red-100 p-6">
-                  <h2 className="font-heading text-xl font-bold text-brand-text-primary mb-4 flex items-center gap-2">
-                    <span className="text-red-500">✗</span> Cons
-                  </h2>
-                  <ul className="space-y-2">
-                    {provider.cons.map((con, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-sm text-brand-text-secondary"
-                      >
-                        <span className="text-red-500 mt-0.5">•</span>
-                        <span>{con}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </section>
-          )}
+          <ProsConsGrid pros={provider.pros} cons={provider.cons} />
 
           {/* Midpage affiliate CTA */}
           {provider.affiliate_url && (
-            <section className="rounded-2xl bg-brand-gradient p-6 sm:p-8 text-white text-center">
-              <h2 className="font-heading text-2xl font-bold mb-2">
-                Ready to start with {provider.name}?
-              </h2>
-              <p className="text-white/85 mb-5">
-                {displayPrice !== null
-                  ? `Starting at $${displayPrice}/month. `
-                  : ""}
-                See current pricing and start your free consultation.
-              </p>
-              <CTAButton
-                href={provider.affiliate_url}
-                external
-                variant="white"
-                size="lg"
-                trackProvider={provider.slug}
-                trackSource={`review_${provider.slug}_midpage`}
-              >
-                Visit {provider.name} →
-              </CTAButton>
-            </section>
+            <GradientCTACallout
+              heading={`Ready to start with ${provider.name}?`}
+              description={`${
+                displayPrice !== null ? `Starting at $${displayPrice}/month. ` : ""
+              }See current pricing and start your free consultation.`}
+              ctaHref={provider.affiliate_url}
+              ctaText={`Visit ${provider.name} →`}
+              external
+              trackProvider={provider.slug}
+              trackSource={`review_${provider.slug}_midpage`}
+            />
           )}
 
           {/* Review content */}
@@ -473,91 +405,27 @@ export default async function ProviderReviewPage({
             </section>
           )}
 
-          {/* Alternatives */}
-          {alternatives.length > 0 && (
-            <section className="flex flex-col gap-4">
-              <h2 className="font-heading text-xl font-bold text-brand-text-primary">
-                Alternatives to {provider.name}
-              </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {alternatives.map((alt) => (
-                  <ProviderCard
-                    key={alt._id}
-                    provider={alt}
-                    trackingSource={`review_${provider.slug}`}
-                  />
-                ))}
-              </div>
-            </section>
-          )}
+          <RelatedProvidersSection
+            title={`Alternatives to ${provider.name}`}
+            providers={alternatives}
+            trackingSource={`review_${provider.slug}`}
+          />
 
-          {/* FAQ */}
-          <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-6">
-            <h2 className="font-heading text-xl font-bold text-brand-text-primary">
-              Frequently Asked Questions
-            </h2>
-
-            <div className="flex flex-col gap-5">
-              <div className="flex flex-col gap-2">
-                <h3 className="font-heading font-semibold text-brand-text-primary">
-                  Is {provider.name} legit?
-                </h3>
-                <p className="text-sm text-brand-text-secondary leading-relaxed">
-                  Yes, {provider.name} is a legitimate provider. Our team
-                  independently evaluated it and gave it an overall score of{" "}
-                  {overallScore.toFixed(1)}/10. As with any healthcare service, we
-                  recommend consulting with a licensed medical professional
-                  before starting any new treatment.
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <h3 className="font-heading font-semibold text-brand-text-primary">
-                  How much does {provider.name} cost?
-                </h3>
-                <p className="text-sm text-brand-text-secondary leading-relaxed">
-                  {displayPrice !== null ? (
-                    <>
-                      {provider.name} starts at ${displayPrice} per month.{" "}
-                      {provider.pricing && provider.pricing.length > 1
-                        ? `Pricing varies by dose and formulation — see the pricing table above for a full breakdown.`
-                        : ""}
-                    </>
-                  ) : (
-                    <>
-                      Pricing information for {provider.name} is available on
-                      their official website. We recommend visiting their site
-                      directly for the most up-to-date pricing.
-                    </>
-                  )}
-                </p>
-              </div>
-            </div>
-          </section>
+          <FAQSection items={faqItems} />
 
           {/* Endpage affiliate CTA */}
           {provider.affiliate_url && (
-            <section className="rounded-2xl bg-brand-gradient p-6 sm:p-8 text-white text-center">
-              <h2 className="font-heading text-2xl font-bold mb-2">
-                Ready to start with {provider.name}?
-              </h2>
-              <p className="text-white/85 mb-5">
-                {displayPrice !== null
-                  ? `Starting at $${displayPrice}/month. `
-                  : ""}
-                See current pricing and start your free consultation.
-              </p>
-              <CTAButton
-                href={provider.affiliate_url}
-                external
-                variant="white"
-                size="lg"
-                trackProvider={provider.slug}
-                trackSource={`review_${provider.slug}_endpage`}
-              >
-                Visit {provider.name} →
-              </CTAButton>
-            </section>
+            <GradientCTACallout
+              heading={`Ready to start with ${provider.name}?`}
+              description={`${
+                displayPrice !== null ? `Starting at $${displayPrice}/month. ` : ""
+              }See current pricing and start your free consultation.`}
+              ctaHref={provider.affiliate_url}
+              ctaText={`Visit ${provider.name} →`}
+              external
+              trackProvider={provider.slug}
+              trackSource={`review_${provider.slug}_endpage`}
+            />
           )}
         </div>
       </main>

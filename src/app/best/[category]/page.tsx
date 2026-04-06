@@ -5,10 +5,11 @@ import { computeOverallScore, SCORE_DIMENSIONS } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import CTAButton from "@/components/shared/CTAButton";
-import TrustBadge from "@/components/shared/TrustBadge";
-import FaqAccordion from "@/components/shared/FaqAccordion";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import JsonLd from "@/components/shared/JsonLd";
+import PageHero from "@/components/marketing/PageHero";
+import FAQSection from "@/components/marketing/FAQSection";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 const CATEGORY_MAP: Record<string, string> = {
   "semaglutide-providers": "GLP-1 Provider",
@@ -113,58 +114,35 @@ export default async function RankingsPage({
     })),
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://weightlossrankings.org",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Best",
-        item: "https://weightlossrankings.org/best",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: `Best ${label}s`,
-        item: `https://weightlossrankings.org/best/${category}`,
-      },
-    ],
-  };
-
   return (
     <main className="min-h-screen bg-brand-bg">
       <JsonLd data={itemListSchema} />
-      <JsonLd data={breadcrumbSchema} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Best", url: "/best" },
+          { name: `Best ${label}s`, url: `/best/${category}` },
+        ]}
+      />
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
 
-        {/* Trust badges */}
-        <div className="flex flex-wrap gap-2">
-          <TrustBadge icon="📅" text={`Updated ${updatedDate}`} />
-          <TrustBadge icon="✅" text="Expert Reviewed" />
-        </div>
-
-        {/* Header */}
-        <div className="space-y-3">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-text-primary leading-tight">
-            Best {label}s in 2026 —{" "}
-            <span className="bg-brand-gradient bg-clip-text text-transparent">
-              Ranked &amp; Reviewed
-            </span>
-          </h1>
-          <p className="text-brand-text-secondary text-lg leading-relaxed">
-            We independently evaluated and scored the top {label.toLowerCase()}
-            s of 2026 based on value, effectiveness, user experience, and more.
-            Here are our expert picks.
-          </p>
+        <PageHero
+          badges={[
+            { icon: "📅", text: `Updated ${updatedDate}` },
+            { icon: "✅", text: "Expert Reviewed" },
+          ]}
+          title={
+            <>
+              Best {label}s in 2026 —{" "}
+              <span className="bg-brand-gradient bg-clip-text text-transparent">
+                Ranked &amp; Reviewed
+              </span>
+            </>
+          }
+          subtitle={`We independently evaluated and scored the top ${label.toLowerCase()}s of 2026 based on value, effectiveness, user experience, and more. Here are our expert picks.`}
+        >
           <AffiliateDisclosure />
-        </div>
+        </PageHero>
 
         {/* Quick picks table */}
         {top5.length > 0 && (
@@ -405,16 +383,7 @@ export default async function RankingsPage({
           </div>
         )}
 
-        {/* FAQ */}
-        <section aria-labelledby="faq-heading" className="space-y-4">
-          <h2
-            id="faq-heading"
-            className="text-xl font-bold text-brand-text-primary"
-          >
-            Frequently Asked Questions
-          </h2>
-          <FaqAccordion items={FAQ_ITEMS} />
-        </section>
+        <FAQSection items={FAQ_ITEMS} />
       </div>
     </main>
   );

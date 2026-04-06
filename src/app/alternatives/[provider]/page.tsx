@@ -8,13 +8,14 @@ import {
 import { computeOverallScore } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
-import JsonLd from "@/components/shared/JsonLd";
 import CTAButton from "@/components/shared/CTAButton";
-import FaqAccordion from "@/components/shared/FaqAccordion";
 import EmailCapture from "@/components/shared/EmailCapture";
 import ProviderCard from "@/components/providers/ProviderCard";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import FeatureBadge from "@/components/providers/FeatureBadge";
+import PageHero from "@/components/marketing/PageHero";
+import FAQSection from "@/components/marketing/FAQSection";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 export async function generateStaticParams() {
   const slugs = await getAllProviderSlugs();
@@ -154,52 +155,34 @@ export default async function AlternativesPage({
 
   const whyLookContent = buildWhyLookSection(provider);
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://weightlossrankings.org",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Alternatives",
-        item: "https://weightlossrankings.org/alternatives",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: `${provider.name} Alternatives`,
-        item: `https://weightlossrankings.org/alternatives/${slug}`,
-      },
-    ],
-  };
-
   return (
     <main className="min-h-screen bg-brand-gradient-light">
-      <JsonLd data={breadcrumbSchema} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Alternatives", url: "/alternatives" },
+          {
+            name: `${provider.name} Alternatives`,
+            url: `/alternatives/${slug}`,
+          },
+        ]}
+      />
       <div className="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-10">
 
-        {/* Hero */}
-        <section className="flex flex-col gap-4">
-          <h1 className="font-heading text-3xl md:text-4xl font-bold text-brand-text-primary">
-            Best{" "}
-            <span className="bg-brand-gradient bg-clip-text text-transparent">
-              Alternatives
-            </span>{" "}
-            to {provider.name}
-          </h1>
-          <p className="text-brand-text-secondary leading-relaxed max-w-2xl">
-            Looking for alternatives to {provider.name}? Here are the
-            top-rated competitors we recommend based on price, effectiveness,
-            and user experience.
-          </p>
+        <PageHero
+          title={
+            <>
+              Best{" "}
+              <span className="bg-brand-gradient bg-clip-text text-transparent">
+                Alternatives
+              </span>{" "}
+              to {provider.name}
+            </>
+          }
+          subtitle={`Looking for alternatives to ${provider.name}? Here are the top-rated competitors we recommend based on price, effectiveness, and user experience.`}
+        >
           <AffiliateDisclosure />
-        </section>
+        </PageHero>
 
         {/* Why look for alternatives */}
         <section className="rounded-2xl bg-white border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-3">
@@ -384,13 +367,7 @@ export default async function AlternativesPage({
           </section>
         )}
 
-        {/* FAQ */}
-        <section className="flex flex-col gap-4">
-          <h2 className="font-heading text-xl font-bold text-brand-text-primary">
-            Frequently Asked Questions
-          </h2>
-          <FaqAccordion items={faqItems} />
-        </section>
+        <FAQSection items={faqItems} />
 
         {/* Email capture */}
         <EmailCapture

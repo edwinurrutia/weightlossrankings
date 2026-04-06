@@ -8,6 +8,11 @@ import ProviderGrid from "@/components/providers/ProviderGrid";
 import CTAButton from "@/components/shared/CTAButton";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import EmailCapture from "@/components/shared/EmailCapture";
+import JsonLd from "@/components/shared/JsonLd";
+import PageHero from "@/components/marketing/PageHero";
+import StatGrid from "@/components/marketing/StatGrid";
+import FAQSection from "@/components/marketing/FAQSection";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 const GLP1_CATEGORIES = new Set(["GLP-1 Provider", "Weight Loss Program"]);
 
@@ -90,19 +95,6 @@ export default async function StatePage({
     },
   ];
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: f.answer,
-      },
-    })),
-  };
-
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -119,64 +111,33 @@ export default async function StatePage({
     description: `Compare ${providers.length} GLP-1 telehealth providers available in ${stateName}. Average compounded semaglutide cost: $${avgPrice}/mo.`,
   };
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://weightlossrankings.org",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "States",
-        item: "https://weightlossrankings.org/states",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: stateName,
-        item: `https://weightlossrankings.org/states/${stateData.slug}`,
-      },
-    ],
-  };
-
   return (
     <main className="min-h-screen bg-brand-bg">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      <JsonLd data={webPageJsonLd} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "States", url: "/states" },
+          { name: stateName, url: `/states/${stateData.slug}` },
+        ]}
       />
 
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
 
-        {/* Header */}
-        <div className="space-y-3">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-text-primary leading-tight">
-            Best GLP-1 Providers in{" "}
-            <span className="bg-brand-gradient bg-clip-text text-transparent">
-              {stateName}
-            </span>{" "}
-            (2026)
-          </h1>
-          <p className="text-brand-text-secondary text-lg leading-relaxed">
-            Compare {providers.length} GLP-1 telehealth provider
-            {providers.length === 1 ? "" : "s"} available in {stateName}.
-            Average compounded semaglutide cost: ${avgPrice}/mo.
-          </p>
-
-          {/* Hero stats */}
+        <PageHero
+          title={
+            <>
+              Best GLP-1 Providers in{" "}
+              <span className="bg-brand-gradient bg-clip-text text-transparent">
+                {stateName}
+              </span>{" "}
+              (2026)
+            </>
+          }
+          subtitle={`Compare ${providers.length} GLP-1 telehealth provider${
+            providers.length === 1 ? "" : "s"
+          } available in ${stateName}. Average compounded semaglutide cost: $${avgPrice}/mo.`}
+        >
           <div className="flex flex-wrap gap-3 pt-2">
             <span className="inline-flex items-center rounded-full bg-brand-surface px-3 py-1 text-sm font-medium text-brand-text-primary border border-brand-border">
               {providers.length} providers
@@ -188,9 +149,8 @@ export default async function StatePage({
               Telehealth legal
             </span>
           </div>
-
           <AffiliateDisclosure />
-        </div>
+        </PageHero>
 
         {/* About GLP-1s in [State] */}
         {content && (
@@ -290,24 +250,19 @@ export default async function StatePage({
             <h2 className="text-2xl font-bold text-brand-text-primary">
               Obesity in {stateName}
             </h2>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-lg border border-brand-border bg-brand-surface p-4">
-                <div className="text-sm text-brand-text-muted mb-1">
-                  Adult Obesity Rate
-                </div>
-                <div className="text-2xl font-bold text-brand-text-primary">
-                  {content.obesity_rate}%
-                </div>
-              </div>
-              <div className="rounded-lg border border-brand-border bg-brand-surface p-4">
-                <div className="text-sm text-brand-text-muted mb-1">
-                  US Rank
-                </div>
-                <div className="text-2xl font-bold text-brand-text-primary">
-                  #{content.obesity_rank} of 50
-                </div>
-              </div>
-            </div>
+            <StatGrid
+              columns={2}
+              stats={[
+                {
+                  label: "Adult Obesity Rate",
+                  value: `${content.obesity_rate}%`,
+                },
+                {
+                  label: "US Rank",
+                  value: `#${content.obesity_rank} of 50`,
+                },
+              ]}
+            />
             <p className="text-brand-text-secondary leading-relaxed">
               According to CDC data, {content.obesity_rate}% of {stateName}{" "}
               adults have obesity (BMI of 30 or higher). This places {stateName}{" "}
@@ -319,30 +274,7 @@ export default async function StatePage({
           </section>
         )}
 
-        {/* FAQ */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-bold text-brand-text-primary">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <details
-                key={i}
-                className="rounded-lg border border-brand-border bg-brand-surface p-4 group"
-              >
-                <summary className="cursor-pointer font-semibold text-brand-text-primary list-none flex justify-between items-center">
-                  {faq.question}
-                  <span className="text-brand-text-muted group-open:rotate-180 transition-transform">
-                    ▾
-                  </span>
-                </summary>
-                <p className="mt-3 text-brand-text-secondary leading-relaxed">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
-          </div>
-        </section>
+        <FAQSection items={faqs} />
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">

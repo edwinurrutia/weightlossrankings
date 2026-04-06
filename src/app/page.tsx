@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getFeaturedProviders, getAllBlogPosts } from "@/lib/data";
 import type { Provider, BlogPost } from "@/lib/types";
-import ProviderCard from "@/components/providers/ProviderCard";
 import CTAButton from "@/components/shared/CTAButton";
 import EmailCapture from "@/components/shared/EmailCapture";
 import BlogCard from "@/components/blog/BlogCard";
+import CategoryNavCards from "@/components/marketing/CategoryNavCards";
+import GradientCTACallout from "@/components/marketing/GradientCTACallout";
+import RelatedProvidersSection from "@/components/marketing/RelatedProvidersSection";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -94,87 +96,29 @@ export default async function HomePage() {
         <h2 className="font-heading text-2xl font-semibold text-brand-text-primary text-center mb-6">
           Browse by Category
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {categories.map((cat) => {
-            const inner = (
-              <div className="rounded-2xl bg-white border border-brand-violet/10 p-5 flex flex-col items-center gap-2 shadow-sm text-center h-full transition-shadow hover:shadow-md">
-                <span className="text-3xl">{cat.emoji}</span>
-                <span className="font-heading font-semibold text-brand-text-primary text-sm leading-tight">
-                  {cat.label}
-                </span>
-                {cat.comingSoon && (
-                  <span className="text-xs text-brand-text-secondary">
-                    Coming soon
-                  </span>
-                )}
-              </div>
-            );
-
-            if (cat.comingSoon || !cat.slug) {
-              return (
-                <div key={cat.label} className="cursor-default">
-                  {inner}
-                </div>
-              );
-            }
-
-            return (
-              <Link key={cat.label} href={`/best/${cat.slug}`} className="group block">
-                {inner}
-              </Link>
-            );
-          })}
-        </div>
+        <CategoryNavCards categories={categories} />
       </section>
 
       {/* ── Top Rated Providers ── */}
       {featured.length > 0 && (
         <section className="max-w-5xl mx-auto px-4 pb-16">
-          <h2 className="font-heading text-2xl font-semibold text-brand-text-primary mb-6">
-            Top Rated Providers
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featured.slice(0, 3).map((provider) => (
-              <ProviderCard
-                key={provider._id}
-                provider={provider}
-                trackingSource="homepage_top_rated"
-              />
-            ))}
-          </div>
+          <RelatedProvidersSection
+            title="Top Rated Providers"
+            providers={featured}
+            trackingSource="homepage_top_rated"
+            limit={3}
+          />
         </section>
       )}
 
       {/* ── Tools Banner ── */}
       <section className="max-w-5xl mx-auto px-4 pb-16">
-        <div
-          className="rounded-2xl p-8 sm:p-10 text-white text-center"
-          style={{
-            backgroundImage: "linear-gradient(135deg, #8b5cf6, #3b82f6)",
-          }}
-        >
-          <h2 className="font-heading text-2xl sm:text-3xl font-bold mb-3">
-            Free Tools to Save You Money
-          </h2>
-          <p className="text-white/80 mb-6 max-w-xl mx-auto">
-            Use our savings calculator to see what you could pay — then compare
-            providers side by side to find the best deal.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/savings-calculator"
-              className="inline-flex items-center justify-center rounded-full bg-white text-brand-violet font-semibold px-6 py-3 text-base shadow hover:shadow-md transition-all tap-target"
-            >
-              Savings Calculator
-            </Link>
-            <Link
-              href="/compare"
-              className="inline-flex items-center justify-center rounded-full border-2 border-white text-white font-semibold px-6 py-3 text-base hover:bg-white hover:text-brand-violet transition-colors tap-target"
-            >
-              Compare Providers
-            </Link>
-          </div>
-        </div>
+        <GradientCTACallout
+          heading="Free Tools to Save You Money"
+          description="Use our savings calculator to see what you could pay — then compare providers side by side to find the best deal."
+          ctaHref="/savings-calculator"
+          ctaText="Savings Calculator"
+        />
       </section>
 
       {/* ── Blog ── */}

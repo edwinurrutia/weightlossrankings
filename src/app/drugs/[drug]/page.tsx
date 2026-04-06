@@ -3,13 +3,14 @@ import type { Metadata } from "next";
 import { getDrugBySlug, getAllDrugSlugs } from "@/lib/drugs";
 import { getAllProviders } from "@/lib/data";
 import type { Provider } from "@/lib/types";
-import TrustBadge from "@/components/shared/TrustBadge";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
-import FaqAccordion from "@/components/shared/FaqAccordion";
 import ProviderGrid from "@/components/providers/ProviderGrid";
 import CTAButton from "@/components/shared/CTAButton";
 import StickyCTABar from "@/components/shared/StickyCTABar";
 import JsonLd from "@/components/shared/JsonLd";
+import PageHero from "@/components/marketing/PageHero";
+import FAQSection from "@/components/marketing/FAQSection";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 export function generateStaticParams() {
   return getAllDrugSlugs();
@@ -143,59 +144,38 @@ export default async function DrugPage({
     description: drugData.description,
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://weightlossrankings.org",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Drug Guides",
-        item: "https://weightlossrankings.org/drugs",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: drugData.name,
-        item: `https://weightlossrankings.org/drugs/${drug}`,
-      },
-    ],
-  };
-
   const topProvider = topProviders[0];
   const topProviderMinPrice = topProvider ? getMinPrice(topProvider) : null;
 
   return (
     <main className="min-h-screen bg-brand-bg pb-24 lg:pb-0">
       <JsonLd data={drugSchema} />
-      <JsonLd data={breadcrumbSchema} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Drug Guides", url: "/drugs" },
+          { name: drugData.name, url: `/drugs/${drug}` },
+        ]}
+      />
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
 
-        {/* Trust Badges */}
-        <div className="flex flex-wrap gap-2">
-          <TrustBadge icon="✅" text="FDA Reviewed" />
-          <TrustBadge icon="📅" text={`Updated ${updatedDate}`} />
-        </div>
-
-        {/* H1 + Description */}
-        <div className="space-y-3">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-text-primary leading-tight">
-            <span className="bg-brand-gradient bg-clip-text text-transparent">
-              {drugData.name}
-            </span>{" "}
-            Guide
-          </h1>
-          <p className="text-brand-text-secondary text-lg leading-relaxed">
-            {drugData.description}
-          </p>
+        <PageHero
+          badges={[
+            { icon: "✅", text: "FDA Reviewed" },
+            { icon: "📅", text: `Updated ${updatedDate}` },
+          ]}
+          title={
+            <>
+              <span className="bg-brand-gradient bg-clip-text text-transparent">
+                {drugData.name}
+              </span>{" "}
+              Guide
+            </>
+          }
+          subtitle={drugData.description}
+        >
           <AffiliateDisclosure />
-        </div>
+        </PageHero>
 
         {/* At-a-Glance Table */}
         <section aria-labelledby="at-a-glance-heading">
@@ -434,16 +414,7 @@ export default async function DrugPage({
           </div>
         </section>
 
-        {/* FAQ */}
-        <section aria-labelledby="faq-heading" className="space-y-4">
-          <h2
-            id="faq-heading"
-            className="text-xl font-bold text-brand-text-primary"
-          >
-            Frequently Asked Questions
-          </h2>
-          <FaqAccordion items={faqItems} />
-        </section>
+        <FAQSection items={faqItems} />
       </div>
 
       {topProvider && topProvider.affiliate_url && (
