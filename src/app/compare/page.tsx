@@ -313,7 +313,7 @@ export default function ComparePage() {
         ordered.push({ category: opt.value, providers: arr });
     }
     // Append any uncategorized leftovers
-    for (const [cat, arr] of map.entries()) {
+    for (const [cat, arr] of Array.from(map.entries())) {
       if (!CATEGORY_OPTIONS.find((o) => o.value === cat)) {
         ordered.push({ category: cat, providers: arr });
       }
