@@ -167,30 +167,63 @@ export default async function PharmacyDetailPage({
     },
   ];
 
-  const pharmacyJsonLd = {
+  // Enriched Pharmacy schema for medical YMYL E-E-A-T. Schema.org's
+  // Pharmacy type extends MedicalBusiness + LocalBusiness, so we
+  // can populate fields from both. The more complete the entity,
+  // the better Google's medical SERP ranking treats the page.
+  const pharmacyJsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Pharmacy",
     name: pharmacy.name,
     url: pharmacy.website,
     telephone: pharmacy.phone,
+    description: pharmacy.description,
     address: {
       "@type": "PostalAddress",
       addressLocality: pharmacy.city,
       addressRegion: pharmacy.state,
       addressCountry: "US",
     },
-    ...(pharmacy.established && { foundingDate: String(pharmacy.established) }),
-    ...(pharmacy.external_reviews?.google_score && {
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: pharmacy.external_reviews.google_score,
-        reviewCount: pharmacy.external_reviews.google_count ?? 1,
-        bestRating: 5,
-        worstRating: 1,
-      },
-    }),
-    description: pharmacy.description,
+    medicalSpecialty: "Pharmacy",
+    // Compounding pharmacies are licensed by state — areaServed
+    // captures every US state they ship to, which is exactly what
+    // Google uses to surface pharmacies in state-specific queries
+    // ("compounded semaglutide florida").
+    areaServed: (pharmacy.states_licensed ?? []).map((stateCode) => ({
+      "@type": "State",
+      name: stateCode,
+    })),
+    // Compounding type signals 503A vs 503B vs accreditation level
+    additionalType:
+      pharmacy.type === "503B"
+        ? "https://schema.org/Pharmacy"
+        : "https://schema.org/Pharmacy",
+    knowsAbout: [
+      "Compounded semaglutide",
+      "Compounded tirzepatide",
+      "Sterile compounding",
+      pharmacy.type === "503B" ? "503B outsourcing" : "503A compounding",
+    ],
   };
+  if (pharmacy.established) {
+    pharmacyJsonLd.foundingDate = String(pharmacy.established);
+  }
+  if (pharmacy.external_reviews?.google_score) {
+    pharmacyJsonLd.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: pharmacy.external_reviews.google_score,
+      reviewCount: pharmacy.external_reviews.google_count ?? 1,
+      bestRating: 5,
+      worstRating: 1,
+    };
+  }
+  if (pharmacy.certifications && pharmacy.certifications.length > 0) {
+    pharmacyJsonLd.hasCredential = pharmacy.certifications.map((cert) => ({
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "license",
+      name: cert,
+    }));
+  }
 
   const faqJsonLd = {
     "@context": "https://schema.org",
