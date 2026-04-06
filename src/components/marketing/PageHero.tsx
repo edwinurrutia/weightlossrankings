@@ -22,11 +22,11 @@ export default function PageHero({
     align === "center" ? "text-center items-center" : "text-left items-start";
   const titleClasses =
     size === "large"
-      ? "font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-text-primary leading-[1.15] tracking-tight"
-      : "font-heading text-3xl sm:text-4xl font-extrabold text-brand-text-primary leading-tight";
+      ? "font-heading text-5xl sm:text-6xl lg:text-7xl font-bold text-brand-text-primary leading-[1.05] tracking-tight"
+      : "font-heading text-3xl sm:text-4xl font-extrabold text-brand-text-primary leading-tight tracking-tight";
   const subtitleClasses =
     size === "large"
-      ? "text-lg sm:text-xl text-brand-text-secondary max-w-2xl"
+      ? "text-xl sm:text-2xl text-brand-text-secondary leading-relaxed mt-6 max-w-2xl"
       : "text-brand-text-secondary text-lg leading-relaxed";
 
   return (
