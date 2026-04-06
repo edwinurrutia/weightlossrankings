@@ -6,7 +6,7 @@ import type { CitationCategory, CitationEntry } from "@/lib/citations";
 export const metadata: Metadata = {
   title: "Sources & Methodology",
   description:
-    "Every external claim on WeightLossRankings.org traces back to a primary source. Browse our full citation registry — clinical trials, FDA regulatory documents, CDC statistics, and manufacturer pricing data.",
+    "Every external claim on Weight Loss Rankings traces back to a primary source. Browse our full citation registry — clinical trials, FDA regulatory documents, CDC statistics, and manufacturer pricing data.",
   alternates: { canonical: "/sources" },
   openGraph: {
     title: "Sources & Methodology | Weight Loss Rankings",
@@ -168,20 +168,20 @@ export default function SourcesPage() {
         >
           Sources &amp; Methodology
         </h1>
-        <p className="text-base text-brand-text-secondary leading-relaxed max-w-2xl">
-          WeightLossRankings.org is an independent editorial site. Every
+        <p className="text-base text-brand-text-secondary leading-relaxed">
+          Weight Loss Rankings is an independent editorial site. Every
           statistical claim, pricing figure, and clinical reference on this
           site traces back to a primary source listed here. We do not cite
           secondary summaries when a primary source is available.
         </p>
-        <p className="mt-4 text-base text-brand-text-secondary leading-relaxed max-w-2xl">
+        <p className="mt-4 text-base text-brand-text-secondary leading-relaxed">
           Our pricing data is collected directly from telehealth provider
           websites and updated continuously. Manufacturer list prices (Wegovy,
           Ozempic, Zepbound, Mounjaro) are pulled from official patient
           assistance program pages. Clinical data comes exclusively from
           peer-reviewed trials published in indexed journals.
         </p>
-        <p className="mt-4 text-base text-brand-text-secondary leading-relaxed max-w-2xl">
+        <p className="mt-4 text-base text-brand-text-secondary leading-relaxed">
           For a full explanation of how we score and rank providers, see our{" "}
           <Link href="/methodology" className="text-brand-violet hover:underline font-semibold">
             Methodology page
@@ -211,7 +211,7 @@ export default function SourcesPage() {
       )}
 
       {/* Footer note */}
-      <div className="mt-8 pt-8 border-t border-brand-violet/10 text-xs text-brand-text-secondary leading-relaxed max-w-2xl">
+      <div className="mt-8 pt-8 border-t border-brand-violet/10 text-xs text-brand-text-secondary leading-relaxed">
         <p>
           <strong className="text-brand-text-primary">Reporting a broken link or outdated source?</strong>{" "}
           Please{" "}

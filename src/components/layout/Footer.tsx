@@ -35,7 +35,9 @@ const footerColumns = [
     heading: "Learn",
     links: [
       { label: "Blog", href: "/blog" },
+      { label: "Research", href: "/research" },
       { label: "Drug Guides", href: "/drugs" },
+      { label: "FDA Warning Letters", href: "/fda-warning-letters" },
       { label: "Methodology", href: "/methodology" },
       { label: "Sources", href: "/sources" },
       { label: "FAQ", href: "/faq" },
