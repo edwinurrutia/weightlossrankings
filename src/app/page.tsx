@@ -1,9 +1,5 @@
 import Link from "next/link";
-import { sanityClient } from "@/lib/sanity/client";
-import {
-  FEATURED_PROVIDERS_QUERY,
-  BLOG_POSTS_QUERY,
-} from "@/lib/sanity/queries";
+import { getFeaturedProviders, getAllBlogPosts } from "@/lib/data";
 import type { Provider, BlogPost } from "@/lib/types";
 import ProviderCard from "@/components/providers/ProviderCard";
 import CTAButton from "@/components/shared/CTAButton";
@@ -39,12 +35,8 @@ const categories = [
 
 export default async function HomePage() {
   const [featured, posts] = await Promise.all([
-    sanityClient
-      .fetch<Provider[]>(FEATURED_PROVIDERS_QUERY)
-      .catch(() => [] as Provider[]),
-    sanityClient
-      .fetch<BlogPost[]>(BLOG_POSTS_QUERY, { limit: 3 })
-      .catch(() => [] as BlogPost[]),
+    getFeaturedProviders().catch(() => [] as Provider[]),
+    getAllBlogPosts(3).catch(() => [] as BlogPost[]),
   ]);
 
   return (

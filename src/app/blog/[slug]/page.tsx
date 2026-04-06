@@ -1,19 +1,13 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { sanityClient } from "@/lib/sanity/client";
-import {
-  ALL_BLOG_SLUGS_QUERY,
-  BLOG_POST_BY_SLUG_QUERY,
-} from "@/lib/sanity/queries";
+import { getAllBlogSlugs, getBlogPostBySlug } from "@/lib/data";
 import type { BlogPost } from "@/lib/types";
 import BlogContent from "@/components/blog/BlogContent";
 import TrustBadge from "@/components/shared/TrustBadge";
 import EmailCapture from "@/components/shared/EmailCapture";
 
 export async function generateStaticParams() {
-  const slugs: { slug: string }[] = await sanityClient.fetch(
-    ALL_BLOG_SLUGS_QUERY
-  );
+  const slugs = await getAllBlogSlugs();
   return slugs.map(({ slug }) => ({ slug }));
 }
 
@@ -23,10 +17,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post: BlogPost | null = await sanityClient.fetch(
-    BLOG_POST_BY_SLUG_QUERY,
-    { slug }
-  );
+  const post: BlogPost | null = await getBlogPostBySlug(slug);
 
   if (!post) {
     return { title: "Post Not Found" };
@@ -45,10 +36,7 @@ export default async function BlogPostPage({
 }) {
   const { slug } = await params;
 
-  const post: BlogPost | null = await sanityClient.fetch(
-    BLOG_POST_BY_SLUG_QUERY,
-    { slug }
-  );
+  const post: BlogPost | null = await getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();

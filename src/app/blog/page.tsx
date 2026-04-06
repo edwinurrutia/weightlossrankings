@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { sanityClient } from "@/lib/sanity/client";
-import { BLOG_POSTS_QUERY } from "@/lib/sanity/queries";
+import { getAllBlogPosts } from "@/lib/data";
 import type { BlogPost } from "@/lib/types";
 import BlogCard from "@/components/blog/BlogCard";
 
@@ -9,9 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogIndexPage() {
-  const posts: BlogPost[] = await sanityClient.fetch(BLOG_POSTS_QUERY, {
-    limit: 20,
-  });
+  const posts: BlogPost[] = await getAllBlogPosts(20);
 
   return (
     <main className="min-h-screen bg-brand-bg">

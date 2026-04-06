@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getStateBySlug } from "@/lib/states";
-import { sanityClient } from "@/lib/sanity/client";
-import { PROVIDERS_BY_STATE_QUERY } from "@/lib/sanity/queries";
+import { getProvidersByState } from "@/lib/data";
 import type { Provider } from "@/lib/types";
 import ProviderGrid from "@/components/providers/ProviderGrid";
 import CTAButton from "@/components/shared/CTAButton";
@@ -43,10 +42,7 @@ export default async function StatePage({
     notFound();
   }
 
-  const providers: Provider[] = await sanityClient.fetch(
-    PROVIDERS_BY_STATE_QUERY,
-    { stateCode: stateData.code }
-  );
+  const providers: Provider[] = await getProvidersByState(stateData.code);
 
   return (
     <main className="min-h-screen bg-brand-bg">

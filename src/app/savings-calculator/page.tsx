@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { sanityClient } from "@/lib/sanity/client";
-import { ALL_PROVIDERS_QUERY } from "@/lib/sanity/queries";
+import { getAllProviders } from "@/lib/data";
 import type { Provider } from "@/lib/types";
 import StepWizard from "@/components/calculator/StepWizard";
 
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function SavingsCalculatorPage() {
-  const providers: Provider[] = await sanityClient.fetch(ALL_PROVIDERS_QUERY);
+  const providers: Provider[] = await getAllProviders();
 
   return (
     <main className="min-h-screen bg-brand-gradient-light">

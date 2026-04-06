@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { sanityClient } from "@/lib/sanity/client";
-import { PROVIDERS_BY_CATEGORY_QUERY } from "@/lib/sanity/queries";
+import { getProvidersByCategory } from "@/lib/data";
 import { computeOverallScore, SCORE_DIMENSIONS } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import ScoreBadge from "@/components/providers/ScoreBadge";
@@ -70,10 +69,7 @@ export default async function RankingsPage({
     notFound();
   }
 
-  const providers: Provider[] = await sanityClient.fetch(
-    PROVIDERS_BY_CATEGORY_QUERY,
-    { category: label }
-  );
+  const providers: Provider[] = await getProvidersByCategory(label);
 
   const sorted = [...providers].sort(
     (a, b) => computeOverallScore(b.scores) - computeOverallScore(a.scores)

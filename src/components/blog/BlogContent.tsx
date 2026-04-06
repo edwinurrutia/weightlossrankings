@@ -1,14 +1,15 @@
-import { PortableText } from "@portabletext/react";
-
 interface BlogContentProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  content: any;
+  content: string;
 }
 
 export default function BlogContent({ content }: BlogContentProps) {
+  const paragraphs = content.split("\n\n").filter((p) => p.trim().length > 0);
+
   return (
     <div className="prose prose-slate max-w-none prose-headings:font-heading prose-a:text-brand-violet">
-      <PortableText value={content} />
+      {paragraphs.map((paragraph, index) => (
+        <p key={index}>{paragraph}</p>
+      ))}
     </div>
   );
 }

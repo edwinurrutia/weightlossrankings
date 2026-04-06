@@ -1,11 +1,10 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { sanityClient } from "@/lib/sanity/client";
 import {
-  ALL_PROVIDER_SLUGS_QUERY,
-  PROVIDER_BY_SLUG_QUERY,
-  PROVIDERS_BY_CATEGORY_QUERY,
-} from "@/lib/sanity/queries";
+  getAllProviderSlugs,
+  getProviderBySlug,
+  getProvidersByCategory,
+} from "@/lib/data";
 import { computeOverallScore, SCORE_DIMENSIONS } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import JsonLd from "@/components/shared/JsonLd";
@@ -19,9 +18,7 @@ import ProviderCard from "@/components/providers/ProviderCard";
 import BlogContent from "@/components/blog/BlogContent";
 
 export async function generateStaticParams() {
-  const slugs: { slug: string }[] = await sanityClient.fetch(
-    ALL_PROVIDER_SLUGS_QUERY
-  );
+  const slugs = await getAllProviderSlugs();
   return slugs.map(({ slug }) => ({ provider: slug }));
 }
 
@@ -31,10 +28,7 @@ export async function generateMetadata({
   params: Promise<{ provider: string }>;
 }): Promise<Metadata> {
   const { provider: slug } = await params;
-  const provider: Provider | null = await sanityClient.fetch(
-    PROVIDER_BY_SLUG_QUERY,
-    { slug }
-  );
+  const provider: Provider | null = await getProviderBySlug(slug);
 
   if (!provider) {
     return { title: "Provider Not Found" };
@@ -55,10 +49,7 @@ export default async function ProviderReviewPage({
 }) {
   const { provider: slug } = await params;
 
-  const provider: Provider | null = await sanityClient.fetch(
-    PROVIDER_BY_SLUG_QUERY,
-    { slug }
-  );
+  const provider: Provider | null = await getProviderBySlug(slug);
 
   if (!provider) {
     notFound();
@@ -82,9 +73,8 @@ export default async function ProviderReviewPage({
   // Fetch alternatives: same category, excluding self, limit 3
   let alternatives: Provider[] = [];
   if (provider.category) {
-    const categoryProviders: Provider[] = await sanityClient.fetch(
-      PROVIDERS_BY_CATEGORY_QUERY,
-      { category: provider.category }
+    const categoryProviders: Provider[] = await getProvidersByCategory(
+      provider.category
     );
     alternatives = categoryProviders
       .filter((p) => p.slug !== provider.slug)
