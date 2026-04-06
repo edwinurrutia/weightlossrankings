@@ -141,6 +141,20 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 4,
     tags: ["Semaglutide", "Tirzepatide", "PubMed sourced"],
   },
+  {
+    slug: "glp1-insurance-coverage-audit-2026",
+    title:
+      "GLP-1 Insurance Coverage at the 10 Largest US Insurers: A 2026 Audit",
+    description:
+      "Does your insurance cover Wegovy or Zepbound? We audited the 10 largest US health insurers — covering more than 460 million members combined — and the answer is the same everywhere: technically yes, but every plan requires prior authorization and coverage is plan-specific.",
+    excerpt:
+      "We audited GLP-1 weight loss coverage across the 10 largest US health insurers, which combined cover the vast majority of insured Americans. The pattern is uniform and frustrating: every insurer in our index technically covers GLP-1 medications under at least some plans, every insurer requires prior authorization, and not a single one offers consistent, plan-wide approval. This is what \"varies by plan\" actually means in practice.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-06",
+    readMinutes: 9,
+    citations: 5,
+    tags: ["Insurance", "Coverage", "Live dataset"],
+  },
 ];
 
 export function getResearchArticleBySlug(
