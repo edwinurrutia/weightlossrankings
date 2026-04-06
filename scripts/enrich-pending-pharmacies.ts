@@ -97,6 +97,27 @@ function generateNameVariants(name: string): string[] {
   const SUFFIXES =
     /[,\s]+(?:Inc\.?|LLC|L\.L\.C\.|Corporation|Corp\.?|Ltd\.?|Co\.?|Pharmacy|Pharmaceuticals?|Compounding|Company|Group|Holdings?|Limited|Healthcare|PLLC)\.?$/gi;
 
+  // Generic / common words that should NEVER be used as a domain
+  // base — they almost always belong to unrelated big companies or
+  // parked-domain squatters. The previous enrichment run produced
+  // false positives like "University of Tennessee" → university.com,
+  // "Wesley Pharmaceuticals" → wesley.com, "Wells Pharma" → wells.org,
+  // "Quantum Pharmaceuticals" → quantum.com. These are exactly the
+  // tokens we have to refuse.
+  const COMMON_WORD_BLOCKLIST = new Set([
+    "university", "wells", "wesley", "nova", "quantum", "vital", "health",
+    "care", "medical", "advanced", "advance", "modern", "premier", "premium",
+    "first", "elite", "express", "select", "summit", "pinnacle", "alpha",
+    "omega", "beta", "delta", "epsilon", "apex", "atlas", "atlas", "ridge",
+    "valley", "lake", "river", "hill", "park", "central", "national",
+    "american", "western", "eastern", "northern", "southern", "global",
+    "united", "alliance", "associates", "group", "labs", "lab", "rx",
+    "pharma", "pharmacy", "compound", "compounding", "wellness", "life",
+    "spring", "harbor", "bay", "coast", "metro", "city", "state", "us",
+    "usa", "drug", "drugs", "store", "stores", "scientific", "specialty",
+    "therapy", "solutions", "services", "innovations", "innovation",
+  ]);
+
   const variants = new Set<string>();
   for (const raw of candidates) {
     let cleaned = raw;
@@ -109,21 +130,46 @@ function generateNameVariants(name: string): string[] {
     cleaned = cleaned.replace(/[.,&'"]+/g, " ").replace(/\s+/g, " ").trim();
     if (!cleaned) continue;
 
+    const words = cleaned.split(/\s+/);
+
     // Variant 1: collapse all whitespace (most common pattern)
-    variants.add(cleaned.toLowerCase().replace(/\s+/g, ""));
-    // Variant 2: hyphenated
-    variants.add(cleaned.toLowerCase().replace(/\s+/g, "-"));
-    // Variant 3: first word only (good for "Apocus, Inc." → "apocus")
-    const firstWord = cleaned.split(/\s+/)[0]?.toLowerCase();
-    if (firstWord && firstWord.length >= 4) variants.add(firstWord);
-    // Variant 4: first two words concatenated (good for "AH Nutraceutical")
-    const firstTwo = cleaned.split(/\s+/).slice(0, 2).join("").toLowerCase();
-    if (firstTwo && firstTwo.length >= 4) variants.add(firstTwo);
+    // Only meaningful when the result is at least 8 chars OR multi-word —
+    // single short words like "nova" or "quantum" produce false positives.
+    const collapsed = cleaned.toLowerCase().replace(/\s+/g, "");
+    if (
+      (collapsed.length >= 8 || words.length >= 2) &&
+      !COMMON_WORD_BLOCKLIST.has(collapsed)
+    ) {
+      variants.add(collapsed);
+    }
+    // Variant 2: hyphenated (only useful when 2+ words)
+    if (words.length >= 2) {
+      variants.add(cleaned.toLowerCase().replace(/\s+/g, "-"));
+    }
+    // Variant 3: first word only — REMOVED. It generated 50%+ false
+    // positives in v1 because common pharma words ("nova", "wells",
+    // "quantum") collide with unrelated big-company domains.
+    // Variant 4: first two words concatenated (good for "AH Nutraceutical
+    // Compounding" → "ahnutraceutical"). Require both to be present and
+    // the combined string to be at least 8 chars.
+    if (words.length >= 2) {
+      const firstTwo = (words[0] + words[1]).toLowerCase();
+      if (
+        firstTwo.length >= 8 &&
+        !COMMON_WORD_BLOCKLIST.has(firstTwo)
+      ) {
+        variants.add(firstTwo);
+      }
+    }
   }
 
-  // Filter junk: must be at least 3 chars, alphanum + hyphens only
+  // Filter junk: must be at least 6 chars (was 3 — too permissive),
+  // alphanum + hyphens only, and not on the common-word blocklist.
   return Array.from(variants).filter(
-    (v) => v.length >= 3 && /^[a-z0-9-]+$/.test(v),
+    (v) =>
+      v.length >= 6 &&
+      /^[a-z0-9-]+$/.test(v) &&
+      !COMMON_WORD_BLOCKLIST.has(v.replace(/-/g, "")),
   );
 }
 
