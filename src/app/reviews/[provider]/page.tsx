@@ -29,23 +29,50 @@ import { getWarningLetterByProviderSlug } from "@/lib/fda-warning-letters";
 import SourcesPanel from "@/components/research/SourcesPanel";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
-// Citation registry ids used on every provider review page.
-// These are general regulatory / clinical facts that apply to all 80+
-// provider reviews, so we reference them uniformly.
-const REVIEW_SOURCE_IDS = [
-  "wlr-pricing-index",                  // our scoring dataset
-  "fda-503a-compounding",               // compounding rules
-  "fda-drug-shortage-list",             // shortage-based compounding basis
-  "fda-wegovy-approval",                // brand semaglutide approval
-  "fda-zepbound-approval",              // brand tirzepatide approval
-  "step1-nejm-2021",                    // STEP 1 — semaglutide efficacy
-  "surmount1-nejm-2022",                // SURMOUNT-1 — tirzepatide efficacy
-  "kff-medicaid-obesity-drug-coverage", // insurance context
-  "pcab-accreditation-standards",       // pharmacy accreditation
-];
-// TODO(citations): add a provider-specific clinical-evidence selector
-// once reviews mark which drug class (semaglutide vs tirzepatide) they
-// primarily evaluate so we only show the relevant trial per review.
+// Drug-aware citation selection. Foundational regulatory + pricing
+// sources apply to every review; clinical-trial and FDA-label citations
+// are only included for the drugs the provider actually offers.
+function getProviderDrugs(
+  provider: Provider
+): Set<"semaglutide" | "tirzepatide"> {
+  const drugs = new Set<"semaglutide" | "tirzepatide">();
+  for (const p of provider.pricing ?? []) {
+    if (p.drug === "semaglutide") drugs.add("semaglutide");
+    if (p.drug === "tirzepatide") drugs.add("tirzepatide");
+  }
+  return drugs;
+}
+
+function buildReviewSourceIds(provider: Provider): string[] {
+  const drugs = getProviderDrugs(provider);
+  const sources: string[] = [];
+
+  // Always-cited foundational sources (apply to every provider).
+  sources.push("wlr-pricing-index");
+  sources.push("fda-503a-compounding");
+  sources.push("fda-drug-shortage-list");
+  sources.push("pcab-accreditation-standards");
+  sources.push("kff-medicaid-obesity-drug-coverage");
+
+  // Drug-specific clinical trial + FDA label citations.
+  if (drugs.has("semaglutide")) {
+    sources.push("step1-nejm-2021");      // pivotal trial
+    sources.push("fda-wegovy-approval");  // Wegovy (obesity)
+    sources.push("fda-ozempic-label");    // Ozempic (diabetes)
+  }
+  if (drugs.has("tirzepatide")) {
+    sources.push("surmount1-nejm-2022");  // pivotal trial
+    sources.push("fda-zepbound-approval"); // Zepbound (obesity)
+    sources.push("fda-mounjaro-label");   // Mounjaro (diabetes)
+  }
+
+  // Head-to-head comparison only relevant when the provider offers both.
+  if (drugs.has("semaglutide") && drugs.has("tirzepatide")) {
+    sources.push("surmount5-nejm-2025");
+  }
+
+  return sources;
+}
 
 export async function generateStaticParams() {
   const slugs = await getAllProviderSlugs();
@@ -370,7 +397,7 @@ export default async function ProviderReviewPage({
               below.
             </p>
             <SourcesPanel
-              sourceIds={REVIEW_SOURCE_IDS}
+              sourceIds={buildReviewSourceIds(provider)}
               dataAsOf={getLatestVerificationDate()}
               defaultOpen={false}
             />
