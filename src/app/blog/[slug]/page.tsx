@@ -6,6 +6,7 @@ import BlogContent from "@/components/blog/BlogContent";
 import TrustBadge from "@/components/shared/TrustBadge";
 import EmailCapture from "@/components/shared/EmailCapture";
 import JsonLd from "@/components/shared/JsonLd";
+import SourcesPanel from "@/components/research/SourcesPanel";
 
 export async function generateStaticParams() {
   const slugs = await getAllBlogSlugs();
@@ -146,12 +147,13 @@ export default async function BlogPostPage({
           </div>
         )}
 
-        {/* TODO(citations): blog posts do not yet carry a `sources: string[]`
-            field referencing the central citation registry in
-            src/lib/citations.ts. Once the BlogPost type (src/lib/types.ts) and
-            src/data/blog-posts.json gain a `sources` field, render a
-            <SourcesPanel sourceIds={post.sources} dataAsOf={...} /> here.
-            For now the template relies on inline links inside each post body. */}
+        {/* Sources & methodology — registry-backed citations for this post. */}
+        {post.sources && post.sources.length > 0 && (
+          <SourcesPanel
+            sourceIds={post.sources}
+            dataAsOf={post.updated_date ?? post.published_date}
+          />
+        )}
 
         {/* Editorial policy note + pointer to the central sources registry. */}
         <div className="rounded-xl border border-brand-violet/10 bg-brand-violet/[0.03] px-4 py-3 text-xs text-brand-text-secondary leading-relaxed">

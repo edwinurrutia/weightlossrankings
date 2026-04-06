@@ -9,7 +9,15 @@
     "published_date": "2026-03-28",
     "category": "guides",
     "tags": ["GLP-1", "semaglutide", "tirzepatide", "weight loss", "medications"],
-    "featured_image": null
+    "featured_image": null,
+    "sources": [
+      "step1-nejm-2021",
+      "surmount1-nejm-2022",
+      "fda-wegovy-approval",
+      "fda-zepbound-approval",
+      "fda-503a-compounding",
+      "novocare-wegovy-cash-price"
+    ]
   },
   {
     "_id": "hims-vs-ro-comparison",
@@ -21,7 +29,14 @@
     "published_date": "2026-03-22",
     "category": "comparison",
     "tags": ["Hims", "Ro", "comparison", "GLP-1", "telehealth"],
-    "featured_image": null
+    "featured_image": null,
+    "sources": [
+      "wlr-pricing-index",
+      "fda-503a-compounding",
+      "novocare-wegovy-cash-price",
+      "lilly-zepbound-cash-price",
+      "step1-nejm-2021"
+    ]
   },
   {
     "_id": "coreage-rx-review",
@@ -33,7 +48,14 @@
     "published_date": "2026-03-15",
     "category": "reviews",
     "tags": ["CoreAge Rx", "review", "GLP-1", "semaglutide", "tirzepatide"],
-    "featured_image": null
+    "featured_image": null,
+    "sources": [
+      "wlr-pricing-index",
+      "fda-503a-compounding",
+      "fda-503b-outsourcing",
+      "step1-nejm-2021",
+      "surmount1-nejm-2022"
+    ]
   },
   {
     "_id": "save-money-semaglutide",
@@ -45,7 +67,15 @@
     "published_date": "2026-03-10",
     "category": "guides",
     "tags": ["semaglutide", "savings", "cost", "compounded", "insurance"],
-    "featured_image": null
+    "featured_image": null,
+    "sources": [
+      "novocare-wegovy-cash-price",
+      "wlr-pricing-index",
+      "fda-503a-compounding",
+      "fda-503b-outsourcing",
+      "kff-medicaid-obesity-drug-coverage",
+      "irs-pub-502-medical-expenses"
+    ]
   },
   {
     "_id": "fda-compounded-glp1-updates",
@@ -57,6 +87,13 @@
     "published_date": "2026-03-05",
     "category": "news",
     "tags": ["FDA", "compounded", "GLP-1", "regulation", "safety"],
-    "featured_image": null
+    "featured_image": null,
+    "sources": [
+      "fda-503a-compounding",
+      "fda-503b-outsourcing",
+      "fda-drug-shortage-list",
+      "fda-glp1-warning-letters",
+      "usp-797-sterile-compounding"
+    ]
   }
 ]

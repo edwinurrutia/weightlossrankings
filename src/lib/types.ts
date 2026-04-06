@@ -99,6 +99,12 @@ export interface BlogPost {
   category: string;
   tags: string[];
   featured_image?: string | null;
+  /**
+   * Optional list of citation registry IDs (from src/lib/citations.ts)
+   * that ground the factual claims in this post. Rendered as a
+   * SourcesPanel at the bottom of the post via /blog/[slug]/page.tsx.
+   */
+  sources?: string[];
 }
 
 export interface USState {

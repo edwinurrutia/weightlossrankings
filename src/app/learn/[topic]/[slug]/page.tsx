@@ -13,6 +13,7 @@ import TrustBadge from "@/components/shared/TrustBadge";
 import CTAButton from "@/components/shared/CTAButton";
 import LearnArticleBody from "@/components/blog/LearnArticleBody";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
+import SourcesPanel from "@/components/research/SourcesPanel";
 
 export async function generateStaticParams() {
   return await getAllArticleSlugs();
@@ -225,18 +226,16 @@ export default async function LearnArticlePage({
           <LearnArticleBody content={secondHalf} />
         </div>
 
-        {/* TODO(citations): learn article `sources` are currently free-form
-            {label, url} objects stored in src/data/learn-articles.json. To
-            migrate these to the central citation registry in
-            src/lib/citations.ts, the LearnSource type in src/lib/learn.ts
-            should be changed to a discriminated union that accepts either a
-            registry `id: string` (preferred) or legacy `{label, url}` during
-            the rollout, and the rendering block below should switch to
-            <SourcesPanel sourceIds={article.sources.filter(s => s.id).map(s => s.id)} />.
-            Until the JSON is migrated we continue to render the legacy
-            References block so inline superscript links keep working. */}
-        {/* References */}
-        {article.sources.length > 0 && (
+        {/* Sources & methodology — prefer the registry-backed citation IDs.
+            Falls back to the legacy free-form references block when an article
+            has not yet been migrated. */}
+        {article.registrySourceIds && article.registrySourceIds.length > 0 ? (
+          <SourcesPanel
+            sourceIds={article.registrySourceIds}
+            dataAsOf={article.updated_date}
+            defaultOpen
+          />
+        ) : article.sources.length > 0 && (
           <section
             id="references"
             className="rounded-2xl bg-white border border-brand-violet/10 shadow-sm p-6"

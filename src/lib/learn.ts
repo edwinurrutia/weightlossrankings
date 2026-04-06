@@ -33,7 +33,14 @@ export interface LearnArticle {
   author: string;
   primary_money_page: LearnRelatedMoneyPage;
   related_articles: string[];
+  /** Legacy free-form sources — preserved for now during migration. */
   sources: LearnSource[];
+  /**
+   * Citation registry IDs (from src/lib/citations.ts). Preferred over
+   * the legacy `sources` field. When both are present, registrySourceIds
+   * takes precedence and `sources` is hidden.
+   */
+  registrySourceIds?: string[];
   body: string;
 }
 
