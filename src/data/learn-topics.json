@@ -26,6 +26,19 @@
     ]
   },
   {
+    "slug": "diet-and-lifestyle",
+    "title": "GLP-1 Diet & Lifestyle Guide",
+    "short_title": "Diet & Lifestyle",
+    "description": "How to eat, train, and live well on GLP-1 weight-loss medications — protein targets, foods to avoid, exercise guidance, and evidence-based lifestyle strategies for long-term success.",
+    "target_keyword": "glp-1 diet",
+    "related_money_pages": [
+      { "label": "GLP-1 dose timeline", "href": "/dose-timeline" },
+      { "label": "Best GLP-1 providers 2026", "href": "/best/semaglutide-providers" },
+      { "label": "Semaglutide drug guide", "href": "/drugs/semaglutide" },
+      { "label": "Tirzepatide drug guide", "href": "/drugs/tirzepatide" }
+    ]
+  },
+  {
     "slug": "side-effects-and-safety",
     "title": "GLP-1 Side Effects & Safety",
     "short_title": "Side Effects & Safety",
