@@ -174,7 +174,22 @@ interface RawIndexRow {
   subject: string;
   /** Letter detail page URL on fda.gov. */
   detailUrl: string;
+  /** Keyword(s) that triggered this row (set during merge). */
+  matchedKeywords?: string[];
 }
+
+/**
+ * Specific GLP-1 keywords that, by themselves, prove relevance — if FDA's
+ * full-text search returned a row for "semaglutide", the letter contains
+ * the word "semaglutide" and is GLP-1-relevant. Broader keywords like
+ * "compounded" can match unrelated letters and still need the local filter.
+ */
+const SPECIFIC_GLP1_KEYWORDS = new Set([
+  "semaglutide",
+  "tirzepatide",
+  "glp-1",
+  "glp1",
+]);
 
 /**
  * Scrape the FDA warning letters index using Playwright.
@@ -219,53 +234,61 @@ async function fetchIndexRows(): Promise<RawIndexRow[]> {
 
         // Try to extract rows from the table. FDA uses a standard
         // <table> with column headers; we read it generically.
-        const rows: RawIndexRow[] = await page.evaluate(() => {
-          const out: RawIndexRow[] = [];
-          const tables = Array.from(document.querySelectorAll("table"));
-          for (const table of tables) {
-            const headerCells = Array.from(
-              table.querySelectorAll("thead th"),
-            ).map((th) => (th.textContent || "").trim().toLowerCase());
-            // Find the columns we need
-            const colIndex = (label: string) =>
-              headerCells.findIndex((h) => h.includes(label));
-            const dateIdx = colIndex("posted") >= 0
-              ? colIndex("posted")
-              : colIndex("date");
-            const companyIdx = colIndex("company");
-            const subjectIdx = colIndex("subject");
-            const officeIdx = colIndex("office");
+        // NOTE: passed as a string IIFE rather than a function literal so
+        // tsx doesn't inject runtime helpers (e.g. __name) into the
+        // browser context, which would crash page.evaluate.
+        const rows = (await page.evaluate(`(() => {
+          var out = [];
+          var tables = Array.prototype.slice.call(document.querySelectorAll("table"));
+          for (var t = 0; t < tables.length; t++) {
+            var table = tables[t];
+            var headerCells = Array.prototype.slice
+              .call(table.querySelectorAll("thead th"))
+              .map(function (th) {
+                return (th.textContent || "").trim().toLowerCase();
+              });
+            function colIndex(label) {
+              for (var i = 0; i < headerCells.length; i++) {
+                if (headerCells[i].indexOf(label) >= 0) return i;
+              }
+              return -1;
+            }
+            var dateIdx = colIndex("posted") >= 0 ? colIndex("posted") : colIndex("date");
+            var companyIdx = colIndex("company");
+            var subjectIdx = colIndex("subject");
+            var officeIdx = colIndex("office");
             if (companyIdx < 0 || subjectIdx < 0) continue;
-
-            const trs = Array.from(table.querySelectorAll("tbody tr"));
-            for (const tr of trs) {
-              const tds = Array.from(tr.querySelectorAll("td"));
-              const companyTd = tds[companyIdx];
+            var trs = Array.prototype.slice.call(table.querySelectorAll("tbody tr"));
+            for (var r = 0; r < trs.length; r++) {
+              var tds = Array.prototype.slice.call(trs[r].querySelectorAll("td"));
+              var companyTd = tds[companyIdx];
               if (!companyTd) continue;
-              const link = companyTd.querySelector("a") as
-                | HTMLAnchorElement
-                | null;
-              if (!link) continue;
-              const detailUrl = link.href;
-              if (!detailUrl) continue;
+              var link = companyTd.querySelector("a");
+              if (!link || !link.href) continue;
               out.push({
-                date: dateIdx >= 0 ? (tds[dateIdx]?.textContent || "").trim() : "",
+                date: dateIdx >= 0 && tds[dateIdx] ? (tds[dateIdx].textContent || "").trim() : "",
                 company: (companyTd.textContent || "").trim(),
-                office:
-                  officeIdx >= 0
-                    ? (tds[officeIdx]?.textContent || "").trim()
-                    : "FDA",
-                subject:
-                  (tds[subjectIdx]?.textContent || "").trim(),
-                detailUrl,
+                office: officeIdx >= 0 && tds[officeIdx]
+                  ? (tds[officeIdx].textContent || "").trim()
+                  : "FDA",
+                subject: tds[subjectIdx] ? (tds[subjectIdx].textContent || "").trim() : "",
+                detailUrl: link.href,
               });
             }
           }
           return out;
-        });
+        })()`)) as RawIndexRow[];
 
         for (const r of rows) {
-          if (!seen.has(r.detailUrl)) seen.set(r.detailUrl, r);
+          const existing = seen.get(r.detailUrl);
+          if (existing) {
+            existing.matchedKeywords = [
+              ...(existing.matchedKeywords ?? []),
+              keyword,
+            ];
+          } else {
+            seen.set(r.detailUrl, { ...r, matchedKeywords: [keyword] });
+          }
         }
         vlog(`  → ${rows.length} rows for "${keyword}"`);
       } catch (err) {
@@ -373,99 +396,63 @@ async function fetchLetterContent(page: any, url: string): Promise<LetterContent
       // tolerate slow network idle
     }
 
-    const extracted: LetterContent | null = await page.evaluate(() => {
-      // Find the main article/content region, fall back to <main>/<body>.
-      const main =
-        (document.querySelector("article") as HTMLElement | null) ||
-        (document.querySelector("main") as HTMLElement | null) ||
-        (document.querySelector(".main-content") as HTMLElement | null) ||
-        document.body;
+    // String-based evaluator (avoids tsx __name helper injection that
+    // crashes function-literal page.evaluate calls).
+    const extracted = (await page.evaluate(`(() => {
+      var main = document.querySelector("article")
+        || document.querySelector("main")
+        || document.querySelector(".main-content")
+        || document.body;
       if (!main) return null;
-
-      // Strip navigation / footer / side-bars that live inside main on
-      // fda.gov. We mutate a clone so we don't affect the live DOM.
-      const clone = main.cloneNode(true) as HTMLElement;
-      const stripSelectors = [
-        "nav",
-        "header",
-        "footer",
-        ".breadcrumb",
-        ".lcds-breadcrumb",
-        ".usa-breadcrumb",
-        ".lcds-sidenav",
-        ".lcds-section-nav",
-        "aside",
-        "script",
-        "style",
-        "noscript",
+      var clone = main.cloneNode(true);
+      var stripSelectors = [
+        "nav", "header", "footer",
+        ".breadcrumb", ".lcds-breadcrumb", ".usa-breadcrumb",
+        ".lcds-sidenav", ".lcds-section-nav",
+        "aside", "script", "style", "noscript"
       ];
-      for (const sel of stripSelectors) {
-        clone.querySelectorAll(sel).forEach((el) => el.remove());
+      for (var i = 0; i < stripSelectors.length; i++) {
+        var nodes = clone.querySelectorAll(stripSelectors[i]);
+        for (var j = 0; j < nodes.length; j++) nodes[j].remove();
       }
-
-      const text = (clone.textContent || "")
-        .replace(/\r/g, "")
-        .replace(/\u00a0/g, " ")
-        .replace(/[ \t]+/g, " ")
-        .replace(/\n{3,}/g, "\n\n")
+      var text = (clone.textContent || "")
+        .replace(/\\r/g, "")
+        .replace(/\\u00a0/g, " ")
+        .replace(/[ \\t]+/g, " ")
+        .replace(/\\n{3,}/g, "\\n\\n")
         .trim();
 
-      // Subject: look for "Subject:" line — FDA puts it in the letter
-      // header block near the top of the body.
-      let subject = "";
-      const subjectMatch = text.match(/Subject:\s*([^\n]+)/i);
-      if (subjectMatch) {
-        subject = subjectMatch[1].trim();
+      var subject = "";
+      var subjectMatch = text.match(/Subject:\\s*([^\\n]+)/i);
+      if (subjectMatch) subject = subjectMatch[1].trim();
+
+      var issuingOffice = "";
+      var officePatterns = [
+        /\\b(Office of [A-Z][A-Za-z ,&\\-]+?)(?=\\s{2,}|\\n|,\\s*[A-Z]{2}\\b)/,
+        /\\b(Center for [A-Z][A-Za-z ,&\\-]+?)(?=\\s{2,}|\\n|,\\s*[A-Z]{2}\\b)/,
+        /\\b(Division of [A-Z][A-Za-z ,&\\-]+?)(?=\\s{2,}|\\n|,\\s*[A-Z]{2}\\b)/
+      ];
+      for (var k = 0; k < officePatterns.length; k++) {
+        var om = text.match(officePatterns[k]);
+        if (om) { issuingOffice = om[1].trim().replace(/\\s+/g, " "); break; }
       }
 
-      // Issuing office: FDA typically stamps the letter "Office of ..."
-      // or "Center for ..." near the top. We grab the first matching line.
-      let issuingOffice = "";
-      const officePatterns = [
-        /\b(Office of [A-Z][A-Za-z ,&\-]+?)(?=\s{2,}|\n|,\s*[A-Z]{2}\b)/,
-        /\b(Center for [A-Z][A-Za-z ,&\-]+?)(?=\s{2,}|\n|,\s*[A-Z]{2}\b)/,
-        /\b(Division of [A-Z][A-Za-z ,&\-]+?)(?=\s{2,}|\n|,\s*[A-Z]{2}\b)/,
-      ];
-      for (const pat of officePatterns) {
-        const m = text.match(pat);
-        if (m) {
-          issuingOffice = m[1].trim().replace(/\s+/g, " ");
-          break;
-        }
-      }
-
-      // Violations summary: prefer the first paragraph that begins with
-      // "This letter" / "The U.S. Food and Drug Administration" — that's
-      // FDA's standard opening sentence that names the violation.
-      let violationsSummary = "";
-      const openingPatterns = [
-        /((?:This (?:letter|is to|warning letter|correspondence)|The United States Food and Drug Administration|The U\.?S\.? Food and Drug Administration|This is to advise)[^\n]{40,600}?[.?!])(?:\s|$)/i,
-      ];
-      for (const pat of openingPatterns) {
-        const m = text.match(pat);
-        if (m) {
-          violationsSummary = m[1].trim();
-          break;
-        }
-      }
+      var violationsSummary = "";
+      var openingPattern = /((?:This (?:letter|is to|warning letter|correspondence)|The United States Food and Drug Administration|The U\\.?S\\.? Food and Drug Administration|This is to advise)[^\\n]{40,600}?[.?!])(?:\\s|$)/i;
+      var vm = text.match(openingPattern);
+      if (vm) violationsSummary = vm[1].trim();
       if (!violationsSummary) {
-        // Fall back: first 300 chars of the body text after the subject
-        // line (or after the header if no subject found).
-        const cutIdx = subjectMatch
-          ? text.indexOf(subjectMatch[0]) + subjectMatch[0].length
-          : 0;
+        var cutIdx = subjectMatch ? text.indexOf(subjectMatch[0]) + subjectMatch[0].length : 0;
         violationsSummary = text.slice(cutIdx, cutIdx + 300).trim();
       }
 
-      const rawText = text.slice(0, 1500);
-
       return {
-        subject,
-        violationsSummary,
-        issuingOffice,
-        rawText,
+        subject: subject,
+        violationsSummary: violationsSummary,
+        issuingOffice: issuingOffice,
+        rawText: text.slice(0, 1500)
       };
-    });
+    })()`)) as LetterContent | null;
 
     if (!extracted) {
       elog(`  letter parse returned null for ${url}`);
@@ -641,7 +628,16 @@ async function main() {
       vlog(`  skip (already in DB): ${row.company}`);
       continue;
     }
-    if (!looksRelevant(row.company, row.subject)) {
+    // If FDA's own full-text search returned this row for a SPECIFIC GLP-1
+    // keyword (semaglutide / tirzepatide / glp-1), trust the source — the
+    // letter contains that term and is by definition relevant. Only fall
+    // back to the local relevance filter for rows that came exclusively
+    // from broader keyword searches like "compounded" which can match
+    // non-GLP-1 letters too.
+    const matchedSpecific = (row.matchedKeywords ?? []).some((k) =>
+      SPECIFIC_GLP1_KEYWORDS.has(k.toLowerCase()),
+    );
+    if (!matchedSpecific && !looksRelevant(row.company, row.subject)) {
       vlog(`  skip (not GLP-1 relevant): ${row.company}`);
       continue;
     }
