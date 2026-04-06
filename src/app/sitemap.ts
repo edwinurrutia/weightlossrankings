@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import {
   getAllProviderSlugs,
   getAllProviders,
-  getAllBlogSlugs,
+  getAllBlogPosts,
 } from "@/lib/data";
 import { getAllDrugSlugs } from "@/lib/drugs";
 import { US_STATES } from "@/lib/states";
@@ -12,7 +12,21 @@ import { SAVINGS_COMPARISONS } from "@/lib/savings-comparisons";
 import { getAllInsurers } from "@/lib/insurers";
 import { getAllPharmacies } from "@/lib/pharmacies";
 import { RESEARCH_ARTICLES } from "@/lib/research";
-import { getAllWarningLetterSlugs } from "@/lib/fda-warning-letters";
+import {
+  getAllWarningLetters,
+  getAllWarningLetterSlugs,
+} from "@/lib/fda-warning-letters";
+
+// Helper: parse a YYYY-MM-DD or full ISO date string and return a
+// Date object, falling back to "now" if the input is empty or
+// malformed. Used to feed real per-content lastModified values to
+// the sitemap so Google's freshness signal isn't washed out by
+// every page reporting "modified now."
+function safeDate(input: string | undefined | null): Date {
+  if (!input) return new Date();
+  const d = new Date(input);
+  return isNaN(d.getTime()) ? new Date() : d;
+}
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
@@ -218,13 +232,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   // Dynamic: /fda-warning-letters/[slug]
-  const fdaWarningLetterPages: MetadataRoute.Sitemap =
-    getAllWarningLetterSlugs().map((slug) => ({
-      url: `${BASE_URL}/fda-warning-letters/${slug}`,
-      lastModified: now,
+  // Use the actual letter date so Google sees real freshness signals
+  // when new letters are added — washing every page out with "now"
+  // makes the freshness column meaningless to crawlers.
+  const allWarningLetters = getAllWarningLetters();
+  const fdaWarningLetterPages: MetadataRoute.Sitemap = allWarningLetters.map(
+    (letter) => ({
+      url: `${BASE_URL}/fda-warning-letters/${letter.id}`,
+      lastModified: safeDate(letter.added_date ?? letter.letter_date),
       changeFrequency: "monthly",
       priority: 0.7,
-    }));
+    }),
+  );
+  // Suppress unused-import warning — we kept the slug helper for the
+  // type signature even though we now read full letter records.
+  void getAllWarningLetterSlugs;
 
   // Dynamic: /reviews/[provider]
   const providerSlugs = await getAllProviderSlugs();
@@ -350,19 +372,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // Dynamic: /blog/[slug]
-  const blogSlugs = await getAllBlogSlugs();
-  const blogPages: MetadataRoute.Sitemap = blogSlugs.map(({ slug }) => ({
-    url: `${BASE_URL}/blog/${slug}`,
-    lastModified: now,
+  // Dynamic: /blog/[slug] — feed real published/updated dates
+  const blogPosts = await getAllBlogPosts();
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: safeDate(post.updated_date ?? post.published_date),
     changeFrequency: "weekly",
     priority: 0.6,
   }));
 
-  // Dynamic: /research/[slug]
+  // Dynamic: /research/[slug] — feed real publishedDate
   const researchPages: MetadataRoute.Sitemap = RESEARCH_ARTICLES.map((a) => ({
     url: `${BASE_URL}/research/${a.slug}`,
-    lastModified: now,
+    lastModified: safeDate(a.publishedDate),
     changeFrequency: "weekly",
     priority: 0.85,
   }));
