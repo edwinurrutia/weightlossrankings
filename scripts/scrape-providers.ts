@@ -556,6 +556,175 @@ function applyAutoUpdate(providers: Provider[], results: ProviderResult[]) {
   return changed;
 }
 
+// ---------------- price history snapshot ----------------
+
+interface PriceHistoryPoint {
+  date: string;
+  price: number;
+}
+
+interface PriceHistoryEntry {
+  provider_slug: string;
+  dose: string;
+  form: string;
+  history: PriceHistoryPoint[];
+}
+
+/**
+ * Pick the single "canonical" entry-level price for a provider — the
+ * one we use to power the /price-tracker chart and "recent changes"
+ * table. The chart's semantics are "0.5mg compounded semaglutide
+ * across providers", so we always emit a synthetic dose label of
+ * `0.5mg` and form `compounded` regardless of how the provider's own
+ * pricing rows are labelled. This keeps every provider on a single
+ * comparable axis even though some providers list explicit doses
+ * (coreage-rx: "0.25mg", "0.5mg", "1mg") while others use vague
+ * placeholders (hims/sesame/found: "Starting").
+ *
+ * Selection order:
+ *   1. Explicit "0.5mg" + compounded entry, if present
+ *   2. "Starting" / "Starting dose" + compounded entry, if present
+ *   3. Cheapest compounded entry (entry-level dose by price)
+ *   4. None — provider is skipped
+ */
+function pickCanonicalCompoundedPrice(
+  provider: Provider
+): { price: number } | null {
+  if (!Array.isArray(provider.pricing) || provider.pricing.length === 0) {
+    return null;
+  }
+  const compounded = provider.pricing.filter(
+    (p) =>
+      typeof p.monthly_cost === "number" &&
+      isFinite(p.monthly_cost) &&
+      ((p.form ?? "").toLowerCase() === "compounded" || !p.form)
+  );
+  if (compounded.length === 0) return null;
+
+  const explicitHalfMg = compounded.find((p) =>
+    /(^|[^0-9])0\.5\s*mg/i.test(p.dose ?? "")
+  );
+  if (explicitHalfMg) return { price: explicitHalfMg.monthly_cost };
+
+  const starting = compounded.find((p) =>
+    /^starting/i.test((p.dose ?? "").trim())
+  );
+  if (starting) return { price: starting.monthly_cost };
+
+  const cheapest = compounded.reduce((min, p) =>
+    p.monthly_cost < min.monthly_cost ? p : min
+  );
+  return { price: cheapest.monthly_cost };
+}
+
+/**
+ * Append a snapshot of every provider's current editorially-approved
+ * canonical compounded price into `src/data/price-history.json`.
+ *
+ * Editorial rule: snapshot the **stored** prices in providers.json (the
+ * source of truth the website actually displays), not the scraper's
+ * `found_prices`. Found prices need editorial review before they become
+ * the public number — history should only ever record what we have
+ * publicly told visitors the price was.
+ *
+ * Each provider produces one canonical history series keyed
+ * `${slug}|0.5mg|compounded` regardless of how the provider's own
+ * pricing rows are labelled. See `pickCanonicalCompoundedPrice`.
+ *
+ * Snapshot date = first of the current month (UTC). This preserves the
+ * existing monthly cadence in price-history.json and is idempotent
+ * within a month — running the scraper multiple times in April 2026
+ * never creates more than one 2026-04-01 point per provider.
+ */
+function appendPriceHistorySnapshot(providers: Provider[]): {
+  added: number;
+  skipped: number;
+  newSeries: number;
+  noPrice: number;
+  snapshotDate: string;
+} {
+  const HISTORY_PATH = join(process.cwd(), "src/data/price-history.json");
+
+  const now = new Date();
+  const yyyy = now.getUTCFullYear();
+  const mm = String(now.getUTCMonth() + 1).padStart(2, "0");
+  const snapshotDate = `${yyyy}-${mm}-01`;
+
+  let history: PriceHistoryEntry[] = [];
+  if (existsSync(HISTORY_PATH)) {
+    try {
+      const parsed = JSON.parse(readFileSync(HISTORY_PATH, "utf-8"));
+      if (Array.isArray(parsed)) history = parsed as PriceHistoryEntry[];
+    } catch (err) {
+      console.error(
+        `  price-history snapshot: failed to parse ${HISTORY_PATH}: ${(err as Error).message}`
+      );
+      return { added: 0, skipped: 0, newSeries: 0, noPrice: 0, snapshotDate };
+    }
+  }
+
+  // Canonical key — every provider gets one series under
+  // (slug, "0.5mg", "compounded") so the existing chart structure
+  // continues to work and the table shows real cross-provider deltas.
+  const CANON_DOSE = "0.5mg";
+  const CANON_FORM = "compounded";
+  const keyOf = (slug: string) => `${slug}|${CANON_DOSE}|${CANON_FORM}`;
+
+  const byKey = new Map<string, PriceHistoryEntry>();
+  for (const entry of history) {
+    byKey.set(
+      `${entry.provider_slug}|${entry.dose}|${entry.form}`,
+      entry
+    );
+  }
+
+  let added = 0;
+  let skipped = 0;
+  let newSeries = 0;
+  let noPrice = 0;
+
+  for (const provider of providers) {
+    const canonical = pickCanonicalCompoundedPrice(provider);
+    if (!canonical) {
+      noPrice += 1;
+      continue;
+    }
+    const k = keyOf(provider.slug);
+    let entry = byKey.get(k);
+    if (!entry) {
+      entry = {
+        provider_slug: provider.slug,
+        dose: CANON_DOSE,
+        form: CANON_FORM,
+        history: [],
+      };
+      history.push(entry);
+      byKey.set(k, entry);
+      newSeries += 1;
+    }
+    // Idempotent — leave any existing point for this snapshot date alone.
+    if (entry.history.some((pt) => pt.date === snapshotDate)) {
+      skipped += 1;
+      continue;
+    }
+    entry.history.push({ date: snapshotDate, price: canonical.price });
+    entry.history.sort((a, b) => a.date.localeCompare(b.date));
+    added += 1;
+  }
+
+  // Sort top-level entries by slug so the JSON diff is readable.
+  history.sort((a, b) => {
+    const slugCmp = a.provider_slug.localeCompare(b.provider_slug);
+    if (slugCmp !== 0) return slugCmp;
+    const doseCmp = a.dose.localeCompare(b.dose);
+    if (doseCmp !== 0) return doseCmp;
+    return a.form.localeCompare(b.form);
+  });
+
+  writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2) + "\n");
+  return { added, skipped, newSeries, noPrice, snapshotDate };
+}
+
 // ---------------- report writer ----------------
 
 function ensureDocsDir() {
@@ -729,6 +898,17 @@ async function main() {
     console.log(`\nAuto-update: modified verification metadata for ${changed} providers.`);
     console.log("Note: pricing values were NOT touched. Review mismatches manually.");
   }
+
+  // Always snapshot current editorially-approved prices into
+  // price-history.json. This is what makes the /price-tracker page
+  // self-updating: every scraper run captures one (slug, dose, form,
+  // first-of-month, monthly_cost) tuple per provider pricing entry.
+  // Idempotent within a month — running the scraper twice in April 2026
+  // will not double-write 2026-04-01.
+  const snapshot = appendPriceHistorySnapshot(providers);
+  console.log(
+    `\nPrice history snapshot (${snapshot.snapshotDate}): +${snapshot.added} points, ${snapshot.skipped} already present, ${snapshot.newSeries} new series, ${snapshot.noPrice} providers without compounded pricing.`
+  );
 }
 
 main().catch((err) => {
