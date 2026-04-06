@@ -124,7 +124,7 @@ export default function Footer() {
             .
           </p>
           <p className="text-xs text-brand-text-secondary/60">
-            &copy; {currentYear} MEAS Partners, LLC d/b/a WeightLossRankings.org. All rights reserved. 131 Continental Dr, Suite 305, Newark, DE 19713.
+            &copy; {currentYear} WeightLossRankings.org. All rights reserved.
           </p>
         </div>
       </div>

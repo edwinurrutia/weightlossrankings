@@ -204,8 +204,7 @@ export default function ContactPage() {
           Mailing address
         </h2>
         <address className="not-italic rounded-2xl bg-brand-violet/5 border border-brand-violet/10 p-5 text-sm text-brand-text-secondary">
-          <strong className="text-brand-text-primary">MEAS Partners, LLC</strong><br />
-          d/b/a WeightLossRankings.org<br />
+          <strong className="text-brand-text-primary">WeightLossRankings.org</strong><br />
           131 Continental Dr, Suite 305<br />
           Newark, DE 19713<br />
           United States
