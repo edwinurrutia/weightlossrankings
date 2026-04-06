@@ -1240,5 +1240,851 @@
       "trustpilot_score": 4.6,
       "trustpilot_count": 12000
     }
+  },
+  {
+    "_id": "eden",
+    "name": "Eden",
+    "slug": "eden",
+    "description": "Eden offers flat-rate compounded semaglutide and tirzepatide through tryeden.com with no dose-based price hikes and no membership fees. Shipping is included and plans scale down when you commit to a multi-month package.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 149, "promo_price": 129 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 249 },
+      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 229 },
+      { "dose": "5mg", "form": "compounded", "monthly_cost": 349 }
+    ],
+    "scores": {
+      "value": 8.5,
+      "effectiveness": 8.0,
+      "ux": 8.0,
+      "trust": 7.5,
+      "accessibility": 8.5,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Flat-Rate Pricing",
+      "Free Shipping",
+      "No Membership Fee"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.tryeden.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Flat-rate pricing — no dose-based increases",
+      "No separate membership fee",
+      "Both semaglutide and tirzepatide offered",
+      "Multi-month discounts bring cost down further",
+      "Shipping included in all plans"
+    ],
+    "cons": [
+      "Compounded only — no brand-name options",
+      "First-month pricing jumps to standard after intro period"
+    ],
+    "best_for": "flat-rate compounded GLP-1",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.4,
+      "trustpilot_count": 2100
+    }
+  },
+  {
+    "_id": "form-health",
+    "name": "Form Health",
+    "slug": "form-health",
+    "description": "Form Health is an insurance-first obesity medicine clinic led by board-certified obesity medicine physicians paired with registered dietitians. It focuses on FDA-approved GLP-1s like Wegovy, Zepbound, and Mounjaro rather than compounded alternatives.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Self-pay monthly", "form": "brand", "monthly_cost": 299 }
+    ],
+    "scores": {
+      "value": 7.0,
+      "effectiveness": 9.0,
+      "ux": 8.0,
+      "trust": 9.5,
+      "accessibility": 7.5,
+      "support": 9.5
+    },
+    "features": [
+      "Brand Available",
+      "Obesity Medicine Physicians",
+      "Registered Dietitian",
+      "Insurance Accepted",
+      "Unlimited Messaging"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.formhealth.co",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Board-certified obesity medicine physicians",
+      "Registered dietitian included in the care plan",
+      "Accepts most major insurance and Medicare",
+      "Focused exclusively on FDA-approved GLP-1s",
+      "Highly regarded clinical model"
+    ],
+    "cons": [
+      "Self-pay plan is $299/mo and does not include medication",
+      "No compounded option for cash-pay patients",
+      "Insurance coverage for GLP-1s can be denied"
+    ],
+    "best_for": "insurance-covered GLP-1 care",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.2,
+      "trustpilot_count": 450
+    }
+  },
+  {
+    "_id": "zealthy",
+    "name": "Zealthy",
+    "slug": "zealthy",
+    "description": "Zealthy bundles medical care, prescriber visits, and compounded semaglutide into a flat membership. Multi-month commitments bring per-month costs down to the low end of the market.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 217, "promo_price": 151 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 297 },
+      { "dose": "1mg", "form": "compounded", "monthly_cost": 297 }
+    ],
+    "scores": {
+      "value": 8.0,
+      "effectiveness": 7.5,
+      "ux": 8.0,
+      "trust": 7.5,
+      "accessibility": 8.5,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Bundled Membership",
+      "Video Visits",
+      "Insurance Accepted",
+      "Multi-Month Discount"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://getzealthy.com/weight-loss",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "As low as $151/mo semaglutide on multi-month plans",
+      "Bundled care + medication simplifies billing",
+      "Accepts insurance for medication",
+      "20% off on 3-month supplies",
+      "Broad state coverage"
+    ],
+    "cons": [
+      "$135/mo membership fee if not bundled",
+      "Membership fees are not covered by insurance",
+      "Quality of coaching varies by provider"
+    ],
+    "best_for": "bundled care + medication",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.1,
+      "trustpilot_count": 1800
+    }
+  },
+  {
+    "_id": "lifemd",
+    "name": "LifeMD",
+    "slug": "lifemd",
+    "description": "LifeMD is a publicly traded telehealth company offering both compounded and brand-name GLP-1s through partnerships with Novo Nordisk and Eli Lilly. Its Weight Management program includes provider consults, coaching, and free delivery.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 249, "promo_price": 149 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 249 },
+      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 339, "promo_price": 239 },
+      { "dose": "2.5mg", "form": "brand", "monthly_cost": 349 },
+      { "dose": "5mg", "form": "brand", "monthly_cost": 499 }
+    ],
+    "scores": {
+      "value": 8.0,
+      "effectiveness": 8.5,
+      "ux": 8.0,
+      "trust": 8.5,
+      "accessibility": 9.0,
+      "support": 8.0
+    },
+    "features": [
+      "Compounded",
+      "Brand Available",
+      "Wegovy",
+      "Zepbound",
+      "FSA/HSA",
+      "Free Shipping",
+      "Novo Nordisk Partner"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://lifemd.com/weight-management",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Direct partnerships with Novo Nordisk and Eli Lilly",
+      "Both compounded and brand-name options",
+      "10% weight loss refund guarantee after 1 year",
+      "FSA/HSA eligible",
+      "Available in all 50 states"
+    ],
+    "cons": [
+      "$19/mo LifeMD+ membership charged separately",
+      "First-month promo pricing roughly doubles after intro",
+      "Customer service complaints common in reviews"
+    ],
+    "best_for": "brand-name GLP-1 access",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.4,
+      "trustpilot_count": 6500
+    }
+  },
+  {
+    "_id": "lavender-sky-health",
+    "name": "Lavender Sky Health",
+    "slug": "lavender-sky-health",
+    "description": "Lavender Sky Health is a concierge-style GLP-1 clinic with access to ten compounding pharmacy partners and physician-led titration. Designed for patients who want flexible dosing and personalized medical supervision.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 199 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 199 },
+      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 250 },
+      { "dose": "5mg", "form": "compounded", "monthly_cost": 299 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 8.5,
+      "ux": 7.5,
+      "trust": 8.5,
+      "accessibility": 7.0,
+      "support": 9.0
+    },
+    "features": [
+      "Compounded",
+      "Brand Available",
+      "10+ Pharmacy Partners",
+      "Flexible Dosing",
+      "Physician-Led"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://lavenderskyhealth.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Ten pharmacy partners gives supply flexibility",
+      "No monthly membership fee — pay per plan",
+      "Detailed physician-guided titration",
+      "Both brand and compounded options",
+      "Strong patient-support reputation"
+    ],
+    "cons": [
+      "$25/mo treatment-plan fee on top of medication",
+      "Not available in every state",
+      "Smaller brand — less name recognition"
+    ],
+    "best_for": "concierge GLP-1 care",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.6,
+      "trustpilot_count": 320
+    }
+  },
+  {
+    "_id": "joi-blokes",
+    "name": "Joi + Blokes",
+    "slug": "joi-blokes",
+    "description": "Joi (women's health) and Blokes (men's health) share a unified GLP-1 program offering compounded semaglutide, compounded tirzepatide, and Lilly Direct Zepbound. Plans include clinician consultations and health coaching.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 199, "promo_price": 99 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 199 },
+      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 299, "promo_price": 149 },
+      { "dose": "5mg", "form": "compounded", "monthly_cost": 299 },
+      { "dose": "2.5mg", "form": "brand", "monthly_cost": 349 }
+    ],
+    "scores": {
+      "value": 8.0,
+      "effectiveness": 8.0,
+      "ux": 7.5,
+      "trust": 8.0,
+      "accessibility": 8.0,
+      "support": 8.0
+    },
+    "features": [
+      "Compounded",
+      "Brand Available",
+      "Zepbound",
+      "Health Coaching",
+      "Men's & Women's Health",
+      "Quarterly Billing"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://joiandblokes.com/glp-1",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Serves both men (Blokes) and women (Joi)",
+      "Compounded and Lilly Direct Zepbound options",
+      "First-month pricing cut roughly in half",
+      "Integrated hormone and longevity services",
+      "Clinician + coach in every plan"
+    ],
+    "cons": [
+      "Quarterly billing — higher upfront commitment",
+      "$99/mo separate program fee for Zepbound plan",
+      "Not available in every state"
+    ],
+    "best_for": "men's and women's hormone-aware GLP-1",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.3,
+      "trustpilot_count": 680
+    }
+  },
+  {
+    "_id": "everlywell-weight-care",
+    "name": "Everlywell Weight Care+",
+    "slug": "everlywell-weight-care",
+    "description": "Everlywell Weight Care+ pairs the at-home lab-testing company's infrastructure with compounded semaglutide and clinician oversight. Baseline labs are included, making it attractive to patients who want medical rigor.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 199 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 199 },
+      { "dose": "1mg", "form": "compounded", "monthly_cost": 199 }
+    ],
+    "scores": {
+      "value": 6.5,
+      "effectiveness": 8.0,
+      "ux": 8.0,
+      "trust": 8.5,
+      "accessibility": 8.5,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Baseline Labs",
+      "Video Visits",
+      "3-Month Minimum",
+      "At-Home Testing"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.everlywell.com/compound-weight-loss-medication",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Lab-testing heritage — rigorous eligibility process",
+      "Baseline bloodwork catches issues early",
+      "$49 first-month membership promo",
+      "Established, trusted brand (Everlywell)",
+      "HSA/FSA eligible"
+    ],
+    "cons": [
+      "3-month minimum commitment",
+      "Membership jumps to $139/mo after first month",
+      "Medication is $199/mo on top of membership"
+    ],
+    "best_for": "lab-backed weight care",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.3,
+      "trustpilot_count": 3200
+    }
+  },
+  {
+    "_id": "goodrx-care",
+    "name": "GoodRx Care for Weight Loss",
+    "slug": "goodrx-care",
+    "description": "GoodRx Care for Weight Loss is GoodRx's telemedicine weight-management subscription with Novo Nordisk partnership pricing on Ozempic and Wegovy. It's one of the cheapest routes to brand-name semaglutide in 2026.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Monthly visit", "form": "brand", "monthly_cost": 119, "promo_price": 39 },
+      { "dose": "0.25mg", "form": "brand", "monthly_cost": 349, "promo_price": 199 },
+      { "dose": "1.5mg pill", "form": "brand", "monthly_cost": 149 },
+      { "dose": "4mg pill", "form": "brand", "monthly_cost": 199 }
+    ],
+    "scores": {
+      "value": 9.0,
+      "effectiveness": 8.5,
+      "ux": 8.5,
+      "trust": 9.0,
+      "accessibility": 9.0,
+      "support": 7.0
+    },
+    "features": [
+      "Brand Available",
+      "Wegovy",
+      "Ozempic",
+      "Wegovy Pill",
+      "Novo Nordisk Partner",
+      "FSA/HSA"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.goodrx.com/care/services/glp-1-weight-loss",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "$199/mo introductory pricing for Wegovy and Ozempic",
+      "Official Novo Nordisk partnership",
+      "$39/mo intro telehealth subscription",
+      "Trusted GoodRx brand with strong name recognition",
+      "Wegovy oral pill option available"
+    ],
+    "cons": [
+      "Intro pricing only lasts 2 fills — jumps to $349/mo",
+      "No compounded alternative",
+      "Telehealth subscription rises to $119/mo after intro"
+    ],
+    "best_for": "cheapest brand-name Wegovy/Ozempic",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.2,
+      "trustpilot_count": 7400
+    }
+  },
+  {
+    "_id": "fridays",
+    "name": "Fridays",
+    "slug": "fridays",
+    "description": "Fridays (joinfridays.com) is a dose-inclusive GLP-1 telehealth clinic where price stays flat no matter how high your dose goes. Annual plans drop compounded semaglutide to as low as $150/month.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Monthly", "form": "compounded", "monthly_cost": 240 },
+      { "dose": "3-month plan", "form": "compounded", "monthly_cost": 199 },
+      { "dose": "12-month plan", "form": "compounded", "monthly_cost": 150 },
+      { "dose": "Tirzepatide monthly", "form": "compounded", "monthly_cost": 359 },
+      { "dose": "Tirzepatide 12mo", "form": "compounded", "monthly_cost": 240 }
+    ],
+    "scores": {
+      "value": 9.0,
+      "effectiveness": 8.0,
+      "ux": 8.0,
+      "trust": 8.0,
+      "accessibility": 8.5,
+      "support": 8.0
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Dose-Inclusive",
+      "Nutrition Coaching",
+      "Annual Plan Discount"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.joinfridays.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Dose-inclusive — price never rises with higher doses",
+      "12-month plans drop semaglutide to $150/mo",
+      "Nutrition coaching included in every plan",
+      "Both semaglutide and tirzepatide available",
+      "Insurance navigation for brand medications"
+    ],
+    "cons": [
+      "Best pricing requires large upfront annual commitment",
+      "No partial refunds on multi-month plans",
+      "Compounded only for self-pay"
+    ],
+    "best_for": "dose-inclusive annual plans",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.5,
+      "trustpilot_count": 1900
+    }
+  },
+  {
+    "_id": "remedy-meds",
+    "name": "Remedy Meds",
+    "slug": "remedy-meds",
+    "description": "Remedy Meds is a nationwide compounded GLP-1 clinic available in 49 states with flat-rate pricing and unlimited video visits included in the monthly fee. A solid mid-tier option with broad coverage.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 299 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 299 },
+      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 399 },
+      { "dose": "5mg", "form": "compounded", "monthly_cost": 399 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 8.0,
+      "ux": 8.0,
+      "trust": 8.0,
+      "accessibility": 9.0,
+      "support": 8.5
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Unlimited Video Visits",
+      "FSA/HSA",
+      "Flat-Rate Pricing"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.remedymeds.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Unlimited video visits included",
+      "Available in 49 states (all except Louisiana)",
+      "Flat-rate pricing across dose escalation",
+      "HSA/FSA accepted",
+      "Both semaglutide and tirzepatide"
+    ],
+    "cons": [
+      "Not available in Louisiana",
+      "No insurance billing — cash pay only",
+      "No brand-name Wegovy or Zepbound option"
+    ],
+    "best_for": "unlimited-visit compounded plans",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.4,
+      "trustpilot_count": 2200
+    }
+  },
+  {
+    "_id": "lemonaid-health",
+    "name": "Lemonaid Health",
+    "slug": "lemonaid-health",
+    "description": "Lemonaid Health, a 23andMe company, offers compounded semaglutide and microdose options alongside brand Ozempic and Wegovy. Its microdosing-first approach emphasizes tolerability over max-dose escalation.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Microdose", "form": "compounded", "monthly_cost": 199 },
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 299, "promo_price": 129 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 249 },
+      { "dose": "Ozempic", "form": "brand", "monthly_cost": 1199 },
+      { "dose": "Wegovy", "form": "brand", "monthly_cost": 1599 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.5,
+      "ux": 8.0,
+      "trust": 8.5,
+      "accessibility": 8.5,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Brand Available",
+      "Microdosing",
+      "FSA/HSA",
+      "23andMe Backed"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.lemonaidhealth.com/services/weight-loss",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Microdosing approach reduces side effects",
+      "Backed by 23andMe — established telehealth brand",
+      "$49/mo membership is one of the lowest platform fees",
+      "FSA/HSA eligible",
+      "Both compounded and brand options"
+    ],
+    "cons": [
+      "Membership fee billed separately from medication",
+      "Microdosing may slow weight loss vs. standard dosing",
+      "Brand-name GLP-1s are expensive without insurance"
+    ],
+    "best_for": "microdosing approach",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.3,
+      "trustpilot_count": 2800
+    }
+  },
+  {
+    "_id": "orderly-meds",
+    "name": "Orderly Meds",
+    "slug": "orderly-meds",
+    "description": "Orderly Meds provides all-inclusive compounded GLP-1 plans with telehealth consultation, medication, syringes, shipping, and unlimited provider messaging bundled into one monthly fee. One of the cheapest entry points for semaglutide.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 149, "promo_price": 83 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 149 },
+      { "dose": "2.5mg", "form": "compounded", "monthly_cost": 299, "promo_price": 149 },
+      { "dose": "5mg", "form": "compounded", "monthly_cost": 299 }
+    ],
+    "scores": {
+      "value": 9.0,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 8.5,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "All-Inclusive",
+      "Unlimited Messaging",
+      "Free Shipping"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://orderlymeds.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Compounded semaglutide from as low as $83/mo",
+      "All-inclusive — no hidden membership fees",
+      "Syringes and shipping included",
+      "Unlimited provider messaging",
+      "3-month starter plan brings tirzepatide to ~$149/mo"
+    ],
+    "cons": [
+      "Lowest price requires multi-month commitment",
+      "Newer brand with limited independent reviews",
+      "No brand-name options"
+    ],
+    "best_for": "cheapest all-inclusive compounded",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.2,
+      "trustpilot_count": 540
+    }
+  },
+  {
+    "_id": "hers",
+    "name": "Hers",
+    "slug": "hers",
+    "description": "Hers (the women-focused sister brand to Hims) offers compounded semaglutide as part of its Weight Loss Membership. Plans start at $199/month when paid upfront for 12 months, making it competitive for long-term commitments.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Monthly membership", "form": "compounded", "monthly_cost": 149, "promo_price": 39 },
+      { "dose": "0.25mg (12-month plan)", "form": "compounded", "monthly_cost": 199 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 299 },
+      { "dose": "1mg", "form": "compounded", "monthly_cost": 399 }
+    ],
+    "scores": {
+      "value": 8.0,
+      "effectiveness": 8.0,
+      "ux": 9.0,
+      "trust": 8.5,
+      "accessibility": 9.0,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Women's Health",
+      "FSA/HSA",
+      "Polished App",
+      "All 50 States"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.forhers.com/weight-loss",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Polished women-focused experience and app",
+      "All 50 states covered",
+      "$39 first-month membership intro",
+      "Content geared toward perimenopause and hormonal weight gain",
+      "Large parent company (Hims & Hers)"
+    ],
+    "cons": [
+      "Best pricing requires 12-month upfront payment",
+      "Membership jumps to $149/mo after first month",
+      "Support channels are primarily async"
+    ],
+    "best_for": "women's weight loss experience",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.4,
+      "trustpilot_count": 9800
+    }
+  },
+  {
+    "_id": "medvi",
+    "name": "MEDVi",
+    "slug": "medvi",
+    "description": "MEDVi is a telehealth provider offering both injectable and tablet formulations of compounded semaglutide and tirzepatide. Its flat monthly pricing and tablet alternatives stand out for patients who prefer avoiding needles.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg injection", "form": "compounded", "monthly_cost": 299, "promo_price": 179 },
+      { "dose": "0.5mg injection", "form": "compounded", "monthly_cost": 299 },
+      { "dose": "Semaglutide tablet", "form": "compounded", "monthly_cost": 369, "promo_price": 249 },
+      { "dose": "2.5mg tirzepatide", "form": "compounded", "monthly_cost": 399, "promo_price": 279 },
+      { "dose": "5mg tirzepatide", "form": "compounded", "monthly_cost": 399 }
+    ],
+    "scores": {
+      "value": 7.0,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 8.0,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Injection or Tablet",
+      "Semaglutide",
+      "Tirzepatide",
+      "Flat-Rate Pricing"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://home.medvi.org",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Tablet formulations for patients who dislike needles",
+      "Flat-rate pricing after first month",
+      "Both semaglutide and tirzepatide available",
+      "First-month promotional pricing",
+      "Telehealth visits included"
+    ],
+    "cons": [
+      "Does not bill insurance",
+      "Tablet options are more expensive than injection",
+      "Mixed customer-service reviews"
+    ],
+    "best_for": "tablet GLP-1 alternative",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 3.9,
+      "trustpilot_count": 780
+    }
+  },
+  {
+    "_id": "strut-health",
+    "name": "Strut Health",
+    "slug": "strut-health",
+    "description": "Strut Health is a custom-compounding telehealth service offering both injectable and under-the-tongue (sublingual) semaglutide for men and women. One of the few providers with oral semaglutide drops and lozenges.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Sublingual lozenge/drop", "form": "compounded", "monthly_cost": 130 },
+      { "dose": "0.25mg injection", "form": "compounded", "monthly_cost": 250 },
+      { "dose": "0.5mg injection", "form": "compounded", "monthly_cost": 300 }
+    ],
+    "scores": {
+      "value": 8.0,
+      "effectiveness": 7.0,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 8.0,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Sublingual",
+      "Injection",
+      "Men's & Women's Health",
+      "Free Consultation"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://www.struthealth.com/womens-weight-loss",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Sublingual (under-the-tongue) semaglutide from $130/mo",
+      "No-needle option rare in the market",
+      "Free consultation with licensed providers",
+      "Both men's and women's programs",
+      "Option to fill at external pharmacies"
+    ],
+    "cons": [
+      "Sublingual absorption less proven than injection",
+      "Limited independent clinical data on oral forms",
+      "Not available in all states"
+    ],
+    "best_for": "needle-free sublingual semaglutide",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.1,
+      "trustpilot_count": 420
+    }
   }
 ]

@@ -8,11 +8,13 @@ import PricingDisplay from "./PricingDisplay";
 interface ProviderCardProps {
   provider: Provider;
   selectedDose?: string;
+  trackingSource?: string;
 }
 
 export default function ProviderCard({
   provider,
   selectedDose,
+  trackingSource = "unknown",
 }: ProviderCardProps) {
   const {
     name,
@@ -24,6 +26,7 @@ export default function ProviderCard({
     fda_warnings,
     affiliate_url,
     is_featured,
+    slug,
   } = provider;
 
   const visibleFeatures = features.slice(0, 4);
@@ -77,7 +80,14 @@ export default function ProviderCard({
       )}
 
       {/* CTA */}
-      <CTAButton href={affiliate_url} external size="md" className="w-full mt-auto">
+      <CTAButton
+        href={affiliate_url}
+        external
+        size="md"
+        className="w-full mt-auto"
+        trackProvider={slug}
+        trackSource={trackingSource}
+      >
         Get Started
       </CTAButton>
     </div>

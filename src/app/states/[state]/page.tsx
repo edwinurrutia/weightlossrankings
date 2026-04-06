@@ -70,7 +70,10 @@ export default async function StatePage({
           >
             Available Providers in {stateData.name}
           </h2>
-          <ProviderGrid providers={providers} />
+          <ProviderGrid
+            providers={providers}
+            trackingSource={`state_${stateData.slug}`}
+          />
         </section>
 
         {/* CTAs */}

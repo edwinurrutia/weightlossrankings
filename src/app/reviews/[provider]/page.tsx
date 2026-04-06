@@ -191,7 +191,13 @@ export default async function ProviderReviewPage({
                 </div>
               )}
               {provider.affiliate_url && (
-                <CTAButton href={provider.affiliate_url} external size="lg">
+                <CTAButton
+                  href={provider.affiliate_url}
+                  external
+                  size="lg"
+                  trackProvider={provider.slug}
+                  trackSource="review_page"
+                >
                   Visit {provider.name}
                 </CTAButton>
               )}
@@ -345,7 +351,11 @@ export default async function ProviderReviewPage({
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {alternatives.map((alt) => (
-                  <ProviderCard key={alt._id} provider={alt} />
+                  <ProviderCard
+                    key={alt._id}
+                    provider={alt}
+                    trackingSource="review_page"
+                  />
                 ))}
               </div>
             </section>

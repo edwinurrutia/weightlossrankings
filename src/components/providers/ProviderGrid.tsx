@@ -4,11 +4,13 @@ import ProviderCard from "./ProviderCard";
 interface ProviderGridProps {
   providers: Provider[];
   selectedDose?: string;
+  trackingSource?: string;
 }
 
 export default function ProviderGrid({
   providers,
   selectedDose,
+  trackingSource = "unknown",
 }: ProviderGridProps) {
   if (!providers || providers.length === 0) {
     return (
@@ -30,6 +32,7 @@ export default function ProviderGrid({
           key={provider._id}
           provider={provider}
           selectedDose={selectedDose}
+          trackingSource={trackingSource}
         />
       ))}
     </div>

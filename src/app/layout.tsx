@@ -23,7 +23,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: {
     default:
-      "WeightLossRankings — Compare GLP-1 Providers & Weight Loss Programs",
+      "WeightLossRankings | Compare GLP-1 Providers, Prices & Reviews 2026",
     template: "%s | WeightLossRankings",
   },
   description:
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: "https://weightlossrankings.org",
     siteName: "WeightLossRankings",
     title:
-      "WeightLossRankings — Compare GLP-1 Providers & Weight Loss Programs",
+      "WeightLossRankings | Compare GLP-1 Providers, Prices & Reviews 2026",
     description:
       "Independent rankings and reviews of GLP-1 telehealth providers, weight loss programs, and supplements.",
     images: [

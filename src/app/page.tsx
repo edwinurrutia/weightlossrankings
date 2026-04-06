@@ -42,18 +42,19 @@ export default async function HomePage() {
   return (
     <main className="min-h-screen bg-brand-bg-purple">
       {/* ── Hero ── */}
-      <section className="max-w-4xl mx-auto px-4 pt-16 pb-20 text-center">
-        <h1 className="font-heading text-4xl sm:text-5xl font-bold text-brand-text-primary leading-tight mb-4">
+      <section className="max-w-4xl mx-auto px-4 pt-20 pb-24 text-center">
+        <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-text-primary leading-[1.15] tracking-tight mb-6">
           Find the Best{" "}
           <span
-            className="text-transparent bg-clip-text"
+            className="text-transparent bg-clip-text inline-block pb-1"
             style={{
               backgroundImage: "linear-gradient(135deg, #8b5cf6, #3b82f6)",
             }}
           >
             Weight Loss Solution
-          </span>{" "}
-          for You
+          </span>
+          <br className="hidden sm:block" />
+          {" "}for You
         </h1>
         <p className="text-lg text-brand-text-secondary mb-8 max-w-2xl mx-auto">
           Compare GLP-1 providers, programs, and costs side by side — so you
@@ -118,7 +119,11 @@ export default async function HomePage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featured.slice(0, 3).map((provider) => (
-              <ProviderCard key={provider._id} provider={provider} />
+              <ProviderCard
+                key={provider._id}
+                provider={provider}
+                trackingSource="homepage_top_rated"
+              />
             ))}
           </div>
         </section>

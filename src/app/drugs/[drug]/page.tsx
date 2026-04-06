@@ -320,7 +320,10 @@ export default async function DrugPage({
             {drugData.generic_name.toLowerCase()} or compounded equivalents
             with online consultations and home delivery.
           </p>
-          <ProviderGrid providers={topProviders} />
+          <ProviderGrid
+            providers={topProviders}
+            trackingSource={`drug_${drug}`}
+          />
         </section>
 
         {/* Cost Comparison Table */}
@@ -371,6 +374,8 @@ export default async function DrugPage({
                           href={provider.affiliate_url}
                           external
                           size="sm"
+                          trackProvider={provider.slug}
+                          trackSource={`drug_${drug}`}
                         >
                           Visit
                         </CTAButton>

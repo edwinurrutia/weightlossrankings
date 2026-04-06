@@ -159,7 +159,11 @@ export default async function PriceTrackerPage() {
             Top providers sorted by current lowest 0.5mg compounded price.
           </p>
           {bestDealProviders.length > 0 ? (
-            <ProviderGrid providers={bestDealProviders} selectedDose="0.5mg" />
+            <ProviderGrid
+              providers={bestDealProviders}
+              selectedDose="0.5mg"
+              trackingSource="price_tracker"
+            />
           ) : (
             <p className="text-brand-text-secondary">No deals data available.</p>
           )}

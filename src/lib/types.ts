@@ -27,6 +27,14 @@ export interface ExternalReviews {
   google_count?: number;
 }
 
+export interface ProviderVerification {
+  last_verified: string; // ISO date string YYYY-MM-DD
+  verified_by?: "manual" | "scraper" | "owner-confirmed";
+  source_urls: string[]; // URLs we used to verify pricing/features
+  confidence: "high" | "medium" | "low";
+  notes?: string;
+}
+
 export interface Provider {
   _id: string;
   name: string;
@@ -48,6 +56,7 @@ export interface Provider {
   best_for?: string;
   is_featured: boolean;
   external_reviews?: ExternalReviews;
+  verification?: ProviderVerification;
 }
 
 export interface Drug {

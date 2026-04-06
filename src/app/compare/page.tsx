@@ -90,6 +90,7 @@ export default function ComparePage() {
               <ProviderGrid
                 providers={filtered}
                 selectedDose={filters.dose}
+                trackingSource="compare_tool"
               />
             )}
           </main>
