@@ -109,7 +109,7 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "LegitScript certified — rigorous pharmacy standards",
+      "LegitScript certified \u2014 rigorous pharmacy standards",
       "Free 2-day shipping nationwide",
       "Both semaglutide and tirzepatide available",
       "Lowest per-month pricing in the compounded segment",
@@ -117,7 +117,7 @@
       "All 50 states covered"
     ],
     "cons": [
-      "Compounded only — no brand-name Ozempic or Wegovy",
+      "Compounded only \u2014 no brand-name Ozempic or Wegovy",
       "Newer brand with fewer independent reviews than legacy players"
     ],
     "best_for": "best overall value",
@@ -1865,7 +1865,7 @@
       "WI",
       "WY"
     ],
-    "affiliate_url": "https://www.gplans.com",
+    "affiliate_url": "https://www.g-plans.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
@@ -1881,7 +1881,7 @@
       "last_verified": "2026-04-06",
       "verified_by": "manual",
       "source_urls": [
-        "https://www.gplans.com"
+        "https://www.g-plans.com"
       ],
       "confidence": "low",
       "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
@@ -3551,99 +3551,6 @@
     }
   },
   {
-    "_id": "maxlife",
-    "name": "maxlife",
-    "slug": "maxlife",
-    "description": "Telehealth wellness brand offering GLP-1 weight management programs.",
-    "category": "GLP-1 Provider",
-    "pricing": [],
-    "scores": {
-      "value": 6.5,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
-    },
-    "features": [
-      "Semaglutide",
-      "Tirzepatide"
-    ],
-    "states_available": [
-      "AL",
-      "AK",
-      "AZ",
-      "AR",
-      "CA",
-      "CO",
-      "CT",
-      "DE",
-      "FL",
-      "GA",
-      "HI",
-      "ID",
-      "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
-      "LA",
-      "ME",
-      "MD",
-      "MA",
-      "MI",
-      "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
-      "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UT",
-      "VT",
-      "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
-    ],
-    "affiliate_url": "https://maxlifeusa.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Both semaglutide and tirzepatide available"
-    ],
-    "cons": [
-      "Pricing not publicly disclosed"
-    ],
-    "best_for": "mainstream telehealth GLP-1 access",
-    "is_featured": false,
-    "external_reviews": {},
-    "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://maxlifeusa.com"
-      ],
-      "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
-    }
-  },
-  {
     "_id": "mdexam",
     "name": "MDExam",
     "slug": "mdexam",
@@ -3823,7 +3730,7 @@
       "WI",
       "WY"
     ],
-    "affiliate_url": "https://joinmedvi.com",
+    "affiliate_url": "https://medvi.org",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
@@ -3840,7 +3747,7 @@
       "last_verified": "2026-04-06",
       "verified_by": "manual",
       "source_urls": [
-        "https://joinmedvi.com"
+        "https://medvi.org"
       ],
       "confidence": "medium",
       "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
@@ -4054,192 +3961,6 @@
         "https://mojoon.com"
       ],
       "confidence": "medium",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
-    }
-  },
-  {
-    "_id": "nativemed-health",
-    "name": "NativeMed Health",
-    "slug": "nativemed-health",
-    "description": "Telehealth wellness provider offering GLP-1 weight loss programs.",
-    "category": "GLP-1 Provider",
-    "pricing": [],
-    "scores": {
-      "value": 6.5,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
-    },
-    "features": [
-      "Semaglutide",
-      "Tirzepatide"
-    ],
-    "states_available": [
-      "AL",
-      "AK",
-      "AZ",
-      "AR",
-      "CA",
-      "CO",
-      "CT",
-      "DE",
-      "FL",
-      "GA",
-      "HI",
-      "ID",
-      "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
-      "LA",
-      "ME",
-      "MD",
-      "MA",
-      "MI",
-      "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
-      "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UT",
-      "VT",
-      "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
-    ],
-    "affiliate_url": "https://nativemedhealth.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Both semaglutide and tirzepatide available"
-    ],
-    "cons": [
-      "Pricing not publicly disclosed"
-    ],
-    "best_for": "mainstream telehealth GLP-1 access",
-    "is_featured": false,
-    "external_reviews": {},
-    "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://nativemedhealth.com"
-      ],
-      "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
-    }
-  },
-  {
-    "_id": "new-self-medical",
-    "name": "New Self Medical",
-    "slug": "new-self-medical",
-    "description": "Medical weight loss clinic offering GLP-1 prescriptions through telehealth.",
-    "category": "GLP-1 Provider",
-    "pricing": [],
-    "scores": {
-      "value": 6.5,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
-    },
-    "features": [
-      "Semaglutide",
-      "Tirzepatide"
-    ],
-    "states_available": [
-      "AL",
-      "AK",
-      "AZ",
-      "AR",
-      "CA",
-      "CO",
-      "CT",
-      "DE",
-      "FL",
-      "GA",
-      "HI",
-      "ID",
-      "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
-      "LA",
-      "ME",
-      "MD",
-      "MA",
-      "MI",
-      "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
-      "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UT",
-      "VT",
-      "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
-    ],
-    "affiliate_url": "https://newselfmedical.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Both semaglutide and tirzepatide available"
-    ],
-    "cons": [
-      "Pricing not publicly disclosed"
-    ],
-    "best_for": "mainstream telehealth GLP-1 access",
-    "is_featured": false,
-    "external_reviews": {},
-    "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://newselfmedical.com"
-      ],
-      "confidence": "low",
       "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
     }
   },
@@ -5299,99 +5020,6 @@
     }
   },
   {
-    "_id": "priority-meds-online-care",
-    "name": "Priority Meds Online Care",
-    "slug": "priority-meds-online-care",
-    "description": "Telehealth provider offering GLP-1 medications and other prescription services.",
-    "category": "GLP-1 Provider",
-    "pricing": [],
-    "scores": {
-      "value": 6.5,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
-    },
-    "features": [
-      "Semaglutide",
-      "Tirzepatide"
-    ],
-    "states_available": [
-      "AL",
-      "AK",
-      "AZ",
-      "AR",
-      "CA",
-      "CO",
-      "CT",
-      "DE",
-      "FL",
-      "GA",
-      "HI",
-      "ID",
-      "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
-      "LA",
-      "ME",
-      "MD",
-      "MA",
-      "MI",
-      "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
-      "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UT",
-      "VT",
-      "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
-    ],
-    "affiliate_url": "https://prioritymedsonline.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Both semaglutide and tirzepatide available"
-    ],
-    "cons": [
-      "Pricing not publicly disclosed"
-    ],
-    "best_for": "mainstream telehealth GLP-1 access",
-    "is_featured": false,
-    "external_reviews": {},
-    "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://prioritymedsonline.com"
-      ],
-      "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
-    }
-  },
-  {
     "_id": "reflexmd",
     "name": "ReflexMD",
     "slug": "reflexmd",
@@ -5792,99 +5420,6 @@
       "verified_by": "manual",
       "source_urls": [
         "https://ro.co"
-      ],
-      "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
-    }
-  },
-  {
-    "_id": "rx-pros-health",
-    "name": "Rx Pros Health",
-    "slug": "rx-pros-health",
-    "description": "Telehealth provider offering GLP-1 medications and other prescription services.",
-    "category": "GLP-1 Provider",
-    "pricing": [],
-    "scores": {
-      "value": 6.5,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
-    },
-    "features": [
-      "Semaglutide",
-      "Tirzepatide"
-    ],
-    "states_available": [
-      "AL",
-      "AK",
-      "AZ",
-      "AR",
-      "CA",
-      "CO",
-      "CT",
-      "DE",
-      "FL",
-      "GA",
-      "HI",
-      "ID",
-      "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
-      "LA",
-      "ME",
-      "MD",
-      "MA",
-      "MI",
-      "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
-      "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UT",
-      "VT",
-      "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
-    ],
-    "affiliate_url": "https://rxproshealth.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Both semaglutide and tirzepatide available"
-    ],
-    "cons": [
-      "Pricing not publicly disclosed"
-    ],
-    "best_for": "mainstream telehealth GLP-1 access",
-    "is_featured": false,
-    "external_reviews": {},
-    "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://rxproshealth.com"
       ],
       "confidence": "low",
       "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
@@ -6408,99 +5943,6 @@
       "verified_by": "manual",
       "source_urls": [
         "https://thecalibrateclinic.com"
-      ],
-      "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
-    }
-  },
-  {
-    "_id": "timeless-aesthetics-and-laser-clinic",
-    "name": "Timeless Aesthetics and Laser Clinic",
-    "slug": "timeless-aesthetics-and-laser-clinic",
-    "description": "Aesthetics and wellness clinic offering GLP-1 weight loss treatments.",
-    "category": "GLP-1 Provider",
-    "pricing": [],
-    "scores": {
-      "value": 6.5,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
-    },
-    "features": [
-      "Semaglutide",
-      "Tirzepatide"
-    ],
-    "states_available": [
-      "AL",
-      "AK",
-      "AZ",
-      "AR",
-      "CA",
-      "CO",
-      "CT",
-      "DE",
-      "FL",
-      "GA",
-      "HI",
-      "ID",
-      "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
-      "LA",
-      "ME",
-      "MD",
-      "MA",
-      "MI",
-      "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
-      "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UT",
-      "VT",
-      "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
-    ],
-    "affiliate_url": "https://timelessaestheticsandlaser.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Both semaglutide and tirzepatide available"
-    ],
-    "cons": [
-      "Pricing not publicly disclosed"
-    ],
-    "best_for": "mainstream telehealth GLP-1 access",
-    "is_featured": false,
-    "external_reviews": {},
-    "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://timelessaestheticsandlaser.com"
       ],
       "confidence": "low",
       "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
@@ -7412,7 +6854,7 @@
     "_id": "noom",
     "name": "Noom",
     "slug": "noom",
-    "description": "Noom is a psychology-based weight loss app using cognitive behavioral techniques to drive lasting behavior change — no medication required. At $17/month on an annual plan, it's the most accessible structured weight-loss program available.",
+    "description": "Noom is a psychology-based weight loss app using cognitive behavioral techniques to drive lasting behavior change \u2014 no medication required. At $17/month on an annual plan, it's the most accessible structured weight-loss program available.",
     "category": "Weight Loss Program",
     "pricing": [
       {
@@ -7497,14 +6939,14 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "Most accessible price — $17/mo annual",
+      "Most accessible price \u2014 $17/mo annual",
       "All 50 states, no prescription needed",
       "Psychology-backed behavior change approach",
       "Strong UX and app experience",
       "Large community and research base"
     ],
     "cons": [
-      "No medication — results depend on adherence",
+      "No medication \u2014 results depend on adherence",
       "Lower effectiveness vs. GLP-1 providers",
       "Mixed reviews on long-term retention"
     ],
@@ -7521,7 +6963,7 @@
         "https://www.noom.com/weight"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -7618,7 +7060,7 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "Most trusted brand — 70+ year history",
+      "Most trusted brand \u2014 70+ year history",
       "In-person community workshops available",
       "Multiple price tiers for every budget",
       "GLP-1 clinic option for medication seekers",
@@ -7643,7 +7085,7 @@
         "https://www.weightwatchers.com/us"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -7729,7 +7171,7 @@
     "fda_warnings": [],
     "pros": [
       "Third-party tested for purity and potency",
-      "No proprietary blends — full label transparency",
+      "No proprietary blends \u2014 full label transparency",
       "No artificial sweeteners or fillers",
       "Backed by a money-back guarantee",
       "Ships to all 50 states"
@@ -7752,7 +7194,7 @@
         "https://www.transparentlabs.com/products/fat-burner"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -7861,116 +7303,7 @@
         "https://www.mitoq.com"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
-    }
-  },
-  {
-    "_id": "lean-hybrid-protein",
-    "name": "Lean Hybrid Protein",
-    "slug": "lean-hybrid-protein",
-    "description": "Lean Hybrid Protein is a high-protein meal replacement powder with 25g of protein and minimal carbs per serving. Designed for weight loss through satiety, it doubles as an FSA/HSA-eligible supplement for eligible buyers.",
-    "category": "Supplement",
-    "pricing": [
-      {
-        "dose": "30 servings",
-        "form": "compounded",
-        "monthly_cost": 39
-      }
-    ],
-    "scores": {
-      "value": 8.5,
-      "effectiveness": 7,
-      "ux": 8,
-      "trust": 8,
-      "accessibility": 9.5,
-      "support": 7
-    },
-    "features": [
-      "25g Protein",
-      "Low Carb",
-      "FSA/HSA"
-    ],
-    "states_available": [
-      "AL",
-      "AK",
-      "AZ",
-      "AR",
-      "CA",
-      "CO",
-      "CT",
-      "DE",
-      "FL",
-      "GA",
-      "HI",
-      "ID",
-      "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
-      "LA",
-      "ME",
-      "MD",
-      "MA",
-      "MI",
-      "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
-      "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UT",
-      "VT",
-      "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
-    ],
-    "affiliate_url": "https://www.leanhybrid.com",
-    "affiliate_network": "direct",
-    "fda_warnings": [],
-    "pros": [
-      "25g protein per serving for high satiety",
-      "Low carb formula supports ketogenic diets",
-      "FSA/HSA eligible for qualifying buyers",
-      "Very competitive price per serving",
-      "Versatile — works as meal replacement or post-workout"
-    ],
-    "cons": [
-      "Smaller brand with fewer independent reviews",
-      "Not a medication — results depend on overall diet",
-      "Flavor options are limited"
-    ],
-    "best_for": "meal replacement",
-    "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.2,
-      "trustpilot_count": 890
-    },
-    "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://www.leanhybrid.com"
-      ],
-      "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -8055,7 +7388,7 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "NSF Certified — highest third-party verification standard",
+      "NSF Certified \u2014 highest third-party verification standard",
       "Practitioner-grade quality trusted by physicians",
       "Bundle pricing saves vs. buying individual supplements",
       "Highest trust score in the supplement category",
@@ -8063,7 +7396,7 @@
     ],
     "cons": [
       "Most expensive supplement option at $129/mo",
-      "Bundle is fixed — can't customize individual products",
+      "Bundle is fixed \u2014 can't customize individual products",
       "Premium price may not suit all budgets"
     ],
     "best_for": "doctor-recommended quality",
@@ -8079,14 +7412,14 @@
         "https://www.thorne.com"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
     "_id": "factor",
     "name": "Factor",
     "slug": "factor",
-    "description": "Factor delivers fresh, chef-prepared meals dietitian-designed for weight loss — fully cooked and ready in under 2 minutes. With keto, calorie-smart, and protein-plus options, it's the top pick for busy people who want zero meal prep.",
+    "description": "Factor delivers fresh, chef-prepared meals dietitian-designed for weight loss \u2014 fully cooked and ready in under 2 minutes. With keto, calorie-smart, and protein-plus options, it's the top pick for busy people who want zero meal prep.",
     "category": "Meal Delivery",
     "pricing": [
       {
@@ -8165,7 +7498,7 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "Fully cooked meals — heat and eat in 2 minutes",
+      "Fully cooked meals \u2014 heat and eat in 2 minutes",
       "Dietitian-designed menus for weight loss",
       "Multiple diet plans including keto and high-protein",
       "Free shipping on all orders",
@@ -8189,7 +7522,7 @@
         "https://www.factor75.com"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -8275,7 +7608,7 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "Founded by a bariatric physician — highest medical credibility",
+      "Founded by a bariatric physician \u2014 highest medical credibility",
       "Specialized plans for diabetes, menopause, and gluten-free",
       "Highest trust score in the meal delivery category",
       "Clinically calibrated macros and calorie targets",
@@ -8299,7 +7632,7 @@
         "https://www.bistromd.com"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -8387,7 +7720,7 @@
       "30-year proven track record of weight loss results",
       "Structured daily plan removes decision fatigue",
       "Specialized diabetic-friendly meal plan available",
-      "Highest accessibility score — ships everywhere",
+      "Highest accessibility score \u2014 ships everywhere",
       "Large volume of real-world user reviews"
     ],
     "cons": [
@@ -8408,7 +7741,7 @@
         "https://www.nutrisystem.com"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -8493,14 +7826,14 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "USDA Certified Organic — highest ingredient standard",
+      "USDA Certified Organic \u2014 highest ingredient standard",
       "Dedicated keto plan for low-carb weight loss",
       "Fast 30-minute recipes with pre-prepped ingredients",
       "Professional chef-developed recipes",
       "Carbon-offset shipping"
     ],
     "cons": [
-      "Requires cooking — not as convenient as fully prepared meals",
+      "Requires cooking \u2014 not as convenient as fully prepared meals",
       "Fewer meal options per week than competitors",
       "Organic premium adds to cost"
     ],
@@ -8517,7 +7850,7 @@
         "https://www.greenchef.com"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -8607,7 +7940,7 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "Largest food database — 14M+ foods with barcode scanner",
+      "Largest food database \u2014 14M+ foods with barcode scanner",
       "Best-in-class UX and app design",
       "Annual plan is extremely affordable at $7/mo",
       "Integrates with 50+ fitness apps and wearables",
@@ -8615,7 +7948,7 @@
     ],
     "cons": [
       "Free version has significant feature limitations",
-      "Database relies on user submissions — accuracy can vary",
+      "Database relies on user submissions \u2014 accuracy can vary",
       "No built-in coaching or accountability features"
     ],
     "best_for": "calorie counting",
@@ -8631,7 +7964,7 @@
         "https://www.myfitnesspal.com"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -8740,14 +8073,14 @@
         "https://www.loseit.com"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
     "_id": "noom-med",
     "name": "Noom Med",
     "slug": "noom-med",
-    "description": "Noom Med integrates GLP-1 medication access with Noom's proven cognitive behavioral therapy curriculum, 1-on-1 dietitian coaching, and dedicated care team — the most comprehensive psychology-plus-medication program available.",
+    "description": "Noom Med integrates GLP-1 medication access with Noom's proven cognitive behavioral therapy curriculum, 1-on-1 dietitian coaching, and dedicated care team \u2014 the most comprehensive psychology-plus-medication program available.",
     "category": "Fitness App",
     "pricing": [
       {
@@ -8823,7 +8156,7 @@
       "Noom's proven behavioral curriculum"
     ],
     "cons": [
-      "Available in only 40 states — excludes AK, HI, ID, MT, NM, SD, VT, WV, WY, ND",
+      "Available in only 40 states \u2014 excludes AK, HI, ID, MT, NM, SD, VT, WV, WY, ND",
       "More expensive than app-only alternatives",
       "Requires commitment to both medication and coaching program"
     ],
@@ -8840,7 +8173,7 @@
         "https://www.noom.com/med"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -8932,7 +8265,7 @@
       "Personalized daily wellness scores and recommendations"
     ],
     "cons": [
-      "Requires a Fitbit device — not standalone",
+      "Requires a Fitbit device \u2014 not standalone",
       "Lower effectiveness score vs. dedicated weight loss apps",
       "Feature set tied to Google/Fitbit ecosystem"
     ],
@@ -8949,7 +8282,7 @@
         "https://www.fitbit.com/premium"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   },
   {
@@ -9034,14 +8367,14 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "Highest UX score — best-in-class Apple design",
+      "Highest UX score \u2014 best-in-class Apple design",
       "1,000+ workouts across all fitness types",
       "Real-time Apple Watch metrics shown on screen",
       "Family Sharing for up to 6 members",
       "New content added weekly"
     ],
     "cons": [
-      "Requires Apple Watch — excludes Android users",
+      "Requires Apple Watch \u2014 excludes Android users",
       "Not a dedicated weight loss or calorie tracking tool",
       "Lower value score vs. cheaper alternatives"
     ],
@@ -9058,7 +8391,7 @@
         "https://www.apple.com/apple-fitness-plus"
       ],
       "confidence": "low",
-      "notes": "Initial seed data — needs manual verification"
+      "notes": "Initial seed data \u2014 needs manual verification"
     }
   }
 ]
