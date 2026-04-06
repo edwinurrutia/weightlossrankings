@@ -2086,5 +2086,633 @@
       "trustpilot_score": 4.1,
       "trustpilot_count": 420
     }
+  },
+  {
+    "_id": "sequence-ww-clinic",
+    "name": "WeightWatchers Clinic (Sequence)",
+    "slug": "sequence-ww-clinic",
+    "description": "WeightWatchers Clinic, formerly Sequence, is the medical arm of WW International. It pairs board-certified clinicians with the WW behavior-change program and prescribes FDA-approved GLP-1s like Wegovy, Zepbound, Ozempic, and Mounjaro through insurance when possible.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Membership (medication billed separately)", "form": "brand", "monthly_cost": 99 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 8.5,
+      "ux": 8.0,
+      "trust": 8.5,
+      "accessibility": 8.5,
+      "support": 8.5
+    },
+    "features": [
+      "Brand Available",
+      "Insurance Accepted",
+      "Behavior Coaching",
+      "Registered Dietitian",
+      "WW Workshops Included"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.weightwatchers.com/us/clinic",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Pairs medication with the proven WW behavior-change program",
+      "Insurance billing for FDA-approved GLP-1s when eligible",
+      "Board-certified obesity-medicine clinicians",
+      "Includes WW Workshops and digital tools at no extra cost",
+      "Strong brand trust and 60+ year track record"
+    ],
+    "cons": [
+      "$99/mo membership is on top of medication cost",
+      "No compounded GLP-1 option — uninsured patients pay retail",
+      "Wait times can be long during onboarding"
+    ],
+    "best_for": "insured patients wanting brand GLP-1s with coaching",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 3.8,
+      "trustpilot_count": 1900
+    }
+  },
+  {
+    "_id": "push-health",
+    "name": "Push Health",
+    "slug": "push-health",
+    "description": "Push Health is a peer-to-peer telehealth marketplace where licensed providers can prescribe compounded semaglutide and tirzepatide directly to patients. Pricing varies by provider, but visit fees typically run $75 and medication is filled by partner compounding pharmacies.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Visit fee", "form": "compounded", "monthly_cost": 75 },
+      { "dose": "Compounded semaglutide (typical)", "form": "compounded", "monthly_cost": 250 },
+      { "dose": "Compounded tirzepatide (typical)", "form": "compounded", "monthly_cost": 350 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.0,
+      "ux": 7.0,
+      "trust": 7.0,
+      "accessibility": 8.5,
+      "support": 6.5
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Direct-to-Provider",
+      "Low Visit Fee"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MO","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://www.pushhealth.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Low $75 visit fee — among the cheapest in the market",
+      "Direct relationship with an individual licensed provider",
+      "Both semaglutide and tirzepatide available",
+      "Wide state coverage"
+    ],
+    "cons": [
+      "Quality varies by individual provider on the platform",
+      "No bundled coaching or dietitian support",
+      "Medication price set by pharmacy, not Push Health"
+    ],
+    "best_for": "lowest-cost provider visit fee",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 3.5,
+      "trustpilot_count": 540
+    }
+  },
+  {
+    "_id": "steadymd",
+    "name": "SteadyMD",
+    "slug": "steadymd",
+    "description": "SteadyMD is a telehealth infrastructure company that also offers a direct-to-consumer GLP-1 weight-loss program with board-certified clinicians. It focuses on continuity of care — patients are matched to one primary clinician for the duration of treatment.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 297 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 347 },
+      { "dose": "1mg", "form": "compounded", "monthly_cost": 397 }
+    ],
+    "scores": {
+      "value": 7.0,
+      "effectiveness": 8.0,
+      "ux": 7.5,
+      "trust": 8.0,
+      "accessibility": 8.5,
+      "support": 8.0
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Dedicated Clinician",
+      "Video Calls",
+      "All 50 States"
+    ],
+    "states_available": [
+      "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+      "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC",
+      "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
+    ],
+    "affiliate_url": "https://www.steadymd.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Same dedicated clinician for every visit — true continuity",
+      "Board-certified providers, not nurse practitioners only",
+      "Available in all 50 states",
+      "Video visits included, not text-only"
+    ],
+    "cons": [
+      "Higher per-month price than budget compounders",
+      "No nutrition coaching bundled",
+      "Brand recognition lower than Hims/Ro"
+    ],
+    "best_for": "continuity with one dedicated clinician",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.2,
+      "trustpilot_count": 310
+    }
+  },
+  {
+    "_id": "kickoff-health",
+    "name": "Kickoff Health",
+    "slug": "kickoff-health",
+    "description": "Kickoff Health pairs GLP-1 medication with a dedicated 1-on-1 human coach who checks in daily via text. The coaching-first model is designed to maximize long-term weight maintenance after the medication tapers.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Coaching + compounded semaglutide", "form": "compounded", "monthly_cost": 297 },
+      { "dose": "Coaching + compounded tirzepatide", "form": "compounded", "monthly_cost": 397 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 8.0,
+      "ux": 8.0,
+      "trust": 7.5,
+      "accessibility": 8.0,
+      "support": 9.0
+    },
+    "features": [
+      "Compounded",
+      "1-on-1 Coaching",
+      "Daily Check-Ins",
+      "Semaglutide",
+      "Tirzepatide"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MO","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://www.kickoffhealth.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Dedicated human coach with daily text check-ins",
+      "Coaching is the core product, not an upsell",
+      "Both semaglutide and tirzepatide options",
+      "Strong focus on long-term maintenance after taper"
+    ],
+    "cons": [
+      "Higher price reflects the coaching component",
+      "Coaching depth varies by individual coach",
+      "No video visits with prescribing clinician"
+    ],
+    "best_for": "daily 1-on-1 coaching support",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.4,
+      "trustpilot_count": 480
+    }
+  },
+  {
+    "_id": "ivim-health",
+    "name": "Ivim Health",
+    "slug": "ivim-health",
+    "description": "Ivim Health is a physician-founded telehealth weight-loss clinic offering compounded semaglutide and tirzepatide alongside a structured 6-month metabolic reset program. Available in 40+ states with both telehealth and in-person clinic locations.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "0.25mg", "form": "compounded", "monthly_cost": 269 },
+      { "dose": "0.5mg", "form": "compounded", "monthly_cost": 319 },
+      { "dose": "Tirzepatide starter", "form": "compounded", "monthly_cost": 399 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 8.0,
+      "ux": 7.5,
+      "trust": 8.0,
+      "accessibility": 8.0,
+      "support": 8.0
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Hybrid Telehealth + Clinics",
+      "Metabolic Program"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MO","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://www.ivimhealth.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Physician-founded with strong clinical credentials",
+      "Hybrid model: telehealth plus brick-and-mortar clinics",
+      "Structured 6-month metabolic reset program",
+      "Both semaglutide and tirzepatide offered"
+    ],
+    "cons": [
+      "Pricing is mid-tier — not the cheapest",
+      "Multi-month commitment encouraged for best results",
+      "Smaller brand than Hims/Ro/Found"
+    ],
+    "best_for": "hybrid in-person + virtual care",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.3,
+      "trustpilot_count": 360
+    }
+  },
+  {
+    "_id": "voy-health",
+    "name": "Voy Health",
+    "slug": "voy-health",
+    "description": "Voy Health is a clinician-led weight-loss program offering branded GLP-1s like Wegovy and Mounjaro along with one-on-one nutritionist support. Originally launched in the UK, Voy expanded to the US with a focus on FDA-approved medications rather than compounded.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Wegovy starter", "form": "brand", "monthly_cost": 299 },
+      { "dose": "Mounjaro starter", "form": "brand", "monthly_cost": 449 }
+    ],
+    "scores": {
+      "value": 7.0,
+      "effectiveness": 8.5,
+      "ux": 8.5,
+      "trust": 8.0,
+      "accessibility": 7.0,
+      "support": 8.0
+    },
+    "features": [
+      "Brand Available",
+      "Wegovy",
+      "Mounjaro",
+      "Nutritionist Support",
+      "App-Based"
+    ],
+    "states_available": [
+      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
+      "NC","NJ","NY","OH","PA","TX","VA","WA","WI","AZ",
+      "NV","OR","UT","TN","MO"
+    ],
+    "affiliate_url": "https://joinvoy.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "FDA-approved branded GLP-1s only — no compounded",
+      "Polished app experience with progress tracking",
+      "One-on-one nutritionist included",
+      "Strong UK clinical heritage"
+    ],
+    "cons": [
+      "Limited US state availability",
+      "Brand-only model means higher out-of-pocket without insurance",
+      "Newer to the US market"
+    ],
+    "best_for": "branded Wegovy and Mounjaro with coaching",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.5,
+      "trustpilot_count": 1700
+    }
+  },
+  {
+    "_id": "knownwell",
+    "name": "Knownwell",
+    "slug": "knownwell",
+    "description": "Knownwell is a weight-inclusive primary care and obesity medicine clinic offering virtual and in-person visits. It accepts most major insurance plans and prescribes FDA-approved GLP-1s like Wegovy, Zepbound, and Mounjaro alongside primary care.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Visit (insurance billed)", "form": "brand", "monthly_cost": 0 },
+      { "dose": "Self-pay visit", "form": "brand", "monthly_cost": 175 }
+    ],
+    "scores": {
+      "value": 8.0,
+      "effectiveness": 8.5,
+      "ux": 7.5,
+      "trust": 8.5,
+      "accessibility": 7.0,
+      "support": 8.5
+    },
+    "features": [
+      "Brand Available",
+      "Insurance Accepted",
+      "Primary Care Included",
+      "Obesity Medicine Specialists",
+      "Weight-Inclusive Care"
+    ],
+    "states_available": [
+      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
+      "NC","NJ","NY","OH","PA","TX","VA","WA","WI","AZ"
+    ],
+    "affiliate_url": "https://www.knownwell.health",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Accepts most major insurance plans",
+      "Weight-inclusive, non-judgmental clinical model",
+      "Combines primary care with obesity medicine",
+      "Board-certified obesity medicine physicians"
+    ],
+    "cons": [
+      "Limited state availability",
+      "No compounded GLP-1 alternative if insurance denies",
+      "Self-pay visits add up without coverage"
+    ],
+    "best_for": "insurance-billed obesity medicine care",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.2,
+      "trustpilot_count": 180
+    }
+  },
+  {
+    "_id": "shed-rx",
+    "name": "Shed Rx",
+    "slug": "shed-rx",
+    "description": "Shed Rx is a Utah-based telehealth provider offering compounded semaglutide and tirzepatide with transparent flat-rate pricing and no monthly membership fees. Known for fast onboarding and free shipping nationwide.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Compounded semaglutide", "form": "compounded", "monthly_cost": 199 },
+      { "dose": "Compounded tirzepatide", "form": "compounded", "monthly_cost": 349 }
+    ],
+    "scores": {
+      "value": 8.5,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 8.5,
+      "support": 7.0
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Flat-Rate Pricing",
+      "Free Shipping",
+      "No Membership Fee"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MO","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://www.shedrx.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Flat-rate pricing with no membership fee",
+      "Both semaglutide and tirzepatide at competitive prices",
+      "Free shipping nationwide",
+      "Fast onboarding compared to brand-focused clinics"
+    ],
+    "cons": [
+      "Compounded only — no brand-name alternatives",
+      "Smaller support team than larger competitors",
+      "Limited coaching component"
+    ],
+    "best_for": "no-frills compounded GLP-1",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.3,
+      "trustpilot_count": 520
+    }
+  },
+  {
+    "_id": "juniper",
+    "name": "Juniper",
+    "slug": "juniper",
+    "description": "Juniper is a women-focused weight-loss program combining branded GLP-1 medication with a dedicated health coach, dietitian, and personalized lifestyle program. Originally Australian, it expanded to the US with a strong clinical research backbone.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Program + medication", "form": "brand", "monthly_cost": 349 }
+    ],
+    "scores": {
+      "value": 7.0,
+      "effectiveness": 8.5,
+      "ux": 8.5,
+      "trust": 8.0,
+      "accessibility": 7.0,
+      "support": 9.0
+    },
+    "features": [
+      "Brand Available",
+      "Women-Focused",
+      "Health Coach",
+      "Dietitian",
+      "App-Based"
+    ],
+    "states_available": [
+      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
+      "NC","NJ","NY","OH","PA","TX","VA","WA","WI","AZ",
+      "NV","OR","UT","TN","MO"
+    ],
+    "affiliate_url": "https://www.myjuniper.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Women-focused care model with female clinicians",
+      "Bundled health coach and dietitian support",
+      "Polished app and onboarding",
+      "Strong research and outcomes reporting"
+    ],
+    "cons": [
+      "Higher monthly price than compounded competitors",
+      "Limited US state availability",
+      "Women-only — not for men"
+    ],
+    "best_for": "women-focused branded GLP-1 program",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.4,
+      "trustpilot_count": 2200
+    }
+  },
+  {
+    "_id": "embla",
+    "name": "Embla",
+    "slug": "embla",
+    "description": "Embla is a behavior-change-first weight-loss clinic that pairs GLP-1 medication with cognitive-behavioral coaching from licensed psychologists. The program emphasizes long-term habit formation alongside pharmacotherapy.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Program + compounded semaglutide", "form": "compounded", "monthly_cost": 299 }
+    ],
+    "scores": {
+      "value": 7.0,
+      "effectiveness": 8.0,
+      "ux": 8.0,
+      "trust": 7.5,
+      "accessibility": 7.0,
+      "support": 8.5
+    },
+    "features": [
+      "Compounded",
+      "Behavioral Coaching",
+      "Psychologist Support",
+      "App-Based",
+      "Long-Term Focus"
+    ],
+    "states_available": [
+      "CA","CO","CT","FL","GA","IL","MA","MD","MI","MN",
+      "NC","NJ","NY","OH","PA","TX","VA","WA","WI","AZ"
+    ],
+    "affiliate_url": "https://www.embla.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Cognitive-behavioral coaching from licensed psychologists",
+      "Long-term habit-formation focus",
+      "Polished app with progress tracking",
+      "Designed for sustainable weight maintenance"
+    ],
+    "cons": [
+      "Higher price reflects coaching component",
+      "Limited US state availability",
+      "No brand-name medication option"
+    ],
+    "best_for": "behavior-change focused care",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.3,
+      "trustpilot_count": 410
+    }
+  },
+  {
+    "_id": "reliem",
+    "name": "Reliem",
+    "slug": "reliem",
+    "description": "Reliem is a direct-to-consumer compounded GLP-1 provider offering semaglutide and tirzepatide at flat monthly rates with no membership fees. Designed for cost-conscious patients who want straightforward pricing and fast shipping.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Compounded semaglutide", "form": "compounded", "monthly_cost": 179 },
+      { "dose": "Compounded tirzepatide", "form": "compounded", "monthly_cost": 329 }
+    ],
+    "scores": {
+      "value": 8.5,
+      "effectiveness": 7.5,
+      "ux": 7.0,
+      "trust": 7.0,
+      "accessibility": 8.5,
+      "support": 7.0
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Flat-Rate Pricing",
+      "No Membership Fee"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MO","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://www.reliem.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Among the lowest monthly prices for compounded semaglutide",
+      "No membership fee — pay only for medication",
+      "Both semaglutide and tirzepatide available",
+      "Fast shipping"
+    ],
+    "cons": [
+      "Newer brand with limited independent reviews",
+      "Compounded only — no brand-name option",
+      "Minimal coaching or dietitian support"
+    ],
+    "best_for": "cheapest flat-rate compounded semaglutide",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.0,
+      "trustpilot_count": 220
+    }
+  },
+  {
+    "_id": "klinic",
+    "name": "Klinic",
+    "slug": "klinic",
+    "description": "Klinic is a telehealth marketplace connecting patients with licensed clinicians for GLP-1 weight-loss prescriptions. Patients can choose from semaglutide or tirzepatide, fulfilled through partner compounding pharmacies with transparent flat pricing.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      { "dose": "Compounded semaglutide", "form": "compounded", "monthly_cost": 229 },
+      { "dose": "Compounded tirzepatide", "form": "compounded", "monthly_cost": 379 }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 7.0,
+      "accessibility": 8.0,
+      "support": 7.0
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Marketplace Model",
+      "Flat-Rate Pricing"
+    ],
+    "states_available": [
+      "AL","AZ","AR","CA","CO","CT","DE","FL","GA",
+      "IL","IN","IA","KS","KY","LA","ME","MD",
+      "MA","MI","MN","MO","NE","NV","NH","NJ",
+      "NM","NY","NC","OH","OK","OR","PA","RI","SC",
+      "TN","TX","UT","VT","VA","WA","WV","WI"
+    ],
+    "affiliate_url": "https://www.klinic.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Transparent flat-rate pricing across doses",
+      "Both semaglutide and tirzepatide available",
+      "Wide state coverage",
+      "Marketplace model offers clinician choice"
+    ],
+    "cons": [
+      "Quality varies by individual provider on the marketplace",
+      "Limited bundled coaching",
+      "Smaller brand than legacy telehealth players"
+    ],
+    "best_for": "marketplace-style clinician choice",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.0,
+      "trustpilot_count": 290
+    }
   }
 ]
