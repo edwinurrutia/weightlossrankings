@@ -11,6 +11,7 @@ import { getProvidersByState } from "@/lib/data";
 import { getStateContent } from "@/lib/states-content";
 import type { Provider } from "@/lib/types";
 import ProviderGrid from "@/components/providers/ProviderGrid";
+import { computeOverallScore } from "@/lib/scoring";
 import CTAButton from "@/components/shared/CTAButton";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import EmailCapture from "@/components/shared/EmailCapture";
@@ -65,7 +66,15 @@ export default async function CityPage({
   if (!city) notFound();
 
   const allProviders: Provider[] = await getProvidersByState(city.state_code);
-  const providers = allProviders.filter((p) => GLP1_CATEGORIES.has(p.category));
+  // Filter to GLP-1 providers, then SORT BY OVERALL SCORE (descending) so
+  // the top-ranked provider in this city always appears first. The
+  // previous version implicitly sorted alphabetically, which buried
+  // 9.0-rated providers behind 7.x-rated alphabetically-earlier ones.
+  const providers = allProviders
+    .filter((p) => GLP1_CATEGORIES.has(p.category))
+    .sort(
+      (a, b) => computeOverallScore(b.scores) - computeOverallScore(a.scores),
+    );
   const stateContent = getStateContent(city.state_code);
   const avgPrice = stateContent?.average_compounded_price_monthly ?? 199;
   const dataAsOf = getLatestVerificationDate();
@@ -153,19 +162,8 @@ export default async function CityPage({
               (2026)
             </>
           }
-          subtitle={`Compare ${providers.length} GLP-1 telehealth providers serving ${city.city}, ${city.state}. Average compounded semaglutide cost: $${avgPrice}/mo.`}
+          subtitle={`${providers.length} GLP-1 telehealth providers ship to ${city.city}, ${city.state}. Compounded semaglutide averages $${avgPrice}/month — same active ingredient as Wegovy and Ozempic, a fraction of the cost.`}
         >
-          <div className="flex flex-wrap gap-3 pt-2">
-            <span className="inline-flex items-center rounded-full bg-brand-surface px-3 py-1 text-sm font-medium text-brand-text-primary border border-brand-border">
-              {providers.length} providers
-            </span>
-            <span className="inline-flex items-center rounded-full bg-brand-surface px-3 py-1 text-sm font-medium text-brand-text-primary border border-brand-border">
-              ${avgPrice}/mo average
-            </span>
-            <span className="inline-flex items-center rounded-full bg-brand-surface px-3 py-1 text-sm font-medium text-brand-text-primary border border-brand-border">
-              Pop. {city.population.toLocaleString()}
-            </span>
-          </div>
           <AffiliateDisclosure />
         </PageHero>
 
