@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAllProviders } from "@/lib/data";
@@ -210,6 +211,29 @@ const CATEGORY_MAP: Record<string, CategoryDef> = {
   },
 };
 
+const CATEGORY_HERO_IMAGE: Record<string, string> = {
+  "semaglutide-providers":
+    "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1600&q=80&auto=format&fit=crop",
+  "tirzepatide-providers":
+    "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=1600&q=80&auto=format&fit=crop",
+  "compounded-semaglutide":
+    "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1600&q=80&auto=format&fit=crop",
+  "compounded-tirzepatide":
+    "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1600&q=80&auto=format&fit=crop",
+  "cheapest-semaglutide":
+    "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=1600&q=80&auto=format&fit=crop",
+  "cheapest-tirzepatide":
+    "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=1600&q=80&auto=format&fit=crop",
+  "weight-loss-programs":
+    "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&q=80&auto=format&fit=crop",
+  "weight-loss-supplements":
+    "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80&auto=format&fit=crop",
+  "meal-delivery-for-weight-loss":
+    "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1600&q=80&auto=format&fit=crop",
+  "fitness-apps-for-weight-loss":
+    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80&auto=format&fit=crop",
+};
+
 export function generateStaticParams() {
   return Object.keys(CATEGORY_MAP).map((category) => ({ category }));
 }
@@ -327,28 +351,65 @@ export default async function RankingsPage({
           { name: label, url: `/best/${category}` },
         ]}
       />
+      {CATEGORY_HERO_IMAGE[category] && (
+        <div className="relative w-full h-[260px] sm:h-[300px] overflow-hidden bg-brand-text-primary">
+          <Image
+            src={CATEGORY_HERO_IMAGE[category]}
+            alt={label}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-80"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-8">
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-white/80 mb-2">
+                Updated {updatedDate} · Expert Reviewed
+              </span>
+              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.1] tracking-tight max-w-3xl">
+                {label.startsWith("Best") || label.startsWith("Cheapest") || label.startsWith("Compounded")
+                  ? label
+                  : `Best ${label}`}{" "}
+                in 2026
+              </h1>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
 
-        <PageHero
-          badges={[
-            { icon: "📅", text: `Updated ${updatedDate}` },
-            { icon: "✅", text: "Expert Reviewed" },
-          ]}
-          title={
-            <>
-              {label.startsWith("Best") || label.startsWith("Cheapest") || label.startsWith("Compounded")
-                ? label
-                : `Best ${label}`}{" "}
-              in 2026 —{" "}
-              <span className="bg-brand-gradient bg-clip-text text-transparent">
-                Ranked &amp; Reviewed
-              </span>
-            </>
-          }
-          subtitle={intro}
-        >
-          <AffiliateDisclosure />
-        </PageHero>
+        {!CATEGORY_HERO_IMAGE[category] && (
+          <PageHero
+            badges={[
+              { icon: "📅", text: `Updated ${updatedDate}` },
+              { icon: "✅", text: "Expert Reviewed" },
+            ]}
+            title={
+              <>
+                {label.startsWith("Best") || label.startsWith("Cheapest") || label.startsWith("Compounded")
+                  ? label
+                  : `Best ${label}`}{" "}
+                in 2026 —{" "}
+                <span className="bg-brand-gradient bg-clip-text text-transparent">
+                  Ranked &amp; Reviewed
+                </span>
+              </>
+            }
+            subtitle={intro}
+          >
+            <AffiliateDisclosure />
+          </PageHero>
+        )}
+
+        {CATEGORY_HERO_IMAGE[category] && (
+          <div className="space-y-4">
+            <p className="text-lg text-brand-text-secondary leading-relaxed max-w-3xl">
+              {intro}
+            </p>
+            <AffiliateDisclosure />
+          </div>
+        )}
 
         <DYORCallout variant="compact" />
 

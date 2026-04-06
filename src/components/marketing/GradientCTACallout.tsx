@@ -11,6 +11,14 @@ interface GradientCTACalloutProps {
   align?: "left" | "center";
 }
 
+/**
+ * Editorial CTA callout.
+ *
+ * Note: Despite the legacy name, this callout no longer uses the full
+ * brand gradient as a section background. Instead it's a clean off-white
+ * card with a left accent bar in brand violet, and the gradient is
+ * reserved for the primary CTA button inside.
+ */
 export default function GradientCTACallout({
   heading,
   description,
@@ -21,23 +29,36 @@ export default function GradientCTACallout({
   trackSource,
   align = "center",
 }: GradientCTACalloutProps) {
-  const alignClass = align === "center" ? "text-center" : "text-left";
+  const alignClass = align === "center" ? "text-center items-center" : "text-left items-start";
   return (
     <section
-      className={`rounded-2xl bg-brand-gradient p-6 sm:p-8 text-white ${alignClass}`}
+      className={`relative rounded-2xl bg-brand-bg-purple border border-brand-violet/15 p-8 sm:p-10 flex flex-col gap-4 ${alignClass} overflow-hidden`}
     >
-      <h2 className="font-heading text-2xl font-bold mb-2">{heading}</h2>
-      {description && <p className="text-white/85 mb-5">{description}</p>}
-      <CTAButton
-        href={ctaHref}
-        external={external}
-        variant="white"
-        size="lg"
-        trackProvider={trackProvider}
-        trackSource={trackSource}
-      >
-        {ctaText}
-      </CTAButton>
+      {/* Left accent bar */}
+      <span
+        aria-hidden="true"
+        className="absolute inset-y-0 left-0 w-1.5 bg-brand-violet"
+      />
+      <h2 className="font-heading text-2xl sm:text-3xl font-bold text-brand-text-primary tracking-tight">
+        {heading}
+      </h2>
+      {description && (
+        <p className="text-brand-text-secondary max-w-2xl leading-relaxed">
+          {description}
+        </p>
+      )}
+      <div className="mt-2">
+        <CTAButton
+          href={ctaHref}
+          external={external}
+          variant="primary"
+          size="lg"
+          trackProvider={trackProvider}
+          trackSource={trackSource}
+        >
+          {ctaText}
+        </CTAButton>
+      </div>
     </section>
   );
 }
