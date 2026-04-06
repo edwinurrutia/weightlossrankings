@@ -1,4 +1,4 @@
-import type { Provider, BlogPost } from "@/lib/types";
+import type { Provider, BlogPost, DrugType } from "@/lib/types";
 import providersData from "@/data/providers.json";
 import blogPostsData from "@/data/blog-posts.json";
 import { validateProvider } from "@/lib/schema";
@@ -33,6 +33,43 @@ export async function getFeaturedProviders(): Promise<Provider[]> {
     .filter((p) => p.is_featured)
     .sort((a, b) => a.name.localeCompare(b.name))
     .slice(0, 3);
+}
+
+export async function getProvidersByDrug(
+  drug: DrugType
+): Promise<Provider[]> {
+  const all = await getAllProviders();
+  return all.filter((p) =>
+    p.pricing.some((pr) => pr.drug === drug)
+  );
+}
+
+export async function getProvidersByDrugAndForm(
+  drug: DrugType,
+  form: "compounded" | "brand"
+): Promise<Provider[]> {
+  const all = await getAllProviders();
+  return all.filter((p) =>
+    p.pricing.some((pr) => pr.drug === drug && pr.form === form)
+  );
+}
+
+export async function getCheapestProvidersByDrug(
+  drug: DrugType,
+  limit?: number
+): Promise<Provider[]> {
+  const providers = await getProvidersByDrug(drug);
+  const withPrice = providers.map((p) => {
+    const drugPrices = p.pricing.filter((pr) => pr.drug === drug);
+    const minPrice = Math.min(
+      ...drugPrices.map((pr) => pr.promo_price ?? pr.monthly_cost)
+    );
+    return { provider: p, minPrice };
+  });
+  withPrice.sort((a, b) => a.minPrice - b.minPrice);
+  const sliced =
+    limit !== undefined ? withPrice.slice(0, limit) : withPrice;
+  return sliced.map((x) => x.provider);
 }
 
 export async function getProvidersByState(

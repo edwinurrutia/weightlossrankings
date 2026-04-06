@@ -9,26 +9,31 @@
       {
         "dose": "0.25mg",
         "form": "compounded",
+        "drug": "semaglutide",
         "monthly_cost": 149
       },
       {
         "dose": "0.5mg",
         "form": "compounded",
+        "drug": "semaglutide",
         "monthly_cost": 199
       },
       {
         "dose": "1mg",
         "form": "compounded",
+        "drug": "semaglutide",
         "monthly_cost": 249
       },
       {
         "dose": "1.7mg",
         "form": "compounded",
+        "drug": "semaglutide",
         "monthly_cost": 299
       },
       {
         "dose": "2.5mg",
         "form": "compounded",
+        "drug": "tirzepatide",
         "monthly_cost": 349
       }
     ],
@@ -170,12 +175,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -282,12 +287,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -392,12 +397,12 @@
       }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -502,10 +507,10 @@
     "scores": {
       "value": 8.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -609,12 +614,12 @@
       }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -706,10 +711,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -804,12 +809,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -902,10 +907,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -1000,12 +1005,12 @@
       }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -1097,10 +1102,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -1205,12 +1210,12 @@
       }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -1302,10 +1307,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -1395,10 +1400,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -1499,12 +1504,12 @@
       }
     ],
     "scores": {
-      "value": 5.0,
+      "value": 5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Brand Name",
@@ -1610,10 +1615,10 @@
     "scores": {
       "value": 8.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -1706,10 +1711,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -1799,10 +1804,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -1905,12 +1910,12 @@
       }
     ],
     "scores": {
-      "value": 5.0,
+      "value": 5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2009,10 +2014,10 @@
     "scores": {
       "value": 8.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2103,10 +2108,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -2196,10 +2201,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -2307,12 +2312,12 @@
       }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2411,12 +2416,12 @@
       }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2511,12 +2516,12 @@
       }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2623,12 +2628,12 @@
       }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2731,12 +2736,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2842,12 +2847,12 @@
       }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -2939,10 +2944,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -3043,12 +3048,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -3152,12 +3157,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -3250,10 +3255,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Not Currently Offered"
@@ -3349,12 +3354,12 @@
       }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -3459,10 +3464,10 @@
     "scores": {
       "value": 8.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -3555,10 +3560,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -3648,10 +3653,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -3754,12 +3759,12 @@
       }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -3862,12 +3867,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -3965,12 +3970,12 @@
       }
     ],
     "scores": {
-      "value": 6.0,
+      "value": 6,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -4062,10 +4067,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -4155,10 +4160,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -4248,10 +4253,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -4341,10 +4346,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -4434,10 +4439,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Not Currently Offered"
@@ -4540,12 +4545,12 @@
       }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -4654,12 +4659,12 @@
       }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -4764,12 +4769,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -4877,12 +4882,12 @@
       }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -4987,10 +4992,10 @@
     "scores": {
       "value": 8.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -5098,10 +5103,10 @@
     "scores": {
       "value": 8.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -5205,12 +5210,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -5303,10 +5308,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -5411,12 +5416,12 @@
       }
     ],
     "scores": {
-      "value": 6.0,
+      "value": 6,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -5519,12 +5524,12 @@
       }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -5616,10 +5621,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -5709,10 +5714,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -5802,10 +5807,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -5910,12 +5915,12 @@
       }
     ],
     "scores": {
-      "value": 6.0,
+      "value": 6,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -6031,12 +6036,12 @@
       }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -6135,12 +6140,12 @@
       }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -6232,10 +6237,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -6325,10 +6330,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -6418,10 +6423,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -6522,12 +6527,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -6626,12 +6631,12 @@
       }
     ],
     "scores": {
-      "value": 8.0,
+      "value": 8,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -6736,10 +6741,10 @@
     "scores": {
       "value": 8.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -6832,10 +6837,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Not Currently Offered"
@@ -6925,10 +6930,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -7018,10 +7023,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -7111,10 +7116,10 @@
     "scores": {
       "value": 6.5,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Semaglutide",
@@ -7209,12 +7214,12 @@
       }
     ],
     "scores": {
-      "value": 9.0,
+      "value": 9,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",
@@ -7316,12 +7321,12 @@
       }
     ],
     "scores": {
-      "value": 7.0,
+      "value": 7,
       "effectiveness": 7.5,
-      "ux": 7.0,
-      "trust": 7.0,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7.5,
-      "support": 7.0
+      "support": 7
     },
     "features": [
       "Compounded",

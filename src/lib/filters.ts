@@ -78,6 +78,14 @@ export function filterProviders(
     );
   }
 
+  // Filter by drug (semaglutide or tirzepatide)
+  if (filters.drug) {
+    result = result.filter(
+      (p) =>
+        p.pricing && p.pricing.some((pricing) => pricing.drug === filters.drug)
+    );
+  }
+
   // Filter by form (compounded or brand)
   if (filters.form) {
     result = result.filter(

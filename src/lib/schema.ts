@@ -3,6 +3,7 @@ import { z } from "zod";
 export const PricingSchema = z.object({
   dose: z.string().min(1, "pricing.dose is required"),
   form: z.enum(["compounded", "brand"]),
+  drug: z.enum(["semaglutide", "tirzepatide"]).optional(),
   monthly_cost: z
     .number()
     .positive("pricing.monthly_cost must be > 0")

@@ -1,6 +1,9 @@
+export type DrugType = "semaglutide" | "tirzepatide";
+
 export interface Pricing {
   dose: string;
   form: "compounded" | "brand";
+  drug?: DrugType;
   monthly_cost: number;
   promo_code?: string;
   promo_price?: number;
@@ -109,6 +112,7 @@ export type SortOption = "cheapest" | "highest-rated" | "most-reviewed";
 export interface FilterState {
   category?: string;
   drug_type?: string;
+  drug?: DrugType;
   form?: string;
   state?: string;
   dose?: string;
