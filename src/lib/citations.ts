@@ -272,6 +272,508 @@ const CITATIONS_LIST: CitationEntry[] = [
     pmid: "34170647",
     doi: "10.1056/NEJMoa2107519",
   },
+
+  // ── Clinical Trials — Semaglutide STEP family ────────────────────────────
+  // The STEP (Semaglutide Treatment Effect in People with Obesity) program is
+  // the pivotal Phase 3 evidence base supporting Wegovy's obesity indication.
+  // STEP 1 is registered above; STEP 2–8, STEP TEENS, and STEP-HFpEF are
+  // appended here as primary references for efficacy, safety, withdrawal
+  // dynamics, head-to-head data, adolescents, and heart-failure outcomes.
+
+  {
+    id: "step2-lancet-2021",
+    label:
+      "STEP 2 Trial — Semaglutide 2.4 mg Once a Week in Adults with Overweight or Obesity and Type 2 Diabetes (Davies M et al.)",
+    publisher: "The Lancet",
+    url: "https://pubmed.ncbi.nlm.nih.gov/33667417/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2021",
+    pmid: "33667417",
+  },
+  {
+    id: "step3-jama-2021",
+    label:
+      "STEP 3 Trial — Effect of Semaglutide vs Placebo as Adjunct to Intensive Behavioral Therapy on Body Weight (Wadden TA et al.)",
+    publisher: "JAMA",
+    url: "https://pubmed.ncbi.nlm.nih.gov/33625476/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2021",
+    pmid: "33625476",
+  },
+  {
+    id: "step4-jama-2021",
+    label:
+      "STEP 4 Trial — Effect of Continued Weekly Subcutaneous Semaglutide vs Placebo on Weight Loss Maintenance (Rubino D et al.)",
+    publisher: "JAMA",
+    url: "https://pubmed.ncbi.nlm.nih.gov/33755728/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2021",
+    pmid: "33755728",
+  },
+  {
+    id: "step5-natmed-2022",
+    label:
+      "STEP 5 Trial — Two-Year Effects of Semaglutide in Adults with Overweight or Obesity (Garvey WT et al.)",
+    publisher: "Nature Medicine",
+    url: "https://pubmed.ncbi.nlm.nih.gov/36216945/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2022",
+    pmid: "36216945",
+  },
+  {
+    id: "step8-jama-2022",
+    label:
+      "STEP 8 Trial — Effect of Weekly Subcutaneous Semaglutide vs Daily Liraglutide on Body Weight (Rubino DM et al.)",
+    publisher: "JAMA",
+    url: "https://pubmed.ncbi.nlm.nih.gov/35015037/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2022",
+    pmid: "35015037",
+  },
+  {
+    id: "step-teens-nejm-2022",
+    label:
+      "STEP TEENS Trial — Once-Weekly Semaglutide in Adolescents with Obesity (Weghuber D et al.)",
+    publisher: "New England Journal of Medicine",
+    url: "https://pubmed.ncbi.nlm.nih.gov/35323065/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2022",
+    pmid: "35323065",
+  },
+  {
+    id: "step-hfpef-nejm-2023",
+    label:
+      "STEP-HFpEF Trial — Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity (Kosiborod MN et al.)",
+    publisher: "New England Journal of Medicine",
+    url: "https://pubmed.ncbi.nlm.nih.gov/37622681/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2023",
+    pmid: "37622681",
+  },
+
+  // ── Clinical Trials — Semaglutide cardiovascular & renal outcomes ────────
+  // SUSTAIN-6 established the CV safety / benefit signal in T2D that
+  // ultimately motivated SELECT in obesity. FLOW extended the evidence to
+  // chronic kidney disease outcomes.
+
+  {
+    id: "sustain6-nejm-2016",
+    label:
+      "SUSTAIN-6 Trial — Semaglutide and Cardiovascular Outcomes in Patients with Type 2 Diabetes (Marso SP et al.)",
+    publisher: "New England Journal of Medicine",
+    url: "https://pubmed.ncbi.nlm.nih.gov/27633186/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2016",
+    pmid: "27633186",
+  },
+  {
+    id: "flow-nejm-2024",
+    label:
+      "FLOW Trial — Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes (Perkovic V et al.)",
+    publisher: "New England Journal of Medicine",
+    url: "https://pubmed.ncbi.nlm.nih.gov/38785288/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+    pmid: "38785288",
+  },
+
+  // ── Clinical Trials — Tirzepatide SURMOUNT and SURPASS programs ──────────
+  // SURMOUNT is the obesity Phase 3 program supporting Zepbound; SURPASS is
+  // the type 2 diabetes Phase 3 program supporting Mounjaro. SURMOUNT-1 and
+  // SURMOUNT-5 are registered above and intentionally not duplicated here.
+
+  {
+    id: "surmount2-lancet-2023",
+    label:
+      "SURMOUNT-2 Trial — Tirzepatide for the Treatment of Obesity in People with Type 2 Diabetes (Garvey WT et al.)",
+    publisher: "The Lancet",
+    url: "https://pubmed.ncbi.nlm.nih.gov/37356449/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2023",
+    pmid: "37356449",
+  },
+  {
+    id: "surmount3-natmed-2024",
+    label:
+      "SURMOUNT-3 Trial — Tirzepatide After Intensive Lifestyle Intervention in Adults with Overweight or Obesity (Wadden TA et al.)",
+    publisher: "Nature Medicine",
+    url: "https://pubmed.ncbi.nlm.nih.gov/38334595/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+    pmid: "38334595",
+  },
+  {
+    id: "surmount4-jama-2023",
+    label:
+      "SURMOUNT-4 Trial — Continued vs. Withdrawn Tirzepatide for Maintenance of Weight Reduction (Aronne LJ et al.)",
+    publisher: "JAMA",
+    url: "https://pubmed.ncbi.nlm.nih.gov/38078870/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2023",
+    pmid: "38078870",
+  },
+  {
+    id: "surpass1-lancet-2021",
+    label:
+      "SURPASS-1 Trial — Tirzepatide versus Placebo as Monotherapy in Type 2 Diabetes (Rosenstock J et al.)",
+    publisher: "The Lancet",
+    url: "https://pubmed.ncbi.nlm.nih.gov/34186022/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2021",
+    pmid: "34186022",
+  },
+  {
+    id: "surpass3-lancet-2021",
+    label:
+      "SURPASS-3 Trial — Tirzepatide versus Insulin Degludec in Type 2 Diabetes (Ludvik B et al.)",
+    publisher: "The Lancet",
+    url: "https://pubmed.ncbi.nlm.nih.gov/34370970/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2021",
+    pmid: "34370970",
+  },
+  {
+    id: "surpass4-lancet-2021",
+    label:
+      "SURPASS-4 Trial — Tirzepatide versus Insulin Glargine in Type 2 Diabetes with High Cardiovascular Risk (Del Prato S et al.)",
+    publisher: "The Lancet",
+    url: "https://pubmed.ncbi.nlm.nih.gov/34508103/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2021",
+    pmid: "34508103",
+  },
+
+  // ── Clinical Trials — Oral semaglutide and next-generation incretins ─────
+
+  {
+    id: "oasis1-lancet-2023",
+    label:
+      "OASIS 1 Trial — Oral Semaglutide 50 mg for the Treatment of Adults with Overweight or Obesity (Knop FK et al.)",
+    publisher: "The Lancet",
+    url: "https://pubmed.ncbi.nlm.nih.gov/37364588/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2023",
+    pmid: "37364588",
+  },
+
+  // ── Clinical Trials — Liraglutide predecessor reference ──────────────────
+  // Liraglutide (Saxenda/Victoza) is the first-generation comparator that
+  // anchors many GLP-1 efficacy and safety claims.
+
+  {
+    id: "scale-nejm-2015",
+    label:
+      "SCALE Obesity and Prediabetes Trial — A Randomized, Controlled Trial of 3.0 mg of Liraglutide in Weight Management (Pi-Sunyer X et al.)",
+    publisher: "New England Journal of Medicine",
+    url: "https://pubmed.ncbi.nlm.nih.gov/26132939/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2015",
+    pmid: "26132939",
+  },
+  {
+    id: "lead2-lancet-2009",
+    label:
+      "LEAD-2 Trial — Liraglutide vs Glimepiride as Add-on to Metformin in Type 2 Diabetes (Nauck M et al.)",
+    publisher: "The Lancet",
+    url: "https://pubmed.ncbi.nlm.nih.gov/19216158/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2009",
+    pmid: "19216158",
+  },
+
+  // ── Regulatory — FDA approvals and prescribing information ───────────────
+  // Canonical FDA Drugs@FDA and Access Data landing pages. We intentionally
+  // link to stable parent pages where deep PDF links rotate, so reviewers can
+  // navigate to the current label.
+
+  {
+    id: "fda-wegovy-approval",
+    label: "FDA — Wegovy (semaglutide) Approval History via Drugs@FDA",
+    publisher: "U.S. Food & Drug Administration",
+    url: "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215256",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2021",
+  },
+  {
+    id: "fda-zepbound-approval",
+    label: "FDA — Zepbound (tirzepatide) Approval History via Drugs@FDA",
+    publisher: "U.S. Food & Drug Administration",
+    url: "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217806",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2023",
+  },
+  {
+    id: "fda-ozempic-label",
+    label: "FDA — Ozempic (semaglutide) Prescribing Information via Drugs@FDA",
+    publisher: "U.S. Food & Drug Administration",
+    url: "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209637",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+  },
+  {
+    id: "fda-mounjaro-label",
+    label: "FDA — Mounjaro (tirzepatide) Prescribing Information via Drugs@FDA",
+    publisher: "U.S. Food & Drug Administration",
+    url: "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215866",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2022",
+  },
+  {
+    id: "fda-rybelsus-label",
+    label: "FDA — Rybelsus (oral semaglutide) Prescribing Information via Drugs@FDA",
+    publisher: "U.S. Food & Drug Administration",
+    url: "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213051",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+  },
+
+  // ── Regulatory — Compounding, sterility, and adverse-event surveillance ──
+
+  {
+    id: "fda-faers",
+    label: "FDA Adverse Event Reporting System (FAERS) Public Dashboard",
+    publisher: "U.S. Food & Drug Administration",
+    url: "https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2025",
+  },
+  {
+    id: "usp-797-sterile-compounding",
+    label: "USP General Chapter <797> — Pharmaceutical Compounding: Sterile Preparations",
+    publisher: "United States Pharmacopeia",
+    url: "https://www.usp.org/compounding/general-chapter-797",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2023",
+  },
+  {
+    id: "usp-85-endotoxin",
+    label: "USP General Chapter <85> — Bacterial Endotoxins Test",
+    publisher: "United States Pharmacopeia",
+    url: "https://www.usp.org/harmonization-standards/pdg/general-methods/bacterial-endotoxins",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2023",
+  },
+  {
+    id: "usp-71-sterility",
+    label: "USP General Chapter <71> — Sterility Tests",
+    publisher: "United States Pharmacopeia",
+    url: "https://www.usp.org/harmonization-standards/pdg/general-methods/sterility-tests",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2023",
+  },
+  {
+    id: "pcab-accreditation-standards",
+    label: "PCAB — Pharmacy Compounding Accreditation Board Standards",
+    publisher: "Accreditation Commission for Health Care (ACHC) / PCAB",
+    url: "https://www.achc.org/pharmacy/",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+  },
+
+  // ── Regulatory — Insurance, Medicare, and employer benefit law ───────────
+
+  {
+    id: "cms-medicare-part-d",
+    label: "CMS — Medicare Part D Prescription Drug Coverage Program",
+    publisher: "Centers for Medicare & Medicaid Services",
+    url: "https://www.cms.gov/medicare/coverage/prescription-drug-coverage",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2025",
+  },
+  {
+    id: "medicaid-drug-rebate-program",
+    label: "CMS — Medicaid Drug Rebate Program (MDRP)",
+    publisher: "Centers for Medicare & Medicaid Services",
+    url: "https://www.medicaid.gov/medicaid/prescription-drugs/medicaid-drug-rebate-program/index.html",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2025",
+  },
+  {
+    id: "erisa-employer-health-plans",
+    label: "U.S. Department of Labor — ERISA and Employer Health Plans",
+    publisher: "U.S. Department of Labor, Employee Benefits Security Administration",
+    url: "https://www.dol.gov/general/topic/health-plans/erisa",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+  },
+
+  // ── Guidelines — Clinical practice guidance ──────────────────────────────
+  // Authoritative society and task-force documents that physicians use to
+  // prescribe and manage GLP-1 therapy. Linked at canonical hub URLs that the
+  // issuing body maintains.
+
+  {
+    id: "aace-obesity-guidelines-2016",
+    label:
+      "AACE/ACE Comprehensive Clinical Practice Guidelines for Medical Care of Patients with Obesity (Garvey WT et al., 2016)",
+    publisher: "American Association of Clinical Endocrinology",
+    url: "https://pubmed.ncbi.nlm.nih.gov/27219496/",
+    category: "guideline",
+    accessedDate: "2026-04-06",
+    dataYear: "2016",
+    pmid: "27219496",
+  },
+  {
+    id: "ahacc-obesity-guidelines",
+    label:
+      "2013 AHA/ACC/TOS Guideline for the Management of Overweight and Obesity in Adults (Jensen MD et al.)",
+    publisher: "American Heart Association / American College of Cardiology / The Obesity Society",
+    url: "https://pubmed.ncbi.nlm.nih.gov/24222017/",
+    category: "guideline",
+    accessedDate: "2026-04-06",
+    dataYear: "2014",
+    pmid: "24222017",
+  },
+  {
+    id: "ada-standards-of-care-2025",
+    label: "ADA — Standards of Care in Diabetes (2025)",
+    publisher: "American Diabetes Association",
+    url: "https://diabetesjournals.org/care/issue/48/Supplement_1",
+    category: "guideline",
+    accessedDate: "2026-04-06",
+    dataYear: "2025",
+  },
+  {
+    id: "uspstf-behavioral-weight-loss",
+    label:
+      "USPSTF — Behavioral Weight Loss Interventions to Prevent Obesity-Related Morbidity and Mortality in Adults",
+    publisher: "U.S. Preventive Services Task Force",
+    url: "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/obesity-in-adults-interventions",
+    category: "guideline",
+    accessedDate: "2026-04-06",
+    dataYear: "2018",
+  },
+  {
+    id: "endocrine-society-glp1-guidance",
+    label: "Endocrine Society — Pharmacological Management of Obesity Clinical Practice Guideline",
+    publisher: "The Endocrine Society",
+    url: "https://www.endocrine.org/clinical-practice-guidelines/pharmacological-management-of-obesity",
+    category: "guideline",
+    accessedDate: "2026-04-06",
+    dataYear: "2015",
+  },
+  {
+    id: "obesity-society-position-statement",
+    label: "The Obesity Society — Position Statements and Clinical Resources",
+    publisher: "The Obesity Society",
+    url: "https://www.obesity.org/about/position-statements/",
+    category: "guideline",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+  },
+
+  // ── Statistics — Population health and prevalence ────────────────────────
+
+  {
+    id: "cdc-nhanes-obesity",
+    label: "CDC NHANES — National Health and Nutrition Examination Survey: Obesity and Overweight",
+    publisher: "Centers for Disease Control and Prevention / NCHS",
+    url: "https://www.cdc.gov/nchs/nhanes/index.htm",
+    category: "statistics",
+    accessedDate: "2026-04-06",
+    dataYear: "2023",
+  },
+  {
+    id: "nih-niddk-overweight-obesity",
+    label: "NIH NIDDK — Overweight & Obesity Statistics",
+    publisher: "National Institute of Diabetes and Digestive and Kidney Diseases",
+    url: "https://www.niddk.nih.gov/health-information/health-statistics/overweight-obesity",
+    category: "statistics",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+  },
+  {
+    id: "who-obesity-fact-sheet",
+    label: "WHO — Obesity and Overweight Fact Sheet",
+    publisher: "World Health Organization",
+    url: "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
+    category: "statistics",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+  },
+
+  // ── Statistics — Insurance, access, and spending (KFF and similar) ───────
+
+  {
+    id: "kff-employer-health-benefits-survey",
+    label: "KFF — Employer Health Benefits Annual Survey",
+    publisher: "Kaiser Family Foundation",
+    url: "https://www.kff.org/health-costs/report/employer-health-benefits-annual-survey/",
+    category: "statistics",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+  },
+  {
+    id: "kff-medicare-glp1-spending",
+    label: "KFF — Medicare Spending on GLP-1 Drugs (Ozempic, Wegovy, Mounjaro, Zepbound)",
+    publisher: "Kaiser Family Foundation",
+    url: "https://www.kff.org/medicare/",
+    category: "statistics",
+    accessedDate: "2026-04-06",
+    dataYear: "2024",
+  },
+
+  // ── Pricing — Manufacturer and pharmacy ──────────────────────────────────
+
+  {
+    id: "novocare-rybelsus-cash-price",
+    label: "NovoCare — Rybelsus (oral semaglutide) savings and patient assistance",
+    publisher: "Novo Nordisk (NovoCare)",
+    url: "https://www.novocare.com/diabetes/products/rybelsus/savings-card.html",
+    category: "pricing",
+    accessedDate: "2026-04-06",
+    dataYear: "2026",
+  },
+  {
+    id: "lilly-direct-pharmacy",
+    label: "LillyDirect — Direct-to-patient pharmacy and self-pay vials program",
+    publisher: "Eli Lilly and Company",
+    url: "https://www.lillydirect.com/",
+    category: "pricing",
+    accessedDate: "2026-04-06",
+    dataYear: "2026",
+  },
+  {
+    id: "goodrx-glp1-prices",
+    label:
+      "GoodRx — GLP-1 retail pharmacy price aggregator (note: aggregates cash/coupon retail prices, not insurance-negotiated rates)",
+    publisher: "GoodRx Holdings",
+    url: "https://www.goodrx.com/conditions/weight-loss",
+    category: "pricing",
+    accessedDate: "2026-04-06",
+    dataYear: "2026",
+  },
 ];
 
 // ---------------------------------------------------------------------------
