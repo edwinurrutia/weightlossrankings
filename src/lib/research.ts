@@ -155,6 +155,20 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 5,
     tags: ["Insurance", "Coverage", "Live dataset"],
   },
+  {
+    slug: "glp1-side-effects-what-trials-actually-showed",
+    title:
+      "GLP-1 Side Effects: A Plain-English Guide to What the Trials Actually Showed",
+    description:
+      "What the STEP-1 and SURMOUNT-1 Phase 3 trials actually measured for nausea, vomiting, pancreatitis, gallbladder events, thyroid risk, and the so-called 'Ozempic face' — with every percentage cited to its source PMID. Includes the counterintuitive finding that semaglutide nausea rates exceeded tirzepatide's in head-to-head comparison.",
+    excerpt:
+      "Most plain-English coverage of GLP-1 side effects either understates the gut issues or overstates the rare ones. We pulled the actual adverse-event tables from the STEP-1 and SURMOUNT-1 Phase 3 publications and the FDA-approved labels, and walk through each side effect category with the verified percentages. Includes the counterintuitive finding that semaglutide had higher nausea rates than tirzepatide at the maximum dose in their respective trials — and an honest assessment of which safety signals are real, which are overstated, and which (like 'Ozempic face') aren't actually documented as adverse events at all.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 13,
+    citations: 6,
+    tags: ["Side effects", "Semaglutide", "Tirzepatide", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
