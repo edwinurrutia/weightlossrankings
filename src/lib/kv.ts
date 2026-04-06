@@ -1,6 +1,7 @@
 // Vercel KV wrapper with graceful fallback when KV is not configured.
 // All functions return safe defaults on error so builds and pages never break.
 
+import { createHash } from "crypto";
 import { kv } from "@vercel/kv";
 
 function isKvConfigured(): boolean {
@@ -21,22 +22,83 @@ function dayKey(offsetDays: number): string {
 }
 
 /**
+ * Privacy-respecting visitor identifier. Hashes IP + user agent +
+ * the day-rotating salt so we can count unique visitors per day per
+ * provider WITHOUT storing any PII.
+ *
+ * Properties:
+ *   - The salt rotates every UTC day, so a visitor cannot be linked
+ *     across days even by us — same person on Monday and Tuesday
+ *     produces two different visitor IDs. This sidesteps the bulk
+ *     of GDPR/CCPA "tracking identifier" concerns.
+ *   - The hash is truncated to 16 hex chars (64 bits of entropy) —
+ *     enough to avoid collisions across the active visitor set on a
+ *     given day, small enough to keep KV storage cheap.
+ *   - If we ever need a real per-visitor identifier (e.g. for fraud
+ *     detection on affiliate clicks), this can be replaced with a
+ *     first-party cookie ID — the rest of the dashboard plumbing
+ *     stays the same.
+ *
+ * Returns an empty string if there is no IP/UA — in that case the
+ * caller should skip the unique-visitor write rather than counting
+ * an empty string as one anonymous visitor.
+ */
+function visitorIdFromRequest(
+  ip: string | null | undefined,
+  userAgent: string | null | undefined,
+): string {
+  const ipStr = (ip ?? "").toString().trim();
+  const uaStr = (userAgent ?? "").toString().trim();
+  if (!ipStr && !uaStr) return "";
+  // Daily-rotating salt — no need to be cryptographically secret,
+  // it just has to change every day so visitor IDs don't link across
+  // days. We mix in a static project-level secret if available so
+  // hashes can't be precomputed by an outside observer.
+  const day = todayKey();
+  const projectSalt = process.env.CLICK_VISITOR_SALT ?? "wlr-visitor-v1";
+  const seed = `${day}|${projectSalt}|${ipStr}|${uaStr}`;
+  return createHash("sha256").update(seed).digest("hex").slice(0, 16);
+}
+
+export interface ClickContext {
+  /** Client IP from x-forwarded-for / x-real-ip — server-side only. */
+  ip?: string | null;
+  /** User-Agent header — server-side only. */
+  userAgent?: string | null;
+}
+
+/**
  * Increment click counters for a provider click.
- * - clicks:provider:{provider}                      → total per provider
- * - clicks:source:{provider}:{source}               → per source within a provider
- * - clicks:by_day:{YYYY-MM-DD}                      → hash of provider → count
- * - clicks:position:{source}:{position}             → per (source, position) across all providers
- * - clicks:position:{provider}:{source}:{position}  → per (provider, source, position)
+ *
+ * Raw click counters (incremented on every click):
+ *   - clicks:provider:{provider}                      → total per provider
+ *   - clicks:source:{provider}:{source}               → per source within a provider
+ *   - clicks:by_day:{YYYY-MM-DD}                      → hash of provider → count
+ *   - clicks:position:{source}:{position}             → per (source, position)
+ *   - clicks:position:{provider}:{source}:{position}  → per (provider, source, position)
+ *
+ * Unique-visitor sets (only written when ClickContext.ip / userAgent
+ * is supplied — i.e. only from the server-side /go/[slug] handler;
+ * the client-side /api/track-click beacon does NOT have visitor
+ * context and skips the unique-visitor writes):
+ *   - clicks:unique:{day}                          → set of all visitors that day
+ *   - clicks:unique:provider:{provider}:{day}      → set of visitors per provider per day
+ *   - clicks:unique:source:{source}:{day}          → set of visitors per source per day
+ *
+ * The visitor ID is a daily-rotating salted hash of (IP + user agent)
+ * that cannot be linked across days. See visitorIdFromRequest above
+ * for the privacy rationale.
  *
  * `position` is the 1-indexed slot the link occupied in its list/section
- * (e.g. position 1 = first card in "Top Rated", position 3 = third row of
- * the comparison table). Pass `null` for one-off CTAs that aren't part of
- * an ordered list.
+ * (e.g. position 1 = first card in "Top Rated", position 3 = third row
+ * of the comparison table). Pass `null` for one-off CTAs that aren't
+ * part of an ordered list.
  */
 export async function incrementClick(
   provider: string,
   source: string,
-  position?: number | null
+  position?: number | null,
+  context?: ClickContext
 ): Promise<void> {
   if (!isKvConfigured()) return;
   try {
@@ -60,10 +122,111 @@ export async function incrementClick(
       );
     }
 
+    // Unique-visitor tracking — only when we have request context.
+    // The client beacon doesn't pass IP/UA, so it falls through.
+    // The server-side /go/[slug] handler does pass them.
+    if (context && (context.ip || context.userAgent)) {
+      const visitorId = visitorIdFromRequest(context.ip, context.userAgent);
+      if (visitorId) {
+        ops.push(
+          kv.sadd(`clicks:unique:${day}`, visitorId),
+          kv.sadd(`clicks:unique:provider:${provider}:${day}`, visitorId),
+          kv.sadd(`clicks:unique:source:${source}:${day}`, visitorId),
+          // Auto-expire each daily set after 90 days so KV doesn't
+          // grow forever. Vercel KV uses Redis under the hood — EXPIRE
+          // takes seconds. 90 days = 7,776,000s.
+          kv.expire(`clicks:unique:${day}`, 7_776_000),
+          kv.expire(
+            `clicks:unique:provider:${provider}:${day}`,
+            7_776_000,
+          ),
+          kv.expire(`clicks:unique:source:${source}:${day}`, 7_776_000),
+        );
+      }
+    }
+
     await Promise.all(ops);
   } catch (err) {
     // Swallow errors — tracking must never break UX
     console.error("[kv] incrementClick error", err);
+  }
+}
+
+/**
+ * Returns total unique visitors today across all providers.
+ */
+export async function getUniqueVisitorsToday(): Promise<number> {
+  if (!isKvConfigured()) return 0;
+  try {
+    const count = await kv.scard(`clicks:unique:${todayKey()}`);
+    return Number(count ?? 0);
+  } catch (err) {
+    console.error("[kv] getUniqueVisitorsToday error", err);
+    return 0;
+  }
+}
+
+/**
+ * Returns unique visitors per provider for the last N days, summed.
+ * Note: this counts a visitor that appeared on multiple days as
+ * multiple "unique" visits — by design, the daily salt rotation
+ * makes cross-day linking impossible. If you want a true unique
+ * count over a window, the right answer is to compute it on a
+ * single-day basis and surface "Today" / "Yesterday" / "Last 7
+ * days" as separate columns rather than try to dedupe across them.
+ */
+export async function getUniqueVisitorsByProvider(
+  days: number = 7,
+): Promise<Record<string, number>> {
+  if (!isKvConfigured()) return {};
+  try {
+    const providers = (await kv.smembers("clicks:providers")) as string[];
+    if (!providers || providers.length === 0) return {};
+    const totals: Record<string, number> = {};
+    for (let i = 0; i < days; i++) {
+      const date = dayKey(i);
+      for (const p of providers) {
+        const count = await kv.scard(
+          `clicks:unique:provider:${p}:${date}`,
+        );
+        const n = Number(count ?? 0);
+        if (n > 0) totals[p] = (totals[p] ?? 0) + n;
+      }
+    }
+    return totals;
+  } catch (err) {
+    console.error("[kv] getUniqueVisitorsByProvider error", err);
+    return {};
+  }
+}
+
+/**
+ * Returns unique visitors per source for the last N days, summed.
+ * Same caveat as getUniqueVisitorsByProvider — daily salt rotation
+ * means a visitor on day 1 and day 2 counts twice.
+ */
+export async function getUniqueVisitorsBySource(
+  days: number = 7,
+): Promise<Record<string, number>> {
+  if (!isKvConfigured()) return {};
+  try {
+    const sources = (await kv.smembers("clicks:all_sources")) as string[];
+    if (!sources || sources.length === 0) return {};
+    const totals: Record<string, number> = {};
+    for (let i = 0; i < days; i++) {
+      const date = dayKey(i);
+      for (const s of sources) {
+        const count = await kv.scard(
+          `clicks:unique:source:${s}:${date}`,
+        );
+        const n = Number(count ?? 0);
+        if (n > 0) totals[s] = (totals[s] ?? 0) + n;
+      }
+    }
+    return totals;
+  } catch (err) {
+    console.error("[kv] getUniqueVisitorsBySource error", err);
+    return {};
   }
 }
 

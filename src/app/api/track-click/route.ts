@@ -33,7 +33,16 @@ export async function POST(req: Request) {
       if (intPos > 0 && intPos <= 100) position = intPos;
     }
 
-    await incrementClick(p, s, position);
+    // Pass IP + user agent so incrementClick can record a daily-
+    // rotating salted hash for unique-visitor counting (see
+    // visitorIdFromRequest in src/lib/kv.ts for the privacy
+    // rationale).
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      req.headers.get("x-real-ip") ||
+      null;
+    const userAgent = req.headers.get("user-agent");
+    await incrementClick(p, s, position, { ip, userAgent });
 
     return NextResponse.json({ ok: true });
   } catch (err) {

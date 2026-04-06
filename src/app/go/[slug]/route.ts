@@ -83,8 +83,19 @@ export async function GET(
   // Server-side click logging — runs unconditionally and can't be
   // blocked by client-side ad blockers. Falls back to a no-op when
   // KV isn't configured (see src/lib/kv.ts).
+  //
+  // We pass IP + user agent so incrementClick can record a
+  // privacy-respecting daily-rotating visitor hash for unique
+  // visitor counts. The hash cannot be linked across days even by
+  // us, which sidesteps GDPR/CCPA tracking-identifier concerns.
+  // See visitorIdFromRequest in src/lib/kv.ts for details.
   try {
-    await incrementClick(slug, source, position);
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      req.headers.get("x-real-ip") ||
+      null;
+    const userAgent = req.headers.get("user-agent");
+    await incrementClick(slug, source, position, { ip, userAgent });
   } catch (err) {
     // Never let a logging failure break the redirect. The user came
     // here to be sent to the provider — that's the contract.

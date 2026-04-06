@@ -4,6 +4,9 @@ import {
   getAllSourceClicks,
   getDailyClicks,
   getAllPositionClicks,
+  getUniqueVisitorsToday,
+  getUniqueVisitorsByProvider,
+  getUniqueVisitorsBySource,
   type DailyClickEntry,
 } from "@/lib/kv";
 import { getCurrentAdminUser } from "@/lib/admin-users";
@@ -76,13 +79,23 @@ export default async function AdminDashboardPage() {
     );
   }
 
-  const [providerClicks, sourceClicks, daily30, positionClicks] =
-    await Promise.all([
-      getProviderClicks(),
-      getAllSourceClicks(),
-      getDailyClicks(30),
-      getAllPositionClicks(),
-    ]);
+  const [
+    providerClicks,
+    sourceClicks,
+    daily30,
+    positionClicks,
+    uniqueToday,
+    uniqueByProvider7d,
+    uniqueBySource7d,
+  ] = await Promise.all([
+    getProviderClicks(),
+    getAllSourceClicks(),
+    getDailyClicks(30),
+    getAllPositionClicks(),
+    getUniqueVisitorsToday(),
+    getUniqueVisitorsByProvider(7),
+    getUniqueVisitorsBySource(7),
+  ]);
 
   // Flatten the position breakdown into a sorted, renderable shape:
   // [{ source, total, byPosition: [{position, count, share}] }]
@@ -105,7 +118,6 @@ export default async function AdminDashboardPage() {
     (a, b) => a + b,
     0
   );
-  const uniqueProviders = Object.keys(providerClicks).length;
 
   const sortedSources = Object.entries(sourceClicks).sort(
     (a, b) => b[1] - a[1]
@@ -186,11 +198,12 @@ export default async function AdminDashboardPage() {
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <StatCard label="Total Clicks" value={formatNumber(totalClicks)} />
           <StatCard
-            label="Unique Providers"
-            value={formatNumber(uniqueProviders)}
+            label="Unique Visitors Today"
+            value={formatNumber(uniqueToday)}
+            hint="Daily-rotating salted hash of IP+UA — no PII stored"
           />
           <StatCard label="Top Source" value={topSource} />
-          <StatCard label="Last 7 Days" value={formatNumber(last7Total)} />
+          <StatCard label="Last 7 Days (clicks)" value={formatNumber(last7Total)} />
         </section>
 
         {/* Daily chart */}
@@ -247,13 +260,14 @@ export default async function AdminDashboardPage() {
                   <th className="py-3 px-5 text-right">Total Clicks</th>
                   <th className="py-3 px-5 text-right">% of All</th>
                   <th className="py-3 px-5 text-right">Last 7 Days</th>
+                  <th className="py-3 px-5 text-right">Unique Visitors (7d)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {sortedProviders.length === 0 ? (
                   <tr>
                     <td
-                      colSpan={4}
+                      colSpan={5}
                       className="py-8 text-center text-brand-text-secondary"
                     >
                       No provider clicks yet.
@@ -282,6 +296,9 @@ export default async function AdminDashboardPage() {
                         <td className="py-3 px-5 text-right text-brand-text-secondary">
                           {formatNumber(providerClicksLast7[provider] ?? 0)}
                         </td>
+                        <td className="py-3 px-5 text-right text-brand-text-secondary">
+                          {formatNumber(uniqueByProvider7d[provider] ?? 0)}
+                        </td>
                       </tr>
                     );
                   })
@@ -304,13 +321,14 @@ export default async function AdminDashboardPage() {
                 <tr className="border-b border-gray-100 bg-gray-50 text-brand-text-secondary text-xs uppercase tracking-wide">
                   <th className="py-3 px-5 text-left">Source</th>
                   <th className="py-3 px-5 text-right">Click Count</th>
+                  <th className="py-3 px-5 text-right">Unique Visitors (7d)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {sortedSources.length === 0 ? (
                   <tr>
                     <td
-                      colSpan={2}
+                      colSpan={3}
                       className="py-8 text-center text-brand-text-secondary"
                     >
                       No source data yet.
@@ -327,6 +345,9 @@ export default async function AdminDashboardPage() {
                       </td>
                       <td className="py-3 px-5 text-right font-bold text-brand-text-primary">
                         {formatNumber(count)}
+                      </td>
+                      <td className="py-3 px-5 text-right text-brand-text-secondary">
+                        {formatNumber(uniqueBySource7d[source] ?? 0)}
                       </td>
                     </tr>
                   ))
@@ -395,7 +416,15 @@ export default async function AdminDashboardPage() {
   );
 }
 
-function StatCard({ label, value }: { label: string; value: string }) {
+function StatCard({
+  label,
+  value,
+  hint,
+}: {
+  label: string;
+  value: string;
+  hint?: string;
+}) {
   return (
     <div className="rounded-2xl bg-white border border-brand-violet/10 shadow-sm p-5">
       <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-secondary">
@@ -404,6 +433,11 @@ function StatCard({ label, value }: { label: string; value: string }) {
       <p className="mt-2 text-2xl font-extrabold bg-brand-gradient bg-clip-text text-transparent break-words">
         {value}
       </p>
+      {hint && (
+        <p className="mt-1 text-[10px] text-brand-text-secondary/70 leading-snug">
+          {hint}
+        </p>
+      )}
     </div>
   );
 }
