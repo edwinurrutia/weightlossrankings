@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import {
@@ -408,6 +409,19 @@ export default async function ProviderReviewPage({
             providers={alternatives}
             trackingSource={`review_${provider.slug}`}
           />
+          {/* Internal link to the dedicated alternatives page. Without
+              this, /alternatives/[provider] is fully orphaned (zero
+              inbound links → Google deprioritizes), per the
+              audit-internal-links.ts script output. One link per
+              review page = 82 new inbound links across the site. */}
+          <div className="text-center">
+            <Link
+              href={`/alternatives/${provider.slug}`}
+              className="inline-flex items-center gap-2 text-brand-violet font-semibold hover:underline"
+            >
+              See all alternatives to {provider.name} →
+            </Link>
+          </div>
 
           <FAQSection items={faqItems} />
 

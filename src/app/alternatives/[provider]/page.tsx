@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import {
@@ -183,6 +184,19 @@ export default async function AlternativesPage({
           subtitle={`Looking for alternatives to ${provider.name}? Here are the top-rated competitors we recommend based on price, effectiveness, and user experience.`}
         >
           <AffiliateDisclosure />
+          {/* Bidirectional link back to the review page. Closes the
+              loop with the matching "See all alternatives →" link on
+              /reviews/[provider]. Both directions help PageRank flow
+              and surface the alternatives content in Google's
+              internal-link graph. */}
+          <div className="mt-3 text-sm">
+            <Link
+              href={`/reviews/${provider.slug}`}
+              className="text-brand-violet font-semibold hover:underline"
+            >
+              ← Read our full {provider.name} review
+            </Link>
+          </div>
         </PageHero>
 
         <DYORCallout variant="compact" providerName={provider.name} />
