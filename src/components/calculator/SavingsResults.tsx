@@ -1,23 +1,32 @@
 import type { CalcState } from "./StepWizard";
 import type { Provider } from "@/lib/types";
 import ProviderCard from "@/components/providers/ProviderCard";
+import {
+  WEGOVY_MONTHLY_USD,
+  OZEMPIC_MONTHLY_USD,
+  MOUNJARO_MONTHLY_USD,
+  ZEPBOUND_MONTHLY_USD,
+} from "@/lib/citations";
 
 interface SavingsResultsProps {
   state: CalcState;
   providers: Provider[];
 }
 
+// Brand list prices from the central citation registry — single source of
+// truth. Updating manufacturer pricing here is now a one-line edit in
+// lib/citations.ts that propagates everywhere on the site.
 const BRAND_PRICES: Record<string, number> = {
-  wegovy: 1349,
-  ozempic: 935,
-  mounjaro: 1023,
-  zepbound: 1059,
+  wegovy: WEGOVY_MONTHLY_USD,
+  ozempic: OZEMPIC_MONTHLY_USD,
+  mounjaro: MOUNJARO_MONTHLY_USD,
+  zepbound: ZEPBOUND_MONTHLY_USD,
 };
 
 function getBaselineCost(state: CalcState): number {
   if (state.currentCost !== null) return state.currentCost;
   const key = state.medication.toLowerCase();
-  return BRAND_PRICES[key] ?? 1023;
+  return BRAND_PRICES[key] ?? MOUNJARO_MONTHLY_USD;
 }
 
 function getCheapestCompounded(provider: Provider): number | null {

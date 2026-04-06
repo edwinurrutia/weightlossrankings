@@ -37,11 +37,16 @@ const formatUsd = (n: number) =>
     maximumFractionDigits: 0,
   });
 
-// Brand-name retail baselines used as the comparison anchor. These are
-// the cash list prices published by Novo Nordisk and Eli Lilly. Update
-// here if the manufacturers change list pricing materially.
-const WEGOVY_MONTHLY = 1349;
-const ZEPBOUND_MONTHLY = 1086;
+import {
+  WEGOVY_MONTHLY_USD,
+  ZEPBOUND_MONTHLY_USD,
+} from "@/lib/citations";
+
+// Brand-name retail baselines used as the comparison anchor — pulled from
+// the central citation registry so any manufacturer price update propagates
+// site-wide automatically.
+const WEGOVY_MONTHLY = WEGOVY_MONTHLY_USD;
+const ZEPBOUND_MONTHLY = ZEPBOUND_MONTHLY_USD;
 
 export default function PricingIndexArticle() {
   const article = getResearchArticleBySlug(SLUG)!;

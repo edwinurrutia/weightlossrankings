@@ -20,6 +20,10 @@ import StatGrid from "@/components/marketing/StatGrid";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import DYORCallout from "@/components/marketing/DYORCallout";
+import {
+  WEGOVY_MONTHLY_USD,
+  ZEPBOUND_MONTHLY_USD,
+} from "@/lib/citations";
 
 const GLP1_CATEGORIES = new Set(["GLP-1 Provider", "Weight Loss Program"]);
 
@@ -99,7 +103,9 @@ export default async function CityDrugPage({
     drugSlug === "semaglutide"
       ? "Wegovy and Ozempic"
       : "Zepbound and Mounjaro";
-  const brandPrice = drugSlug === "semaglutide" ? 1349 : 1086;
+  // Brand price comes from the central citation registry — never hardcode.
+  const brandPrice =
+    drugSlug === "semaglutide" ? WEGOVY_MONTHLY_USD : ZEPBOUND_MONTHLY_USD;
 
   const allProviders: Provider[] = await getProvidersByState(city.state_code);
   const glpProviders = allProviders.filter((p) =>

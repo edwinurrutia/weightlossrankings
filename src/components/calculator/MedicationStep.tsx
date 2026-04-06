@@ -1,13 +1,22 @@
+import {
+  WEGOVY_MONTHLY_USD,
+  OZEMPIC_MONTHLY_USD,
+  MOUNJARO_MONTHLY_USD,
+  ZEPBOUND_MONTHLY_USD,
+} from "@/lib/citations";
+
 interface MedicationStepProps {
   value: string;
   onNext: (value: string) => void;
 }
 
+// Prices from the central citation registry — manufacturer list prices
+// update in one place and propagate site-wide.
 const MEDICATIONS = [
-  { label: "Wegovy", price: 1349 },
-  { label: "Ozempic", price: 935 },
-  { label: "Mounjaro", price: 1023 },
-  { label: "Zepbound", price: 1059 },
+  { label: "Wegovy", price: WEGOVY_MONTHLY_USD },
+  { label: "Ozempic", price: OZEMPIC_MONTHLY_USD },
+  { label: "Mounjaro", price: MOUNJARO_MONTHLY_USD },
+  { label: "Zepbound", price: ZEPBOUND_MONTHLY_USD },
   { label: "I'm not currently taking anything", price: null },
 ];
 

@@ -1,5 +1,11 @@
 import type { Provider, DrugType } from "@/lib/types";
 import { getAllProviders } from "@/lib/data";
+import {
+  WEGOVY_MONTHLY_USD,
+  ZEPBOUND_MONTHLY_USD,
+  OZEMPIC_MONTHLY_USD,
+  MOUNJARO_MONTHLY_USD,
+} from "@/lib/citations";
 
 export interface SavingsComparison {
   slug: string;
@@ -12,50 +18,49 @@ export interface SavingsComparison {
   intro: string;
 }
 
+// Brand prices come from the central citation registry — single source of
+// truth. The intro copy uses template-style "$X/month" interpolation so
+// the prose stays in sync when the registry changes.
 export const SAVINGS_COMPARISONS: SavingsComparison[] = [
   {
     slug: "wegovy-vs-compounded",
     brand_name: "Wegovy",
     brand_drug: "semaglutide",
     generic_name: "semaglutide",
-    brand_monthly_price: 1349,
+    brand_monthly_price: WEGOVY_MONTHLY_USD,
     brand_indication: "chronic weight management",
     brand_company: "Novo Nordisk",
-    intro:
-      "Wegovy is the FDA-approved brand-name formulation of semaglutide 2.4mg, made by Novo Nordisk for chronic weight management. While clinically effective, its $1,349/month list price makes it unaffordable for most cash-pay patients. Compounded semaglutide is a much more affordable alternative dispensed by licensed 503A pharmacies.",
+    intro: `Wegovy is the FDA-approved brand-name formulation of semaglutide 2.4mg, made by Novo Nordisk for chronic weight management. While clinically effective, its $${WEGOVY_MONTHLY_USD.toLocaleString()}/month list price makes it unaffordable for most cash-pay patients. Compounded semaglutide is a much more affordable alternative dispensed by licensed 503A pharmacies.`,
   },
   {
     slug: "ozempic-vs-compounded",
     brand_name: "Ozempic",
     brand_drug: "semaglutide",
     generic_name: "semaglutide",
-    brand_monthly_price: 935,
+    brand_monthly_price: OZEMPIC_MONTHLY_USD,
     brand_indication: "type 2 diabetes",
     brand_company: "Novo Nordisk",
-    intro:
-      "Ozempic is the brand-name semaglutide indicated for type 2 diabetes and made by Novo Nordisk. Although it's frequently used off-label for weight loss, insurers rarely cover Ozempic without a diabetes diagnosis, leaving cash-pay patients facing $935+/month. Compounded semaglutide offers the same active ingredient at a fraction of the price.",
+    intro: `Ozempic is the brand-name semaglutide indicated for type 2 diabetes and made by Novo Nordisk. Although it's frequently used off-label for weight loss, insurers rarely cover Ozempic without a diabetes diagnosis, leaving cash-pay patients facing $${OZEMPIC_MONTHLY_USD}+/month. Compounded semaglutide offers the same active ingredient at a fraction of the price.`,
   },
   {
     slug: "zepbound-vs-compounded",
     brand_name: "Zepbound",
     brand_drug: "tirzepatide",
     generic_name: "tirzepatide",
-    brand_monthly_price: 1086,
+    brand_monthly_price: ZEPBOUND_MONTHLY_USD,
     brand_indication: "chronic weight management",
     brand_company: "Eli Lilly",
-    intro:
-      "Zepbound is Eli Lilly's brand-name tirzepatide formulation FDA-approved for chronic weight management. In head-to-head trials, tirzepatide produced more weight loss than semaglutide — but at $1,086/month list price, it remains out of reach for most cash-pay patients. Compounded tirzepatide is an affordable alternative dispensed by licensed pharmacies.",
+    intro: `Zepbound is Eli Lilly's brand-name tirzepatide formulation FDA-approved for chronic weight management. In head-to-head trials, tirzepatide produced more weight loss than semaglutide — but at $${ZEPBOUND_MONTHLY_USD.toLocaleString()}/month list price, it remains out of reach for most cash-pay patients. Compounded tirzepatide is an affordable alternative dispensed by licensed pharmacies.`,
   },
   {
     slug: "mounjaro-vs-compounded",
     brand_name: "Mounjaro",
     brand_drug: "tirzepatide",
     generic_name: "tirzepatide",
-    brand_monthly_price: 1069,
+    brand_monthly_price: MOUNJARO_MONTHLY_USD,
     brand_indication: "type 2 diabetes",
     brand_company: "Eli Lilly",
-    intro:
-      "Mounjaro is the type 2 diabetes-indicated brand of tirzepatide from Eli Lilly. Like Ozempic, it's commonly used off-label for weight loss, but insurance coverage outside of diabetes is rare and the cash price is $1,069/month. Compounded tirzepatide offers the same molecule at substantially lower cost through licensed compounding pharmacies.",
+    intro: `Mounjaro is the type 2 diabetes-indicated brand of tirzepatide from Eli Lilly. Like Ozempic, it's commonly used off-label for weight loss, but insurance coverage outside of diabetes is rare and the cash price is $${MOUNJARO_MONTHLY_USD.toLocaleString()}/month. Compounded tirzepatide offers the same molecule at substantially lower cost through licensed compounding pharmacies.`,
   },
 ];
 

@@ -15,7 +15,14 @@ import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import DYORCallout from "@/components/marketing/DYORCallout";
 import StateDrugFactSheet from "@/components/marketing/StateDrugFactSheet";
-import { getLatestVerificationDate } from "@/lib/pricing-analytics";
+import {
+  getLatestVerificationDate,
+  getPricingStats,
+} from "@/lib/pricing-analytics";
+import {
+  WEGOVY_MONTHLY_USD,
+  ZEPBOUND_MONTHLY_USD,
+} from "@/lib/citations";
 
 const DRUGS = ["semaglutide", "tirzepatide"] as const;
 type DrugSlug = (typeof DRUGS)[number];
@@ -25,6 +32,8 @@ type DrugSlug = (typeof DRUGS)[number];
 // avoid touching src/lib/types.ts.
 type PricingWithDrug = Pricing & { drug?: string };
 
+// Brand prices come from the central citation registry so updates propagate
+// site-wide. Don't hardcode dollar amounts here.
 const DRUG_META: Record<
   DrugSlug,
   {
@@ -39,7 +48,7 @@ const DRUG_META: Record<
     label: "Semaglutide",
     brand: "Wegovy",
     diabetesBrand: "Ozempic",
-    brandPrice: 1349,
+    brandPrice: WEGOVY_MONTHLY_USD,
     description:
       "the GLP-1 active ingredient in Wegovy and Ozempic, FDA-approved for chronic weight management and type 2 diabetes",
   },
@@ -47,7 +56,7 @@ const DRUG_META: Record<
     label: "Tirzepatide",
     brand: "Zepbound",
     diabetesBrand: "Mounjaro",
-    brandPrice: 1086,
+    brandPrice: ZEPBOUND_MONTHLY_USD,
     description:
       "the dual GIP/GLP-1 receptor agonist branded as Zepbound and Mounjaro, FDA-approved in 2023 with industry-leading weight-loss results",
   },
@@ -127,7 +136,6 @@ export default async function StateDrugPage({
   const stateName = stateData.name;
   const stateCode = stateData.code;
   const content = getStateContent(stateCode);
-  const avgPrice = content?.average_compounded_price_monthly ?? 199;
 
   const allProviders: Provider[] = await getProvidersByState(stateCode);
   const drugProviders = allProviders
@@ -139,6 +147,25 @@ export default async function StateDrugPage({
       const bp = providerMinPriceForDrug(b, drug) ?? Number.POSITIVE_INFINITY;
       return ap - bp;
     });
+
+  // Compute the state's average compounded price dynamically from the
+  // providers actually shipping to this state. Falls back to the static
+  // states-content.json value if we don't have enough data points yet,
+  // and finally to a sane default.
+  const stateMonthlyPrices = drugProviders
+    .map((p) => providerMinPriceForDrug(p, drug))
+    .filter((n): n is number => n !== null && n > 0);
+  const dynamicAvgPrice =
+    stateMonthlyPrices.length >= 3
+      ? Math.round(
+          stateMonthlyPrices.reduce((a, b) => a + b, 0) /
+            stateMonthlyPrices.length,
+        )
+      : null;
+  const avgPrice =
+    dynamicAvgPrice ??
+    content?.average_compounded_price_monthly ??
+    (Math.round(getPricingStats(drug, "compounded").median) || 199);
 
   const dataAsOf = getLatestVerificationDate();
 
