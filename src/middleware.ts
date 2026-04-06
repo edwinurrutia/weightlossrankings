@@ -1,41 +1,55 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { verifyAdminCredentials } from "@/lib/admin-users";
+import { verifySession, SESSION_CONFIG } from "@/lib/admin-session";
 
-export function middleware(request: NextRequest) {
-  const path = request.nextUrl.pathname;
-  if (!path.startsWith("/admin") && !path.startsWith("/api/admin")) {
+// Paths under /admin or /api/admin that should be accessible without a
+// valid session cookie. Note: login lives at /admin-login (top-level,
+// outside the admin matcher) and /api/admin-login — those are not matched
+// here at all. This list exists for any future public admin endpoints.
+const PUBLIC_ADMIN_PATHS: string[] = [];
+
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  if (!pathname.startsWith("/admin") && !pathname.startsWith("/api/admin")) {
     return NextResponse.next();
   }
 
-  const auth = request.headers.get("authorization");
-  if (auth) {
-    const [scheme, encoded] = auth.split(" ");
-    if (scheme === "Basic" && encoded) {
-      try {
-        const decoded = atob(encoded);
-        const idx = decoded.indexOf(":");
-        if (idx !== -1) {
-          const username = decoded.slice(0, idx);
-          const password = decoded.slice(idx + 1);
-          if (verifyAdminCredentials(username, password)) {
-            // Forward the username downstream so server components and
-            // route handlers can know who is logged in.
-            const requestHeaders = new Headers(request.headers);
-            requestHeaders.set("x-admin-user", username);
-            return NextResponse.next({
-              request: { headers: requestHeaders },
-            });
-          }
-        }
-      } catch {
-        // fall through to 401
-      }
-    }
+  if (
+    PUBLIC_ADMIN_PATHS.some(
+      (p) => pathname === p || pathname.startsWith(p + "/")
+    )
+  ) {
+    return NextResponse.next();
   }
 
-  return new NextResponse("Authentication required", {
-    status: 401,
-    headers: { "WWW-Authenticate": 'Basic realm="WeightLossRankings Admin"' },
+  const cookie = request.cookies.get(SESSION_CONFIG.cookieName);
+
+  let session: Awaited<ReturnType<typeof verifySession>> = null;
+  try {
+    session = await verifySession(cookie?.value);
+  } catch {
+    // Missing ADMIN_SESSION_SECRET or other verification error — treat as
+    // unauthenticated rather than 500-ing the entire admin surface.
+    session = null;
+  }
+
+  if (!session) {
+    if (pathname.startsWith("/api/admin")) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    const loginUrl = request.nextUrl.clone();
+    loginUrl.pathname = "/admin-login";
+    loginUrl.search = "";
+    loginUrl.searchParams.set("next", pathname);
+    return NextResponse.redirect(loginUrl);
+  }
+
+  // Forward the username downstream so server components and route handlers
+  // can know who is logged in via `getCurrentAdminUser()`.
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-admin-user", session.username);
+  return NextResponse.next({
+    request: { headers: requestHeaders },
   });
 }
 
