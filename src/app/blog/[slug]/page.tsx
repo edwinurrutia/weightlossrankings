@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { getAllBlogSlugs, getBlogPostBySlug } from "@/lib/data";
 import type { BlogPost } from "@/lib/types";
 import BlogContent from "@/components/blog/BlogContent";
-import TrustBadge from "@/components/shared/TrustBadge";
 import EmailCapture from "@/components/shared/EmailCapture";
 import JsonLd from "@/components/shared/JsonLd";
 import SourcesPanel from "@/components/research/SourcesPanel";
@@ -117,28 +116,25 @@ export default async function BlogPostPage({
     <main className="min-h-screen bg-brand-bg">
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbSchema} />
-      <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8 flex flex-col gap-8">
-        {/* Trust badges */}
-        <div className="flex flex-wrap gap-2">
-          {post.category && (
-            <TrustBadge icon="🏷️" text={post.category} />
+      <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8 flex flex-col gap-8">
+        {/* Editorial eyebrow — category and date as a clean inline meta line */}
+        <div className="flex items-center gap-2 text-xs uppercase tracking-[0.15em] font-semibold text-brand-violet">
+          {post.category && <span>{post.category}</span>}
+          {post.category && formattedDate && (
+            <span className="text-brand-violet/40" aria-hidden>
+              ·
+            </span>
           )}
-          {formattedDate && (
-            <TrustBadge icon="📅" text={`Published ${formattedDate}`} />
-          )}
+          {formattedDate && <span>{formattedDate}</span>}
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-brand-text-primary leading-tight">
+        <h1
+          className="font-heading font-black text-brand-text-primary tracking-tight leading-[1.1]"
+          style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
+        >
           {post.title}
         </h1>
-
-        {/* Author */}
-        {post.author && (
-          <p className="text-brand-text-secondary text-sm">
-            By {post.author}
-          </p>
-        )}
 
         {/* Body content */}
         {post.body && (
@@ -171,7 +167,7 @@ export default async function BlogPostPage({
 
         {/* Email capture */}
         <EmailCapture source={`blog_${post.slug}`} />
-      </div>
+      </article>
     </main>
   );
 }
