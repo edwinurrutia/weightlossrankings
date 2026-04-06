@@ -32,6 +32,11 @@ const aboutFaqs = [
       "We score every provider across six weighted dimensions: value, clinical effectiveness, user experience, safety and compliance, accessibility, and ongoing support. The same algorithm runs on every provider whether or not we have a commercial relationship with them. You can read the full weights and sub-factors on our Methodology page.",
   },
   {
+    question: "How do you decide which provider to feature?",
+    answer:
+      "Two things work in parallel. First, our scoring algorithm runs against every provider we cover — same six weighted dimensions, same formula, regardless of whether we have a commercial relationship with them. That drives the numeric score and the baseline ranking order. Second, placement — featured homepage cards, 'Top Pick' labels, highlighted comparison cards, and blog coverage frequency — can be influenced by commercial relationships, and we label sponsored placements clearly. Put simply: score is independent, placement is not always. For the full breakdown, see our Nature of Reviews & Rankings page at /nature-of-reviews.",
+  },
+  {
     question: "Who's behind the site?",
     answer:
       "WeightLossRankings is a small, independent operation run by a writer-engineer who has been covering telehealth, digital health, and the GLP-1 market since early 2023. You can learn more on our About page. Questions can always go to hello@weightlossrankings.org.",

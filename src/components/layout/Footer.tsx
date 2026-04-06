@@ -58,6 +58,7 @@ const footerColumns = [
       { label: "Press", href: "/press" },
       { label: "Advertise", href: "/advertise" },
       { label: "Disclosure", href: "/disclosure" },
+      { label: "Nature of Reviews", href: "/nature-of-reviews" },
       { label: "Code of Conduct", href: "/code-of-conduct" },
       { label: "Privacy", href: "/privacy" },
       { label: "Terms", href: "/terms" },

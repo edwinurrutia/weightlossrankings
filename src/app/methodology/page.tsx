@@ -88,23 +88,32 @@ export default function MethodologyPage() {
           Scores vs. Placement
         </h2>
         <p className="text-gray-600 text-sm">
-          Our scoring algorithm determines how a provider is rated. Commercial
-          relationships do not influence the score a provider receives — the
-          same formula is applied across every provider on the site,
-          regardless of whether they are a paid partner.
+          <strong className="text-gray-900">
+            Score is independent. Placement is not always.
+          </strong>{" "}
+          Our scoring algorithm runs against every provider equally — a paid
+          partner will never receive a higher score than a non-partner with
+          equivalent data.
         </p>
         <p className="text-gray-600 text-sm">
-          <strong className="text-gray-900">Placement is separate.</strong>{" "}
-          Commercial relationships may influence where a provider appears
-          beyond its algorithmic score — for example, featured homepage
-          placements, highlighted cards in the comparison tool, or blog
-          coverage. This is common practice among affiliate comparison sites
-          and is disclosed in full on our{" "}
+          Commercial relationships <em>can</em> influence where a provider
+          appears beyond its algorithmic score — for example, featured
+          homepage placements, &quot;Top Pick&quot; labels, highlighted cards
+          in the comparison tool, or blog coverage frequency. Sponsored
+          placements are labeled clearly. Providers without an affiliate
+          arrangement are still evaluated and ranked using the same
+          methodology. This is disclosed in full on our{" "}
           <a href="/disclosure" className="text-brand-violet underline">
             Affiliate Disclosure
           </a>{" "}
-          page. Providers without an affiliate arrangement are still evaluated
-          and ranked using the same methodology.
+          page, and explained end-to-end on our{" "}
+          <a
+            href="/nature-of-reviews"
+            className="text-brand-violet underline"
+          >
+            Nature of Reviews &amp; Rankings
+          </a>{" "}
+          page.
         </p>
         <p className="text-gray-600 text-sm">
           Scores are updated when new clinical data, pricing changes, or

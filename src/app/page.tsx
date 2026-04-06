@@ -94,6 +94,12 @@ export default async function HomePage() {
           >
             <span className="text-brand-success">✓</span> Press &amp; media
           </Link>
+          <Link
+            href="/nature-of-reviews"
+            className="inline-flex items-center gap-1.5 hover:text-brand-violet transition-colors"
+          >
+            <span className="text-brand-success">✓</span> How our reviews work
+          </Link>
         </div>
       </section>
 

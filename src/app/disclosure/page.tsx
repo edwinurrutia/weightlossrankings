@@ -43,6 +43,16 @@ export default function DisclosurePage() {
 
         <p>
           <strong className="text-brand-text-primary">
+            Score is independent. Placement is not always.
+          </strong>{" "}
+          Our scoring algorithm runs against every provider equally, but
+          featured placements, &quot;Top Pick&quot; labels, homepage callouts,
+          and blog coverage frequency can be influenced by commercial
+          relationships. We label sponsored placements clearly.
+        </p>
+
+        <p>
+          <strong className="text-brand-text-primary">
             What does NOT change based on commercial relationships:
           </strong>{" "}
           Scores and rankings are determined by our scoring algorithm, which
@@ -56,6 +66,14 @@ export default function DisclosurePage() {
           will be ranked accordingly, regardless of any existing or potential
           commercial relationship. Paid placements — such as featured
           listings or sponsored sections — are clearly labeled when present.
+          For the full story of how our reviews and rankings work, see our{" "}
+          <a
+            href="/nature-of-reviews"
+            className="text-brand-violet underline"
+          >
+            Nature of Reviews &amp; Rankings
+          </a>{" "}
+          page.
         </p>
 
         <p>
