@@ -22,9 +22,14 @@ export default function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    // Capture the form element before any awaits — React nulls out
+    // e.currentTarget after the synthetic event handler returns, so
+    // touching it post-await throws and the throw lands in the catch
+    // below, masking real success as a fake "Network error".
+    const formEl = e.currentTarget;
     setStatus({ kind: "submitting" });
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(formEl);
     const payload = {
       name: formData.get("name"),
       email: formData.get("email"),
@@ -49,7 +54,7 @@ export default function ContactForm() {
         return;
       }
       setStatus({ kind: "success" });
-      e.currentTarget.reset();
+      formEl.reset();
     } catch {
       setStatus({
         kind: "error",
