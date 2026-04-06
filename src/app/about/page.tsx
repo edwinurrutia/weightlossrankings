@@ -24,7 +24,7 @@ export default function AboutPage() {
       {/* Intro paragraphs (existing tone, preserved) */}
       <div className="space-y-5 text-brand-text-secondary mb-10">
         <p>
-          WeightLossRankings.org exists to cut through the noise in a market
+          Weight Loss Rankings exists to cut through the noise in a market
           flooded with telehealth providers, GLP-1 programs, and weight loss
           services making bold claims with little accountability. The goal is
           simple: give people a single place to compare options based on
@@ -57,7 +57,7 @@ export default function AboutPage() {
         </h2>
         <div className="space-y-4 text-brand-text-secondary">
           <p>
-            I built WeightLossRankings.org because the GLP-1 telehealth market
+            I built Weight Loss Rankings because the GLP-1 telehealth market
             in 2026 is overwhelming. There are 80+ providers, prices range
             from $75 to $1,500/month, regulations vary by state, and
             information is scattered across forums, ad-driven listicles, and
@@ -221,7 +221,7 @@ export default function AboutPage() {
         </h2>
         <div className="space-y-4 text-brand-text-secondary">
           <p>
-            WeightLossRankings.org makes money through affiliate commissions.
+            Weight Loss Rankings makes money through affiliate commissions.
             When a reader clicks a link to a provider and signs up, we may
             earn a one-time or recurring commission. That&rsquo;s the only
             revenue source right now — no display ads, no paid &ldquo;sponsored
@@ -246,21 +246,38 @@ export default function AboutPage() {
         </h2>
         <div className="space-y-4 text-brand-text-secondary">
           <p>
-            No provider pays to be scored higher. No provider gets a preview
-            or right of review over content before it&rsquo;s published. No
-            provider can pull a review by threatening to cancel an affiliate
-            relationship — and a few have tried. The scoring methodology is
-            published openly on the{" "}
-            <Link href="/methodology" className="text-brand-violet underline">
-              methodology page
-            </Link>{" "}
-            so you can check the math yourself.
+            Weight Loss Rankings is a reader-supported publication. We
+            participate in affiliate programs with some of the providers we
+            cover, and we may earn a commission when readers click through
+            our links and sign up. Some providers also pay for sponsored
+            placements that are clearly labeled wherever they appear.
           </p>
           <p>
-            If the algorithm says a paid partner should rank #7, they rank
-            #7. If a non-partner should rank #1, they rank #1. The whole
-            credibility of the site depends on sticking to that, and I
-            intend to.
+            Editorial decisions — what we cover, how we score, what we say
+            in a review — are made independently of those commercial
+            relationships. Every provider in our database is run through
+            the same{" "}
+            <Link href="/methodology" className="text-brand-violet underline">
+              published scoring methodology
+            </Link>{" "}
+            (value, effectiveness, UX, trust, accessibility, support), and
+            commercial relationships do not change the inputs to that
+            algorithm. Sponsored placements affect <em>where</em> a
+            provider appears (e.g. a featured slot on a category page) but
+            not the underlying score. For the full picture of how
+            commercial relationships affect placement on the site, see our{" "}
+            <Link href="/disclosure" className="text-brand-violet underline">
+              Affiliate Disclosure
+            </Link>
+            .
+          </p>
+          <p>
+            No provider gets a preview, right of review, or veto over our
+            editorial copy before it&rsquo;s published. No provider can
+            pull a review by threatening to cancel an affiliate
+            relationship. Where the editorial team is wrong about a fact,
+            we correct it; where we&rsquo;re wrong about a judgment call,
+            we don&rsquo;t.
           </p>
         </div>
       </section>

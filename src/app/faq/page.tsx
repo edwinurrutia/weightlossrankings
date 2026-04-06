@@ -58,7 +58,7 @@ const aboutFaqs = [
   {
     question: "Who's behind the site?",
     answer:
-      "Weight Loss Rankings is a small, independent operation run by a writer-engineer who has been covering telehealth, digital health, and the GLP-1 market since early 2023. You can learn more on our About page. Questions can always go to hello@weightlossrankings.org.",
+      "Weight Loss Rankings is an independent comparison site for GLP-1 telehealth providers, compounding pharmacies, and weight loss programs — built to give people structured, honest answers in a market that doesn't offer many. The site is reader-supported through affiliate relationships with some of the providers we cover; editorial decisions and our scoring algorithm are made independently of those commercial relationships. You can read the full story on our About page, and questions can always go to hello@weightlossrankings.org.",
   },
 ];
 

@@ -320,17 +320,11 @@ export default function HomeQuickMatch({
                         provider={matches[0].slug}
                         source="homepage_quick_match"
                         position={1}
-                        className="flex-1 inline-flex items-center justify-center gap-1.5 bg-brand-violet hover:bg-brand-violet/90 text-white font-bold text-base px-6 py-3.5 rounded-full transition-colors whitespace-nowrap"
+                        className="w-full inline-flex items-center justify-center gap-1.5 bg-brand-violet hover:bg-brand-violet/90 text-white font-bold text-base px-6 py-3.5 rounded-full transition-colors whitespace-nowrap"
                       >
                         Get started
                         <span aria-hidden>→</span>
                       </TrackedAffiliateLink>
-                      <Link
-                        href={`/reviews/${matches[0].slug}`}
-                        className="inline-flex items-center justify-center text-brand-text-primary font-semibold text-sm px-5 py-3.5 rounded-full border border-brand-violet/20 hover:border-brand-violet/40 hover:text-brand-violet transition whitespace-nowrap"
-                      >
-                        Read review
-                      </Link>
                     </div>
                   </div>
 
@@ -341,26 +335,28 @@ export default function HomeQuickMatch({
                         Other strong matches
                       </p>
                       <ul className="grid sm:grid-cols-2 gap-3">
-                        {matches.slice(1).map((m) => (
-                          <li
-                            key={m.slug}
-                            className="rounded-xl border border-brand-violet/10 bg-white p-4 flex items-center justify-between gap-3"
-                          >
-                            <div className="min-w-0">
-                              <div className="font-bold text-sm text-brand-text-primary truncate">
-                                {m.name}
-                              </div>
-                              <div className="text-xs text-brand-text-secondary">
-                                {m.scoreOverall.toFixed(1)}/10 ·{" "}
-                                {formatUsd(m.displayPrice)}/mo
-                              </div>
-                            </div>
-                            <Link
-                              href={`/providers/${m.slug}`}
-                              className="text-xs font-semibold text-brand-violet whitespace-nowrap hover:underline"
+                        {matches.slice(1).map((m, idx) => (
+                          <li key={m.slug}>
+                            <TrackedAffiliateLink
+                              href={m.affiliate_url}
+                              provider={m.slug}
+                              source="homepage_quick_match"
+                              position={idx + 2}
+                              className="rounded-xl border border-brand-violet/10 bg-white p-4 flex items-center justify-between gap-3 hover:border-brand-violet/40 transition-colors"
                             >
-                              View →
-                            </Link>
+                              <div className="min-w-0">
+                                <div className="font-bold text-sm text-brand-text-primary truncate">
+                                  {m.name}
+                                </div>
+                                <div className="text-xs text-brand-text-secondary">
+                                  {m.scoreOverall.toFixed(1)}/10 ·{" "}
+                                  {formatUsd(m.displayPrice)}/mo
+                                </div>
+                              </div>
+                              <span className="text-xs font-semibold text-brand-violet whitespace-nowrap">
+                                Visit →
+                              </span>
+                            </TrackedAffiliateLink>
                           </li>
                         ))}
                       </ul>
