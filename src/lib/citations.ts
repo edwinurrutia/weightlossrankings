@@ -159,21 +159,52 @@ const CITATIONS_LIST: CitationEntry[] = [
     dataYear: "2023",
   },
   {
+    // Canonical KFF Medicaid topic page — stable hub URL rather than a deep
+    // issue-brief link that rotates as KFF publishes new analyses. Readers
+    // following this link land on the latest KFF Medicaid coverage research,
+    // including their periodic anti-obesity drug analyses.
     id: "kff-medicaid-obesity-drug-coverage",
     label:
-      "KFF — State Medicaid Coverage of Anti-Obesity Medications (tracker)",
+      "KFF — Medicaid coverage research (anti-obesity & GLP-1 drug policy)",
     publisher: "Kaiser Family Foundation",
-    url: "https://www.kff.org/medicaid/issue-brief/medicaid-coverage-of-anti-obesity-drugs/",
+    url: "https://www.kff.org/medicaid/",
     category: "statistics",
+    accessedDate: "2026-04-06",
+    dataYear: "2025",
+  },
+  {
+    // CMS is the authoritative federal source for state Medicaid prescription
+    // drug coverage policy. Linking to the canonical Rx drugs landing page
+    // (rather than a deep-link that may move) so the source stays valid.
+    id: "cms-medicaid-prescription-drugs",
+    label:
+      "CMS — Medicaid prescription drug coverage policy (state-by-state)",
+    publisher: "Centers for Medicare & Medicaid Services",
+    url: "https://www.medicaid.gov/medicaid/prescription-drugs/index.html",
+    category: "regulatory",
+    accessedDate: "2026-04-06",
+    dataYear: "2025",
+  },
+  {
+    // IRS Publication 502 is the authoritative source on what counts as a
+    // qualified medical expense for HSA/FSA purposes. Used to ground claims
+    // about HSA/FSA eligibility for prescription drugs (including compounded
+    // medications, which are generally eligible with a prescription).
+    id: "irs-pub-502-medical-expenses",
+    label:
+      "IRS Publication 502 — Medical and Dental Expenses (HSA/FSA eligibility)",
+    publisher: "Internal Revenue Service",
+    url: "https://www.irs.gov/publications/p502",
+    category: "regulatory",
     accessedDate: "2026-04-06",
     dataYear: "2025",
   },
   {
     id: "kff-glp1-pricing-brief",
     label:
-      "KFF — GLP-1 Drugs: Pricing, Coverage, and Policy Considerations",
+      "KFF — Health costs research (GLP-1 pricing, Medicare & insurance coverage)",
     publisher: "Kaiser Family Foundation",
-    url: "https://www.kff.org/health-costs/issue-brief/obesity-drugs-coverage-costs-and-policy-considerations/",
+    url: "https://www.kff.org/health-costs/",
     category: "statistics",
     accessedDate: "2026-04-06",
     dataYear: "2025",

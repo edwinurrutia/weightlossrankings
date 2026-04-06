@@ -43,10 +43,11 @@ const formatUsd = (n: number) =>
   });
 
 // Source IDs used on this component.
-// 1 = our dataset · 2 = CDC BRFSS · 3 = manufacturer pricing · 4 = KFF Medicaid
+// 1 = our dataset · 2 = CDC BRFSS · 3 = manufacturer pricing · 4 = KFF Medicaid · 5 = IRS Pub 502
 const SOURCE_OUR_DATASET = "wlr-pricing-index";
 const SOURCE_CDC_BRFSS = "cdc-brfss-obesity";
 const SOURCE_KFF_MEDICAID = "kff-medicaid-obesity-drug-coverage";
+const SOURCE_IRS_PUB_502 = "irs-pub-502-medical-expenses";
 // Manufacturer pricing source — Wegovy uses NovoCare, all others use LillyDirect Zepbound
 // (shown for semaglutide vs Wegovy; adjust per brand as needed)
 const SOURCE_BRAND_PRICING_NOVO = "novocare-wegovy-cash-price";
@@ -119,6 +120,7 @@ export default function StateDrugFactSheet({
     SOURCE_CDC_BRFSS,         // 2
     brandPricingSource,       // 3
     SOURCE_KFF_MEDICAID,      // 4
+    SOURCE_IRS_PUB_502,       // 5
   ];
 
   return (
@@ -164,17 +166,30 @@ export default function StateDrugFactSheet({
         {medicaidCoverage && (
           <p>
             <strong className="text-brand-text-primary">
-              {stateName} Medicaid coverage:
+              {stateName} Medicaid &amp; brand-name {brandLabel}:
             </strong>{" "}
-            {medicaidCoverage}
+            {medicaidCoverage.toLowerCase()}
             <Citation source={SOURCE_KFF_MEDICAID} n={4} />
+            . Compounded {drugLabel.toLowerCase()} is{" "}
+            <strong className="text-brand-text-primary">
+              typically cash-pay
+            </strong>{" "}
+            — it isn&apos;t covered by Medicaid, Medicare, or commercial
+            insurance in most cases. Brand-name {brandLabel} is generally{" "}
+            <strong className="text-brand-text-primary">
+              FSA/HSA eligible
+            </strong>{" "}
+            with a prescription, and many plan administrators also accept
+            compounded GLP-1s as an FSA/HSA expense with a Letter of Medical
+            Necessity
+            <Citation source={SOURCE_IRS_PUB_502} n={5} />
             . At the median compounded price, switching from brand-name{" "}
             {brandLabel} would save roughly{" "}
             <strong className="text-brand-text-primary">
               {formatUsd(annualSavings)}/year
             </strong>{" "}
             out of pocket
-            {topCity ? ` — and providers ship statewide from ${topCity} to smaller towns` : ""}
+            {topCity ? `, with providers shipping statewide from ${topCity} to smaller towns` : ""}
             .
           </p>
         )}

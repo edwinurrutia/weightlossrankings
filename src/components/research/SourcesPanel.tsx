@@ -14,7 +14,10 @@ interface SourcesPanelProps {
    */
   heading?: string;
   /**
-   * Optional "data as of" date string shown in the summary row, e.g. "Q1 2026".
+   * Optional "data as of" stamp. Accepts either an ISO YYYY-MM-DD string
+   * (which is reformatted to "Month YYYY") or any free-form string.
+   * Per editorial policy, only the month + year are shown to readers — the
+   * exact day is internal-only.
    */
   dataAsOf?: string;
   /**
@@ -28,6 +31,35 @@ function sourceUrl(entry: CitationEntry): string {
   if (entry.pmid) return `https://pubmed.ncbi.nlm.nih.gov/${entry.pmid}/`;
   if (entry.doi) return `https://doi.org/${entry.doi}`;
   return entry.url;
+}
+
+const MONTH_NAMES = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+/**
+ * Format an ISO YYYY-MM-DD into "Month YYYY". Falls back to the input if it
+ * doesn't look like an ISO date so callers can pass already-friendly labels.
+ */
+function formatMonthYear(value?: string): string | null {
+  if (!value) return null;
+  const m = /^(\d{4})-(\d{2})(?:-\d{2})?$/.exec(value);
+  if (!m) return value;
+  const year = Number(m[1]);
+  const monthIdx = Number(m[2]) - 1;
+  if (monthIdx < 0 || monthIdx > 11) return value;
+  return `${MONTH_NAMES[monthIdx]} ${year}`;
 }
 
 /**
@@ -53,6 +85,7 @@ export default function SourcesPanel({
   if (sourceIds.length === 0) return null;
 
   const entries = sourceIds.map((id) => getCitation(id));
+  const dataAsOfLabel = formatMonthYear(dataAsOf);
 
   return (
     <details
@@ -62,7 +95,7 @@ export default function SourcesPanel({
       <summary className="text-xs font-semibold text-brand-text-secondary cursor-pointer list-none flex items-center justify-between gap-2 select-none">
         <span>
           {heading}
-          {dataAsOf ? ` (data as of ${dataAsOf})` : ""}
+          {dataAsOfLabel ? ` — as of ${dataAsOfLabel}` : ""}
         </span>
         <span
           aria-hidden
@@ -105,7 +138,7 @@ export default function SourcesPanel({
                   </a>
                 )}
                 <span className="text-brand-text-secondary/60 ml-1">
-                  — {entry.publisher}. Last accessed {entry.accessedDate}.
+                  — {entry.publisher}.
                 </span>
                 {entry.pmid && (
                   <span className="ml-1 text-brand-text-secondary/60">

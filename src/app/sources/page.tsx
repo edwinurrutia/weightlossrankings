@@ -130,10 +130,7 @@ function CategorySection({
                     {CATEGORY_LABELS[entry.category]}
                   </span>
                   <span className="text-[10px] text-brand-text-secondary whitespace-nowrap">
-                    Data: {entry.dataYear}
-                  </span>
-                  <span className="text-[10px] text-brand-text-secondary whitespace-nowrap">
-                    Accessed: {entry.accessedDate}
+                    Data year: {entry.dataYear}
                   </span>
                 </div>
               </div>
@@ -222,12 +219,7 @@ export default function SourcesPage() {
             contact us
           </Link>{" "}
           and we will verify and update the registry within 5 business days.
-          Source URLs are re-verified at minimum quarterly.
-        </p>
-        <p className="mt-2">
-          All accessed dates reflect when a member of our editorial team last
-          confirmed the source was live, accurate, and matched the claim made
-          on this site.
+          Source URLs are re-verified by the editorial team monthly.
         </p>
       </div>
     </main>
