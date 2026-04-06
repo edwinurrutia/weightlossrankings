@@ -580,6 +580,17 @@ export default async function MatchupPage({
           </CTAButton>
         </div>
 
+        {/* Trademark footnote */}
+        <p className="mt-8 text-xs text-brand-text-secondary/70 leading-relaxed">
+          Wegovy®, Ozempic®, and Rybelsus® are trademarks of Novo Nordisk A/S. Mounjaro® and Zepbound® are trademarks of
+          Eli Lilly and Company. All other product names and trademarks referenced on this page belong to their respective
+          owners. WeightLossRankings.org is not affiliated with any pharmaceutical manufacturer.{" "}
+          <Link href="/trademarks" className="text-brand-violet underline">
+            See trademark disclaimer
+          </Link>
+          .
+        </p>
+
       </div>
 
       <StickyCTABar
