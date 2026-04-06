@@ -229,13 +229,43 @@ export default async function DrugPage({
     },
   ];
 
-  const drugSchema = {
+  // Rich Drug schema for YMYL E-E-A-T. Schema.org's Drug type
+  // supports many more fields than the original 3-field version —
+  // populating them all gives Google more confidence that this is
+  // a real drug profile and not generic content. Each field is
+  // sourced from the editorially-curated Drug record.
+  const drugSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Drug",
     name: drugData.name,
-    activeIngredient: drugData.generic_name,
     description: drugData.description,
+    nonProprietaryName: drugData.generic_name,
+    activeIngredient: drugData.generic_name,
+    proprietaryName: drugData.brand_names,
+    mechanismOfAction: drugData.how_it_works,
+    legalStatus: "PrescriptionOnly",
+    recognizingAuthority: {
+      "@type": "Organization",
+      name: "U.S. Food and Drug Administration",
+      url: "https://www.fda.gov",
+    },
+    relevantSpecialty: ["Endocrinology", "Bariatric medicine"],
+    url: `https://weightlossrankings.org/drugs/${drug}`,
   };
+  if (drugData.fda_status) {
+    drugSchema.clinicalPharmacology = drugData.fda_status;
+  }
+  if (drugData.side_effects) {
+    drugSchema.warning = drugData.side_effects;
+  }
+  if (drugData.dosing_schedule && drugData.dosing_schedule.length > 0) {
+    drugSchema.doseSchedule = drugData.dosing_schedule.map((d) => ({
+      "@type": "DoseSchedule",
+      doseValue: d.dose,
+      doseUnit: "mg",
+      frequency: d.week_range,
+    }));
+  }
 
   const topProvider = topProviders[0];
   const topProviderMinPrice = topProvider ? getMinPrice(topProvider) : null;
