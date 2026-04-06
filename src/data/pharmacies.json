@@ -1,0 +1,387 @@
+[
+  {
+    "_id": "belmar",
+    "name": "Belmar Pharmacy",
+    "slug": "belmar-pharmacy",
+    "city": "Lakewood",
+    "state": "CO",
+    "established": 1999,
+    "type": "503A",
+    "certifications": ["PCAB"],
+    "states_licensed": ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": ["mochi-health", "found", "henry-meds"],
+    "website": "https://belmarrx.com",
+    "phone": "(855) 778-7426",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 3.8,
+      "google_count": 188
+    },
+    "internal_score": 8.5,
+    "description": "One of the larger 503A compounding pharmacies in the United States, Belmar has been compounding bioidentical and specialty medications since 1999. The pharmacy expanded into compounded GLP-1 production during the 2023 semaglutide shortage and is PCAB-accredited.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://belmarrx.com"],
+      "confidence": "medium",
+      "notes": "Initial seed data. Certifications and linked providers require scraper verification."
+    }
+  },
+  {
+    "_id": "empower",
+    "name": "Empower Pharmacy",
+    "slug": "empower-pharmacy",
+    "city": "Houston",
+    "state": "TX",
+    "established": 2009,
+    "type": "Both",
+    "certifications": ["PCAB", "cGMP", "FDA Registered 503B"],
+    "states_licensed": ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","DC"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": ["hims", "hers", "mochi-health", "eden"],
+    "website": "https://empowerpharmacy.com",
+    "phone": "(713) 733-6988",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 3.5,
+      "google_count": 420
+    },
+    "internal_score": 9.1,
+    "description": "Empower Pharmacy is the largest FDA-registered 503B outsourcing facility in the United States and also operates a 503A division. Headquartered in Houston, Empower supplies compounded semaglutide and tirzepatide to many of the nation's largest telehealth brands and is cGMP-compliant.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://empowerpharmacy.com"],
+      "confidence": "high",
+      "notes": "Empower is publicly known as a 503B outsourcing facility."
+    }
+  },
+  {
+    "_id": "strive",
+    "name": "Strive Pharmacy",
+    "slug": "strive-pharmacy",
+    "city": "Gilbert",
+    "state": "AZ",
+    "established": 2018,
+    "type": "503A",
+    "certifications": ["PCAB"],
+    "states_licensed": ["AZ","CA","CO","FL","GA","IL","NV","NM","NY","NC","OH","OR","PA","TX","UT","VA","WA"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": ["henry-meds", "ivim-health"],
+    "website": "https://strivepharmacy.com",
+    "phone": "(480) 680-9622",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 4.2,
+      "google_count": 95
+    },
+    "internal_score": 8.0,
+    "description": "Strive Pharmacy is a 503A compounding pharmacy based in Gilbert, Arizona that supplies compounded GLP-1 medications to several direct-to-consumer telehealth brands. PCAB-accredited with multi-state licensure.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://strivepharmacy.com"],
+      "confidence": "medium",
+      "notes": "State list is partial and requires verification."
+    }
+  },
+  {
+    "_id": "olympia",
+    "name": "Olympia Pharmaceuticals",
+    "slug": "olympia-pharmaceuticals",
+    "city": "Orlando",
+    "state": "FL",
+    "established": 2004,
+    "type": "Both",
+    "certifications": ["PCAB", "FDA Registered 503B"],
+    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","OH","OK","OR","PA","RI","SC","TN","TX","UT","VT","VA","WA","WV","WI"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": ["mochi-health", "lifemd"],
+    "website": "https://olympiapharmaceuticals.com",
+    "phone": "(407) 673-2222",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 3.6,
+      "google_count": 110
+    },
+    "internal_score": 8.3,
+    "description": "Olympia Pharmaceuticals is a dual 503A/503B compounding pharmacy based in Orlando, Florida. It is FDA-registered as a 503B outsourcing facility and produces sterile injectable compounds including GLP-1 medications.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://olympiapharmaceuticals.com"],
+      "confidence": "medium",
+      "notes": "Certifications and licensed states need periodic re-verification."
+    }
+  },
+  {
+    "_id": "hallandale",
+    "name": "Hallandale Pharmacy",
+    "slug": "hallandale-pharmacy",
+    "city": "Hallandale Beach",
+    "state": "FL",
+    "established": 1988,
+    "type": "503A",
+    "certifications": ["PCAB"],
+    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","IL","IN","KY","LA","MD","MA","MI","MS","MO","NV","NJ","NM","NY","NC","OH","OK","PA","SC","TN","TX","VA","WA"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": ["eden", "found"],
+    "website": "https://hallandalepharmacy.com",
+    "phone": "(954) 455-3822",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 4.0,
+      "google_count": 74
+    },
+    "internal_score": 7.8,
+    "description": "Hallandale Pharmacy is a long-established 503A compounding pharmacy in South Florida offering sterile compounding, including GLP-1 medications. Known for bioidentical hormone work and peptide compounding.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://hallandalepharmacy.com"],
+      "confidence": "medium"
+    }
+  },
+  {
+    "_id": "tailor-made",
+    "name": "Tailor Made Compounding",
+    "slug": "tailor-made-compounding",
+    "city": "Lexington",
+    "state": "KY",
+    "established": 2015,
+    "type": "503A",
+    "certifications": ["State Licensed"],
+    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","IL","IN","IA","KS","KY","LA","MD","MA","MI","MN","MS","MO","NE","NV","NJ","NM","NY","NC","OH","OK","OR","PA","SC","TN","TX","UT","VA","WA","WI"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": ["ivim-health"],
+    "website": "https://tailormadecompounding.com",
+    "phone": "(859) 887-0013",
+    "regulatory_actions": [
+      {
+        "date": "2023-04-06",
+        "description": "FDA Form 483 observations issued during inspection related to sterile compounding practices. Pharmacy responded with corrective actions."
+      }
+    ],
+    "external_reviews": {
+      "google_score": 3.9,
+      "google_count": 52
+    },
+    "internal_score": 7.2,
+    "description": "Tailor Made Compounding is a 503A pharmacy in Lexington, Kentucky specializing in peptide and hormone compounding. The pharmacy has been a notable supplier of compounded GLP-1 medications to telehealth brands.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://tailormadecompounding.com"],
+      "confidence": "low",
+      "notes": "Regulatory history reference requires direct FDA confirmation."
+    }
+  },
+  {
+    "_id": "innovation",
+    "name": "Innovation Compounding",
+    "slug": "innovation-compounding",
+    "city": "Kennesaw",
+    "state": "GA",
+    "established": 1988,
+    "type": "503A",
+    "certifications": ["PCAB"],
+    "states_licensed": ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": ["lifemd"],
+    "website": "https://innovationcompounding.com",
+    "phone": "(800) 547-1399",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 4.3,
+      "google_count": 130
+    },
+    "internal_score": 8.2,
+    "description": "Innovation Compounding is a 503A pharmacy near Atlanta, Georgia that has been compounding sterile and non-sterile preparations for more than three decades. PCAB-accredited with broad state licensure.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://innovationcompounding.com"],
+      "confidence": "medium"
+    }
+  },
+  {
+    "_id": "wells",
+    "name": "Wells Pharmacy Network",
+    "slug": "wells-pharmacy-network",
+    "city": "Ocala",
+    "state": "FL",
+    "established": 2003,
+    "type": "503A",
+    "certifications": ["PCAB"],
+    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","IL","IN","IA","KS","KY","LA","MD","MA","MI","MN","MS","MO","NE","NV","NH","NJ","NM","NY","NC","OH","OK","OR","PA","RI","SC","TN","TX","UT","VA","WA","WI"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": ["eden"],
+    "website": "https://wellsrx.com",
+    "phone": "(800) 622-4510",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 3.7,
+      "google_count": 65
+    },
+    "internal_score": 7.9,
+    "description": "Wells Pharmacy Network is a multi-state 503A compounding pharmacy based in Ocala, Florida. The pharmacy focuses on hormone replacement, wellness compounding, and has added GLP-1 medications to its product line.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://wellsrx.com"],
+      "confidence": "medium"
+    }
+  },
+  {
+    "_id": "red-rock",
+    "name": "Red Rock Pharmacy",
+    "slug": "red-rock-pharmacy",
+    "city": "South Jordan",
+    "state": "UT",
+    "established": 2003,
+    "type": "503A",
+    "certifications": ["PCAB"],
+    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","ID","IL","IN","IA","KS","KY","LA","MD","MA","MI","MN","MO","MT","NE","NV","NJ","NM","NY","NC","OH","OK","OR","PA","SC","TN","TX","UT","VA","WA","WI","WY"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": ["found"],
+    "website": "https://redrockpharmacy.com",
+    "phone": "(801) 446-8000",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 4.1,
+      "google_count": 88
+    },
+    "internal_score": 7.7,
+    "description": "Red Rock Pharmacy is a Utah-based 503A compounding pharmacy producing sterile injectables including compounded semaglutide and tirzepatide. PCAB-accredited and licensed across most states.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://redrockpharmacy.com"],
+      "confidence": "low",
+      "notes": "State list approximate."
+    }
+  },
+  {
+    "_id": "revelation",
+    "name": "Revelation Pharma",
+    "slug": "revelation-pharma",
+    "city": "Charlotte",
+    "state": "NC",
+    "established": 2020,
+    "type": "Both",
+    "certifications": ["PCAB"],
+    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","IL","IN","IA","KS","KY","LA","MD","MA","MI","MN","MO","NE","NV","NJ","NM","NY","NC","OH","OK","OR","PA","SC","TN","TX","UT","VA","WA","WI"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": [],
+    "website": "https://revelationpharma.com",
+    "phone": "(704) 703-5030",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 3.9,
+      "google_count": 42
+    },
+    "internal_score": 7.6,
+    "description": "Revelation Pharma is a growing network of 503A and 503B compounding pharmacies headquartered in Charlotte, North Carolina. The network has acquired multiple regional compounding pharmacies and supplies sterile compounds including GLP-1 medications.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://revelationpharma.com"],
+      "confidence": "low"
+    }
+  },
+  {
+    "_id": "pavilion",
+    "name": "Pavilion Compounding Pharmacy",
+    "slug": "pavilion-compounding-pharmacy",
+    "city": "Atlanta",
+    "state": "GA",
+    "established": 2004,
+    "type": "503A",
+    "certifications": ["PCAB"],
+    "states_licensed": ["AL","FL","GA","KY","MS","NC","SC","TN","VA"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": [],
+    "website": "https://pavilioncompounding.com",
+    "phone": "(404) 350-5780",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 4.5,
+      "google_count": 38
+    },
+    "internal_score": 7.4,
+    "description": "Pavilion Compounding Pharmacy is a PCAB-accredited 503A pharmacy serving the Atlanta metro area and several Southeastern states. It offers hormone replacement, peptides, and compounded GLP-1 medications.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://pavilioncompounding.com"],
+      "confidence": "low"
+    }
+  },
+  {
+    "_id": "beaker",
+    "name": "Beaker Pharmacy",
+    "slug": "beaker-pharmacy",
+    "city": "Hallandale Beach",
+    "state": "FL",
+    "established": 2020,
+    "type": "503A",
+    "certifications": ["State Licensed"],
+    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","IL","IN","KY","LA","MD","MA","MI","MS","MO","NV","NJ","NM","NY","NC","OH","OK","PA","SC","TN","TX","VA","WA"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": [],
+    "website": "https://beakerpharmacy.com",
+    "phone": "(954) 399-0505",
+    "regulatory_actions": [],
+    "internal_score": 6.9,
+    "description": "Beaker Pharmacy is a newer 503A compounding pharmacy based in South Florida that has entered the compounded GLP-1 space. State-licensed with a growing multi-state footprint.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://beakerpharmacy.com"],
+      "confidence": "low",
+      "notes": "Limited public information; certifications unverified."
+    }
+  },
+  {
+    "_id": "town-center",
+    "name": "Town Center Compounding Pharmacy",
+    "slug": "town-center-compounding-pharmacy",
+    "city": "Rancho Santa Margarita",
+    "state": "CA",
+    "established": 2005,
+    "type": "503A",
+    "certifications": ["PCAB"],
+    "states_licensed": ["AZ","CA","CO","FL","GA","IL","NV","NJ","NY","OR","TX","UT","WA"],
+    "produces_semaglutide": true,
+    "produces_tirzepatide": true,
+    "linked_providers": [],
+    "website": "https://towncenterrx.com",
+    "phone": "(949) 858-2500",
+    "regulatory_actions": [],
+    "external_reviews": {
+      "google_score": 4.6,
+      "google_count": 55
+    },
+    "internal_score": 7.5,
+    "description": "Town Center Compounding Pharmacy is a 503A PCAB-accredited pharmacy in Orange County, California. Known for hormone and wellness compounding, it has expanded into compounded GLP-1 preparations.",
+    "verification": {
+      "last_verified": "2026-04-05",
+      "verified_by": "manual",
+      "source_urls": ["https://towncenterrx.com"],
+      "confidence": "low"
+    }
+  }
+]

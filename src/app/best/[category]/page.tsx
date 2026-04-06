@@ -374,6 +374,24 @@ export default async function RankingsPage({
           </nav>
         )}
 
+        {/* Compounding pharmacy callout — only on compounded categories */}
+        {(category === "compounded-semaglutide" ||
+          category === "compounded-tirzepatide") && (
+          <div className="rounded-xl border border-brand-violet/20 bg-brand-violet/5 p-4 text-sm text-brand-text-secondary">
+            <strong className="text-brand-text-primary">
+              Looking for the pharmacies behind these compounded medications?
+            </strong>{" "}
+            See our{" "}
+            <Link
+              href="/pharmacies"
+              className="text-brand-violet underline font-semibold"
+            >
+              compounding pharmacy directory
+            </Link>{" "}
+            with 503A/503B status, PCAB accreditation, and regulatory standing.
+          </div>
+        )}
+
         {/* Quick picks table */}
         <QuickPicksTable
           rows={top5.map((provider) => ({

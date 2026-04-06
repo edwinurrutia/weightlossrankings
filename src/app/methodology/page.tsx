@@ -56,6 +56,33 @@ export default function MethodologyPage() {
         ))}
       </div>
 
+      <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6 space-y-3 mb-8">
+        <h2 className="text-lg font-semibold text-gray-900">
+          How We Evaluate Compounding Pharmacies
+        </h2>
+        <p className="text-gray-600 text-sm">
+          For compounded GLP-1 medications, the telehealth provider is only
+          half the story — the compounding pharmacy behind the prescription
+          actually produces the drug. We maintain a separate{" "}
+          <a href="/pharmacies" className="text-brand-violet underline">
+            compounding pharmacy directory
+          </a>{" "}
+          and score each pharmacy across five dimensions: accreditation and
+          compliance (PCAB, cGMP, FDA 503B registration), regulatory standing
+          (FDA warning letters, Form 483 observations, recalls), state
+          coverage (number of states licensed to dispense), GLP-1 production
+          (whether semaglutide and tirzepatide are both produced), and track
+          record (years in operation).
+        </p>
+        <p className="text-gray-600 text-sm">
+          Pharmacy-level scores are independent from provider-level scores.
+          We do not artificially boost a telehealth provider because it
+          partners with a highly-rated pharmacy — instead we surface the
+          pharmacy relationship so readers can evaluate both the prescriber
+          and the pharmacy fulfilling the prescription.
+        </p>
+      </div>
+
       <div className="rounded-2xl bg-brand-violet/5 border border-brand-violet/10 p-6 space-y-3">
         <h2 className="text-lg font-semibold text-gray-900">
           Scores vs. Placement
