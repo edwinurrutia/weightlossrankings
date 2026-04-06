@@ -340,7 +340,7 @@ export default async function ProviderReviewPage({
                 <p className="text-sm text-brand-text-secondary leading-relaxed">
                   Yes, {provider.name} is a legitimate provider. Our team
                   independently evaluated it and gave it an overall score of{" "}
-                  {overallScore}/10. As with any healthcare service, we
+                  {overallScore.toFixed(1)}/10. As with any healthcare service, we
                   recommend consulting with a licensed medical professional
                   before starting any new treatment.
                 </p>

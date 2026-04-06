@@ -83,7 +83,7 @@ export default async function StatePage({
           <CTAButton
             href="/savings-calculator"
             size="lg"
-            className="bg-none bg-transparent border-2 border-brand-violet text-brand-violet shadow-none hover:shadow-md hover:brightness-100 hover:bg-brand-violet/5"
+            variant="outline"
           >
             Calculate Savings
           </CTAButton>

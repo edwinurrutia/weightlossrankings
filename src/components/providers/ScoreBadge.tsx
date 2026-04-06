@@ -21,7 +21,7 @@ export default function ScoreBadge({ scores, size = "md" }: ScoreBadgeProps) {
     <div
       className={`rounded-full bg-brand-gradient text-white font-bold flex items-center justify-center flex-shrink-0 ${sizeClasses[size]}`}
     >
-      {overall}
+      {overall.toFixed(1)}
     </div>
   );
 }

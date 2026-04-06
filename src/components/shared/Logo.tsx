@@ -7,9 +7,9 @@ interface LogoProps {
 
 export default function Logo({ size = "md", showText = true }: LogoProps) {
   const sizes = {
-    sm: { icon: "w-7 h-7", text: "text-sm", arrow: "12" },
-    md: { icon: "w-9 h-9", text: "text-lg", arrow: "14" },
-    lg: { icon: "w-12 h-12", text: "text-2xl", arrow: "18" },
+    sm: { icon: "w-9 h-9", line1: "text-[11px]", line2: "text-sm" },
+    md: { icon: "w-11 h-11", line1: "text-xs", line2: "text-base" },
+    lg: { icon: "w-14 h-14", line1: "text-sm", line2: "text-xl" },
   };
 
   const s = sizes[size];
@@ -17,41 +17,64 @@ export default function Logo({ size = "md", showText = true }: LogoProps) {
   return (
     <Link href="/" className="flex items-center gap-2.5 group">
       <div
-        className={`${s.icon} rounded-xl bg-brand-gradient flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow relative overflow-hidden`}
+        className={`${s.icon} rounded-xl bg-brand-gradient flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow`}
       >
-        {/* Downward arrow representing weight loss / trending down */}
+        {/* Number 1 ribbon / ranking badge */}
         <svg
-          width={s.arrow}
-          height={s.arrow}
-          viewBox="0 0 24 24"
+          viewBox="0 0 32 32"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="w-[65%] h-[65%]"
         >
-          <path
-            d="M4 4L12 16L20 4"
+          {/* Trophy / medal circle */}
+          <circle
+            cx="16"
+            cy="14"
+            r="9"
             stroke="white"
-            strokeWidth="3"
+            strokeWidth="2.5"
+            fill="none"
+          />
+          {/* Number 1 inside */}
+          <path
+            d="M14.5 10.5L16.5 9.5V18.5M14 18.5H19"
+            stroke="white"
+            strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
+          {/* Ribbons */}
           <path
-            d="M4 10L12 22L20 10"
+            d="M10 21L7 29L11.5 27L13 30"
             stroke="white"
-            strokeWidth="3"
+            strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            opacity="0.4"
+            fill="none"
+          />
+          <path
+            d="M22 21L25 29L20.5 27L19 30"
+            stroke="white"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fill="none"
           />
         </svg>
       </div>
       {showText && (
-        <span
-          className={`font-heading font-bold text-brand-text-primary ${s.text} tracking-tight`}
-        >
-          Weight
-          <span className="text-gradient">Loss</span>
-          Rankings
-        </span>
+        <div className="flex flex-col leading-none">
+          <span
+            className={`font-heading font-bold text-brand-text-primary ${s.line2} tracking-tight`}
+          >
+            Weight Loss
+          </span>
+          <span
+            className={`font-heading font-bold text-gradient ${s.line2} tracking-tight`}
+          >
+            Rankings
+          </span>
+        </div>
       )}
     </Link>
   );

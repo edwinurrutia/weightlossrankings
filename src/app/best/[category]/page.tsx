@@ -150,7 +150,7 @@ export default async function RankingsPage({
                           </td>
                           <td className="py-3 px-4 text-center">
                             <span className="font-bold text-base bg-brand-gradient bg-clip-text text-transparent">
-                              {score}
+                              {score.toFixed(1)}
                             </span>
                           </td>
                           <td className="py-3 px-4 text-brand-text-secondary hidden sm:table-cell">
