@@ -1,6 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FAQSection from "@/components/marketing/FAQSection";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
+
+// Central-registry source ids backing the clinical / regulatory / insurance
+// answers in the FAQ below. Ordered for readability in the SourcesPanel.
+const FAQ_SOURCE_IDS = [
+  "step1-nejm-2021",                    // semaglutide pivotal
+  "surmount1-nejm-2022",                // tirzepatide pivotal
+  "surmount5-nejm-2025",                // head-to-head sema vs tirz
+  "fda-wegovy-approval",                // Wegovy approval
+  "fda-zepbound-approval",              // Zepbound approval
+  "fda-ozempic-label",                  // Ozempic label (diabetes only)
+  "fda-mounjaro-label",                 // Mounjaro label (diabetes only)
+  "fda-503a-compounding",               // 503A compounding rules
+  "fda-drug-shortage-list",             // shortage-based compounding legality
+  "cms-medicare-part-d",                // Medicare Part D exclusion
+  "kff-medicaid-obesity-drug-coverage", // Medicaid coverage context
+  "irs-pub-502-medical-expenses",       // FSA/HSA eligibility
+];
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
@@ -183,6 +202,28 @@ export default function FaqPage() {
           items={insuranceFaqs}
         />
         <FAQSection id="using-site" title="Using Our Site" items={siteFaqs} />
+      </div>
+
+      {/* Central citation registry — backs every clinical, regulatory, and
+          insurance answer in the FAQ sections above. */}
+      <div className="mt-14">
+        <h2 className="font-heading text-2xl font-bold text-brand-text-primary mb-3">
+          Sources
+        </h2>
+        <p className="text-sm text-brand-text-secondary mb-3">
+          The clinical, regulatory, and insurance answers above draw from the
+          primary sources below. For the complete registry of every citation
+          used across the site, see our{" "}
+          <Link href="/sources" className="text-brand-violet underline">
+            master source list
+          </Link>
+          .
+        </p>
+        <SourcesPanel
+          sourceIds={FAQ_SOURCE_IDS}
+          dataAsOf={getLatestVerificationDate()}
+          defaultOpen
+        />
       </div>
 
       <div className="mt-14 rounded-2xl bg-brand-violet/5 border border-brand-violet/20 p-8 text-center">

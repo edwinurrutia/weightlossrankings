@@ -116,6 +116,18 @@ export default async function TopicPillarPage({
           <p className="mt-4 text-lg text-brand-text-secondary">
             {t.description}
           </p>
+          <p className="mt-3 text-sm text-brand-text-secondary">
+            Every guide in this pillar is cited to primary FDA, trial, and
+            peer-reviewed sources. See our{" "}
+            <Link href="/methodology" className="text-brand-violet underline">
+              methodology
+            </Link>{" "}
+            and the full{" "}
+            <Link href="/sources" className="text-brand-violet underline">
+              central citation registry
+            </Link>
+            .
+          </p>
         </header>
 
         {/* Money-page CTAs */}

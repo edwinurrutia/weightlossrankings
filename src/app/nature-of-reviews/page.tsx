@@ -1,5 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
+
+// Regulatory and clinical sources that underpin this page's claims about
+// how we research providers (compounding rules, pharmacy accreditation,
+// trial-grade evidence for efficacy scoring).
+const NATURE_SOURCE_IDS = [
+  "fda-503a-compounding",
+  "fda-503b-outsourcing",
+  "fda-drug-shortage-list",
+  "fda-glp1-warning-letters",
+  "pcab-accreditation-standards",
+  "step1-nejm-2021",
+  "surmount1-nejm-2022",
+  "wlr-pricing-index",
+];
 
 export const metadata: Metadata = {
   title: "Nature of Our Reviews & Rankings",
@@ -341,6 +357,30 @@ export default function NatureOfReviewsPage() {
             with the provider name and the specific issue. We typically
             correct verified inaccuracies within 1-2 business days.
           </p>
+        </section>
+
+        {/* Sources — central citation registry backing the regulatory and
+            clinical claims made on this page (compounding rules, pharmacy
+            accreditation standards, and the trial-grade efficacy evidence
+            we lean on when scoring providers). */}
+        <section className="pt-2">
+          <h2 className="font-heading text-2xl font-bold text-brand-text-primary mb-3">
+            Sources
+          </h2>
+          <p className="mb-3 text-sm">
+            The regulatory, pharmacy, and clinical-trial claims on this page
+            are drawn from the primary sources below. For the complete
+            registry of every citation used across WeightLossRankings, see our{" "}
+            <Link href="/sources" className="text-brand-violet underline">
+              master source list
+            </Link>
+            .
+          </p>
+          <SourcesPanel
+            sourceIds={NATURE_SOURCE_IDS}
+            dataAsOf={getLatestVerificationDate()}
+            defaultOpen
+          />
         </section>
 
         {/* Related */}

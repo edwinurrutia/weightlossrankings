@@ -16,9 +16,22 @@ export default async function BlogIndexPage() {
   return (
     <main className="min-h-screen bg-brand-bg">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <h1 className="text-3xl sm:text-4xl font-bold text-brand-text-primary mb-8">
+        <h1 className="text-3xl sm:text-4xl font-bold text-brand-text-primary mb-3">
           Blog
         </h1>
+        <p className="text-sm text-brand-text-secondary max-w-3xl mb-8 leading-relaxed">
+          Every post is edited against our{" "}
+          <a href="/methodology" className="text-brand-violet underline">
+            editorial methodology
+          </a>{" "}
+          and every clinical or regulatory claim is cited to primary sources
+          from our{" "}
+          <a href="/sources" className="text-brand-violet underline">
+            central citation registry
+          </a>{" "}
+          — FDA filings, peer-reviewed trials (NEJM, JAMA, Lancet), and
+          CDC/KFF/CMS data.
+        </p>
 
         {posts.length === 0 ? (
           <div className="bg-white rounded-2xl border border-brand-violet/10 p-12 text-center text-brand-text-secondary">

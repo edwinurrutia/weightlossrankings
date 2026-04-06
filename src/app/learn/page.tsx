@@ -70,6 +70,17 @@ export default async function LearnIndexPage() {
             the FDA, clinical trials, or peer-reviewed research. Reviewed by our
             editorial team.
           </p>
+          <p className="mt-3 text-sm text-brand-text-secondary max-w-3xl">
+            See our{" "}
+            <Link href="/methodology" className="text-brand-violet underline">
+              editorial methodology
+            </Link>{" "}
+            and the full{" "}
+            <Link href="/sources" className="text-brand-violet underline">
+              central citation registry
+            </Link>{" "}
+            that backs every clinical and regulatory claim on the site.
+          </p>
         </header>
 
         <div className="grid gap-8 sm:grid-cols-2">

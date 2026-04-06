@@ -146,6 +146,27 @@ export default async function BlogPostPage({
           </div>
         )}
 
+        {/* TODO(citations): blog posts do not yet carry a `sources: string[]`
+            field referencing the central citation registry in
+            src/lib/citations.ts. Once the BlogPost type (src/lib/types.ts) and
+            src/data/blog-posts.json gain a `sources` field, render a
+            <SourcesPanel sourceIds={post.sources} dataAsOf={...} /> here.
+            For now the template relies on inline links inside each post body. */}
+
+        {/* Editorial policy note + pointer to the central sources registry. */}
+        <div className="rounded-xl border border-brand-violet/10 bg-brand-violet/[0.03] px-4 py-3 text-xs text-brand-text-secondary leading-relaxed">
+          Every factual claim on WeightLossRankings is sourced to FDA filings,
+          peer-reviewed trials, or primary regulatory documents. See our{" "}
+          <a href="/methodology" className="text-brand-violet underline">
+            methodology
+          </a>{" "}
+          and{" "}
+          <a href="/sources" className="text-brand-violet underline">
+            master source list
+          </a>{" "}
+          for the full citation registry.
+        </div>
+
         {/* Email capture */}
         <EmailCapture source={`blog_${post.slug}`} />
       </div>

@@ -26,6 +26,26 @@ import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import FdaWarningFlag from "@/components/marketing/FdaWarningFlag";
 import { getWarningLetterByProviderSlug } from "@/lib/fda-warning-letters";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
+
+// Citation registry ids used on every provider review page.
+// These are general regulatory / clinical facts that apply to all 80+
+// provider reviews, so we reference them uniformly.
+const REVIEW_SOURCE_IDS = [
+  "wlr-pricing-index",                  // our scoring dataset
+  "fda-503a-compounding",               // compounding rules
+  "fda-drug-shortage-list",             // shortage-based compounding basis
+  "fda-wegovy-approval",                // brand semaglutide approval
+  "fda-zepbound-approval",              // brand tirzepatide approval
+  "step1-nejm-2021",                    // STEP 1 — semaglutide efficacy
+  "surmount1-nejm-2022",                // SURMOUNT-1 — tirzepatide efficacy
+  "kff-medicaid-obesity-drug-coverage", // insurance context
+  "pcab-accreditation-standards",       // pharmacy accreditation
+];
+// TODO(citations): add a provider-specific clinical-evidence selector
+// once reviews mark which drug class (semaglutide vs tirzepatide) they
+// primarily evaluate so we only show the relevant trial per review.
 
 export async function generateStaticParams() {
   const slugs = await getAllProviderSlugs();
@@ -331,6 +351,30 @@ export default async function ProviderReviewPage({
               <BlogContent content={provider.review_content} />
             </section>
           )}
+
+          {/* Sources — central citation registry.
+              Rendered above related providers so readers can verify the
+              regulatory + clinical claims referenced throughout the review. */}
+          <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8">
+            <h2 className="font-heading text-xl font-bold text-brand-text-primary mb-2">
+              Sources &amp; methodology
+            </h2>
+            <p className="text-sm text-brand-text-secondary mb-3">
+              Our {provider.name} review applies the same{" "}
+              <a href="/methodology" className="text-brand-violet underline">
+                6-dimension scoring framework
+              </a>{" "}
+              we use for every provider. Pricing, FDA approval status,
+              compounding rules, and clinical-trial efficacy claims are
+              sourced from the primary regulatory and peer-reviewed literature
+              below.
+            </p>
+            <SourcesPanel
+              sourceIds={REVIEW_SOURCE_IDS}
+              dataAsOf={getLatestVerificationDate()}
+              defaultOpen={false}
+            />
+          </section>
 
           <RelatedProvidersSection
             title={`Alternatives to ${provider.name}`}

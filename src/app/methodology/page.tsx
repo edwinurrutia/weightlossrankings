@@ -1,5 +1,37 @@
 import type { Metadata } from "next";
 import { SCORE_DIMENSIONS } from "@/lib/scoring";
+import Citation from "@/components/research/Citation";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
+
+// Per-page citation numbering (1..n) — must match the order in sourceIds below.
+const CITE = {
+  WLR_PRICING: { id: "wlr-pricing-index", n: 1 },
+  WEGOVY_PRICE: { id: "novocare-wegovy-cash-price", n: 2 },
+  ZEPBOUND_PRICE: { id: "lilly-zepbound-cash-price", n: 3 },
+  STEP1: { id: "step1-nejm-2021", n: 4 },
+  SURMOUNT1: { id: "surmount1-nejm-2022", n: 5 },
+  PCAB: { id: "pcab-accreditation-standards", n: 6 },
+  FDA_503A: { id: "fda-503a-compounding", n: 7 },
+  FDA_503B: { id: "fda-503b-outsourcing", n: 8 },
+  FDA_WARNING: { id: "fda-glp1-warning-letters", n: 9 },
+  AACE: { id: "aace-obesity-guidelines-2016", n: 10 },
+  ADA: { id: "ada-standards-of-care-2025", n: 11 },
+} as const;
+
+const METHODOLOGY_SOURCE_IDS = [
+  CITE.WLR_PRICING.id,
+  CITE.WEGOVY_PRICE.id,
+  CITE.ZEPBOUND_PRICE.id,
+  CITE.STEP1.id,
+  CITE.SURMOUNT1.id,
+  CITE.PCAB.id,
+  CITE.FDA_503A.id,
+  CITE.FDA_503B.id,
+  CITE.FDA_WARNING.id,
+  CITE.AACE.id,
+  CITE.ADA.id,
+];
 
 export const metadata: Metadata = {
   title: "How We Rank — Our Methodology",
@@ -28,7 +60,7 @@ export default function MethodologyPage() {
       <h1 className="text-3xl font-bold text-gray-900 mb-4">
         How We Rank — Our Methodology
       </h1>
-      <p className="text-gray-600 mb-8">
+      <p className="text-gray-600 mb-4">
         Every provider on WeightLossRankings is evaluated using a structured
         scoring system. Each provider is assessed across six weighted
         dimensions, and scores are computed algorithmically to produce an
@@ -37,6 +69,33 @@ export default function MethodologyPage() {
         non-partner. Below is a full breakdown of each dimension and what it
         measures.
       </p>
+      <div className="mb-8 rounded-xl border border-brand-violet/10 bg-brand-violet/[0.03] px-4 py-3 text-sm text-gray-600 leading-relaxed">
+        <strong className="text-gray-900">Why each dimension matters:</strong>{" "}
+        <em>Value</em> is benchmarked against current brand-name GLP-1 cash
+        prices — roughly $1,349/month for Wegovy
+        <Citation source={CITE.WEGOVY_PRICE.id} n={CITE.WEGOVY_PRICE.n} /> and
+        $1,086/month for Zepbound
+        <Citation source={CITE.ZEPBOUND_PRICE.id} n={CITE.ZEPBOUND_PRICE.n} />{" "}
+        — against which compounded options are compared using our pricing
+        index
+        <Citation source={CITE.WLR_PRICING.id} n={CITE.WLR_PRICING.n} />.{" "}
+        <em>Effectiveness</em> is grounded in the pivotal trials: STEP 1
+        (semaglutide, -14.9% body weight)
+        <Citation source={CITE.STEP1.id} n={CITE.STEP1.n} /> and SURMOUNT-1
+        (tirzepatide, -20.9% body weight)
+        <Citation source={CITE.SURMOUNT1.id} n={CITE.SURMOUNT1.n} />, with
+        guideline context from AACE
+        <Citation source={CITE.AACE.id} n={CITE.AACE.n} /> and the ADA
+        Standards of Care
+        <Citation source={CITE.ADA.id} n={CITE.ADA.n} />. <em>Trust</em>{" "}
+        reflects PCAB pharmacy accreditation
+        <Citation source={CITE.PCAB.id} n={CITE.PCAB.n} />, federal
+        compounding rules under 503A
+        <Citation source={CITE.FDA_503A.id} n={CITE.FDA_503A.n} /> and 503B
+        <Citation source={CITE.FDA_503B.id} n={CITE.FDA_503B.n} />, and any
+        FDA warning-letter history
+        <Citation source={CITE.FDA_WARNING.id} n={CITE.FDA_WARNING.n} />.
+      </div>
 
       <div className="space-y-4 mb-8">
         {SCORE_DIMENSIONS.map((dim) => (
@@ -128,6 +187,12 @@ export default function MethodologyPage() {
           .
         </p>
       </div>
+
+      <SourcesPanel
+        sourceIds={METHODOLOGY_SOURCE_IDS}
+        dataAsOf={getLatestVerificationDate()}
+        defaultOpen
+      />
     </div>
   );
 }
