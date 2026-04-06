@@ -127,6 +127,20 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 6,
     tags: ["Pricing", "Compounded GLP-1", "Live dataset"],
   },
+  {
+    slug: "what-happens-when-you-stop-semaglutide",
+    title:
+      "What Happens When You Stop Taking Semaglutide? STEP-4, STEP-1 Extension, and SURMOUNT-4 Tell the Story",
+    description:
+      "Semaglutide doesn't work like an antibiotic — you don't take a course and stay better. The STEP-4 withdrawal trial and the STEP-1 one-year extension showed that participants regain ~64% of lost weight within months of discontinuation. We walk through the actual trial data, mechanism, and what it means for anyone considering stopping.",
+    excerpt:
+      "Three large randomized trials have specifically measured what happens to body weight after semaglutide and tirzepatide are stopped. STEP-4 measured the divergence over 48 weeks. STEP-1 extension measured the full one-year regain. SURMOUNT-4 did the same for tirzepatide. The numbers are unambiguous and they should change how patients and prescribers think about \"a course\" of GLP-1 therapy.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 12,
+    citations: 4,
+    tags: ["Semaglutide", "Tirzepatide", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(

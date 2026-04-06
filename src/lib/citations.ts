@@ -353,6 +353,17 @@ const CITATIONS_LIST: CitationEntry[] = [
     pmid: "33755728",
   },
   {
+    id: "step1-extension-dom-2022",
+    label:
+      "STEP 1 Trial Extension — Weight Regain and Cardiometabolic Effects After Withdrawal of Semaglutide (Wilding JPH et al.)",
+    publisher: "Diabetes, Obesity and Metabolism",
+    url: "https://pubmed.ncbi.nlm.nih.gov/35441470/",
+    category: "clinical-trial",
+    accessedDate: "2026-04-06",
+    dataYear: "2022",
+    pmid: "35441470",
+  },
+  {
     id: "step5-natmed-2022",
     label:
       "STEP 5 Trial — Two-Year Effects of Semaglutide in Adults with Overweight or Obesity (Garvey WT et al.)",
