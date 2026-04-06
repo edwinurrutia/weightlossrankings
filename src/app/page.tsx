@@ -102,30 +102,45 @@ export default async function HomePage() {
                   Calculate your savings →
                 </Link>
               </div>
-              {/* Trust strip */}
-              <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-brand-text-secondary">
-                <span className="inline-flex items-center gap-1.5">
-                  <span className="text-brand-success">✓</span> Independently researched
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <span className="text-brand-success">✓</span> 50+ providers tracked
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <span className="text-brand-success">✓</span> Updated monthly
-                </span>
-                <Link
-                  href="/press"
-                  className="inline-flex items-center gap-1.5 hover:text-brand-violet transition-colors"
-                >
-                  <span className="text-brand-success">✓</span> Press &amp; media
-                </Link>
-                <Link
-                  href="/nature-of-reviews"
-                  className="inline-flex items-center gap-1.5 hover:text-brand-violet transition-colors"
-                >
-                  <span className="text-brand-success">✓</span> How our reviews work
-                </Link>
-              </div>
+              {/* Stat bar — editorial, no checkmarks */}
+              <dl className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-4 border-t border-gray-200 pt-8 max-w-2xl">
+                <div>
+                  <dt className="sr-only">Providers tracked</dt>
+                  <dd className="font-heading text-3xl sm:text-4xl font-bold text-brand-violet leading-none tracking-tight">
+                    80+
+                  </dd>
+                  <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
+                    Providers tracked
+                  </p>
+                </div>
+                <div>
+                  <dt className="sr-only">States covered</dt>
+                  <dd className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary leading-none tracking-tight">
+                    50
+                  </dd>
+                  <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
+                    States covered
+                  </p>
+                </div>
+                <div>
+                  <dt className="sr-only">Drug &amp; provider guides</dt>
+                  <dd className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary leading-none tracking-tight">
+                    15
+                  </dd>
+                  <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
+                    In-depth guides
+                  </p>
+                </div>
+                <div>
+                  <dt className="sr-only">Editorial independence</dt>
+                  <dd className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary leading-none tracking-tight">
+                    100%
+                  </dd>
+                  <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
+                    Independent editorial
+                  </p>
+                </div>
+              </dl>
             </div>
 
             {/* Image column */}
