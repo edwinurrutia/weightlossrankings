@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "In-depth, sourced guides on GLP-1 weight loss medications, costs, side effects, and how to choose a provider.",
     url: "/learn",
     type: "website",
-    siteName: "WeightLossRankings",
+    siteName: "Weight Loss Rankings",
   },
   twitter: {
     card: "summary_large_image",

@@ -4,7 +4,7 @@ import { getCurrentAdminUser } from "@/lib/admin-users";
 import AdminSidebar from "@/components/admin/AdminSidebar";
 
 export const metadata: Metadata = {
-  title: "Admin · WeightLossRankings",
+  title: "Admin · Weight Loss Rankings",
   robots: { index: false, follow: false },
 };
 

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "Directory of US compounding pharmacies that produce compounded semaglutide and tirzepatide. Compare 503A vs 503B, PCAB accreditation, and regulatory standing.",
     url: "/pharmacies",
     type: "website",
-    siteName: "WeightLossRankings",
+    siteName: "Weight Loss Rankings",
   },
 };
 

@@ -51,7 +51,7 @@ export default function Logo({ size = "md", showText = true }: LogoProps) {
     <Link
       href="/"
       className="inline-flex items-center group"
-      aria-label="WeightLossRankings home"
+      aria-label="Weight Loss Rankings home"
     >
       {showText ? (
         <span

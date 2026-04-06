@@ -16,7 +16,7 @@ const empty: BlogPost = {
   slug: "",
   excerpt: "",
   body: "",
-  author: "WeightLossRankings Team",
+  author: "Weight Loss Rankings Team",
   published_date: new Date().toISOString(),
   category: "guides",
   tags: [],

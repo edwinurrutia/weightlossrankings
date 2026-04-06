@@ -24,7 +24,7 @@ export async function generateMetadata({
   if (!t) return { title: "Topic Not Found" };
 
   return {
-    title: `${t.title} | WeightLossRankings`,
+    title: `${t.title} | Weight Loss Rankings`,
     description: t.description,
     alternates: { canonical: `/learn/${t.slug}` },
     openGraph: {
@@ -32,7 +32,7 @@ export async function generateMetadata({
       description: t.description,
       url: `/learn/${t.slug}`,
       type: "website",
-      siteName: "WeightLossRankings",
+      siteName: "Weight Loss Rankings",
     },
     twitter: {
       card: "summary_large_image",

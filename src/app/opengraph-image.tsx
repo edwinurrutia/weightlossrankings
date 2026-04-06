@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "WeightLossRankings";
+export const alt = "Weight Loss Rankings";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -24,7 +24,7 @@ export default async function Image() {
           Independent Rankings &amp; Reviews
         </div>
         <div style={{ fontSize: 96, fontWeight: 800, letterSpacing: -2 }}>
-          WeightLossRankings
+          Weight Loss Rankings
         </div>
         <div style={{ fontSize: 40, marginTop: 20, opacity: 0.9 }}>
           Compare GLP-1 Providers, Prices &amp; Reviews

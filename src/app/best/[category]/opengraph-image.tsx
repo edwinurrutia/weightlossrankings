@@ -41,7 +41,7 @@ export default async function Image({
         }}
       >
         <div style={{ fontSize: 36, opacity: 0.85, marginBottom: 16 }}>
-          Ranked by WeightLossRankings
+          Ranked by Weight Loss Rankings
         </div>
         <div
           style={{

@@ -43,7 +43,7 @@ export async function generateMetadata({
       description: cfg.metaDescription,
       url: `/best/${category}/${variant}`,
       type: "article",
-      siteName: "WeightLossRankings",
+      siteName: "Weight Loss Rankings",
     },
     twitter: {
       card: "summary_large_image",

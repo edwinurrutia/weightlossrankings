@@ -185,13 +185,22 @@ export default function PressPage() {
         <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6 space-y-4">
           <div>
             <h3 className="font-semibold text-brand-text-primary mb-1">
-              Official name
+              Display name
             </h3>
             <p className="text-brand-text-secondary text-sm">
-              WeightLossRankings.org (one word, no hyphen, camelcase
-              acceptable as &ldquo;WeightLossRankings&rdquo;). Avoid
-              &ldquo;Weight Loss Rankings&rdquo; as three separate words in
-              written copy.
+              &ldquo;Weight Loss Rankings&rdquo; (three words, with spaces) is
+              the editorial display name. Use it in prose, headlines, and any
+              written copy where the brand is referenced.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-brand-text-primary mb-1">
+              Domain
+            </h3>
+            <p className="text-brand-text-secondary text-sm">
+              &ldquo;weightlossrankings.org&rdquo; (one word, lowercase) is the
+              domain and is reserved for URLs, email addresses, and other
+              technical contexts.
             </p>
           </div>
           <div>
@@ -244,7 +253,7 @@ export default function PressPage() {
         </h2>
         <div className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6">
           <h3 className="font-semibold text-brand-text-primary mb-2">
-            WeightLossRankings Editorial Team
+            Weight Loss Rankings Editorial Team
           </h3>
           <p className="text-brand-text-secondary text-sm mb-3">
             Our editorial team researches GLP-1 telehealth providers,

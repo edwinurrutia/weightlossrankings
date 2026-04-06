@@ -52,7 +52,7 @@ export async function generateMetadata({
       description,
       url: `/fda-warning-letters/${slug}`,
       type: "article",
-      siteName: "WeightLossRankings",
+      siteName: "Weight Loss Rankings",
     },
     twitter: {
       card: "summary_large_image",
@@ -85,11 +85,11 @@ export default async function FdaWarningLetterDetailPage({
     dateModified: letter.added_date,
     author: {
       "@type": "Organization",
-      name: "WeightLossRankings",
+      name: "Weight Loss Rankings",
     },
     publisher: {
       "@type": "Organization",
-      name: "WeightLossRankings",
+      name: "Weight Loss Rankings",
     },
     mainEntityOfPage: {
       "@type": "WebPage",

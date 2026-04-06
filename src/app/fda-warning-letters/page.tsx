@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: PAGE_DESCRIPTION,
     url: "/fda-warning-letters",
     type: "website",
-    siteName: "WeightLossRankings",
+    siteName: "Weight Loss Rankings",
   },
   twitter: {
     card: "summary_large_image",
@@ -66,7 +66,7 @@ export default function FdaWarningLettersIndexPage() {
     url: "https://weightlossrankings.org/fda-warning-letters",
     creator: {
       "@type": "Organization",
-      name: "WeightLossRankings",
+      name: "Weight Loss Rankings",
     },
     license:
       "https://weightlossrankings.org/terms",

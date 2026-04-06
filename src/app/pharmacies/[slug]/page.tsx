@@ -47,7 +47,7 @@ export async function generateMetadata({
       description,
       url: `/pharmacies/${pharmacy.slug}`,
       type: "article",
-      siteName: "WeightLossRankings",
+      siteName: "Weight Loss Rankings",
     },
     twitter: { card: "summary_large_image", title, description },
   };
@@ -342,7 +342,7 @@ export default async function PharmacyDetailPage({
                 {pharmacy.internal_score.toFixed(1)}
               </div>
               <div className="text-xs uppercase tracking-wide text-brand-text-secondary mt-2">
-                WeightLossRankings Score
+                Weight Loss Rankings Score
               </div>
               <div className="text-xs text-brand-text-secondary mt-1">
                 out of 10
@@ -565,7 +565,7 @@ export default async function PharmacyDetailPage({
         {/* Score breakdown */}
         <section className="space-y-4">
           <h2 className="text-2xl font-bold text-brand-text-primary">
-            WeightLossRankings Score Breakdown
+            Weight Loss Rankings Score Breakdown
           </h2>
           <div className="rounded-xl border border-brand-violet/10 bg-white p-5 space-y-3">
             {scoreBreakdown.map((row) => (

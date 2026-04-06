@@ -61,7 +61,7 @@ export default function MethodologyPage() {
         How We Rank — Our Methodology
       </h1>
       <p className="text-gray-600 mb-4">
-        Every provider on WeightLossRankings is evaluated using a structured
+        Every provider on Weight Loss Rankings is evaluated using a structured
         scoring system. Each provider is assessed across six weighted
         dimensions, and scores are computed algorithmically to produce an
         overall rating out of 10. The algorithm is applied uniformly to every
@@ -182,7 +182,7 @@ export default function MethodologyPage() {
         <p className="text-gray-600 text-sm">
           For the story behind the site and how it stays independent, see{" "}
           <a href="/about" className="text-brand-violet underline">
-            About WeightLossRankings
+            About Weight Loss Rankings
           </a>
           .
         </p>

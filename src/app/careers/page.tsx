@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "WeightLossRankings is a small, independent operation. We're not actively hiring, but we're always interested in hearing from medical reviewers, writers, and data engineers.",
+    "Weight Loss Rankings is a small, independent operation. We're not actively hiring, but we're always interested in hearing from medical reviewers, writers, and data engineers.",
   alternates: { canonical: "/careers" },
   robots: { index: true, follow: true },
 };
@@ -13,12 +13,12 @@ export default function CareersPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary mb-4">
-        Careers at WeightLossRankings
+        Careers at Weight Loss Rankings
       </h1>
 
       <div className="space-y-6 text-brand-text-secondary leading-relaxed">
         <p>
-          WeightLossRankings is a small, independent operation focused on
+          Weight Loss Rankings is a small, independent operation focused on
           building the most trusted GLP-1 and weight loss comparison site on
           the web. We are not venture-backed, we don&apos;t have a sales
           floor, and we don&apos;t have a 40-person content team. We are

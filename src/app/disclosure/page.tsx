@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Affiliate Disclosure",
   description:
-    "How WeightLossRankings earns revenue and the role of commercial relationships in our content.",
+    "How Weight Loss Rankings earns revenue and the role of commercial relationships in our content.",
   alternates: { canonical: "/disclosure" },
 };
 

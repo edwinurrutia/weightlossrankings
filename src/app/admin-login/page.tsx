@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AdminLoginForm from "./AdminLoginForm";
 
 export const metadata: Metadata = {
-  title: "Admin Sign In · WeightLossRankings",
+  title: "Admin Sign In · Weight Loss Rankings",
   robots: { index: false, follow: false },
 };
 
@@ -22,7 +22,7 @@ export default function AdminLoginPage({
         <div className="rounded-2xl bg-white shadow-xl border border-brand-violet/10 p-8">
           <div className="text-center mb-6">
             <div className="font-heading text-2xl font-extrabold bg-brand-gradient bg-clip-text text-transparent">
-              WeightLossRankings
+              Weight Loss Rankings
             </div>
             <h1 className="mt-3 font-heading text-xl font-bold text-brand-text-primary">
               Admin Sign In

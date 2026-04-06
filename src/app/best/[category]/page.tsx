@@ -240,7 +240,7 @@ export async function generateMetadata({
       description,
       url: `/best/${category}`,
       type: "article",
-      siteName: "WeightLossRankings",
+      siteName: "Weight Loss Rankings",
     },
     twitter: {
       card: "summary_large_image",

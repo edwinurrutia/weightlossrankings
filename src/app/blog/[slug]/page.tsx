@@ -34,7 +34,7 @@ export async function generateMetadata({
       description: post.excerpt,
       url: `/blog/${slug}`,
       type: "article",
-      siteName: "WeightLossRankings",
+      siteName: "Weight Loss Rankings",
       ...(post.published_date ? { publishedTime: post.published_date } : {}),
       ...(post.updated_date ? { modifiedTime: post.updated_date } : {}),
     },
@@ -101,11 +101,11 @@ export default async function BlogPostPage({
     dateModified: post.updated_date ?? post.published_date,
     author: {
       "@type": "Organization",
-      name: "WeightLossRankings",
+      name: "Weight Loss Rankings",
     },
     publisher: {
       "@type": "Organization",
-      name: "WeightLossRankings",
+      name: "Weight Loss Rankings",
       logo: {
         "@type": "ImageObject",
         url: "https://weightlossrankings.org/icon.svg",
@@ -157,7 +157,7 @@ export default async function BlogPostPage({
 
         {/* Editorial policy note + pointer to the central sources registry. */}
         <div className="rounded-xl border border-brand-violet/10 bg-brand-violet/[0.03] px-4 py-3 text-xs text-brand-text-secondary leading-relaxed">
-          Every factual claim on WeightLossRankings is sourced to FDA filings,
+          Every factual claim on Weight Loss Rankings is sourced to FDA filings,
           peer-reviewed trials, or primary regulatory documents. See our{" "}
           <a href="/methodology" className="text-brand-violet underline">
             methodology

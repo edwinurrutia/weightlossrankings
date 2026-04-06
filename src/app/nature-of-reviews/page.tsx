@@ -20,7 +20,7 @@ const NATURE_SOURCE_IDS = [
 export const metadata: Metadata = {
   title: "Nature of Our Reviews & Rankings",
   description:
-    "How WeightLossRankings researches providers, what shapes our ranking order, what commercial relationships affect, and what you should always verify on your own.",
+    "How Weight Loss Rankings researches providers, what shapes our ranking order, what commercial relationships affect, and what you should always verify on your own.",
   alternates: { canonical: "/nature-of-reviews" },
   robots: { index: true, follow: true },
 };
@@ -370,7 +370,7 @@ export default function NatureOfReviewsPage() {
           <p className="mb-3 text-sm">
             The regulatory, pharmacy, and clinical-trial claims on this page
             are drawn from the primary sources below. For the complete
-            registry of every citation used across WeightLossRankings, see our{" "}
+            registry of every citation used across Weight Loss Rankings, see our{" "}
             <Link href="/sources" className="text-brand-violet underline">
               master source list
             </Link>
@@ -412,7 +412,7 @@ export default function NatureOfReviewsPage() {
             </li>
             <li>
               <Link href="/about" className="text-brand-violet underline">
-                About WeightLossRankings
+                About Weight Loss Rankings
               </Link>{" "}
               — who runs the site.
             </li>

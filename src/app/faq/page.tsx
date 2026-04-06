@@ -24,14 +24,14 @@ const FAQ_SOURCE_IDS = [
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "Answers to common questions about WeightLossRankings, GLP-1 medications like semaglutide and tirzepatide, choosing a telehealth provider, insurance, and how to use our comparison tools.",
+    "Answers to common questions about Weight Loss Rankings, GLP-1 medications like semaglutide and tirzepatide, choosing a telehealth provider, insurance, and how to use our comparison tools.",
   alternates: { canonical: "/faq" },
   robots: { index: true, follow: true },
 };
 
 const aboutFaqs = [
   {
-    question: "What is WeightLossRankings?",
+    question: "What is Weight Loss Rankings?",
     answer:
       "WeightLossRankings.org is an independent comparison site for GLP-1 telehealth providers, weight loss programs, and related products. We publish scored rankings, side-by-side comparisons, plain-English drug guides, and tools like our savings calculator and insurance checker. Our goal is to be the most trusted starting point for anyone researching semaglutide, tirzepatide, or a structured weight loss program.",
   },
@@ -58,7 +58,7 @@ const aboutFaqs = [
   {
     question: "Who's behind the site?",
     answer:
-      "WeightLossRankings is a small, independent operation run by a writer-engineer who has been covering telehealth, digital health, and the GLP-1 market since early 2023. You can learn more on our About page. Questions can always go to hello@weightlossrankings.org.",
+      "Weight Loss Rankings is a small, independent operation run by a writer-engineer who has been covering telehealth, digital health, and the GLP-1 market since early 2023. You can learn more on our About page. Questions can always go to hello@weightlossrankings.org.",
   },
 ];
 
@@ -187,7 +187,7 @@ export default function FaqPage() {
       <div className="space-y-12">
         <FAQSection
           id="about-wlr"
-          title="About WeightLossRankings"
+          title="About Weight Loss Rankings"
           items={aboutFaqs}
         />
         <FAQSection id="glp-1-meds" title="GLP-1 Medications" items={glpFaqs} />

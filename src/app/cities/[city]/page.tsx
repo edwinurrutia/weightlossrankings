@@ -49,7 +49,7 @@ export async function generateMetadata({
       description,
       url: `/cities/${city.slug}`,
       type: "article",
-      siteName: "WeightLossRankings",
+      siteName: "Weight Loss Rankings",
     },
     twitter: { card: "summary_large_image", title, description },
   };

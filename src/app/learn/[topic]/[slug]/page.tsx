@@ -30,7 +30,7 @@ export async function generateMetadata({
 
   const url = `/learn/${topic}/${slug}`;
   return {
-    title: `${article.title} | WeightLossRankings`,
+    title: `${article.title} | Weight Loss Rankings`,
     description: article.excerpt,
     alternates: { canonical: url },
     openGraph: {
@@ -38,7 +38,7 @@ export async function generateMetadata({
       description: article.excerpt,
       url,
       type: "article",
-      siteName: "WeightLossRankings",
+      siteName: "Weight Loss Rankings",
       publishedTime: article.published_date,
       modifiedTime: article.updated_date,
       authors: [article.author],
@@ -126,7 +126,7 @@ export default async function LearnArticlePage({
     },
     publisher: {
       "@type": "Organization",
-      name: "WeightLossRankings",
+      name: "Weight Loss Rankings",
       logo: {
         "@type": "ImageObject",
         url: "https://weightlossrankings.org/icon.svg",

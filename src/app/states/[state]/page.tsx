@@ -46,7 +46,7 @@ export async function generateMetadata({
       description,
       url: `/states/${stateData.slug}`,
       type: "article",
-      siteName: "WeightLossRankings",
+      siteName: "Weight Loss Rankings",
     },
     twitter: {
       card: "summary_large_image",

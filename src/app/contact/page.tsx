@@ -5,7 +5,7 @@ import ContactForm from "@/components/contact/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with WeightLossRankings. Email us for general inquiries, provider corrections, press, partnerships, or privacy requests.",
+    "Get in touch with Weight Loss Rankings. Email us for general inquiries, provider corrections, press, partnerships, or privacy requests.",
   alternates: { canonical: "/contact" },
   robots: { index: true, follow: true },
 };

@@ -111,7 +111,7 @@ export async function generateMetadata({
       description,
       url: `/reviews/${slug}`,
       type: "article",
-      siteName: "WeightLossRankings",
+      siteName: "Weight Loss Rankings",
     },
     twitter: {
       card: "summary_large_image",
@@ -204,7 +204,7 @@ export default async function ProviderReviewPage({
       },
       author: {
         "@type": "Organization",
-        name: "WeightLossRankings",
+        name: "Weight Loss Rankings",
       },
     },
     ...(hasTrustpilot
