@@ -22,12 +22,18 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    // Two sitemaps: the regular full sitemap for general crawl, and
-    // the news-specific sitemap that only contains content from the
-    // last 48 hours for Google News / Discover ingestion. Listing
-    // both here lets Googlebot discover them on its own. The RSS
-    // feed at /feed.xml is auto-discovered via the
-    // <link rel="alternate"> in src/app/layout.tsx.
-    sitemap: [`${BASE_URL}/sitemap.xml`, `${BASE_URL}/news-sitemap.xml`],
+    // Three sitemaps:
+    //   /sitemap.xml         general crawl + indexing
+    //   /news-sitemap.xml    Google News + Top Stories + Discover
+    //                        (last 48 hours of editorial content)
+    //   /sitemap-images.xml  Image Search ingestion (one entry per
+    //                        per-route OG image with caption + title)
+    // The RSS feed at /feed.xml is auto-discovered separately via
+    // the <link rel="alternate"> in src/app/layout.tsx.
+    sitemap: [
+      `${BASE_URL}/sitemap.xml`,
+      `${BASE_URL}/news-sitemap.xml`,
+      `${BASE_URL}/sitemap-images.xml`,
+    ],
   };
 }
