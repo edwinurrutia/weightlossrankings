@@ -1,101 +1,195 @@
-import Image from "next/image";
+import Link from "next/link";
+import { sanityClient } from "@/lib/sanity/client";
+import {
+  FEATURED_PROVIDERS_QUERY,
+  BLOG_POSTS_QUERY,
+} from "@/lib/sanity/queries";
+import type { Provider, BlogPost } from "@/lib/types";
+import ProviderCard from "@/components/providers/ProviderCard";
+import CTAButton from "@/components/shared/CTAButton";
+import EmailCapture from "@/components/shared/EmailCapture";
+import BlogCard from "@/components/blog/BlogCard";
 
-export default function Home() {
+const categories = [
+  {
+    emoji: "💊",
+    label: "GLP-1 Providers",
+    slug: "semaglutide-providers",
+    comingSoon: false,
+  },
+  {
+    emoji: "📋",
+    label: "Weight Loss Programs",
+    slug: "weight-loss-programs",
+    comingSoon: false,
+  },
+  {
+    emoji: "🧬",
+    label: "Supplements",
+    slug: null,
+    comingSoon: true,
+  },
+  {
+    emoji: "🥗",
+    label: "Meal Delivery",
+    slug: null,
+    comingSoon: true,
+  },
+];
+
+export default async function HomePage() {
+  const [featured, posts] = await Promise.all([
+    sanityClient
+      .fetch<Provider[]>(FEATURED_PROVIDERS_QUERY)
+      .catch(() => [] as Provider[]),
+    sanityClient
+      .fetch<BlogPost[]>(BLOG_POSTS_QUERY, { limit: 3 })
+      .catch(() => [] as BlogPost[]),
+  ]);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="min-h-screen bg-brand-bg-purple">
+      {/* ── Hero ── */}
+      <section className="max-w-4xl mx-auto px-4 pt-16 pb-20 text-center">
+        <h1 className="font-heading text-4xl sm:text-5xl font-bold text-brand-text-primary leading-tight mb-4">
+          Find the Best{" "}
+          <span
+            className="text-transparent bg-clip-text"
+            style={{
+              backgroundImage: "linear-gradient(135deg, #8b5cf6, #3b82f6)",
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Weight Loss Solution
+          </span>{" "}
+          for You
+        </h1>
+        <p className="text-lg text-brand-text-secondary mb-8 max-w-2xl mx-auto">
+          Compare GLP-1 providers, programs, and costs side by side — so you
+          can make the right choice with confidence.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <CTAButton href="/compare" size="lg">
+            Compare Providers
+          </CTAButton>
+          <Link
+            href="/savings-calculator"
+            className="inline-flex items-center justify-center rounded-full border-2 border-brand-violet text-brand-violet font-semibold px-8 py-4 text-lg hover:bg-brand-violet hover:text-white transition-colors tap-target"
           >
-            Read our docs
-          </a>
+            Calculate Your Savings
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+
+      {/* ── Category Nav ── */}
+      <section className="max-w-5xl mx-auto px-4 pb-16">
+        <h2 className="font-heading text-2xl font-semibold text-brand-text-primary text-center mb-6">
+          Browse by Category
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {categories.map((cat) => {
+            const inner = (
+              <div className="rounded-2xl bg-white border border-brand-violet/10 p-5 flex flex-col items-center gap-2 shadow-sm text-center h-full transition-shadow hover:shadow-md">
+                <span className="text-3xl">{cat.emoji}</span>
+                <span className="font-heading font-semibold text-brand-text-primary text-sm leading-tight">
+                  {cat.label}
+                </span>
+                {cat.comingSoon && (
+                  <span className="text-xs text-brand-text-secondary">
+                    Coming soon
+                  </span>
+                )}
+              </div>
+            );
+
+            if (cat.comingSoon || !cat.slug) {
+              return (
+                <div key={cat.label} className="cursor-default">
+                  {inner}
+                </div>
+              );
+            }
+
+            return (
+              <Link key={cat.label} href={`/best/${cat.slug}`} className="group block">
+                {inner}
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ── Top Rated Providers ── */}
+      {featured.length > 0 && (
+        <section className="max-w-5xl mx-auto px-4 pb-16">
+          <h2 className="font-heading text-2xl font-semibold text-brand-text-primary mb-6">
+            Top Rated Providers
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featured.slice(0, 3).map((provider) => (
+              <ProviderCard key={provider._id} provider={provider} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ── Tools Banner ── */}
+      <section className="max-w-5xl mx-auto px-4 pb-16">
+        <div
+          className="rounded-2xl p-8 sm:p-10 text-white text-center"
+          style={{
+            backgroundImage: "linear-gradient(135deg, #8b5cf6, #3b82f6)",
+          }}
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <h2 className="font-heading text-2xl sm:text-3xl font-bold mb-3">
+            Free Tools to Save You Money
+          </h2>
+          <p className="text-white/80 mb-6 max-w-xl mx-auto">
+            Use our savings calculator to see what you could pay — then compare
+            providers side by side to find the best deal.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/savings-calculator"
+              className="inline-flex items-center justify-center rounded-full bg-white text-brand-violet font-semibold px-6 py-3 text-base shadow hover:shadow-md transition-all tap-target"
+            >
+              Savings Calculator
+            </Link>
+            <Link
+              href="/compare"
+              className="inline-flex items-center justify-center rounded-full border-2 border-white text-white font-semibold px-6 py-3 text-base hover:bg-white hover:text-brand-violet transition-colors tap-target"
+            >
+              Compare Providers
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Blog ── */}
+      {posts.length > 0 && (
+        <section className="max-w-5xl mx-auto px-4 pb-16">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="font-heading text-2xl font-semibold text-brand-text-primary">
+              Latest Articles
+            </h2>
+            <Link
+              href="/blog"
+              className="text-sm font-medium text-brand-violet hover:underline"
+            >
+              View all →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {posts.slice(0, 3).map((post) => (
+              <BlogCard key={post._id} post={post} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ── Email Capture ── */}
+      <section className="max-w-2xl mx-auto px-4 pb-20">
+        <EmailCapture />
+      </section>
+    </main>
   );
 }
