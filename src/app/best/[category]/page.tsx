@@ -306,11 +306,6 @@ export default async function RankingsPage({
       );
 
   const top5 = sorted.slice(0, 5);
-  const updatedDate = new Date().toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
 
   const itemListSchema = {
     "@context": "https://schema.org",
