@@ -189,3 +189,19 @@ human.
 - **Letter URL slug doesn't match the expected pattern.** That row is
   skipped with a `--verbose` log line. The pattern is
   `<slug>-<5-7 digit number>-<MMDDYYYY>`.
+
+---
+
+## Bi-weekly automated scraper (GitHub Actions)
+
+A scheduled workflow at `.github/workflows/scrape-fda-letters.yml` runs every other Monday at 09:00 UTC (the 1st and 15th of each month). It:
+
+1. Installs Playwright Chromium
+2. Runs `npx tsx scripts/scrape-fda-warning-letters.ts --verbose`
+3. The scraper discovers any new GLP-1 warning letters on fda.gov and auto-enriches them with verbatim FDA content
+4. If the JSON changed, opens a PR titled "📮 New FDA warning letters discovered" with an editorial review checklist
+5. A human reviews the PR and merges (or closes if false positives)
+
+**Manual trigger**: Go to Actions → "FDA warning letters scraper" → "Run workflow" to run on demand.
+
+**Why a PR and not auto-merge**: every new letter needs editorial review for accuracy and for matched_provider_slug assignments before it goes live.

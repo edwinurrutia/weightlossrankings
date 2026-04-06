@@ -226,6 +226,49 @@ export default async function FdaWarningLetterDetailPage({
             </div>
           </section>
 
+          {letter.letter_excerpt && letter.letter_excerpt.length > 0 && (
+            <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-4">
+              <div className="flex items-center justify-between gap-4 flex-wrap">
+                <h2 className="font-heading text-xl md:text-2xl font-bold text-brand-text-primary">
+                  From the letter
+                </h2>
+                <a
+                  href={letter.fda_url}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="text-xs font-semibold text-brand-violet hover:underline whitespace-nowrap"
+                >
+                  Read full letter on FDA.gov →
+                </a>
+              </div>
+              <p className="text-xs uppercase tracking-wider font-semibold text-brand-text-secondary">
+                Quoted verbatim from the FDA warning letter dated {formatDate(letter.letter_date)}
+              </p>
+              <div className="flex flex-col gap-4 border-l-2 border-brand-violet/30 pl-4">
+                {letter.letter_excerpt.map((para, i) => (
+                  <p
+                    key={i}
+                    className="text-sm sm:text-base text-brand-text-secondary leading-relaxed italic"
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
+              <p className="text-[10px] text-brand-text-secondary/70 mt-2">
+                Source: U.S. Food and Drug Administration. Quoted as a verbatim excerpt for editorial commentary;
+                no claim is made beyond what FDA itself has published. The full letter is available at{" "}
+                <a
+                  href={letter.fda_url}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="text-brand-violet underline break-all"
+                >
+                  {letter.fda_url}
+                </a>
+              </p>
+            </section>
+          )}
+
           {/* Boilerplate explainer */}
           <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-4">
             <h2 className="font-heading text-xl md:text-2xl font-bold text-brand-text-primary">

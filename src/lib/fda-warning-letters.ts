@@ -62,6 +62,13 @@ export interface FdaWarningLetter {
   status: WarningLetterStatus;
   /** ISO YYYY-MM-DD — date this entry was added to our dataset. */
   added_date: string;
+  /**
+   * 3–6 verbatim FDA paragraphs from the letter body. Populated by the
+   * scraper's --enrich mode (or auto-enriched on discovery). Empty for
+   * letters where extraction couldn't find a clean paragraph structure.
+   * Rendered on the per-letter detail page with attribution.
+   */
+  letter_excerpt?: string[];
 }
 
 const LETTERS: FdaWarningLetter[] = rawLetters as FdaWarningLetter[];
