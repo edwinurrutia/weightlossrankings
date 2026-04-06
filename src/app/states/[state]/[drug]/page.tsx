@@ -11,11 +11,12 @@ import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import EmailCapture from "@/components/shared/EmailCapture";
 import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
-import StatGrid from "@/components/marketing/StatGrid";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import TrustBadgesRow from "@/components/marketing/TrustBadgesRow";
 import DYORCallout from "@/components/marketing/DYORCallout";
+import StateDrugFactSheet from "@/components/marketing/StateDrugFactSheet";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 const DRUGS = ["semaglutide", "tirzepatide"] as const;
 type DrugSlug = (typeof DRUGS)[number];
@@ -112,52 +113,6 @@ function providerMaxPriceForDrug(p: Provider, drug: DrugSlug): number | null {
   return Math.max(...rows.map((pr) => pr.monthly_cost));
 }
 
-function buildIntro(
-  drug: DrugSlug,
-  stateName: string,
-  providerCount: number,
-  avgPrice: number,
-  obesityRate: number | undefined,
-  obesityRank: number | undefined,
-  topCity: string | undefined,
-  medicaid: string | undefined
-): string {
-  const meta = DRUG_META[drug];
-  const obesityFrame =
-    obesityRate && obesityRank
-      ? `With an adult obesity rate of ${obesityRate}% (#${obesityRank} nationally), demand for medically-supervised weight loss in ${stateName} has grown sharply over the past two years.`
-      : `Demand for medically-supervised weight loss in ${stateName} has grown sharply over the past two years.`;
-
-  const cityFrame = topCity
-    ? `From ${topCity} to smaller towns across the state, telehealth providers ship directly to ${stateName} addresses, no in-person visit required.`
-    : `Telehealth providers ship directly to ${stateName} addresses, no in-person visit required.`;
-
-  const priceFrame =
-    avgPrice <= 199
-      ? `${stateName} sits below the national average for compounded ${meta.label} at roughly $${avgPrice}/mo, making it one of the more affordable markets for cash-pay GLP-1 therapy.`
-      : avgPrice <= 250
-      ? `Compounded ${meta.label} in ${stateName} averages around $${avgPrice}/mo through licensed telehealth pharmacies — well below the $${meta.brandPrice}/mo cash price for brand-name ${meta.brand}.`
-      : `${stateName} runs slightly above the national median at $${avgPrice}/mo for compounded ${meta.label}, but it's still a fraction of the $${meta.brandPrice}/mo retail price for brand-name ${meta.brand}.`;
-
-  const medicaidFrame = medicaid
-    ? `${stateName} Medicaid coverage for GLP-1 weight-loss medication is currently: ${medicaid}.`
-    : "";
-
-  return [
-    `${meta.label} is ${meta.description}.`,
-    `${providerCount} licensed telehealth provider${
-      providerCount === 1 ? "" : "s"
-    } currently prescribe and ship ${meta.label} to patients in ${stateName}.`,
-    obesityFrame,
-    priceFrame,
-    cityFrame,
-    medicaidFrame,
-    `On this page you'll see every ${meta.label} provider serving ${stateName}, sorted by lowest monthly price, plus a breakdown of how much you can save vs brand-name ${meta.brand} and ${meta.diabetesBrand}.`,
-  ]
-    .filter(Boolean)
-    .join(" ");
-}
-
 export default async function StateDrugPage({
   params,
 }: {
@@ -186,16 +141,7 @@ export default async function StateDrugPage({
       return ap - bp;
     });
 
-  const intro = buildIntro(
-    drug,
-    stateName,
-    drugProviders.length,
-    avgPrice,
-    content?.obesity_rate,
-    content?.obesity_rank,
-    content?.top_cities?.[0],
-    content?.medicaid_glp1_coverage
-  );
+  const dataAsOf = getLatestVerificationDate();
 
   // Cross-link: 5 other states for the same drug
   const otherStates = US_STATES.filter((s) => s.code !== stateCode).slice(0, 5);
@@ -331,37 +277,25 @@ export default async function StateDrugPage({
           subtitle={`Compare ${drugProviders.length} ${meta.label} telehealth provider${
             drugProviders.length === 1 ? "" : "s"
           } available in ${stateName}, sorted by cheapest monthly price.`}
-        >
-          <StatGrid
-            columns={4}
-            stats={[
-              {
-                label: `${meta.label} Providers`,
-                value: drugProviders.length,
-              },
-              {
-                label: "Avg Compounded",
-                value: `$${avgPrice}/mo`,
-              },
-              {
-                label: "Telehealth",
-                value: "Legal",
-              },
-              {
-                label: "Obesity Rate",
-                value: content?.obesity_rate
-                  ? `${content.obesity_rate}%`
-                  : "—",
-              },
-            ]}
-          />
-          <AffiliateDisclosure />
-        </PageHero>
+        />
 
-        {/* Intro */}
-        <section className="space-y-4">
-          <p className="text-brand-text-secondary leading-relaxed">{intro}</p>
-        </section>
+        {/* Mobile-first fact sheet — replaces the wall-of-paragraph that
+            used to live up here. Cited, dynamic, scannable on phones. */}
+        <StateDrugFactSheet
+          drugLabel={meta.label}
+          brandLabel={meta.brand}
+          stateName={stateName}
+          providerCount={drugProviders.length}
+          avgPriceMonthly={avgPrice}
+          brandPriceMonthly={meta.brandPrice}
+          obesityRate={content?.obesity_rate}
+          obesityRank={content?.obesity_rank}
+          medicaidCoverage={content?.medicaid_glp1_coverage}
+          topCity={content?.top_cities?.[0]}
+          dataAsOf={dataAsOf}
+        />
+
+        <AffiliateDisclosure />
 
         {/* Provider Grid */}
         <section aria-labelledby="providers-heading">
