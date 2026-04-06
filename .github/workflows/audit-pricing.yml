@@ -1,0 +1,218 @@
+# audit-pricing.yml
+#
+# Daily pricing-drift audit for WeightLossRankings.org
+#
+# Visits a random sample of provider websites using Playwright (Chromium),
+# extracts price candidates with heuristic scrapers, and compares them against
+# the values stored in src/data/providers.json.
+#
+# Severity tiers (defined in scripts/audit-pricing.ts):
+#   HIGH    — delta > $20 or > 15% → exits 1 (CI fails, issue opened)
+#   MEDIUM  — delta > $10 or > 8%  → exits 0 (logged, no issue)
+#   OK      — within tolerance      → exits 0
+#   UNKNOWN — price not extractable → exits 0
+#
+# The --sample 20 flag audits 20 randomly-chosen providers per run.
+# Increase to --all for a full sweep (runs longer and costs more Actions minutes).
+#
+# Schedule: daily at 11:00 UTC (06:00 ET / 07:00 ET DST)
+# Manual:   Actions tab > "Pricing drift audit" > Run workflow
+
+name: Pricing drift audit
+
+on:
+  schedule:
+    - cron: "0 11 * * *"   # Daily 11:00 UTC
+  workflow_dispatch: {}    # on-demand from the Actions tab
+
+permissions:
+  contents: read   # checkout
+  issues: write    # open / comment on issues
+
+jobs:
+  audit:
+    name: Audit provider pricing
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Node ──────────────────────────────────────────────────────────────
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      # ── 3. Install dependencies ───────────────────────────────────────────────
+      - name: Install dependencies
+        run: npm ci
+
+      # ── 4. Playwright Chromium ────────────────────────────────────────────────
+      # The pricing audit falls back to a headless Chromium browser for
+      # JavaScript-rendered pricing pages. The --with-deps flag installs the
+      # OS-level libraries Chromium needs on ubuntu-latest.
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      # ── 5. Run audit ──────────────────────────────────────────────────────────
+      # --sample 20: audit 20 randomly-chosen providers (balanced cost vs coverage)
+      #
+      # Exit codes produced by the script:
+      #   0 = no HIGH severity drift (OK / MEDIUM / UNKNOWN results are fine)
+      #   1 = at least one HIGH severity price drift detected
+      #   2 = script error (providers.json missing, parse failure, etc.)
+      - name: Run pricing audit (20-provider sample)
+        id: audit
+        run: npm run audit:pricing -- --sample 20
+        continue-on-error: true
+
+      # ── 6. Issue management ───────────────────────────────────────────────────
+      # Only opens an issue on HIGH severity drift (exit code 1).
+      # MEDIUM / UNKNOWN results are visible in the artifact but do not create noise.
+      #
+      # Duplicate-issue guard: if an open issue with the same title prefix already
+      # exists, we add a comment instead of opening a second issue.
+      - name: Create or update GitHub issue on HIGH drift
+        if: steps.audit.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs   = require('fs');
+            const date = new Date().toISOString().slice(0, 10);
+            const reportPath = `/tmp/pricing-audit-${date}.json`;
+
+            // ── Bail out if the script itself crashed (exit 2 or file missing) ──
+            if (!fs.existsSync(reportPath)) {
+              core.warning(`JSON report not found at ${reportPath}. The audit script may have exited with code 2 (script error). Check the step log above.`);
+              return;
+            }
+
+            const report = JSON.parse(fs.readFileSync(reportPath, 'utf-8'));
+            const high   = report.results.filter(r => r.severity === 'HIGH');
+
+            if (high.length === 0) {
+              // Shouldn't happen (we only run this step on failure), but guard anyway.
+              core.info('No HIGH severity results in report — skipping issue creation.');
+              return;
+            }
+
+            // ── Build issue title and body ────────────────────────────────────────
+            const prefix = '🚨 [Pricing Audit] HIGH severity price drift detected';
+            const title  = `${prefix} — ${date}`;
+
+            const { summary } = report;
+
+            const highSection = high.map(r => {
+              const delta = r.deltaUsd !== null
+                ? `${r.deltaUsd >= 0 ? '+' : ''}$${r.deltaUsd} (${r.deltaPct !== null ? r.deltaPct.toFixed(1) : '?'}%)`
+                : 'delta unknown';
+              return [
+                `- **${r.name}** (\`${r.slug}\`) — dataset $${r.datasetPrice ?? '?'} → extracted $${r.extractedPrice ?? '?'} (${delta})`,
+                `  ${r.url}`,
+                r.error ? `  *Error: ${r.error}*` : `  *Evidence: ${r.evidence}*`,
+              ].join('\n');
+            }).join('\n');
+
+            const body = [
+              `**Daily pricing audit — ${date}**`,
+              '',
+              `| Severity | Count |`,
+              `|----------|-------|`,
+              `| HIGH     | ${summary.high} |`,
+              `| MEDIUM   | ${summary.medium} |`,
+              `| OK       | ${summary.ok} |`,
+              `| UNKNOWN  | ${summary.unknown} |`,
+              `| **Audited** | **${report.providersAudited}** (random sample) |`,
+              '',
+              '### HIGH severity providers',
+              '',
+              highSection,
+              '',
+              '---',
+              '**Next steps**',
+              '',
+              '1. Open each provider URL above and verify the current price.',
+              '2. If the price has genuinely changed, update `src/data/providers.json`.',
+              '3. To check a single provider locally: `npm run audit:pricing -- --slug <slug>`',
+              '',
+              '> To silence a known false-positive (e.g. site blocks scrapers), close this issue and add the `wontfix` label.',
+              '',
+              `*Run by: [GitHub Actions](https://github.com/${context.repo.owner}/${context.repo.repo}/actions) · workflow: \`audit-pricing.yml\`*`,
+            ].join('\n');
+
+            // ── Labels ────────────────────────────────────────────────────────────
+            const labels = ['pricing-audit', 'urgent'];
+
+            // ── Ensure labels exist ───────────────────────────────────────────────
+            for (const labelName of labels) {
+              try {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: labelName,
+                  color: labelName === 'urgent' ? 'e11d48' : 'f97316',
+                });
+              } catch (e) {
+                if (e.status !== 422) core.warning(`Could not create label '${labelName}': ${e.message}`);
+              }
+            }
+
+            // ── Duplicate-issue guard ─────────────────────────────────────────────
+            const openIssues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'pricing-audit',
+              per_page: 50,
+            });
+
+            const existing = openIssues.data.find(issue =>
+              issue.title.startsWith(prefix)
+            );
+
+            if (existing) {
+              core.info(`Open issue #${existing.number} already exists — adding comment.`);
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: [
+                  `**Updated audit run — ${date}**`,
+                  '',
+                  `| Severity | Count |`,
+                  `|----------|-------|`,
+                  `| HIGH     | ${summary.high} |`,
+                  `| MEDIUM   | ${summary.medium} |`,
+                  `| OK       | ${summary.ok} |`,
+                  `| UNKNOWN  | ${summary.unknown} |`,
+                  '',
+                  '### HIGH severity providers',
+                  '',
+                  highSection,
+                ].join('\n'),
+              });
+            } else {
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels,
+              });
+              core.info(`Opened issue #${created.data.number}: ${title}`);
+            }
+
+      # ── 7. Upload JSON report as artifact ─────────────────────────────────────
+      # Download from:  Actions tab > workflow run > Artifacts section
+      # Even clean runs upload the report so you can inspect the full table.
+      - name: Upload pricing audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pricing-audit-report-${{ github.run_id }}
+          path: /tmp/pricing-audit-*.json
+          retention-days: 14
+          if-no-files-found: warn

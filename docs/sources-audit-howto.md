@@ -164,3 +164,85 @@ review.
 - `data/source-snapshots.json` — committed baseline (last known good hashes)
 - `/tmp/sources-audit-YYYY-MM-DD.json` — per-run JSON report (gitignored, used by CI)
 - `src/lib/citations.ts` — the registry being audited (do not modify from this script)
+
+---
+
+## Automated Weekly Audit (GitHub Actions)
+
+The workflow at `.github/workflows/audit-sources.yml` runs the audit
+automatically every **Monday at 09:00 UTC** and opens a GitHub issue when
+anything requires attention. A `workflow_dispatch` trigger lets you kick it
+off on demand from the Actions tab without waiting for Monday.
+
+### What the workflow does
+
+1. Checks out the repo and installs dependencies with `npm ci`.
+2. Runs `npm run audit:sources -- --no-update --quiet` (read-only — the
+   snapshot baseline is never written by CI).
+3. Reads the JSON report from `/tmp/sources-audit-YYYY-MM-DD.json`.
+4. Opens or updates a GitHub issue based on the results:
+
+| Outcome | Issue title prefix | Labels |
+|---------|--------------------|--------|
+| At least one BROKEN source | `🚨 [Sources Audit] BROKEN sources detected` | `sources-audit` + `urgent` |
+| DRIFT only (no broken) | `⚠️ [Sources Audit] Drift detected` | `sources-audit` + `review` |
+| All OK / SKIPPED | No issue opened | — |
+
+5. Uploads the JSON report as a workflow artifact (retained 30 days).
+
+### Duplicate-issue handling
+
+If an open issue with the same title prefix already exists, the workflow
+adds a comment to it rather than opening a new issue. This means a single
+issue tracks the condition until you resolve it and close the issue.
+
+### Issue labels
+
+- `sources-audit` — all issues from this workflow
+- `urgent` — at least one BROKEN URL (the site is citing a dead link)
+- `review` — content drift detected (the cited page has changed)
+
+### Interpreting the issue body
+
+The issue body contains a summary table (OK / DRIFT / BROKEN / SKIPPED
+counts) followed by two sections:
+
+- **Broken sources** — each entry shows the citation ID, the failure reason
+  (e.g. `http_404`, `timeout`), the consecutive failure count, and the URL.
+- **Drift flagged** — each entry shows the citation ID, the date the hash
+  last matched, and the URL.
+
+These are the same entries you would see in a local `--quiet` run but
+formatted as Markdown for the issue.
+
+### Re-baselining is always a manual operation
+
+The `--refresh` flag is never run by CI. After reviewing flagged drift:
+
+```bash
+# 1. Run locally to get the current hashes
+npm run audit:sources -- --refresh
+
+# 2. Commit the updated snapshot
+git add data/source-snapshots.json
+git commit -m "chore(citations): re-baseline source snapshots YYYY-MM-DD"
+git push origin <branch>
+# Open a PR for review
+```
+
+Committing the snapshot through a PR keeps the baseline change visible and
+reviewable — it is the paper trail that the cited sources were checked.
+
+### Silencing a known false-positive
+
+Close the GitHub issue and add the `wontfix` label. The workflow will open
+a new issue on the next run if the condition is still present (a different
+date will be in the title), but if you keep the old issue open the
+deduplication logic will keep posting comments rather than new issues.
+
+### Artifact download
+
+Every run (including clean runs) uploads the JSON report. To download it:
+Actions tab > the specific "Sources freshness audit" run > scroll to the
+Artifacts section at the bottom of the page > click
+`sources-audit-report-<run_id>`.

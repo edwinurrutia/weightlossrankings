@@ -1,0 +1,228 @@
+# audit-sources.yml
+#
+# Weekly source-freshness audit for WeightLossRankings.org
+#
+# Fetches every URL in the citation registry (src/lib/citations.ts),
+# compares content hashes against the baseline in data/source-snapshots.json,
+# and opens a GitHub issue when anything is BROKEN or DRIFT.
+#
+# IMPORTANT: this workflow always runs with --no-update.
+# The snapshot baseline must only be updated by a human, locally, after
+# reviewing every flagged drift — then committed and merged via PR.
+#
+# Schedule: Mondays at 09:00 UTC (04:00 ET / 05:00 ET DST)
+# Manual:   Actions tab > "Sources freshness audit" > Run workflow
+
+name: Sources freshness audit
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"   # Monday 09:00 UTC
+  workflow_dispatch: {}    # on-demand from the Actions tab
+
+permissions:
+  contents: read   # checkout
+  issues: write    # open / comment on issues
+
+jobs:
+  audit:
+    name: Audit citation sources
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Node ──────────────────────────────────────────────────────────────
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      # ── 3. Install deps ───────────────────────────────────────────────────────
+      - name: Install dependencies
+        run: npm ci
+
+      # ── 4. Run audit ──────────────────────────────────────────────────────────
+      # --no-update: never let CI write to data/source-snapshots.json
+      # --quiet:     suppress per-entry lines; only the summary goes to the log
+      #
+      # Exit codes produced by the script:
+      #   0 = all OK or DRIFT only  (continue-on-error catches both)
+      #   1 = at least one BROKEN   (continue-on-error catches this too)
+      #   2 = script error (registry not found, parse failure, etc.)
+      - name: Run sources audit (read-only)
+        id: audit
+        run: npm run audit:sources -- --no-update --quiet
+        continue-on-error: true
+
+      # ── 5. Issue management ───────────────────────────────────────────────────
+      # We read the JSON report that the script always writes to /tmp/ and decide:
+      #   - exit 1  + broken > 0  → 🚨 urgent issue / comment
+      #   - exit 0  + drift  > 0  → ⚠️  review issue / comment
+      #   - exit 0  + clean       → no-op, log a green summary line
+      #
+      # Duplicate-issue guard: if an open issue with the same title already exists
+      # we add a comment instead of opening a second issue.
+      - name: Create or update GitHub issue
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          AUDIT_OUTCOME: ${{ steps.audit.outcome }}
+        with:
+          script: |
+            const fs   = require('fs');
+            const date = new Date().toISOString().slice(0, 10);
+            const reportPath = `/tmp/sources-audit-${date}.json`;
+
+            // ── Bail out if the script itself crashed (exit 2 or file missing) ──
+            if (!fs.existsSync(reportPath)) {
+              core.warning(`JSON report not found at ${reportPath}. The audit script may have exited with code 2 (script error). Check the step log above.`);
+              return;
+            }
+
+            const report  = JSON.parse(fs.readFileSync(reportPath, 'utf-8'));
+            const broken  = report.results.filter(r => r.status === 'broken');
+            const drifted = report.results.filter(r => r.status === 'drift');
+            const { totals } = report;
+
+            // ── Clean run — log summary and exit ─────────────────────────────────
+            if (broken.length === 0 && drifted.length === 0) {
+              core.info(`Sources audit clean — ${totals.ok} OK, ${totals.skipped} skipped (PubMed). No issue needed.`);
+              return;
+            }
+
+            // ── Build issue title and body ────────────────────────────────────────
+            const isBroken = broken.length > 0;
+            const prefix   = isBroken
+              ? '🚨 [Sources Audit] BROKEN sources detected'
+              : '⚠️ [Sources Audit] Drift detected';
+            const title = `${prefix} — ${date}`;
+
+            const brokenSection = broken.length === 0 ? '' : [
+              '### Broken sources',
+              '',
+              broken.map(b => {
+                const reason = b.error ? b.error : (b.httpStatus ? `HTTP ${b.httpStatus}` : 'unknown');
+                return `- \`${b.id}\` — ${reason} (${b.consecutiveFailures} consecutive failure${b.consecutiveFailures === 1 ? '' : 's'})\n  ${b.url}`;
+              }).join('\n'),
+            ].join('\n');
+
+            const driftSection = drifted.length === 0 ? '' : [
+              '### Drift flagged',
+              '',
+              drifted.map(d => {
+                const since = d.lastChanged ? ` *(last unchanged ${d.lastChanged})*` : '';
+                return `- \`${d.id}\`${since}\n  ${d.url}`;
+              }).join('\n'),
+            ].join('\n');
+
+            const body = [
+              `**Weekly sources audit — ${date}**`,
+              '',
+              `| Status  | Count |`,
+              `|---------|-------|`,
+              `| OK      | ${totals.ok} |`,
+              `| DRIFT   | ${totals.drift} |`,
+              `| BROKEN  | ${totals.broken} |`,
+              `| SKIPPED | ${totals.skipped} (PubMed) |`,
+              `| **Total** | **${totals.total}** |`,
+              '',
+              brokenSection,
+              '',
+              driftSection,
+              '',
+              '---',
+              '**Next steps**',
+              '',
+              '1. Open each flagged URL in a browser and verify the source.',
+              '2. For DRIFT: if the claim still holds, run `npm run audit:sources -- --refresh` locally.',
+              '3. For BROKEN: update the URL in `src/lib/citations.ts`, then re-run.',
+              '4. Commit the updated `data/source-snapshots.json` and open a PR.',
+              '',
+              '> To silence a known false-positive, close this issue and add the `wontfix` label.',
+              '',
+              `*Run by: [GitHub Actions](https://github.com/${context.repo.owner}/${context.repo.repo}/actions) · workflow: \`audit-sources.yml\`*`,
+            ].filter(s => s !== undefined).join('\n');
+
+            // ── Labels ────────────────────────────────────────────────────────────
+            const labels = isBroken
+              ? ['sources-audit', 'urgent']
+              : ['sources-audit', 'review'];
+
+            // ── Ensure labels exist (create if missing, ignore 422 if already there) ─
+            for (const labelName of labels) {
+              try {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: labelName,
+                  color: labelName === 'urgent' ? 'e11d48' :
+                         labelName === 'review' ? 'f59e0b' : '6366f1',
+                });
+              } catch (e) {
+                // 422 = already exists — that's fine
+                if (e.status !== 422) core.warning(`Could not create label '${labelName}': ${e.message}`);
+              }
+            }
+
+            // ── Duplicate-issue guard ─────────────────────────────────────────────
+            // Search for any open issue whose title starts with the same prefix
+            // (same category: broken vs. drift).  If found, comment; otherwise open.
+            const openIssues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'sources-audit',
+              per_page: 50,
+            });
+
+            const existing = openIssues.data.find(issue =>
+              issue.title.startsWith(prefix)
+            );
+
+            if (existing) {
+              core.info(`Open issue #${existing.number} already exists for "${prefix}" — adding comment.`);
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: [
+                  `**Updated audit run — ${date}**`,
+                  '',
+                  `| Status  | Count |`,
+                  `|---------|-------|`,
+                  `| OK      | ${totals.ok} |`,
+                  `| DRIFT   | ${totals.drift} |`,
+                  `| BROKEN  | ${totals.broken} |`,
+                  `| SKIPPED | ${totals.skipped} |`,
+                  '',
+                  brokenSection,
+                  '',
+                  driftSection,
+                ].filter(s => s !== undefined).join('\n'),
+              });
+            } else {
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels,
+              });
+              core.info(`Opened issue #${created.data.number}: ${title}`);
+            }
+
+      # ── 6. Upload JSON report as artifact ─────────────────────────────────────
+      # Download from:  Actions tab > workflow run > Artifacts section
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sources-audit-report-${{ github.run_id }}
+          path: /tmp/sources-audit-*.json
+          # Keep for 30 days — long enough to cross-reference with the open issue
+          retention-days: 30
+          if-no-files-found: warn
