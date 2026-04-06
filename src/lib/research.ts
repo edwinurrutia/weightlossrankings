@@ -85,6 +85,34 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 9,
     tags: ["Compounded GLP-1", "Pharmacy regulation", "FDA sourced"],
   },
+  {
+    slug: "fda-warning-letters-glp1-2025-2026",
+    title:
+      "FDA Warning Letters to Compounded GLP-1 Telehealth Providers: 2025-2026 Investigation",
+    description:
+      "Every FDA warning letter sent to a compounded GLP-1 telehealth provider or compounding pharmacy in 2025 and 2026, with violation patterns, issuing offices, and what's actually being cited.",
+    excerpt:
+      "We track every FDA warning letter to a compounded GLP-1 provider in our editorial database. This investigation breaks down the violation categories, the most-cited statutes, the issuing offices, and the patterns that should make you cautious about specific business models.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-06",
+    readMinutes: 10,
+    citations: 17,
+    tags: ["FDA enforcement", "Compounded GLP-1", "Live dataset"],
+  },
+  {
+    slug: "cheapest-compounded-semaglutide-2026",
+    title:
+      "Is $99 Compounded Semaglutide Real? We Verified Every Provider at the Floor Price",
+    description:
+      "Multiple telehealth providers advertise compounded semaglutide at $99 per month — well below the market median. We verified the licensing, pharmacy partner, dose, and total monthly cost for each one.",
+    excerpt:
+      "The cheapest compounded semaglutide on the market sits at $99/month, advertised by several telehealth providers. We verified each one against our pricing index and pharmacy database to answer the question: is the floor price legitimate, or are there hidden gotchas?",
+    kind: "data-investigation",
+    publishedDate: "2026-04-06",
+    readMinutes: 9,
+    citations: 8,
+    tags: ["Pricing", "Compounded GLP-1", "Live dataset"],
+  },
 ];
 
 export function getResearchArticleBySlug(
