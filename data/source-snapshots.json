@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-04-06T16:34:42.418Z",
+  "lastRunDate": "2026-04-06T16:50:08.307Z",
   "entries": {
     "flow-nejm-2024": {
       "url": "https://pubmed.ncbi.nlm.nih.gov/38785288/",
@@ -319,7 +319,7 @@
       "lastStatus": "broken",
       "contentHash": null,
       "lastChanged": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 4
     },
     "usp-797-sterile-compounding": {
       "url": "https://www.usp.org/compounding/general-chapter-797",
@@ -327,7 +327,7 @@
       "lastStatus": "broken",
       "contentHash": null,
       "lastChanged": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 4
     },
     "usp-85-endotoxin": {
       "url": "https://www.usp.org/harmonization-standards/pdg/general-methods/bacterial-endotoxins",
@@ -335,39 +335,39 @@
       "lastStatus": "broken",
       "contentHash": null,
       "lastChanged": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 4
     },
     "cdc-state-obesity-rankings": {
-      "url": "https://www.cdc.gov/obesity/data/adult.html",
+      "url": "https://www.cdc.gov/obesity/adult-obesity-facts/",
       "lastVerified": "2026-04-06",
-      "lastStatus": "broken",
-      "contentHash": null,
-      "lastChanged": null,
-      "consecutiveFailures": 1
+      "lastStatus": "ok",
+      "contentHash": "11a9ede8f0625426e6b23c5b6b22c73061a344e29a27c11f4a9b0143e366b31b",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
     },
     "cdc-brfss-obesity": {
-      "url": "https://www.cdc.gov/obesity/data/prevalence-maps.html",
+      "url": "https://www.cdc.gov/obesity/data-and-statistics/",
       "lastVerified": "2026-04-06",
-      "lastStatus": "broken",
-      "contentHash": null,
-      "lastChanged": null,
-      "consecutiveFailures": 1
+      "lastStatus": "ok",
+      "contentHash": "1dbcb5f1e6af81935f270f54b72bddc77f9a2a7fd3d9745c25df6bf5fa7513fb",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
     },
     "cdc-nhanes-obesity": {
-      "url": "https://www.cdc.gov/nchs/nhanes/index.htm",
+      "url": "https://www.cdc.gov/nchs/fastats/obesity-overweight.htm",
       "lastVerified": "2026-04-06",
-      "lastStatus": "broken",
-      "contentHash": null,
-      "lastChanged": null,
-      "consecutiveFailures": 1
+      "lastStatus": "ok",
+      "contentHash": "fb270fb2209f2a083b657990c8e2d1d8675903ecd028cc35a3c2211e0b5c6c43",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
     },
     "kff-employer-health-benefits-survey": {
-      "url": "https://www.kff.org/health-costs/report/employer-health-benefits-annual-survey/",
+      "url": "https://www.kff.org/health-costs/report/2024-employer-health-benefits-survey/",
       "lastVerified": "2026-04-06",
-      "lastStatus": "broken",
-      "contentHash": null,
-      "lastChanged": null,
-      "consecutiveFailures": 1
+      "lastStatus": "ok",
+      "contentHash": "11706833ff358431249a11eaa2bd97f9d618490b8ed8c7a583530197fdcb798e",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
     },
     "kff-glp1-pricing-brief": {
       "url": "https://www.kff.org/health-costs/",
@@ -415,7 +415,7 @@
       "lastStatus": "broken",
       "contentHash": null,
       "lastChanged": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 4
     },
     "lilly-direct-pharmacy": {
       "url": "https://www.lillydirect.com/",
@@ -423,7 +423,7 @@
       "lastStatus": "broken",
       "contentHash": null,
       "lastChanged": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 4
     },
     "lilly-mounjaro-cash-price": {
       "url": "https://www.lillydirect.com/mounjaro",
@@ -431,7 +431,7 @@
       "lastStatus": "broken",
       "contentHash": null,
       "lastChanged": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 4
     },
     "lilly-zepbound-cash-price": {
       "url": "https://www.lillydirect.com/zepbound",
@@ -439,31 +439,31 @@
       "lastStatus": "broken",
       "contentHash": null,
       "lastChanged": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 4
     },
     "novocare-ozempic-cash-price": {
-      "url": "https://www.novocare.com/diabetes/products/ozempic/savings-card.html",
+      "url": "https://www.novocare.com/diabetes/products/ozempic.html",
       "lastVerified": "2026-04-06",
-      "lastStatus": "broken",
-      "contentHash": null,
-      "lastChanged": null,
-      "consecutiveFailures": 1
+      "lastStatus": "ok",
+      "contentHash": "c0f554e6ef665f48a7689b49ecfc664f04f21b3deb75d32a7be2a2a1e10af27b",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
     },
     "novocare-rybelsus-cash-price": {
-      "url": "https://www.novocare.com/diabetes/products/rybelsus/savings-card.html",
+      "url": "https://www.novocare.com/diabetes/products/rybelsus.html",
       "lastVerified": "2026-04-06",
-      "lastStatus": "broken",
-      "contentHash": null,
-      "lastChanged": null,
-      "consecutiveFailures": 1
+      "lastStatus": "ok",
+      "contentHash": "9fa193133b3e4d152e6a11a8e4434b5c5a0f821cc51ae6c46bc578fd13b89fd2",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
     },
     "novocare-wegovy-cash-price": {
-      "url": "https://www.novocare.com/obesity/products/wegovy/savings-card.html",
+      "url": "https://www.novocare.com/obesity/products/wegovy.html",
       "lastVerified": "2026-04-06",
-      "lastStatus": "broken",
-      "contentHash": null,
-      "lastChanged": null,
-      "consecutiveFailures": 1
+      "lastStatus": "ok",
+      "contentHash": "676777bbcdbb89e47a4f81bdc64921960c0806dd4753fd5ac75efcbf46ae2618",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
     },
     "ahacc-obesity-guidelines": {
       "url": "https://pubmed.ncbi.nlm.nih.gov/24222017/",
@@ -482,12 +482,12 @@
       "consecutiveFailures": 0
     },
     "ada-standards-of-care-2025": {
-      "url": "https://diabetesjournals.org/care/issue/48/Supplement_1",
+      "url": "https://professional.diabetes.org/standards-of-care",
       "lastVerified": "2026-04-06",
-      "lastStatus": "broken",
-      "contentHash": null,
-      "lastChanged": null,
-      "consecutiveFailures": 1
+      "lastStatus": "ok",
+      "contentHash": "8d0a40a649c408d23a60646367a0f42dbda184ce926abe74c3f1435069530b88",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
     },
     "endocrine-society-glp1-guidance": {
       "url": "https://www.endocrine.org/clinical-practice-guidelines/pharmacological-management-of-obesity",

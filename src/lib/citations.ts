@@ -50,15 +50,24 @@ const CITATIONS_LIST: CitationEntry[] = [
   // ── Pricing ──────────────────────────────────────────────────────────────
 
   {
+    // 2026-04-06: The deep-link /savings-card.html path started 404ing in the
+    // first source-freshness audit run. Switched to the canonical NovoCare
+    // Wegovy product landing page, which surfaces current cash-pay, savings
+    // card, and affordability information from the same publisher.
     id: "novocare-wegovy-cash-price",
     label: "NovoCare — Wegovy cash-pay and savings program",
     publisher: "Novo Nordisk (NovoCare)",
-    url: "https://www.novocare.com/obesity/products/wegovy/savings-card.html",
+    url: "https://www.novocare.com/obesity/products/wegovy.html",
     category: "pricing",
     accessedDate: "2026-04-06",
     dataYear: "2026",
   },
   {
+    // AUDIT-EXCLUDED: Eli Lilly's entire *.lilly.com and lillydirect.com
+    // footprint returns HTTP 403 to any non-interactive Chrome User-Agent
+    // (bot-fingerprinting / Akamai). Verified 2026-04-06. The canonical
+    // LillyDirect Zepbound self-pay page remains the editorial primary
+    // source for this claim; verify manually quarterly in a real browser.
     id: "lilly-zepbound-cash-price",
     label: "LillyDirect — Zepbound self-pay program and cash price",
     publisher: "Eli Lilly and Company (LillyDirect)",
@@ -68,15 +77,23 @@ const CITATIONS_LIST: CitationEntry[] = [
     dataYear: "2026",
   },
   {
+    // 2026-04-06: The deep-link /savings-card.html path started 404ing in the
+    // first source-freshness audit run. Switched to the canonical NovoCare
+    // Ozempic product landing page on the same publisher's domain.
     id: "novocare-ozempic-cash-price",
     label: "NovoCare — Ozempic savings and patient assistance information",
     publisher: "Novo Nordisk (NovoCare)",
-    url: "https://www.novocare.com/diabetes/products/ozempic/savings-card.html",
+    url: "https://www.novocare.com/diabetes/products/ozempic.html",
     category: "pricing",
     accessedDate: "2026-04-06",
     dataYear: "2026",
   },
   {
+    // AUDIT-EXCLUDED: Eli Lilly's *.lilly.com and lillydirect.com footprint
+    // returns HTTP 403 to any non-interactive Chrome User-Agent (Akamai
+    // bot-fingerprinting). Verified 2026-04-06. The canonical LillyDirect
+    // Mounjaro self-pay page remains the editorial primary source for this
+    // claim; verify manually quarterly in a real browser.
     id: "lilly-mounjaro-cash-price",
     label: "LillyDirect — Mounjaro self-pay and savings card program",
     publisher: "Eli Lilly and Company (LillyDirect)",
@@ -139,21 +156,29 @@ const CITATIONS_LIST: CitationEntry[] = [
   // ── Statistics ────────────────────────────────────────────────────────────
 
   {
+    // 2026-04-06: CDC restructured its obesity microsite in 2024–2025 and the
+    // legacy /obesity/data/prevalence-maps.html deep link now 404s. Pointed
+    // at the canonical CDC obesity data-and-statistics hub, which surfaces
+    // the current BRFSS adult-obesity prevalence maps.
     id: "cdc-brfss-obesity",
     label:
       "CDC BRFSS — Adult Obesity Prevalence Maps by State (Behavioral Risk Factor Surveillance System)",
     publisher: "Centers for Disease Control and Prevention",
-    url: "https://www.cdc.gov/obesity/data/prevalence-maps.html",
+    url: "https://www.cdc.gov/obesity/data-and-statistics/",
     category: "statistics",
     accessedDate: "2026-04-06",
     dataYear: "2023",
   },
   {
+    // 2026-04-06: Legacy /obesity/data/adult.html path now 404s after the
+    // 2024–2025 CDC site restructure. Moved to the canonical CDC "Adult
+    // Obesity Facts" hub, which is the stable landing page for state-by-
+    // state adult obesity prevalence and rankings.
     id: "cdc-state-obesity-rankings",
     label:
       "CDC — State Obesity Rankings and Adult Obesity Facts",
     publisher: "Centers for Disease Control and Prevention",
-    url: "https://www.cdc.gov/obesity/data/adult.html",
+    url: "https://www.cdc.gov/obesity/adult-obesity-facts/",
     category: "statistics",
     accessedDate: "2026-04-06",
     dataYear: "2023",
@@ -562,6 +587,12 @@ const CITATIONS_LIST: CitationEntry[] = [
     dataYear: "2025",
   },
   {
+    // AUDIT-EXCLUDED: usp.org returns HTTP 403 to all non-interactive
+    // User-Agents (aggressive WAF / bot-blocking, verified 2026-04-06 on the
+    // full domain including /, /about, /compounding/*). USP General Chapter
+    // <797> is the editorially correct primary source for sterile-compounding
+    // standards and cannot be substituted with another publisher. Verify
+    // manually quarterly in a real browser.
     id: "usp-797-sterile-compounding",
     label: "USP General Chapter <797> — Pharmaceutical Compounding: Sterile Preparations",
     publisher: "United States Pharmacopeia",
@@ -571,6 +602,10 @@ const CITATIONS_LIST: CitationEntry[] = [
     dataYear: "2023",
   },
   {
+    // AUDIT-EXCLUDED: usp.org bot-blocks all non-interactive User-Agents
+    // (HTTP 403, verified 2026-04-06). USP <85> is the primary-source
+    // standard for bacterial endotoxin testing and cannot be substituted.
+    // Verify manually quarterly in a real browser.
     id: "usp-85-endotoxin",
     label: "USP General Chapter <85> — Bacterial Endotoxins Test",
     publisher: "United States Pharmacopeia",
@@ -580,6 +615,10 @@ const CITATIONS_LIST: CitationEntry[] = [
     dataYear: "2023",
   },
   {
+    // AUDIT-EXCLUDED: usp.org bot-blocks all non-interactive User-Agents
+    // (HTTP 403, verified 2026-04-06). USP <71> is the primary-source
+    // standard for sterility testing and cannot be substituted. Verify
+    // manually quarterly in a real browser.
     id: "usp-71-sterility",
     label: "USP General Chapter <71> — Sterility Tests",
     publisher: "United States Pharmacopeia",
@@ -656,10 +695,15 @@ const CITATIONS_LIST: CitationEntry[] = [
     pmid: "24222017",
   },
   {
+    // 2026-04-06: diabetesjournals.org returns HTTP 403 to non-interactive
+    // User-Agents (Cloudflare bot protection). Moved to the ADA's
+    // professional site "Standards of Care" hub, which is maintained by the
+    // same publisher (American Diabetes Association) and links to the
+    // current Standards of Care supplement.
     id: "ada-standards-of-care-2025",
     label: "ADA — Standards of Care in Diabetes (2025)",
     publisher: "American Diabetes Association",
-    url: "https://diabetesjournals.org/care/issue/48/Supplement_1",
+    url: "https://professional.diabetes.org/standards-of-care",
     category: "guideline",
     accessedDate: "2026-04-06",
     dataYear: "2025",
@@ -696,10 +740,15 @@ const CITATIONS_LIST: CitationEntry[] = [
   // ── Statistics — Population health and prevalence ────────────────────────
 
   {
+    // 2026-04-06: Legacy /nchs/nhanes/index.htm deep link now 404s after the
+    // 2024–2025 CDC site restructure. Switched to the NCHS FastStats hub on
+    // "Obesity and Overweight", which is the canonical population-health
+    // prevalence page sourced from NHANES and maintained by the same CDC
+    // NCHS publisher.
     id: "cdc-nhanes-obesity",
     label: "CDC NHANES — National Health and Nutrition Examination Survey: Obesity and Overweight",
     publisher: "Centers for Disease Control and Prevention / NCHS",
-    url: "https://www.cdc.gov/nchs/nhanes/index.htm",
+    url: "https://www.cdc.gov/nchs/fastats/obesity-overweight.htm",
     category: "statistics",
     accessedDate: "2026-04-06",
     dataYear: "2023",
@@ -726,10 +775,15 @@ const CITATIONS_LIST: CitationEntry[] = [
   // ── Statistics — Insurance, access, and spending (KFF and similar) ───────
 
   {
+    // 2026-04-06: KFF's permanent /employer-health-benefits-annual-survey/
+    // redirect target broke in the first audit run. Switched to the
+    // canonical 2024 EHBS report URL on the same publisher's domain —
+    // KFF publishes one of these per year, so the URL will need a bump
+    // when the 2025 edition lands.
     id: "kff-employer-health-benefits-survey",
     label: "KFF — Employer Health Benefits Annual Survey",
     publisher: "Kaiser Family Foundation",
-    url: "https://www.kff.org/health-costs/report/employer-health-benefits-annual-survey/",
+    url: "https://www.kff.org/health-costs/report/2024-employer-health-benefits-survey/",
     category: "statistics",
     accessedDate: "2026-04-06",
     dataYear: "2024",
@@ -747,15 +801,23 @@ const CITATIONS_LIST: CitationEntry[] = [
   // ── Pricing — Manufacturer and pharmacy ──────────────────────────────────
 
   {
+    // 2026-04-06: The /savings-card.html deep link now 404s. Switched to the
+    // canonical NovoCare Rybelsus product landing page on the same
+    // publisher's domain.
     id: "novocare-rybelsus-cash-price",
     label: "NovoCare — Rybelsus (oral semaglutide) savings and patient assistance",
     publisher: "Novo Nordisk (NovoCare)",
-    url: "https://www.novocare.com/diabetes/products/rybelsus/savings-card.html",
+    url: "https://www.novocare.com/diabetes/products/rybelsus.html",
     category: "pricing",
     accessedDate: "2026-04-06",
     dataYear: "2026",
   },
   {
+    // AUDIT-EXCLUDED: lillydirect.com and all *.lilly.com subdomains return
+    // HTTP 403 to any non-interactive Chrome User-Agent (Akamai bot-
+    // fingerprinting). Verified 2026-04-06. LillyDirect is the editorial
+    // primary source for this direct-to-patient pharmacy program and cannot
+    // be substituted. Verify manually quarterly in a real browser.
     id: "lilly-direct-pharmacy",
     label: "LillyDirect — Direct-to-patient pharmacy and self-pay vials program",
     publisher: "Eli Lilly and Company",
@@ -765,6 +827,12 @@ const CITATIONS_LIST: CitationEntry[] = [
     dataYear: "2026",
   },
   {
+    // AUDIT-EXCLUDED: goodrx.com returns HTTP 403 to any non-interactive
+    // Chrome User-Agent (aggressive bot-blocking to protect scraped pricing
+    // data). Verified 2026-04-06. The weight-loss conditions page is the
+    // editorial primary source for GoodRx's retail cash/coupon price
+    // aggregator; verify manually quarterly in a real browser. For
+    // independent pricing grounding we also maintain the WLR pricing index.
     id: "goodrx-glp1-prices",
     label:
       "GoodRx — GLP-1 retail pharmacy price aggregator (note: aggregates cash/coupon retail prices, not insurance-negotiated rates)",
