@@ -13,7 +13,8 @@
     "backfill-drug-tags": "npx tsx scripts/backfill-drug-tags.ts",
     "scrape": "npx tsx scripts/scrape-providers.ts",
     "scrape:fast": "npx tsx scripts/scrape-providers.ts --no-browser",
-    "scrape:auto": "npx tsx scripts/scrape-providers.ts --auto-update"
+    "scrape:auto": "npx tsx scripts/scrape-providers.ts --auto-update",
+    "audit:pricing": "npx tsx scripts/audit-pricing.ts"
   },
   "dependencies": {
     "@vercel/kv": "^3.0.0",
