@@ -99,8 +99,8 @@ export default function AdvertisePage() {
         </p>
         <div className="mt-6">
           <CTAButton
-            href="mailto:advertise@weightlossrankings.org"
-            className="!bg-white !text-brand-violet hover:!bg-white/90"
+            href="mailto:hello@weightlossrankings.org"
+            variant="white"
           >
             Contact Us
           </CTAButton>
