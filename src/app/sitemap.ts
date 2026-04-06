@@ -6,6 +6,10 @@ import {
 } from "@/lib/data";
 import { getAllDrugSlugs } from "@/lib/drugs";
 import { US_STATES } from "@/lib/states";
+import { getAllVariantPaths } from "@/lib/variants";
+import { getAllCities, CITY_DRUG_SLUGS } from "@/lib/cities";
+import { SAVINGS_COMPARISONS } from "@/lib/savings-comparisons";
+import { getAllInsurers } from "@/lib/insurers";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
@@ -88,6 +92,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${BASE_URL}/states`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/cities`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/insurance`,
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.8,
@@ -190,6 +206,51 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
+  // Dynamic: /best/[category]/[variant] — dose, form, insurance variant pages
+  const variantPages: MetadataRoute.Sitemap = getAllVariantPaths().map(
+    ({ category, variant }) => ({
+      url: `${BASE_URL}/best/${category}/${variant}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    }),
+  );
+
+  // Dynamic: /cities/[city] — 20 city index pages
+  const allCities = getAllCities();
+  const cityPages: MetadataRoute.Sitemap = allCities.map((c) => ({
+    url: `${BASE_URL}/cities/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  // Dynamic: /cities/[city]/[drug] — 20 cities × 2 drugs = 40 pages
+  const cityDrugPages: MetadataRoute.Sitemap = allCities.flatMap((c) =>
+    CITY_DRUG_SLUGS.map((drug) => ({
+      url: `${BASE_URL}/cities/${c.slug}/${drug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }))
+  );
+
+  // Dynamic: /savings/[comparison] — 4 brand-vs-compounded pages
+  const savingsPages: MetadataRoute.Sitemap = SAVINGS_COMPARISONS.map((c) => ({
+    url: `${BASE_URL}/savings/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  // Dynamic: /insurance/[insurer] — 10 insurer coverage pages
+  const insurerPages: MetadataRoute.Sitemap = getAllInsurers().map((i) => ({
+    url: `${BASE_URL}/insurance/${i.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   // Dynamic: /blog/[slug]
   const blogSlugs = await getAllBlogSlugs();
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map(({ slug }) => ({
@@ -207,6 +268,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...statePages,
     ...stateDrugPages,
     ...comparePages,
+    ...variantPages,
+    ...cityPages,
+    ...cityDrugPages,
+    ...savingsPages,
+    ...insurerPages,
     ...blogPages,
   ];
 }

@@ -35,8 +35,16 @@ const footerColumns = [
     links: [
       { label: "Blog", href: "/blog" },
       { label: "Drug Guides", href: "/drugs" },
-      { label: "Browse by State", href: "/states" },
       { label: "Methodology", href: "/methodology" },
+    ],
+  },
+  {
+    heading: "Browse",
+    links: [
+      { label: "By City", href: "/cities" },
+      { label: "By State", href: "/states" },
+      { label: "By Insurance", href: "/insurance" },
+      { label: "By Drug", href: "/drugs" },
     ],
   },
   {
@@ -55,7 +63,7 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-8">
           {/* Logo column */}
           <div className="space-y-4">
             <Logo size="sm" />
