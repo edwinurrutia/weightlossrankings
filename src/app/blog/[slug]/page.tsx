@@ -142,6 +142,15 @@ export default async function BlogPostPage({
       "@type": "WebPage",
       "@id": `https://weightlossrankings.org/blog/${slug}`,
     },
+    // Speakable marks which text passages voice assistants and
+    // Google Discover audio should read aloud. We point at the
+    // article's <h1> and the excerpt paragraph — Google will read
+    // those when a user asks "Hey Google, read me articles about
+    // [topic]" or surfaces the article in Discover's audio mode.
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "[data-speakable='excerpt']"],
+    },
     ...(post.category && { articleSection: post.category }),
     ...(post.tags && post.tags.length > 0 && { keywords: post.tags.join(", ") }),
   };
@@ -169,6 +178,20 @@ export default async function BlogPostPage({
         >
           {post.title}
         </h1>
+
+        {/* Lead paragraph — also tagged data-speakable so voice
+            assistants and Discover audio read this when surfacing
+            the article (paired with SpeakableSpecification in the
+            Article schema). Editorial double-duty: visible UX
+            improvement AND voice-search optimization. */}
+        {post.excerpt && (
+          <p
+            data-speakable="excerpt"
+            className="text-lg sm:text-xl text-brand-text-secondary leading-relaxed"
+          >
+            {post.excerpt}
+          </p>
+        )}
 
         {/* Body content */}
         {post.body && (
