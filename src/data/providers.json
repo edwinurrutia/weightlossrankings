@@ -8393,5 +8393,169 @@
       "confidence": "low",
       "notes": "Initial seed data \u2014 needs manual verification"
     }
+  },
+  {
+    "_id": "t2d",
+    "name": "T2D.com",
+    "slug": "t2d",
+    "description": "T2D.com offers a complete service for compounded semaglutide and tirzepatide that includes the prescriber, medication, and home delivery in one integrated solution. A subsidiary of Vertical Insight Corp, the program is built specifically for individuals managing type 2 diabetes and pre-diabetes.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Starting dose",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 999
+      },
+      {
+        "dose": "Starting dose",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 999
+      }
+    ],
+    "scores": {
+      "value": 5,
+      "effectiveness": 7,
+      "ux": 6,
+      "trust": 6.5,
+      "accessibility": 5.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Prescriber Included",
+      "Home Delivery",
+      "Ongoing Support",
+      "Type 2 Diabetes Focus"
+    ],
+    "states_available": [
+      "CA"
+    ],
+    "affiliate_url": "https://t2d.com/",
+    "fda_warnings": [],
+    "pros": [
+      "Built specifically for type 2 diabetic and pre-diabetic patients",
+      "Integrated service \u2014 prescriber, pharmacy, and delivery handled in one flow",
+      "Offers both compounded semaglutide and compounded tirzepatide",
+      "Temperature-controlled home delivery via UPS or FedEx",
+      "Ongoing prescriber monitoring and support included"
+    ],
+    "cons": [
+      "No pricing published on the public website \u2014 must register to see costs",
+      "No states list published on the site",
+      "Newer brand with limited independent reviews",
+      "Compounded only \u2014 no brand-name Ozempic, Wegovy, or Mounjaro"
+    ],
+    "best_for": "diabetic GLP-1 access",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://t2d.com/",
+        "https://t2d.com/about",
+        "https://t2d.com/weight-loss/get-started"
+      ],
+      "confidence": "low",
+      "notes": "T2D.com publishes no pricing or states list on its public website \u2014 both are gated behind a Get Started registration flow. Pricing is set to 999 placeholder per editorial rule (never invent prices). States set to ['CA'] as a single-state placeholder pending direct outreach. Description and positioning are quoted from t2d.com/about. Company is a subsidiary of Vertical Insight Corp; co-founders are Alec Ogletree and Sean Sullivan. No FDA warning letter found in src/data/fda-warning-letters.json."
+    }
+  },
+  {
+    "_id": "fella-health",
+    "name": "Fella Health",
+    "slug": "fella-health",
+    "description": "Fella Health is a medication weight loss program built specifically for men, offering compounded GLP-1 treatments (semaglutide and tirzepatide) plus free 1:1 health coaching, board-certified clinician care, and a 6-month money-back guarantee. Headquartered in Austin, TX.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "All doses (flat price)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 999
+      },
+      {
+        "dose": "All doses (flat price)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 999
+      }
+    ],
+    "scores": {
+      "value": 6,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 6.5,
+      "support": 8
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Built for Men",
+      "Free Health Coaching",
+      "6-Month Money-Back Guarantee",
+      "Board-Certified Clinicians",
+      "Flat Pricing Across Doses"
+    ],
+    "states_available": [
+      "AZ",
+      "CA",
+      "CO",
+      "FL",
+      "GA",
+      "IL",
+      "IN",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "NJ",
+      "NY",
+      "NC",
+      "OH",
+      "PA",
+      "TX",
+      "VA",
+      "WA",
+      "WI"
+    ],
+    "affiliate_url": "https://www.fellahealth.com/",
+    "fda_warnings": [],
+    "pros": [
+      "Specialized vertical \u2014 program designed for men, particularly 'bigger guys'",
+      "Free 1:1 health coaching included with the membership",
+      "6-month money-back guarantee if the program doesn't work",
+      "Flat monthly price stays the same as your dose escalates",
+      "Both compounded semaglutide and tirzepatide available",
+      "Discloses partner pharmacies (Strive Pharmacy in AZ, Red Rock Home Pharmacy in UT)"
+    ],
+    "cons": [
+      "Limited to men's health vertical \u2014 not available to women",
+      "Available in only 20 published states (not nationwide)",
+      "Exact GLP-1 monthly cost not published on the public site \u2014 only an 'under $10/day' starting figure",
+      "Pricing transparency below industry standard for compounded GLP-1 telehealth"
+    ],
+    "best_for": "men's weight loss",
+    "is_featured": false,
+    "external_reviews": {
+      "trustpilot_score": 4.9
+    },
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.fellahealth.com/",
+        "https://www.fellahealth.com/treatments",
+        "https://www.fellahealth.com/about/states",
+        "https://www.fellahealth.com/faq",
+        "https://www.fellahealth.com/faq/payment"
+      ],
+      "confidence": "medium",
+      "notes": "Fella Health's payment FAQ states the program 'starts at less than $10 per day for everything you need to lose weight: GLP1 medications, health assessments, and medical support' and that 'the price stays the same no matter the dose you need.' No exact monthly dollar figure is published anywhere on the public site for the GLP-1 program, so monthly_cost is set to 999 placeholder per editorial rule (never invent prices). States list is the 20 states with dedicated pages on /about/states. Site self-reports 4.9 average rating on the treatments page. Partner pharmacies disclosed in the FAQ: Strive Pharmacy (Gilbert, AZ) and Red Rock Home Pharmacy (Springville, UT). No FDA warning letter found in src/data/fda-warning-letters.json."
+    }
   }
 ]
