@@ -33,17 +33,6 @@
     ]
   },
   {
-    "provider_slug": "apple-fitness-plus",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 10
-      }
-    ]
-  },
-  {
     "provider_slug": "beyondmd",
     "dose": "0.5mg",
     "form": "compounded",
@@ -199,17 +188,6 @@
       {
         "date": "2026-04-01",
         "price": 999
-      }
-    ]
-  },
-  {
-    "provider_slug": "fitbit-premium",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 10
       }
     ]
   },
@@ -515,17 +493,6 @@
     ]
   },
   {
-    "provider_slug": "lemonaid-health",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 30
-      }
-    ]
-  },
-  {
     "provider_slug": "livv",
     "dose": "0.5mg",
     "form": "compounded",
@@ -533,17 +500,6 @@
       {
         "date": "2026-04-01",
         "price": 249
-      }
-    ]
-  },
-  {
-    "provider_slug": "lose-it",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 4
       }
     ]
   },
@@ -599,28 +555,6 @@
       {
         "date": "2026-04-01",
         "price": 450
-      }
-    ]
-  },
-  {
-    "provider_slug": "myfitnesspal-premium",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 7
-      }
-    ]
-  },
-  {
-    "provider_slug": "noom",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 17
       }
     ]
   },
@@ -932,17 +866,6 @@
     ]
   },
   {
-    "provider_slug": "transparent-labs-fat-burner",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 49
-      }
-    ]
-  },
-  {
     "provider_slug": "trimi-health",
     "dose": "0.5mg",
     "form": "compounded",
@@ -983,17 +906,6 @@
       {
         "date": "2026-04-01",
         "price": 99
-      }
-    ]
-  },
-  {
-    "provider_slug": "weightwatchers",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 23
       }
     ]
   },

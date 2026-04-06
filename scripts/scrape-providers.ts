@@ -570,48 +570,91 @@ interface PriceHistoryEntry {
   history: PriceHistoryPoint[];
 }
 
+// Plausibility floor for compounded GLP-1 monthly prices. Anything
+// below this is almost certainly NOT a drug price — it's either a
+// telehealth consult fee, a fitness app subscription, or a placeholder.
+// $99 is below the cheapest legitimate compounded semaglutide we've
+// ever seen ($129) but high enough to filter out all the obvious
+// non-drug pricing rows in providers.json.
+const MIN_PLAUSIBLE_COMPOUNDED_PRICE = 99;
+
+// GLP-1 drug strings we accept on the `drug` field. Anything outside
+// this set means the row is for a non-GLP-1 product and should not
+// be snapshotted into the GLP-1 price-tracker series.
+const GLP1_DRUGS = new Set([
+  "semaglutide",
+  "tirzepatide",
+  "liraglutide",
+  "compounded-semaglutide",
+  "compounded-tirzepatide",
+  "glp-1",
+  "glp1",
+]);
+
+function isGlp1Drug(drug: unknown): boolean {
+  if (typeof drug !== "string") return false;
+  return GLP1_DRUGS.has(drug.toLowerCase().trim());
+}
+
 /**
  * Pick the single "canonical" entry-level price for a provider — the
  * one we use to power the /price-tracker chart and "recent changes"
  * table. The chart's semantics are "0.5mg compounded semaglutide
  * across providers", so we always emit a synthetic dose label of
  * `0.5mg` and form `compounded` regardless of how the provider's own
- * pricing rows are labelled. This keeps every provider on a single
- * comparable axis even though some providers list explicit doses
- * (coreage-rx: "0.25mg", "0.5mg", "1mg") while others use vague
- * placeholders (hims/sesame/found: "Starting").
+ * pricing rows are labelled.
  *
- * Selection order:
- *   1. Explicit "0.5mg" + compounded entry, if present
- *   2. "Starting" / "Starting dose" + compounded entry, if present
- *   3. Cheapest compounded entry (entry-level dose by price)
- *   4. None — provider is skipped
+ * Strict filter — every accepted entry must satisfy ALL of:
+ *   1. provider.category === "GLP-1 Provider"
+ *      (kills Fitness App, Meal Delivery, Supplement, Weight Loss
+ *       Program — none of which sell GLP-1 compounds)
+ *   2. pricing[].form === "compounded"
+ *      (kills brand-name and oral pricing)
+ *   3. pricing[].drug is a known GLP-1 drug string
+ *      (kills rows where someone added form="compounded" as a
+ *       placeholder without specifying the actual drug)
+ *   4. pricing[].monthly_cost >= MIN_PLAUSIBLE_COMPOUNDED_PRICE
+ *      (kills consult fees and "Starting at $30" placeholders that
+ *       are clearly not the drug price)
+ *
+ * Selection order among entries that pass the filter:
+ *   1. Explicit "0.5mg" entry (matches the chart's canonical dose)
+ *   2. "Starting" / "Starting dose" entry
+ *   3. Cheapest plausible entry
+ *   4. None — provider is skipped from the snapshot
  */
 function pickCanonicalCompoundedPrice(
   provider: Provider
 ): { price: number } | null {
+  // Hard category gate — non-GLP-1 categories never enter the pipeline.
+  const category = (provider.category as string | undefined) ?? "";
+  if (category !== "GLP-1 Provider") return null;
+
   if (!Array.isArray(provider.pricing) || provider.pricing.length === 0) {
     return null;
   }
-  const compounded = provider.pricing.filter(
+
+  const eligible = provider.pricing.filter(
     (p) =>
       typeof p.monthly_cost === "number" &&
       isFinite(p.monthly_cost) &&
-      ((p.form ?? "").toLowerCase() === "compounded" || !p.form)
+      p.monthly_cost >= MIN_PLAUSIBLE_COMPOUNDED_PRICE &&
+      (p.form ?? "").toLowerCase() === "compounded" &&
+      isGlp1Drug((p as { drug?: unknown }).drug)
   );
-  if (compounded.length === 0) return null;
+  if (eligible.length === 0) return null;
 
-  const explicitHalfMg = compounded.find((p) =>
+  const explicitHalfMg = eligible.find((p) =>
     /(^|[^0-9])0\.5\s*mg/i.test(p.dose ?? "")
   );
   if (explicitHalfMg) return { price: explicitHalfMg.monthly_cost };
 
-  const starting = compounded.find((p) =>
+  const starting = eligible.find((p) =>
     /^starting/i.test((p.dose ?? "").trim())
   );
   if (starting) return { price: starting.monthly_cost };
 
-  const cheapest = compounded.reduce((min, p) =>
+  const cheapest = eligible.reduce((min, p) =>
     p.monthly_cost < min.monthly_cost ? p : min
   );
   return { price: cheapest.monthly_cost };
