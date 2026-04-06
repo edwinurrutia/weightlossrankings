@@ -63,13 +63,6 @@ export default function PressPage() {
         <p className="text-brand-text-secondary mb-3">
           For press inquiries, please contact{" "}
           <a
-            href="mailto:press@weightlossrankings.org"
-            className="text-brand-violet underline font-medium"
-          >
-            press@weightlossrankings.org
-          </a>{" "}
-          or{" "}
-          <a
             href="mailto:hello@weightlossrankings.org?subject=Press"
             className="text-brand-violet underline font-medium"
           >
@@ -122,9 +115,14 @@ export default function PressPage() {
             {COVERAGE_TOPICS.map((t) => (
               <li
                 key={t}
-                className="flex items-start gap-2 text-brand-text-secondary"
+                className="flex items-start gap-2.5 text-brand-text-secondary leading-relaxed"
               >
-                <span className="text-brand-violet mt-1">•</span>
+                <span
+                  aria-hidden
+                  className="text-brand-violet font-bold leading-relaxed flex-shrink-0"
+                >
+                  •
+                </span>
                 <span>{t}</span>
               </li>
             ))}
@@ -142,9 +140,14 @@ export default function PressPage() {
             {INTERVIEW_TOPICS.map((t) => (
               <li
                 key={t}
-                className="flex items-start gap-2 text-brand-text-secondary"
+                className="flex items-start gap-2.5 text-brand-text-secondary leading-relaxed"
               >
-                <span className="text-brand-violet mt-1">→</span>
+                <span
+                  aria-hidden
+                  className="text-brand-violet font-bold leading-relaxed flex-shrink-0"
+                >
+                  →
+                </span>
                 <span>{t}</span>
               </li>
             ))}
@@ -164,10 +167,10 @@ export default function PressPage() {
           <p className="text-sm text-brand-text-secondary/70 mt-2">
             If you&rsquo;ve covered us and want to be listed, email{" "}
             <a
-              href="mailto:press@weightlossrankings.org"
+              href="mailto:hello@weightlossrankings.org?subject=Press"
               className="text-brand-violet underline"
             >
-              press@weightlossrankings.org
+              hello@weightlossrankings.org
             </a>
             .
           </p>
@@ -198,10 +201,10 @@ export default function PressPage() {
             <p className="text-brand-text-secondary text-sm">
               SVG logo available on request. Email{" "}
               <a
-                href="mailto:press@weightlossrankings.org"
+                href="mailto:hello@weightlossrankings.org?subject=Press"
                 className="text-brand-violet underline"
               >
-                press@weightlossrankings.org
+                hello@weightlossrankings.org
               </a>{" "}
               and we&rsquo;ll send the latest version.
             </p>
