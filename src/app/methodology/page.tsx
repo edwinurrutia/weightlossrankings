@@ -26,11 +26,13 @@ export default function MethodologyPage() {
         How We Rank — Our Methodology
       </h1>
       <p className="text-gray-600 mb-8">
-        Every program on WeightLossRankings is evaluated using an independent,
-        structured scoring system. We do not accept payment to influence
-        rankings. Each provider is assessed across six weighted dimensions, and
-        scores are computed algorithmically to produce an overall rating out of
-        10. Below is a full breakdown of each dimension and what it measures.
+        Every provider on WeightLossRankings is evaluated using a structured
+        scoring system. Each provider is assessed across six weighted
+        dimensions, and scores are computed algorithmically to produce an
+        overall rating out of 10. The algorithm is applied uniformly to every
+        provider — a paid partner does not receive a higher score than a
+        non-partner. Below is a full breakdown of each dimension and what it
+        measures.
       </p>
 
       <div className="space-y-4 mb-8">
@@ -51,17 +53,33 @@ export default function MethodologyPage() {
         ))}
       </div>
 
-      <div className="rounded-2xl bg-brand-violet/5 border border-brand-violet/10 p-6">
-        <h2 className="text-lg font-semibold text-gray-900 mb-2">
-          Editorial Independence
+      <div className="rounded-2xl bg-brand-violet/5 border border-brand-violet/10 p-6 space-y-3">
+        <h2 className="text-lg font-semibold text-gray-900">
+          Scores vs. Placement
         </h2>
         <p className="text-gray-600 text-sm">
-          Our rankings are produced independently of any commercial relationship
-          with the providers we review. Affiliate commissions we may earn do not
-          affect scores or placement. If a provider&apos;s score changes, it is
-          because their offering changed — not because of a business arrangement.
-          We update scores when new clinical data, pricing changes, or service
-          quality shifts are identified.
+          Our scoring algorithm determines how a provider is rated. Commercial
+          relationships do not influence the score a provider receives — the
+          same formula is applied across every provider on the site,
+          regardless of whether they are a paid partner.
+        </p>
+        <p className="text-gray-600 text-sm">
+          <strong className="text-gray-900">Placement is separate.</strong>{" "}
+          Commercial relationships may influence where a provider appears
+          beyond its algorithmic score — for example, featured homepage
+          placements, highlighted cards in the comparison tool, or blog
+          coverage. This is common practice among affiliate comparison sites
+          and is disclosed in full on our{" "}
+          <a href="/disclosure" className="text-brand-violet underline">
+            Affiliate Disclosure
+          </a>{" "}
+          page. Providers without an affiliate arrangement are still evaluated
+          and ranked using the same methodology.
+        </p>
+        <p className="text-gray-600 text-sm">
+          Scores are updated when new clinical data, pricing changes, or
+          service quality shifts are identified. If you find a score that
+          seems out of date or inaccurate, please let us know.
         </p>
       </div>
     </div>

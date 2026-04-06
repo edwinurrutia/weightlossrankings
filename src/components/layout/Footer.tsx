@@ -17,11 +17,14 @@ const footerColumns = [
     links: [
       { label: "Blog", href: "/blog" },
       { label: "Methodology", href: "/methodology" },
+      { label: "Semaglutide Guide", href: "/drugs/semaglutide" },
+      { label: "Tirzepatide Guide", href: "/drugs/tirzepatide" },
+      { label: "Wegovy Guide", href: "/drugs/wegovy" },
+      { label: "Ozempic Guide", href: "/drugs/ozempic" },
       { label: "Texas", href: "/states/texas" },
       { label: "California", href: "/states/california" },
       { label: "Florida", href: "/states/florida" },
       { label: "New York", href: "/states/new-york" },
-      { label: "Illinois", href: "/states/illinois" },
     ],
   },
   {

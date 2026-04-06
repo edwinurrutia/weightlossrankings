@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getStateBySlug } from "@/lib/states";
+import { getStateBySlug, US_STATES } from "@/lib/states";
 import { getProvidersByState } from "@/lib/data";
 import type { Provider } from "@/lib/types";
 import ProviderGrid from "@/components/providers/ProviderGrid";
@@ -8,10 +8,8 @@ import CTAButton from "@/components/shared/CTAButton";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import EmailCapture from "@/components/shared/EmailCapture";
 
-const LAUNCH_STATES = ["texas", "california", "florida", "new-york", "illinois"];
-
 export function generateStaticParams() {
-  return LAUNCH_STATES.map((state) => ({ state }));
+  return US_STATES.map((state) => ({ state: state.slug }));
 }
 
 export async function generateMetadata({
