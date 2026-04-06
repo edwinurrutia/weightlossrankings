@@ -2,6 +2,7 @@ import type { Provider, BlogPost, DrugType } from "@/lib/types";
 import providersData from "@/data/providers.json";
 import blogPostsData from "@/data/blog-posts.json";
 import { validateProvider } from "@/lib/schema";
+import { computeOverallScore } from "@/lib/scoring";
 
 const providers = providersData as unknown as Provider[];
 const blogPosts = blogPostsData as unknown as BlogPost[];
