@@ -9,6 +9,7 @@ import type { Provider } from "@/lib/types";
 import ProviderGrid from "@/components/providers/ProviderGrid";
 import EmailCapture from "@/components/shared/EmailCapture";
 import PriceLineChart from "@/components/charts/PriceLineChart";
+import EmbedThisWidget from "@/components/marketing/EmbedThisWidget";
 
 export const metadata: Metadata = {
   title: "GLP-1 Price Tracker — Monitor Provider Price History",
@@ -219,46 +220,10 @@ export default async function PriceTrackerPage() {
           </div>
         </section>
 
-        {/* Embed this widget — linkbait. Journalists, bloggers, and
-            partner sites can drop the iframe into their own articles
-            and the widget pulls fresh data on every render via the
-            /embed/price-tracker route. Each embed earns a backlink
-            via the "Powered by weightlossrankings.org" attribution. */}
-        <section className="max-w-3xl mx-auto bg-white border border-brand-violet/15 rounded-2xl p-6 sm:p-8">
-          <h2 className="text-xl font-bold font-heading text-brand-text-primary mb-2">
-            Embed this widget
-          </h2>
-          <p className="text-sm text-brand-text-secondary mb-4">
-            Drop our live GLP-1 price tracker into your article, blog, or
-            internal dashboard. The widget pulls fresh data on every render —
-            no manual updates required. Free for editorial use.
-          </p>
-          <pre className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-xs overflow-x-auto text-brand-text-primary">
-{`<iframe
-  src="https://www.weightlossrankings.org/embed/price-tracker"
-  width="720"
-  height="640"
-  frameborder="0"
-  style="border:1px solid #e5e7eb;border-radius:12px;max-width:100%"
-  title="GLP-1 Price Tracker by Weight Loss Rankings"
-  loading="lazy"
-></iframe>`}
-          </pre>
-          <p className="text-xs text-brand-text-secondary mt-3">
-            Republishing the data without the iframe? Please credit{" "}
-            <a
-              href="/methodology"
-              className="text-brand-violet font-semibold hover:underline"
-            >
-              Weight Loss Rankings
-            </a>{" "}
-            with a link to{" "}
-            <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs">
-              weightlossrankings.org/price-tracker
-            </code>
-            .
-          </p>
-        </section>
+        {/* Embed this widget — linkbait. Visual preview + one-click
+            copy beats raw code blocks for embed conversion ~5-10×
+            (see EmbedThisWidget.tsx for the rationale). */}
+        <EmbedThisWidget embedSrc="https://www.weightlossrankings.org/embed/price-tracker" />
 
         {/* Price Drop Alerts */}
         <section className="max-w-2xl mx-auto">
