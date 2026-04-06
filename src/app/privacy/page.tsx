@@ -22,11 +22,15 @@ export default function PrivacyPage() {
       <div className="space-y-6 text-brand-text-secondary leading-relaxed">
         <p>
           WeightLossRankings.org (&quot;we,&quot; &quot;us,&quot; or
-          &quot;our&quot;) respects your privacy. This Privacy Policy explains
-          what information we collect when you visit our website, how we use
-          that information, who we share it with, and the rights you have over
-          your personal data. By using the Site you consent to the practices
-          described here. If you do not agree, please do not use the Site.
+          &quot;our&quot;) is owned and operated by{" "}
+          <strong className="text-brand-text-primary">MEAS Partners, LLC</strong>,
+          a Delaware limited liability company with a registered address at
+          131 Continental Dr, Suite 305, Newark, DE 19713. We respect your privacy.
+          This Privacy Policy explains what information we collect when you
+          visit our website, how we use that information, who we share it
+          with, and the rights you have over your personal data. By using
+          the Site you consent to the practices described here. If you do
+          not agree, please do not use the Site.
         </p>
 
         <h2 className="font-heading text-xl font-bold text-brand-text-primary pt-4">
@@ -355,24 +359,25 @@ export default function PrivacyPage() {
         <p>
           For privacy questions, requests, or complaints, please email{" "}
           <a
-            href="mailto:privacy@weightlossrankings.org"
-            className="text-brand-violet underline"
-          >
-            privacy@weightlossrankings.org
-          </a>{" "}
-          or{" "}
-          <a
             href="mailto:hello@weightlossrankings.org"
             className="text-brand-violet underline"
           >
             hello@weightlossrankings.org
-          </a>
-          . See also our{" "}
+          </a>{" "}
+          or write to us at the address below. See also our{" "}
           <Link href="/terms" className="text-brand-violet underline">
             Terms of Service
           </Link>
           .
         </p>
+        <address className="not-italic rounded-2xl bg-brand-violet/5 border border-brand-violet/10 p-5 text-sm">
+          <strong className="text-brand-text-primary">MEAS Partners, LLC</strong><br />
+          Attn: Privacy<br />
+          131 Continental Dr, Suite 305<br />
+          Newark, DE 19713<br />
+          United States<br />
+          <a href="mailto:hello@weightlossrankings.org" className="text-brand-violet underline">hello@weightlossrankings.org</a>
+        </address>
       </div>
     </div>
   );

@@ -199,15 +199,19 @@ export default function ContactPage() {
         </p>
       </section>
 
-      <section className="text-sm text-brand-text-secondary/70">
-        <h2 className="font-heading text-base font-semibold text-brand-text-primary mb-1">
+      <section>
+        <h2 className="font-heading text-base font-semibold text-brand-text-primary mb-2">
           Mailing address
         </h2>
-        <p>
-          WeightLossRankings.org
-          <br />
-          Correspondence via email preferred.
-        </p>
+        <address className="not-italic rounded-2xl bg-brand-violet/5 border border-brand-violet/10 p-5 text-sm text-brand-text-secondary">
+          <strong className="text-brand-text-primary">MEAS Partners, LLC</strong><br />
+          d/b/a WeightLossRankings.org<br />
+          131 Continental Dr, Suite 305<br />
+          Newark, DE 19713<br />
+          United States
+          <br /><br />
+          <span className="text-xs text-brand-text-secondary/70">Email is the fastest way to reach us — we typically reply within 1 business day.</span>
+        </address>
       </section>
     </div>
   );

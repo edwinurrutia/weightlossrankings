@@ -22,9 +22,12 @@ export default function TermsPage() {
       <div className="space-y-6 text-brand-text-secondary leading-relaxed">
         <p>
           Welcome to WeightLossRankings.org (the &quot;Site,&quot;
-          &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). These Terms of
+          &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). The Site is
+          owned and operated by <strong className="text-brand-text-primary">MEAS Partners, LLC</strong>,
+          a Delaware limited liability company with a registered address at
+          131 Continental Dr, Suite 305, Newark, DE 19713. These Terms of
           Service (&quot;Terms&quot;) form a legally binding agreement between
-          you and WeightLossRankings.org and govern your access to and use of
+          you and MEAS Partners, LLC and govern your access to and use of
           our website, tools, newsletters, and any related services
           (collectively, the &quot;Services&quot;). Please read these Terms
           carefully before using the Site. By accessing or using any part of
@@ -285,8 +288,15 @@ export default function TermsPage() {
           >
             hello@weightlossrankings.org
           </a>
-          .
+          {" "}or by mail to:
         </p>
+        <address className="not-italic rounded-2xl bg-brand-violet/5 border border-brand-violet/10 p-5 text-sm">
+          <strong className="text-brand-text-primary">MEAS Partners, LLC</strong><br />
+          131 Continental Dr, Suite 305<br />
+          Newark, DE 19713<br />
+          United States<br />
+          <a href="mailto:hello@weightlossrankings.org" className="text-brand-violet underline">hello@weightlossrankings.org</a>
+        </address>
       </div>
     </div>
   );
