@@ -169,6 +169,20 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 6,
     tags: ["Side effects", "Semaglutide", "Tirzepatide", "PubMed sourced"],
   },
+  {
+    slug: "wegovy-pen-vs-compounded-vial-practical-differences",
+    title:
+      "Wegovy Pen vs Compounded Vial: 12 Practical Differences Before You Switch",
+    description:
+      "Brand-name Wegovy ships in a pre-filled multi-dose injector pen. Compounded semaglutide ships in a vial with a separate syringe. Same molecule, very different patient experience. We document every operational difference — refrigeration, dose math, needle gauges, injection technique — that matters when you're deciding between the two.",
+    excerpt:
+      "The active molecule in Wegovy and most compounded semaglutide products is the same, but the delivery format is completely different. Wegovy ships in a pre-filled multi-dose injector pen designed to be operated by a patient with no syringe experience. Compounded semaglutide ships in a sterile vial that the patient draws from with a separate insulin syringe — every dose. The differences matter more than people expect, and the learning curve catches new patients off guard. Here are 12 specific operational differences worth knowing before you decide between the two formats.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-06",
+    readMinutes: 10,
+    citations: 3,
+    tags: ["Compounded GLP-1", "Wegovy", "Practical guide"],
+  },
 ];
 
 export function getResearchArticleBySlug(
