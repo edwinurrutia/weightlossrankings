@@ -5,6 +5,7 @@ import {
   getDailyClicks,
   type DailyClickEntry,
 } from "@/lib/kv";
+import { getCurrentAdminUser } from "@/lib/admin-users";
 
 export const metadata: Metadata = {
   title: "Admin · Click Analytics",
@@ -35,10 +36,17 @@ function formatDateLabel(date: string): string {
 }
 
 export default async function AdminDashboardPage() {
+  const username = await getCurrentAdminUser();
+
   if (!isKvConfigured()) {
     return (
-      <main className="min-h-screen bg-brand-gradient-light">
-        <div className="max-w-3xl mx-auto px-4 py-16">
+      <div>
+        <div className="max-w-3xl">
+          <div className="mb-4">
+            <h1 className="font-heading text-2xl font-bold text-brand-text-primary">
+              Welcome back{username ? `, ${username}` : ""}
+            </h1>
+          </div>
           <div className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-8">
             <h1 className="font-heading text-2xl font-bold text-brand-text-primary mb-3">
               Click Analytics
@@ -63,7 +71,7 @@ export default async function AdminDashboardPage() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
     );
   }
 
@@ -114,16 +122,24 @@ export default async function AdminDashboardPage() {
   const hasAnyData = totalClicks > 0;
 
   return (
-    <main className="min-h-screen bg-brand-gradient-light">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+    <div>
+      <div className="space-y-6">
+        <div className="rounded-2xl bg-white border border-brand-violet/10 shadow-sm p-5">
+          <h1 className="font-heading text-xl font-bold text-brand-text-primary">
+            Welcome back{username ? `, ${username}` : ""}
+          </h1>
+          <p className="text-xs text-brand-text-secondary mt-1">
+            Click analytics dashboard · {lastRefreshed}
+          </p>
+        </div>
         {/* Header */}
         <header className="flex items-end justify-between flex-wrap gap-4">
           <div>
-            <h1 className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary">
+            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-brand-text-primary">
               <span className="bg-brand-gradient bg-clip-text text-transparent">
                 Click Analytics
               </span>
-            </h1>
+            </h2>
             <p className="text-sm text-brand-text-secondary mt-1">
               Last refreshed {lastRefreshed}
             </p>
@@ -300,7 +316,7 @@ export default async function AdminDashboardPage() {
           </div>
         </section>
       </div>
-    </main>
+    </div>
   );
 }
 
