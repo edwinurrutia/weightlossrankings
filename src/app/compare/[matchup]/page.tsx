@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import { getAllProviders, getProviderBySlug } from "@/lib/data";
 import { computeOverallScore } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
-import TrustBadge from "@/components/shared/TrustBadge";
 import CTAButton from "@/components/shared/CTAButton";
 import StickyCTABar from "@/components/shared/StickyCTABar";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import StarRating from "@/components/providers/StarRating";
 import FeatureBadge from "@/components/providers/FeatureBadge";
-import JsonLd from "@/components/shared/JsonLd";
+import TrustBadgesRow from "@/components/marketing/TrustBadgesRow";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -157,41 +157,29 @@ export default async function MatchupPage({
     providerB.external_reviews?.google_score ??
     null;
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://weightlossrankings.org",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Compare",
-        item: "https://weightlossrankings.org/compare",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: `${providerA.name} vs ${providerB.name}`,
-        item: `https://weightlossrankings.org/compare/${matchup}`,
-      },
-    ],
-  };
-
   return (
     <div className="min-h-screen bg-brand-gradient-light pb-24 lg:pb-0">
-      <JsonLd data={breadcrumbSchema} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Compare", url: "/compare" },
+          {
+            name: `${providerA.name} vs ${providerB.name}`,
+            url: `/compare/${matchup}`,
+          },
+        ]}
+      />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
         {/* ── Trust badges ── */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          <TrustBadge icon="✓" text="Expert Reviewed" />
-          <TrustBadge icon="📅" text="Updated April 2026" />
-          <TrustBadge icon="🔒" text="Independently Researched" />
+        <div className="mb-6">
+          <TrustBadgesRow
+            badges={[
+              { icon: "✓", text: "Expert Reviewed" },
+              { icon: "📅", text: "Updated April 2026" },
+              { icon: "🔒", text: "Independently Researched" },
+            ]}
+          />
         </div>
 
         {/* ── H1 ── */}
