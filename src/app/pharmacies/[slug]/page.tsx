@@ -12,7 +12,6 @@ import ProviderCard from "@/components/providers/ProviderCard";
 import CTAButton from "@/components/shared/CTAButton";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import JsonLd from "@/components/shared/JsonLd";
-import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import Citation from "@/components/research/Citation";

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { getAllPharmacies } from "@/lib/pharmacies";
 import PharmacyDirectory from "@/components/pharmacies/PharmacyDirectory";
-import PageHero from "@/components/marketing/PageHero";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import EmailCapture from "@/components/shared/EmailCapture";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
