@@ -96,21 +96,78 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Enriched Organization schema. The richer this entity is, the
+  // better Google's knowledge graph treats us — and on every single
+  // page we render. Gets cited by Google's "About this result"
+  // info card, the People Also Ask carousel, and the brand SERP
+  // sidebar.
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Weight Loss Rankings",
-    "url": "https://weightlossrankings.org",
-    "logo": "https://weightlossrankings.org/icon.svg",
-    "description": "Independent rankings and reviews of GLP-1 providers, weight loss programs, and related services.",
-    "sameAs": [],
+    name: "Weight Loss Rankings",
+    alternateName: ["WLR", "weightlossrankings.org"],
+    url: "https://weightlossrankings.org",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://weightlossrankings.org/logo-600.png",
+      width: 600,
+      height: 600,
+    },
+    description:
+      "Independent rankings, reviews, and data investigations on GLP-1 telehealth providers, compounded semaglutide and tirzepatide, and the weight loss telehealth market.",
+    foundingDate: "2025",
+    knowsAbout: [
+      "GLP-1 receptor agonists",
+      "Semaglutide",
+      "Tirzepatide",
+      "Compounded medications",
+      "Telehealth weight loss",
+      "Bariatric medicine",
+      "FDA enforcement",
+      "Pharmaceutical pricing",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "editorial",
+      email: "hello@weightlossrankings.org",
+      availableLanguage: "English",
+    },
+    publishingPrinciples: "https://weightlossrankings.org/methodology",
+    actionableFeedbackPolicy: "https://weightlossrankings.org/contact",
+    correctionsPolicy: "https://weightlossrankings.org/methodology",
+    diversityPolicy: "https://weightlossrankings.org/about",
+    ethicsPolicy: "https://weightlossrankings.org/disclosure",
+    masthead: "https://weightlossrankings.org/about",
+    sameAs: [],
   };
 
+  // Enriched WebSite schema with SearchAction so Google's sitelinks
+  // search box can fire queries directly into our compare page.
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Weight Loss Rankings",
-    "url": "https://weightlossrankings.org",
+    name: "Weight Loss Rankings",
+    alternateName: "WLR",
+    url: "https://weightlossrankings.org",
+    description:
+      "Independent rankings and reviews of GLP-1 telehealth providers, compounded semaglutide and tirzepatide, and the weight loss telehealth market.",
+    publisher: {
+      "@type": "Organization",
+      name: "Weight Loss Rankings",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://weightlossrankings.org/logo-600.png",
+      },
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate:
+          "https://weightlossrankings.org/compare?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 
   return (
