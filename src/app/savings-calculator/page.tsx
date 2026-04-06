@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getAllProviders } from "@/lib/data";
 import type { Provider } from "@/lib/types";
 import StepWizard from "@/components/calculator/StepWizard";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "GLP-1 Savings Calculator — See How Much You Could Save",
@@ -15,6 +16,12 @@ export default async function SavingsCalculatorPage() {
 
   return (
     <main className="min-h-screen bg-brand-gradient-light">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Savings Calculator" },
+        ]}
+      />
       <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
         <div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-text-primary leading-tight">

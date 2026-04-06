@@ -5,6 +5,7 @@ import type { Provider, Pricing } from "@/lib/types";
 import CTAButton from "@/components/shared/CTAButton";
 import EmailCapture from "@/components/shared/EmailCapture";
 import ProviderCard from "@/components/providers/ProviderCard";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 // ---------------------------------------------------------------------------
 // Titration schedules
@@ -217,6 +218,12 @@ export default function DoseTimelinePage() {
 
   return (
     <div className="min-h-screen bg-brand-gradient-light">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Dose Timeline" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 pb-24">
 
         {/* Hero */}

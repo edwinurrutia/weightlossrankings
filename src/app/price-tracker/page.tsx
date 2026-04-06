@@ -10,6 +10,7 @@ import ProviderGrid from "@/components/providers/ProviderGrid";
 import EmailCapture from "@/components/shared/EmailCapture";
 import PriceLineChart from "@/components/charts/PriceLineChart";
 import EmbedThisWidget from "@/components/marketing/EmbedThisWidget";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "GLP-1 Price Tracker — Monitor Provider Price History",
@@ -50,6 +51,12 @@ export default async function PriceTrackerPage() {
 
   return (
     <main className="min-h-screen bg-brand-gradient-light">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "GLP-1 Price Tracker" },
+        ]}
+      />
       {/* Hero */}
       <section className="py-12 sm:py-16 px-4 text-center">
         <div className="max-w-3xl mx-auto">
