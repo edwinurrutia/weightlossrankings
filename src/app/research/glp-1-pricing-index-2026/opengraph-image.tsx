@@ -59,7 +59,7 @@ export default async function Image() {
               letterSpacing: 2,
             }}
           >
-            Research · {kindLabel}
+            {`Research · ${kindLabel}`}
           </div>
           <div
             style={{
@@ -83,7 +83,7 @@ export default async function Image() {
         >
           <div>weightlossrankings.org</div>
           {typeof citations === "number" && (
-            <div>{citations} primary-source citations</div>
+            <div>{`${citations} primary-source citations`}</div>
           )}
         </div>
       </div>

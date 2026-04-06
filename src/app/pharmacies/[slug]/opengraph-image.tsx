@@ -66,7 +66,7 @@ export default async function Image({
               letterSpacing: 2,
             }}
           >
-            Compounding Pharmacy {type && `· ${type}`}
+            {`Compounding Pharmacy${type ? ` · ${type}` : ""}`}
           </div>
           <div
             style={{
@@ -81,7 +81,7 @@ export default async function Image({
           </div>
           {location && (
             <div style={{ fontSize: 36, opacity: 0.85, marginTop: 8 }}>
-              📍 {location}
+              {`📍 ${location}`}
             </div>
           )}
         </div>

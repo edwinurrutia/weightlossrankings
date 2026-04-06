@@ -80,7 +80,7 @@ export default async function Image({
           )}
           {brands && (
             <div style={{ fontSize: 28, opacity: 0.7, marginTop: 4 }}>
-              Brand names: {brands}
+              {`Brand names: ${brands}`}
             </div>
           )}
         </div>

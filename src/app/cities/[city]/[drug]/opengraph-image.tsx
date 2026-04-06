@@ -82,8 +82,7 @@ export default async function Image({
               marginTop: 12,
             }}
           >
-            in {cityName}
-            {stateCode ? `, ${stateCode}` : ""}
+            {`in ${cityName}${stateCode ? `, ${stateCode}` : ""}`}
           </div>
         </div>
         <div

@@ -15,8 +15,10 @@ export default async function Image({
   params: Promise<{ topic: string; slug: string }>;
 }) {
   const { topic: topicSlug, slug } = await params;
-  const article = getArticleBySlug(slug);
-  const topic = getTopicBySlug(topicSlug);
+  const [article, topic] = await Promise.all([
+    getArticleBySlug(topicSlug, slug),
+    getTopicBySlug(topicSlug),
+  ]);
 
   const title = article?.title ?? "Educational Article";
   const topicLabel = topic?.short_title ?? topic?.title ?? "Learn";
@@ -59,7 +61,7 @@ export default async function Image({
               letterSpacing: 2,
             }}
           >
-            Learn · {topicLabel}
+            {`Learn · ${topicLabel}`}
           </div>
           <div
             style={{

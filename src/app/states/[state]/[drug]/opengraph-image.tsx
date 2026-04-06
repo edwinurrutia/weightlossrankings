@@ -82,7 +82,7 @@ export default async function Image({
               marginTop: 12,
             }}
           >
-            in {stateName}
+            {`in ${stateName}`}
           </div>
         </div>
         <div

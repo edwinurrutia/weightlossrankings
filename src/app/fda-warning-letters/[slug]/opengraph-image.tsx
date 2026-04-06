@@ -101,7 +101,7 @@ export default async function Image({
             {company}
           </div>
           {dba && (
-            <div style={{ fontSize: 32, opacity: 0.9 }}>dba {dba}</div>
+            <div style={{ fontSize: 32, opacity: 0.9 }}>{`dba ${dba}`}</div>
           )}
           {subject && (
             <div
