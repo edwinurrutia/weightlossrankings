@@ -11,6 +11,7 @@ import { US_STATES } from "@/lib/states";
 import { WEGOVY_MONTHLY_USD } from "@/lib/citations";
 import CTAButton from "@/components/shared/CTAButton";
 import EmailCapture from "@/components/shared/EmailCapture";
+import JsonLd from "@/components/shared/JsonLd";
 import BlogCard from "@/components/blog/BlogCard";
 import GradientCTACallout from "@/components/marketing/GradientCTACallout";
 import TrustMarquee from "@/components/marketing/TrustMarquee";
@@ -104,8 +105,43 @@ export default async function HomePage() {
       })),
     }));
 
+  // ItemList JSON-LD for the featured providers — makes the homepage
+  // eligible for Google's "rich list" display in SERPs (the
+  // numbered top-N carousel that appears for queries like "best
+  // GLP-1 telehealth providers"). Each item is a Product entity
+  // with the provider's name, score, and review URL.
+  const featuredItemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Best GLP-1 Telehealth Providers",
+    description:
+      "Independently ranked GLP-1 telehealth providers for compounded semaglutide and tirzepatide.",
+    numberOfItems: featured.length,
+    itemListElement: featured.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://weightlossrankings.org/reviews/${p.slug}`,
+      name: p.name,
+      item: {
+        "@type": "Product",
+        name: p.name,
+        url: `https://weightlossrankings.org/reviews/${p.slug}`,
+        ...(p.scores && {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: computeOverallScore(p.scores).toFixed(1),
+            bestRating: 10,
+            worstRating: 0,
+            reviewCount: 1,
+          },
+        }),
+      },
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      <JsonLd data={featuredItemListSchema} />
       {/* ── Hero — Medvi-inspired editorial deep violet ── */}
       <section
         className="relative overflow-hidden"
