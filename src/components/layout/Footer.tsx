@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/shared/Logo";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 
 const footerColumns = [
@@ -42,14 +43,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo column */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-brand-gradient flex items-center justify-center flex-shrink-0">
-                <span className="text-white text-xs font-bold leading-none">WR</span>
-              </div>
-              <span className="font-heading font-semibold text-brand-text-primary text-sm">
-                WeightLossRankings
-              </span>
-            </Link>
+            <Logo size="sm" />
             <p className="text-xs text-brand-text-secondary leading-relaxed">
               Independent, unbiased rankings of weight loss programs and GLP-1 providers.
             </p>
