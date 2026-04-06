@@ -1,0 +1,517 @@
+{
+  "lastRunDate": "2026-04-06T16:34:42.418Z",
+  "entries": {
+    "flow-nejm-2024": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38785288/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "lead2-lancet-2009": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19216158/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "oasis1-lancet-2023": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37364588/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "scale-nejm-2015": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26132939/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "select-nejm-2023": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37952131/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "step1-nejm-2021": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33567185/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "step2-lancet-2021": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33667417/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "step3-jama-2021": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33625476/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "step4-jama-2021": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33755728/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "step5-natmed-2022": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36216945/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "step8-jama-2022": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35015037/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "step-teens-nejm-2022": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35323065/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "step-hfpef-nejm-2023": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37622681/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "surmount1-nejm-2022": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35658024/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "surmount2-lancet-2023": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37356449/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "surmount3-natmed-2024": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38334595/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "surmount4-jama-2023": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38078870/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "surmount5-nejm-2025": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40334173/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "surpass1-lancet-2021": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34186022/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "surpass2-nejm-2021": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34170647/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "surpass3-lancet-2021": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34370970/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "surpass4-lancet-2021": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34508103/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "sustain6-nejm-2016": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27633186/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "medicaid-drug-rebate-program": {
+      "url": "https://www.medicaid.gov/medicaid/prescription-drugs/medicaid-drug-rebate-program/index.html",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "4671e2bed978406105adc294c227f101859bc92f02483b231ec844de74d2ca12",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "cms-medicaid-prescription-drugs": {
+      "url": "https://www.medicaid.gov/medicaid/prescription-drugs/index.html",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "a63f83f1ceb7a9382b933d865fddc5bf8574bdc06a562bf8a70bc48abf8ae8d3",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "cms-medicare-part-d": {
+      "url": "https://www.cms.gov/medicare/coverage/prescription-drug-coverage",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "c7c3890c22cf5abe59a4629c66938cdf27d2210ade77af79c0e72afcd2cac8fd",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "fda-503b-outsourcing": {
+      "url": "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "16c6f797b635bf0056ce9778406f754a5191e74d0ac520a3236b4149c6bb0739",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "fda-503a-compounding": {
+      "url": "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "16c6f797b635bf0056ce9778406f754a5191e74d0ac520a3236b4149c6bb0739",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "fda-drug-shortage-list": {
+      "url": "https://www.accessdata.fda.gov/scripts/drugshortages/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "5ab31d86b3f81dbde671ce8899b89ac0f141f0efab5b4d312cf2b5cb0d61d291",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "fda-mounjaro-label": {
+      "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215866",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "9dff014005b86fe91c4a6880df61feacfb15371fdac38ba6009f3fc78c28ad3e",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "fda-ozempic-label": {
+      "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209637",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "579e27355eff8c7920c8245df6787da7dc6658507f73363249ac539280de101a",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "fda-rybelsus-label": {
+      "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213051",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "1ccfef44e20b73bc8b78de3b38096908c82f93d30da2ff7821d615ea7b2af629",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "fda-glp1-warning-letters": {
+      "url": "https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "883712f952e369abf8f46b20f19041d283f0c9fb5efa609a2d324ff87bb645bf",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "fda-wegovy-approval": {
+      "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215256",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "7062526b5fa424e84244e54820c4e54b7769f4bdb352acaa58bd6cf5e99dc7c1",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "fda-zepbound-approval": {
+      "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217806",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "76c40e6e9b6ca1a26e930ecb55c79a7e300a4f41f115df09a52f146ee5c8e3dc",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "fda-faers": {
+      "url": "https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "12e17b1415f0694ddb7f0a63fe59cc63d15d15e84544d7dc08f00b767c8f8e3b",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "irs-pub-502-medical-expenses": {
+      "url": "https://www.irs.gov/publications/p502",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "074c1fb42dbb7b407398c3770ac95b85cd8057db2345aad0ab853d7f07fe4e5c",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "pcab-accreditation-standards": {
+      "url": "https://www.achc.org/pharmacy/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "15370c4c7e2527e5d7150bd765b32e8aa4aa91a46584309bcba4528c6972f092",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "erisa-employer-health-plans": {
+      "url": "https://www.dol.gov/general/topic/health-plans/erisa",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "72dd0189ddadf7c67890dcb6a65c285e136b1be1cb4e433ff2f2bea1aa4f3c73",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "usp-71-sterility": {
+      "url": "https://www.usp.org/harmonization-standards/pdg/general-methods/sterility-tests",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "usp-797-sterile-compounding": {
+      "url": "https://www.usp.org/compounding/general-chapter-797",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "usp-85-endotoxin": {
+      "url": "https://www.usp.org/harmonization-standards/pdg/general-methods/bacterial-endotoxins",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "cdc-state-obesity-rankings": {
+      "url": "https://www.cdc.gov/obesity/data/adult.html",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "cdc-brfss-obesity": {
+      "url": "https://www.cdc.gov/obesity/data/prevalence-maps.html",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "cdc-nhanes-obesity": {
+      "url": "https://www.cdc.gov/nchs/nhanes/index.htm",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "kff-employer-health-benefits-survey": {
+      "url": "https://www.kff.org/health-costs/report/employer-health-benefits-annual-survey/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "kff-glp1-pricing-brief": {
+      "url": "https://www.kff.org/health-costs/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "a9efe66cf3058395a91beb952043ae7b2738ac0627dd43579132e1f41877ea6d",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "kff-medicaid-obesity-drug-coverage": {
+      "url": "https://www.kff.org/medicaid/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "e41487effbfdd442ed8ed711b748edcec79351b9f0aa5f09e1085bedc5e601da",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "kff-medicare-glp1-spending": {
+      "url": "https://www.kff.org/medicare/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "177b6b68e1ebd42c0a35c3f0369b85c8993c9d7062bbb059801867a34c4758fb",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "nih-niddk-overweight-obesity": {
+      "url": "https://www.niddk.nih.gov/health-information/health-statistics/overweight-obesity",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "9d0491db895ef6ed5d9276100953f6c86cc6b3b86b1bcc6011fdd999810c4597",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "who-obesity-fact-sheet": {
+      "url": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "d62ec8e650b40a7fbd0cd51b422441451c11f9ab647d03b36e9a98e8d46ab7d0",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "goodrx-glp1-prices": {
+      "url": "https://www.goodrx.com/conditions/weight-loss",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "lilly-direct-pharmacy": {
+      "url": "https://www.lillydirect.com/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "lilly-mounjaro-cash-price": {
+      "url": "https://www.lillydirect.com/mounjaro",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "lilly-zepbound-cash-price": {
+      "url": "https://www.lillydirect.com/zepbound",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "novocare-ozempic-cash-price": {
+      "url": "https://www.novocare.com/diabetes/products/ozempic/savings-card.html",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "novocare-rybelsus-cash-price": {
+      "url": "https://www.novocare.com/diabetes/products/rybelsus/savings-card.html",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "novocare-wegovy-cash-price": {
+      "url": "https://www.novocare.com/obesity/products/wegovy/savings-card.html",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "ahacc-obesity-guidelines": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24222017/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "aace-obesity-guidelines-2016": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27219496/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "skipped",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 0
+    },
+    "ada-standards-of-care-2025": {
+      "url": "https://diabetesjournals.org/care/issue/48/Supplement_1",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "broken",
+      "contentHash": null,
+      "lastChanged": null,
+      "consecutiveFailures": 1
+    },
+    "endocrine-society-glp1-guidance": {
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/pharmacological-management-of-obesity",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "ffed5e25c03f98ddfd56cf28a2a193fdb053293c687324d07c2acd301cba5884",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "obesity-society-position-statement": {
+      "url": "https://www.obesity.org/about/position-statements/",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "d188b9db255632600c54161cc04ffde771f8741161906c5e65a6082adca6769a",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    },
+    "uspstf-behavioral-weight-loss": {
+      "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/obesity-in-adults-interventions",
+      "lastVerified": "2026-04-06",
+      "lastStatus": "ok",
+      "contentHash": "4e74d8b5f445bd073103fbe6c5c54cda10690f0c56cad3e36c9c4ec76036065e",
+      "lastChanged": "2026-04-06",
+      "consecutiveFailures": 0
+    }
+  }
+}
