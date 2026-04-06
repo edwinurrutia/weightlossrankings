@@ -1,10 +1,14 @@
 import Link from "next/link";
+import { WEGOVY_MONTHLY_USD } from "@/lib/citations";
 
 interface HomeSavingsHeadlineProps {
   /** Cheapest compounded-semaglutide monthly price across all providers. */
   cheapestCompoundedMonthly: number;
-  /** Brand-name Wegovy monthly retail used as the comparison baseline. */
-  brandMonthly: number;
+  /**
+   * Brand-name Wegovy monthly retail used as the comparison baseline.
+   * Defaults to WEGOVY_MONTHLY_USD from the citation registry.
+   */
+  brandMonthly?: number;
 }
 
 const formatUsd = (n: number) =>
@@ -25,7 +29,7 @@ const formatUsd = (n: number) =>
  */
 export default function HomeSavingsHeadline({
   cheapestCompoundedMonthly,
-  brandMonthly,
+  brandMonthly = WEGOVY_MONTHLY_USD,
 }: HomeSavingsHeadlineProps) {
   const annualSavings = (brandMonthly - cheapestCompoundedMonthly) * 12;
 

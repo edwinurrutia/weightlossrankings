@@ -1,19 +1,13 @@
-import Link from "next/link";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import Citation from "@/components/research/Citation";
 
 interface FactItem {
   label: string;
   value: string;
-  /** Optional 1-indexed citation reference (1-based, matches Sources list). */
-  citation?: number;
-}
-
-interface SourceItem {
-  /** Citation number — must match `citation` on FactItems above. */
-  n: number;
-  /** Display label, e.g. "CDC BRFSS 2023". */
-  label: string;
-  /** External URL or anchor — opens in a new tab. */
-  url: string;
+  /** Citation source id from the central registry, if applicable. */
+  sourceId?: string;
+  /** Display number for the footnote marker. */
+  citationN?: number;
 }
 
 interface StateDrugFactSheetProps {
@@ -48,19 +42,27 @@ const formatUsd = (n: number) =>
     maximumFractionDigits: 0,
   });
 
+// Source IDs used on this component.
+// 1 = our dataset · 2 = CDC BRFSS · 3 = manufacturer pricing · 4 = KFF Medicaid
+const SOURCE_OUR_DATASET = "wlr-pricing-index";
+const SOURCE_CDC_BRFSS = "cdc-brfss-obesity";
+const SOURCE_KFF_MEDICAID = "kff-medicaid-obesity-drug-coverage";
+// Manufacturer pricing source — Wegovy uses NovoCare, all others use LillyDirect Zepbound
+// (shown for semaglutide vs Wegovy; adjust per brand as needed)
+const SOURCE_BRAND_PRICING_NOVO = "novocare-wegovy-cash-price";
+const SOURCE_BRAND_PRICING_LILLY = "lilly-zepbound-cash-price";
+
 /**
- * Mobile-first intro for state × drug pages.
+ * Mobile-first intro for state x drug pages.
  *
- * Replaces the wall-of-paragraph that used to live at the top of these
- * pages with three pieces:
+ * Renders three pieces:
  *   1. A compact 4-tile fact grid (provider count, avg price, savings,
- *      obesity rate). Numbered citations link to the Sources block.
- *   2. A short two-sentence editorial intro — not a 7-sentence concat.
- *   3. A collapsible Sources block with real external links (CDC, KFF,
- *      manufacturer pages, our own pricing index).
+ *      obesity rate). Numbered citations link to the collapsible Sources block.
+ *   2. A short two-sentence editorial intro.
+ *   3. A collapsible Sources block backed by the central citation registry.
  *
- * All numbers are passed in as props and computed at request time, so
- * the fact sheet stays in sync with providers.json and states-content.
+ * All numbers are passed in as props and computed at request time, so the fact
+ * sheet stays in sync with providers.json and states-content.
  */
 export default function StateDrugFactSheet({
   drugLabel,
@@ -79,55 +81,44 @@ export default function StateDrugFactSheet({
   const annualSavings = monthlySavings * 12;
   const pctOff = Math.round((1 - avgPriceMonthly / brandPriceMonthly) * 100);
 
-  // Citation indices reference the sources list at the bottom.
-  // 1 = our dataset · 2 = CDC BRFSS · 3 = manufacturer list · 4 = KFF Medicaid tracker
+  // Select manufacturer pricing source based on brand label
+  const brandPricingSource =
+    brandLabel === "Wegovy" ? SOURCE_BRAND_PRICING_NOVO : SOURCE_BRAND_PRICING_LILLY;
+
+  // Build fact tiles
   const facts: FactItem[] = [
     {
       label: `${drugLabel} providers`,
       value: providerCount.toString(),
-      citation: 1,
+      sourceId: SOURCE_OUR_DATASET,
+      citationN: 1,
     },
     {
       label: "Avg monthly cost",
       value: formatUsd(avgPriceMonthly),
-      citation: 1,
+      sourceId: SOURCE_OUR_DATASET,
+      citationN: 1,
     },
     {
       label: `Savings vs ${brandLabel}`,
       value: `${pctOff}%`,
-      citation: 3,
+      sourceId: brandPricingSource,
+      citationN: 3,
     },
     {
       label: "State obesity rate",
       value: obesityRate ? `${obesityRate}%` : "—",
-      citation: obesityRate ? 2 : undefined,
+      sourceId: obesityRate ? SOURCE_CDC_BRFSS : undefined,
+      citationN: obesityRate ? 2 : undefined,
     },
   ];
 
-  const sources: SourceItem[] = [
-    {
-      n: 1,
-      label: `Weight Loss Rankings provider dataset (${providerCount} providers, verified ${dataAsOf})`,
-      url: "/research/glp-1-pricing-index-2026",
-    },
-    {
-      n: 2,
-      label: "CDC Behavioral Risk Factor Surveillance System — adult obesity prevalence",
-      url: "https://www.cdc.gov/obesity/data/prevalence-maps.html",
-    },
-    {
-      n: 3,
-      label: `${brandLabel} manufacturer cash price (Novo Nordisk / Eli Lilly published list)`,
-      url:
-        brandLabel === "Wegovy"
-          ? "https://www.novocare.com/obesity/products/wegovy/savings-card.html"
-          : "https://www.lilly.com/news/press-releases",
-    },
-    {
-      n: 4,
-      label: "Kaiser Family Foundation — state Medicaid coverage of obesity drugs",
-      url: "https://www.kff.org/medicaid/issue-brief/medicaid-coverage-of-anti-obesity-drugs/",
-    },
+  // Source ids in display order (must match citationN numbering above)
+  const sourceIds = [
+    SOURCE_OUR_DATASET,       // 1
+    SOURCE_CDC_BRFSS,         // 2
+    brandPricingSource,       // 3
+    SOURCE_KFF_MEDICAID,      // 4
   ];
 
   return (
@@ -141,14 +132,8 @@ export default function StateDrugFactSheet({
           >
             <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary leading-tight">
               {f.label}
-              {f.citation && (
-                <a
-                  href={`#sources`}
-                  className="ml-1 text-brand-violet hover:underline align-super text-[9px]"
-                  aria-label={`See source ${f.citation}`}
-                >
-                  [{f.citation}]
-                </a>
+              {f.sourceId && f.citationN !== undefined && (
+                <Citation source={f.sourceId} n={f.citationN} />
               )}
             </p>
             <p className="mt-1.5 font-heading text-2xl sm:text-3xl font-black text-brand-text-primary leading-none tracking-tight">
@@ -158,7 +143,7 @@ export default function StateDrugFactSheet({
         ))}
       </div>
 
-      {/* Short prose intro — replaces the 7-sentence wall */}
+      {/* Short prose intro */}
       <div className="mt-6 space-y-3 text-base text-brand-text-secondary leading-relaxed">
         <p>
           {providerCount} licensed telehealth providers ship compounded{" "}
@@ -168,12 +153,7 @@ export default function StateDrugFactSheet({
           </strong>
           {" "}— a roughly {pctOff}% discount to brand-name {brandLabel} at{" "}
           {formatUsd(brandPriceMonthly)}/month
-          <a
-            href="#sources"
-            className="text-brand-violet hover:underline align-super text-[10px] ml-0.5"
-          >
-            [3]
-          </a>
+          <Citation source={brandPricingSource} n={3} />
           .{" "}
           {obesityRate && obesityRank
             ? `${stateName}'s adult obesity rate of ${obesityRate}% (#${obesityRank} nationally)`
@@ -187,12 +167,7 @@ export default function StateDrugFactSheet({
               {stateName} Medicaid coverage:
             </strong>{" "}
             {medicaidCoverage}
-            <a
-              href="#sources"
-              className="text-brand-violet hover:underline align-super text-[10px] ml-0.5"
-            >
-              [4]
-            </a>
+            <Citation source={SOURCE_KFF_MEDICAID} n={4} />
             . At the median compounded price, switching from brand-name{" "}
             {brandLabel} would save roughly{" "}
             <strong className="text-brand-text-primary">
@@ -205,51 +180,12 @@ export default function StateDrugFactSheet({
         )}
       </div>
 
-      {/* Sources — collapsible, native <details> for zero-JS */}
-      <details
-        id="sources"
-        className="mt-5 group rounded-xl border border-brand-violet/10 bg-brand-violet/[0.02] px-4 py-3"
-      >
-        <summary className="text-xs font-semibold text-brand-text-secondary cursor-pointer list-none flex items-center justify-between gap-2 select-none">
-          <span>
-            Sources &amp; methodology (data as of {dataAsOf})
-          </span>
-          <span
-            aria-hidden
-            className="text-brand-violet text-base group-open:rotate-180 transition-transform"
-          >
-            ⌄
-          </span>
-        </summary>
-        <ol className="mt-3 flex flex-col gap-2 text-xs text-brand-text-secondary leading-relaxed">
-          {sources.map((s) => (
-            <li key={s.n} className="flex gap-2">
-              <span className="font-mono font-bold text-brand-text-primary">
-                {s.n}.
-              </span>
-              <span>
-                {s.url.startsWith("/") ? (
-                  <Link
-                    href={s.url}
-                    className="text-brand-violet hover:underline"
-                  >
-                    {s.label}
-                  </Link>
-                ) : (
-                  <a
-                    href={s.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-brand-violet hover:underline break-all"
-                  >
-                    {s.label}
-                  </a>
-                )}
-              </span>
-            </li>
-          ))}
-        </ol>
-      </details>
+      {/* Sources panel — backed by the central citation registry */}
+      <SourcesPanel
+        sourceIds={sourceIds}
+        heading="Sources & methodology"
+        dataAsOf={dataAsOf}
+      />
     </section>
   );
 }

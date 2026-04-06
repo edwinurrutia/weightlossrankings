@@ -8,6 +8,7 @@ import {
 import type { Provider, BlogPost } from "@/lib/types";
 import { computeOverallScore } from "@/lib/scoring";
 import { US_STATES } from "@/lib/states";
+import { WEGOVY_MONTHLY_USD } from "@/lib/citations";
 import CTAButton from "@/components/shared/CTAButton";
 import EmailCapture from "@/components/shared/EmailCapture";
 import BlogCard from "@/components/blog/BlogCard";
@@ -18,10 +19,6 @@ import HomeHeroProviders from "@/components/marketing/HomeHeroProviders";
 import HomeQuickMatch, {
   type QuickMatchProvider,
 } from "@/components/marketing/HomeQuickMatch";
-
-// Brand-name Wegovy retail used as the savings comparison baseline. List
-// price published by Novo Nordisk; revisit if it changes materially.
-const WEGOVY_BRAND_MONTHLY = 1349;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -194,7 +191,7 @@ export default async function HomePage() {
       {/* ── Money headline (replaces the boring stat bar) ── */}
       <HomeSavingsHeadline
         cheapestCompoundedMonthly={cheapestCompoundedMonthly}
-        brandMonthly={WEGOVY_BRAND_MONTHLY}
+        brandMonthly={WEGOVY_MONTHLY_USD}
       />
 
       {/* ── Quick Match — 3-question wizard that surfaces a top match ── */}

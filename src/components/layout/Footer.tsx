@@ -37,6 +37,7 @@ const footerColumns = [
       { label: "Blog", href: "/blog" },
       { label: "Drug Guides", href: "/drugs" },
       { label: "Methodology", href: "/methodology" },
+      { label: "Sources", href: "/sources" },
       { label: "FAQ", href: "/faq" },
     ],
   },

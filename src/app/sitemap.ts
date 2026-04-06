@@ -124,6 +124,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Trust pages
     {
+      url: `${BASE_URL}/sources`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/methodology`,
       lastModified: now,
       changeFrequency: "monthly" as const,
