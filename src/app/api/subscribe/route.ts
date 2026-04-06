@@ -4,7 +4,7 @@ import { subscribeToConvertKit } from "@/lib/convertkit";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email } = body;
+    const { email, source } = body;
 
     if (!email || typeof email !== "string") {
       return NextResponse.json(
@@ -22,7 +22,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const result = await subscribeToConvertKit(trimmed);
+    const result = await subscribeToConvertKit(trimmed, {
+      source: typeof source === "string" ? source : undefined,
+    });
 
     if (!result.success) {
       return NextResponse.json(

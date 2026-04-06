@@ -23,7 +23,7 @@ export default function EmailGate({ onNext, onBack }: EmailGateProps) {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, source: "savings_calculator" }),
       });
 
       if (res.ok) {

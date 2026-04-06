@@ -9,6 +9,7 @@ interface EmailCaptureProps {
   description?: string;
   buttonText?: string;
   className?: string;
+  source?: string;
 }
 
 export default function EmailCapture({
@@ -16,6 +17,7 @@ export default function EmailCapture({
   description = "Plus weekly price alerts and new provider reviews.",
   buttonText = "Send Me the Guide",
   className = "",
+  source = "homepage",
 }: EmailCaptureProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
@@ -30,7 +32,7 @@ export default function EmailCapture({
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, source }),
       });
 
       if (res.ok) {

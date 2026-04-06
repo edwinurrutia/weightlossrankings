@@ -91,6 +91,7 @@ export default async function StatePage({
         <EmailCapture
           heading={`Get ${stateData.name} Price Alerts`}
           description={`Be the first to know about new providers and price changes in ${stateData.name}.`}
+          source={`state_${stateData.slug}`}
         />
       </div>
     </main>

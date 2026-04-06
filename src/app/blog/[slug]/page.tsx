@@ -106,7 +106,7 @@ export default async function BlogPostPage({
         )}
 
         {/* Email capture */}
-        <EmailCapture />
+        <EmailCapture source={`blog_${post.slug}`} />
       </div>
     </main>
   );

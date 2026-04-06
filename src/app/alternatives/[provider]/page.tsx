@@ -342,6 +342,7 @@ export default async function AlternativesPage({
         <EmailCapture
           heading={`Compare More ${provider.name} Alternatives`}
           description="Get our free GLP-1 comparison guide plus weekly price alerts and new provider reviews."
+          source={`alternatives_${provider.slug}`}
         />
       </div>
     </main>

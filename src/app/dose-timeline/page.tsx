@@ -382,6 +382,7 @@ export default function DoseTimelinePage() {
         <EmailCapture
           heading="Get the Free GLP-1 Titration Guide"
           description="Weekly dose tips, cost alerts, and provider reviews delivered to your inbox."
+          source="dose_timeline"
         />
       </div>
     </div>

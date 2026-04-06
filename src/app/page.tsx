@@ -180,7 +180,7 @@ export default async function HomePage() {
 
       {/* ── Email Capture ── */}
       <section className="max-w-2xl mx-auto px-4 pb-20">
-        <EmailCapture />
+        <EmailCapture source="homepage" />
       </section>
     </main>
   );
