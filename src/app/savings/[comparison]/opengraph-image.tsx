@@ -1,0 +1,103 @@
+import { ImageResponse } from "next/og";
+import { getComparisonBySlug } from "@/lib/savings-comparisons";
+
+// Per-route OG image for /savings/[comparison]. These are the
+// brand-vs-compounded savings comparison pages (e.g. Wegovy vs
+// compounded semaglutide). Per-route OG images make each page
+// individually shareable on social and Discover-eligible.
+
+export const alt = "Weight Loss Rankings — savings comparison";
+export const size = { width: 1200, height: 630 };
+export const contentType = "image/png";
+
+export default async function Image({
+  params,
+}: {
+  params: Promise<{ comparison: string }>;
+}) {
+  const { comparison: slug } = await params;
+  const comparison = getComparisonBySlug(slug);
+
+  const brand = comparison?.brand_name ?? "Brand";
+  const generic = comparison?.generic_name ?? "compounded";
+  const brandPrice = comparison?.brand_monthly_price;
+
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          background: "linear-gradient(135deg, #1e1b4b 0%, #4338ca 50%, #8b5cf6 100%)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          color: "white",
+          fontFamily: "sans-serif",
+          padding: "72px",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <div
+            style={{
+              width: 18,
+              height: 56,
+              background: "#fbbf24",
+              borderRadius: 4,
+            }}
+          />
+          <div style={{ fontSize: 28, fontWeight: 700, letterSpacing: 2 }}>
+            WEIGHT LOSS RANKINGS
+          </div>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div
+            style={{
+              fontSize: 28,
+              fontWeight: 600,
+              opacity: 0.85,
+              textTransform: "uppercase",
+              letterSpacing: 2,
+            }}
+          >
+            How much can you save?
+          </div>
+          <div
+            style={{
+              fontSize: 78,
+              fontWeight: 800,
+              letterSpacing: -1.5,
+              lineHeight: 1.05,
+              maxWidth: 1080,
+            }}
+          >
+            {brand} vs Compounded {generic}
+          </div>
+          {typeof brandPrice === "number" && (
+            <div
+              style={{
+                fontSize: 32,
+                opacity: 0.9,
+                marginTop: 12,
+              }}
+            >
+              {brand} list price: ${brandPrice}/mo
+            </div>
+          )}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            opacity: 0.75,
+            fontSize: 24,
+          }}
+        >
+          <div>weightlossrankings.org</div>
+          <div>Live pricing across 80+ providers</div>
+        </div>
+      </div>
+    ),
+    size,
+  );
+}
