@@ -1,0 +1,2838 @@
+[
+  {
+    "_id": "503b-outsourcing-facility-one-llc",
+    "name": "503B Outsourcing Facility One, LLC",
+    "slug": "503b-outsourcing-facility-one-llc",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(754) 265-4280",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-02-18, most recently re-registered 2026-01-27. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "ah-nutraceutical-compounding-inc",
+    "name": "AH Nutraceutical Compounding, Inc.",
+    "slug": "ah-nutraceutical-compounding-inc",
+    "city": "McQueeny",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(312) 401-7455",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-07-08, most recently re-registered 2026-01-03. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "ajenat-pharmaceuticals-llc",
+    "name": "Ajenat Pharmaceuticals, LLC",
+    "slug": "ajenat-pharmaceuticals-llc",
+    "city": "Largo",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(727) 506-1261",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-03-26, most recently re-registered 2025-11-26. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "anazaohealth-corporation",
+    "name": "AnazaoHealth Corporation",
+    "slug": "anazaohealth-corporation",
+    "city": "Las Vegas",
+    "state": "NV",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NV"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(800) 995-4363",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2014-09-23, most recently re-registered 2025-12-30. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-08-08. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "annovex-pharma-inc",
+    "name": "Annovex Pharma, Inc.",
+    "slug": "annovex-pharma-inc",
+    "city": "Lorton",
+    "state": "VA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "VA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(571) 642-5262",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2021-10-14, most recently re-registered 2026-02-13. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2024-09-06. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "apertus-compounding-llc",
+    "name": "Apertus Compounding, LLC",
+    "slug": "apertus-compounding-llc",
+    "city": "Maryland Heights",
+    "state": "MO",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "MO"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(314) 607-0432",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-11-26, most recently re-registered 2025-11-26. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "apocus-inc",
+    "name": "Apocus, Inc.",
+    "slug": "apocus-inc",
+    "city": "San Antonio",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(214) 797-7172",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2023-10-17, most recently re-registered 2026-01-01. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "apollo-care",
+    "name": "Apollo Care",
+    "slug": "apollo-care",
+    "city": "Columbia",
+    "state": "MO",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "MO"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(573) 441-8900",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2017-09-14, most recently re-registered 2025-12-24. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-03-28. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "apothecary-pharma-llc",
+    "name": "Apothecary Pharma, LLC",
+    "slug": "apothecary-pharma-llc",
+    "city": "Cary",
+    "state": "NC",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NC"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(919) 760-5478",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-09-07, most recently re-registered 2026-01-06. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-05-15. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "arc-compounding-pharmacy-llc",
+    "name": "Arc Compounding Pharmacy, LLC",
+    "slug": "arc-compounding-pharmacy-llc",
+    "city": "Waco",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(512) 665-6911",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-06-22, most recently re-registered 2026-02-20. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "aspire-compounding-pharmacy",
+    "name": "Aspire Compounding Pharmacy",
+    "slug": "aspire-compounding-pharmacy",
+    "city": "Sugar Land",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(281) 501-0511",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-03-21, most recently re-registered 2026-02-24. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "assure-infusions-inc",
+    "name": "Assure Infusions, Inc.",
+    "slug": "assure-infusions-inc",
+    "city": "Bartow",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(863) 663-4187",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-11-22, most recently re-registered 2025-12-05.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "atilar-pharma-corporation",
+    "name": "Atilar Pharma Corporation",
+    "slug": "atilar-pharma-corporation",
+    "city": "Houston",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(713) 992-3884",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-02-20, most recently re-registered 2025-12-24. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "aveva-drug-delivery-systems-inc",
+    "name": "Aveva Drug Delivery Systems, Inc",
+    "slug": "aveva-drug-delivery-systems-inc",
+    "city": "Tamarac",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(954) 218-1570",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-11-04, most recently re-registered 2025-11-25. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "baycare-integrated-service-center-llc-dba-baycare-central-pharmacy",
+    "name": "BayCare Integrated Service Center, LLC dba BayCare Central Pharmacy",
+    "slug": "baycare-integrated-service-center-llc-dba-baycare-central-pharmacy",
+    "city": "Temple Terrace",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(813) 901-6376",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2019-06-04, most recently re-registered 2026-02-05. Last FDA inspection: 2026-03-12. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "bennett-pharmaceuticals-of-america-llc",
+    "name": "Bennett Pharmaceuticals of America LLC",
+    "slug": "bennett-pharmaceuticals-of-america-llc",
+    "city": "Hudson",
+    "state": "WI",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "WI"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(952) 381-9027",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2022-04-19, most recently re-registered 2026-01-21. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "bespoke-pharmaceutical-llc",
+    "name": "Bespoke Pharmaceutical, LLC",
+    "slug": "bespoke-pharmaceutical-llc",
+    "city": "Las Vegas",
+    "state": "NV",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NV"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(857) 995-7999",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2026-03-07, most recently re-registered 2026-03-07. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "bpi-labs-llc",
+    "name": "BPI Labs LLC",
+    "slug": "bpi-labs-llc",
+    "city": "Largo",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(727) 471-0850",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2019-03-04, most recently re-registered 2025-12-03. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-02-21. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "bravado-pharmaceuticals-llc",
+    "name": "Bravado Pharmaceuticals, LLC",
+    "slug": "bravado-pharmaceuticals-llc",
+    "city": "Lutz",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(813) 991-4100",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-02-28, most recently re-registered 2026-01-10. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "brookfield-medical-surgical-supply-inc",
+    "name": "Brookfield Medical/Surgical Supply, Inc.",
+    "slug": "brookfield-medical-surgical-supply-inc",
+    "city": "Brookfield",
+    "state": "CT",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CT"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(203) 775-0862",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2015-01-12, most recently re-registered 2025-12-30. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2024-05-10. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "bso-llc",
+    "name": "BSO LLC",
+    "slug": "bso-llc",
+    "city": "Golden",
+    "state": "CO",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CO"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(608) 221-7800",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-01-24, most recently re-registered 2025-11-25. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-06-27.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "central-admixture-pharmacy-services",
+    "name": "Central Admixture Pharmacy Services",
+    "slug": "central-admixture-pharmacy-services",
+    "city": "Phoenix",
+    "state": "AZ",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "AZ"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(551) 204-4178",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2018-03-29, most recently re-registered 2025-11-21. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-09-05. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "central-admixture-pharmacy-services-inc",
+    "name": "Central Admixture Pharmacy Services, Inc.",
+    "slug": "central-admixture-pharmacy-services-inc",
+    "city": "Allentown",
+    "state": "PA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "PA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(551) 204-4178",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2014-02-28, most recently re-registered 2025-11-21. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-09-05. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "delta-pharma-inc",
+    "name": "Delta Pharma, Inc.",
+    "slug": "delta-pharma-inc",
+    "city": "Ripley",
+    "state": "MS",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "MS"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(662) 512-5191",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2014-08-06, most recently re-registered 2025-12-31. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-11-21. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "denver-solutions-llc-dba-leiters-health",
+    "name": "Denver Solutions, LLC, dba Leiters Health",
+    "slug": "denver-solutions-llc-dba-leiters-health",
+    "city": "Englewood",
+    "state": "CO",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CO"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(720) 697-5140",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2017-03-24, most recently re-registered 2025-11-28. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-12-11. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "eagle-pharma",
+    "name": "Eagle Pharma",
+    "slug": "eagle-pharma",
+    "city": "Birmingham",
+    "state": "AL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "AL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(205) 682-7999",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2015-06-16, most recently re-registered 2025-12-16. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-02-27. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "empower-pharma",
+    "name": "Empower Pharma",
+    "slug": "empower-pharma",
+    "city": "Houston",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(877) 562-8577",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2016-07-16, most recently re-registered 2025-11-24. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-11-14. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "f-h-investments-inc",
+    "name": "F.H. Investments, Inc.",
+    "slug": "f-h-investments-inc",
+    "city": "Birmingham",
+    "state": "AL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "AL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(205) 995-0505",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-05-13, most recently re-registered 2025-12-02. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-12-19. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "fagron-compounding-services-dba-fagron-sterile-services",
+    "name": "Fagron Compounding Services dba Fagron Sterile Services",
+    "slug": "fagron-compounding-services-dba-fagron-sterile-services",
+    "city": "Wichita",
+    "state": "KS",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "KS"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(316) 773-0405",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2015-10-02, most recently re-registered 2025-11-21. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-08-08.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "farmakeio-outsourcing-llc",
+    "name": "Farmakeio Outsourcing LLC",
+    "slug": "farmakeio-outsourcing-llc",
+    "city": "Southlake",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(817) 203-8216",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2018-12-12, most recently re-registered 2025-12-12. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-09-05. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "fresenius-kabi-compounding-llc-dba-fagron-sterile-services",
+    "name": "Fresenius Kabi Compounding LLC dba Fagron Sterile Services",
+    "slug": "fresenius-kabi-compounding-llc-dba-fagron-sterile-services",
+    "city": "Canton",
+    "state": "MA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "MA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(316) 773-0405",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2017-04-21, most recently re-registered 2025-11-22. Last FDA inspection: 2025-11-05. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "galaxy-pharmaceuticals-llc",
+    "name": "Galaxy Pharmaceuticals, LLC",
+    "slug": "galaxy-pharmaceuticals-llc",
+    "city": "Albany",
+    "state": "NY",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NY"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(646) 957-7762",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-01-26, most recently re-registered 2025-11-26. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "genogenix-llc",
+    "name": "GenoGenix LLC",
+    "slug": "genogenix-llc",
+    "city": "Raton",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(561) 264-7303",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-02-04, most recently re-registered 2026-02-11. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-07-18. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "gfc-pharma-llc",
+    "name": "GFC Pharma, LLC",
+    "slug": "gfc-pharma-llc",
+    "city": "Westminster",
+    "state": "MD",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "MD"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(215) 264-9995",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-12-16, most recently re-registered 2025-12-30. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "hikma-injectables-usa-inc",
+    "name": "Hikma Injectables USA Inc.",
+    "slug": "hikma-injectables-usa-inc",
+    "city": "Dayton",
+    "state": "NJ",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NJ"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(856) 489-2247",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2021-09-15, most recently re-registered 2025-12-29. Last FDA inspection: 2025-08-08. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "hikma-pharmaceuticals-usa-inc",
+    "name": "Hikma Pharmaceuticals USA Inc.",
+    "slug": "hikma-pharmaceuticals-usa-inc",
+    "city": "Cherry Hill",
+    "state": "NJ",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NJ"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(856) 489-2247",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2021-09-15, most recently re-registered 2025-12-29. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2024-06-12. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "hyalo-technologies-limited-liability-company",
+    "name": "Hyalo Technologies Limited Liability Company",
+    "slug": "hyalo-technologies-limited-liability-company",
+    "city": "Somerset",
+    "state": "NJ",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NJ"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(908) 399-3600",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-05-01, most recently re-registered 2025-12-03. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "hybrid-pharma-llc",
+    "name": "Hybrid Pharma, LLC",
+    "slug": "hybrid-pharma-llc",
+    "city": "Deerfield Beach",
+    "state": "CA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(954) 708-2771",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2015-01-14, most recently re-registered 2025-12-16. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2023-11-09. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "imprimis-njof-llc",
+    "name": "Imprimis NJOF, LLC",
+    "slug": "imprimis-njof-llc",
+    "city": "Ledgewood",
+    "state": "NJ",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NJ"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(973) 328-8756",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2016-11-12, most recently re-registered 2025-11-26. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2024-04-03. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "integradose-compounding-services-llc",
+    "name": "IntegraDose Compounding Services, LLC",
+    "slug": "integradose-compounding-services-llc",
+    "city": "Minneapolis",
+    "state": "MN",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "MN"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(612) 672-6173",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2018-05-08, most recently re-registered 2026-02-13. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2024-03-01. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "leesar-inc",
+    "name": "Leesar Inc.",
+    "slug": "leesar-inc",
+    "city": "Fort Myers",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(239) 939-8925",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2014-04-30, most recently re-registered 2025-11-26. Last FDA inspection: 2025-05-09. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "mark-cuban-cost-plus-manufacturing-and-compounding-llc",
+    "name": "Mark Cuban Cost Plus Manufacturing and Compounding, LLC",
+    "slug": "mark-cuban-cost-plus-manufacturing-and-compounding-llc",
+    "city": "Dallas",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(303) 907-8003",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2022-11-02, most recently re-registered 2024-12-14. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2026-01-28. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "mcguff-pharmaceuticals-inc-dba-mcguff-outsourcing-solutions",
+    "name": "McGuff Pharmaceuticals, Inc. dba McGuff Outsourcing Solutions",
+    "slug": "mcguff-pharmaceuticals-inc-dba-mcguff-outsourcing-solutions",
+    "city": "Santa Ana",
+    "state": "CA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(714) 918-7277",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2023-01-11, most recently re-registered 2025-12-02. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "medi-fare-drug",
+    "name": "Medi-Fare Drug",
+    "slug": "medi-fare-drug",
+    "city": "Blacksburg",
+    "state": "SC",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "SC"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(318) 218-3647",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2013-12-17, most recently re-registered 2025-12-31. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-06-06. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "medisourcerx",
+    "name": "MedisourceRx",
+    "slug": "medisourcerx",
+    "city": "Los Alamitos",
+    "state": "CA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(714) 455-1300",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2017-02-14, most recently re-registered 2026-01-02. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-06-10. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "molecular-pharmagroup",
+    "name": "Molecular PharmaGroup",
+    "slug": "molecular-pharmagroup",
+    "city": "New Providence",
+    "state": "NJ",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NJ"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(908) 588-3440",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2018-05-08, most recently re-registered 2025-12-30. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-08-11. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "navinta-iii-inc",
+    "name": "Navinta III Inc.",
+    "slug": "navinta-iii-inc",
+    "city": "Boca Raton",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(561) 997-6595",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2026-02-06, most recently re-registered 2026-02-06. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "nephron-sterile-compounding-center-llc-nscc",
+    "name": "Nephron Sterile Compounding Center, LLC (NSCC)",
+    "slug": "nephron-sterile-compounding-center-llc-nscc",
+    "city": "West Columbia",
+    "state": "SC",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "SC"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(803) 569-3110",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2014-07-15, most recently re-registered 2025-12-15. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-08-22.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "nexgen-formulations",
+    "name": "Nexgen Formulations",
+    "slug": "nexgen-formulations",
+    "city": "Folcroft",
+    "state": "PA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "PA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(610) 455-5125",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2026-01-15, most recently re-registered 2026-01-15. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "nivagen-pharmaceuticals-llc",
+    "name": "Nivagen Pharmaceuticals, LLC",
+    "slug": "nivagen-pharmaceuticals-llc",
+    "city": "Sacramento",
+    "state": "CA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(916) 591-0160",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2026-03-13, most recently re-registered 2026-03-13. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "nubratori-inc",
+    "name": "Nubratori, Inc.",
+    "slug": "nubratori-inc",
+    "city": "Torrance",
+    "state": "CA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(310) 218-4153",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2017-02-24, most recently re-registered 2025-12-03. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-12-11. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "orion-specialty-labs-llc",
+    "name": "Orion Specialty Labs, LLC",
+    "slug": "orion-specialty-labs-llc",
+    "city": null,
+    "state": null,
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(917) 414-2469",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-09-19, most recently re-registered 2026-02-24. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "osrx-inc",
+    "name": "OSRX, Inc.",
+    "slug": "osrx-inc",
+    "city": "Missoula",
+    "state": "MT",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "MT"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(406) 541-6121",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2023-10-28, most recently re-registered 2025-12-29. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-11-14. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "ourpharma-llc",
+    "name": "OurPharma LLC",
+    "slug": "ourpharma-llc",
+    "city": "Fayetteville",
+    "state": "AR",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "AR"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(479) 313-8200",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2019-03-15, most recently re-registered 2025-11-26. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2024-09-27. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "park-avenue-compounding",
+    "name": "Park Avenue Compounding",
+    "slug": "park-avenue-compounding",
+    "city": "St. Louis",
+    "state": "MO",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "MO"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(603) 953-6675",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2023-12-23, most recently re-registered 2025-11-19. Last FDA inspection: 2025-09-23. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "pgrrx-llc",
+    "name": "PGRrx LLC",
+    "slug": "pgrrx-llc",
+    "city": "Exton",
+    "state": "PA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "PA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(484) 883-7597",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-12-10, most recently re-registered 2025-12-30. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "pine-pharmaceuticals-llc",
+    "name": "Pine Pharmaceuticals, LLC",
+    "slug": "pine-pharmaceuticals-llc",
+    "city": "Tonawanda",
+    "state": "NY",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NY"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(716) 248-1025",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2018-03-09, most recently re-registered 2025-11-19. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-11-14. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "pq-pharmacy-llc",
+    "name": "PQ Pharmacy LLC",
+    "slug": "pq-pharmacy-llc",
+    "city": "Brooksville",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(352) 477-8977",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2020-10-29, most recently re-registered 2025-12-11. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-04-04. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "prorx-llc",
+    "name": "ProRx LLC",
+    "slug": "prorx-llc",
+    "city": "Exton",
+    "state": "PA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "PA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(904) 616-7355",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2022-04-27, most recently re-registered 2026-02-20. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-09-19. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "qualgen-llc",
+    "name": "Qualgen LLC",
+    "slug": "qualgen-llc",
+    "city": "Edmond",
+    "state": "OK",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "OK"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(405) 463-4141",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2015-05-23, most recently re-registered 2025-12-17. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-09-04. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "quantum-pharmaceuticals-llc",
+    "name": "Quantum Pharmaceuticals, LLC",
+    "slug": "quantum-pharmaceuticals-llc",
+    "city": "Mounds",
+    "state": "OK",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "OK"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(479) 263-2690",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-05-30, most recently re-registered 2025-11-26. Registered intent to compound sterile drugs from bulk substances. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "quva-pharma-inc",
+    "name": "Quva Pharma, Inc.",
+    "slug": "quva-pharma-inc",
+    "city": "Bloomsbury",
+    "state": "NJ",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NJ"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(908) 388-1079",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2017-09-15, most recently re-registered 2025-12-04. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-04-04. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "rc-outsourcing-llc",
+    "name": "RC Outsourcing, LLC",
+    "slug": "rc-outsourcing-llc",
+    "city": "Lowellville",
+    "state": "OH",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "OH"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(330) 536-8500",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2015-10-07, most recently re-registered 2025-11-27. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-08-28.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "right-value-drug-stores-llc-dba-carie-boyd-s-prescription-shop",
+    "name": "Right Value Drug Stores, LLC, dba Carie Boyd's Prescription Shop",
+    "slug": "right-value-drug-stores-llc-dba-carie-boyd-s-prescription-shop",
+    "city": "Irving",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(817) 282-9376",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2019-07-03, most recently re-registered 2025-11-24. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-07-18. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "sankav-pharmaceuticals-llc",
+    "name": "Sankav Pharmaceuticals, LLC",
+    "slug": "sankav-pharmaceuticals-llc",
+    "city": "Hackettstown",
+    "state": "NJ",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NJ"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(201) 312-8591",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-03-21, most recently re-registered 2025-12-23. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "sca-pharmaceuticals",
+    "name": "SCA Pharmaceuticals",
+    "slug": "sca-pharmaceuticals",
+    "city": "Little Rock",
+    "state": "AR",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "AR"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(877) 550-5059",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2013-12-13, most recently re-registered 2025-12-05. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-10-30. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "sknv-formerly-registered-as-sincerus-florida-llc",
+    "name": "SKNV formerly registered as Sincerus Florida, LLC",
+    "slug": "sknv-formerly-registered-as-sincerus-florida-llc",
+    "city": "Pompano Beach",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(800) 604-5032",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2016-03-10, most recently re-registered 2025-12-03. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-03-06. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "staq-pharma-of-ohio-llc",
+    "name": "STAQ Pharma of Ohio, LLC",
+    "slug": "staq-pharma-of-ohio-llc",
+    "city": "Columbus",
+    "state": "OH",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "OH"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(303) 921-5789",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2023-01-26, most recently re-registered 2025-12-18. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-05-16. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "staq-pharma-inc",
+    "name": "STAQ Pharma, Inc.",
+    "slug": "staq-pharma-inc",
+    "city": "Denver",
+    "state": "CO",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CO"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(303) 921-5789",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2019-02-05, most recently re-registered 2025-12-18. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-02-10.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "staska-pharmaceuticals-inc",
+    "name": "Staska Pharmaceuticals, Inc.",
+    "slug": "staska-pharmaceuticals-inc",
+    "city": "Bennet",
+    "state": "NE",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NE"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(402) 782-2207",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2020-12-03, most recently re-registered 2025-12-12. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2026-02-20. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "stokes-healthcare-inc-dba-epicur-pharma",
+    "name": "Stokes Healthcare Inc., dba Epicur Pharma",
+    "slug": "stokes-healthcare-inc-dba-epicur-pharma",
+    "city": "Mt. Laurel",
+    "state": "NJ",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "NJ"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(888) 508-5032",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2018-01-30, most recently re-registered 2025-11-19. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-05-23. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "tailstorm-health-inc",
+    "name": "Tailstorm Health Inc.",
+    "slug": "tailstorm-health-inc",
+    "city": "Chandler",
+    "state": "AZ",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "AZ"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(480) 274-8617",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2019-10-23, most recently re-registered 2025-12-06. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-05-23. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "turbare-manufacturing",
+    "name": "Turbare Manufacturing",
+    "slug": "turbare-manufacturing",
+    "city": "Conway",
+    "state": "AR",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "AR"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(501) 504-6635",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2023-06-23, most recently re-registered 2025-12-03. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-01-24. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "university-of-tennessee",
+    "name": "University of Tennessee",
+    "slug": "university-of-tennessee",
+    "city": "Memphis",
+    "state": "TN",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TN"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(901) 448-1440",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-05-19, most recently re-registered 2026-03-25. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "us-specialty-formulations-llc",
+    "name": "US Specialty Formulations LLC",
+    "slug": "us-specialty-formulations-llc",
+    "city": "Allentown",
+    "state": "PA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "PA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(610) 849-5023",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2014-01-31, most recently re-registered 2025-12-03. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2026-01-14. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "vitae-enim-vitae-scientific-inc",
+    "name": "Vitae Enim Vitae Scientific, Inc.",
+    "slug": "vitae-enim-vitae-scientific-inc",
+    "city": "San Diego",
+    "state": "CA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(858) 222-0746",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-01-02, most recently re-registered 2025-12-29.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "vitalrx-pharmacy-llc",
+    "name": "VitalRx Pharmacy, LLC",
+    "slug": "vitalrx-pharmacy-llc",
+    "city": "Houston",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(832) 259-1362",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-08-27, most recently re-registered 2026-01-03. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "wedgewood-connect-ohio-llc",
+    "name": "Wedgewood Connect Ohio, LLC",
+    "slug": "wedgewood-connect-ohio-llc",
+    "city": "Albany",
+    "state": "OH",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "OH"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(859) 893-4935",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2023-10-19, most recently re-registered 2025-12-16. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "wedgewood-connect-llc-formerly-registered-as-leiter-s-compounding",
+    "name": "Wedgewood Connect, LLC, formerly registered as Leiter's Compounding",
+    "slug": "wedgewood-connect-llc-formerly-registered-as-leiter-s-compounding",
+    "city": "San Jose",
+    "state": "CA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(669) 297-0857",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2014-01-31, most recently re-registered 2025-11-25. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-07-03. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "wells-pharma-of-houston-llc",
+    "name": "Wells Pharma of Houston, LLC",
+    "slug": "wells-pharma-of-houston-llc",
+    "city": "Houston",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(346) 888-1010",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2020-03-09, most recently re-registered 2025-12-03. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-03-28. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "wells-pharmacy-inc",
+    "name": "Wells Pharmacy, Inc.",
+    "slug": "wells-pharmacy-inc",
+    "city": "Dyersburg",
+    "state": "TN",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TN"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(800) 622-4510",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2016-06-07, most recently re-registered 2025-11-28. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2025-04-25. FDA issued a Form 483 (inspectional observations) at the last inspection.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "wesley-pharmaceuticals",
+    "name": "Wesley Pharmaceuticals",
+    "slug": "wesley-pharmaceuticals",
+    "city": "Orlando",
+    "state": "FL",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "FL"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(407) 440-1555",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-07-25, most recently re-registered 2025-11-22. Registered intent to compound sterile drugs from bulk substances. Last FDA inspection: 2026-03-16.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "white-label-pharmacy-dba-nova-pharmacy",
+    "name": "White Label Pharmacy dba Nova Pharmacy",
+    "slug": "white-label-pharmacy-dba-nova-pharmacy",
+    "city": "Katy",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(833) 789-3305",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-12-16, most recently re-registered 2025-12-16. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "wilcrest-pharmaceuticals-inc",
+    "name": "Wilcrest Pharmaceuticals, Inc.",
+    "slug": "wilcrest-pharmaceuticals-inc",
+    "city": "Houston",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(713) 277-4114",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2025-03-13, most recently re-registered 2025-12-02. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "willowbend-pharma-select-llc",
+    "name": "Willowbend Pharma Select, LLC",
+    "slug": "willowbend-pharma-select-llc",
+    "city": "Houston",
+    "state": "TX",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "TX"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(832) 628-3260",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2024-04-11, most recently re-registered 2025-12-12. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  },
+  {
+    "_id": "xseer-pharmaceuticals-inc",
+    "name": "Xseer Pharmaceuticals, Inc.",
+    "slug": "xseer-pharmaceuticals-inc",
+    "city": "Los Angeles",
+    "state": "CA",
+    "established": null,
+    "type": "503B",
+    "certifications": [
+      "503B"
+    ],
+    "states_licensed": [
+      "CA"
+    ],
+    "produces_semaglutide": null,
+    "produces_tirzepatide": null,
+    "linked_providers": [],
+    "website": null,
+    "phone": "(310) 606-0146",
+    "regulatory_actions": [],
+    "external_reviews": {},
+    "internal_score": null,
+    "description": "Registered with FDA as a 503B outsourcing facility since 2023-10-21, most recently re-registered 2025-12-25. Registered intent to compound sterile drugs from bulk substances.",
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "fda-503b-scraper",
+      "source_urls": [
+        "https://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities"
+      ],
+      "confidence": "low",
+      "notes": "Auto-imported from FDA 503B registry. Production claims (semaglutide/tirzepatide), website, certifications beyond 503B, and linked telehealth providers all require editorial verification before this entry should be relied on."
+    }
+  }
+]
