@@ -10,6 +10,7 @@ import type { Provider } from "@/lib/types";
 import JsonLd from "@/components/shared/JsonLd";
 import TrustBadge from "@/components/shared/TrustBadge";
 import CTAButton from "@/components/shared/CTAButton";
+import StickyCTABar from "@/components/shared/StickyCTABar";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import StarRating from "@/components/providers/StarRating";
@@ -130,7 +131,7 @@ export default async function ProviderReviewPage({
     <>
       <JsonLd data={productJsonLd} />
 
-      <main className="min-h-screen bg-brand-gradient-light">
+      <main className="min-h-screen bg-brand-gradient-light pb-24 lg:pb-0">
         <div className="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-10">
           {/* Hero card */}
           <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-5">
@@ -418,6 +419,18 @@ export default async function ProviderReviewPage({
           </section>
         </div>
       </main>
+
+      {provider.affiliate_url && (
+        <StickyCTABar
+          provider={{
+            name: provider.name,
+            slug: provider.slug,
+            price: displayPrice,
+            affiliateUrl: provider.affiliate_url,
+          }}
+          trackingSource={`review_${provider.slug}_sticky`}
+        />
+      )}
     </>
   );
 }

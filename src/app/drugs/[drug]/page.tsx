@@ -8,6 +8,7 @@ import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import FaqAccordion from "@/components/shared/FaqAccordion";
 import ProviderGrid from "@/components/providers/ProviderGrid";
 import CTAButton from "@/components/shared/CTAButton";
+import StickyCTABar from "@/components/shared/StickyCTABar";
 import JsonLd from "@/components/shared/JsonLd";
 
 export function generateStaticParams() {
@@ -126,8 +127,11 @@ export default async function DrugPage({
     description: drugData.description,
   };
 
+  const topProvider = topProviders[0];
+  const topProviderMinPrice = topProvider ? getMinPrice(topProvider) : null;
+
   return (
-    <main className="min-h-screen bg-brand-bg">
+    <main className="min-h-screen bg-brand-bg pb-24 lg:pb-0">
       <JsonLd data={drugSchema} />
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
 
@@ -399,6 +403,18 @@ export default async function DrugPage({
           <FaqAccordion items={faqItems} />
         </section>
       </div>
+
+      {topProvider && topProvider.affiliate_url && (
+        <StickyCTABar
+          provider={{
+            name: topProvider.name,
+            slug: topProvider.slug,
+            price: topProviderMinPrice,
+            affiliateUrl: topProvider.affiliate_url,
+          }}
+          trackingSource={`drug_${drug}_sticky`}
+        />
+      )}
     </main>
   );
 }

@@ -5,6 +5,7 @@ import { computeOverallScore } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import TrustBadge from "@/components/shared/TrustBadge";
 import CTAButton from "@/components/shared/CTAButton";
+import StickyCTABar from "@/components/shared/StickyCTABar";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import StarRating from "@/components/providers/StarRating";
@@ -165,7 +166,7 @@ export default async function MatchupPage({
   };
 
   return (
-    <div className="min-h-screen bg-brand-gradient-light">
+    <div className="min-h-screen bg-brand-gradient-light pb-24 lg:pb-0">
       <JsonLd data={breadcrumbSchema} />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
@@ -569,6 +570,22 @@ export default async function MatchupPage({
         </div>
 
       </div>
+
+      <StickyCTABar
+        providers={[
+          {
+            name: providerA.name,
+            slug: providerA.slug,
+            affiliateUrl: providerA.affiliate_url,
+          },
+          {
+            name: providerB.name,
+            slug: providerB.slug,
+            affiliateUrl: providerB.affiliate_url,
+          },
+        ]}
+        trackingSource={`vs_${matchup}_sticky`}
+      />
     </div>
   );
 }
