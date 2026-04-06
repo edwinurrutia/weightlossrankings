@@ -1,0 +1,222 @@
+[
+  {
+    "slug": "new-york-ny",
+    "city": "New York",
+    "state": "New York",
+    "state_code": "NY",
+    "population": 8336817,
+    "metro_population": 19500000,
+    "obesity_rate": 27.3,
+    "notable_clinics": ["NYU Langone Weight Management", "Mount Sinai Metabolism Center", "Weill Cornell Medicine"],
+    "intro": "New York City is the largest metropolitan area in the United States, home to over 8.3 million residents in the five boroughs and nearly 20 million across the metro region. While Manhattan has some of the country's leading academic obesity centers, wait times of 6-12 weeks have driven a major shift toward telehealth GLP-1 access. New York's strict pharmacy regulations mean most compounded semaglutide ships from licensed 503A pharmacies in New Jersey or Pennsylvania."
+  },
+  {
+    "slug": "los-angeles-ca",
+    "city": "Los Angeles",
+    "state": "California",
+    "state_code": "CA",
+    "population": 3979576,
+    "metro_population": 13200000,
+    "obesity_rate": 26.2,
+    "notable_clinics": ["UCLA Center for Human Nutrition", "Cedars-Sinai Weight Loss Center", "Keck Medicine of USC"],
+    "intro": "Los Angeles is the second-largest city in the United States and the cultural and economic center of Southern California. With a sprawling metro of 13 million people across LA County, in-person obesity medicine appointments often involve hours of traffic, making telehealth GLP-1 services dramatically more convenient. California's strong telehealth parity laws make Los Angeles one of the most competitive markets for compounded semaglutide pricing."
+  },
+  {
+    "slug": "chicago-il",
+    "city": "Chicago",
+    "state": "Illinois",
+    "state_code": "IL",
+    "population": 2693976,
+    "metro_population": 9500000,
+    "obesity_rate": 31.4,
+    "notable_clinics": ["Northwestern Medicine Center for Lifestyle Medicine", "Rush University Medical Center", "University of Chicago Medicine"],
+    "intro": "Chicago is the third-largest city in the United States and the economic hub of the Midwest. Illinois has higher-than-average obesity rates, and demand for GLP-1 medications has grown rapidly across the Chicagoland area. Telehealth providers can ship compounded semaglutide and tirzepatide directly to addresses anywhere in the city, sidestepping the long wait lists at academic medical centers like Northwestern and Rush."
+  },
+  {
+    "slug": "houston-tx",
+    "city": "Houston",
+    "state": "Texas",
+    "state_code": "TX",
+    "population": 2304580,
+    "metro_population": 7340000,
+    "obesity_rate": 34.1,
+    "notable_clinics": ["Memorial Hermann Bariatric Center", "Houston Methodist Weight Management", "Baylor College of Medicine"],
+    "intro": "Houston is the largest city in Texas and the fourth-largest in the United States, with one of the highest adult obesity rates among major metros. Home to the Texas Medical Center, the world's largest medical complex, Houston still sees most patients turn to telehealth for affordable, convenient GLP-1 access. Texas allows broad telehealth prescribing, and most providers ship to all Houston ZIP codes within 2-3 business days."
+  },
+  {
+    "slug": "phoenix-az",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "state_code": "AZ",
+    "population": 1680992,
+    "metro_population": 5060000,
+    "obesity_rate": 30.9,
+    "notable_clinics": ["Mayo Clinic Arizona", "Banner Health Weight Loss Center", "HonorHealth Bariatric Center"],
+    "intro": "Phoenix is the fifth-largest city in the United States and the fastest-growing major metro in the country. Arizona's hot climate, sprawling suburbs, and rapidly aging population have driven significant demand for medical weight loss. Telehealth GLP-1 providers serve the entire Valley of the Sun, from Scottsdale to Glendale to Mesa, with home delivery typically faster than driving across town for an in-person appointment."
+  },
+  {
+    "slug": "philadelphia-pa",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "state_code": "PA",
+    "population": 1584064,
+    "metro_population": 6240000,
+    "obesity_rate": 32.8,
+    "notable_clinics": ["Penn Medicine Metabolic & Bariatric Surgery", "Jefferson Health Weight Management", "Temple Bariatric Center"],
+    "intro": "Philadelphia is the sixth-largest city in the United States and a major academic medical hub. Despite the presence of world-class programs at Penn Medicine and Jefferson, most Philadelphians seeking GLP-1s now use telehealth due to the cost and wait times of traditional bariatric programs. Pennsylvania allows full telehealth prescribing, and compounded semaglutide ships overnight to all Philadelphia neighborhoods."
+  },
+  {
+    "slug": "san-antonio-tx",
+    "city": "San Antonio",
+    "state": "Texas",
+    "state_code": "TX",
+    "population": 1547253,
+    "metro_population": 2600000,
+    "obesity_rate": 35.2,
+    "notable_clinics": ["UT Health San Antonio Weight Loss Center", "Methodist Hospital Bariatric", "Baptist Health System"],
+    "intro": "San Antonio is the seventh-largest city in the United States and one of the most affected by the obesity epidemic, with adult obesity rates above 35%. Hispanic and Latino residents in San Antonio face elevated rates of type 2 diabetes, making GLP-1 access especially impactful. Telehealth providers ship compounded semaglutide to all of Bexar County, and Texas pharmacy laws allow for some of the lowest prices in the country."
+  },
+  {
+    "slug": "san-diego-ca",
+    "city": "San Diego",
+    "state": "California",
+    "state_code": "CA",
+    "population": 1423851,
+    "metro_population": 3340000,
+    "obesity_rate": 25.4,
+    "notable_clinics": ["UC San Diego Center for Advanced Weight Management", "Scripps Clinic", "Sharp HealthCare"],
+    "intro": "San Diego is the eighth-largest city in the United States and home to one of the most health-conscious populations in California. While the city's obesity rate is below the national average, demand for GLP-1 medications has surged for both weight loss and metabolic health optimization. California's aggressive telehealth laws make San Diego a top market for direct-to-consumer compounded semaglutide and tirzepatide."
+  },
+  {
+    "slug": "dallas-tx",
+    "city": "Dallas",
+    "state": "Texas",
+    "state_code": "TX",
+    "population": 1343573,
+    "metro_population": 7640000,
+    "obesity_rate": 33.0,
+    "notable_clinics": ["UT Southwestern Medical Center", "Baylor Scott & White", "Medical City Dallas"],
+    "intro": "Dallas is the ninth-largest city in the United States and the heart of the booming Dallas-Fort Worth metroplex. As one of Texas's fastest-growing markets for medical weight loss, Dallas residents have access to dozens of telehealth GLP-1 providers offering same-week prescriptions. Texas's permissive telehealth and pharmacy regulations have made Dallas a hotbed for compounded semaglutide pricing, with monthly costs often below $200."
+  },
+  {
+    "slug": "austin-tx",
+    "city": "Austin",
+    "state": "Texas",
+    "state_code": "TX",
+    "population": 978908,
+    "metro_population": 2280000,
+    "obesity_rate": 28.6,
+    "notable_clinics": ["Dell Medical School at UT Austin", "Ascension Seton", "St. David's HealthCare"],
+    "intro": "Austin is the eleventh-largest city in the United States and the fastest-growing major tech hub. Austin's young, tech-forward population was an early adopter of telehealth GLP-1 services, and the city has one of the lowest in-person obesity-medicine wait times in Texas. Most local residents still prefer telehealth for the convenience of skipping doctor visits and getting medication shipped to their door."
+  },
+  {
+    "slug": "jacksonville-fl",
+    "city": "Jacksonville",
+    "state": "Florida",
+    "state_code": "FL",
+    "population": 911507,
+    "metro_population": 1610000,
+    "obesity_rate": 29.7,
+    "notable_clinics": ["Mayo Clinic Jacksonville", "Baptist Health", "UF Health Jacksonville"],
+    "intro": "Jacksonville is Florida's largest city by area and the twelfth-largest in the United States. With Mayo Clinic Jacksonville as a regional referral center, the area has strong in-person bariatric options, but most residents now use telehealth for GLP-1 access. Florida's large pharmacy network and lack of state income tax help keep compounded semaglutide prices among the most competitive in the Southeast."
+  },
+  {
+    "slug": "fort-worth-tx",
+    "city": "Fort Worth",
+    "state": "Texas",
+    "state_code": "TX",
+    "population": 918915,
+    "metro_population": 7640000,
+    "obesity_rate": 33.2,
+    "notable_clinics": ["Texas Health Resources", "JPS Health Network", "Cook Children's"],
+    "intro": "Fort Worth is the thirteenth-largest city in the United States and shares the Dallas-Fort Worth metroplex with its larger neighbor. Like the rest of North Texas, Fort Worth has high obesity rates and a thriving telehealth GLP-1 market. Compounding pharmacies based in Texas can ship directly to Fort Worth ZIP codes overnight, often at significantly lower prices than coastal markets."
+  },
+  {
+    "slug": "columbus-oh",
+    "city": "Columbus",
+    "state": "Ohio",
+    "state_code": "OH",
+    "population": 898553,
+    "metro_population": 2150000,
+    "obesity_rate": 34.4,
+    "notable_clinics": ["The Ohio State University Wexner Medical Center", "OhioHealth", "Mount Carmel Health System"],
+    "intro": "Columbus is the fourteenth-largest city in the United States and the capital of Ohio. As home to Ohio State University and a growing tech and insurance industry, Columbus has rapidly expanded its medical infrastructure. Ohio's elevated obesity rate has driven strong demand for GLP-1 telehealth services, which ship to all Columbus neighborhoods, often more affordably than going through OSU's specialty clinics."
+  },
+  {
+    "slug": "indianapolis-in",
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "state_code": "IN",
+    "population": 876384,
+    "metro_population": 2120000,
+    "obesity_rate": 36.1,
+    "notable_clinics": ["IU Health Bariatric & Medical Weight Loss", "Community Health Network", "Franciscan Health"],
+    "intro": "Indianapolis is the fifteenth-largest city in the United States and the headquarters of Eli Lilly, the maker of Mounjaro and Zepbound. Despite its proximity to the manufacturer, brand-name tirzepatide remains expensive without insurance, and most Indianapolis residents now use telehealth for affordable compounded alternatives. Indiana's high obesity rate and modest income levels make compounded semaglutide especially popular here."
+  },
+  {
+    "slug": "charlotte-nc",
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "population": 885708,
+    "metro_population": 2660000,
+    "obesity_rate": 32.1,
+    "notable_clinics": ["Atrium Health Weight Management", "Novant Health", "Carolinas Medical Center"],
+    "intro": "Charlotte is the sixteenth-largest city in the United States and the largest city in North Carolina. As one of the fastest-growing financial centers in the Southeast, Charlotte has seen explosive demand for telehealth GLP-1 services among its young professional population. North Carolina's broad telehealth prescribing rules and competitive pharmacy market keep compounded semaglutide prices low across the Charlotte metro."
+  },
+  {
+    "slug": "san-francisco-ca",
+    "city": "San Francisco",
+    "state": "California",
+    "state_code": "CA",
+    "population": 873965,
+    "metro_population": 4750000,
+    "obesity_rate": 22.4,
+    "notable_clinics": ["UCSF Weight Management Program", "California Pacific Medical Center", "Kaiser San Francisco"],
+    "intro": "San Francisco is one of the most health-conscious cities in the United States and has the lowest adult obesity rate among major metros. Despite the lower obesity rates, demand for GLP-1 medications among San Francisco residents is exceptionally high, driven by tech-sector body composition optimization and metabolic health interest. California's strong telehealth parity laws make San Francisco one of the most competitive cities for compounded semaglutide pricing."
+  },
+  {
+    "slug": "seattle-wa",
+    "city": "Seattle",
+    "state": "Washington",
+    "state_code": "WA",
+    "population": 753675,
+    "metro_population": 4020000,
+    "obesity_rate": 27.7,
+    "notable_clinics": ["UW Medicine Weight Loss Management Program", "Swedish Medical Center", "Virginia Mason Franciscan"],
+    "intro": "Seattle is the largest city in the Pacific Northwest and home to a tech-driven population with strong interest in metabolic health. Washington's robust telehealth laws make Seattle an active market for GLP-1 services, with most providers shipping compounded semaglutide overnight from Oregon and California pharmacies. UW Medicine's wait times have pushed many Seattle residents to telehealth as their first option."
+  },
+  {
+    "slug": "denver-co",
+    "city": "Denver",
+    "state": "Colorado",
+    "state_code": "CO",
+    "population": 715522,
+    "metro_population": 2960000,
+    "obesity_rate": 24.2,
+    "notable_clinics": ["UCHealth Anschutz Health and Wellness Center", "Denver Health", "National Jewish Health"],
+    "intro": "Denver is one of the leanest major cities in America, with Colorado holding the lowest adult obesity rate in the country. Despite this, demand for GLP-1 medications remains strong among Denver's active, health-focused population. Colorado's well-developed telehealth infrastructure and proximity to major compounding pharmacies in Texas and California keep pricing competitive across the Denver metro."
+  },
+  {
+    "slug": "washington-dc",
+    "city": "Washington",
+    "state": "District of Columbia",
+    "state_code": "DC",
+    "population": 712816,
+    "metro_population": 6380000,
+    "obesity_rate": 24.7,
+    "notable_clinics": ["MedStar Georgetown University Hospital", "George Washington University Hospital", "Howard University Hospital"],
+    "intro": "Washington, DC is the capital of the United States and the center of a metro area of more than 6 million people across DC, Maryland, and Virginia. The District has below-average obesity rates but extremely high demand for GLP-1 medications among its policy and professional workforce. Compounded semaglutide is widely available through telehealth providers shipping into DC, Maryland, and Northern Virginia."
+  },
+  {
+    "slug": "boston-ma",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "state_code": "MA",
+    "population": 675647,
+    "metro_population": 4940000,
+    "obesity_rate": 25.0,
+    "notable_clinics": ["Massachusetts General Hospital Weight Center", "Brigham and Women's Hospital", "Beth Israel Deaconess"],
+    "intro": "Boston is one of the world's leading academic medical capitals, home to Mass General, Brigham and Women's, and Harvard Medical School. While Boston has world-class in-person obesity medicine programs, wait times often exceed 3 months, pushing many residents to telehealth GLP-1 providers. Massachusetts has well-developed telehealth laws and several in-state compounding pharmacies, keeping compounded semaglutide pricing competitive across Greater Boston."
+  }
+]
