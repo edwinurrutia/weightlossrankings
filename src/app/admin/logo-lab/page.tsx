@@ -21,6 +21,95 @@ const TEXT = "#1e1b4b";
 const SECONDARY = "#64748b";
 
 const VARIATIONS: Variation[] = [
+  // ─── SEPARATE WORDS — variations of your top 3 picks ───
+  {
+    id: "1A",
+    name: "Three words — clean wordmark",
+    blurb: "Reads like a publication: 'The Wall Street Journal'. Most editorial.",
+    mark: null,
+    text: (
+      <span
+        className="font-heading font-extrabold tracking-tight text-2xl"
+        style={{ color: TEXT }}
+      >
+        Weight Loss <span style={{ color: COLOR }}>Rankings</span>
+      </span>
+    ),
+  },
+  {
+    id: "1B",
+    name: "Three words — slash divider",
+    blurb: "Editorial slash separator. Restrained but distinctive.",
+    mark: null,
+    text: (
+      <span
+        className="font-heading font-extrabold tracking-tight text-2xl"
+        style={{ color: TEXT }}
+      >
+        Weight Loss
+        <span className="mx-2" style={{ color: SECONDARY }}>/</span>
+        <span style={{ color: COLOR }}>Rankings</span>
+      </span>
+    ),
+  },
+  {
+    id: "6A",
+    name: "Three words + violet dot",
+    blurb: "Quietly distinctive. Dot reads as a confident bullet point.",
+    mark: (
+      <span
+        className="inline-block w-3 h-3 rounded-full"
+        style={{ background: COLOR }}
+      />
+    ),
+    text: (
+      <span
+        className="font-heading font-extrabold tracking-tight text-2xl"
+        style={{ color: TEXT }}
+      >
+        Weight Loss Rankings
+      </span>
+    ),
+  },
+  {
+    id: "10A",
+    name: "Three words — masthead style",
+    blurb: "Newsroom masthead. Thin separator + small caps.",
+    mark: null,
+    text: (
+      <span
+        className="font-heading font-black tracking-[0.06em] uppercase text-base flex items-center gap-2"
+        style={{ color: TEXT }}
+      >
+        Weight Loss
+        <span
+          className="inline-block h-5 w-px"
+          style={{ background: COLOR }}
+        />
+        <span style={{ color: COLOR }}>Rankings</span>
+      </span>
+    ),
+  },
+  {
+    id: "10B",
+    name: "Three words — large masthead",
+    blurb: "Same masthead vibe but bigger and more confident.",
+    mark: null,
+    text: (
+      <span
+        className="font-heading font-black tracking-[0.04em] uppercase text-xl flex items-center gap-3"
+        style={{ color: TEXT }}
+      >
+        Weight Loss
+        <span
+          className="inline-block h-7 w-[2px]"
+          style={{ background: COLOR }}
+        />
+        <span style={{ color: COLOR }}>Rankings</span>
+      </span>
+    ),
+  },
+  // ─── ORIGINAL 12 (one-word) for reference ───
   {
     id: "1",
     name: "Wordmark only — slash divider",
