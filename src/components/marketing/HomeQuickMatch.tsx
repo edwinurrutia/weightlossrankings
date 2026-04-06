@@ -273,51 +273,61 @@ export default function HomeQuickMatch({
                 </div>
               ) : (
                 <>
-                  {/* #1 match */}
-                  <div className="rounded-2xl bg-brand-violet/[0.04] border border-brand-violet/20 p-6">
-                    <div className="flex items-start justify-between gap-4 flex-wrap">
-                      <div>
-                        <span className="inline-block text-[10px] uppercase tracking-[0.15em] font-bold bg-brand-violet text-white px-2.5 py-1 rounded-full mb-3">
-                          Your top match
-                        </span>
-                        <h3 className="font-heading text-2xl sm:text-3xl font-bold text-brand-text-primary">
-                          {matches[0].name}
-                        </h3>
-                        {matches[0].best_for && (
-                          <p className="text-sm text-brand-text-secondary mt-1">
-                            Best for {matches[0].best_for}
-                          </p>
-                        )}
-                      </div>
-                      <div className="text-right">
-                        <div className="font-heading text-3xl font-black text-brand-violet leading-none">
+                  {/* #1 match — mobile-first single column layout. Score
+                      and price sit on a single row below the name so the
+                      heading always gets full width. Button copy is fixed
+                      length so the CTA stays a consistent size regardless
+                      of how long the provider name is. */}
+                  <div className="rounded-2xl bg-brand-violet/[0.04] border border-brand-violet/20 p-5 sm:p-6">
+                    <h3 className="font-heading text-2xl sm:text-3xl font-bold text-brand-text-primary leading-tight tracking-tight">
+                      {matches[0].name}
+                    </h3>
+                    {matches[0].best_for && (
+                      <p className="text-sm text-brand-text-secondary mt-1.5">
+                        Best for {matches[0].best_for}
+                      </p>
+                    )}
+
+                    {/* Score · Price — inline metric row */}
+                    <div className="mt-4 flex items-baseline gap-4 flex-wrap">
+                      <div className="flex items-baseline gap-1">
+                        <span className="font-heading text-3xl font-black text-brand-violet leading-none">
                           {matches[0].scoreOverall.toFixed(1)}
-                          <span className="text-base font-semibold text-brand-text-secondary">
-                            /10
-                          </span>
-                        </div>
-                        <div className="mt-2 font-heading text-xl font-bold text-brand-text-primary">
+                        </span>
+                        <span className="text-sm font-semibold text-brand-text-secondary">
+                          /10
+                        </span>
+                      </div>
+                      <span
+                        aria-hidden
+                        className="text-brand-violet/30 text-sm leading-none"
+                      >
+                        ·
+                      </span>
+                      <div className="flex items-baseline gap-1">
+                        <span className="font-heading text-2xl font-bold text-brand-text-primary leading-none">
                           {formatUsd(matches[0].displayPrice)}
-                          <span className="text-xs font-normal text-brand-text-secondary ml-1">
-                            /mo
-                          </span>
-                        </div>
+                        </span>
+                        <span className="text-xs text-brand-text-secondary">
+                          /mo
+                        </span>
                       </div>
                     </div>
 
-                    <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                    <div className="mt-6 flex flex-col sm:flex-row gap-3">
                       <TrackedAffiliateLink
                         href={matches[0].affiliate_url}
                         provider={matches[0].slug}
                         source="homepage_quick_match"
                         position={1}
-                        className="flex-1 inline-flex items-center justify-center bg-brand-violet hover:bg-brand-violet/90 text-white font-bold text-base px-6 py-3.5 rounded-full transition-colors"
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 bg-brand-violet hover:bg-brand-violet/90 text-white font-bold text-base px-6 py-3.5 rounded-full transition-colors whitespace-nowrap"
                       >
-                        Get started with {matches[0].name}
+                        Get started
+                        <span aria-hidden>→</span>
                       </TrackedAffiliateLink>
                       <Link
-                        href={`/providers/${matches[0].slug}`}
-                        className="inline-flex items-center justify-center text-brand-text-primary font-semibold text-sm px-5 py-3.5 rounded-full border border-brand-violet/20 hover:border-brand-violet/40 hover:text-brand-violet transition"
+                        href={`/reviews/${matches[0].slug}`}
+                        className="inline-flex items-center justify-center text-brand-text-primary font-semibold text-sm px-5 py-3.5 rounded-full border border-brand-violet/20 hover:border-brand-violet/40 hover:text-brand-violet transition whitespace-nowrap"
                       >
                         Read review
                       </Link>

@@ -30,6 +30,11 @@ export default function PricingDisplay({
 
   const displayPrice = cheapest.promo_price ?? cheapest.monthly_cost;
 
+  // Promo codes intentionally hidden site-wide. The data still flows
+  // through (so promo_price keeps powering the displayPrice number used
+  // for ranking and the cheapest-by lists), but we no longer surface the
+  // strikethrough list price or the "Code: X" chip on cards. Easier to
+  // re-enable later by uncommenting the strikethrough block below.
   return (
     <div className="flex flex-col gap-1">
       <div className="flex items-baseline gap-1">
@@ -38,16 +43,6 @@ export default function PricingDisplay({
         </span>
         <span className="text-sm text-brand-text-secondary">/mo</span>
       </div>
-      {cheapest.promo_price && cheapest.promo_code && (
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-sm text-brand-text-secondary line-through">
-            ${cheapest.monthly_cost}
-          </span>
-          <span className="text-xs font-medium text-brand-success bg-brand-success/10 rounded-full px-2 py-0.5">
-            Code: {cheapest.promo_code}
-          </span>
-        </div>
-      )}
     </div>
   );
 }
