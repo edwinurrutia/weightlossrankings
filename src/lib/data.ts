@@ -29,10 +29,16 @@ export async function getAllProviderSlugs(): Promise<{ slug: string }[]> {
 }
 
 export async function getFeaturedProviders(): Promise<Provider[]> {
-  return providers
-    .filter((p) => p.is_featured)
-    .sort((a, b) => a.name.localeCompare(b.name))
-    .slice(0, 3);
+  // Top GLP-1 providers for the homepage. Featured/sponsored bubble to top,
+  // remainder filled by overall score. Returns 6 so the homepage feels alive.
+  const glp1 = providers.filter((p) => p.category === "GLP-1 Provider");
+  return [...glp1]
+    .sort((a, b) => {
+      if (a.is_featured && !b.is_featured) return -1;
+      if (!a.is_featured && b.is_featured) return 1;
+      return computeOverallScore(b.scores) - computeOverallScore(a.scores);
+    })
+    .slice(0, 6);
 }
 
 export async function getProvidersByDrug(
