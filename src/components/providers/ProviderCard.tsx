@@ -40,11 +40,6 @@ export default function ProviderCard({
           : "border-brand-violet/10"
       }`}
     >
-      {is_featured && (
-        <span className="absolute top-4 right-4 rounded-full bg-brand-gradient text-white text-xs font-semibold px-2.5 py-0.5">
-          Sponsored
-        </span>
-      )}
 
       {/* Header: name + score badge */}
       <div className="flex items-start justify-between gap-3">

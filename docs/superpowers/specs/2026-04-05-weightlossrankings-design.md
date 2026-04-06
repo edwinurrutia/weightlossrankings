@@ -323,10 +323,24 @@ Composite score = weighted average. Displayed as overall score + radar chart bre
 - **Comparison Table:** Alternating rows, sticky header, checkmark/x icons
 - **Trust Badge:** Small pill with icon (medical reviewer, last updated, verified)
 
-### Responsive
-- **Desktop:** 3-column provider grid, sidebar filters
-- **Tablet:** 2-column grid, collapsible filters
-- **Mobile:** Single column, bottom sheet filters, sticky CTA bar
+### Responsive (Mobile-First)
+
+All pages designed mobile-first. Target: 70%+ mobile traffic (typical for health/wellness).
+
+- **Desktop (1024px+):** 3-column provider grid, sidebar filters, full comparison tables
+- **Tablet (768-1023px):** 2-column grid, collapsible filter drawer, scrollable tables
+- **Mobile (< 768px):**
+  - Single column card stack
+  - Bottom sheet filter panel (swipe up, like Google Maps)
+  - Sticky CTA bar at bottom of screen (provider name + price + "Visit" button)
+  - Horizontal swipe for comparison tables (with scroll indicator)
+  - Collapsible sections for long review content (tap to expand)
+  - Touch-friendly filter pills (min 44px tap targets)
+  - Savings calculator / insurance checker as full-screen step wizard
+  - Thumb-zone optimized: primary CTAs in bottom 1/3 of screen
+  - No hover-dependent interactions — all tap/swipe
+  - Lazy-loaded images with aspect ratio placeholders (no layout shift)
+  - Font sizes: minimum 16px body (prevents iOS zoom on input focus)
 
 ---
 

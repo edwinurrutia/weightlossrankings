@@ -16,7 +16,11 @@ const footerColumns = [
     links: [
       { label: "Blog", href: "/blog" },
       { label: "Methodology", href: "/methodology" },
-      { label: "Texas Guide", href: "/states/texas" },
+      { label: "Texas", href: "/states/texas" },
+      { label: "California", href: "/states/california" },
+      { label: "Florida", href: "/states/florida" },
+      { label: "New York", href: "/states/new-york" },
+      { label: "Illinois", href: "/states/illinois" },
     ],
   },
   {
