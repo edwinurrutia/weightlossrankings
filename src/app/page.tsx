@@ -61,18 +61,27 @@ export default async function HomePage() {
   const providerCount = Math.max(5, Math.floor(allProviders.length / 5) * 5);
   const providerCountLabel = `${providerCount}+`;
 
-  // Cheapest compounded semaglutide across the dataset — drives the savings
-  // headline. If we have no semaglutide data at all, fall back to a sane
-  // default so the section still renders.
-  const semaCompoundedPrices = allProviders.flatMap((p) =>
-    (p.pricing || [])
-      .filter((pr) => pr.drug === "semaglutide" && pr.form === "compounded")
-      .map((pr) => pr.promo_price ?? pr.monthly_cost),
-  );
-  const cheapestCompoundedMonthly =
+  // Compounded semaglutide pricing across the dataset.
+  // The savings headline uses the MEDIAN as its editorial baseline (not
+  // the cheapest) because the cheapest entries in our dataset are usually
+  // first-month introductory rates that don't reflect what users pay
+  // long-term. The "starts at" disclosure surfaces the absolute floor
+  // separately so the marketing remains accurate without overstating it.
+  const semaCompoundedPrices = allProviders
+    .flatMap((p) =>
+      (p.pricing || [])
+        .filter((pr) => pr.drug === "semaglutide" && pr.form === "compounded")
+        .map((pr) => pr.promo_price ?? pr.monthly_cost),
+    )
+    .sort((a, b) => a - b);
+  const medianCompoundedMonthly =
     semaCompoundedPrices.length > 0
-      ? Math.min(...semaCompoundedPrices)
-      : 99;
+      ? Math.round(
+          semaCompoundedPrices[Math.floor(semaCompoundedPrices.length / 2)],
+        )
+      : 150;
+  const startingFromMonthly =
+    semaCompoundedPrices.length > 0 ? semaCompoundedPrices[0] : 99;
 
   // Slim provider projection for the QuickMatch client widget. Only the
   // fields the matcher and result card need — keeps the client bundle
@@ -190,7 +199,8 @@ export default async function HomePage() {
 
       {/* ── Money headline (replaces the boring stat bar) ── */}
       <HomeSavingsHeadline
-        cheapestCompoundedMonthly={cheapestCompoundedMonthly}
+        medianCompoundedMonthly={medianCompoundedMonthly}
+        startingFromMonthly={startingFromMonthly}
         brandMonthly={WEGOVY_MONTHLY_USD}
       />
 
