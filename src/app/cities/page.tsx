@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllCities } from "@/lib/cities";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 export const metadata: Metadata = {
   title: "GLP-1 Providers by City — Browse 20 Largest US Cities",
@@ -50,6 +52,11 @@ export default function CitiesIndexPage() {
             </Link>
           ))}
         </div>
+
+        <SourcesPanel
+          sourceIds={["cdc-brfss-obesity"]}
+          dataAsOf={getLatestVerificationDate()}
+        />
       </div>
     </main>
   );

@@ -6,6 +6,8 @@ import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import EmailCapture from "@/components/shared/EmailCapture";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import JsonLd from "@/components/shared/JsonLd";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 export const metadata: Metadata = {
   title:
@@ -133,6 +135,15 @@ export default function PharmaciesIndexPage() {
           description="Get notified when a pharmacy in this directory has a new FDA action, PCAB status change, or major regulatory update."
           source="pharmacy_watch"
           buttonText="Subscribe"
+        />
+
+        <SourcesPanel
+          sourceIds={[
+            "fda-503a-compounding",
+            "fda-503b-outsourcing",
+            "pcab-accreditation-standards",
+          ]}
+          dataAsOf={getLatestVerificationDate()}
         />
       </div>
     </main>

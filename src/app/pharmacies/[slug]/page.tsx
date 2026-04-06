@@ -15,6 +15,9 @@ import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import Citation from "@/components/research/Citation";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 export function generateStaticParams() {
   return getAllPharmacies().map((p) => ({ slug: p.slug }));
@@ -90,6 +93,37 @@ export default async function PharmacyDetailPage({
   const linkedProviders: Provider[] = allProviders.filter((p) =>
     pharmacy.linked_providers.includes(p.slug),
   );
+
+  const dataAsOf = getLatestVerificationDate();
+
+  // Source ids in display order (drives footnote numbering):
+  // 1 = FDA 503A compounding framework
+  // 2 = FDA 503B outsourcing facility framework
+  // 3 = PCAB accreditation standards
+  // 4 = USP <797> sterile compounding
+  // 5 = USP <71> sterility testing
+  // 6 = USP <85> bacterial endotoxin testing
+  // 7 = FDA drug shortage list (basis for GLP-1 compounding eligibility)
+  const SOURCE_FDA_503A = "fda-503a-compounding";
+  const SOURCE_FDA_503B = "fda-503b-outsourcing";
+  const SOURCE_PCAB = "pcab-accreditation-standards";
+  const SOURCE_USP_797 = "usp-797-sterile-compounding";
+  const SOURCE_USP_71 = "usp-71-sterility";
+  const SOURCE_USP_85 = "usp-85-endotoxin";
+  const SOURCE_FDA_SHORTAGE = "fda-drug-shortage-list";
+
+  const producesGlp1 =
+    pharmacy.produces_semaglutide || pharmacy.produces_tirzepatide;
+
+  const sourceIds: string[] = [
+    SOURCE_FDA_503A,
+    SOURCE_FDA_503B,
+    SOURCE_PCAB,
+    SOURCE_USP_797,
+    SOURCE_USP_71,
+    SOURCE_USP_85,
+    SOURCE_FDA_SHORTAGE,
+  ];
 
   const faqs = [
     {
@@ -257,12 +291,19 @@ export default async function PharmacyDetailPage({
             <div className="space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <TypeBadge type={pharmacy.type} />
+                {(pharmacy.type === "503A" || pharmacy.type === "Both") && (
+                  <Citation source={SOURCE_FDA_503A} n={1} />
+                )}
+                {(pharmacy.type === "503B" || pharmacy.type === "Both") && (
+                  <Citation source={SOURCE_FDA_503B} n={2} />
+                )}
                 {pharmacy.certifications.map((c) => (
                   <span
                     key={c}
                     className="inline-flex items-center text-xs font-semibold uppercase tracking-wide border border-sky-200 bg-sky-50 text-sky-700 rounded-full px-3 py-1"
                   >
                     {c}
+                    {c === "PCAB" && <Citation source={SOURCE_PCAB} n={3} />}
                   </span>
                 ))}
               </div>
@@ -325,6 +366,17 @@ export default async function PharmacyDetailPage({
           <h2 className="text-2xl font-bold text-brand-text-primary">
             Certifications &amp; Compliance
           </h2>
+          <p className="text-sm text-brand-text-secondary leading-relaxed">
+            All sterile compounding pharmacies in the United States are
+            required to follow United States Pharmacopeia General Chapter
+            &lt;797&gt; sterile compounding standards
+            <Citation source={SOURCE_USP_797} n={4} />, with finished
+            preparations evaluated against USP &lt;71&gt; sterility testing
+            <Citation source={SOURCE_USP_71} n={5} /> and USP &lt;85&gt;
+            bacterial endotoxin testing
+            <Citation source={SOURCE_USP_85} n={6} /> as appropriate for the
+            product type.
+          </p>
           {pharmacy.certifications.length === 0 ? (
             <p className="text-sm text-brand-text-secondary">
               We have not verified any third-party accreditations for this
@@ -355,6 +407,15 @@ export default async function PharmacyDetailPage({
           <h2 className="text-2xl font-bold text-brand-text-primary">
             Drugs Produced
           </h2>
+          {producesGlp1 && (
+            <p className="text-sm text-brand-text-secondary leading-relaxed">
+              Compounding pharmacies&apos; ability to produce semaglutide or
+              tirzepatide depends on the FDA Drug Shortage List status for
+              each reference product; compounding eligibility can change when
+              a drug moves on or off the shortage list
+              <Citation source={SOURCE_FDA_SHORTAGE} n={7} />.
+            </p>
+          )}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div
               className={`rounded-xl border p-4 ${
@@ -558,6 +619,8 @@ export default async function PharmacyDetailPage({
             All Pharmacies
           </CTAButton>
         </div>
+
+        <SourcesPanel sourceIds={sourceIds} dataAsOf={dataAsOf} />
       </div>
     </main>
   );

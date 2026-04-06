@@ -18,6 +18,9 @@ import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import Citation from "@/components/research/Citation";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 const GLP1_CATEGORIES = new Set(["GLP-1 Provider", "Weight Loss Program"]);
 
@@ -65,6 +68,27 @@ export default async function CityPage({
   const providers = allProviders.filter((p) => GLP1_CATEGORIES.has(p.category));
   const stateContent = getStateContent(city.state_code);
   const avgPrice = stateContent?.average_compounded_price_monthly ?? 199;
+  const dataAsOf = getLatestVerificationDate();
+
+  // Source ids in display order (drives footnote numbering):
+  // 1 = Our own pricing index (the $avgPrice number)
+  // 2 = CDC BRFSS adult obesity prevalence
+  // 3 = CDC state obesity rankings
+  // 4 = KFF Medicaid coverage research
+  // 5 = FDA 503A compounding framework
+  const SOURCE_WLR_PRICING = "wlr-pricing-index";
+  const SOURCE_CDC_BRFSS = "cdc-brfss-obesity";
+  const SOURCE_CDC_STATE_RANK = "cdc-state-obesity-rankings";
+  const SOURCE_KFF_MEDICAID = "kff-medicaid-obesity-drug-coverage";
+  const SOURCE_FDA_503A = "fda-503a-compounding";
+
+  const sourceIds: string[] = [
+    SOURCE_WLR_PRICING,
+    SOURCE_CDC_BRFSS,
+    SOURCE_CDC_STATE_RANK,
+    SOURCE_KFF_MEDICAID,
+    SOURCE_FDA_503A,
+  ];
 
   const faqs = [
     {
@@ -151,6 +175,14 @@ export default async function CityPage({
             About GLP-1 Access in {city.city}
           </h2>
           <p className="text-brand-text-secondary leading-relaxed">{city.intro}</p>
+          <p className="text-brand-text-secondary leading-relaxed">
+            {city.state}&apos;s adult obesity rate is approximately{" "}
+            {city.obesity_rate.toFixed(1)}% based on CDC Behavioral Risk Factor
+            Surveillance System data
+            <Citation source={SOURCE_CDC_BRFSS} n={2} />, and state rankings
+            are published in CDC&apos;s Adult Obesity Facts
+            <Citation source={SOURCE_CDC_STATE_RANK} n={3} />.
+          </p>
         </section>
 
         {/* Drug-specific sub-pages */}
@@ -213,9 +245,13 @@ export default async function CityPage({
           <p className="text-brand-text-secondary leading-relaxed">
             Telehealth GLP-1 providers serving {city.city} offer same-week
             appointments, free shipping of compounded semaglutide and
-            tirzepatide, and pricing 70-85% lower than brand-name medications.
-            For most {city.city} residents, telehealth is the fastest and most
-            affordable path to starting GLP-1 treatment.
+            tirzepatide from licensed 503A compounding pharmacies
+            <Citation source={SOURCE_FDA_503A} n={5} />, and pricing 70-85%
+            lower than brand-name medications. For most {city.city} residents,
+            telehealth is the fastest and most affordable path to starting
+            GLP-1 treatment. Medicaid and commercial insurance coverage of
+            anti-obesity GLP-1s in {city.state} varies by plan
+            <Citation source={SOURCE_KFF_MEDICAID} n={4} />.
           </p>
         </section>
 
@@ -227,6 +263,7 @@ export default async function CityPage({
           <div className="rounded-lg border border-brand-border bg-brand-surface p-4">
             <div className="text-sm text-brand-text-muted mb-1">
               Average compounded semaglutide ({city.state})
+              <Citation source={SOURCE_WLR_PRICING} n={1} />
             </div>
             <div className="text-2xl font-bold text-brand-text-primary">
               ${avgPrice}/month
@@ -261,6 +298,8 @@ export default async function CityPage({
           description={`Be the first to know about new GLP-1 providers and price changes in ${city.city}.`}
           source={`city_${city.slug}`}
         />
+
+        <SourcesPanel sourceIds={sourceIds} dataAsOf={dataAsOf} />
       </div>
     </main>
   );

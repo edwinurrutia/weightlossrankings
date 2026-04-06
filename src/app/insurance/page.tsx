@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllInsurers } from "@/lib/insurers";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 export const metadata: Metadata = {
   title: "Does My Insurance Cover GLP-1s? Browse 10 Major Insurers (2026)",
@@ -35,6 +37,15 @@ export default function InsuranceIndexPage() {
           </p>
         </div>
 
+        <div className="mb-8 rounded-xl border border-amber-200 bg-amber-50/60 p-4 text-sm text-amber-900">
+          <strong className="font-semibold">Editorial note:</strong> Insurance
+          coverage of GLP-1 medications is changing rapidly as plans respond
+          to new clinical evidence and shifting federal and state policy.
+          Always verify current coverage rules with your own plan
+          administrator or member services line before making a treatment or
+          financial decision based on any information on this page.
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {insurers.map((i) => (
             <Link
@@ -52,6 +63,15 @@ export default function InsuranceIndexPage() {
             </Link>
           ))}
         </div>
+
+        <SourcesPanel
+          sourceIds={[
+            "kff-medicaid-obesity-drug-coverage",
+            "cms-medicare-part-d",
+            "irs-pub-502-medical-expenses",
+          ]}
+          dataAsOf={getLatestVerificationDate()}
+        />
       </div>
     </main>
   );

@@ -16,6 +16,9 @@ import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import DYORCallout from "@/components/marketing/DYORCallout";
+import Citation from "@/components/research/Citation";
+import SourcesPanel from "@/components/research/SourcesPanel";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 export function generateStaticParams() {
   return getAllInsurers().map((i) => ({ insurer: i.slug }));
@@ -83,6 +86,39 @@ export default async function InsurerPage({
           .slice(0, 6);
 
   const badge = coverageBadge(insurer.covers_glp1);
+  const isMedicare = insurer.slug === "medicare";
+  const isMedicaid = insurer.slug === "medicaid";
+  const dataAsOf = getLatestVerificationDate();
+
+  // Source ids used on this page, in display order (drives footnote numbers).
+  // 1 = KFF employer / commercial benefits survey
+  // 2 = KFF Medicaid obesity drug coverage research
+  // 3 = CMS Medicare Part D (statutory weight-loss exclusion)
+  // 4 = CMS Medicaid prescription drugs (state-by-state)
+  // 5 = IRS Publication 502 (HSA/FSA eligibility)
+  // 6 = ERISA self-funded employer plans
+  // 7 = FDA 503A compounding framework (cash-pay compounded alternative)
+  const SOURCE_KFF_EMPLOYER = "kff-employer-health-benefits-survey";
+  const SOURCE_KFF_MEDICAID = "kff-medicaid-obesity-drug-coverage";
+  const SOURCE_CMS_MEDICARE_PART_D = "cms-medicare-part-d";
+  const SOURCE_CMS_MEDICAID_RX = "cms-medicaid-prescription-drugs";
+  const SOURCE_IRS_PUB_502 = "irs-pub-502-medical-expenses";
+  const SOURCE_ERISA = "erisa-employer-health-plans";
+  const SOURCE_FDA_503A = "fda-503a-compounding";
+
+  // TODO(citations): there is no registered source for our own per-insurer
+  // coverage database (the `insurer.*_coverage` free-text fields). Consider
+  // adding a "wlr-insurer-coverage-index" entry analogous to wlr-pricing-index.
+
+  const sourceIds: string[] = [
+    SOURCE_KFF_EMPLOYER,
+    SOURCE_KFF_MEDICAID,
+    SOURCE_CMS_MEDICARE_PART_D,
+    SOURCE_CMS_MEDICAID_RX,
+    SOURCE_IRS_PUB_502,
+    SOURCE_ERISA,
+    SOURCE_FDA_503A,
+  ];
 
   const faqs = [
     {
@@ -161,6 +197,13 @@ export default async function InsurerPage({
             <div>
               <div className="text-sm text-brand-text-muted uppercase tracking-wide">
                 {insurer.name} GLP-1 Coverage
+                {isMedicare ? (
+                  <Citation source={SOURCE_CMS_MEDICARE_PART_D} n={3} />
+                ) : isMedicaid ? (
+                  <Citation source={SOURCE_KFF_MEDICAID} n={2} />
+                ) : (
+                  <Citation source={SOURCE_KFF_EMPLOYER} n={1} />
+                )}
               </div>
               <div className="text-3xl font-bold text-brand-text-primary mt-1">
                 {badge.label}
@@ -170,6 +213,9 @@ export default async function InsurerPage({
                 {insurer.prior_auth_required
                   ? "Prior auth required"
                   : "No prior auth"}
+                {insurer.prior_auth_required && !isMedicare && !isMedicaid && (
+                  <Citation source={SOURCE_KFF_EMPLOYER} n={1} />
+                )}
               </div>
             </div>
             <div
@@ -251,10 +297,52 @@ export default async function InsurerPage({
           <p className="text-brand-text-secondary leading-relaxed">
             If {insurer.name} denies coverage for Wegovy or Zepbound, you
             still have affordable options. Compounded semaglutide and
-            tirzepatide are dispensed by licensed 503A pharmacies and cost
-            $149-$299/month — a fraction of brand-name pricing. The providers
-            below ship to all 50 states and offer same-week prescriptions.
+            tirzepatide are dispensed by licensed 503A pharmacies
+            <Citation source={SOURCE_FDA_503A} n={7} /> and cost $149-$299/month
+            — a fraction of brand-name pricing. Brand-name GLP-1 medications
+            are generally an HSA/FSA-eligible medical expense with a
+            prescription<Citation source={SOURCE_IRS_PUB_502} n={5} />, and
+            many plan administrators also accept compounded GLP-1s with a
+            Letter of Medical Necessity. The providers below ship to all 50
+            states and offer same-week prescriptions.
           </p>
+          {isMedicare && (
+            <p className="text-sm text-brand-text-secondary leading-relaxed">
+              <strong className="text-brand-text-primary">
+                Medicare statutory note:
+              </strong>{" "}
+              Medicare Part D is statutorily prohibited from covering
+              &ldquo;agents when used for anorexia, weight loss, or weight
+              gain&rdquo; under § 1860D-2(e)(2)(A) of the Social Security Act.
+              This is why Wegovy and Zepbound are not covered for obesity
+              indications, even when they are otherwise on a plan&apos;s
+              formulary for diabetes or cardiovascular indications
+              <Citation source={SOURCE_CMS_MEDICARE_PART_D} n={3} />.
+            </p>
+          )}
+          {isMedicaid && (
+            <p className="text-sm text-brand-text-secondary leading-relaxed">
+              <strong className="text-brand-text-primary">
+                Medicaid varies by state:
+              </strong>{" "}
+              Medicaid anti-obesity drug coverage is set at the state level
+              and varies widely — some states cover Wegovy and Zepbound with
+              prior authorization, while others exclude anti-obesity drugs
+              from the formulary entirely
+              <Citation source={SOURCE_CMS_MEDICAID_RX} n={4} />
+              <Citation source={SOURCE_KFF_MEDICAID} n={2} />.
+            </p>
+          )}
+          {!isMedicare && !isMedicaid && (
+            <p className="text-sm text-brand-text-secondary leading-relaxed">
+              Many large employers offer self-funded health plans governed by
+              ERISA rather than state insurance law, which gives them
+              discretion over whether to cover anti-obesity medications
+              <Citation source={SOURCE_ERISA} n={6} />. If your employer
+              self-funds its plan, check the Summary Plan Description for the
+              specific GLP-1 coverage language.
+            </p>
+          )}
           <div className="rounded-lg bg-brand-surface border border-brand-border p-4">
             <div className="text-sm font-semibold text-brand-text-primary mb-2">
               Appeal first
@@ -304,6 +392,8 @@ export default async function InsurerPage({
           description={`Get notified when ${insurer.name} GLP-1 coverage rules change.`}
           source={`insurer_${insurer.slug}`}
         />
+
+        <SourcesPanel sourceIds={sourceIds} dataAsOf={dataAsOf} />
       </div>
     </main>
   );

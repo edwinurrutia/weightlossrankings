@@ -20,10 +20,13 @@ import StatGrid from "@/components/marketing/StatGrid";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import DYORCallout from "@/components/marketing/DYORCallout";
+import Citation from "@/components/research/Citation";
+import SourcesPanel from "@/components/research/SourcesPanel";
 import {
   WEGOVY_MONTHLY_USD,
   ZEPBOUND_MONTHLY_USD,
 } from "@/lib/citations";
+import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 const GLP1_CATEGORIES = new Set(["GLP-1 Provider", "Weight Loss Program"]);
 
@@ -115,6 +118,30 @@ export default async function CityDrugPage({
   const stateContent = getStateContent(city.state_code);
   const avgPrice = stateContent?.average_compounded_price_monthly ?? 199;
   const annualSavings = (brandPrice - avgPrice) * 12;
+  const dataAsOf = getLatestVerificationDate();
+
+  // Source ids in display order (drives footnote numbering):
+  // 1 = Our pricing index (compounded avg price + providers count)
+  // 2 = CDC BRFSS adult obesity (state context)
+  // 3 = Manufacturer brand price (Novo Wegovy or Lilly Zepbound)
+  // 4 = FDA 503A compounding framework
+  // 5 = KFF Medicaid coverage research
+  const SOURCE_WLR_PRICING = "wlr-pricing-index";
+  const SOURCE_CDC_BRFSS = "cdc-brfss-obesity";
+  const SOURCE_BRAND_PRICING =
+    drugSlug === "semaglutide"
+      ? "novocare-wegovy-cash-price"
+      : "lilly-zepbound-cash-price";
+  const SOURCE_FDA_503A = "fda-503a-compounding";
+  const SOURCE_KFF_MEDICAID = "kff-medicaid-obesity-drug-coverage";
+
+  const sourceIds: string[] = [
+    SOURCE_WLR_PRICING,
+    SOURCE_CDC_BRFSS,
+    SOURCE_BRAND_PRICING,
+    SOURCE_FDA_503A,
+    SOURCE_KFF_MEDICAID,
+  ];
 
   const faqs = [
     {
@@ -209,11 +236,19 @@ export default async function CityDrugPage({
           <p className="text-brand-text-secondary leading-relaxed">
             {city.city} residents have access to both brand-name {drugLabel}{" "}
             ({brandNames}) and compounded {drugLabel} formulations through
-            licensed pharmacies. Brand-name medication is typically priced
-            around ${brandPrice}/month without insurance, while compounded{" "}
-            {drugLabel} from telehealth providers averages around $${avgPrice}
-            /month — a savings of about ${annualSavings.toLocaleString()} per
-            year.
+            licensed 503A compounding pharmacies
+            <Citation source={SOURCE_FDA_503A} n={4} />. Brand-name medication
+            is typically priced around ${brandPrice}/month without insurance
+            <Citation source={SOURCE_BRAND_PRICING} n={3} />, while compounded{" "}
+            {drugLabel} from telehealth providers averages around ${avgPrice}
+            /month in {city.state}
+            <Citation source={SOURCE_WLR_PRICING} n={1} /> — a savings of
+            about ${annualSavings.toLocaleString()} per year. Insurance
+            coverage for anti-obesity GLP-1s in {city.state} varies by plan
+            <Citation source={SOURCE_KFF_MEDICAID} n={5} />, and{" "}
+            {city.state}&apos;s adult obesity rate is approximately{" "}
+            {city.obesity_rate.toFixed(1)}%
+            <Citation source={SOURCE_CDC_BRFSS} n={2} />.
           </p>
         </section>
 
@@ -282,6 +317,8 @@ export default async function CityDrugPage({
           description={`Be the first to know about new ${drugLabel} promos and providers in ${city.city}.`}
           source={`city_${city.slug}_${drugSlug}`}
         />
+
+        <SourcesPanel sourceIds={sourceIds} dataAsOf={dataAsOf} />
       </div>
     </main>
   );
