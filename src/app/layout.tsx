@@ -50,11 +50,20 @@ export const metadata: Metadata = {
       "WeightLossRankings — Compare GLP-1 Providers & Weight Loss Programs",
     description:
       "Independent rankings and reviews of GLP-1 telehealth providers, weight loss programs, and supplements.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "WeightLossRankings — Compare GLP-1 Providers, Prices & Reviews",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "WeightLossRankings",
     description: "Compare GLP-1 providers, prices, and reviews.",
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,

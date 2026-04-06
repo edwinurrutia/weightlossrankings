@@ -80,17 +80,7 @@ export default function DisclosurePage() {
         </p>
 
         <p className="text-sm text-brand-text-secondary/70 pt-4 border-t border-brand-violet/10">
-          This disclosure is provided in accordance with the Federal Trade
-          Commission&apos;s{" "}
-          <a
-            href="https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-violet underline"
-          >
-            Endorsement Guides
-          </a>
-          . Questions? Contact us at{" "}
+          Questions? Contact us at{" "}
           <a
             href="mailto:hello@weightlossrankings.org"
             className="text-brand-violet underline"

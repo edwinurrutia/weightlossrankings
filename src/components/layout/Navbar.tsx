@@ -11,7 +11,6 @@ const navLinks = [
   { label: "Prices", href: "/price-tracker" },
   { label: "Savings Calculator", href: "/savings-calculator" },
   { label: "Insurance Check", href: "/insurance-checker" },
-  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
