@@ -67,12 +67,13 @@ export default function SavingsResults({ state, providers }: SavingsResultsProps
           <h3 className="text-lg font-semibold text-brand-text-primary">
             Top providers for you
           </h3>
-          {providersWithSavings.map(({ provider }) => (
+          {providersWithSavings.map(({ provider }, idx) => (
             <ProviderCard
               key={provider._id}
               provider={provider}
               selectedDose={state.dose}
               trackingSource="savings_results"
+              position={idx + 1}
             />
           ))}
         </div>

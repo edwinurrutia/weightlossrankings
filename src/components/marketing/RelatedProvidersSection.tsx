@@ -28,11 +28,12 @@ export default function RelatedProvidersSection({
         <p className="text-brand-text-secondary text-sm">{description}</p>
       )}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {items.map((p) => (
+        {items.map((p, idx) => (
           <ProviderCard
             key={p._id}
             provider={p}
             trackingSource={trackingSource}
+            position={idx + 1}
           />
         ))}
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -9,31 +10,27 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const contactCards = [
+const CONTACT_EMAIL = "hello@weightlossrankings.org";
+
+const contactCategories = [
   {
     heading: "General inquiries",
     description:
       "Questions about the site, a provider, or anything else we cover.",
-    email: "hello@weightlossrankings.org",
-    subject: "General inquiry",
   },
   {
     heading: "Provider corrections / data updates",
     description:
       "Spotted an out-of-date price, a missing provider, or an inaccurate review?",
-    email: "hello@weightlossrankings.org",
-    subject: "Provider Correction",
   },
   {
     heading: "Press / Media",
     description:
       "Working on a story? We're happy to share data, sources, and commentary.",
-    email: "hello@weightlossrankings.org",
-    subject: "Press",
   },
   {
     heading: "Advertising / Partnerships",
-    description: (
+    descriptionNode: (
       <>
         Interested in working with us? See our{" "}
         <Link href="/advertise" className="text-brand-violet underline">
@@ -42,12 +39,10 @@ const contactCards = [
         page first.
       </>
     ),
-    email: "hello@weightlossrankings.org",
-    subject: "Partnership",
   },
   {
     heading: "Privacy / Data requests",
-    description: (
+    descriptionNode: (
       <>
         CCPA, GDPR, or general privacy questions. See our{" "}
         <Link href="/privacy" className="text-brand-violet underline">
@@ -56,8 +51,6 @@ const contactCards = [
         .
       </>
     ),
-    email: "privacy@weightlossrankings.org",
-    subject: "Privacy Request",
   },
 ] as const;
 
@@ -77,31 +70,31 @@ export default function ContactPage() {
         </h1>
         <p className="text-brand-text-secondary leading-relaxed max-w-3xl">
           We read every message and respond to most within one business day.
-          Please use the address that best fits your question — it helps the
-          right message reach the right inbox faster.
+          Email us directly at{" "}
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="font-semibold text-brand-violet underline"
+          >
+            {CONTACT_EMAIL}
+          </a>{" "}
+          or use the form below.
         </p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 mb-12">
-        {contactCards.map((card) => (
+        {contactCategories.map((card) => (
           <div
             key={card.heading}
-            className="rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand-violet/40 transition"
+            className="rounded-2xl border border-gray-200 bg-white p-6"
           >
-            <h2 className="font-heading text-lg font-bold text-brand-text-primary mb-1">
+            <h2 className="font-heading text-lg font-bold text-brand-text-primary mb-2">
               {card.heading}
             </h2>
-            <p className="text-sm text-brand-text-secondary mb-3 leading-relaxed">
-              {card.description}
+            <p className="text-sm text-brand-text-secondary leading-relaxed">
+              {"descriptionNode" in card
+                ? card.descriptionNode
+                : card.description}
             </p>
-            <a
-              href={`mailto:${card.email}?subject=${encodeURIComponent(
-                card.subject,
-              )}`}
-              className="text-sm font-semibold text-brand-violet underline break-all"
-            >
-              {card.email}
-            </a>
           </div>
         ))}
       </div>
@@ -111,106 +104,24 @@ export default function ContactPage() {
           Send us a message
         </h2>
         <p className="text-sm text-brand-text-secondary mb-6">
-          Prefer a form? Fill this out and your default email client will
-          open with the message pre-filled.
+          Fill this out and we&apos;ll get back to you within one business day.
         </p>
-        <form
-          action="mailto:hello@weightlossrankings.org"
-          method="post"
-          encType="text/plain"
-          className="grid gap-4 sm:grid-cols-2"
-        >
-          <label className="text-sm font-medium text-brand-text-primary">
-            Name
-            <input
-              type="text"
-              name="Name"
-              required
-              className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/20"
-            />
-          </label>
-          <label className="text-sm font-medium text-brand-text-primary">
-            Email
-            <input
-              type="email"
-              name="Email"
-              required
-              className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/20"
-            />
-          </label>
-          <label className="text-sm font-medium text-brand-text-primary sm:col-span-2">
-            Subject
-            <select
-              name="Subject"
-              className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/20"
-              defaultValue="General inquiry"
-            >
-              <option>General inquiry</option>
-              <option>Provider Correction</option>
-              <option>Press</option>
-              <option>Partnership</option>
-              <option>Privacy Request</option>
-              <option>Other</option>
-            </select>
-          </label>
-          <label className="text-sm font-medium text-brand-text-primary sm:col-span-2">
-            Message
-            <textarea
-              name="Message"
-              required
-              rows={6}
-              className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/20"
-            />
-          </label>
-          <div className="sm:col-span-2">
-            <button
-              type="submit"
-              className="inline-flex items-center rounded-xl bg-brand-violet px-6 py-3 text-white font-semibold hover:bg-brand-violet/90 transition"
-            >
-              Open in email client
-            </button>
-            <p className="text-xs text-brand-text-secondary/70 mt-3">
-              If nothing happens when you click, your browser may not have a
-              default email client configured. In that case, email{" "}
-              <a
-                href="mailto:hello@weightlossrankings.org"
-                className="text-brand-violet underline"
-              >
-                hello@weightlossrankings.org
-              </a>{" "}
-              directly.
-            </p>
-          </div>
-        </form>
+        <ContactForm />
       </section>
 
-      <section className="rounded-2xl bg-amber-50 border border-amber-200 p-6 sm:p-8 mb-12">
-        <h2 className="font-heading text-xl font-bold text-brand-text-primary mb-2">
+      <section className="rounded-2xl border-l-2 border-brand-violet/40 pl-5 py-3">
+        <h2 className="font-heading text-base font-bold text-brand-text-primary mb-2">
           What we can&apos;t do
         </h2>
         <p className="text-sm text-brand-text-secondary leading-relaxed">
           WeightLossRankings is an independent publisher, not a medical
           provider. We cannot provide medical advice, review your symptoms,
           prescribe medications, fill prescriptions, or help with insurance
-          disputes. For medical questions please contact a licensed
-          healthcare provider. For issues with a specific telehealth
-          company, please contact that company&apos;s support team directly
-          — we cannot intervene on your behalf.
+          disputes. For medical questions please contact a licensed healthcare
+          provider. For issues with a specific telehealth company, please
+          contact that company&apos;s support team directly — we cannot
+          intervene on your behalf.
         </p>
-      </section>
-
-      <section>
-        <h2 className="font-heading text-base font-semibold text-brand-text-primary mb-2">
-          Mailing address
-        </h2>
-        <address className="not-italic rounded-2xl bg-brand-violet/5 border border-brand-violet/10 p-5 text-sm text-brand-text-secondary">
-          <strong className="text-brand-text-primary">WeightLossRankings.org</strong><br />
-          131 Continental Dr, Suite 305<br />
-          Newark, DE 19713<br />
-          United States
-          <br /><br />
-          <span className="text-xs text-brand-text-secondary/70">Email is the fastest way to reach us — we typically reply within 1 business day.</span>
-        </address>
       </section>
     </div>
   );

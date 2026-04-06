@@ -1,56 +1,106 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { getFeaturedProviders, getAllBlogPosts } from "@/lib/data";
+import {
+  getFeaturedProviders,
+  getAllBlogPosts,
+  getAllProviders,
+} from "@/lib/data";
 import type { Provider, BlogPost } from "@/lib/types";
+import { computeOverallScore } from "@/lib/scoring";
+import { US_STATES } from "@/lib/states";
 import CTAButton from "@/components/shared/CTAButton";
 import EmailCapture from "@/components/shared/EmailCapture";
 import BlogCard from "@/components/blog/BlogCard";
 import GradientCTACallout from "@/components/marketing/GradientCTACallout";
-import RelatedProvidersSection from "@/components/marketing/RelatedProvidersSection";
+import TrustMarquee from "@/components/marketing/TrustMarquee";
+import HomeSavingsHeadline from "@/components/marketing/HomeSavingsHeadline";
+import HomeHeroProviders from "@/components/marketing/HomeHeroProviders";
+import HomeQuickMatch, {
+  type QuickMatchProvider,
+} from "@/components/marketing/HomeQuickMatch";
+
+// Brand-name Wegovy retail used as the savings comparison baseline. List
+// price published by Novo Nordisk; revisit if it changes materially.
+const WEGOVY_BRAND_MONTHLY = 1349;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-// Category cards with soft pastel backgrounds — each tile has a distinct
-// identity while keeping them visually cohesive in the same saturation range.
+// Editorial category cards — no images, just type. Each card uses the same
+// white background with a subtle violet accent so they read as one set.
 const categories = [
   {
     label: "GLP-1 Providers",
     slug: "semaglutide-providers",
-    bgColor: "#ddd6fe", // light violet
-    image:
-      "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&q=80&auto=format&fit=crop",
+    description: "Telehealth Rx for semaglutide & tirzepatide",
   },
   {
     label: "Weight Loss Programs",
     slug: "weight-loss-programs",
-    bgColor: "#fce7f3", // light pink
-    image:
-      "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?w=800&q=80&auto=format&fit=crop",
+    description: "Coaching, apps, and structured plans",
   },
   {
     label: "Supplements",
     slug: "weight-loss-supplements",
-    bgColor: "#fef3c7", // light cream
-    image:
-      "https://images.unsplash.com/photo-1576086265779-619d2f54d96b?w=800&q=80&auto=format&fit=crop",
+    description: "Over-the-counter weight loss aids",
   },
   {
     label: "Meal Delivery",
     slug: "meal-delivery-for-weight-loss",
-    bgColor: "#dcfce7", // light mint
-    image:
-      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80&auto=format&fit=crop",
+    description: "Calorie-controlled prepared meals",
   },
 ];
 
 export default async function HomePage() {
-  const [featured, posts] = await Promise.all([
+  const [featured, posts, allProviders] = await Promise.all([
     getFeaturedProviders().catch(() => [] as Provider[]),
     getAllBlogPosts(3).catch(() => [] as BlogPost[]),
+    getAllProviders().catch(() => [] as Provider[]),
   ]);
+
+  // Round provider count down to nearest 5 so the displayed number doesn't
+  // jitter every time we add a single provider — and so it never overstates.
+  const providerCount = Math.max(5, Math.floor(allProviders.length / 5) * 5);
+  const providerCountLabel = `${providerCount}+`;
+
+  // Cheapest compounded semaglutide across the dataset — drives the savings
+  // headline. If we have no semaglutide data at all, fall back to a sane
+  // default so the section still renders.
+  const semaCompoundedPrices = allProviders.flatMap((p) =>
+    (p.pricing || [])
+      .filter((pr) => pr.drug === "semaglutide" && pr.form === "compounded")
+      .map((pr) => pr.promo_price ?? pr.monthly_cost),
+  );
+  const cheapestCompoundedMonthly =
+    semaCompoundedPrices.length > 0
+      ? Math.min(...semaCompoundedPrices)
+      : 99;
+
+  // States covered = unique union of every provider's states_available.
+  const statesCoveredSet = new Set<string>();
+  for (const p of allProviders) {
+    for (const s of p.states_available || []) statesCoveredSet.add(s);
+  }
+  const statesCovered = statesCoveredSet.size || 50;
+
+  // Slim provider projection for the QuickMatch client widget. Only the
+  // fields the matcher and result card need — keeps the client bundle
+  // small and avoids shipping review bodies.
+  const quickMatchProviders: QuickMatchProvider[] = allProviders
+    .filter((p) => p.pricing && p.pricing.length > 0)
+    .map((p) => ({
+      name: p.name,
+      slug: p.slug,
+      affiliate_url: p.affiliate_url,
+      best_for: p.best_for,
+      states_available: p.states_available || [],
+      scoreOverall: computeOverallScore(p.scores),
+      prices: p.pricing.map((pr) => ({
+        form: pr.form,
+        monthly: pr.promo_price ?? pr.monthly_cost,
+      })),
+    }));
 
   return (
     <main className="min-h-screen bg-white">
@@ -119,109 +169,55 @@ export default async function HomePage() {
         </div>
 
         {/* Category cards — overhang the hero bottom */}
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24 pb-12">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 pb-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {categories.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/best/${cat.slug}`}
-                className="group rounded-2xl bg-white border border-brand-violet/10 shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all"
+                className="group rounded-2xl bg-white border border-brand-violet/10 shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 hover:border-brand-violet/30 transition-all flex flex-col justify-between min-h-[160px]"
               >
-                {/* Pastel image tile */}
-                <div
-                  className="aspect-[4/3] relative"
-                  style={{ background: cat.bgColor }}
-                >
-                  <Image
-                    src={cat.image}
-                    alt={cat.label}
-                    fill
-                    className="object-cover mix-blend-multiply opacity-95"
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                  />
-                </div>
-                {/* Label */}
-                <div className="p-4 sm:p-5 flex items-center justify-between">
-                  <span className="font-heading font-bold text-brand-text-primary text-sm sm:text-base">
+                <div>
+                  <span className="font-heading font-bold text-brand-text-primary text-base sm:text-lg leading-tight block">
                     {cat.label}
                   </span>
-                  <span className="text-brand-violet text-xl group-hover:translate-x-1 transition-transform">
-                    →
-                  </span>
+                  <p className="mt-2 text-xs text-brand-text-secondary leading-relaxed">
+                    {cat.description}
+                  </p>
                 </div>
+                <span className="mt-4 text-brand-violet text-sm font-semibold inline-flex items-center gap-1">
+                  Browse
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Trust strip ── */}
-      <div className="border-y border-brand-violet/10 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs uppercase tracking-[0.15em] text-brand-text-secondary font-semibold">
-          <span>Licensed Editorial</span>
-          <span aria-hidden>·</span>
-          <span>80+ Providers Tracked</span>
-          <span aria-hidden>·</span>
-          <span>Updated Monthly</span>
-          <span aria-hidden>·</span>
-          <span>Independent Reviews</span>
-          <span aria-hidden>·</span>
-          <span>Evidence-Based</span>
-        </div>
-      </div>
+      {/* ── Trust strip — scrolling marquee with icons ── */}
+      <TrustMarquee providerCountLabel={providerCountLabel} />
 
-      {/* ── Stat bar (moved below trust strip) ── */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <dl className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-4">
-          <div className="text-center sm:text-left">
-            <dt className="sr-only">Providers tracked</dt>
-            <dd className="font-heading text-3xl sm:text-4xl font-bold text-brand-violet leading-none tracking-tight">
-              80+
-            </dd>
-            <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
-              Providers tracked
-            </p>
-          </div>
-          <div className="text-center sm:text-left">
-            <dt className="sr-only">States covered</dt>
-            <dd className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary leading-none tracking-tight">
-              50
-            </dd>
-            <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
-              States covered
-            </p>
-          </div>
-          <div className="text-center sm:text-left">
-            <dt className="sr-only">Drug &amp; provider guides</dt>
-            <dd className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary leading-none tracking-tight">
-              15
-            </dd>
-            <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
-              In-depth guides
-            </p>
-          </div>
-          <div className="text-center sm:text-left">
-            <dt className="sr-only">Editorial independence</dt>
-            <dd className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary leading-none tracking-tight">
-              100%
-            </dd>
-            <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
-              Independent editorial
-            </p>
-          </div>
-        </dl>
-      </section>
+      {/* ── Money headline (replaces the boring stat bar) ── */}
+      <HomeSavingsHeadline
+        cheapestCompoundedMonthly={cheapestCompoundedMonthly}
+        brandMonthly={WEGOVY_BRAND_MONTHLY}
+        providerCountLabel={providerCountLabel}
+        statesCovered={statesCovered}
+      />
 
-      {/* ── Top Rated Providers ── */}
+      {/* ── Quick Match — 3-question wizard that surfaces a top match ── */}
+      <HomeQuickMatch
+        providers={quickMatchProviders}
+        states={US_STATES.map((s) => ({ code: s.code, name: s.name }))}
+      />
+
+      {/* ── Top Rated — Editor's Pick + 2 runners-up ── */}
       {featured.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-          <RelatedProvidersSection
-            title="Top Rated Providers"
-            providers={featured}
-            trackingSource="homepage_top_rated"
-            limit={3}
-          />
-        </section>
+        <HomeHeroProviders
+          providers={featured}
+          trackingSource="homepage_top_rated"
+        />
       )}
 
       {/* ── Tools Banner ── */}

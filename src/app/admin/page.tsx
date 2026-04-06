@@ -3,6 +3,7 @@ import {
   getProviderClicks,
   getAllSourceClicks,
   getDailyClicks,
+  getAllPositionClicks,
   type DailyClickEntry,
 } from "@/lib/kv";
 import { getCurrentAdminUser } from "@/lib/admin-users";
@@ -75,11 +76,30 @@ export default async function AdminDashboardPage() {
     );
   }
 
-  const [providerClicks, sourceClicks, daily30] = await Promise.all([
-    getProviderClicks(),
-    getAllSourceClicks(),
-    getDailyClicks(30),
-  ]);
+  const [providerClicks, sourceClicks, daily30, positionClicks] =
+    await Promise.all([
+      getProviderClicks(),
+      getAllSourceClicks(),
+      getDailyClicks(30),
+      getAllPositionClicks(),
+    ]);
+
+  // Flatten the position breakdown into a sorted, renderable shape:
+  // [{ source, total, byPosition: [{position, count, share}] }]
+  const positionRows = Object.entries(positionClicks)
+    .map(([source, byPos]) => {
+      const total = Object.values(byPos).reduce((a, b) => a + Number(b), 0);
+      const byPosition = Object.entries(byPos)
+        .map(([pos, count]) => ({
+          position: Number(pos),
+          count: Number(count),
+          share: total > 0 ? (Number(count) / total) * 100 : 0,
+        }))
+        .sort((a, b) => a.position - b.position);
+      return { source, total, byPosition };
+    })
+    .filter((r) => r.total > 0)
+    .sort((a, b) => b.total - a.total);
 
   const totalClicks = Object.values(providerClicks).reduce(
     (a, b) => a + b,
@@ -313,6 +333,61 @@ export default async function AdminDashboardPage() {
                 )}
               </tbody>
             </table>
+          </div>
+        </section>
+
+        {/* Clicks by Position — granular attribution */}
+        <section className="rounded-2xl bg-white border border-brand-violet/10 shadow-sm overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-100">
+            <h2 className="font-heading text-lg font-bold text-brand-text-primary">
+              Clicks by Position
+            </h2>
+            <p className="text-xs text-brand-text-secondary mt-1">
+              Which slot in each list converts best — useful for deciding
+              which provider deserves the #1 spot.
+            </p>
+          </div>
+          <div className="overflow-x-auto">
+            {positionRows.length === 0 ? (
+              <p className="py-8 text-center text-brand-text-secondary text-sm">
+                No position data yet. Click some CTAs in lists/cards to seed
+                the breakdown.
+              </p>
+            ) : (
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-100 bg-gray-50 text-brand-text-secondary text-xs uppercase tracking-wide">
+                    <th className="py-3 px-5 text-left">Source</th>
+                    <th className="py-3 px-5 text-right">Position</th>
+                    <th className="py-3 px-5 text-right">Clicks</th>
+                    <th className="py-3 px-5 text-right">% of Source</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {positionRows.flatMap((row) =>
+                    row.byPosition.map((bp, i) => (
+                      <tr
+                        key={`${row.source}-${bp.position}`}
+                        className="hover:bg-gray-50 transition-colors"
+                      >
+                        <td className="py-3 px-5 font-medium text-brand-text-primary">
+                          {i === 0 ? row.source : ""}
+                        </td>
+                        <td className="py-3 px-5 text-right font-mono text-brand-text-secondary">
+                          #{bp.position}
+                        </td>
+                        <td className="py-3 px-5 text-right font-bold text-brand-text-primary">
+                          {formatNumber(bp.count)}
+                        </td>
+                        <td className="py-3 px-5 text-right text-brand-text-secondary">
+                          {bp.share.toFixed(1)}%
+                        </td>
+                      </tr>
+                    )),
+                  )}
+                </tbody>
+              </table>
+            )}
           </div>
         </section>
       </div>

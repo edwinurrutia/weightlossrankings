@@ -1,0 +1,170 @@
+"use client";
+
+import { useState } from "react";
+
+type Status =
+  | { kind: "idle" }
+  | { kind: "submitting" }
+  | { kind: "success" }
+  | { kind: "error"; message: string };
+
+const SUBJECTS = [
+  "General inquiry",
+  "Provider Correction",
+  "Press",
+  "Partnership",
+  "Privacy Request",
+  "Other",
+] as const;
+
+export default function ContactForm() {
+  const [status, setStatus] = useState<Status>({ kind: "idle" });
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus({ kind: "submitting" });
+
+    const formData = new FormData(e.currentTarget);
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
+      // honeypot — real users leave this empty
+      company: formData.get("company"),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setStatus({
+          kind: "error",
+          message: data?.error || "Something went wrong. Please try again.",
+        });
+        return;
+      }
+      setStatus({ kind: "success" });
+      e.currentTarget.reset();
+    } catch {
+      setStatus({
+        kind: "error",
+        message: "Network error. Please try again.",
+      });
+    }
+  }
+
+  if (status.kind === "success") {
+    return (
+      <div className="rounded-2xl border border-brand-violet/20 bg-brand-violet/5 p-8 text-center">
+        <h3 className="font-heading text-xl font-bold text-brand-text-primary mb-2">
+          Thanks — we got your message.
+        </h3>
+        <p className="text-sm text-brand-text-secondary">
+          We typically reply within one business day.
+        </p>
+        <button
+          type="button"
+          onClick={() => setStatus({ kind: "idle" })}
+          className="mt-5 text-sm font-semibold text-brand-violet hover:underline"
+        >
+          Send another message
+        </button>
+      </div>
+    );
+  }
+
+  const submitting = status.kind === "submitting";
+
+  return (
+    <form onSubmit={handleSubmit} className="grid gap-4 sm:grid-cols-2">
+      <label className="text-sm font-medium text-brand-text-primary">
+        Name
+        <input
+          type="text"
+          name="name"
+          required
+          maxLength={200}
+          disabled={submitting}
+          className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/20 disabled:opacity-60"
+        />
+      </label>
+      <label className="text-sm font-medium text-brand-text-primary">
+        Email
+        <input
+          type="email"
+          name="email"
+          required
+          maxLength={320}
+          disabled={submitting}
+          className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/20 disabled:opacity-60"
+        />
+      </label>
+      <label className="text-sm font-medium text-brand-text-primary sm:col-span-2">
+        Subject
+        <select
+          name="subject"
+          defaultValue="General inquiry"
+          disabled={submitting}
+          className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/20 disabled:opacity-60"
+        >
+          {SUBJECTS.map((s) => (
+            <option key={s}>{s}</option>
+          ))}
+        </select>
+      </label>
+      <label className="text-sm font-medium text-brand-text-primary sm:col-span-2">
+        Message
+        <textarea
+          name="message"
+          required
+          rows={6}
+          minLength={5}
+          maxLength={5000}
+          disabled={submitting}
+          className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/20 disabled:opacity-60"
+        />
+      </label>
+
+      {/* Honeypot — visually hidden, off-screen, not announced. Real users
+          never touch this; bots fill every input they see. */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          left: "-10000px",
+          width: "1px",
+          height: "1px",
+          overflow: "hidden",
+        }}
+      >
+        <label>
+          Company (leave blank)
+          <input
+            type="text"
+            name="company"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </label>
+      </div>
+
+      <div className="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
+        <button
+          type="submit"
+          disabled={submitting}
+          className="inline-flex items-center justify-center rounded-xl bg-brand-violet px-6 py-3 text-white font-semibold hover:bg-brand-violet/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+        >
+          {submitting ? "Sending..." : "Send message"}
+        </button>
+        {status.kind === "error" && (
+          <p className="text-sm text-red-600">{status.message}</p>
+        )}
+      </div>
+    </form>
+  );
+}

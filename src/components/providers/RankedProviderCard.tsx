@@ -157,6 +157,7 @@ export default function RankedProviderCard({
           size="md"
           trackProvider={provider.slug}
           trackSource={trackingSource}
+          trackPosition={rank}
         >
           Visit {provider.name} →
         </CTAButton>

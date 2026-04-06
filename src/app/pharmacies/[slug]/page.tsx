@@ -436,11 +436,12 @@ export default async function PharmacyDetailPage({
               arrangements can change over time.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {linkedProviders.map((p) => (
+              {linkedProviders.map((p, idx) => (
                 <ProviderCard
                   key={p._id}
                   provider={p}
                   trackingSource={`pharmacy_${pharmacy.slug}`}
+                  position={idx + 1}
                 />
               ))}
             </div>

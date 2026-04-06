@@ -14,6 +14,10 @@ interface CTAButtonProps {
   className?: string;
   trackProvider?: string;
   trackSource?: string;
+  /** 1-indexed position in the list/section this CTA appears in. Used by
+   *  granular click attribution to compare slot performance. Omit for
+   *  single CTAs that aren't part of an ordered list. */
+  trackPosition?: number;
 }
 
 const sizeClasses: Record<CTAButtonSize, string> = {
@@ -31,10 +35,18 @@ const variantClasses: Record<CTAButtonVariant, string> = {
     "bg-white text-brand-violet shadow-lg hover:shadow-xl hover:bg-white/90",
 };
 
-function fireTracking(provider: string, source: string) {
+function fireTracking(
+  provider: string,
+  source: string,
+  position?: number
+) {
   if (typeof window === "undefined") return;
   try {
-    const payload = JSON.stringify({ provider, source });
+    const payload = JSON.stringify({
+      provider,
+      source,
+      ...(typeof position === "number" ? { position } : {}),
+    });
     const url = "/api/track-click";
     // Prefer sendBeacon — most reliable for link navigations
     if (
@@ -66,6 +78,7 @@ export default function CTAButton({
   className = "",
   trackProvider,
   trackSource,
+  trackPosition,
 }: CTAButtonProps) {
   const base =
     "inline-flex items-center justify-center rounded-full font-semibold transition-all tap-target";
@@ -76,7 +89,11 @@ export default function CTAButton({
 
   const handleClick = () => {
     if (!shouldTrack) return;
-    fireTracking(trackProvider as string, trackSource ?? "unknown");
+    fireTracking(
+      trackProvider as string,
+      trackSource ?? "unknown",
+      trackPosition
+    );
   };
 
   if (external) {

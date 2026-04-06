@@ -9,12 +9,15 @@ interface ProviderCardProps {
   provider: Provider;
   selectedDose?: string;
   trackingSource?: string;
+  /** 1-indexed position in the surrounding list. Used for click attribution. */
+  position?: number;
 }
 
 export default function ProviderCard({
   provider,
   selectedDose,
   trackingSource = "unknown",
+  position,
 }: ProviderCardProps) {
   const {
     name,
@@ -94,6 +97,7 @@ export default function ProviderCard({
         className="w-full mt-auto"
         trackProvider={slug}
         trackSource={trackingSource}
+        trackPosition={position}
       >
         Get Started
       </CTAButton>

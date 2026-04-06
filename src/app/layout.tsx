@@ -21,8 +21,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: {
     default:
-      "WeightLossRankings | Compare GLP-1 Providers, Prices & Reviews 2026",
-    template: "%s | WeightLossRankings",
+      "Weight Loss Rankings | Compare GLP-1 Providers, Prices & Reviews 2026",
+    template: "%s | Weight Loss Rankings",
   },
   description:
     "Independent rankings and reviews of GLP-1 telehealth providers, weight loss programs, and supplements. Compare prices, read expert reviews, find the best option.",
@@ -38,14 +38,14 @@ export const metadata: Metadata = {
     "wegovy alternatives",
     "telehealth weight loss",
   ],
-  authors: [{ name: "WeightLossRankings" }],
+  authors: [{ name: "Weight Loss Rankings" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://weightlossrankings.org",
-    siteName: "WeightLossRankings",
+    siteName: "Weight Loss Rankings",
     title:
-      "WeightLossRankings | Compare GLP-1 Providers, Prices & Reviews 2026",
+      "Weight Loss Rankings | Compare GLP-1 Providers, Prices & Reviews 2026",
     description:
       "Independent rankings and reviews of GLP-1 telehealth providers, weight loss programs, and supplements.",
     images: [
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "WeightLossRankings — Compare GLP-1 Providers, Prices & Reviews",
+        alt: "Weight Loss Rankings — Compare GLP-1 Providers, Prices & Reviews",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WeightLossRankings",
+    title: "Weight Loss Rankings",
     description: "Compare GLP-1 providers, prices, and reviews.",
     images: ["/opengraph-image"],
   },
@@ -83,7 +83,7 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "WeightLossRankings",
+    "name": "Weight Loss Rankings",
     "url": "https://weightlossrankings.org",
     "logo": "https://weightlossrankings.org/icon.svg",
     "description": "Independent rankings and reviews of GLP-1 providers, weight loss programs, and related services.",
@@ -93,7 +93,7 @@ export default function RootLayout({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "WeightLossRankings",
+    "name": "Weight Loss Rankings",
     "url": "https://weightlossrankings.org",
   };
 

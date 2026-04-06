@@ -373,11 +373,12 @@ export default function DoseTimelinePage() {
               Alternative Providers
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {alternativeProviders.map((provider) => (
+              {alternativeProviders.map((provider, idx) => (
                 <ProviderCard
                   key={provider._id}
                   provider={provider}
                   trackingSource="dose_timeline"
+                  position={idx + 1}
                 />
               ))}
             </div>

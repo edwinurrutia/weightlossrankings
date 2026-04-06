@@ -82,11 +82,12 @@ export default function CoverageResults({ state, providers }: CoverageResultsPro
               These providers offer compounded semaglutide and tirzepatide at a fraction of the brand-name cost.
             </p>
           </div>
-          {topProviders.map((provider) => (
+          {topProviders.map((provider, idx) => (
             <ProviderCard
               key={provider._id}
               provider={provider}
               trackingSource="insurance_results"
+              position={idx + 1}
             />
           ))}
         </div>

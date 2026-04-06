@@ -29,3 +29,31 @@
     transform: translateY(0) scale(1);
   }
 }
+
+/* Trust strip horizontal marquee — translates -50% because the items are
+   rendered twice back-to-back, so -50% lands on the start of the second copy
+   and the loop is seamless. */
+@keyframes wlr-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.wlr-marquee-track {
+  animation: wlr-marquee 40s linear infinite;
+  width: max-content;
+}
+
+.wlr-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wlr-marquee-track {
+    animation: none;
+    width: 100%;
+  }
+}

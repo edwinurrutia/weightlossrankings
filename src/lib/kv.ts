@@ -22,18 +22,26 @@ function dayKey(offsetDays: number): string {
 
 /**
  * Increment click counters for a provider click.
- * - clicks:provider:{provider}         → total per provider
- * - clicks:source:{provider}:{source}  → per source within a provider
- * - clicks:by_day:{YYYY-MM-DD}         → hash of provider → count
+ * - clicks:provider:{provider}                      → total per provider
+ * - clicks:source:{provider}:{source}               → per source within a provider
+ * - clicks:by_day:{YYYY-MM-DD}                      → hash of provider → count
+ * - clicks:position:{source}:{position}             → per (source, position) across all providers
+ * - clicks:position:{provider}:{source}:{position}  → per (provider, source, position)
+ *
+ * `position` is the 1-indexed slot the link occupied in its list/section
+ * (e.g. position 1 = first card in "Top Rated", position 3 = third row of
+ * the comparison table). Pass `null` for one-off CTAs that aren't part of
+ * an ordered list.
  */
 export async function incrementClick(
   provider: string,
-  source: string
+  source: string,
+  position?: number | null
 ): Promise<void> {
   if (!isKvConfigured()) return;
   try {
     const day = todayKey();
-    await Promise.all([
+    const ops: Promise<unknown>[] = [
       kv.incr(`clicks:provider:${provider}`),
       kv.incr(`clicks:source:${provider}:${source}`),
       kv.hincrby(`clicks:by_day:${day}`, provider, 1),
@@ -41,10 +49,68 @@ export async function incrementClick(
       kv.sadd("clicks:providers", provider),
       kv.sadd(`clicks:sources:${provider}`, source),
       kv.sadd("clicks:all_sources", source),
-    ]);
+    ];
+
+    if (typeof position === "number" && position > 0 && position <= 100) {
+      const pos = Math.floor(position);
+      ops.push(
+        kv.hincrby(`clicks:positions:${source}`, String(pos), 1),
+        kv.hincrby(`clicks:positions:${provider}:${source}`, String(pos), 1),
+        kv.sadd("clicks:position_sources", source)
+      );
+    }
+
+    await Promise.all(ops);
   } catch (err) {
     // Swallow errors — tracking must never break UX
     console.error("[kv] incrementClick error", err);
+  }
+}
+
+/**
+ * Returns position breakdown for a given source — `{ "1": 23, "2": 11, ... }`
+ * representing how many clicks each slot in the list received.
+ */
+export async function getPositionClicksForSource(
+  source: string
+): Promise<Record<string, number>> {
+  if (!isKvConfigured()) return {};
+  try {
+    const hash =
+      (await kv.hgetall<Record<string, number>>(
+        `clicks:positions:${source}`
+      )) ?? {};
+    const out: Record<string, number> = {};
+    for (const [k, v] of Object.entries(hash)) {
+      out[k] = Number(v ?? 0);
+    }
+    return out;
+  } catch (err) {
+    console.error("[kv] getPositionClicksForSource error", err);
+    return {};
+  }
+}
+
+/**
+ * Returns the full position breakdown for every source that has position
+ * data — `{ source: { "1": n, "2": n, ... } }`. Used by the admin
+ * dashboard to render the "Clicks by Position" table.
+ */
+export async function getAllPositionClicks(): Promise<
+  Record<string, Record<string, number>>
+> {
+  if (!isKvConfigured()) return {};
+  try {
+    const sources =
+      ((await kv.smembers("clicks:position_sources")) as string[]) ?? [];
+    const out: Record<string, Record<string, number>> = {};
+    for (const s of sources) {
+      out[s] = await getPositionClicksForSource(s);
+    }
+    return out;
+  } catch (err) {
+    console.error("[kv] getAllPositionClicks error", err);
+    return {};
   }
 }
 
