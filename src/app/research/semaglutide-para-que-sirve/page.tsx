@@ -264,8 +264,9 @@ export default function SemaglutideParaQueSirveArticle() {
         enfermedad de la vesícula biliar (incluyendo cálculos biliares),
         insuficiencia renal aguda (generalmente asociada con
         deshidratación por vómitos o diarrea), retinopatía diabética
-        (en personas con diabetes tipo 2), reacciones alérgicas graves y
-        cambios en el estado de ánimo. Cualquier dolor abdominal
+        (en personas con diabetes tipo 2), hipoglucemia (sobre todo
+        cuando la semaglutida se combina con insulina o sulfonilureas),
+        reacciones alérgicas graves y cambios en el estado de ánimo. Cualquier dolor abdominal
         persistente o intenso, signos de reacción alérgica o cambios
         inesperados en el estado de ánimo deben ser evaluados de inmediato
         por un médico.
@@ -310,6 +311,10 @@ export default function SemaglutideParaQueSirveArticle() {
         <li>Retinopatía diabética (en diabetes tipo 2).</li>
         <li>
           Trastornos gastrointestinales graves como gastroparesia.
+        </li>
+        <li>
+          Uso concomitante de insulina o sulfonilureas, ya que puede
+          aumentar el riesgo de hipoglucemia.
         </li>
         <li>
           Embarazo, planes de embarazo o lactancia. La semaglutida{" "}
@@ -359,7 +364,7 @@ export default function SemaglutideParaQueSirveArticle() {
 
       <p>
         La semaglutida forma parte de una clase más amplia de medicamentos
-        incretina-miméticos. Otros fármacos relacionados que pueden ser
+        llamados miméticos de incretinas. Otros fármacos relacionados que pueden ser
         relevantes incluyen:
       </p>
 

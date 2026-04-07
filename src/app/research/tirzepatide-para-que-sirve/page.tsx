@@ -360,7 +360,7 @@ export default function TirzepatideParaQueSirveArticle() {
 
       <p>
         La tirzepatida es parte de la familia más amplia de los
-        medicamentos incretina-miméticos. Otros fármacos relacionados
+        medicamentos miméticos de incretinas. Otros fármacos relacionados
         incluyen:
       </p>
 
