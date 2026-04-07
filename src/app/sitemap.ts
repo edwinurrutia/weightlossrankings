@@ -107,6 +107,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85, // 10-path cost comparison
     },
     {
+      url: `${BASE_URL}/tools/glp1-washout-calculator`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/tools/glp1-drug-interaction-checker`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
       url: `${BASE_URL}/tools/insurance-employer-checker`,
       lastModified: now,
       changeFrequency: "weekly" as const,

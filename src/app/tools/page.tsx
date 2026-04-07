@@ -45,6 +45,20 @@ const TOOLS = [
     tag: "Pharmacokinetics",
   },
   {
+    slug: "glp1-washout-calculator",
+    title: "GLP-1 Washout Calculator",
+    description:
+      "How long does semaglutide / tirzepatide / orforglipron stay in your system after your last dose? See exactly when you reach 50%, 25%, 5%, 1% remaining — built on FDA-label half-lives. Includes clinical scenarios for switching, surgery hold, pregnancy planning, and trial enrollment.",
+    tag: "Pharmacokinetics",
+  },
+  {
+    slug: "glp1-drug-interaction-checker",
+    title: "GLP-1 Drug Interaction Checker",
+    description:
+      "Search any medication to see how it interacts with Wegovy, Ozempic, Zepbound, Mounjaro, or Foundayo. Severity-tiered results — contraindicated, serious, moderate, minor — with FDA prescribing-information citations and what-to-do guidance.",
+    tag: "Drug interactions",
+  },
+  {
     slug: "insurance-employer-checker",
     title: "Insurance Employer Checker",
     description:
