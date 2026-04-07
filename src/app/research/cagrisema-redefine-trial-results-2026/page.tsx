@@ -387,7 +387,7 @@ export default function CagrisemaArticle() {
           <tr>
             <td>Foundayo (orforglipron)</td>
             <td>Oral small-molecule GLP-1</td>
-            <td>−12.4% (ATTAIN-1)</td>
+            <td>−11.1% (Foundayo PI, 17.2 mg)</td>
             <td>Approved Apr 2026</td>
           </tr>
           <tr>

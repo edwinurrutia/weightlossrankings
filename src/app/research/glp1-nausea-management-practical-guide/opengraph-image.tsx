@@ -1,16 +1,15 @@
 import { ImageResponse } from "next/og";
 import { getResearchArticleBySlug } from "@/lib/research";
 
-const SLUG = "foundayo-orforglipron-fda-approval-2026";
+const SLUG = "glp1-nausea-management-practical-guide";
 
 export const alt =
-  "Weight Loss Rankings — Foundayo (orforglipron): the first oral GLP-1 pill for weight loss";
+  "Weight Loss Rankings — GLP-1 nausea: STEP-1 and SURMOUNT-1 trial rates and management";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
   void getResearchArticleBySlug(SLUG);
-
   return new ImageResponse(
     (
       <div
@@ -18,7 +17,7 @@ export default async function Image() {
           width: "100%",
           height: "100%",
           background:
-            "linear-gradient(135deg, #7c2d12 0%, #c2410c 50%, #f97316 100%)",
+            "linear-gradient(135deg, #1e1b4b 0%, #4338ca 50%, #6366f1 100%)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -33,7 +32,7 @@ export default async function Image() {
               display: "flex",
               width: 18,
               height: 56,
-              background: "#fbbf24",
+              background: "#8b5cf6",
               borderRadius: 4,
             }}
           />
@@ -59,7 +58,7 @@ export default async function Image() {
               letterSpacing: 2,
             }}
           >
-            Foundayo · orforglipron · FDA approved Apr 2026
+            STEP-1 + SURMOUNT-1 trial rates
           </div>
           <div
             style={{
@@ -70,7 +69,7 @@ export default async function Image() {
               maxWidth: 1080,
             }}
           >
-            The first once-daily oral GLP-1 pill for weight loss
+            GLP-1 nausea: the practical management guide
           </div>
           <div
             style={{
@@ -90,7 +89,7 @@ export default async function Image() {
                 lineHeight: 1,
               }}
             >
-              −11.1%
+              44%
             </div>
             <div
               style={{
@@ -102,7 +101,7 @@ export default async function Image() {
                 maxWidth: 700,
               }}
             >
-              body weight at 72 weeks (ATTAIN-1, highest dose)
+              nausea on Wegovy in STEP-1 (33% on Zepbound in SURMOUNT-1)
             </div>
           </div>
         </div>
@@ -115,7 +114,9 @@ export default async function Image() {
           }}
         >
           <div style={{ display: "flex" }}>weightlossrankings.org</div>
-          <div style={{ display: "flex" }}>$25-$149/month · LillyDirect</div>
+          <div style={{ display: "flex" }}>
+            Titration · meals · hydration · antiemetics · red flags
+          </div>
         </div>
       </div>
     ),

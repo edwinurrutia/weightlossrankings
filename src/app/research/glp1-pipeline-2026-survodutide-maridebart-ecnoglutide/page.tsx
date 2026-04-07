@@ -451,7 +451,7 @@ export default function GlpPipelineArticle() {
 
       <p>
         For comparison with the approved and near-approved drugs:
-        Wegovy −14.9%, Zepbound −20.9%, Foundayo −12.4%, CagriSema
+        Wegovy −14.9%, Zepbound −20.9%, Foundayo −11.1% (17.2 mg labeled max), CagriSema
         −22.7%, and retatrutide phase 3 readout −28.7% at the
         highest dose. The pipeline drugs in this article are
         clustering in the same effect-size band as the approved

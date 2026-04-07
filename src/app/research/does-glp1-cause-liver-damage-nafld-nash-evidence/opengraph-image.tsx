@@ -1,16 +1,15 @@
 import { ImageResponse } from "next/og";
 import { getResearchArticleBySlug } from "@/lib/research";
 
-const SLUG = "foundayo-orforglipron-fda-approval-2026";
+const SLUG = "does-glp1-cause-liver-damage-nafld-nash-evidence";
 
 export const alt =
-  "Weight Loss Rankings — Foundayo (orforglipron): the first oral GLP-1 pill for weight loss";
+  "Weight Loss Rankings — Does a GLP-1 cause liver damage? The evidence on NAFLD, MASLD, and MASH";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
   void getResearchArticleBySlug(SLUG);
-
   return new ImageResponse(
     (
       <div
@@ -18,7 +17,7 @@ export default async function Image() {
           width: "100%",
           height: "100%",
           background:
-            "linear-gradient(135deg, #7c2d12 0%, #c2410c 50%, #f97316 100%)",
+            "linear-gradient(135deg, #1e1b4b 0%, #4338ca 50%, #6366f1 100%)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -33,7 +32,7 @@ export default async function Image() {
               display: "flex",
               width: 18,
               height: 56,
-              background: "#fbbf24",
+              background: "#8b5cf6",
               borderRadius: 4,
             }}
           />
@@ -59,7 +58,7 @@ export default async function Image() {
               letterSpacing: 2,
             }}
           >
-            Foundayo · orforglipron · FDA approved Apr 2026
+            Newsome 2021 · SYNERGY-NASH 2024 · STEP · SURMOUNT
           </div>
           <div
             style={{
@@ -70,7 +69,7 @@ export default async function Image() {
               maxWidth: 1080,
             }}
           >
-            The first once-daily oral GLP-1 pill for weight loss
+            Does a GLP-1 cause liver damage?
           </div>
           <div
             style={{
@@ -83,14 +82,14 @@ export default async function Image() {
             <div
               style={{
                 display: "flex",
-                fontSize: 156,
+                fontSize: 120,
                 fontWeight: 800,
                 letterSpacing: -3,
                 color: "#a78bfa",
                 lineHeight: 1,
               }}
             >
-              −11.1%
+              opposite
             </div>
             <div
               style={{
@@ -102,7 +101,8 @@ export default async function Image() {
                 maxWidth: 700,
               }}
             >
-              body weight at 72 weeks (ATTAIN-1, highest dose)
+              Trials show semaglutide and tirzepatide reduce liver fat
+              and improve MASH histology.
             </div>
           </div>
         </div>
@@ -115,7 +115,9 @@ export default async function Image() {
           }}
         >
           <div style={{ display: "flex" }}>weightlossrankings.org</div>
-          <div style={{ display: "flex" }}>$25-$149/month · LillyDirect</div>
+          <div style={{ display: "flex" }}>
+            MASLD · MASH · ALT/AST · DILI · Hy&apos;s law
+          </div>
         </div>
       </div>
     ),

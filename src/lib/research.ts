@@ -46,6 +46,48 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Pricing data", "Compounded GLP-1", "Live dataset"],
   },
   {
+    slug: "how-to-travel-with-glp1-guide",
+    title:
+      "How to Travel With a GLP-1: The Complete Guide for Pens, Vials, and TSA",
+    description:
+      "FDA-sourced storage windows for Wegovy, Ozempic, Zepbound, Mounjaro, and Foundayo, plus TSA carry-on rules, ice pack guidance, time-zone advice, and what to do if your pen gets warm.",
+    excerpt:
+      "Wegovy gives you 28 days out of the fridge. Ozempic gives you 56. Zepbound and Mounjaro give you 21. Foundayo, the new oral pill, needs no fridge at all. We pull every number from the FDA labels, walk through TSA's actual carry-on exemptions for injectables and frozen ice packs, and answer the practical travel questions patients keep searching for.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 11,
+    citations: 6,
+    tags: ["Travel", "Storage", "FDA sourced"],
+  },
+  {
+    slug: "does-glp1-cause-liver-damage-nafld-nash-evidence",
+    title:
+      "Does a GLP-1 Cause Liver Damage? The Evidence on NAFLD, MASH, and Why the Answer Is Usually the Opposite",
+    description:
+      "Patients worry GLP-1s damage the liver. The trial evidence — Newsome 2021, SYNERGY-NASH 2024, STEP-1 and SURMOUNT-1 sub-analyses — shows the opposite: semaglutide and tirzepatide reduce liver fat and improve MASLD/MASH.",
+    excerpt:
+      "Semaglutide and tirzepatide have positive trial data on liver outcomes in MASLD/MASH — the exact opposite of what many patients fear. We walk through Newsome 2021, SYNERGY-NASH, the STEP-1 and SURMOUNT-1 liver enzyme sub-analyses, the rare DILI signal in postmarketing, and what to monitor.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 13,
+    citations: 8,
+    tags: ["Liver safety", "MASH / NASH", "PubMed sourced"],
+  },
+  {
+    slug: "how-to-take-foundayo-orforglipron-guide",
+    title:
+      "How to Take Foundayo (Orforglipron): The Practical Daily Guide for the New Oral GLP-1",
+    description:
+      "Exactly how to take Foundayo, the first oral non-peptide GLP-1 approved by the FDA: titration schedule, morning empty-stomach window, food pitfalls, missed doses, contraception warning, storage, and travel.",
+    excerpt:
+      "Foundayo is the first daily oral GLP-1 pill for weight loss, but it has strict timing rules most patients get wrong. We walk through the full 20-week titration, the 30-minute fasted morning window, the absorption pitfall that wrecks results, and the 30-day backup contraception rule from the label.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 12,
+    citations: 5,
+    tags: ["Foundayo", "Orforglipron", "FDA sourced"],
+  },
+  {
     slug: "semaglutide-muscle-mass-loss",
     title: "Semaglutide and Muscle Mass: What the STEP Trial Sub-Analyses Actually Show",
     description:
@@ -268,6 +310,174 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Side effects", "FAQ", "Patient guide"],
   },
   {
+    slug: "does-glp1-affect-blood-pressure-evidence",
+    title:
+      "Does a GLP-1 Affect Blood Pressure? Lower, Higher, or Both — The Evidence",
+    description:
+      "A thousand patients a month search 'does semaglutide lower blood pressure' or 'can semaglutide cause high blood pressure.' The honest answer is: GLP-1s lower systolic blood pressure by about 5-7 mmHg on average via weight loss and direct vascular mechanisms, with a small subset of patients experiencing dose-dependent heart-rate increases. Here is the evidence from STEP-1, SURMOUNT-1, SELECT, and the antihypertensive interaction.",
+    excerpt:
+      "GLP-1 receptor agonists have a modest but consistent effect on blood pressure: in the obesity registration trials, mean systolic blood pressure dropped by 5-7 mmHg and diastolic by 2-3 mmHg at the maintenance dose, an effect that is partly explained by weight loss and partly direct (vascular and renal). The cardiovascular outcomes trial SELECT (Lincoff et al. NEJM 2023) showed semaglutide 2.4 mg reduced major adverse cardiovascular events by 20% in patients with obesity and pre-existing CV disease, including a meaningful blood pressure component. There is also a small but real heart-rate increase (about 2-4 bpm) in many patients on GLP-1 therapy. This article walks through the trial data, the mechanism, and the practical implications for patients on antihypertensive medications.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 11,
+    citations: 8,
+    tags: ["Blood pressure", "Cardiovascular", "SELECT trial", "Patient question"],
+  },
+  {
+    slug: "where-to-buy-foundayo-2026",
+    title:
+      "Where to Buy Foundayo (Orforglipron) in 2026: The Telehealth and Pharmacy Provider Directory",
+    description:
+      "Foundayo (orforglipron) was FDA-approved April 1, 2026 and dispensing started April 6, 2026. Here is the verified list of US providers and pharmacies offering it as of April 2026: LillyDirect (manufacturer), Weight Watchers Med+, NowPatient, and the rollout we are tracking. Cash pay is $149-$299/month at the labeled doses; the Lilly Savings Card brings commercially-insured patients to $25/month.",
+    excerpt:
+      "Foundayo (orforglipron), Eli Lilly's first oral GLP-1 for weight loss, became commercially available on April 6, 2026 — five days after its FDA approval. The rollout is in its first weeks, so the provider directory is still small but growing rapidly. This article tracks which US telehealth platforms and pharmacies are confirmed as Foundayo channels as of April 2026, the pricing tiers at each (verified directly from the provider websites), how the dispensing chain actually works (most channels go through LillyDirect for the actual drug), and the framework for finding a Foundayo prescription if your existing telehealth platform has not added it yet. We will update this list weekly as more providers come online.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-07",
+    readMinutes: 9,
+    citations: 6,
+    tags: ["Foundayo", "Where to buy", "Provider directory", "Pricing 2026", "Live dataset"],
+  },
+  {
+    slug: "foundayo-vs-wegovy-vs-zepbound-comparison",
+    title:
+      "Foundayo vs Wegovy vs Zepbound: The Head-to-Head 2026 Comparison (Pill, Injection, Cost, Effect Size)",
+    description:
+      "Foundayo (orforglipron) is the first oral GLP-1 for weight loss, FDA-approved April 1, 2026. How does it stack up against Wegovy and Zepbound? Side-by-side: 17.2 mg labeled-dose Foundayo 11.1% vs STEP-1 Wegovy 14.9% vs SURMOUNT-1 Zepbound 20.9%, $25 vs $499 vs $449, daily pill vs weekly injection.",
+    excerpt:
+      "Foundayo (orforglipron), the first oral non-peptide GLP-1, was approved by the FDA on April 1, 2026 as a daily pill for weight management. It enters a market dominated by two injectable heavyweights: Wegovy (semaglutide 2.4 mg) and Zepbound (tirzepatide 15 mg). The three drugs differ on every dimension that matters to a patient: effect size (Wegovy 14.9% in STEP-1, Zepbound 20.9% in SURMOUNT-1, Foundayo 11.1% at the FDA-approved 17.2 mg labeled max dose per the prescribing information), delivery (weekly injection vs daily pill), cost (cash-pay $499 NovoCare vs $449 LillyDirect vs $25-$149 Foundayo), titration speed, side effect profile, and access. This is the head-to-head, with the trial data, the pricing tables, and the case for picking each one.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 13,
+    citations: 11,
+    tags: ["Foundayo", "Comparison", "Trial data", "Pricing 2026", "Patient guide"],
+  },
+  {
+    slug: "tirzepatide-microdosing-evidence-guide",
+    title:
+      "Tirzepatide Microdosing: What the Trial Data Says About Sub-Therapeutic Doses (And Why Most of It Is Off-Label)",
+    description:
+      "A thousand patients a month search 'what is microdosing tirzepatide.' This is the evidence-based answer: the SURMOUNT-1 dose-ranging arms (2.5, 5, 7.5, 10 mg) tell us what each step actually produced, no formal trial has tested doses below 2.5 mg, and 'microdosing' below the FDA-approved starting dose is off-label. Includes the trial data on each dose, the harm-reduction framing for patients who already do it, and the prescriber conversation.",
+    excerpt:
+      "Tirzepatide microdosing — using doses below the FDA-approved 2.5 mg starting dose — has become a popular strategy in patient communities, particularly for cost reasons (compounded vials priced per mg) and side effect tolerance. The published SURMOUNT-1 trial included a 2.5 mg arm but no formal sub-2.5 mg dose-finding. This article walks through what the SURMOUNT-1 dose-response curve actually shows, what is known about pharmacokinetics at fractional doses, why any dose below the FDA-approved starting dose is off-label, and the conversation patients should have with their prescriber rather than self-microdosing in isolation.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 9,
+    citations: 6,
+    tags: ["Tirzepatide", "Microdosing", "Off-label", "Compounded", "Patient question"],
+  },
+  {
+    slug: "can-you-take-phentermine-with-glp1",
+    title:
+      "Can You Take Phentermine With a GLP-1? The Combination Therapy Evidence and the Safety Concerns",
+    description:
+      "Five hundred patients a month search 'can you take phentermine with semaglutide.' This is the evidence-based answer: there is no FDA approval for the combination, no randomized trial data on it, and real safety concerns about cardiovascular risk and stimulant exposure on top of GLP-1 therapy. Some obesity-medicine specialists do prescribe both, with monitoring. Here is the actual evidence and the risk framework.",
+    excerpt:
+      "Phentermine is a stimulant appetite suppressant that has been prescribed for short-term weight loss in the US since 1959. It is the most prescribed weight-loss drug in the US after the GLP-1s themselves. With the rise of GLP-1 therapy, the question of combining the two has become increasingly common — and the answer is more nuanced than either 'never' or 'sure'. There is no randomized controlled trial of the combination, no FDA approval for it, and several legitimate concerns: cardiovascular load (phentermine raises heart rate and blood pressure; some GLP-1 patients also have these on top of obesity), abuse potential (phentermine is DEA Schedule IV), and the diminishing-returns argument (a maintenance-dose GLP-1 already produces appetite suppression — what does adding phentermine actually add?). At the same time, many obesity-medicine specialists do prescribe the combination in selected patients, particularly those plateauing on GLP-1 monotherapy. This article walks through the evidence, the physiology, the safety concerns, and the prescriber framework.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 11,
+    citations: 7,
+    tags: ["Combination therapy", "Phentermine", "Plateau", "Safety", "Patient question"],
+  },
+  {
+    slug: "glp1-menstrual-cycle-period-hormones",
+    title:
+      "Does a GLP-1 Affect Your Period? Menstrual Cycle Changes, Hormones, and the PCOS Connection",
+    description:
+      "Hundreds of patients a month search 'does tirzepatide affect your period.' GLP-1s do not directly target the menstrual cycle, but the rapid weight loss they produce frequently does — restoring ovulation in PCOS, sometimes triggering temporary irregularity in patients with low body weight, and interacting with oral contraceptive absorption. Here is the evidence and what to do about each scenario.",
+    excerpt:
+      "GLP-1 receptor agonists do not act directly on the hypothalamic-pituitary-ovarian axis, so they do not have a primary effect on the menstrual cycle in the way that hormonal contraception does. But the rapid weight loss they produce often DOES change menstrual patterns: women with PCOS frequently see ovulation restored and previously absent or irregular cycles return; women with very low body fat percentages may experience temporary cycle disruption; and the slowed gastric emptying that GLP-1s produce can affect oral contraceptive absorption — a well-documented interaction with the new oral Foundayo and a labeled caution for the injectables. This article walks through the published evidence on PCOS, the weight-loss-and-fertility return, the contraception interaction, and the practical guidance for women on a GLP-1 who notice their period change.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 11,
+    citations: 8,
+    tags: ["Women's health", "Menstrual cycle", "PCOS", "Hormones", "Patient question"],
+  },
+  {
+    slug: "does-glp1-cause-cancer-mtc-thyroid-evidence",
+    title:
+      "Does a GLP-1 Cause Cancer? The Medullary Thyroid Carcinoma Boxed Warning, the Pancreatic Cancer Signal, and What the Human Evidence Actually Shows",
+    description:
+      "Two thousand patients a month search 'does semaglutide cause cancer.' This is the evidence-based answer: the FDA boxed warning for medullary thyroid carcinoma comes from rodent studies, has not been replicated in humans, but is taken seriously enough to contraindicate GLP-1s in MEN2 and personal/family MTC history. The pancreatic cancer signal has been investigated in multiple large cohorts and found to be null. The 2023 BMJ thyroid signal paper and the 2024 EMA review.",
+    excerpt:
+      "Cancer is the single most common patient-anxiety question about GLP-1s, and the FDA black-box warning for medullary thyroid carcinoma is the reason. The warning comes from a series of rodent studies that found C-cell tumors at supraphysiologic doses; the human equivalent has not been demonstrated. Multiple large cohort studies have looked at thyroid cancer, pancreatic cancer, and other malignancy signals — most are null or inconclusive. The 2023 BMJ paper from a French national cohort generated a fresh thyroid cancer signal that the EMA and FDA both reviewed and did not find sufficient to change labeling. This article walks through the boxed warning, the rodent vs human distinction, the major cohort studies, the 2023 BMJ signal, the EMA/FDA reviews, and the contraindications that genuinely apply.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 13,
+    citations: 9,
+    tags: ["Cancer", "Safety", "MTC", "Black box warning", "Patient question"],
+  },
+  {
+    slug: "can-you-drink-alcohol-on-glp1",
+    title:
+      "Can You Drink Alcohol on a GLP-1? The Evidence on Safety, Tolerance, and the Surprising Cravings Effect",
+    description:
+      "Two thousand patients a month search 'can you drink on semaglutide.' This is the evidence-based answer: there is no FDA contraindication, but GLP-1s lower alcohol tolerance, increase hypoglycemia risk in diabetics, and — unexpectedly — appear to reduce alcohol cravings in observational and trial data. Includes the practical drinking guidance and the red flags that mean stop.",
+    excerpt:
+      "GLP-1 receptor agonists do not have an FDA contraindication for alcohol, but the practical reality is more complicated. Most patients report a marked drop in alcohol tolerance, anecdotal hangovers from much smaller quantities, and — in a finding that's now been replicated in multiple observational studies and one published RCT — a significant reduction in alcohol cravings and consumption. Meanwhile, hypoglycemia risk goes up if you're also on insulin or a sulfonylurea, and the pancreatitis warning in the GLP-1 boxed warning interacts with the well-known alcohol-pancreatitis link. This guide walks through the safety evidence, the practical guidance, and the red flags.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 10,
+    citations: 7,
+    tags: ["Alcohol", "Patient question", "Safety", "Cravings"],
+  },
+  {
+    slug: "how-to-get-glp1-prescription-2026",
+    title:
+      "How to Get a GLP-1 Prescription in 2026: The Patient Buyer Funnel",
+    description:
+      "Eight thousand patients a month search 'how to get semaglutide' or 'how to get tirzepatide.' This is the complete buyer funnel: insurance path (PBM step therapy and prior authorization), brand-name direct-pay (Wegovy NovoCare $199-$499, Zepbound LillyDirect $299-$449), compounded telehealth ($150-$400/mo), the new $25 oral Foundayo path, and the legitimacy red flags to watch for.",
+    excerpt:
+      "Most patients don't know there are at least four legitimate paths to a GLP-1 prescription in the US in 2026, each with different costs, different paperwork, and different waiting times. This buyer-funnel guide walks through all of them: the insurance route (eligibility, BMI documentation, step therapy, prior authorization), the brand-name direct-pay route (Wegovy NovoCare and Zepbound LillyDirect, with the actual 2026 price tiers), the compounded telehealth route ($150-$400/mo from licensed 503A pharmacies), and the new Foundayo oral route at $25-$149/mo with a savings card. Includes a checklist of red flags for illegitimate sellers and a decision tree for which path likely fits your situation.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-07",
+    readMinutes: 12,
+    citations: 8,
+    tags: ["Buyer guide", "Pricing 2026", "Insurance", "Compounded", "Patient guide"],
+  },
+  {
+    slug: "how-to-inject-glp1-step-by-step-technique",
+    title:
+      "How to Inject a GLP-1: The Step-by-Step Technique Guide for Pens, Vials, and Compounded Syringes",
+    description:
+      "Five thousand patients a month search 'how to inject semaglutide' or 'how to inject tirzepatide.' This is the complete step-by-step technique guide: pre-filled pen (Wegovy, Ozempic, Zepbound, Mounjaro), multi-dose vial with a regular syringe, and compounded vial with an insulin syringe. Site rotation, angle, depth, common mistakes, what a missed dose looks like.",
+    excerpt:
+      "Most patients never get a hands-on injection lesson — they get a pen, a quick clinic demo if they're lucky, and a YouTube link. This guide is the written reference: hand-by-hand, click-by-click, for every common GLP-1 delivery format. Pre-filled single-use pens (Wegovy, Zepbound). Multi-dose pens (Ozempic, Mounjaro). Vials with regular syringes. Compounded vials with U-100 insulin syringes. Includes the FDA-recommended injection sites, the 90° vs 45° angle decision, the air-bubble issue, the common skin reactions and how to tell them apart from cellulitis, and the troubleshooting checklist for partial doses, broken needles, and bent needles.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 13,
+    citations: 6,
+    tags: ["Injection technique", "Patient guide", "Pens", "Syringes"],
+  },
+  {
+    slug: "glp1-nausea-management-practical-guide",
+    title:
+      "GLP-1 Nausea: The Practical Management Guide (Trial Rates, Timeline, and What Actually Helps)",
+    description:
+      "Nausea is the #1 reason people quit GLP-1s. STEP-1 reported 44% on semaglutide, SURMOUNT-1 reported 33% on tirzepatide, and most of it lands in the first 8 weeks. This guide breaks down the exact rates, the typical timeline, and the practical strategies that have actual evidence behind them — plus the red flags that mean you should call your prescriber.",
+    excerpt:
+      "Nausea is the most common GLP-1 side effect and the leading reason patients discontinue therapy. STEP-1 reported 44% nausea on semaglutide 2.4 mg and SURMOUNT-1 reported 33% on tirzepatide 15 mg, but the headline rates hide the timeline: most nausea is concentrated in the first 4-8 weeks of each new dose step, then fades. This guide walks through the exact trial-reported rates, the typical week-by-week timeline, the practical management strategies with the strongest evidence (slower titration, smaller meals, hydration, antiemetics where appropriate), and the red flags — persistent vomiting, abdominal pain, signs of dehydration, signs of pancreatitis or gastroparesis — that mean stop and call your prescriber.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 11,
+    citations: 7,
+    tags: ["Side effects", "Nausea", "Patient guide", "Management"],
+  },
+  {
+    slug: "glp1-surgery-anesthesia-asa-guidance",
+    title:
+      "Stopping GLP-1s Before Surgery: ASA Guidance, Aspiration Risk, and What to Tell Your Anesthesiologist",
+    description:
+      "The American Society of Anesthesiologists issued specific GLP-1 hold guidance in 2023 and updated it in 2024 because of aspiration cases under anesthesia. This is the patient-facing version: when to hold, when not to, what to tell your surgeon and anesthesia team, and what the actual evidence behind the guidance is.",
+    excerpt:
+      "GLP-1 receptor agonists slow gastric emptying — that's a feature, not a bug, of how they produce satiety. But the same mechanism increases the risk of aspirating stomach contents under general anesthesia or deep sedation, even after a long preoperative fast. Multiple case reports and a 2024 prospective study showed retained gastric contents in patients who had fasted the standard 8 hours. The American Society of Anesthesiologists issued formal pre-procedure hold guidance in June 2023 and a multi-society consensus update in October 2024. This article walks patients through the current guidance, the underlying evidence, and the conversation you should have with both your prescriber and your anesthesia team before any surgery, colonoscopy, endoscopy, or procedure with sedation.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 12,
+    citations: 8,
+    tags: ["Surgery", "Anesthesia", "Patient safety", "ASA guidance"],
+  },
+  {
     slug: "wegovy-ozempic-zepbound-mounjaro-brand-name-cheat-sheet",
     title:
       "Wegovy vs Ozempic vs Zepbound vs Mounjaro: The GLP-1 Brand Name Cheat Sheet",
@@ -456,7 +666,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     description:
       "Eli Lilly's Foundayo (orforglipron) was approved by the FDA on April 1, 2026, becoming the first once-daily small-molecule oral GLP-1 receptor agonist approved for chronic weight management. We walk through the ATTAIN-1 trial data, the dosing, the $25-$149/month pricing, and how the oral pill compares to injectable semaglutide and tirzepatide.",
     excerpt:
-      "On April 1, 2026, the FDA approved Foundayo (orforglipron), Eli Lilly's once-daily oral GLP-1 pill for chronic weight management — the first non-peptide small-molecule GLP-1 receptor agonist ever approved for obesity. In the 72-week ATTAIN-1 phase 3 trial, the highest dose produced 12.4% weight loss (about 27 pounds) versus 0.9% on placebo. Lilly is launching at $25/month with commercial coverage and $149/month for self-pay through LillyDirect, making this the most accessible branded GLP-1 to date. Here's the verified trial data, dosing, safety profile, and how it compares to injectable Wegovy and Zepbound.",
+      "On April 1, 2026, the FDA approved Foundayo (orforglipron), Eli Lilly's once-daily oral GLP-1 pill for chronic weight management — the first non-peptide small-molecule GLP-1 receptor agonist ever approved for obesity. The FDA-approved 17.2 mg labeled maintenance dose produced approximately 11.1% mean weight loss (about 24.9 lbs) in adults without type 2 diabetes at 72 weeks per the prescribing information; the supra-labeled 36 mg arm in the ATTAIN-1 phase 3 trial (Wharton et al. NEJM 2025, PMID 40960239) reached 12.4% on the efficacy estimand and 11.2% on the treatment-regimen estimand. Lilly is launching at $25/month with commercial coverage and $149/month for self-pay through LillyDirect, making this the most accessible branded GLP-1 to date. Here's the verified trial data, dosing, safety profile, and how it compares to injectable Wegovy and Zepbound.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-06",
     readMinutes: 12,

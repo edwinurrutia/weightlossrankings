@@ -176,29 +176,55 @@ export default function FoundayoArticle() {
         represents the average effect across all randomized
         participants regardless of whether they stuck with treatment.
         Both are clinically informative; the treatment-regimen
-        estimand is closer to a real-world prescribing experience [1]:
+        estimand is closer to a real-world prescribing experience [1].
+      </p>
+
+      <p>
+        <strong>Important dose distinction.</strong> ATTAIN-1 (Wharton
+        et al., NEJM 2025, PMID 40960239) tested 6, 12, and{" "}
+        <strong>36 mg</strong> orforglipron arms — not the
+        FDA-approved labeled maximum of 17.2 mg. The 36 mg trial arm
+        is what produces the headline 11-12% trial numbers below.
+        The FDA-approved labeled-dose (17.2 mg) result patients will
+        actually experience is reported separately from the
+        Foundayo prescribing information.
       </p>
 
       <table>
         <thead>
           <tr>
+            <th>Source / Dose</th>
             <th>Estimand</th>
-            <th>Foundayo (highest dose)</th>
+            <th>Foundayo</th>
             <th>Placebo</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Efficacy (completers)</td>
+            <td>FDA label (17.2 mg, no T2D)</td>
+            <td>Label-reported</td>
             <td>
-              <strong>−12.4% (−27.3 lbs)</strong>
+              <strong>−11.1% (−24.9 lbs)</strong>
             </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>FDA label (17.2 mg, with T2D)</td>
+            <td>Label-reported</td>
+            <td>−9.6% (−21.2 lbs)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>ATTAIN-1 36 mg (above label max)</td>
+            <td>Efficacy (completers)</td>
+            <td>−12.4% (−27.3 lbs)</td>
             <td>−0.9% (−2.2 lbs)</td>
           </tr>
           <tr>
-            <td>Treatment-regimen (intent-to-treat)</td>
-            <td>−11.1% (−25 lbs)</td>
-            <td>−2.1% (−5.3 lbs)</td>
+            <td>ATTAIN-1 36 mg (above label max)</td>
+            <td>Treatment-regimen (ITT)</td>
+            <td>−11.2%</td>
+            <td>−2.1%</td>
           </tr>
         </tbody>
       </table>
@@ -230,9 +256,9 @@ export default function FoundayoArticle() {
         </thead>
         <tbody>
           <tr>
-            <td>Foundayo (oral pill)</td>
-            <td>ATTAIN-1 [1]</td>
-            <td>−12.4%</td>
+            <td>Foundayo (oral pill, 17.2 mg labeled max)</td>
+            <td>Foundayo PI [1]</td>
+            <td>−11.1%</td>
             <td>72 wk</td>
           </tr>
           <tr>
