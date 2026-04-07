@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/lib/research";
+import JsonLd from "@/components/shared/JsonLd";
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
 
 export const metadata: Metadata = {
   title:
@@ -26,8 +30,63 @@ export default function ResearchIndexPage() {
     b.publishedDate.localeCompare(a.publishedDate),
   );
 
+  // CollectionPage JSON-LD with hasPart array of every research
+  // article. Tells Google "this page is the index for a collection
+  // of N articles" and feeds the topical-authority signal — Google
+  // rewards sites that have a clear hub for each topic cluster.
+  // Combined with the per-article ScholarlyArticle / MedicalWebPage
+  // schema and the BreadcrumbList on each article, this gives
+  // Google a complete picture of the editorial graph.
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${SITE_URL}/research`,
+    name: "Research — GLP-1 Weight Loss",
+    description:
+      "Original data investigations and PubMed-cited scientific deep-dives on GLP-1 weight loss medications. Independent, citation-backed, regularly updated.",
+    url: `${SITE_URL}/research`,
+    inLanguage: "en-US",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Weight Loss Rankings",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Weight Loss Rankings",
+      url: SITE_URL,
+    },
+    // hasPart: every article in the collection, with title + URL +
+    // datePublished + dateModified so Google can build the article
+    // index without having to crawl each one.
+    hasPart: articles.map((a) => ({
+      "@type": "ScholarlyArticle",
+      "@id": `${SITE_URL}/research/${a.slug}`,
+      headline: a.title,
+      url: `${SITE_URL}/research/${a.slug}`,
+      datePublished: a.publishedDate,
+      dateModified: a.lastUpdated ?? a.publishedDate,
+    })),
+    // mainEntity = the ItemList of articles, ordered by recency.
+    // Different from hasPart in that ItemList is the *ordered*
+    // ranking, while hasPart is the *unordered* membership.
+    mainEntity: {
+      "@type": "ItemList",
+      itemListOrder: "https://schema.org/ItemListOrderDescending",
+      numberOfItems: articles.length,
+      itemListElement: articles.slice(0, 20).map((a, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/research/${a.slug}`,
+        name: a.title,
+      })),
+    },
+  };
+
   return (
     <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <JsonLd data={collectionSchema} />
+
       {/* Language switcher */}
       <div className="mb-6 text-xs">
         <Link

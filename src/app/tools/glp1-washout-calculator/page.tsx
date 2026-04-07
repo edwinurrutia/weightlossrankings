@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import References from "@/components/research/References";
+import ToolSchema from "@/components/research/ToolSchema";
 import WashoutCalculator from "./WashoutCalculator";
 
 export const metadata: Metadata = {
@@ -68,6 +69,14 @@ const CITATIONS = [
 export default function WashoutCalculatorPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 sm:px-6 py-12">
+      <ToolSchema
+        name="GLP-1 Washout Calculator"
+        description="Free GLP-1 washout calculator. Pick your drug (semaglutide, tirzepatide, orforglipron, or retatrutide) and see exactly how long until 50%, 25%, 10%, 5%, 1% remain after your last dose. Built on FDA-label half-life values, with clinical scenarios for switching, surgery, pregnancy planning, and trial enrollment."
+        url="https://weightlossrankings.org/tools/glp1-washout-calculator"
+        image="https://weightlossrankings.org/tools/glp1-washout-calculator/opengraph-image"
+        isMedical={true}
+        datePublished="2026-04-07"
+      />
       <nav className="mb-6 text-sm text-brand-text-secondary">
         <Link href="/tools" className="hover:text-brand-violet">
           Tools

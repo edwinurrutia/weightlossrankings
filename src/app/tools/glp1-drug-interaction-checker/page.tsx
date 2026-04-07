@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import References from "@/components/research/References";
+import ToolSchema from "@/components/research/ToolSchema";
 import DrugInteractionChecker from "./DrugInteractionChecker";
 import { getInteractionCount } from "@/lib/glp1-drug-interactions";
 
@@ -68,6 +69,14 @@ export default function DrugInteractionCheckerPage() {
   const count = getInteractionCount();
   return (
     <main className="mx-auto max-w-4xl px-4 sm:px-6 py-12">
+      <ToolSchema
+        name="GLP-1 Drug Interaction Checker"
+        description="Free GLP-1 drug interaction checker. Search any medication to see how it interacts with Wegovy, Ozempic, Zepbound, Mounjaro, or Foundayo. Severity-tiered results with FDA prescribing-information citations and clear what-to-do guidance."
+        url="https://weightlossrankings.org/tools/glp1-drug-interaction-checker"
+        image="https://weightlossrankings.org/tools/glp1-drug-interaction-checker/opengraph-image"
+        isMedical={true}
+        datePublished="2026-04-07"
+      />
       <nav className="mb-6 text-sm text-brand-text-secondary">
         <Link href="/tools" className="hover:text-brand-violet">
           Tools

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import References from "@/components/research/References";
+import ToolSchema from "@/components/research/ToolSchema";
 import EmployerSearch from "./EmployerSearch";
 
 export const metadata: Metadata = {
@@ -65,6 +66,14 @@ const CITATIONS = [
 export default function InsuranceEmployerCheckerPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 sm:px-6 py-12">
+      <ToolSchema
+        name="Insurance Employer Checker"
+        description="Look up Wegovy, Zepbound, Ozempic, and Mounjaro coverage at 30 large US employers including Amazon, Walmart, Google, Microsoft, and the federal government."
+        url="https://weightlossrankings.org/tools/insurance-employer-checker"
+        image="https://weightlossrankings.org/tools/insurance-employer-checker/opengraph-image"
+        isMedical={false}
+        datePublished="2026-04-07"
+      />
       <nav className="mb-6 text-sm text-brand-text-secondary">
         <Link href="/tools" className="hover:text-brand-violet">
           Tools

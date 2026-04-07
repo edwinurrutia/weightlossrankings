@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import References from "@/components/research/References";
+import ToolSchema from "@/components/research/ToolSchema";
 import BmiCalculator from "./BmiCalculator";
 
 export const metadata: Metadata = {
@@ -75,6 +76,14 @@ const CITATIONS = [
 export default function BmiCalculatorPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 sm:px-6 py-12">
+      <ToolSchema
+        name="GLP-1 BMI Calculator"
+        description="BMI calculator with a GLP-1 outcome overlay. See your current WHO BMI category, your Wegovy/Zepbound FDA eligibility, and what BMI category you would land in at each trial endpoint (STEP-1, SURMOUNT-1, ATTAIN-1)."
+        url="https://weightlossrankings.org/tools/glp1-bmi-calculator"
+        image="https://weightlossrankings.org/tools/glp1-bmi-calculator/opengraph-image"
+        isMedical={true}
+        datePublished="2026-04-07"
+      />
       <nav className="mb-6 text-sm text-brand-text-secondary">
         <Link href="/tools" className="hover:text-brand-violet">
           Tools

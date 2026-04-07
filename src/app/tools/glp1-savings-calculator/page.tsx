@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import References from "@/components/research/References";
+import ToolSchema from "@/components/research/ToolSchema";
 import SavingsCalculator from "./SavingsCalculator";
 
 export const metadata: Metadata = {
@@ -65,6 +66,14 @@ const CITATIONS = [
 export default function SavingsCalculatorPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 sm:px-6 py-12">
+      <ToolSchema
+        name="GLP-1 Savings Calculator"
+        description="Compare 10 different GLP-1 access paths (brand-name with insurance, manufacturer direct-pay, compounded vials, Foundayo at $149/month) and see your monthly, yearly, and 5-year savings or extra cost."
+        url="https://weightlossrankings.org/tools/glp1-savings-calculator"
+        image="https://weightlossrankings.org/tools/glp1-savings-calculator/opengraph-image"
+        isMedical={false}
+        datePublished="2026-04-07"
+      />
       <nav className="mb-6 text-sm text-brand-text-secondary">
         <Link href="/tools" className="hover:text-brand-violet">
           Tools

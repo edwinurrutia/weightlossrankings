@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import References from "@/components/research/References";
+import ToolSchema from "@/components/research/ToolSchema";
 import UnitConverter from "./UnitConverter";
 
 export const metadata: Metadata = {
@@ -80,6 +81,14 @@ const CITATIONS = [
 export default function GlpUnitConverterPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 sm:px-6 py-12">
+      <ToolSchema
+        name="GLP-1 Unit to mg Converter"
+        description="Convert prescribed milligrams of compounded semaglutide or tirzepatide to insulin syringe units (and back) at any vial concentration. Includes a reconstitution (BAC water) calculator for lyophilized vials. FDA prescribing information cited."
+        url="https://weightlossrankings.org/tools/glp1-unit-converter"
+        image="https://weightlossrankings.org/tools/glp1-unit-converter/opengraph-image"
+        isMedical={true}
+        datePublished="2026-04-07"
+      />
       <nav className="mb-6 text-sm text-brand-text-secondary">
         <Link href="/tools" className="hover:text-brand-violet">
           Tools
