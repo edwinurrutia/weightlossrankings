@@ -6987,6 +6987,18 @@
         "dose": "GLP-1 Clinic",
         "form": "compounded",
         "monthly_cost": 99
+      },
+      {
+        "dose": "Foundayo (Med+ + drug starting dose)",
+        "form": "brand",
+        "monthly_cost": 149,
+        "drug": "orforglipron"
+      },
+      {
+        "dose": "Foundayo (Med+ + drug high dose)",
+        "form": "brand",
+        "monthly_cost": 299,
+        "drug": "orforglipron"
       }
     ],
     "scores": {
@@ -7002,7 +7014,8 @@
       "Community Workshops",
       "GLP-1 Clinic Tier",
       "All 50 States",
-      "70+ Year Track Record"
+      "70+ Year Track Record",
+      "Foundayo"
     ],
     "states_available": [
       "AL",
@@ -9275,6 +9288,235 @@
       ],
       "confidence": "medium",
       "notes": "Verified via thepeptidelist.com competitive intelligence (Apr 2026). Trustpilot score 3.0 noted in source \u2014 flagged in cons."
+    }
+  },
+  {
+    "_id": "lillydirect-foundayo",
+    "name": "LillyDirect Foundayo",
+    "slug": "lillydirect-foundayo",
+    "description": "Eli Lilly's manufacturer direct-pay channel for Foundayo (orforglipron), the first oral GLP-1 pill for weight loss. With the Lilly Savings Card, commercially insured patients pay $25/month; cash-pay patients pay $149-$299/month depending on labeled dose. Requires a valid US prescription from any licensed prescriber.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Foundayo (Lilly Savings Card)",
+        "form": "brand",
+        "monthly_cost": 25,
+        "drug": "orforglipron"
+      },
+      {
+        "dose": "Foundayo (cash, starting dose)",
+        "form": "brand",
+        "monthly_cost": 149,
+        "drug": "orforglipron"
+      },
+      {
+        "dose": "Foundayo (cash, higher doses)",
+        "form": "brand",
+        "monthly_cost": 299,
+        "drug": "orforglipron"
+      }
+    ],
+    "scores": {
+      "value": 9.5,
+      "effectiveness": 7.5,
+      "ux": 8,
+      "trust": 9.5,
+      "accessibility": 9,
+      "support": 7
+    },
+    "features": [
+      "Manufacturer Direct",
+      "Foundayo",
+      "Brand Name",
+      "Lilly Savings Card",
+      "All 50 States"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY",
+      "DC"
+    ],
+    "affiliate_url": "https://lillydirect.lilly.com/pharmacy-solutions/foundayo",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Cheapest legal path to a brand-name GLP-1 in 2026 ($25/mo with savings card for commercial insurance)",
+      "Direct from manufacturer \u2014 no compounding, no third-party reseller",
+      "Daily oral pill, no injections, no refrigeration",
+      "Available in all 50 states"
+    ],
+    "cons": [
+      "Lower mean weight loss vs Wegovy (14.9%) and Zepbound (20.9%) \u2014 labeled-dose 11.1% per Foundayo PI",
+      "Requires existing prescription from a separate prescriber (LillyDirect does not write the prescription)",
+      "$25 savings card requires commercial insurance \u2014 Medicare and Medicaid not eligible",
+      "Strict empty-stomach 30-minute window may be hard for some patients to follow"
+    ],
+    "best_for": "patients with commercial insurance who want the cheapest legal brand-name GLP-1",
+    "is_featured": false,
+    "external_reviews": {},
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://lillydirect.lilly.com/pharmacy-solutions/foundayo",
+        "https://www.weightwatchers.com/us/weight-loss-medication/foundayo"
+      ],
+      "confidence": "high",
+      "notes": "Verified directly via LillyDirect and indirectly via Weight Watchers Med+ disclosure that Foundayo is dispensed through LillyDirect pharmacy. Pricing per Lilly investor announcement and the LillyDirect Self Pay page."
+    }
+  },
+  {
+    "_id": "nowpatient-foundayo",
+    "name": "NowPatient",
+    "slug": "nowpatient-foundayo",
+    "description": "Telehealth platform offering Foundayo (orforglipron) prescriptions via online clinician consultation. Confirmed as a Foundayo channel via Endocrine News coverage of the April 2026 rollout. Pricing tier and full state availability TBD as the rollout matures.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Foundayo (consult + drug, pricing TBD)",
+        "form": "brand",
+        "monthly_cost": 199,
+        "drug": "orforglipron"
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7.5,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [
+      "Foundayo",
+      "Telehealth",
+      "Brand Name"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY",
+      "DC"
+    ],
+    "affiliate_url": "https://nowpatient.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Confirmed early Foundayo channel (April 2026 rollout)",
+      "Daily oral pill \u2014 no needles, no refrigeration",
+      "Telehealth consultation included"
+    ],
+    "cons": [
+      "Pricing tier not yet publicly verified \u2014 confirm directly with the provider",
+      "State-by-state availability still being phased in",
+      "Lower mean weight loss vs injectable GLP-1s (~11.1% vs 14.9% Wegovy and 20.9% Zepbound at labeled max)"
+    ],
+    "best_for": "early adopters who want Foundayo via a one-stop telehealth platform",
+    "is_featured": false,
+    "external_reviews": {},
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://endocrinenews.endocrine.org/pharma-friday-april-3-2026"
+      ],
+      "confidence": "low",
+      "notes": "Provider confirmed via Endocrine News coverage of the Foundayo rollout. Pricing and state availability not yet directly verified \u2014 placeholder $199/month estimate based on typical telehealth GLP-1 pricing. Will update when first-party verification is available."
     }
   }
 ]

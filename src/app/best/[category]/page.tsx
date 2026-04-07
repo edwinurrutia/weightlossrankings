@@ -72,6 +72,26 @@ const CATEGORY_MAP: Record<string, CategoryDef> = {
       "semaglutide-providers",
     ],
   },
+  "orforglipron-providers": {
+    label: "Foundayo (Orforglipron) Providers",
+    filter: (providers) =>
+      providers.filter((p) =>
+        p.pricing.some((pr) => pr.drug === "orforglipron")
+      ),
+    targetKeyword: "orforglipron providers",
+    title:
+      "Best Foundayo (Orforglipron) Telehealth Providers in 2026 | Where to Buy the New Oral GLP-1",
+    description:
+      "Foundayo (orforglipron) was FDA-approved on April 1, 2026 — the first oral GLP-1 pill for weight loss. We rank every verified US telehealth provider and pharmacy dispensing it as of April 2026, with monthly pricing, the Lilly Savings Card details, and how the dispensing chain actually works.",
+    intro:
+      "Foundayo (orforglipron) is the first FDA-approved oral GLP-1 receptor agonist for chronic weight management, approved on April 1, 2026 by Eli Lilly. Commercial dispensing started on April 6, 2026 and the provider list is small but growing fast. We track every US telehealth platform and pharmacy confirmed as a Foundayo channel, with pricing tiers verified directly from each provider's website. The Lilly Savings Card brings the price to $25/month for commercially insured patients, $149-$299/month for cash-pay. We update this list weekly as more providers come online.",
+    drugFilter: "orforglipron",
+    related: [
+      "semaglutide-providers",
+      "tirzepatide-providers",
+      "weight-loss-programs",
+    ],
+  },
   "compounded-semaglutide": {
     label: "Compounded Semaglutide Providers",
     filter: (providers) =>

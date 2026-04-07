@@ -7,7 +7,7 @@
 import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 
-type DrugType = "semaglutide" | "tirzepatide";
+type DrugType = "semaglutide" | "tirzepatide" | "orforglipron";
 
 interface Pricing {
   dose: string;
@@ -75,7 +75,13 @@ function inferDrugForEntry(
   const fromDose = inferDrugFromDose(pricing.dose);
   if (fromDose) return fromDose;
 
-  // 2. Dose string contains the drug name
+  // 2. Dose string contains the drug name.
+  // Foundayo first because it's the only oral non-peptide GLP-1 — if a
+  // brand or generic match hits before we check for orforglipron, we'd
+  // misclassify it as semaglutide via the oral fallback below.
+  if (dose.includes("orforglipron") || dose.includes("foundayo")) {
+    return "orforglipron";
+  }
   if (dose.includes("tirzepatide") || dose.includes("zepbound") || dose.includes("mounjaro")) {
     return "tirzepatide";
   }
@@ -93,8 +99,10 @@ function inferDrugForEntry(
     return "semaglutide";
   }
 
-  // 4. Oral / pill / lozenge / tablet — Rybelsus is semaglutide; oral
-  // tirzepatide doesn't exist commercially.
+  // 4. Oral / pill / lozenge / tablet — Rybelsus is semaglutide; Foundayo
+  // (orforglipron, FDA-approved April 2026) is the first non-peptide oral
+  // GLP-1 — checked above by name. If we got here we're in legacy oral-
+  // semaglutide territory (Rybelsus, sublingual compounded sema, etc.).
   if (
     dose.includes("oral") ||
     dose.includes("pill") ||

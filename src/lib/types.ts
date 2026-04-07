@@ -1,4 +1,4 @@
-export type DrugType = "semaglutide" | "tirzepatide";
+export type DrugType = "semaglutide" | "tirzepatide" | "orforglipron";
 
 export interface Pricing {
   dose: string;

@@ -34,6 +34,7 @@ const BASE_URL =
 const CATEGORY_KEYS = [
   "semaglutide-providers",
   "tirzepatide-providers",
+  "orforglipron-providers",
   "compounded-semaglutide",
   "compounded-tirzepatide",
   "cheapest-semaglutide",

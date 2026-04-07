@@ -47,7 +47,13 @@ interface FoundPrice {
   currency: "USD";
   period: "month" | "week" | "4weeks" | "first_month" | "3month" | "unknown";
   context: string;
-  drug_hint?: "semaglutide" | "tirzepatide" | "compounded" | "brand" | null;
+  drug_hint?:
+    | "semaglutide"
+    | "tirzepatide"
+    | "orforglipron"
+    | "compounded"
+    | "brand"
+    | null;
   glp1_proximity: boolean;
   source_url: string;
   source: "static" | "browser";
@@ -103,12 +109,17 @@ const PRICE_PATTERNS: Array<{
 ];
 
 // Tight proximity keywords — price must be near one of these to be considered GLP-1 relevant.
-const GLP1_KEYWORDS = /\b(?:semaglutide|tirzepatide|glp[- ]?1|glp|weight[- ]?loss|compounded|injection|injectable|mounjaro|wegovy|ozempic|zepbound|rybelsus|microdos|oral\s+glp)\b/i;
+// Keep this in sync with DRUG_HINTS below — every brand and generic name we
+// score on the drug-hint side should be matchable by the proximity filter
+// here. When a new GLP-1 ships (e.g. Foundayo / orforglipron in April 2026),
+// add it to BOTH lists or the scraper will skip the price.
+const GLP1_KEYWORDS = /\b(?:semaglutide|tirzepatide|orforglipron|foundayo|glp[- ]?1|glp|weight[- ]?loss|compounded|injection|injectable|mounjaro|wegovy|ozempic|zepbound|rybelsus|microdos|oral\s+glp)\b/i;
 const PROXIMITY_RADIUS = 125; // ±125 chars = 250 char window as per spec
 
 const DRUG_HINTS: Array<{ key: FoundPrice["drug_hint"]; words: RegExp }> = [
   { key: "tirzepatide", words: /tirzepatide|mounjaro|zepbound/i },
   { key: "semaglutide", words: /semaglutide|ozempic|wegovy|rybelsus/i },
+  { key: "orforglipron", words: /orforglipron|foundayo/i },
   { key: "compounded", words: /compounded|compound/i },
   { key: "brand", words: /\bbrand[- ]name\b|fda[- ]approved\b/i },
 ];
@@ -124,6 +135,9 @@ const CANDIDATE_PATHS = [
   "/prices",
   "/semaglutide",
   "/tirzepatide",
+  "/orforglipron",
+  "/foundayo",
+  "/foundayo-orforglipron",
   "/weight-loss",
   "/glp-1",
   "/treatments",
@@ -584,6 +598,7 @@ const MIN_PLAUSIBLE_COMPOUNDED_PRICE = 99;
 const GLP1_DRUGS = new Set([
   "semaglutide",
   "tirzepatide",
+  "orforglipron",
   "liraglutide",
   "compounded-semaglutide",
   "compounded-tirzepatide",
