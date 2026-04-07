@@ -3,6 +3,40 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema, { type FaqItem } from "@/components/research/FaqSchema";
+
+const FAQ_ITEMS: FaqItem[] = [
+  {
+    question: "Does semaglutide lower blood pressure?",
+    answer:
+      "Yes. STEP-1 reported a mean systolic BP reduction of 6.2 mmHg on semaglutide 2.4 mg vs 1.1 mmHg on placebo at week 68, and a 2.8 mmHg diastolic reduction. The mechanism is part weight loss, part natriuresis (kidney sodium excretion via GLP-1 receptors in the proximal tubule), and part direct vascular endothelial effects.",
+  },
+  {
+    question: "Does tirzepatide lower blood pressure?",
+    answer:
+      "Yes. SURMOUNT-1 reported a mean systolic BP reduction of 7.2 mmHg on tirzepatide 15 mg vs 1.0 mmHg on placebo at week 72, and a 4.8 mmHg diastolic reduction. The BP-lowering effect is slightly larger than semaglutide on average, consistent with the larger weight loss tirzepatide produces.",
+  },
+  {
+    question: "Can semaglutide raise blood pressure?",
+    answer:
+      "Population means hide individual variation. A small fraction of patients see modest BP increases on a GLP-1 despite the average effect being downward. Possible reasons include reflex BP rise from the heart-rate increase, white-coat hypertension during titration visits, stopping a previously tolerated antihypertensive, or interaction with sympathomimetics like decongestants or phentermine. If your home BP readings trend up, check simple causes first then call your prescriber.",
+  },
+  {
+    question: "Does semaglutide raise heart rate?",
+    answer:
+      "Yes. GLP-1 receptor agonists increase resting heart rate by approximately 2-4 bpm in most patients. This is in Section 5.5 of the Wegovy and Zepbound labels and is consistently seen across the GLP-1 class. The mechanism is thought to involve GLP-1 receptor activation in the sinoatrial node and possibly increased sympathetic tone. Clinically minor for most patients but worth knowing about if you have pre-existing arrhythmias.",
+  },
+  {
+    question: "Should I stop my blood pressure medication on a GLP-1?",
+    answer:
+      "Do not stop antihypertensives on your own. The BP-lowering effect of GLP-1s often allows for dose reductions over the first 3-6 months, but the deprescribing decision should always be made by the clinician managing your blood pressure. Monitor your BP at home weekly during titration and call your prescriber if you experience symptomatic hypotension (dizziness on standing, lightheadedness, fainting).",
+  },
+  {
+    question: "What did the SELECT trial show about GLP-1 and cardiovascular events?",
+    answer:
+      "The SELECT trial (n=17,604, 39.8 months mean follow-up) showed that semaglutide 2.4 mg reduced major adverse cardiovascular events by 20% in patients with obesity and pre-existing cardiovascular disease but no diabetes. This is the strongest evidence that the BP-lowering effect translates to real cardiovascular benefit, and led to the FDA adding a labeled cardiovascular benefit indication to Wegovy in 2024.",
+  },
+];
 
 const SLUG = "does-glp1-affect-blood-pressure-evidence";
 
@@ -108,6 +142,7 @@ export default function GlpBloodPressureArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <FaqSchema items={FAQ_ITEMS} />
       <p
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"

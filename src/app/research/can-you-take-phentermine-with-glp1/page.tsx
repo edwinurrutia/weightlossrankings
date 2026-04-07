@@ -3,6 +3,30 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema, { type FaqItem } from "@/components/research/FaqSchema";
+
+const FAQ_ITEMS: FaqItem[] = [
+  {
+    question: "Can you take phentermine with semaglutide?",
+    answer:
+      "There is no FDA-approved combination product containing phentermine and semaglutide, and no randomized controlled trial of the combination. Some obesity-medicine specialists prescribe both off-label in selected patients (typically GLP-1 plateau cases), with cardiovascular workup and monitoring. Phentermine has real contraindications (cardiovascular disease, hyperthyroidism, glaucoma, history of substance abuse) that don't change when a GLP-1 is added.",
+  },
+  {
+    question: "Can you take phentermine with tirzepatide?",
+    answer:
+      "Same answer as semaglutide — no FDA approval as a combination, no RCT data, off-label prescribing exists in obesity-medicine practice. Tirzepatide is the more potent GLP-1 (mean 20.9% weight loss in SURMOUNT-1 vs 14.9% on Wegovy), so the case for adding phentermine is weaker — the larger weight loss leaves less room for additional appetite suppression to add benefit.",
+  },
+  {
+    question: "Is phentermine + GLP-1 safe?",
+    answer:
+      "There is no published long-term safety data on the specific combination. The known risks are: phentermine raises heart rate by 7-10 bpm and systolic BP by 4-7 mmHg (Hendricks 2011 cohort). GLP-1s independently raise heart rate by 2-4 bpm. Phentermine is contraindicated in cardiovascular disease, hyperthyroidism, glaucoma, history of substance abuse, MAO inhibitor use, pregnancy, agitated states, and is a relative contraindication over age 65. The combination should only be initiated by an obesity-medicine specialist with baseline cardiovascular workup.",
+  },
+  {
+    question: "Will phentermine restart weight loss if my GLP-1 plateaus?",
+    answer:
+      "There is no published RCT evidence that adding phentermine restarts weight loss after a GLP-1 plateau. Case series and retrospective cohorts from obesity-medicine clinics describe modest additional weight loss in some patients, but these have no control group and significant selection bias. Standard practice before considering phentermine: ensure you are on a true maintenance GLP-1 dose (Wegovy 2.4 mg, Zepbound 15 mg) for at least 3-6 months and that the plateau is real, not measurement noise.",
+  },
+];
 
 const SLUG = "can-you-take-phentermine-with-glp1";
 
@@ -97,6 +121,7 @@ export default function PhentermineComboArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <FaqSchema items={FAQ_ITEMS} />
       <p
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"

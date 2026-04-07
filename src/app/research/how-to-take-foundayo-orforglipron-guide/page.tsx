@@ -3,6 +3,34 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
+
+const HOW_TO_STEPS: HowToStep[] = [
+  {
+    name: "Take Foundayo first thing in the morning",
+    text: "Take Foundayo with a sip of plain water within the first 30 minutes of waking, before any food, beverage, or other oral medication.",
+  },
+  {
+    name: "Wait at least 30 minutes before eating or drinking anything else",
+    text: "No coffee, no tea, no protein shake, no other pills. Plain water only. Any other oral intake in the 30-minute window will substantially reduce Foundayo absorption.",
+  },
+  {
+    name: "Use the labeled titration schedule",
+    text: "Foundayo titrates over 6 four-week steps: 0.8 mg → 2.5 mg → 5.5 mg → 9 mg → 14.5 mg → 17.2 mg. Do not skip steps. Stay on the current dose at least 4 weeks before escalating.",
+  },
+  {
+    name: "If you miss a dose, do not double up the next day",
+    text: "If you remember within several hours of your normal time, take it as soon as possible (still on an empty stomach). If you only remember the next morning, skip the missed dose and take your normal dose. Never take two Foundayo doses in the same day.",
+  },
+  {
+    name: "Use backup contraception for 30 days after starting and after each dose increase",
+    text: "Per Foundayo PI Section 7.1, women on oral contraceptives should add a barrier method (or switch to a non-oral hormonal method, IUD, or implant) for 30 days after starting Foundayo and 30 days after each dose increase, because oral contraceptive absorption is slowed.",
+  },
+  {
+    name: "Store at room temperature",
+    text: "Foundayo is a tablet — no refrigeration required. Store in the original bottle at room temperature, away from moisture and direct sunlight. Major travel advantage over the injectable GLP-1s.",
+  },
+];
 
 const SLUG = "how-to-take-foundayo-orforglipron-guide";
 
@@ -76,6 +104,14 @@ export default function FoundayoHowToTakeArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <HowToSchema
+        name="How to Take Foundayo (Orforglipron) Daily"
+        description="Step-by-step guide to taking Foundayo, the first oral non-peptide GLP-1 receptor agonist for weight management. Sourced from the Foundayo prescribing information."
+        steps={HOW_TO_STEPS}
+        url="https://weightlossrankings.org/research/how-to-take-foundayo-orforglipron-guide"
+        image="https://weightlossrankings.org/research/how-to-take-foundayo-orforglipron-guide/opengraph-image"
+        totalTime="PT5M"
+      />
       <p
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"

@@ -3,6 +3,38 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
+
+const HOW_TO_STEPS: HowToStep[] = [
+  {
+    name: "Pack the pen in carry-on, never checked baggage",
+    text: "Cargo hold temperatures swing from below freezing to over 100°F, which can damage GLP-1 medications. Always carry the pen onboard in your cabin baggage.",
+  },
+  {
+    name: "Use an insulated medical travel case with frozen ice packs",
+    text: "FRIO, MedAngel, or similar insulated cases keep the pen at the right temperature for the duration of the trip. Frozen gel ice packs are allowed at TSA security under the medication exemption.",
+  },
+  {
+    name: "Bring your prescription documentation",
+    text: "Carry the original pharmacy label on the box, plus a copy of the prescription if possible. TSA officers may ask. The labeled prescription is your exemption from the 3-1-1 liquid rule.",
+  },
+  {
+    name: "Declare medications at TSA security",
+    text: "Tell the TSA officer at the security line that you are carrying prescription medication that requires temperature control. They will route you and the cooler bag through the standard medical-medication screening.",
+  },
+  {
+    name: "Check the labeled out-of-fridge tolerance for your specific drug",
+    text: "Wegovy and Zepbound are stable at temperatures up to 86°F (30°C) for 28 days. Mounjaro is stable for 21 days at the same temperature. Ozempic is stable for 56 days. Foundayo is an oral pill and needs no refrigeration at all.",
+  },
+  {
+    name: "Stay on your home time zone for weekly injections",
+    text: "Weekly GLP-1s (Wegovy, Ozempic, Zepbound, Mounjaro) are forgiving on timing — taking the dose a day or two early or late on a long trip is fine. Keep using your normal injection day rather than recalculating for the new time zone.",
+  },
+  {
+    name: "If a pen warms above 86°F, discard it",
+    text: "A pen left in a hot car (above 30°C / 86°F) for more than the labeled out-of-fridge window should be discarded. The drug may not be stable. Contact your prescriber for an emergency replacement prescription if needed.",
+  },
+];
 
 const SLUG = "how-to-travel-with-glp1-guide";
 
@@ -83,6 +115,13 @@ export default function TravelGuideArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <HowToSchema
+        name="How to Travel With a GLP-1 (Wegovy, Ozempic, Zepbound, Mounjaro, Foundayo)"
+        description="Step-by-step guide to traveling with a GLP-1 receptor agonist — TSA rules, cooler bag setup, time zone schedule, and what to do if a pen warms up. Sourced from each drug's FDA prescribing information storage section."
+        steps={HOW_TO_STEPS}
+        url="https://weightlossrankings.org/research/how-to-travel-with-glp1-guide"
+        image="https://weightlossrankings.org/research/how-to-travel-with-glp1-guide/opengraph-image"
+      />
       <p data-speakable="lead">
         Traveling with a GLP-1 is one of the most-asked, least-clearly-
         answered questions in weight-loss medicine. The pens are

@@ -3,6 +3,40 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema, { type FaqItem } from "@/components/research/FaqSchema";
+
+const FAQ_ITEMS: FaqItem[] = [
+  {
+    question: "Does semaglutide affect your period?",
+    answer:
+      "Semaglutide does not directly target the hypothalamic-pituitary-ovarian axis, but the rapid weight loss it produces frequently changes menstrual patterns. Women with PCOS often see ovulation restored. Women with very low body fat percentages may experience temporary irregularity. Cycles can shorten or lengthen by a few days as the body adapts. Persistent amenorrhea (more than 3 months without a period) warrants a workup.",
+  },
+  {
+    question: "Does tirzepatide affect your period?",
+    answer:
+      "Same answer as semaglutide — tirzepatide does not have a direct hormonal effect, but the weight loss it produces (typically larger than semaglutide) often changes menstrual patterns. PCOS patients commonly see restored ovulation. Track your cycle for 2-3 months before assuming something is wrong.",
+  },
+  {
+    question: "Does GLP-1 affect birth control?",
+    answer:
+      "Injectable GLP-1s (Wegovy, Ozempic, Zepbound, Mounjaro) have NOT been shown to reduce oral contraceptive efficacy in pharmacokinetic studies. Foundayo (oral orforglipron) is different — its label specifically recommends backup contraception (barrier, IUD, implant, or non-oral hormonal) for 30 days after starting and 30 days after each dose increase, because it co-localizes with oral contraceptives in the GI tract during absorption.",
+  },
+  {
+    question: "Can GLP-1 help with PCOS?",
+    answer:
+      "Yes — published evidence suggests GLP-1s help PCOS via the weight loss they produce. Studies show restored menstrual regularity in women with PCOS who lose more than 5% body weight, improved ovulation rates compared to baseline, improved IVF outcomes in obese women with poor first-line response, and reduced androgen levels (downstream of weight loss). Restored fertility is a real outcome — contraception planning is important if you don't want to be pregnant.",
+  },
+  {
+    question: "How long after stopping a GLP-1 should I wait to get pregnant?",
+    answer:
+      "The Wegovy label specifically recommends discontinuing semaglutide at least 2 months before a planned pregnancy because of the long elimination half-life (~7 days) and limited human pregnancy data. The same 2-month rule is generally applied to tirzepatide. Foundayo, with its much shorter half-life (~36 hours), has a shorter washout. Use the GLP-1 washout calculator to see the residual concentration timeline.",
+  },
+  {
+    question: "Why did my period stop on a GLP-1?",
+    answer:
+      "Several possible reasons: rapid weight loss with very low body fat can cause functional hypothalamic amenorrhea, especially in patients who started with lower BMI or who are losing more than 2 lb/week. PCOS patients sometimes paradoxically have their cycles change in unexpected ways as ovulation returns. Could also be unrelated (thyroid disease, hyperprolactinemia, pregnancy). Persistent amenorrhea over 3 months warrants a workup with your prescriber or OB/GYN.",
+  },
+];
 
 const SLUG = "glp1-menstrual-cycle-period-hormones";
 
@@ -109,6 +143,7 @@ export default function MenstrualArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <FaqSchema items={FAQ_ITEMS} />
       <p
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"

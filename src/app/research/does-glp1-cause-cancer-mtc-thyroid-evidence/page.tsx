@@ -3,6 +3,40 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema, { type FaqItem } from "@/components/research/FaqSchema";
+
+const FAQ_ITEMS: FaqItem[] = [
+  {
+    question: "Does semaglutide cause cancer?",
+    answer:
+      "There is no proven causal link between semaglutide and cancer in humans. The FDA boxed warning for medullary thyroid carcinoma comes from rodent studies that have NOT been replicated in human evidence. Multiple large cohort studies including LEADER (n=9,340 over 3.8 years) and the 2024 Wang real-world data analysis found no statistically significant excess of thyroid or pancreatic cancer.",
+  },
+  {
+    question: "Does tirzepatide cause thyroid cancer?",
+    answer:
+      "The FDA boxed warning for tirzepatide is identical to semaglutide and is based on the same rodent C-cell tumor data. There is no human evidence demonstrating that tirzepatide causes thyroid cancer. Tirzepatide is contraindicated in patients with a personal or family history of medullary thyroid carcinoma (MTC) or multiple endocrine neoplasia syndrome type 2 (MEN2).",
+  },
+  {
+    question: "What is the FDA boxed warning for GLP-1 cancer?",
+    answer:
+      "The boxed warning on Wegovy and Zepbound states that semaglutide and tirzepatide cause thyroid C-cell tumors in rats at clinically relevant exposures. It is unknown whether the drugs cause thyroid C-cell tumors, including MTC, in humans. The drugs are contraindicated in patients with personal or family history of MTC and in patients with MEN2.",
+  },
+  {
+    question: "Did the 2023 BMJ French cohort study find a thyroid cancer link?",
+    answer:
+      "Yes — Bezin et al. published a 2023 French national cohort study finding a statistically significant elevated risk of thyroid cancer in GLP-1 users at 1-3 years of cumulative exposure (adjusted hazard ratio approximately 1.58). The signal triggered formal regulatory reviews. The EMA Pharmacovigilance Risk Assessment Committee in October 2023 concluded that no causal association has been established and the available data do not support a change to product information. The FDA reached the same conclusion.",
+  },
+  {
+    question: "Should I get my thyroid checked before starting a GLP-1?",
+    answer:
+      "The FDA labels do NOT recommend routine thyroid ultrasound or calcitonin monitoring before or during GLP-1 therapy in low-risk patients. The positive predictive value of these tests in an asymptomatic population is low and the false positive rate would produce more harm than benefit. If you have a personal or family history of MTC, MEN2, or any thyroid nodule, discuss with your prescriber and an endocrinologist before starting.",
+  },
+  {
+    question: "Does GLP-1 cause pancreatic cancer?",
+    answer:
+      "No. The early-2010s pancreatic cancer signal from FAERS reports has not been confirmed in subsequent prospective cohort studies and meta-analyses. The Pinto 2019 meta-analysis with trial sequential analysis found no statistically significant pancreatic cancer signal. The pancreatitis warning in the labels is real, but the pancreatic cancer signal is now considered not to have been substantiated.",
+  },
+];
 
 const SLUG = "does-glp1-cause-cancer-mtc-thyroid-evidence";
 
@@ -120,6 +154,7 @@ export default function GlpCancerArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <FaqSchema items={FAQ_ITEMS} />
       <p
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"

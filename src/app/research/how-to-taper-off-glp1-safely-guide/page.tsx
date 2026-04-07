@@ -3,6 +3,34 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
+
+const HOW_TO_STEPS: HowToStep[] = [
+  {
+    name: "Talk to your prescriber before changing anything",
+    text: "Stopping a GLP-1 is a medical decision, not a self-care choice. Get a written taper plan from the clinician who prescribed it. If you have type 2 diabetes, the loss of glycemic control on stopping is the bigger concern — never stop a diabetes GLP-1 on your own.",
+  },
+  {
+    name: "Step down through the labeled doses, not cold turkey",
+    text: "Standard practice is to step back through the labeled titration doses in reverse — for example, Wegovy 2.4 mg → 1.7 mg → 1.0 mg → 0.5 mg → 0.25 mg → stop, with 4 weeks at each step. Same pattern for Zepbound and other GLP-1s. The slow taper smooths the metabolic transition and helps minimize rebound nausea.",
+  },
+  {
+    name: "Front-load protein and resistance training during the taper",
+    text: "Protein intake of at least 0.7-1.0 g per pound of target body weight, plus 2-3 strength training sessions per week, is the most effective lever for preserving lean mass during the discontinuation phase. The lean mass you keep is what holds the metabolic floor as the appetite suppression fades.",
+  },
+  {
+    name: "Track weight weekly during the taper and for 6 months after",
+    text: "Weekly home weigh-ins (same time of day, after voiding, before eating) catch rebound early. The STEP-4 trial showed that patients who stopped semaglutide regained roughly 67% of the lost weight within a year. The earlier you catch a regain trend, the cheaper the intervention.",
+  },
+  {
+    name: "Have a maintenance plan ready before you stop the last dose",
+    text: "Whatever you used to lose the weight (caloric deficit, food tracking, structured meals, training schedule) needs to scale up to fill the gap left by the GLP-1's appetite suppression. Build the maintenance routine 4-8 weeks before stopping, not after.",
+  },
+  {
+    name: "Watch for the rebound red flags",
+    text: "Persistent hunger above pre-GLP-1 baseline, food preoccupation, weight regain over 5 lb in any 4-week window, or return of pre-GLP-1 metabolic markers (BP, A1C, lipids) — any of these is a reason to call your prescriber and discuss restarting at a lower dose.",
+  },
+];
 
 const SLUG = "how-to-taper-off-glp1-safely-guide";
 
@@ -72,6 +100,12 @@ export default function TaperingGuideArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <HowToSchema
+        name="How to Taper Off a GLP-1 (Wegovy, Ozempic, Zepbound, Mounjaro) Safely"
+        description="Step-by-step guide to discontinuing a GLP-1 receptor agonist while minimizing rebound weight regain. Covers the dose-step-down protocol, lean mass preservation, weight tracking, and the rebound red flags that mean you should call your prescriber."
+        steps={HOW_TO_STEPS}
+        url="https://weightlossrankings.org/research/how-to-taper-off-glp1-safely-guide"
+      />
       <p data-speakable="lead">
         There is <strong>no FDA-approved tapering schedule</strong>{" "}
         for semaglutide or tirzepatide. The Wegovy and Zepbound

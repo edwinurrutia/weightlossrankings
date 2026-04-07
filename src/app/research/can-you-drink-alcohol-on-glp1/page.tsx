@@ -3,8 +3,44 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema, { type FaqItem } from "@/components/research/FaqSchema";
 
 const SLUG = "can-you-drink-alcohol-on-glp1";
+
+// FAQPage source — verbatim Q&A from the article body. Plain-text
+// answers under 300 chars each so Google's SERP card renders cleanly.
+const FAQ_ITEMS: FaqItem[] = [
+  {
+    question: "Is alcohol contraindicated on a GLP-1?",
+    answer:
+      "No. Alcohol is not listed in Section 7 (Drug Interactions) of the Wegovy, Zepbound, Ozempic, or Mounjaro prescribing information. There is no formal prohibition. But that is not the same as 'safe in any quantity for everyone' — most patients report a marked drop in tolerance and the pancreatitis risk in the boxed warning interacts with the well-known alcohol-pancreatitis link.",
+  },
+  {
+    question: "Does alcohol affect GLP-1 efficacy?",
+    answer:
+      "There is no published evidence that moderate alcohol use reduces the weight-loss efficacy of semaglutide or tirzepatide. However, alcohol is empty calories (7 kcal/g) that displace protein intake, which can contribute to lean-mass loss during rapid weight loss. Heavy alcohol use also increases pancreatitis risk on top of the GLP-1 boxed warning.",
+  },
+  {
+    question: "Does GLP-1 reduce alcohol cravings?",
+    answer:
+      "Yes — multiple lines of evidence now support this. The Hendershot 2025 JAMA Psychiatry RCT showed semaglutide significantly reduced drinks per drinking day and alcohol cravings vs placebo over 9 weeks in adults with alcohol use disorder. The Klausen 2022 exenatide RCT showed brain-imaging reductions in alcohol-cue reactivity. Mechanism appears to be central, not gastric.",
+  },
+  {
+    question: "Can I get drunk faster on Wegovy or Zepbound?",
+    answer:
+      "Most patients report a marked drop in alcohol tolerance — a drink or two producing the effect that previously required three or four. The mechanism is consistent with slowed gastric emptying changing the blood-alcohol curve. Plan for a smaller volume than your pre-GLP-1 baseline.",
+  },
+  {
+    question: "Can I drink alcohol on insulin or sulfonylurea + GLP-1?",
+    answer:
+      "Talk to your prescriber first. Alcohol can produce hypoglycemia by inhibiting hepatic gluconeogenesis. Combined with insulin or a sulfonylurea (glipizide, glyburide, glimepiride), the hypoglycemia risk goes up substantially. Adding a GLP-1 increases the risk further. If you do drink, drink only with food and check your blood glucose more often.",
+  },
+  {
+    question: "Can alcohol cause pancreatitis on GLP-1?",
+    answer:
+      "Acute pancreatitis is in the boxed warning of the Wegovy and Zepbound labels. Alcohol is one of the most common causes of acute pancreatitis in the general population. The combination is not formally documented in trials but is biologically plausible. Severe abdominal pain (especially radiating to the back), nausea, and vomiting on a GLP-1 with recent heavy drinking is a reason to seek emergency care.",
+  },
+];
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -97,6 +133,7 @@ export default function AlcoholArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <FaqSchema items={FAQ_ITEMS} />
       <p
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
