@@ -226,6 +226,34 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Adolescents", "PubMed sourced"],
   },
   {
+    slug: "glp1-pipeline-2026-survodutide-maridebart-ecnoglutide",
+    title:
+      "Beyond Wegovy and Zepbound: Three Pipeline GLP-1 Drugs That Could Reach Approval in 2026-2027",
+    description:
+      "Survodutide (Boehringer Ingelheim/Zealand), maridebart cafraglutide (MariTide, Amgen), and ecnoglutide (Sciwind/Pfizer) are the three most-watched GLP-1 pipeline drugs that aren't being made by Lilly or Novo. We walk through the verified phase 2 and phase 3 data on each, the mechanisms, and where they fit in the post-CagriSema, post-retatrutide landscape.",
+    excerpt:
+      "Lilly and Novo Nordisk dominate the public conversation about GLP-1 weight loss drugs because they make every drug currently on the US market. But the pipeline behind them includes three serious challengers from other companies. Survodutide (Boehringer Ingelheim/Zealand) is a glucagon + GLP-1 dual agonist with phase 2 data showing up to 19% weight loss and a phase 3 SYNCHRONIZE program enrolled. Maridebart cafraglutide (MariTide, Amgen) is a once-monthly GLP-1 agonist + GIP receptor antagonist that produced up to 16-20% weight loss in phase 2 (NEJM 2025). Ecnoglutide (Sciwind, licensed to Pfizer in China) is a biased GLP-1 agonist with a positive SLIMMER phase 3 readout (Lancet Diabetes Endocrinology 2025) and Chinese NMPA approval. Here's the verified evidence for each.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 11,
+    citations: 6,
+    tags: ["Pipeline", "Survodutide", "MariTide"],
+  },
+  {
+    slug: "pcab-accreditation-compounding-pharmacy-investigation",
+    title:
+      "PCAB Accreditation: What It Actually Means When a Compounding Pharmacy Has It (and Doesn't)",
+    description:
+      "PCAB (Pharmacy Compounding Accreditation Board) accreditation is the most-cited quality marker in the compounded GLP-1 industry, but very few patients understand what it actually verifies — or that the majority of US 503A compounding pharmacies don't have it. We explain what PCAB accreditation does and doesn't guarantee, what USP 797/795 compliance means in practice, and how to ask a telehealth provider the right questions about their fulfillment pharmacy.",
+    excerpt:
+      "Compounded GLP-1 telehealth providers love to advertise that their fulfillment pharmacy has PCAB accreditation. But what does PCAB accreditation actually verify? What does it not verify? And how many of the 7,500+ compounding pharmacies in the US actually have it? This investigation walks through the PCAB program in plain language, explains the difference between PCAB, NABP, ACHC, FDA 503B registration, and state board licensure, and gives patients the specific questions to ask any compounded GLP-1 provider before they place a first order.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-06",
+    readMinutes: 10,
+    citations: 5,
+    tags: ["Compounding", "PCAB", "Pharmacy quality"],
+  },
+  {
     slug: "foundayo-orforglipron-fda-approval-2026",
     title:
       "Foundayo (orforglipron) Approved: The First Once-Daily Oral GLP-1 Pill for Weight Loss",
