@@ -35,6 +35,19 @@ export interface ResearchArticle {
   kind: ResearchKind;
   /** ISO YYYY-MM-DD. The date the underlying analysis was finalized. */
   publishedDate: string;
+  /**
+   * ISO YYYY-MM-DD. The date the article was last meaningfully
+   * edited (content correction, new evidence, refreshed pricing,
+   * URL rename, etc.). Optional — falls back to publishedDate when
+   * absent. Surfaces in:
+   *   - JSON-LD dateModified (ScholarlyArticle + MedicalWebPage)
+   *   - Visible "Updated [Date]" line in the article header
+   *   - Sitemap lastModified
+   * Bump this whenever an article's content changes meaningfully.
+   * Trivial copy edits (typo fixes, link renames) don't need to
+   * trigger an update — only changes a reader would care about.
+   */
+  lastUpdated?: string;
   /** Estimated reading time, in minutes, of the static prose only. */
   readMinutes: number;
   /** Number of PubMed / FDA / primary-source citations in the body. */
@@ -53,6 +66,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "We tracked monthly cash prices across the entire telehealth market for compounded semaglutide and tirzepatide. Here's the median, the cheapest decile, and the gap to brand-name Wegovy — updated live as our dataset changes.",
     kind: "data-investigation",
     publishedDate: "2026-04-06",
+    lastUpdated: "2026-04-07",
     readMinutes: 9,
     citations: 6,
     tags: ["Pricing data", "Compounded GLP-1", "Live dataset"],
@@ -95,6 +109,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "Foundayo is the first daily oral GLP-1 pill for weight loss, but it has strict timing rules most patients get wrong. We walk through the full 20-week titration, the 30-minute fasted morning window, the absorption pitfall that wrecks results, and the 30-day backup contraception rule from the label.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
     readMinutes: 12,
     citations: 5,
     tags: ["Foundayo", "Orforglipron", "FDA sourced"],
@@ -149,6 +164,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "We track every FDA warning letter to a compounded GLP-1 provider in our editorial database. This investigation breaks down the violation categories, the most-cited statutes, the issuing offices, and the patterns that should make you cautious about specific business models. The dataset is rebuilt continuously from the FDA's public warning-letters index.",
     kind: "data-investigation",
     publishedDate: "2026-04-06",
+    lastUpdated: "2026-04-07",
     readMinutes: 10,
     // citations is computed dynamically from the FDA warning letters
     // JSON file at module load time so it stays in sync as the
@@ -166,6 +182,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "The cheapest compounded semaglutide on the market sits at $99/month, advertised by several telehealth providers. We verified each one against our pricing index and pharmacy database to answer the question: is the floor price legitimate, or are there hidden gotchas?",
     kind: "data-investigation",
     publishedDate: "2026-04-06",
+    lastUpdated: "2026-04-07",
     readMinutes: 9,
     citations: 8,
     tags: ["Pricing", "Compounded GLP-1", "Live dataset"],
@@ -208,6 +225,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "We audited GLP-1 weight loss coverage across the 10 largest US health insurers, which combined cover the vast majority of insured Americans. The pattern is uniform and frustrating: every insurer in our index technically covers GLP-1 medications under at least some plans, every insurer requires prior authorization, and not a single one offers consistent, plan-wide approval. This is what \"varies by plan\" actually means in practice.",
     kind: "data-investigation",
     publishedDate: "2026-04-06",
+    lastUpdated: "2026-04-07",
     readMinutes: 9,
     citations: 5,
     tags: ["Insurance", "Coverage", "Live dataset"],
@@ -292,6 +310,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "Insurance coverage for GLP-1 weight loss drugs is the most volatile category in employer pharmacy benefits. The 2025-2026 landscape changed dramatically: the original CMS proposed rule allowing Wegovy under Part D was rejected in April 2025, then reversed by a November 2025 Trump administration deal that created a Medicare GLP-1 Bridge program (July-December 2026) and the BALANCE permanent model starting 2027. Medicaid coverage shrank from 16 states in October 2025 to 13 in January 2026 after California and Pennsylvania ended their programs. Commercial coverage expanded — 49% of large employers covered GLP-1s in 2025 per Mercer. Tricare changed too, dropping coverage for retirees on Medicare. Here's the verified state of coverage across every major US payer category, with prior auth criteria and the questions to ask your benefits administrator.",
     kind: "data-investigation",
     publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
     readMinutes: 14,
     citations: 8,
     tags: ["Insurance", "Medicare", "Medicaid", "Coverage"],
@@ -320,6 +339,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "Our broader side effects investigation covered the headline GI tolerability numbers. This article answers the specific Q&A-style queries patients search for: 'does semaglutide cause headaches' (14.2% in STEP-1 vs 10% placebo), 'does tirzepatide cause sulfur burps' (yes — slowed gastric emptying changes the bacterial fermentation profile), 'does semaglutide cause depression' (no signal in 2024 EMA/FDA review of RCTs, but a separate observational signal exists), 'does GLP-1 cause brain fog' (an emerging FDA pharmacovigilance signal as of 2025), and 13 other specific symptom questions. Every rate is sourced from the STEP-1 and SURMOUNT-1 NEJM publications and the Wegovy and Zepbound FDA prescribing information.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
     readMinutes: 12,
     citations: 7,
     tags: ["Side effects", "FAQ", "Patient guide"],
@@ -348,6 +368,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "Foundayo (orforglipron), Eli Lilly's first oral GLP-1 for weight loss, became commercially available on April 6, 2026 — five days after its FDA approval. The rollout is in its first weeks, so the provider directory is still small but growing rapidly. This article tracks which US telehealth platforms and pharmacies are confirmed as Foundayo channels as of April 2026, the pricing tiers at each (verified directly from the provider websites), how the dispensing chain actually works (most channels go through LillyDirect for the actual drug), and the framework for finding a Foundayo prescription if your existing telehealth platform has not added it yet. We will update this list weekly as more providers come online.",
     kind: "data-investigation",
     publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
     readMinutes: 9,
     citations: 6,
     tags: ["Foundayo", "Where to buy", "Provider directory", "Pricing 2026", "Live dataset"],
@@ -362,6 +383,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "Foundayo (orforglipron), the first oral non-peptide GLP-1, was approved by the FDA on April 1, 2026 as a daily pill for weight management. It enters a market dominated by two injectable heavyweights: Wegovy (semaglutide 2.4 mg) and Zepbound (tirzepatide 15 mg). The three drugs differ on every dimension that matters to a patient: effect size (Wegovy 14.9% in STEP-1, Zepbound 20.9% in SURMOUNT-1, Foundayo 11.1% at the FDA-approved 17.2 mg labeled max dose per the prescribing information), delivery (weekly injection vs daily pill), cost (cash-pay $499 NovoCare vs $449 LillyDirect vs $25-$149 Foundayo), titration speed, side effect profile, and access. This is the head-to-head, with the trial data, the pricing tables, and the case for picking each one.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
     readMinutes: 13,
     citations: 11,
     tags: ["Foundayo", "Comparison", "Trial data", "Pricing 2026", "Patient guide"],
@@ -446,6 +468,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "Most patients don't know there are at least four legitimate paths to a GLP-1 prescription in the US in 2026, each with different costs, different paperwork, and different waiting times. This buyer-funnel guide walks through all of them: the insurance route (eligibility, BMI documentation, step therapy, prior authorization), the brand-name direct-pay route (Wegovy NovoCare and Zepbound LillyDirect, with the actual 2026 price tiers), the compounded telehealth route ($150-$400/mo from licensed 503A pharmacies), and the new Foundayo oral route at $25-$149/mo with a savings card. Includes a checklist of red flags for illegitimate sellers and a decision tree for which path likely fits your situation.",
     kind: "data-investigation",
     publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
     readMinutes: 12,
     citations: 8,
     tags: ["Buyer guide", "Pricing 2026", "Insurance", "Compounded", "Patient guide"],
@@ -460,6 +483,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "Most patients never get a hands-on injection lesson — they get a pen, a quick clinic demo if they're lucky, and a YouTube link. This guide is the written reference: hand-by-hand, click-by-click, for every common GLP-1 delivery format. Pre-filled single-use pens (Wegovy, Zepbound). Multi-dose pens (Ozempic, Mounjaro). Vials with regular syringes. Compounded vials with U-100 insulin syringes. Includes the FDA-recommended injection sites, the 90° vs 45° angle decision, the air-bubble issue, the common skin reactions and how to tell them apart from cellulitis, and the troubleshooting checklist for partial doses, broken needles, and bent needles.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
     readMinutes: 13,
     citations: 6,
     tags: ["Injection technique", "Patient guide", "Pens", "Syringes"],
@@ -656,6 +680,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "Lilly and Novo Nordisk dominate the public conversation about GLP-1 weight loss drugs because they make every drug currently on the US market. But the pipeline behind them includes three serious challengers from other companies. Survodutide (Boehringer Ingelheim/Zealand) is a glucagon + GLP-1 dual agonist with phase 2 data showing up to 19% weight loss and a phase 3 SYNCHRONIZE program enrolled. Maridebart cafraglutide (MariTide, Amgen) is a once-monthly GLP-1 agonist + GIP receptor antagonist that produced up to 16-20% weight loss in phase 2 (NEJM 2025). Ecnoglutide (Sciwind, licensed to Pfizer in China) is a biased GLP-1 agonist with a positive SLIMMER phase 3 readout (Lancet Diabetes Endocrinology 2025) and Chinese NMPA approval. Here's the verified evidence for each.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-06",
+    lastUpdated: "2026-04-07",
     readMinutes: 11,
     citations: 6,
     tags: ["Pipeline", "Survodutide", "MariTide"],
@@ -684,6 +709,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "On April 1, 2026, the FDA approved Foundayo (orforglipron), Eli Lilly's once-daily oral GLP-1 pill for chronic weight management — the first non-peptide small-molecule GLP-1 receptor agonist ever approved for obesity. The FDA-approved 17.2 mg labeled maintenance dose produced approximately 11.1% mean weight loss (about 24.9 lbs) in adults without type 2 diabetes at 72 weeks per the prescribing information; the supra-labeled 36 mg arm in the ATTAIN-1 phase 3 trial (Wharton et al. NEJM 2025, PMID 40960239) reached 12.4% on the efficacy estimand and 11.2% on the treatment-regimen estimand. Lilly is launching at $25/month with commercial coverage and $149/month for self-pay through LillyDirect, making this the most accessible branded GLP-1 to date. Here's the verified trial data, dosing, safety profile, and how it compares to injectable Wegovy and Zepbound.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-06",
+    lastUpdated: "2026-04-07",
     readMinutes: 12,
     citations: 5,
     tags: ["Orforglipron", "Foundayo", "FDA approval"],
@@ -698,6 +724,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "CagriSema is Novo Nordisk's combination of cagrilintide (an amylin analog) and semaglutide (a GLP-1 agonist) — designed to outperform semaglutide alone by adding a second appetite-suppression mechanism. The REDEFINE 1 trial in 3,400+ adults with overweight or obesity (no diabetes) reported 20.4% mean weight loss at 68 weeks — 22.7% on the adherent estimand — versus 14.9% with semaglutide alone, 11.5% with cagrilintide alone, and 3.0% with placebo. REDEFINE 2 in patients with type 2 diabetes showed 13.7% vs 3.4% placebo. The results missed the 25% benchmark Novo had guided investors toward, but still represent the largest weight loss ever shown for an injectable combination of approved or near-approved drugs. Novo has filed an NDA. Here's the verified trial data and what it means for patients.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-06",
+    lastUpdated: "2026-04-07",
     readMinutes: 13,
     citations: 6,
     tags: ["CagriSema", "Cagrilintide", "Pipeline"],
@@ -712,6 +739,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "Retatrutide (LY3437943) is Eli Lilly's investigational triple agonist — it activates GLP-1, GIP, and glucagon receptors simultaneously. The phase 2 trial published in NEJM 2023 (Jastreboff et al.) showed up to 24.2% body weight reduction at 48 weeks at the highest dose, the largest weight loss any pharmacological obesity therapy had ever produced in a controlled trial. The first phase 3 readout, TRIUMPH-4 (n=445, knee osteoarthritis + obesity, December 2025), confirmed and extended that signal: 28.7% mean weight loss (about 71 pounds) and 75.8% reduction in OA pain at the highest dose. Seven additional TRIUMPH phase 3 readouts are expected throughout 2026. Here's the verified trial data, the proposed mechanism, and the new safety signal flagged in the TRIUMPH program.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-06",
+    lastUpdated: "2026-04-07",
     readMinutes: 13,
     citations: 6,
     tags: ["Retatrutide", "Pipeline", "Triple agonist"],
@@ -754,6 +782,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
       "Patient-reported and case-series accounts of semaglutide reducing alcohol cravings have made the rounds on TikTok and in the lay press for two years. The trial-level evidence is much narrower than the social-media coverage suggests. Exactly one completed Phase 2 randomized trial of semaglutide for alcohol use disorder has been published as of 2026 (Hendershot et al., JAMA Psychiatry, n=48). One additional Phase 2 trial (SEMALCO) is in progress. The preclinical animal-model evidence is real and points at a specific mesolimbic dopamine mechanism. But this is not yet an FDA-approved indication, the safety profile in patients with active heavy alcohol use is unstudied, and the standard of care remains naltrexone, acamprosate, and disulfiram. Here's the honest evidence map.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-06",
+    lastUpdated: "2026-04-07",
     readMinutes: 13,
     citations: 8,
     tags: ["Semaglutide", "Alcohol use disorder", "PubMed sourced"],

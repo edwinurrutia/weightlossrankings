@@ -454,13 +454,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "efectos-secundarios-glp1-preguntas-respuestas",
   ]);
 
-  // Dynamic: /research/[slug] — feed real publishedDate. Excludes the
-  // Spanish slugs above; those are emitted under /es/research/[slug].
+  // Dynamic: /research/[slug] — feed lastUpdated when present, else
+  // publishedDate. Excludes the Spanish slugs above; those are
+  // emitted under /es/research/[slug] with the same date precedence.
   const researchPages: MetadataRoute.Sitemap = RESEARCH_ARTICLES.filter(
     (a) => !SPANISH_RESEARCH_SLUGS.has(a.slug),
   ).map((a) => ({
     url: `${BASE_URL}/research/${a.slug}`,
-    lastModified: safeDate(a.publishedDate),
+    lastModified: safeDate(a.lastUpdated ?? a.publishedDate),
     changeFrequency: "weekly",
     priority: 0.85,
   }));
@@ -487,7 +488,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     (a) => SPANISH_RESEARCH_SLUGS.has(a.slug),
   ).map((a) => ({
     url: `${BASE_URL}/es/research/${a.slug}`,
-    lastModified: safeDate(a.publishedDate),
+    lastModified: safeDate(a.lastUpdated ?? a.publishedDate),
     changeFrequency: "weekly",
     priority: 0.85,
   }));

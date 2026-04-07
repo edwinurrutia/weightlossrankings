@@ -68,6 +68,19 @@ export default function ResearchArticleLayout({
   dataAsOf,
   children,
 }: ResearchArticleLayoutProps) {
+  // dateModified resolution order:
+  //   1. dataAsOf prop (live datasets like the FDA letters tracker
+  //      pass the latest data point's date so the schema reflects
+  //      the actual freshness, not a stale publish date)
+  //   2. article.lastUpdated (registry field — bump when content
+  //      meaningfully changes, e.g., trial-number corrections,
+  //      pricing refreshes, URL renames)
+  //   3. article.publishedDate (fallback — first-published date)
+  // The earliest of these is what Google ranks against when it
+  // computes "freshness" for time-sensitive YMYL queries.
+  const dateModified =
+    dataAsOf ?? article.lastUpdated ?? article.publishedDate;
+
   // Research articles use ScholarlyArticle (a more specific Article
   // subtype) because they are first-party data investigations and
   // scientific deep-dives, not editorial blog posts. ScholarlyArticle
@@ -80,7 +93,7 @@ export default function ResearchArticleLayout({
     description: article.description,
     image: `${SITE_URL}/research/${article.slug}/opengraph-image`,
     datePublished: article.publishedDate,
-    dateModified: dataAsOf ?? article.publishedDate,
+    dateModified,
     author: {
       "@type": "Organization",
       name: "Weight Loss Rankings",
@@ -169,7 +182,7 @@ export default function ResearchArticleLayout({
         description: article.description,
         url: `${SITE_URL}/research/${article.slug}`,
         datePublished: article.publishedDate,
-        dateModified: dataAsOf ?? article.publishedDate,
+        dateModified,
         inLanguage: "en-US",
         // medicalAudience tells Google's knowledge graph who this
         // page is FOR. "Patient" is the most-recognized value.
@@ -200,7 +213,7 @@ export default function ResearchArticleLayout({
         // Same value as dateModified for now; will diverge once we
         // add a separate `reviewedDate` field for periodic editorial
         // re-reviews vs minor copy edits.
-        lastReviewed: dataAsOf ?? article.publishedDate,
+        lastReviewed: dateModified,
         reviewedBy: {
           "@type": "Organization",
           name: "Weight Loss Rankings",
@@ -271,11 +284,22 @@ export default function ResearchArticleLayout({
           <span>{article.citations} citations</span>
           <span>·</span>
           <span>
-            Data as of{" "}
+            Published{" "}
             <strong className="text-brand-text-primary">
-              {dataAsOf ?? article.publishedDate}
+              {article.publishedDate}
             </strong>
           </span>
+          {dateModified !== article.publishedDate && (
+            <>
+              <span>·</span>
+              <span>
+                Updated{" "}
+                <strong className="text-brand-text-primary">
+                  {dateModified}
+                </strong>
+              </span>
+            </>
+          )}
         </div>
 
         {/* Tag chips */}
