@@ -11,6 +11,18 @@
  * Adding a new piece: append to RESEARCH_ARTICLES and create the route.
  */
 
+import fdaWarningLettersData from "@/data/fda-warning-letters.json";
+
+// Dynamic citation count for the FDA warning letters investigation.
+// Reads the live dataset at module load (server-side) so the count
+// stays in sync with the bi-weekly scraper pull instead of going
+// stale every time the dataset grows. Surfaces in:
+//   - the article's <span>{citations} citations</span> header
+//   - the JSON-LD ScholarlyArticle schema (Google Scholar)
+//   - the /research index card subtitle
+//   - the homepage Latest Research card subtitle
+const FDA_WARNING_LETTERS_COUNT = (fdaWarningLettersData as unknown[]).length;
+
 export type ResearchKind = "data-investigation" | "scientific-deep-dive";
 
 export interface ResearchArticle {
@@ -130,15 +142,18 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "fda-warning-letters-glp1",
     title:
-      "FDA Warning Letters to Compounded GLP-1 Telehealth Providers: 2025-2026 Investigation",
+      "FDA Warning Letters to Compounded GLP-1 Telehealth Providers: The Live Investigation",
     description:
-      "Every FDA warning letter sent to a compounded GLP-1 telehealth provider or compounding pharmacy in 2025 and 2026, with violation patterns, issuing offices, and what's actually being cited.",
+      "Every FDA warning letter we have identified that targets a compounded GLP-1 telehealth provider, compounding pharmacy, or related weight-loss business — with violation patterns, issuing offices, and what is actually being cited. Live dataset, updated bi-weekly via automated FDA scraper.",
     excerpt:
-      "We track every FDA warning letter to a compounded GLP-1 provider in our editorial database. This investigation breaks down the violation categories, the most-cited statutes, the issuing offices, and the patterns that should make you cautious about specific business models.",
+      "We track every FDA warning letter to a compounded GLP-1 provider in our editorial database. This investigation breaks down the violation categories, the most-cited statutes, the issuing offices, and the patterns that should make you cautious about specific business models. The dataset is rebuilt continuously from the FDA's public warning-letters index.",
     kind: "data-investigation",
     publishedDate: "2026-04-06",
     readMinutes: 10,
-    citations: 17,
+    // citations is computed dynamically from the FDA warning letters
+    // JSON file at module load time so it stays in sync as the
+    // bi-weekly scraper grows the dataset. No hardcoded count.
+    citations: FDA_WARNING_LETTERS_COUNT,
     tags: ["FDA enforcement", "Compounded GLP-1", "Live dataset"],
   },
   {
