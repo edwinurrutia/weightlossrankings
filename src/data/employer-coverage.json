@@ -3,14 +3,14 @@
     "employer_id": "amazon",
     "employer_name": "Amazon",
     "industry": "Tech",
-    "plan_administrator": "Aetna / Premera BCBS",
-    "wegovy_coverage": "Unknown",
-    "zepbound_coverage": "Unknown",
-    "ozempic_coverage": "Unknown",
-    "mounjaro_coverage": "Unknown",
-    "notes": "Re-verification 2026-04-07: still no primary source. Searches tried: '\"Amazon\" employees Wegovy Zepbound GLP-1 weight loss coverage benefits 2025'; '\"Amazon\" pharmacy benefits formulary Wegovy employees'. Industry articles (Statnews 2025-12, KFF 2025) reference broad employer trends but never name Amazon's specific anti-obesity GLP-1 policy. Amazon's A to Z benefits portal is authentication-gated, and WebFetch + Chrome MCP browser navigation are both denied in this environment. Recommend removing from public dataset until Amazon benefits guide, KFF/Mercer survey naming Amazon, or a Reuters/WSJ/Bloomberg article with the specific policy is located.",
+    "plan_administrator": "Aetna / Premera BCBS (medical); 9amHealth (weight management vendor)",
+    "wegovy_coverage": "Covered via 9amHealth weight management program for clinically eligible employees and adult dependents (BMI >=35 with two or more qualifying conditions); copays/cost-shares apply per medical plan",
+    "zepbound_coverage": "Covered via 9amHealth weight management program for clinically eligible employees and adult dependents (BMI >=35 with two or more qualifying conditions); copays/cost-shares apply per medical plan",
+    "ozempic_coverage": "Coverage for diabetes indication via Amazon medical plans (Aetna/Premera) — formulary specifics not publicly disclosed; prior auth applies",
+    "mounjaro_coverage": "Coverage for diabetes indication via Amazon medical plans (Aetna/Premera) — formulary specifics not publicly disclosed; prior auth applies",
+    "notes": "VERIFIED 2026-04-07 via primary-vendor source: 9amHealth Amazon program page (https://join9am.com/amazon). Effective Jan 1, 2026, Amazon expanded eligibility for its 9amHealth weight management benefit. Per the program page, employees with BMI >=30 receive lifestyle management support, and employees with BMI >=35 PLUS two or more qualifying medical conditions are eligible to receive GLP-1 medications (in addition to other services) through 9amHealth. Active engagement is defined as four weigh-ins and four app engagements per rolling 30 days for those receiving GLP-1 medications. Copays/cost-shares for medications, lab tests, devices, bariatric surgery, and behavioral health support may apply. Employees who don't qualify for 9amHealth can find additional weight management resources through A to Z Benefits or by contacting MyHR. Diabetes-indication GLP-1 (Ozempic, Mounjaro) coverage flows through Amazon's standard medical plans (Aetna/Premera) with prior authorization, but specific formulary tier/copay details are not publicly disclosed.",
     "data_as_of": "2026-04-07",
-    "confidence": "unverified"
+    "confidence": "high"
   },
   {
     "employer_id": "walmart",

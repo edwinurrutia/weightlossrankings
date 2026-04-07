@@ -253,13 +253,11 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://alanmeds.com"
-      ],
-      "confidence": "medium",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-rollback-pending-live-verify",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "NEEDS LIVE WEBFETCH VERIFICATION. Earlier Wave 3 exclusion list was based on Google search snippets, not direct page reads. Eden was just falsified live (search said excludes 4 states; actually serves all 50 per their FAQ). The other Wave 3 search-pass exclusion lists are equally unreliable. Existing state list (50 states) preserved as a placeholder pending live verification. Provider homepage does not publish a state list \u2014 to verify, would need to contact provider support or test signup."
     }
   },
   {
@@ -781,13 +779,11 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://bmimd.com"
-      ],
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-rollback-pending-live-verify",
+      "source_urls": [],
       "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "notes": "NEEDS LIVE WEBFETCH VERIFICATION. Earlier Wave 3 exclusion list was based on Google search snippets, not direct page reads. Eden was just falsified live (search said excludes 4 states; actually serves all 50 per their FAQ). The other Wave 3 search-pass exclusion lists are equally unreliable. Existing state list (50 states) preserved as a placeholder pending live verification. Provider homepage does not publish a state list \u2014 to verify, would need to contact provider support or test signup."
     }
   },
   {
@@ -1129,13 +1125,11 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://dollardadclub.com"
-      ],
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-rollback-pending-live-verify",
+      "source_urls": [],
       "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "notes": "NEEDS LIVE WEBFETCH VERIFICATION. Earlier Wave 3 exclusion list was based on Google search snippets, not direct page reads. Eden was just falsified live (search said excludes 4 states; actually serves all 50 per their FAQ). The other Wave 3 search-pass exclusion lists are equally unreliable. Existing state list (50 states) preserved as a placeholder pending live verification. Provider homepage does not publish a state list \u2014 to verify, would need to contact provider support or test signup."
     }
   },
   {
@@ -1227,7 +1221,7 @@
       "WI",
       "WY"
     ],
-    "affiliate_url": "https://www.eden.com",
+    "affiliate_url": "https://tryeden.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
@@ -1241,13 +1235,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-main-session-webfetch",
       "source_urls": [
-        "https://www.eden.com"
+        "https://tryeden.com"
       ],
-      "confidence": "medium",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "confidence": "high",
+      "notes": "Verified live via WebFetch 2026-04-07. Eden FAQ explicitly states: \"We are currently able to serve GLP-1 programs to all 50 states.\" Prescribes Ozempic, Wegovy, Zepbound, Mounjaro and compounded GLP-1s. Domain is tryeden.com (the old eden.com URL returns CSS only). Earlier Wave 3 search-pass exclusion-list claim (AR/LA/MS/NM excluded) was WRONG \u2014 Eden serves all 50 per their own page. CORRECTED."
     }
   },
   {
@@ -1738,13 +1732,11 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://joinfridays.com"
-      ],
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-rollback-pending-live-verify",
+      "source_urls": [],
       "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "notes": "NEEDS LIVE WEBFETCH VERIFICATION. Earlier Wave 3 exclusion list was based on Google search snippets, not direct page reads. Eden was just falsified live (search said excludes 4 states; actually serves all 50 per their FAQ). The other Wave 3 search-pass exclusion lists are equally unreliable. Existing state list (50 states) preserved as a placeholder pending live verification. Provider homepage does not publish a state list \u2014 to verify, would need to contact provider support or test signup."
     }
   },
   {
@@ -2135,13 +2127,11 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://goodlifemeds.com"
-      ],
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-rollback-pending-live-verify",
+      "source_urls": [],
       "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "notes": "NEEDS LIVE WEBFETCH VERIFICATION. Earlier Wave 3 exclusion list was based on Google search snippets, not direct page reads. Eden was just falsified live (search said excludes 4 states; actually serves all 50 per their FAQ). The other Wave 3 search-pass exclusion lists are equally unreliable. Existing state list (50 states) preserved as a placeholder pending live verification. Provider homepage does not publish a state list \u2014 to verify, would need to contact provider support or test signup."
     }
   },
   {
@@ -2345,13 +2335,11 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://henrymeds.com"
-      ],
-      "confidence": "medium",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-rollback-pending-live-verify",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "NEEDS LIVE WEBFETCH VERIFICATION. Earlier Wave 3 exclusion list was based on Google search snippets, not direct page reads. Eden was just falsified live (search said excludes 4 states; actually serves all 50 per their FAQ). The other Wave 3 search-pass exclusion lists are equally unreliable. Existing state list (50 states) preserved as a placeholder pending live verification. Provider homepage does not publish a state list \u2014 to verify, would need to contact provider support or test signup."
     }
   },
   {
@@ -2768,13 +2756,11 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://ivimhealth.com"
-      ],
-      "confidence": "medium",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-rollback-pending-live-verify",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "NEEDS LIVE WEBFETCH VERIFICATION. Earlier Wave 3 exclusion list was based on Google search snippets, not direct page reads. Eden was just falsified live (search said excludes 4 states; actually serves all 50 per their FAQ). The other Wave 3 search-pass exclusion lists are equally unreliable. Existing state list (50 states) preserved as a placeholder pending live verification. Provider homepage does not publish a state list \u2014 to verify, would need to contact provider support or test signup."
     }
   },
   {
@@ -2907,56 +2893,7 @@
       "Tirzepatide"
     ],
     "states_available": [
-      "AL",
-      "AK",
-      "AZ",
-      "AR",
-      "CA",
-      "CO",
-      "CT",
-      "DE",
-      "FL",
-      "GA",
-      "HI",
-      "ID",
-      "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
-      "LA",
-      "ME",
-      "MD",
-      "MA",
-      "MI",
-      "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
-      "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UT",
-      "VT",
-      "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
+      "CA"
     ],
     "affiliate_url": "https://jumpstartmd.com",
     "affiliate_network": "Direct",
@@ -2971,13 +2908,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-main-session-webfetch",
       "source_urls": [
         "https://jumpstartmd.com"
       ],
-      "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "confidence": "high",
+      "notes": "Verified live via WebFetch 2026-04-07. JumpstartMD operates exclusively in California with 14 physical locations (Burlingame, Campbell, Irvine, Marin, Monterey Bay, Mountain View, Piedmont, Pleasanton, Redwood City, San Francisco x2, San Jose, Santa Cruz, Walnut Creek). Prescribes Ozempic, Wegovy, Mounjaro, Zepbound. Previously incorrectly marked as 50 states \u2014 CRITICAL BUG FIX."
     }
   },
   {
@@ -3189,13 +3126,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-main-session-webfetch",
       "source_urls": [
         "https://www.lemonaidhealth.com"
       ],
-      "confidence": "medium",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "confidence": "high",
+      "notes": "Verified live via WebFetch 2026-04-07. Lemonaid Health is \"a national telehealth company\" with \"medical team licensed in all 50 states.\" Prescribes compounded semaglutide, compounded tirzepatide (including microdosing), Zepbound vials, and Wegovy. GLP-1s start at $129/mo. Different corporate structures: Kansas/New Jersey/Texas have dedicated PAs; all other states served through LMND Medical Group Inc."
     }
   },
   {
@@ -3282,13 +3219,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-main-session-webfetch",
       "source_urls": [
-        "https://lifemd.com"
+        "https://lifemd.com/glp1"
       ],
-      "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "confidence": "high",
+      "notes": "Verified live via WebFetch 2026-04-07. LifeMD homepage explicitly states it operates as a \"50-state direct-to-patient telehealth company.\" Prescribes Wegovy (injection and oral pill), Zepbound, Mounjaro, and compounded semaglutide/tirzepatide. State licensing variation may apply at intake."
     }
   },
   {
@@ -3697,13 +3634,11 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://medvi.org"
-      ],
-      "confidence": "medium",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-rollback-pending-live-verify",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "NEEDS LIVE WEBFETCH VERIFICATION. Earlier Wave 3 exclusion list was based on Google search snippets, not direct page reads. Eden was just falsified live (search said excludes 4 states; actually serves all 50 per their FAQ). The other Wave 3 search-pass exclusion lists are equally unreliable. Existing state list (50 states) preserved as a placeholder pending live verification. Provider homepage does not publish a state list \u2014 to verify, would need to contact provider support or test signup."
     }
   },
   {
@@ -3740,56 +3675,21 @@
       "Tirzepatide"
     ],
     "states_available": [
-      "AL",
-      "AK",
       "AZ",
-      "AR",
-      "CA",
       "CO",
-      "CT",
-      "DE",
       "FL",
       "GA",
-      "HI",
-      "ID",
       "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
-      "LA",
-      "ME",
-      "MD",
       "MA",
-      "MI",
+      "MD",
       "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
       "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
       "OR",
       "PA",
       "RI",
-      "SC",
-      "SD",
-      "TN",
       "TX",
-      "UT",
-      "VT",
       "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
+      "WA"
     ],
     "affiliate_url": "https://joinmochi.com",
     "affiliate_network": "Direct",
@@ -3806,13 +3706,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-main-session-webfetch",
       "source_urls": [
         "https://joinmochi.com"
       ],
-      "confidence": "medium",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "confidence": "high",
+      "notes": "Verified live via WebFetch 2026-04-07. Mochi Health locations page confirms 15 states: AZ, CO, FL, GA, IL, MA, MD, MN, NY, OR, PA, RI, TX, VA, WA. Prescribes compounded semaglutide ($99/mo add-on) and compounded tirzepatide ($199/mo add-on). Previously incorrectly marked as 50 states \u2014 CRITICAL BUG FIX."
     }
   },
   {
@@ -5183,13 +5083,11 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://remedymeds.com"
-      ],
-      "confidence": "medium",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-rollback-pending-live-verify",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "NEEDS LIVE WEBFETCH VERIFICATION. Earlier Wave 3 exclusion list was based on Google search snippets, not direct page reads. Eden was just falsified live (search said excludes 4 states; actually serves all 50 per their FAQ). The other Wave 3 search-pass exclusion lists are equally unreliable. Existing state list (50 states) preserved as a placeholder pending live verification. Provider homepage does not publish a state list \u2014 to verify, would need to contact provider support or test signup."
     }
   },
   {
@@ -5810,7 +5708,7 @@
   },
   {
     "_id": "the-calibrate-clinic",
-    "name": "The Calibrate Clinic",
+    "name": "Oxford's Medical Weight Loss (The Calibrate Clinic)",
     "slug": "the-calibrate-clinic",
     "description": "Metabolic health clinic offering GLP-1 weight loss programs paired with behavioral coaching.",
     "category": "GLP-1 Provider",
@@ -5828,56 +5726,8 @@
       "Tirzepatide"
     ],
     "states_available": [
-      "AL",
-      "AK",
-      "AZ",
-      "AR",
-      "CA",
-      "CO",
-      "CT",
-      "DE",
-      "FL",
-      "GA",
-      "HI",
-      "ID",
-      "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
       "LA",
-      "ME",
-      "MD",
-      "MA",
-      "MI",
-      "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
-      "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UT",
-      "VT",
-      "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
+      "SC"
     ],
     "affiliate_url": "https://thecalibrateclinic.com",
     "affiliate_network": "Direct",
@@ -5892,13 +5742,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-main-session-webfetch",
       "source_urls": [
         "https://thecalibrateclinic.com"
       ],
-      "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "confidence": "high",
+      "notes": "Verified live via WebFetch 2026-04-07. thecalibrateclinic.com is OXFORD'S Medical Weight Loss, a brick-and-mortar clinic with two locations: Lafayette LA (913 South College Drive, Suite 201) and Clemson SC (864-210-9885 consultation). Prescribes compounded semaglutide and tirzepatide. NOT the same as the national Calibrate (joincalibrate.com) \u2014 these are entirely distinct entities. CRITICAL BUG FIX from previously claiming 50 states."
     }
   },
   {
@@ -7973,13 +7823,11 @@
     "best_for": "psychology + medication combo",
     "is_featured": false,
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://www.noom.com/med"
-      ],
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-4-rollback-pending-live-verify",
+      "source_urls": [],
       "confidence": "low",
-      "notes": "Initial seed data \u2014 needs manual verification"
+      "notes": "NEEDS LIVE WEBFETCH VERIFICATION. Earlier Wave 3 exclusion list was based on Google search snippets, not direct page reads. Eden was just falsified live (search said excludes 4 states; actually serves all 50 per their FAQ). The other Wave 3 search-pass exclusion lists are equally unreliable. Existing state list (41 states) preserved as a placeholder pending live verification. Provider homepage does not publish a state list \u2014 to verify, would need to contact provider support or test signup."
     }
   },
   {
