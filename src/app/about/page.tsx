@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Weight Loss Rankings",
+  title: "About Us",
   description:
     "Weight Loss Rankings is an independent review site that evaluates GLP-1 telehealth providers, weight loss programs, and supplements. Read the story behind the site, how it's built, and how it stays independent.",
   alternates: { canonical: "/about" },

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import CTAButton from "@/components/shared/CTAButton";
 
 export const metadata: Metadata = {
-  title: "Advertise on Weight Loss Rankings",
+  title: "Advertise With Us",
   description:
     "Reach thousands of high-intent weight loss buyers. Featured listings, sponsored placements, and newsletter sponsorships.",
   alternates: { canonical: "/advertise" },

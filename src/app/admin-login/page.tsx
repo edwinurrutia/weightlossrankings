@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AdminLoginForm from "./AdminLoginForm";
 
 export const metadata: Metadata = {
-  title: "Admin Sign In · Weight Loss Rankings",
+  title: "Admin Sign In",
   robots: { index: false, follow: false },
 };
 

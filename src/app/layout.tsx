@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import SiteChrome from "@/components/layout/SiteChrome";
@@ -91,11 +92,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Read the request pathname from the x-pathname header set by
+  // src/middleware.ts so we can set `<html lang>` correctly on the
+  // server. /es/* gets lang="es" so Google's crawler sees the right
+  // language attribute on first paint instead of having to wait for
+  // a client-side flip after hydration.
+  const headerStore = await headers();
+  const pathname = headerStore.get("x-pathname") ?? "";
+  const htmlLang = pathname.startsWith("/es") ? "es" : "en";
   // Enriched Organization schema. The richer this entity is, the
   // better Google's knowledge graph treats us — and on every single
   // page we render. Gets cited by Google's "About this result"
@@ -171,7 +180,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${inter.variable} ${plusJakartaSans.variable}`}>
+    <html lang={htmlLang} className={`${inter.variable} ${plusJakartaSans.variable}`}>
       <body className="font-sans antialiased">
         <GoogleAnalytics />
         <JsonLd data={organizationSchema} />

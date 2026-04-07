@@ -5,7 +5,7 @@ import BmiCalculator from "./BmiCalculator";
 
 export const metadata: Metadata = {
   title:
-    "GLP-1 BMI Calculator | See Where You Land at Each Trial Endpoint | Weight Loss Rankings",
+    "GLP-1 BMI Calculator — See Where You Land at Each Trial Endpoint",
   description:
     "Free BMI calculator with a GLP-1 outcome overlay. Enter your starting weight and height to see your current WHO BMI category, your Wegovy/Zepbound FDA eligibility, and what BMI category you'd land in at each trial endpoint (STEP-1, SURMOUNT-1, ATTAIN-1). Sourced from FDA prescribing information and NEJM publications.",
   alternates: { canonical: "/tools/glp1-bmi-calculator" },

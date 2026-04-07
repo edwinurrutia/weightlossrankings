@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Weight Loss Rankings — Rankings independientes de proveedores GLP-1",
+    "Rankings independientes de proveedores GLP-1 en español",
   description:
     "Guías en español, basadas en estudios PubMed y la información de prescripción de la FDA, sobre semaglutida, tirzepatida y los proveedores de telemedicina GLP-1 en Estados Unidos.",
   alternates: {

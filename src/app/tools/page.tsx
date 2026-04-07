@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Free GLP-1 Tools & Calculators | Weight Loss Rankings",
+  title: "Free GLP-1 Tools & Calculators",
   description:
     "Free, evidence-based tools for patients on or considering GLP-1 weight loss medications. Dose plotters, PK simulators, and pricing calculators sourced from FDA prescribing information and PubMed primary literature.",
   alternates: { canonical: "/tools" },

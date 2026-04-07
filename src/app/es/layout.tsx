@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import SpanishNavbar from "@/components/layout/SpanishNavbar";
 import SpanishFooter from "@/components/layout/SpanishFooter";
-import SpanishHtmlLang from "@/components/layout/SpanishHtmlLang";
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +30,6 @@ export default function SpanishLayout({
 }>) {
   return (
     <>
-      <SpanishHtmlLang />
       <SpanishNavbar />
       <main className="min-h-screen">{children}</main>
       <SpanishFooter />
