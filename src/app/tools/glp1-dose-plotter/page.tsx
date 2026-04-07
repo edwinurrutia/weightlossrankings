@@ -86,6 +86,15 @@ const CITATIONS = [
     year: 2021,
     pmid: "33704694",
   },
+  {
+    authors:
+      "Coskun T, Urva S, Roell WC, Qu H, Loghin C, Moyers JS, O'Farrell LS, Briere DA, Sloop KW, Thomas MK, Pirro V, Wainscott DB, Willard FS, Abernathy M, Morford L, Du Y, Benson C, Gimeno RE, Haupt A, Milicevic Z.",
+    title:
+      "LY3437943, a novel triple glucagon, GIP, and GLP-1 receptor agonist for glycaemic control and weight loss: from discovery to clinical proof of concept (retatrutide).",
+    source: "Cell Metabolism",
+    year: 2022,
+    pmid: "36240769",
+  },
 ];
 
 export default function GlpDosePlotterPage() {
@@ -130,20 +139,31 @@ export default function GlpDosePlotterPage() {
         </p>
         <p>
           The titration schedules are taken directly from each drug&apos;s
-          FDA prescribing information [1, 2, 3, 4, 5]:
+          FDA prescribing information for the approved drugs [1, 2, 3, 4, 5]
+          and from the published phase 2 / phase 3 trial protocols for
+          investigational drugs:
         </p>
         <ul>
           <li>
-            <strong>Semaglutide:</strong> 0.25 mg → 0.5 mg → 1 mg →
-            1.7 mg → 2.4 mg, increased every 4 weeks
+            <strong>Semaglutide</strong> (Wegovy / Ozempic): 0.25 mg → 0.5
+            mg → 1 mg → 1.7 mg → 2.4 mg, increased every 4 weeks
           </li>
           <li>
-            <strong>Tirzepatide:</strong> 2.5 mg → 5 mg → 7.5 mg → 10
-            mg → 12.5 mg → 15 mg, increased every 4 weeks
+            <strong>Tirzepatide</strong> (Zepbound / Mounjaro): 2.5 mg →
+            5 mg → 7.5 mg → 10 mg → 12.5 mg → 15 mg, increased every 4
+            weeks
           </li>
           <li>
-            <strong>Orforglipron (Foundayo):</strong> 0.8 mg → 2.5 mg →
+            <strong>Orforglipron</strong> (Foundayo): 0.8 mg → 2.5 mg →
             5.5 mg → 9 mg → 14.5 mg → 17.2 mg, increased every 4 weeks
+          </li>
+          <li>
+            <strong>Retatrutide</strong> (LY3437943, investigational):
+            2 mg → 4 mg → 6 mg → 8 mg → 10 mg → 12 mg, increased every 4
+            weeks. Sourced from the Jastreboff phase 2 trial (NEJM 2023)
+            and the TRIUMPH phase 3 program protocol. Retatrutide is{" "}
+            <strong>not yet FDA-approved</strong>; we include it for
+            educational comparison only.
           </li>
         </ul>
 
@@ -153,11 +173,12 @@ export default function GlpDosePlotterPage() {
           GLP-1 dose &ldquo;feels&rdquo; over time is the elimination
           half-life. For semaglutide it&apos;s about 7 days [7]. For
           tirzepatide, about 5 days [8]. For oral orforglipron, about
-          36 hours [6]. After 4-5 half-lives of constant dosing the
-          drug reaches steady state, which is the plateau the chart
-          shows at the dashed reference line. This is why GLP-1
-          prescribers tell patients it can take 4-5 weeks at each dose
-          level for the full effect to be felt.
+          36 hours [6]. For investigational retatrutide, about 6 days
+          [9]. After 4-5 half-lives of constant dosing the drug reaches
+          steady state, which is the plateau the chart shows at the
+          dashed reference line. This is why GLP-1 prescribers tell
+          patients it can take 4-5 weeks at each dose level for the
+          full effect to be felt.
         </p>
 
         <h2>The missed-dose simulator</h2>

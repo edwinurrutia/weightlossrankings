@@ -9,22 +9,24 @@ import {
   type SamplePoint,
 } from "@/lib/pk-model";
 
-// Brand-aligned palette: violet primary (#8b5cf6), brand-blue (#3b82f6),
-// indigo (#4338ca) and a slightly darker indigo for the 4th drug. All
-// stay inside the site's brand-violet/brand-blue gradient family.
+// Compare-mode palette: each drug gets a clearly distinct hue while
+// staying brand-aligned. Brand-violet and brand-blue are the two
+// primary brand colors; teal and pink are complementary accent colors
+// that read as separate curves at chart scale. Tested visually for
+// distinguishability across all 4 simultaneous traces.
 const DRUG_OPTIONS: {
   id: DrugId;
   label: string;
   color: string;
   investigational?: boolean;
 }[] = [
-  { id: "semaglutide", label: "Semaglutide", color: "#8b5cf6" },
-  { id: "tirzepatide", label: "Tirzepatide", color: "#3b82f6" },
-  { id: "orforglipron", label: "Orforglipron", color: "#4338ca" },
+  { id: "semaglutide", label: "Semaglutide", color: "#8b5cf6" }, // violet (brand)
+  { id: "tirzepatide", label: "Tirzepatide", color: "#3b82f6" }, // blue (brand)
+  { id: "orforglipron", label: "Orforglipron", color: "#14b8a6" }, // teal
   {
     id: "retatrutide",
     label: "Retatrutide",
-    color: "#6366f1",
+    color: "#ec4899", // pink — investigational drug, visually distinct
     investigational: true,
   },
 ];
@@ -227,6 +229,51 @@ export default function DosePlotter() {
               </g>
             );
           })}
+          {/* Missed-dose week overlay — drawn UNDER the curve so the curve
+              still reads on top. Visible only in single-drug mode. */}
+          {!compareMode && missedDose !== null && (() => {
+            // Convert the missed-dose index back to a week-of-therapy
+            // (1-indexed) and span exactly one dosing interval (1 week).
+            const missedWeekStart =
+              (missedDose * drug.intervalHours) / 24; // in days
+            const missedWeekEnd = missedWeekStart + 7; // span 1 week
+            const x1 =
+              DIMS.padding.left + (missedWeekStart / totalDays) * innerW;
+            const x2 =
+              DIMS.padding.left + (missedWeekEnd / totalDays) * innerW;
+            return (
+              <g aria-hidden>
+                <rect
+                  x={x1}
+                  y={DIMS.padding.top}
+                  width={x2 - x1}
+                  height={innerH}
+                  fill="#ec4899"
+                  opacity={0.12}
+                />
+                <line
+                  x1={x1}
+                  x2={x1}
+                  y1={DIMS.padding.top}
+                  y2={DIMS.padding.top + innerH}
+                  stroke="#ec4899"
+                  strokeWidth={1.5}
+                  strokeDasharray="3 3"
+                  opacity={0.55}
+                />
+                <text
+                  x={(x1 + x2) / 2}
+                  y={DIMS.padding.top + 14}
+                  textAnchor="middle"
+                  fontSize={10}
+                  fontWeight={700}
+                  fill="#be185d"
+                >
+                  MISSED
+                </text>
+              </g>
+            );
+          })()}
           {/* Steady-state reference line — brand violet dashed */}
           <line
             x1={DIMS.padding.left}
