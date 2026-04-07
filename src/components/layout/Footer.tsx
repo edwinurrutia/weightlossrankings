@@ -59,6 +59,7 @@ const footerColumns = [
 ];
 
 const legalLinks = [
+  { label: "Medical Disclaimer", href: "/medical-disclaimer" },
   { label: "Nature of Reviews", href: "/nature-of-reviews" },
   { label: "Disclosure", href: "/disclosure" },
   { label: "Code of Conduct", href: "/code-of-conduct" },
