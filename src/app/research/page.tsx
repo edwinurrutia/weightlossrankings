@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/lib/research";
 import JsonLd from "@/components/shared/JsonLd";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
@@ -74,7 +75,7 @@ export default function ResearchIndexPage() {
       "@type": "ItemList",
       itemListOrder: "https://schema.org/ItemListOrderDescending",
       numberOfItems: articles.length,
-      itemListElement: articles.slice(0, 20).map((a, i) => ({
+      itemListElement: articles.slice(0, 50).map((a, i) => ({
         "@type": "ListItem",
         position: i + 1,
         url: `${SITE_URL}/research/${a.slug}`,
@@ -86,6 +87,24 @@ export default function ResearchIndexPage() {
   return (
     <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
       <JsonLd data={collectionSchema} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Research", url: "/research" },
+        ]}
+      />
+
+      {/* Visible breadcrumb */}
+      <nav
+        aria-label="Breadcrumb"
+        className="mb-4 text-xs text-brand-text-secondary"
+      >
+        <Link href="/" className="hover:text-brand-violet hover:underline">
+          Home
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-brand-text-primary font-semibold">Research</span>
+      </nav>
 
       {/* Language switcher */}
       <div className="mb-6 text-xs">

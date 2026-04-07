@@ -12,6 +12,62 @@ import StarRating from "@/components/providers/StarRating";
 import FeatureBadge from "@/components/providers/FeatureBadge";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import DYORCallout from "@/components/marketing/DYORCallout";
+import JsonLd from "@/components/shared/JsonLd";
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+
+/**
+ * Build a Product + Review + AggregateRating JSON-LD entity for one
+ * provider in a head-to-head comparison. Mirrors the schema we emit
+ * on /reviews/[provider] so the comparison page is rich-result eligible
+ * for "X vs Y" queries — Google treats each Product entity as a
+ * standalone offering and may show comparison cards in the SERP.
+ */
+function buildProductSchema(provider: Provider, score: number, minPrice: number | null) {
+  const fiveStar = Math.round((score / 2) * 10) / 10;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${SITE_URL}/reviews/${provider.slug}#product`,
+    name: provider.name,
+    description: provider.description,
+    brand: { "@type": "Brand", name: provider.name },
+    url: `${SITE_URL}/reviews/${provider.slug}`,
+    ...(minPrice !== null
+      ? {
+          offers: {
+            "@type": "Offer",
+            price: String(minPrice),
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: `${SITE_URL}/reviews/${provider.slug}`,
+          },
+        }
+      : {}),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: String(fiveStar),
+      reviewCount: "1",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: {
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(fiveStar),
+        bestRating: "5",
+        worstRating: "1",
+      },
+      author: {
+        "@type": "Organization",
+        name: "Weight Loss Rankings",
+      },
+      datePublished: provider.verification?.last_verified ?? undefined,
+    },
+  };
+}
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -154,6 +210,8 @@ export default async function MatchupPage({
 
   return (
     <div className="min-h-screen bg-brand-gradient-light pb-24 lg:pb-0">
+      <JsonLd data={buildProductSchema(providerA, scoreA, priceA)} />
+      <JsonLd data={buildProductSchema(providerB, scoreB, priceB)} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },

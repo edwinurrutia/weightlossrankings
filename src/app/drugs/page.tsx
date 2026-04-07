@@ -3,6 +3,11 @@ import Link from "next/link";
 import { getAllDrugs } from "@/lib/drugs";
 import SourcesPanel from "@/components/research/SourcesPanel";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
+import JsonLd from "@/components/shared/JsonLd";
+import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
 
 export const metadata: Metadata = {
   title: "GLP-1 Drug Guides — Semaglutide, Tirzepatide & More",
@@ -14,8 +19,51 @@ export const metadata: Metadata = {
 export default function DrugsIndexPage() {
   const drugs = getAllDrugs();
 
+  // CollectionPage schema with each drug as a Drug entity in hasPart.
+  // Drug schema is recognized by Google's medical knowledge graph and
+  // helps the index page rank as a topical hub for GLP-1 medications.
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${SITE_URL}/drugs`,
+    name: "GLP-1 Drug Guides",
+    description:
+      "Comprehensive guides to GLP-1 medications: Semaglutide, Tirzepatide, Wegovy, Ozempic, Mounjaro, Zepbound, and orforglipron.",
+    url: `${SITE_URL}/drugs`,
+    inLanguage: "en-US",
+    isPartOf: { "@type": "WebSite", name: "Weight Loss Rankings", url: SITE_URL },
+    publisher: { "@type": "Organization", name: "Weight Loss Rankings", url: SITE_URL },
+    hasPart: drugs.map((d) => ({
+      "@type": "Drug",
+      "@id": `${SITE_URL}/drugs/${d.slug}`,
+      name: d.name,
+      url: `${SITE_URL}/drugs/${d.slug}`,
+      description: d.description,
+      ...(d.brand_names && d.brand_names.length > 0
+        ? { alternateName: d.brand_names }
+        : {}),
+    })),
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: drugs.length,
+      itemListElement: drugs.map((d, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/drugs/${d.slug}`,
+        name: d.name,
+      })),
+    },
+  };
+
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
+      <JsonLd data={collectionSchema} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Drugs", url: "/drugs" },
+        ]}
+      />
       <div className="text-center mb-10">
         <h1 className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary">
           <span className="text-gradient">Drug Guides</span>

@@ -88,7 +88,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "does-glp1-cause-liver-damage-nafld-nash-evidence",
     title:
-      "Does a GLP-1 Cause Liver Damage? The Evidence on NAFLD, MASH, and Why the Answer Is Usually the Opposite",
+      "Does GLP-1 Cause Liver Damage? NAFLD & MASH Evidence",
     description:
       "Patients worry GLP-1s damage the liver. The trial evidence — Newsome 2021, SYNERGY-NASH 2024, STEP-1 and SURMOUNT-1 sub-analyses — shows the opposite: semaglutide and tirzepatide reduce liver fat and improve MASLD/MASH.",
     excerpt:
@@ -204,7 +204,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "what-happens-when-you-stop-semaglutide",
     title:
-      "What Happens When You Stop Taking Semaglutide? STEP-4, STEP-1 Extension, and SURMOUNT-4 Tell the Story",
+      "What Happens When You Stop Semaglutide? STEP-4 Evidence",
     description:
       "Semaglutide doesn't work like an antibiotic — you don't take a course and stay better. The STEP-4 withdrawal trial and the STEP-1 one-year extension showed that participants regain ~64% of lost weight within months of discontinuation. We walk through the actual trial data, mechanism, and what it means for anyone considering stopping.",
     excerpt:
@@ -261,7 +261,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "select-trial-cardiovascular-benefits-non-diabetics",
     title:
-      "What SELECT Showed: Semaglutide Cuts Heart Attack Risk by 20% in Non-Diabetics with Cardiovascular Disease",
+      "SELECT Trial: Semaglutide Cuts Heart Attack Risk 20%",
     description:
       "The SELECT trial (Lincoff et al., NEJM 2023) randomized 17,604 non-diabetic adults with established cardiovascular disease to weekly semaglutide 2.4 mg or placebo for nearly four years. The primary cardiovascular endpoint dropped 20% — and the benefit appears largely independent of weight loss. Here's what the trial actually measured and what it should change about how we think about GLP-1 therapy.",
     excerpt:
@@ -376,7 +376,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "foundayo-vs-wegovy-vs-zepbound-comparison",
     title:
-      "Foundayo vs Wegovy vs Zepbound: The Head-to-Head 2026 Comparison (Pill, Injection, Cost, Effect Size)",
+      "Foundayo vs Wegovy vs Zepbound: 2026 Head-to-Head",
     description:
       "Foundayo (orforglipron) is the first oral GLP-1 for weight loss, FDA-approved April 1, 2026. How does it stack up against Wegovy and Zepbound? Side-by-side: 17.2 mg labeled-dose Foundayo 11.1% vs STEP-1 Wegovy 14.9% vs SURMOUNT-1 Zepbound 20.9%, $25 vs $499 vs $449, daily pill vs weekly injection.",
     excerpt:
@@ -391,7 +391,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "tirzepatide-microdosing-evidence-guide",
     title:
-      "Tirzepatide Microdosing: What the Trial Data Says About Sub-Therapeutic Doses (And Why Most of It Is Off-Label)",
+      "Tirzepatide Microdosing: Sub-Therapeutic Dose Evidence",
     description:
       "A thousand patients a month search 'what is microdosing tirzepatide.' This is the evidence-based answer: the SURMOUNT-1 dose-ranging arms (2.5, 5, 7.5, 10 mg) tell us what each step actually produced, no formal trial has tested doses below 2.5 mg, and 'microdosing' below the FDA-approved starting dose is off-label. Includes the trial data on each dose, the harm-reduction framing for patients who already do it, and the prescriber conversation.",
     excerpt:
@@ -433,7 +433,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "does-glp1-cause-cancer-mtc-thyroid-evidence",
     title:
-      "Does a GLP-1 Cause Cancer? The Medullary Thyroid Carcinoma Boxed Warning, the Pancreatic Cancer Signal, and What the Human Evidence Actually Shows",
+      "Does GLP-1 Cause Cancer? MTC, Pancreatic Evidence (2026)",
     description:
       "Two thousand patients a month search 'does semaglutide cause cancer.' This is the evidence-based answer: the FDA boxed warning for medullary thyroid carcinoma comes from rodent studies, has not been replicated in humans, but is taken seriously enough to contraindicate GLP-1s in MEN2 and personal/family MTC history. The pancreatic cancer signal has been investigated in multiple large cohorts and found to be null. The 2023 BMJ thyroid signal paper and the 2024 EMA review.",
     excerpt:
@@ -447,7 +447,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "can-you-drink-alcohol-on-glp1",
     title:
-      "Can You Drink Alcohol on a GLP-1? The Evidence on Safety, Tolerance, and the Surprising Cravings Effect",
+      "Can You Drink Alcohol on a GLP-1? Safety & Cravings Evidence",
     description:
       "Two thousand patients a month search 'can you drink on semaglutide.' This is the evidence-based answer: there is no FDA contraindication, but GLP-1s lower alcohol tolerance, increase hypoglycemia risk in diabetics, and — unexpectedly — appear to reduce alcohol cravings in observational and trial data. Includes the practical drinking guidance and the red flags that mean stop.",
     excerpt:
@@ -505,7 +505,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "glp1-surgery-anesthesia-asa-guidance",
     title:
-      "Stopping GLP-1s Before Surgery: ASA Guidance, Aspiration Risk, and What to Tell Your Anesthesiologist",
+      "Stopping GLP-1s Before Surgery: ASA Aspiration Guidance",
     description:
       "The American Society of Anesthesiologists issued specific GLP-1 hold guidance in 2023 and updated it in 2024 because of aspiration cases under anesthesia. This is the patient-facing version: when to hold, when not to, what to tell your surgeon and anesthesia team, and what the actual evidence behind the guidance is.",
     excerpt:
@@ -645,7 +645,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "how-long-does-glp1-take-to-work",
     title:
-      "How Long Does Semaglutide and Tirzepatide Take to Work? The Trial Data on Onset, Appetite, and Weight Loss Timing",
+      "How Long Does Semaglutide & Tirzepatide Take to Work?",
     description:
       "When does appetite suppression actually start on a GLP-1? When do patients first see the scale move? When does steady state hit? We answer every onset and time-to-effect question using the published STEP-1, SURMOUNT-1, and FDA prescribing information data, with the actual trial timing curves quoted by week.",
     excerpt:
@@ -659,7 +659,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "glp1-storage-shelf-life-refrigeration-guide",
     title:
-      "GLP-1 Storage Guide: Refrigeration, Room Temperature, Travel, and Expiration for Wegovy, Ozempic, Zepbound, and Mounjaro",
+      "GLP-1 Storage Guide: Refrigeration, Travel, Expiration",
     description:
       "The complete FDA-label-cited storage and shelf-life reference for GLP-1 weight loss medications. How long Wegovy and Ozempic last in the fridge vs at room temperature, what to do if the pen sat in a hot car, how to travel with semaglutide, when to throw out an expired vial, and how compounded GLP-1 storage rules differ from brand-name pen rules.",
     excerpt:
@@ -830,7 +830,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "cuanto-tarda-glp1-en-hacer-efecto",
     title:
-      "¿Cuánto tarda la semaglutida o la tirzepatida en hacer efecto? Lo que muestran los estudios clínicos semana por semana",
+      "¿Cuánto tarda la semaglutida o tirzepatida en hacer efecto?",
     description:
       "Guía en español basada en STEP-1 y SURMOUNT-1: en cuántos días empieza la supresión del apetito, cuántas semanas tarda cada dosis en alcanzar el estado estacionario y cuándo se observa pérdida de peso medible con semaglutida (Wegovy) y tirzepatida (Zepbound).",
     excerpt:
@@ -844,7 +844,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "efectos-secundarios-glp1-preguntas-respuestas",
     title:
-      "Efectos secundarios del GLP-1: preguntas y respuestas sobre dolor de cabeza, eructos con azufre, niebla mental, estado de ánimo y acné",
+      "Efectos secundarios del GLP-1: preguntas y respuestas",
     description:
       "Guía en español con las tasas verificadas de los efectos secundarios específicos de los agonistas del receptor de GLP-1, tomadas de STEP-1, SURMOUNT-1 y las tablas de reacciones adversas de la información de prescripción aprobada por la FDA para Wegovy y Zepbound. Incluye la tasa de dolor de cabeza (14.2% con semaglutida frente a 10% con placebo), el mecanismo de los eructos con olor a azufre, la conclusión de la revisión de 2024 de la EMA sobre ideación suicida y la señal emergente de niebla mental de la farmacovigilancia de la FDA.",
     excerpt:

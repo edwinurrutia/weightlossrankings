@@ -10,7 +10,7 @@ const SLUG = "semaglutide-para-que-sirve";
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
   return {
-    title: article.title,
+    title: { absolute: article.title },
     description: article.description,
     alternates: {
       canonical: `/research/${SLUG}`,
@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: article.title,
+      title: { absolute: article.title },
       description: article.description,
       type: "article",
       locale: "es_US",

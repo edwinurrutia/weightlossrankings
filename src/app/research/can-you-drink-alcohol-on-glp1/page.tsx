@@ -45,11 +45,11 @@ const FAQ_ITEMS: FaqItem[] = [
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
   return {
-    title: article.title,
+    title: { absolute: article.title },
     description: article.description,
     alternates: { canonical: `/research/${SLUG}` },
     openGraph: {
-      title: article.title,
+      title: { absolute: article.title },
       description: article.description,
       type: "article",
       publishedTime: article.publishedDate,

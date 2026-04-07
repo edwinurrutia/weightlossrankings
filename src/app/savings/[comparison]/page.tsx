@@ -107,9 +107,81 @@ export default async function SavingsComparisonPage({
     description: `Save up to $${monthlySavings.toLocaleString()}/month switching from ${c.brand_name} to compounded ${c.generic_name}.`,
   };
 
+  // Brand product entity (the expensive option)
+  const brandProductJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: c.brand_name,
+    description: `Brand-name ${c.generic_name} for chronic weight management.`,
+    brand: { "@type": "Brand", name: c.brand_name },
+    category: "Prescription medication",
+    offers: {
+      "@type": "Offer",
+      price: String(c.brand_monthly_price),
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: String(c.brand_monthly_price),
+        priceCurrency: "USD",
+        unitText: "month",
+      },
+    },
+  };
+
+  // Compounded alternative (the cheap option) — use AggregateOffer
+  // because price varies across providers and we want Google to show
+  // the price range rather than a single price.
+  const compoundedPrices = providers
+    .map((p) =>
+      p.pricing
+        .filter((px) => px.form === "compounded")
+        .map((px) => px.promo_price ?? px.monthly_cost)
+    )
+    .flat()
+    .filter((n) => n > 0);
+  const compoundedLow = compoundedPrices.length
+    ? Math.min(...compoundedPrices)
+    : compoundedPrice;
+  const compoundedHigh = compoundedPrices.length
+    ? Math.max(...compoundedPrices)
+    : compoundedPrice;
+
+  const compoundedProductJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `Compounded ${genericTitle}`,
+    description: `503A-pharmacy compounded ${c.generic_name} from licensed US telehealth providers, typically priced ${savingsPct}% below brand.`,
+    category: "Prescription medication",
+    offers: {
+      "@type": "AggregateOffer",
+      lowPrice: String(compoundedLow),
+      highPrice: String(compoundedHigh),
+      priceCurrency: "USD",
+      offerCount: providers.length,
+      availability: "https://schema.org/InStock",
+    },
+  };
+
+  // FAQPage from the page's faqs array (already used by FAQSection
+  // visually, but we emit it explicitly here so the schema is colocated
+  // with the other JSON-LD blocks).
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg">
       <JsonLd data={webPageJsonLd} />
+      <JsonLd data={brandProductJsonLd} />
+      <JsonLd data={compoundedProductJsonLd} />
+      <JsonLd data={faqJsonLd} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },
