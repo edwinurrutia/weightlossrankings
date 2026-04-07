@@ -31,11 +31,29 @@ interface WarningLetter {
   id: string;
   company_name: string;
   company_dba: string | null;
-  letter_number: string;
+  /**
+   * FDA-assigned letter identifier. Most letters have a 6-7 digit
+   * number; some older letters were posted without one (URL pattern is
+   * just <slug>-<MMDDYYYY>) and this field is null in that case.
+   */
+  letter_number: string | null;
   letter_date: string;
+  /**
+   * ISO YYYY-MM-DD — date FDA POSTED the letter publicly. Often weeks
+   * or months after letter_date for FDA's own administrative reasons.
+   */
+  posted_date?: string;
   fda_url: string;
   issuing_office: string;
   subject: string;
+  /**
+   * Which GLP-1 drug keyword(s) this letter matched in the FDA search.
+   * Many compounded GLP-1 sellers get cited for both semaglutide AND
+   * tirzepatide in the same letter; orforglipron will start showing up
+   * here as letters land for Foundayo / illegal "research peptide"
+   * orforglipron sellers.
+   */
+  matched_drugs?: ("semaglutide" | "tirzepatide" | "orforglipron")[];
   violations_summary: string;
   matched_provider_slug: string | null;
   status: "active" | "closed-out" | "withdrawn";
@@ -208,15 +226,82 @@ async function fetchIndexRows(): Promise<RawIndexRow[]> {
     return [];
   }
 
-  // Run a search for each keyword and merge — FDA's filter only takes one
-  // value at a time, so we paginate per keyword.
+  // Run a search for each GLP-1 keyword and merge — FDA's filter only
+  // takes one value at a time, so we paginate per keyword and dedupe by
+  // detailUrl. Many compounded GLP-1 sellers get cited for both
+  // semaglutide AND tirzepatide in the same letter, so the dedupe is
+  // meaningful (not just defensive).
+  //
+  // KEYWORDS:
+  //   - "semaglutide" — covers Wegovy, Ozempic, Rybelsus, compounded
+  //     semaglutide; the largest single bucket (~113 letters as of
+  //     April 2026)
+  //   - "tirzepatide" — covers Mounjaro, Zepbound, compounded
+  //     tirzepatide; ~82 letters as of April 2026
+  //   - "orforglipron" — covers Foundayo, the new oral GLP-1 approved
+  //     April 1 2026. Currently 0 results but added so future scrapes
+  //     auto-detect any letters that land for this drug. ALSO catches
+  //     any unapproved/illegal "research peptide" sellers using the
+  //     orforglipron generic name.
+  //
+  // We deliberately do NOT search for the bare keyword "compounded"
+  // because (a) it returned hundreds of false positives outside the
+  // GLP-1 space (compounded ophthalmic, dermatology, etc.) and (b)
+  // every legitimate compounded-GLP-1 letter is also indexed under
+  // its specific drug name, so the dedupe via "semaglutide" +
+  // "tirzepatide" already catches them.
   const seen = new Map<string, RawIndexRow>();
   const browser = await pw.chromium.launch({ headless: true });
   try {
     const ctx = await browser.newContext({ userAgent: REAL_CHROME_UA });
     const page = await ctx.newPage();
 
-    for (const keyword of ["semaglutide", "tirzepatide", "compounded"]) {
+    // Extraction function reused across pages — defined as a string IIFE
+    // so tsx doesn't inject runtime helpers (e.g. __name) into the
+    // browser context, which would crash page.evaluate.
+    const extractRowsScript = `(() => {
+      var out = [];
+      var tables = Array.prototype.slice.call(document.querySelectorAll("table"));
+      for (var t = 0; t < tables.length; t++) {
+        var table = tables[t];
+        var headerCells = Array.prototype.slice
+          .call(table.querySelectorAll("thead th"))
+          .map(function (th) {
+            return (th.textContent || "").trim().toLowerCase();
+          });
+        function colIndex(label) {
+          for (var i = 0; i < headerCells.length; i++) {
+            if (headerCells[i].indexOf(label) >= 0) return i;
+          }
+          return -1;
+        }
+        var dateIdx = colIndex("posted") >= 0 ? colIndex("posted") : colIndex("date");
+        var companyIdx = colIndex("company");
+        var subjectIdx = colIndex("subject");
+        var officeIdx = colIndex("office");
+        if (companyIdx < 0 || subjectIdx < 0) continue;
+        var trs = Array.prototype.slice.call(table.querySelectorAll("tbody tr"));
+        for (var r = 0; r < trs.length; r++) {
+          var tds = Array.prototype.slice.call(trs[r].querySelectorAll("td"));
+          var companyTd = tds[companyIdx];
+          if (!companyTd) continue;
+          var link = companyTd.querySelector("a");
+          if (!link || !link.href) continue;
+          out.push({
+            date: dateIdx >= 0 && tds[dateIdx] ? (tds[dateIdx].textContent || "").trim() : "",
+            company: (companyTd.textContent || "").trim(),
+            office: officeIdx >= 0 && tds[officeIdx]
+              ? (tds[officeIdx].textContent || "").trim()
+              : "FDA",
+            subject: tds[subjectIdx] ? (tds[subjectIdx].textContent || "").trim() : "",
+            detailUrl: link.href,
+          });
+        }
+      }
+      return out;
+    })()`;
+
+    for (const keyword of ["semaglutide", "tirzepatide", "orforglipron"]) {
       const searchUrl = `${FDA_INDEX_URL}?search_api_fulltext=${encodeURIComponent(
         keyword,
       )}`;
@@ -232,65 +317,88 @@ async function fetchIndexRows(): Promise<RawIndexRow[]> {
           // Some pages don't reach networkidle quickly — that's fine.
         }
 
-        // Try to extract rows from the table. FDA uses a standard
-        // <table> with column headers; we read it generically.
-        // NOTE: passed as a string IIFE rather than a function literal so
-        // tsx doesn't inject runtime helpers (e.g. __name) into the
-        // browser context, which would crash page.evaluate.
-        const rows = (await page.evaluate(`(() => {
-          var out = [];
-          var tables = Array.prototype.slice.call(document.querySelectorAll("table"));
-          for (var t = 0; t < tables.length; t++) {
-            var table = tables[t];
-            var headerCells = Array.prototype.slice
-              .call(table.querySelectorAll("thead th"))
-              .map(function (th) {
-                return (th.textContent || "").trim().toLowerCase();
-              });
-            function colIndex(label) {
-              for (var i = 0; i < headerCells.length; i++) {
-                if (headerCells[i].indexOf(label) >= 0) return i;
-              }
-              return -1;
+        // CRITICAL: the FDA warning-letters page uses the LCDS DataTables
+        // widget for client-side pagination. By default it shows 10 rows
+        // per page and the items_per_page URL param does NOT work — the
+        // server returns the same row count regardless. We MUST expand
+        // the visible row count via the dropdown (max value: 100) and
+        // then click pagination "Next" until all rows are exhausted.
+        //
+        // Before this fix, the scraper only ever read the first 10 rows
+        // per keyword, which meant the local data file was undercounting
+        // the FDA database by ~85% (17 entries vs 113 actual for
+        // semaglutide alone).
+        try {
+          await page.evaluate(`(() => {
+            var sel = document.querySelector('select[name="datatable_length"]');
+            if (sel) {
+              sel.value = '100';
+              sel.dispatchEvent(new Event('change', { bubbles: true }));
             }
-            var dateIdx = colIndex("posted") >= 0 ? colIndex("posted") : colIndex("date");
-            var companyIdx = colIndex("company");
-            var subjectIdx = colIndex("subject");
-            var officeIdx = colIndex("office");
-            if (companyIdx < 0 || subjectIdx < 0) continue;
-            var trs = Array.prototype.slice.call(table.querySelectorAll("tbody tr"));
-            for (var r = 0; r < trs.length; r++) {
-              var tds = Array.prototype.slice.call(trs[r].querySelectorAll("td"));
-              var companyTd = tds[companyIdx];
-              if (!companyTd) continue;
-              var link = companyTd.querySelector("a");
-              if (!link || !link.href) continue;
-              out.push({
-                date: dateIdx >= 0 && tds[dateIdx] ? (tds[dateIdx].textContent || "").trim() : "",
-                company: (companyTd.textContent || "").trim(),
-                office: officeIdx >= 0 && tds[officeIdx]
-                  ? (tds[officeIdx].textContent || "").trim()
-                  : "FDA",
-                subject: tds[subjectIdx] ? (tds[subjectIdx].textContent || "").trim() : "",
-                detailUrl: link.href,
-              });
-            }
-          }
-          return out;
-        })()`)) as RawIndexRow[];
-
-        for (const r of rows) {
-          const existing = seen.get(r.detailUrl);
-          if (existing) {
-            existing.matchedKeywords = [
-              ...(existing.matchedKeywords ?? []),
-              keyword,
-            ];
-          } else {
-            seen.set(r.detailUrl, { ...r, matchedKeywords: [keyword] });
-          }
+          })()`);
+          // Wait for the table to redraw with 100 rows
+          await sleep(2000);
+        } catch (e) {
+          vlog(`  expand-to-100 failed (continuing with default page size): ${(e as Error).message}`);
         }
-        vlog(`  → ${rows.length} rows for "${keyword}"`);
+
+        // Iterate through DataTables pages until "Next" is disabled or
+        // we've made too many iterations. Each page contributes up to
+        // 100 rows.
+        const MAX_PAGES = 20; // safety cap; 100 rows × 20 pages = 2000
+        let pageNum = 0;
+        let totalRowsForKeyword = 0;
+        for (; pageNum < MAX_PAGES; pageNum++) {
+          const pageRows = (await page.evaluate(extractRowsScript)) as RawIndexRow[];
+
+          for (const r of pageRows) {
+            const existing = seen.get(r.detailUrl);
+            if (existing) {
+              if (!(existing.matchedKeywords ?? []).includes(keyword)) {
+                existing.matchedKeywords = [
+                  ...(existing.matchedKeywords ?? []),
+                  keyword,
+                ];
+              }
+            } else {
+              seen.set(r.detailUrl, { ...r, matchedKeywords: [keyword] });
+            }
+          }
+          totalRowsForKeyword += pageRows.length;
+
+          // Try to click the DataTables "Next" pagination button. If
+          // there is no next page (button disabled or absent), break.
+          const advanced = (await page.evaluate(`(() => {
+            var btns = Array.prototype.slice.call(
+              document.querySelectorAll('.dataTables_paginate a, .dataTables_paginate button, [class*="paginate"] a, [class*="paginate"] button')
+            );
+            var nextBtn = null;
+            for (var i = 0; i < btns.length; i++) {
+              var label = (btns[i].textContent || '').trim().toLowerCase();
+              var id = btns[i].id || '';
+              if (label === 'next' || id === 'datatable_next' || id.indexOf('next') >= 0) {
+                nextBtn = btns[i];
+                break;
+              }
+            }
+            if (!nextBtn) return false;
+            // Detect disabled state — DataTables sets aria-disabled or
+            // a "disabled" class on the button when there are no more
+            // pages.
+            var parent = nextBtn.parentElement;
+            var disabled = nextBtn.getAttribute('aria-disabled') === 'true'
+              || (nextBtn.className || '').indexOf('disabled') >= 0
+              || (parent && (parent.className || '').indexOf('disabled') >= 0);
+            if (disabled) return false;
+            nextBtn.click();
+            return true;
+          })()`)) as boolean;
+
+          if (!advanced) break;
+          // Wait for the table to redraw after the click
+          await sleep(1500);
+        }
+        vlog(`  → ${totalRowsForKeyword} rows for "${keyword}" across ${pageNum + 1} page(s)`);
       } catch (err) {
         elog(
           `Failed to scrape index for "${keyword}": ${(err as Error).message}`,
@@ -310,20 +418,26 @@ async function fetchIndexRows(): Promise<RawIndexRow[]> {
 /**
  * Parse a row from the index and convert it into a WarningLetter object.
  * The letter number is parsed out of the URL slug (FDA encodes it as
- * <slug>-<letter-number>-<date>).
+ * <slug>-<letter-number>-<MMDDYYYY>). Some older letters omit the
+ * letter_number entirely and use just <slug>-<MMDDYYYY>; we handle
+ * both formats.
  */
 function rowToLetter(row: RawIndexRow): WarningLetter | null {
-  // Extract letter number from URL: .../warning-letters/<slug>-<num>-<MMDDYYYY>
-  const m = row.detailUrl.match(
+  // Try the with-letter-number format first
+  const withNum = row.detailUrl.match(
     /\/warning-letters\/([a-z0-9-]+?)-(\d{5,7})-(\d{8})\/?$/i,
   );
-  if (!m) {
+  // Fall back to no-letter-number format (older letters)
+  const noNum = !withNum
+    ? row.detailUrl.match(/\/warning-letters\/([a-z0-9-]+?)-(\d{8})\/?$/i)
+    : null;
+  if (!withNum && !noNum) {
     vlog(`  skip: cannot parse URL ${row.detailUrl}`);
     return null;
   }
-  const urlSlug = m[1];
-  const letterNumber = m[2];
-  const dateMMDDYYYY = m[3];
+  const urlSlug = (withNum ?? noNum)![1];
+  const letterNumber = withNum ? withNum[2] : null;
+  const dateMMDDYYYY = withNum ? withNum[3] : noNum![2];
   const month = dateMMDDYYYY.slice(0, 2);
   const day = dateMMDDYYYY.slice(2, 4);
   const year = dateMMDDYYYY.slice(4, 8);
@@ -334,16 +448,35 @@ function rowToLetter(row: RawIndexRow): WarningLetter | null {
   const companyName = dbaMatch ? dbaMatch[1].trim() : row.company.trim();
   const companyDba = dbaMatch ? dbaMatch[2].trim() : null;
 
+  // Parse posted date from the index row's date column ("MM/DD/YYYY")
+  // if present. Otherwise default to today (the scraper's run date).
+  let postedISO = todayISO();
+  if (row.date) {
+    const dm = row.date.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+    if (dm) {
+      const mm = dm[1].padStart(2, "0");
+      const dd = dm[2].padStart(2, "0");
+      postedISO = `${dm[3]}-${mm}-${dd}`;
+    }
+  }
+
   return {
-    id: `${urlSlug}-${letterNumber}`,
+    id: letterNumber ? `${urlSlug}-${letterNumber}` : urlSlug,
     company_name: companyName,
     company_dba: companyDba,
     letter_number: letterNumber,
     letter_date: isoDate,
+    posted_date: postedISO,
     fda_url: row.detailUrl,
     issuing_office: row.office || "FDA",
     // Quote FDA's own subject line verbatim — never paraphrase
     subject: row.subject || "Compounded GLP-1 marketing and labeling concerns",
+    // Each row carries the keyword(s) it was matched under so the
+    // editorial team can see at a glance whether a letter cites
+    // semaglutide, tirzepatide, orforglipron, or multiple. Many
+    // compounded GLP-1 sellers get cited for both sema AND tirz in
+    // the same letter, so this is an array, not a single value.
+    matched_drugs: row.matchedKeywords ?? [],
     // Measured boilerplate. The scraper does NOT pull body text — that's
     // done in editorial review to keep us safe from libel risk.
     violations_summary:

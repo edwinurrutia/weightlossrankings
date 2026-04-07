@@ -27,6 +27,9 @@ import rawLetters from "@/data/fda-warning-letters.json";
 
 export type WarningLetterStatus = "active" | "closed-out" | "withdrawn";
 
+/** GLP-1 keywords this letter was found under in the FDA search. */
+export type WarningLetterDrug = "semaglutide" | "tirzepatide" | "orforglipron";
+
 export interface FdaWarningLetter {
   /** Stable slug used in the URL: /fda-warning-letters/[id] */
   id: string;
@@ -34,14 +37,30 @@ export interface FdaWarningLetter {
   company_name: string;
   /** "Doing business as" name, if different. */
   company_dba: string | null;
-  /** FDA-assigned letter identifier. */
-  letter_number: string;
+  /**
+   * FDA-assigned letter identifier. Most letters have a 6–7 digit number;
+   * some older letters were posted without one and this field is null.
+   */
+  letter_number: string | null;
   /** ISO YYYY-MM-DD — the date FDA issued the letter. */
   letter_date: string;
+  /**
+   * ISO YYYY-MM-DD — the date FDA POSTED the letter publicly. Often
+   * weeks or months after letter_date. Optional because older entries
+   * pre-date the field.
+   */
+  posted_date?: string;
   /** Canonical URL on fda.gov for the letter itself. */
   fda_url: string;
   /** FDA office that issued the letter (e.g. "FDA", "CDER"). */
   issuing_office: string;
+  /**
+   * Which GLP-1 drug keyword(s) this letter matched in the FDA search.
+   * Many compounded GLP-1 sellers get cited for both semaglutide AND
+   * tirzepatide in the same letter, so this is an array. Future scrapes
+   * will also detect orforglipron / Foundayo as more letters land.
+   */
+  matched_drugs?: WarningLetterDrug[];
   /** One-line subject line. Quote FDA language where possible. */
   subject: string;
   /**
