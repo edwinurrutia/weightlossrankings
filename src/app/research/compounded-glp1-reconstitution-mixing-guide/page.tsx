@@ -138,9 +138,18 @@ export default function ReconstitutionArticle() {
         <li>
           <strong>Once reconstituted, refrigerate</strong> and
           respect the BUD the pharmacy assigned on the label.
-          Typical BUDs for reconstituted compounded GLP-1s
-          refrigerated are 28-90 days depending on the pharmacy&apos;s
-          stability documentation [1].
+          Per the USP &lt;797&gt; 2023 revision, a Category 2
+          compounded sterile preparation has a maximum BUD of
+          <strong> 45 days refrigerated</strong> without sterility
+          testing, and up to <strong>60 days refrigerated</strong>{" "}
+          with passed sterility testing plus endotoxin testing [1].
+          Longer BUDs require Category 3 status (CETA-certified
+          sterility testing with 14-day incubation and environmental
+          monitoring) which most 503A pharmacies do not have.
+          Typical real-world BUDs for reconstituted compounded
+          GLP-1s refrigerated are therefore in the{" "}
+          <strong>28-45 days</strong> range, occasionally up to 60
+          days when the pharmacy has documented sterility testing.
         </li>
       </ol>
 
@@ -185,8 +194,9 @@ export default function ReconstitutionArticle() {
           45-degree angle (this reduces coring) and slowly press
           the plunger so the water streams gently against the vial
           wall, not directly onto the lyophilized powder cake.
-          Streaming water directly into the cake can denature the
-          peptide.
+          Streaming water directly into the cake creates excessive
+          foaming and bubbling at the air-water interface, which
+          can mechanically shear the peptide and reduce yield.
         </li>
         <li>
           <strong>Withdraw the syringe and dispose of it in a
@@ -196,8 +206,10 @@ export default function ReconstitutionArticle() {
           <strong>Dissolve the powder by gentle rotation.</strong>{" "}
           Hold the vial between your hands and roll it gently in a
           circular motion for 30-60 seconds. <em>Do not shake.</em>{" "}
-          Shaking foams the peptide solution and can denature the
-          drug. The powder should fully dissolve within about a
+          Shaking foams the peptide solution; the air-water
+          interface created by foaming causes peptide shear and
+          reduces effective potency. The powder should fully
+          dissolve within about a
           minute; if it doesn&apos;t, continue gentle rotation for
           another minute or two.
         </li>
@@ -299,8 +311,9 @@ export default function ReconstitutionArticle() {
       <ol>
         <li>
           <strong>Shaking instead of rolling.</strong> Shaking
-          foams the solution, denatures the peptide, and can
-          reduce potency significantly. Gentle rotation only.
+          foams the solution and creates an air-water interface
+          that mechanically shears the peptide, reducing effective
+          potency. Gentle rotation only.
         </li>
         <li>
           <strong>Using the wrong water.</strong> Bacteriostatic
@@ -319,10 +332,12 @@ export default function ReconstitutionArticle() {
         </li>
         <li>
           <strong>Streaming water directly into the powder
-          cake.</strong> The force of water jet on the lyophilized
-          cake can denature the surface peptide. Aim the stream
-          against the vial wall instead so the water gently
-          dissolves the cake from the edges inward.
+          cake.</strong> The force of the water jet on the
+          lyophilized cake creates excessive bubbling and an
+          air-water interface that can shear the peptide and
+          reduce yield. Aim the stream against the vial wall
+          instead so the water gently dissolves the cake from
+          the edges inward.
         </li>
         <li>
           <strong>Not labeling the reconstitution date.</strong>{" "}

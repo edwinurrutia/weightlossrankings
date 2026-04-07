@@ -73,6 +73,24 @@ export default function SelectTrialArticle() {
       year: 2024,
       url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/215256s011lbl.pdf",
     },
+    {
+      authors:
+        "Ryan DH, Lingvay I, Deanfield J, Kahn SE, Barros E, Burguera B, Colhoun HM, Cercato C, Dicker D, Horn DB, Hramiak I, Jastreboff AM, Kushner RF, Lichtenstein AH, Lin J, Murphy R, Nadolsky K, Plutzky J, Rubino DM, Salamun V, Sattar N, Shaw S, Tang Y, Verma S, Lincoff AM, Kosiborod MN.",
+      title:
+        "Long-term weight loss effects of semaglutide in obesity without diabetes in the SELECT trial.",
+      source: "Nature Medicine",
+      year: 2024,
+      pmid: "38740993",
+    },
+    {
+      authors:
+        "Deanfield J, Verma S, Scirica BM, Kahn SE, Emerson SS, Ryan D, Lingvay I, Colhoun HM, Plutzky J, Kosiborod MN, Hovingh GK, Hardt-Lindberg S, Frenkel O, Weeke PE, Rasmussen S, Goudev A, Lang CC, Urina-Triana M, Pietilä M, Lincoff AM; SELECT Trial Investigators.",
+      title:
+        "Semaglutide and cardiovascular outcomes in patients with obesity and prevalent heart failure: a prespecified analysis of the SELECT trial.",
+      source: "Lancet",
+      year: 2024,
+      pmid: "39181597",
+    },
   ];
 
   return (
@@ -188,7 +206,9 @@ export default function SelectTrialArticle() {
         SELECT&apos;s confirmatory secondary endpoint was a composite of
         cardiovascular death, hospitalization for heart failure, or
         urgent medical visit for heart failure. That composite also
-        favored semaglutide [1]:
+        favored semaglutide [1], with the prevalent-HF subgroup
+        analysis published in detail by Deanfield et al, Lancet 2024
+        [7]:
       </p>
 
       <table>
@@ -264,12 +284,13 @@ export default function SelectTrialArticle() {
       <ol>
         <li>
           <strong>Weight loss</strong> — yes, contributing, but smaller
-          than expected. SELECT participants lost a mean 10.2% of
-          starting body weight at 208 weeks of follow-up, which is
-          actually modest compared with the obesity-focused STEP-1 trial
-          (15–17% at 68 weeks). The CV benefit accumulated across the
-          entire follow-up period, not just during the weight loss
-          plateau.
+          than expected. Per the prespecified Ryan 2024 Nature Medicine
+          long-term weight sub-analysis [6], SELECT participants on
+          semaglutide lost a mean 10.2% of starting body weight at the
+          208-week follow-up timepoint vs −1.5% on placebo, which is
+          modest compared with the obesity-focused STEP-1 trial (15-17%
+          at 68 weeks). The CV benefit accumulated across the entire
+          follow-up period, not just during the weight loss plateau.
         </li>
         <li>
           <strong>Direct anti-inflammatory effects.</strong> GLP-1

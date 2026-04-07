@@ -219,7 +219,7 @@ export default function StepHfpefArticle() {
             <td>−2.6%</td>
           </tr>
           <tr>
-            <td>6-minute walk distance (m)</td>
+            <td>6-minute walk distance (m), pooled STEP-HFpEF + STEP-HFpEF DM (Butler 2024 Lancet [3])</td>
             <td colSpan={2}>+17.1 m treatment difference (95% CI 9.2–25.0, P&lt;0.0001)</td>
           </tr>
           <tr>
@@ -252,16 +252,17 @@ export default function StepHfpefArticle() {
       <h2>Adverse events: better than expected</h2>
 
       <p>
-        The most striking safety finding from STEP-HFpEF is that
-        serious adverse events were <em>lower</em> in the semaglutide
-        arm than in placebo: 13.3% vs 26.7% [1]. Cardiac disorder
-        adverse events were also lower in the semaglutide arm
-        (2.7% vs 11.3% placebo), which is consistent with the
-        symptom and function improvements. Discontinuation due to
-        adverse events was higher with semaglutide (35 vs 14
-        patients), driven predominantly by the expected GI side
-        effect profile, but discontinuations specifically due to
-        serious adverse events were balanced (6 vs 6).
+        The most striking safety finding across the STEP-HFpEF program
+        is that serious adverse events were <em>lower</em> in the
+        semaglutide arm than in placebo. In the Butler 2024 pooled
+        Lancet analysis [3] of 1,145 patients, there were 161 serious
+        adverse events with semaglutide vs 301 with placebo —
+        approximately a 50% reduction in SAE counts despite the
+        well-known GI tolerability profile of the drug. Discontinuation
+        due to adverse events was higher with semaglutide (driven
+        predominantly by the expected GI side-effect profile), but
+        discontinuations specifically due to serious adverse events
+        were not increased by semaglutide.
       </p>
 
       <p>

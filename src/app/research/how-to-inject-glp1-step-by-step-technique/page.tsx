@@ -523,12 +523,40 @@ export default function InjectionTechniqueArticle() {
           prescriber tells you to.
         </li>
         <li>
-          <strong>I missed my weekly dose.</strong> For weekly
-          injectable GLP-1s, the FDA labels say if it&apos;s within{" "}
-          <strong>5 days</strong> of the missed dose, take it as soon
-          as you remember and continue your normal weekly schedule.
-          If it&apos;s more than 5 days, skip the missed dose and
-          take your next scheduled dose. Do not double up.
+          <strong>I missed my weekly dose.</strong> The missed-dose
+          window is <em>different for each drug</em> — using one
+          number for all of them is dangerous. Per the FDA labels:
+          <ul>
+            <li>
+              <strong>Wegovy (semaglutide 2.4 mg):</strong> per the
+              Wegovy FDA label Section 2.2, if your next scheduled
+              dose is <strong>more than 2 days (48 hours)</strong>{" "}
+              away, take the missed dose as soon as possible.
+              Otherwise, skip the missed dose and resume on the
+              next scheduled day. Do not take two doses within 48
+              hours of each other.
+            </li>
+            <li>
+              <strong>Ozempic (semaglutide 0.25-2 mg):</strong> per
+              the Ozempic FDA label Section 2.2, if it has been{" "}
+              <strong>5 days or less</strong> since the missed dose,
+              take it as soon as possible. If more than 5 days,
+              skip and resume on the next scheduled day.
+            </li>
+            <li>
+              <strong>Zepbound (tirzepatide):</strong> per the
+              Zepbound FDA label Section 2.3, take the missed dose
+              as soon as possible <strong>within 4 days
+              (96 hours)</strong>. If more than 4 days have passed,
+              skip and resume on the next scheduled day.
+            </li>
+            <li>
+              <strong>Mounjaro (tirzepatide):</strong> same 4-day
+              (96-hour) window per the Mounjaro FDA label.
+            </li>
+          </ul>
+          In every case, do not double up on doses, and contact your
+          prescriber if you are unsure.
         </li>
         <li>
           <strong>I left the pen out of the refrigerator overnight.</strong>{" "}

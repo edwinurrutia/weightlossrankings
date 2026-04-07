@@ -69,6 +69,15 @@ export default function PlateauArticle() {
       year: 2025,
       url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf",
     },
+    {
+      authors:
+        "Wilding JPH, Batterham RL, Davies M, Van Gaal LF, Kandler K, Konakli K, Lingvay I, McGowan BM, Oral TK, Rosenstock J, Wadden TA, Wharton S, Yokote K, Kushner RF; STEP 1 Study Group.",
+      title:
+        "Weight regain and cardiometabolic effects after withdrawal of semaglutide: The STEP 1 trial extension.",
+      source: "Diabetes, Obesity and Metabolism",
+      year: 2022,
+      pmid: "35441470",
+    },
   ];
 
   return (
@@ -336,10 +345,12 @@ export default function PlateauArticle() {
       <h2>When to consider stopping</h2>
 
       <p>
-        The STEP-4 trial [3] is the key reference for the
-        discontinuation decision. Patients who stopped semaglutide
-        at week 20 regained roughly 67% of their lost weight within
-        one year. This is not a failure of willpower — it&apos;s
+        The STEP-1 Extension trial (Wilding 2022 Diabetes Obesity
+        Metabolism [6]) is the key reference for the discontinuation
+        decision. Participants regained approximately two-thirds
+        (~67%) of their lost weight in the year after semaglutide
+        was stopped (regaining 11.6 percentage points of the 17.3%
+        they had lost). This is not a failure of willpower — it&apos;s
         a documented physiological rebound driven by the same
         appetite and energy-expenditure mechanisms the drug was
         suppressing. Before deciding to discontinue:

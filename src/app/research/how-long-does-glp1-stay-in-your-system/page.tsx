@@ -8,7 +8,7 @@ import FaqSchema, { type FaqItem } from "@/components/research/FaqSchema";
 const SLUG = "how-long-does-glp1-stay-in-your-system";
 
 // Verified against:
-//   - Wegovy (semaglutide) FDA Section 12.3 — t1/2 ~1 week (165 hrs)
+//   - Wegovy (semaglutide) FDA Section 12.3 — t1/2 ~1 week (168 hrs)
 //   - Ozempic (semaglutide) FDA Section 12.3 — t1/2 ~1 week
 //   - Rybelsus (oral semaglutide) FDA Section 12.3 — t1/2 ~1 week
 //   - Zepbound (tirzepatide) FDA Section 12.3 — t1/2 ~5 days
@@ -25,7 +25,7 @@ const FAQ_ITEMS: FaqItem[] = [
     question:
       "How long does semaglutide stay in your system after the last dose?",
     answer:
-      "Semaglutide's elimination half-life is about 1 week (around 165 hours) per the FDA Wegovy and Ozempic prescribing information. Using the standard five-half-life rule, more than 97% of the drug is eliminated about 5 weeks after the last dose. This is why the FDA tells women to stop semaglutide at least 2 months before a planned pregnancy.",
+      "Semaglutide's elimination half-life is about 1 week (around 168 hours) per the FDA Wegovy and Ozempic prescribing information. Using the standard five-half-life rule, more than 97% of the drug is eliminated about 5 weeks after the last dose. This is why the FDA tells women to stop semaglutide at least 2 months before a planned pregnancy.",
   },
   {
     question:
@@ -147,7 +147,7 @@ export default function HowLongGlp1StaysArticle() {
         question for tirzepatide into Google. The honest answer
         comes directly from the FDA labels: semaglutide&apos;s
         elimination half-life is about <strong>1 week</strong>{" "}
-        (around 165 hours)<Cite n={1} /> and tirzepatide&apos;s is
+        (around 168 hours)<Cite n={1} /> and tirzepatide&apos;s is
         about <strong>5 days</strong><Cite n={4} />. The standard
         pharmacokinetic threshold for &ldquo;fully out of the
         body&rdquo; is five half-lives — about <strong>5 weeks</strong>{" "}
@@ -179,7 +179,7 @@ export default function HowLongGlp1StaysArticle() {
                 <br />
                 (Wegovy, Ozempic, Rybelsus)
               </td>
-              <td className="py-2 pr-4">~1 week (~165 h)<Cite n={1} /></td>
+              <td className="py-2 pr-4">~1 week (~168 h)<Cite n={1} /></td>
               <td className="py-2 pr-4">~5 weeks</td>
               <td className="py-2">~4-5 weeks</td>
             </tr>
@@ -284,7 +284,7 @@ export default function HowLongGlp1StaysArticle() {
       <h2>Semaglutide pharmacokinetics deep-dive</h2>
       <p>
         Semaglutide&apos;s elimination half-life is approximately
-        1 week (about 165 hours) in adults, per the FDA Wegovy
+        1 week (about 168 hours) in adults, per the FDA Wegovy
         prescribing information<Cite n={1} />. The same value
         appears in the Ozempic label<Cite n={2} /> (Ozempic and
         Wegovy are the same molecule at different dose strengths)
@@ -382,15 +382,36 @@ export default function HowLongGlp1StaysArticle() {
         drug.
       </p>
       <p>
-        Semaglutide and tirzepatide were both designed to solve
-        this problem in essentially the same way: attach a fatty
-        acid side chain to the peptide backbone, so the molecule
-        binds reversibly to albumin in the bloodstream. Albumin is
-        too big to be filtered by the kidney, and the bound
-        peptide is shielded from DPP-4. The result is that the
-        drug acts as a slow-release reservoir distributed
-        throughout the plasma, with a half-life measured in days
-        rather than minutes<Cite n={1} /><Cite n={4} />.
+        Semaglutide solves this problem with{" "}
+        <strong>two independent engineering modifications</strong>{" "}
+        that are often conflated but do separate jobs:
+      </p>
+      <ol>
+        <li>
+          <strong>An α-aminoisobutyric acid (Aib) substitution at
+          position 8</strong> of the peptide backbone. The Aib
+          substitution sterically blocks the DPP-4 cleavage site
+          and gives the molecule its DPP-4 resistance. Without
+          this, semaglutide would still be degraded in roughly the
+          same 2 minutes as native GLP-1.
+        </li>
+        <li>
+          <strong>A C18 fatty diacid (γGlu-2xOEG linker) attached
+          at Lys-26.</strong> The fatty diacid binds reversibly and
+          tightly to circulating albumin (greater than 99% plasma
+          protein binding). Albumin is too large to be filtered by
+          the kidney, so the bound peptide is shielded from renal
+          clearance. This is what produces the multi-day, not the
+          DPP-4 protection.
+        </li>
+      </ol>
+      <p>
+        Tirzepatide uses the same general strategy but with a
+        different fatty acid linker — a{" "}
+        <strong>C20 fatty diacid</strong> attached to a Lys residue
+        — which gives slightly different albumin-binding kinetics
+        and the somewhat shorter ~5-day half-life compared with
+        semaglutide&apos;s ~7-day half-life<Cite n={1} /><Cite n={4} />.
       </p>
       <p>
         Subcutaneous injection adds a second slow-release layer:

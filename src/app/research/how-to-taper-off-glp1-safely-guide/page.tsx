@@ -11,8 +11,8 @@ const HOW_TO_STEPS: HowToStep[] = [
     text: "Stopping a GLP-1 is a medical decision, not a self-care choice. Get a written taper plan from the clinician who prescribed it. If you have type 2 diabetes, the loss of glycemic control on stopping is the bigger concern — never stop a diabetes GLP-1 on your own.",
   },
   {
-    name: "Step down through the labeled doses, not cold turkey",
-    text: "Standard practice is to step back through the labeled titration doses in reverse — for example, Wegovy 2.4 mg → 1.7 mg → 1.0 mg → 0.5 mg → 0.25 mg → stop, with 4 weeks at each step. Same pattern for Zepbound and other GLP-1s. The slow taper smooths the metabolic transition and helps minimize rebound nausea.",
+    name: "If your prescriber chooses a stepped discontinuation",
+    text: "There is no FDA-approved tapering schedule for any GLP-1. If your prescriber chooses a stepped discontinuation rather than an abrupt stop, a common off-label pattern is to step back through the labeled titration doses in reverse — for example, Wegovy 2.4 mg → 1.7 mg → 1.0 mg → 0.5 mg → 0.25 mg → stop, with several weeks at each step. The Wegovy and Zepbound labels themselves do not require this and treat discontinuation as 'simply stop.' Discuss the approach with your prescriber.",
   },
   {
     name: "Front-load protein and resistance training during the taper",
@@ -450,8 +450,11 @@ export default function TaperingGuideArticle() {
         </li>
         <li>
           <strong>Pancreatitis.</strong> Acute pancreatitis is a
-          boxed warning on the class and is a hard stop — do not
-          resume.
+          Section 5 Warning and Precaution on the GLP-1 labels —
+          not a boxed warning. (The only boxed warning on Wegovy,
+          Ozempic, Zepbound, and Mounjaro is for thyroid C-cell
+          tumors / medullary thyroid carcinoma [4, 5].) Confirmed
+          acute pancreatitis is a hard stop — do not resume.
         </li>
         <li>
           <strong>Gallbladder surgery.</strong> The drugs increase
@@ -460,7 +463,11 @@ export default function TaperingGuideArticle() {
         </li>
         <li>
           <strong>Severe diabetic retinopathy progression</strong>{" "}
-          in T2D patients on Ozempic/Mounjaro.
+          in T2D patients on Ozempic. The semaglutide-class
+          retinopathy signal originates in SUSTAIN-6 (Marso 2016
+          NEJM, PMID 27633186) and is in the Ozempic label
+          Section 5.3. Tirzepatide&apos;s Mounjaro label does not
+          carry an equivalent retinopathy warning.
         </li>
         <li>
           <strong>Gastroparesis or severe reflux</strong> that

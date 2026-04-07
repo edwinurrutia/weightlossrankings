@@ -222,8 +222,9 @@ export default function GlpLiverArticle() {
         and a significantly higher proportion achieved improvement in
         fibrosis stage by at least one level without worsening of
         MASH. At the 15 mg dose, roughly 62% achieved steatohepatitis
-        resolution versus 10% on placebo, and roughly 55% achieved
-        fibrosis improvement versus 30% on placebo.
+        resolution versus 10% on placebo, and approximately 51%
+        achieved fibrosis improvement versus 30% on placebo per
+        Loomba et al 2024<Cite n={2} />.
       </p>
       <p>
         This is the first GLP-1 class drug to show both inflammatory

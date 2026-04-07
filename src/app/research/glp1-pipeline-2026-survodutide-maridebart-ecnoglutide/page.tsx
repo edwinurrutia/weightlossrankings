@@ -276,28 +276,29 @@ export default function GlpPipelineArticle() {
         <tbody>
           <tr>
             <td>Obesity (no diabetes)</td>
-            <td>−12.3% to −16.2% (95% CI −18.9 to −13.5 at top dose)</td>
+            <td>up to −16.2% (95% CI −18.9 to −13.5 at top dose)</td>
             <td>−2.5%</td>
           </tr>
           <tr>
             <td>Obesity + T2D</td>
-            <td>up to ~17%</td>
-            <td>−1.4%</td>
+            <td>up to −12.3% (95% CI −15.3 to −9.2 at top dose)</td>
+            <td>−1.7%</td>
           </tr>
         </tbody>
       </table>
 
       <p>
-        At the highest dose, MariTide produced approximately 16%
+        At the highest dose, MariTide produced approximately −16.2%
         mean weight loss at 52 weeks in the non-diabetic obesity
-        cohort and 17% in the T2D cohort. These are substantial
-        numbers but slightly lower than the topline that some
-        early Amgen guidance had suggested, and the stock dropped
-        on the readout — a similar dynamic to the CagriSema
+        cohort and −12.3% in the obesity+T2D cohort. These are
+        substantial numbers but slightly lower than the topline that
+        some early Amgen guidance had suggested, and the stock
+        dropped on the readout — a similar dynamic to the CagriSema
         REDEFINE 1 reaction. MariTide also produced an HbA1c
-        reduction of up to 2.2% in the T2D cohort and across-the-
-        board cardiometabolic improvements (waist circumference,
-        blood pressure, hs-CRP, lipid panel).
+        reduction of −1.2 to −1.6 percentage points across the
+        active dose groups in the T2D cohort (vs +0.1 pp on placebo)
+        and across-the-board cardiometabolic improvements (waist
+        circumference, blood pressure, hs-CRP, lipid panel).
       </p>
 
       <h3>Phase 3 program</h3>
@@ -437,7 +438,7 @@ export default function GlpPipelineArticle() {
           <tr>
             <td>MariTide</td>
             <td>GLP-1 agonist + GIP antagonist (monthly)</td>
-            <td>−16.2% (phase 2 NEJM 2025)</td>
+            <td>−16.2% (obesity), −12.3% (obesity+T2D) phase 2 NEJM 2025</td>
             <td>Phase 3 planned</td>
           </tr>
           <tr>

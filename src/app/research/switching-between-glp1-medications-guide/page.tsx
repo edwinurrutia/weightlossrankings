@@ -294,14 +294,18 @@ export default function SwitchingGuideArticle() {
 
       <ol>
         <li>
-          If already at Ozempic 2 mg, continue at the same dose
-          level when switching to Wegovy pens. Your prescriber
-          should dispense Wegovy 2 mg pens to start, then escalate
-          to 2.4 mg after 4 weeks if additional loss is desired.
+          <strong>Wegovy dose strengths.</strong> Per the Wegovy
+          FDA label Section 3 [3], the available pen strengths are
+          0.25, 0.5, 1.0, 1.7, and 2.4 mg only — there is no
+          &ldquo;Wegovy 2 mg&rdquo; pen. If you are already at
+          Ozempic 2 mg, your prescriber will typically transition
+          you to either Wegovy 1.7 mg (the next step down on the
+          Wegovy ladder) or directly to 2.4 mg, depending on
+          tolerability and clinical goals.
         </li>
         <li>
           If on a lower Ozempic dose (0.5 mg, 1 mg), continue at
-          the same dose level when switching to Wegovy — the
+          the matching Wegovy strength (0.5 mg or 1 mg) — the
           molecule is identical, so there&apos;s no need to
           re-titrate from the starter dose.
         </li>
@@ -394,8 +398,8 @@ export default function SwitchingGuideArticle() {
         </li>
         <li>
           Follow the Foundayo titration ramp: 0.8 mg → 2.5 mg →
-          5.5 mg → 9 mg → 14.5 mg → 17.2 mg, increased every 4
-          weeks.
+          5.5 mg → 9 mg → 14.5 mg → 17.2 mg, with at least 30 days
+          between dose increases per the Foundayo FDA label.
         </li>
       </ol>
 
@@ -410,53 +414,33 @@ export default function SwitchingGuideArticle() {
         for the full trial data.
       </p>
 
-      <h2>Dose-equivalence reference table</h2>
+      <h2>Why there is no semaglutide-to-tirzepatide dose equivalence table</h2>
 
       <p>
         There is no formal FDA-approved dose equivalence between
-        semaglutide and tirzepatide — they target different
-        receptors and the dose-response curves aren&apos;t
-        directly mappable. But from the STEP-1 and SURMOUNT-1
-        trial arms at roughly equivalent weight-loss endpoints, a
-        rough operational mapping looks like this:
+        semaglutide and tirzepatide. The two molecules target
+        different receptors (semaglutide is a pure GLP-1 agonist;
+        tirzepatide is a dual GIP/GLP-1 agonist), the dose-response
+        curves are not parallel, and the only direct head-to-head
+        randomized comparison — SURPASS-2 (Frias et al., NEJM 2021,
+        PMID 34170647) in patients with type 2 diabetes — found that
+        even the <em>lowest</em> tirzepatide dose (5 mg) produced
+        greater HbA1c and weight reduction than semaglutide 1 mg.
+        That finding rules out any clean &ldquo;1 mg sema = 5 mg
+        tirz&rdquo; mapping.
       </p>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Semaglutide dose (mg weekly)</th>
-            <th>≈ Equivalent tirzepatide dose (mg weekly)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>0.25 mg (starter)</td>
-            <td>2.5 mg (starter)</td>
-          </tr>
-          <tr>
-            <td>0.5 mg</td>
-            <td>5 mg</td>
-          </tr>
-          <tr>
-            <td>1.0 mg</td>
-            <td>7.5 mg</td>
-          </tr>
-          <tr>
-            <td>1.7 mg</td>
-            <td>10 mg</td>
-          </tr>
-          <tr>
-            <td>2.4 mg (Wegovy maintenance)</td>
-            <td>12.5–15 mg</td>
-          </tr>
-        </tbody>
-      </table>
-
       <p>
-        This is a rough operational mapping for patient-side
-        expectation management, not a prescribing guide. Your
-        prescriber will decide the specific dose based on your
-        history, tolerability, and response.
+        Practically, this means a prescriber switching a patient
+        from semaglutide to tirzepatide will <strong>restart at the
+        FDA-approved tirzepatide starter dose (2.5 mg) and titrate
+        on the standard 4-week schedule</strong>, regardless of
+        what semaglutide dose the patient was on. The reverse
+        switch (tirz → sema) restarts at semaglutide 0.25 mg with
+        the standard ramp. Trying to &ldquo;match&rdquo; the prior
+        dose level on the new molecule is not supported by any
+        head-to-head randomized data and is not how the labels are
+        written [3, 4].
       </p>
 
       <h2>Common switching mistakes to avoid</h2>

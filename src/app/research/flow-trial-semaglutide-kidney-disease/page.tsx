@@ -249,14 +249,15 @@ export default function FlowKidneyArticle() {
 
       <p>
         The 24% relative risk reduction in major kidney events
-        translates to an absolute risk reduction of about 4.9
-        percentage points over 3.4 years and a number needed to treat
-        (NNT) of approximately 18 patients treated for 3.4 years to
-        prevent one primary endpoint event. The accompanying 20%
-        all-cause mortality reduction is striking — relatively few
-        kidney trials have shown a clean all-cause mortality benefit,
-        and the NNT for mortality of approximately 39 over the trial
-        duration is clinically important.
+        translates to an absolute risk reduction of about 4.5
+        percentage points (18.7% vs 23.2%) over 3.4 years and a
+        number needed to treat (NNT) of approximately 22 patients
+        treated for 3.4 years to prevent one primary endpoint event.
+        The accompanying 20% all-cause mortality reduction is
+        striking — relatively few kidney trials have shown a clean
+        all-cause mortality benefit, and the NNT for mortality of
+        approximately 33 (3.0 percentage point absolute reduction
+        in death) over the trial duration is clinically important.
       </p>
 
       <p>

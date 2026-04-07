@@ -209,12 +209,21 @@ export default function InjectionGuideArticle() {
 
       <ul>
         <li>
-          <strong>Skin pinch:</strong> Pinch a 1-2 inch fold of skin
-          and subcutaneous fat between thumb and forefinger to lift
-          the tissue away from underlying muscle. This is the single
-          most important technique detail — without the pinch, the
-          needle can reach muscle in lean patients, which is more
-          painful and changes absorption kinetics.
+          <strong>Skin pinch — depends on the device.</strong> For{" "}
+          <em>vial-and-syringe</em> compounded GLP-1 injection,
+          where needles are typically longer than the brand pens,
+          pinch a 1-2 inch fold of skin and subcutaneous fat
+          between thumb and forefinger to lift the tissue away
+          from underlying muscle. For{" "}
+          <em>brand-pen injection</em> (Wegovy, Ozempic, Zepbound,
+          Mounjaro pens), the auto-injector needles are 4-8 mm and
+          most adults do <strong>not</strong> need a pinch — per
+          the FDA pen IFUs and the Frid 2016 New Insulin Delivery
+          Recommendations consensus, 4-5 mm needles reach
+          subcutaneous tissue in essentially all adults at the
+          recommended sites without a pinch. If you are very lean
+          or injecting in the arm, a light pinch is still
+          reasonable; otherwise follow the device IFU.
         </li>
         <li>
           <strong>Needle insertion:</strong> Insert at 90 degrees

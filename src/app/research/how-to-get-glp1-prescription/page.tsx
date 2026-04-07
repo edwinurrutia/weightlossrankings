@@ -138,6 +138,73 @@ export default function HowToGetGlp1Article() {
         at lower BMIs.
       </p>
 
+      <h3>Two 2024 indication expansions you may also qualify under</h3>
+      <p>
+        Beyond the BMI-based weight-management indication, two
+        FDA-approved indications added in 2024 may give you a
+        different qualifying path:
+      </p>
+      <ul>
+        <li>
+          <strong>Wegovy cardiovascular indication (March 8, 2024).</strong>{" "}
+          Wegovy is FDA-approved to reduce the risk of cardiovascular
+          death, nonfatal myocardial infarction, and nonfatal stroke
+          in adults with established cardiovascular disease and
+          either obesity or overweight (no type 2 diabetes diagnosis
+          required). The basis is the SELECT trial — see our{" "}
+          <Link href="/research/select-trial-cardiovascular-benefits-non-diabetics">
+            SELECT trial deep-dive
+          </Link>
+          . This indication often unlocks insurance coverage that the
+          weight-management indication alone does not.
+        </li>
+        <li>
+          <strong>Zepbound obstructive sleep apnea indication
+          (December 20, 2024).</strong> Zepbound is FDA-approved for
+          the treatment of moderate-to-severe obstructive sleep apnea
+          in adults with obesity, on the basis of the SURMOUNT-OSA
+          trial (Malhotra et al. NEJM 2024, PMID 38912654). If you
+          have a sleep study documenting moderate-to-severe OSA and
+          BMI ≥30, this is a separate qualifying indication that
+          some insurers cover even when they exclude
+          weight-management indications.
+        </li>
+      </ul>
+
+      <h3>Labs your prescriber will typically order</h3>
+      <p>
+        Most PCPs and telehealth platforms run a baseline lab panel
+        before initiating a GLP-1. Typical pre-prescription labs:
+      </p>
+      <ul>
+        <li>
+          <strong>HbA1c</strong> — to screen for undiagnosed type 2
+          diabetes and document a baseline if you have prediabetes
+        </li>
+        <li>
+          <strong>Comprehensive metabolic panel (CMP)</strong> —
+          renal function (creatinine, eGFR) and liver enzymes (AST,
+          ALT) baseline
+        </li>
+        <li>
+          <strong>Lipid panel</strong> — total cholesterol, LDL,
+          HDL, triglycerides — to document the cardiometabolic
+          starting point and qualify for the BMI ≥27 + dyslipidemia
+          comorbidity pathway if relevant
+        </li>
+        <li>
+          <strong>TSH (thyroid stimulating hormone)</strong> — many
+          prescribers screen for hypothyroidism, which can both
+          mimic weight-resistance and is relevant given the GLP-1
+          class boxed warning for thyroid C-cell tumors
+        </li>
+        <li>
+          <strong>Personal and family history</strong> review for
+          medullary thyroid carcinoma, MEN2 syndrome, history of
+          pancreatitis, gallbladder disease, and pregnancy plans
+        </li>
+      </ul>
+
       <h2>Path 1 — Through insurance</h2>
       <p>
         The cheapest path if it works, and the most paperwork-heavy.
