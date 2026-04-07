@@ -226,6 +226,20 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Adolescents", "PubMed sourced"],
   },
   {
+    slug: "flow-trial-semaglutide-kidney-disease",
+    title:
+      "FLOW: How Semaglutide Became the First GLP-1 Approved for Diabetic Kidney Disease",
+    description:
+      "The FLOW trial (Perkovic et al., NEJM 2024) randomized 3,533 patients with type 2 diabetes and chronic kidney disease to weekly semaglutide 1.0 mg or placebo and was stopped early for benefit. We walk through the trial design, the 24% reduction in major kidney events, the FDA approval, and how the kidney protection compares to the SGLT2 inhibitor trials.",
+    excerpt:
+      "FLOW is the trial that earned semaglutide an FDA-approved kidney indication in January 2025 — the first ever for a GLP-1 receptor agonist. 3,533 patients with type 2 diabetes plus chronic kidney disease randomized to semaglutide 1.0 mg or placebo, stopped early after 3.4 years of follow-up because the kidney benefit had crossed the prespecified efficacy boundary. The composite kidney endpoint dropped 24% (HR 0.76, 95% CI 0.66-0.88), all-cause mortality dropped 20%, and the eGFR slope difference was 1.16 mL/min/1.73m² per year. Here's the verified trial data and how it compares to the SGLT2 inhibitor kidney trials.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 13,
+    citations: 8,
+    tags: ["Semaglutide", "Kidney disease", "PubMed sourced"],
+  },
+  {
     slug: "glp1-alcohol-use-disorder-evidence-2026",
     title:
       "GLP-1 Drugs and Alcohol Use Disorder: What the Trial Evidence Actually Shows in 2026",
