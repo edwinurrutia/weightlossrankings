@@ -435,9 +435,51 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  // Dynamic: /research/[slug] — feed real publishedDate
-  const researchPages: MetadataRoute.Sitemap = RESEARCH_ARTICLES.map((a) => ({
+  // Spanish articles live at /es/research/[slug]; the entries that
+  // still appear in RESEARCH_ARTICLES with these slugs are published
+  // there now (the old /research/[slug] URLs 301 to /es/research/...
+  // via next.config.mjs and must NOT appear in the sitemap).
+  const SPANISH_RESEARCH_SLUGS = new Set<string>([
+    "semaglutide-para-que-sirve",
+    "tirzepatide-para-que-sirve",
+    "cuanto-tarda-glp1-en-hacer-efecto",
+    "guia-marcas-wegovy-ozempic-zepbound-mounjaro",
+    "efectos-secundarios-glp1-preguntas-respuestas",
+  ]);
+
+  // Dynamic: /research/[slug] — feed real publishedDate. Excludes the
+  // Spanish slugs above; those are emitted under /es/research/[slug].
+  const researchPages: MetadataRoute.Sitemap = RESEARCH_ARTICLES.filter(
+    (a) => !SPANISH_RESEARCH_SLUGS.has(a.slug),
+  ).map((a) => ({
     url: `${BASE_URL}/research/${a.slug}`,
+    lastModified: safeDate(a.publishedDate),
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  // Spanish subdirectory (/es). Manually enumerated for now — once
+  // more /es/* surfaces are localized, this list should grow or be
+  // generated dynamically the way the English routes are.
+  const spanishStaticPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/es`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/es/research`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+  ];
+
+  const spanishResearchPages: MetadataRoute.Sitemap = RESEARCH_ARTICLES.filter(
+    (a) => SPANISH_RESEARCH_SLUGS.has(a.slug),
+  ).map((a) => ({
+    url: `${BASE_URL}/es/research/${a.slug}`,
     lastModified: safeDate(a.publishedDate),
     changeFrequency: "weekly",
     priority: 0.85,
@@ -459,6 +501,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...pharmacyPages,
     ...blogPages,
     ...researchPages,
+    ...spanishStaticPages,
+    ...spanishResearchPages,
     ...fdaWarningLetterPages,
   ];
 }

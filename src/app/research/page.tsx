@@ -28,6 +28,16 @@ export default function ResearchIndexPage() {
 
   return (
     <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      {/* Language switcher */}
+      <div className="mb-6 text-xs">
+        <Link
+          href="/es/research"
+          className="text-brand-violet hover:underline font-semibold"
+        >
+          Disponible en Español →
+        </Link>
+      </div>
+
       {/* Header */}
       <header className="mb-12 max-w-3xl">
         <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold mb-4">

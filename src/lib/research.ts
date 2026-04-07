@@ -757,6 +757,20 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutida", "Español", "PubMed sourced"],
   },
   {
+    slug: "guia-marcas-wegovy-ozempic-zepbound-mounjaro",
+    title:
+      "Wegovy, Ozempic, Zepbound y Mounjaro: guía en español de las marcas de GLP-1",
+    description:
+      "Guía en español de las marcas de GLP-1: cinco nombres comerciales, tres ingredientes activos, dos fabricantes. Explicamos cuál es cuál, cuáles son productos idénticos con etiquetas distintas, qué cubre el seguro y la diferencia entre Wegovy y Ozempic, Zepbound y Mounjaro, Rybelsus y Foundayo.",
+    excerpt:
+      "Cinco marcas, tres ingredientes activos, dos fabricantes y un mercado confuso. Wegovy y Ozempic son la misma semaglutida con indicaciones distintas. Zepbound y Mounjaro son la misma tirzepatida con indicaciones distintas. Rybelsus es la semaglutida oral y Foundayo es el nuevo orforglipron oral no peptídico aprobado en abril de 2026. Esta hoja de referencia en español desenreda el mercado con las indicaciones de la FDA tomadas directamente de la información de prescripción de cada producto.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-07",
+    readMinutes: 8,
+    citations: 6,
+    tags: ["Marcas", "Español", "Guía de pacientes", "Hoja de referencia"],
+  },
+  {
     slug: "tirzepatide-para-que-sirve",
     title: "Tirzepatida: para qué sirve, cómo funciona y qué dicen los estudios clínicos",
     description:
@@ -768,6 +782,34 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     readMinutes: 12,
     citations: 8,
     tags: ["Tirzepatida", "Español", "PubMed sourced"],
+  },
+  {
+    slug: "cuanto-tarda-glp1-en-hacer-efecto",
+    title:
+      "¿Cuánto tarda la semaglutida o la tirzepatida en hacer efecto? Lo que muestran los estudios clínicos semana por semana",
+    description:
+      "Guía en español basada en STEP-1 y SURMOUNT-1: en cuántos días empieza la supresión del apetito, cuántas semanas tarda cada dosis en alcanzar el estado estacionario y cuándo se observa pérdida de peso medible con semaglutida (Wegovy) y tirzepatida (Zepbound).",
+    excerpt:
+      "La pregunta más común de los pacientes que inician un agonista del receptor de GLP-1 es: ¿en cuánto tiempo empieza a funcionar? La respuesta honesta es que hay tres escalas de tiempo distintas que los ensayos clínicos miden por separado: la supresión del apetito (horas a días, por el retraso del vaciamiento gástrico), la farmacocinética de estado estacionario (4 a 5 semanas por cada nivel de dosis) y la curva de pérdida de peso medible (semana 4 primeros cambios, semana 16 aproximadamente 5%, semana 68 meseta de mantenimiento). Esta guía recorre las tres usando los datos verificados de STEP-1 (Wilding, NEJM 2021), SURMOUNT-1 (Jastreboff, NEJM 2022) y la información de prescripción aprobada por la FDA.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 12,
+    citations: 6,
+    tags: ["Semaglutida", "Tirzepatida", "Español", "STEP-1", "SURMOUNT-1"],
+  },
+  {
+    slug: "efectos-secundarios-glp1-preguntas-respuestas",
+    title:
+      "Efectos secundarios del GLP-1: preguntas y respuestas sobre dolor de cabeza, eructos con azufre, niebla mental, estado de ánimo y acné",
+    description:
+      "Guía en español con las tasas verificadas de los efectos secundarios específicos de los agonistas del receptor de GLP-1, tomadas de STEP-1, SURMOUNT-1 y las tablas de reacciones adversas de la información de prescripción aprobada por la FDA para Wegovy y Zepbound. Incluye la tasa de dolor de cabeza (14.2% con semaglutida frente a 10% con placebo), el mecanismo de los eructos con olor a azufre, la conclusión de la revisión de 2024 de la EMA sobre ideación suicida y la señal emergente de niebla mental de la farmacovigilancia de la FDA.",
+    excerpt:
+      "Respuestas claras en español a las preguntas más frecuentes de los pacientes sobre los efectos secundarios específicos de los agonistas del receptor de GLP-1: ¿la semaglutida causa dolor de cabeza? (sí, 14.2% frente a 10% con placebo en STEP-1), ¿la tirzepatida causa eructos con olor a azufre? (sí, por el vaciamiento gástrico más lento), ¿la semaglutida causa depresión? (no hay señal en la revisión de 2024 de la EMA sobre ensayos aleatorizados), ¿el GLP-1 causa niebla mental? (señal emergente de farmacovigilancia de la FDA), y 13 preguntas adicionales con las tasas verificadas contra las publicaciones NEJM de STEP-1 y SURMOUNT-1 y la información de prescripción aprobada por la FDA para Wegovy y Zepbound.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 13,
+    citations: 7,
+    tags: ["Efectos secundarios", "Español", "STEP-1", "SURMOUNT-1", "Preguntas frecuentes"],
   },
 ];
 

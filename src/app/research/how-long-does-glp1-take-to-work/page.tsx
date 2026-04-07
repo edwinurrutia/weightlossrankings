@@ -11,7 +11,13 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: article.title,
     description: article.description,
-    alternates: { canonical: `/research/${SLUG}` },
+    alternates: {
+      canonical: `/research/${SLUG}`,
+      languages: {
+        "en-US": `/research/${SLUG}`,
+        "es-US": "/es/research/cuanto-tarda-glp1-en-hacer-efecto",
+      },
+    },
     openGraph: {
       title: article.title,
       description: article.description,
@@ -88,6 +94,15 @@ export default function HowLongDoesGlp1TakeToWorkArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <div className="not-prose mb-6 rounded-lg border border-brand-violet/20 bg-brand-violet/5 p-4 text-sm text-brand-text-secondary">
+        <Link
+          href="/es/research/cuanto-tarda-glp1-en-hacer-efecto"
+          className="text-brand-violet font-semibold hover:underline"
+        >
+          Disponible en Español →
+        </Link>
+      </div>
+
       <p data-speakable="lead">
         The most common patient question after starting a GLP-1 is some
         variant of <em>&ldquo;how long until this starts working?&rdquo;</em>{" "}

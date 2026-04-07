@@ -13,7 +13,18 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: article.title,
     description: article.description,
-    alternates: { canonical: `/research/${SLUG}` },
+    alternates: {
+      canonical: `/research/${SLUG}`,
+      languages: {
+        "en-US": `/research/${SLUG}`,
+        // Two Spanish guides cover different angles of this English
+        // article (semaglutide-focused and tirzepatide-focused). We
+        // surface the semaglutide one as the canonical Spanish
+        // alternate; the tirzepatide one is cross-linked from the
+        // Spanish article body itself.
+        "es-US": "/es/research/semaglutide-para-que-sirve",
+      },
+    },
     openGraph: {
       title: article.title,
       description: article.description,
@@ -29,6 +40,15 @@ export default function HeadToHeadArticle() {
 
   return (
     <ResearchArticleLayout article={article} dataAsOf={dataAsOf}>
+      <div className="not-prose mb-6 rounded-lg border border-brand-violet/20 bg-brand-violet/5 p-4 text-sm text-brand-text-secondary">
+        <Link
+          href="/es/research/semaglutide-para-que-sirve"
+          className="text-brand-violet font-semibold hover:underline"
+        >
+          Disponible en Español →
+        </Link>
+      </div>
+
       <p>
         Semaglutide (Wegovy) and tirzepatide (Zepbound) are the two
         injectable weight-loss medications most patients are choosing
