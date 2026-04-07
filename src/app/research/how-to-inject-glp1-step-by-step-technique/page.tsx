@@ -3,6 +3,54 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
+
+// HowTo JSON-LD source. Each step maps to a real instruction in the
+// article body. Google's HowTo SERP card renders these as numbered
+// steps directly in the search results — one of the highest-CTR
+// organic enhancements for procedural content.
+const HOW_TO_STEPS: HowToStep[] = [
+  {
+    name: "Take the pen out of the refrigerator",
+    text: "Remove the pen from the fridge 15-30 minutes before injecting. Cold injections sting more.",
+  },
+  {
+    name: "Inspect the pen",
+    text: "Check the pen window. The liquid should be clear and colorless. If it is cloudy, discolored, or has particles, do not use the pen.",
+  },
+  {
+    name: "Wash your hands",
+    text: "Wash hands with soap and water before handling the pen.",
+  },
+  {
+    name: "Choose and clean an injection site",
+    text: "Pick the abdomen (at least 2 inches from the navel), front of the thigh, or back of the upper arm. Clean with alcohol and let it dry completely — wet alcohol stings.",
+  },
+  {
+    name: "Remove the pen cap",
+    text: "Pull off the pen cap. For Wegovy and Zepbound this arms the auto-injector. Do not put the cap back on.",
+  },
+  {
+    name: "Press the pen flat against the skin",
+    text: "Press the pen firmly against the cleaned skin at a 90-degree angle. You should feel firm contact, not just a touch.",
+  },
+  {
+    name: "Press and hold the injection button",
+    text: "Press the dose button. You will hear a click as the needle enters and the dose starts. Keep pressing firmly against the skin throughout the dose.",
+  },
+  {
+    name: "Hold for the labeled dwell time",
+    text: "Hold the pen against the skin for 5-10 seconds (Wegovy), 10 seconds (Zepbound), or 6 seconds (Ozempic) after the dose-counter clicks stop. Lifting too early is the most common cause of partial doses.",
+  },
+  {
+    name: "Lift the pen straight off the skin",
+    text: "Pull the pen straight out. Do not rub the injection site. A small drop of blood is normal.",
+  },
+  {
+    name: "Dispose of the pen safely",
+    text: "Drop the entire pen into an FDA-cleared sharps container. Do not recap.",
+  },
+];
 
 const SLUG = "how-to-inject-glp1-step-by-step-technique";
 
@@ -86,6 +134,14 @@ export default function InjectionTechniqueArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <HowToSchema
+        name="How to Inject a GLP-1 (Wegovy, Ozempic, Zepbound, Mounjaro)"
+        description="Step-by-step injection technique for GLP-1 receptor agonist pre-filled auto-injector pens, sourced from the FDA-approved prescribing information for each drug."
+        steps={HOW_TO_STEPS}
+        url="https://weightlossrankings.org/research/how-to-inject-glp1-step-by-step-technique"
+        image="https://weightlossrankings.org/research/how-to-inject-glp1-step-by-step-technique/opengraph-image"
+        totalTime="PT5M"
+      />
       <p
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"

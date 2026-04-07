@@ -13,6 +13,46 @@ interface ResearchArticleLayoutProps {
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
 
+// Tags that mark an article as YMYL health content. When an article
+// has any of these tags, ResearchArticleLayout emits a MedicalWebPage
+// JSON-LD block in addition to the ScholarlyArticle one. Google's
+// medical knowledge graph and the "About this result" panel
+// specifically look for MedicalWebPage on health content — it's a
+// stronger E-E-A-T signal than ScholarlyArticle alone for health
+// queries. The two schemas are complementary, not duplicative.
+const HEALTH_CONTENT_TAGS = new Set<string>([
+  "Side effects",
+  "Safety",
+  "Cancer",
+  "Black box warning",
+  "MTC",
+  "Pregnancy",
+  "Hormones",
+  "Menstrual cycle",
+  "PCOS",
+  "Liver safety",
+  "Cardiovascular",
+  "Blood pressure",
+  "Surgery",
+  "Anesthesia",
+  "Patient safety",
+  "Nausea",
+  "Drug interactions",
+  "Hypoglycemia",
+  "Combination therapy",
+  "Phentermine",
+  "Microdosing",
+  "Off-label",
+  "Women's health",
+  "Patient question",
+  "FAQ",
+  "Patient guide",
+]);
+
+function isHealthContent(article: ResearchArticle): boolean {
+  return article.tags.some((t) => HEALTH_CONTENT_TAGS.has(t));
+}
+
 /**
  * Shared chrome for every /research/[slug] piece. Provides:
  *   - Editorial header (eyebrow, title, byline, freshness stamp)
@@ -78,6 +118,108 @@ export default function ResearchArticleLayout({
     },
   };
 
+  // BreadcrumbList JSON-LD — Google renders breadcrumb rich results
+  // in the SERP and uses them as a CTR signal. Every research article
+  // gets the same 3-step path: Home → Research → [Article Title].
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Research",
+        item: `${SITE_URL}/research`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: `${SITE_URL}/research/${article.slug}`,
+      },
+    ],
+  };
+
+  // MedicalWebPage JSON-LD for YMYL health content. Google's medical
+  // knowledge graph specifically looks for this schema type on health
+  // pages — it's the strongest single E-E-A-T signal we can emit
+  // short of named human authors with credentials. We emit it
+  // ALONGSIDE ScholarlyArticle (not instead of) because the two
+  // schemas serve different parts of Google's pipeline:
+  // ScholarlyArticle for Scholar / news / general indexing,
+  // MedicalWebPage for the medical knowledge graph and the
+  // "About this result" panel.
+  //
+  // Gated by the HEALTH_CONTENT_TAGS allow-list above so we don't
+  // emit it on non-health articles like the savings calculator
+  // walkthroughs or the FDA warning letters tracker (those use
+  // their own more-specific schemas already).
+  const isHealth = isHealthContent(article);
+  const medicalWebPageSchema = isHealth
+    ? {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        name: article.title,
+        description: article.description,
+        url: `${SITE_URL}/research/${article.slug}`,
+        datePublished: article.publishedDate,
+        dateModified: dataAsOf ?? article.publishedDate,
+        inLanguage: "en-US",
+        // medicalAudience tells Google's knowledge graph who this
+        // page is FOR. "Patient" is the most-recognized value.
+        medicalAudience: {
+          "@type": "MedicalAudience",
+          audienceType: "Patient",
+        },
+        // about: the medical condition or treatment the page covers.
+        // We use a generic Drug entity referencing the GLP-1 RA class
+        // because most of our YMYL articles cover the class as a
+        // whole rather than a single named drug.
+        about: {
+          "@type": "Drug",
+          name: "GLP-1 receptor agonists",
+          alternateName: [
+            "Glucagon-like peptide-1 receptor agonists",
+            "Semaglutide",
+            "Tirzepatide",
+            "Orforglipron",
+          ],
+        },
+        // primaryImageOfPage uses the per-route OG image
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/research/${article.slug}/opengraph-image`,
+        },
+        // lastReviewed signals editorial freshness on YMYL content.
+        // Same value as dateModified for now; will diverge once we
+        // add a separate `reviewedDate` field for periodic editorial
+        // re-reviews vs minor copy edits.
+        lastReviewed: dataAsOf ?? article.publishedDate,
+        reviewedBy: {
+          "@type": "Organization",
+          name: "Weight Loss Rankings",
+          url: SITE_URL,
+        },
+        // mainContentOfPage limits the indexable selectors so the
+        // crawler can ignore boilerplate (back link, share buttons,
+        // related-research footer).
+        mainContentOfPage: {
+          "@type": "WebPageElement",
+          cssSelector: "article",
+        },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", "[data-speakable='lead']"],
+        },
+      }
+    : null;
+
   const eyebrow =
     article.kind === "data-investigation"
       ? "Data investigation"
@@ -86,6 +228,8 @@ export default function ResearchArticleLayout({
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
       <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      {medicalWebPageSchema && <JsonLd data={medicalWebPageSchema} />}
 
       {/* Breadcrumb + back link */}
       <nav className="mb-6 text-xs text-brand-text-secondary">

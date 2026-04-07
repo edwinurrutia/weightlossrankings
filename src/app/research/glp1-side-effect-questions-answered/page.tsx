@@ -3,6 +3,64 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema, { type FaqItem } from "@/components/research/FaqSchema";
+
+// FAQPage JSON-LD source. Each item maps to a real H2 question and
+// its first paragraph in the article body — Google penalizes
+// FAQPage schema with hidden or made-up content. Plain text only,
+// under ~300 characters per answer for best SERP rendering.
+const FAQ_ITEMS: FaqItem[] = [
+  {
+    question: "Does semaglutide cause headaches?",
+    answer:
+      "Yes. STEP-1 reported headache in 14.2% of semaglutide 2.4 mg patients vs 10.0% of placebo, so the drug-attributable rate is about 4 percentage points (~1 in 25 patients). The most common mechanism is dehydration from blunted thirst plus rapid weight loss. Increase water intake to 2-3 L per day.",
+  },
+  {
+    question: "Does tirzepatide cause sulfur burps?",
+    answer:
+      "Yes — sulfur (rotten-egg) burps are a real and well-documented tirzepatide side effect, though not on the FDA label adverse reactions table by name. They are caused by slowed gastric emptying changing the bacterial fermentation profile in the upper GI tract. Smaller meals, less fat, less garlic/onion/eggs in the first weeks of titration help.",
+  },
+  {
+    question: "Does semaglutide or tirzepatide cause depression?",
+    answer:
+      "The 2024 EMA Pharmacovigilance Risk Assessment Committee review of GLP-1 receptor agonists found no causal association with depression or suicidal ideation in randomized trial data. A separate observational signal in some patient cohorts exists but is not currently considered causal. Patients with history of depression should monitor mood actively in the first 8-12 weeks and discuss any changes with their prescriber.",
+  },
+  {
+    question: "Does GLP-1 cause brain fog?",
+    answer:
+      "Brain fog is an emerging FDA pharmacovigilance signal as of 2025, not yet on the FDA label adverse reactions table. Patient reports describe difficulty concentrating, word-finding problems, and mental sluggishness. Possible mechanisms include dehydration, hypoglycemia (especially with insulin/sulfonylurea co-treatment), and rapid weight loss. The signal is real but not yet quantified in randomized trials.",
+  },
+  {
+    question: "Does semaglutide or tirzepatide cause acne?",
+    answer:
+      "Acne is not on the FDA label adverse reactions table for either drug, but a 2025 observational cohort study found a 36% higher acne diagnosis rate in patients on GLP-1s vs matched controls (post-hoc, unreplicated). The mechanism is not established. Most patient reports describe the acne as transient and improving by month 3 of treatment.",
+  },
+  {
+    question: "Does GLP-1 affect sleep or cause insomnia?",
+    answer:
+      "Insomnia is not on the FDA label as a primary GLP-1 side effect but appears in postmarketing patient reports. Possible mechanisms: nighttime nausea, evening hypoglycemia in diabetic patients, or the heart rate increase that GLP-1s produce (2-4 bpm baseline shift). Try injecting in the morning instead of evening, eat a small protein-containing snack 1-2 hours before bed, and avoid late caffeine.",
+  },
+  {
+    question: "Does GLP-1 affect libido or sexual function?",
+    answer:
+      "There is no causal trial signal for libido or sexual dysfunction on GLP-1s. Roughly 182 case reports of sexual dysfunction in GLP-1 patients have been logged in FDA pharmacovigilance between 2003-2024 — these are unconfirmed and the background rate of sexual dysfunction in obese populations is high, so attribution is difficult. Weight loss itself often improves sexual function over time.",
+  },
+  {
+    question: "Does GLP-1 cause body odor changes?",
+    answer:
+      "Patient reports of body odor changes on GLP-1s are not on the FDA label and have no published trial data. The most plausible mechanism is metabolic: rapid weight loss releases stored fatty acids and can transiently change skin microbiome and sweat composition. Usually transient and resolves once weight stabilizes.",
+  },
+  {
+    question: "Does GLP-1 cause cold intolerance or temperature changes?",
+    answer:
+      "Cold intolerance is not on the FDA label but is a recurring patient report. The most likely mechanism is the loss of insulating subcutaneous fat as patients lose weight rapidly. It is not a drug-specific effect — it is a general consequence of large fat-mass reduction. Layer up and watch for thyroid symptoms (which can also cause cold intolerance and warrant a workup).",
+  },
+  {
+    question: "Does GLP-1 affect taste (dysgeusia)?",
+    answer:
+      "Dysgeusia (altered taste) is in the FDA label adverse reactions table for both Wegovy and Zepbound, with a rate of approximately 1.7% on Wegovy vs 0.5% on placebo in STEP-1. Most commonly described as metallic or muted taste, particularly in the first 4-8 weeks. Usually improves as the body adapts to the maintenance dose.",
+  },
+];
 
 const SLUG = "glp1-side-effect-questions-answered";
 
@@ -102,6 +160,7 @@ export default function SideEffectQAArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <FaqSchema items={FAQ_ITEMS} />
       <p data-speakable="lead">
         Our broader{" "}
         <Link href="/research/glp1-side-effects-what-trials-actually-showed">
