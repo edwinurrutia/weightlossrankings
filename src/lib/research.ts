@@ -226,6 +226,76 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Adolescents", "PubMed sourced"],
   },
   {
+    slug: "glp1-side-effects-fatigue-hair-loss-duration",
+    title:
+      "GLP-1 Side Effects Duration: Fatigue, Hair Loss, and How Long Everything Actually Lasts",
+    description:
+      "A trial-data-grounded guide to the three most-searched GLP-1 side effects that patients worry about most: fatigue ('does semaglutide make you tired?'), hair loss ('does tirzepatide cause hair loss?'), and how long standard GI side effects actually last. Covers onset timing, expected duration, resolution patterns, and what the STEP and SURMOUNT trials actually reported.",
+    excerpt:
+      "Three GLP-1 side effects drive the highest patient search volume: fatigue, hair loss, and duration of GI side effects. Our previous side-effects investigation covered the headline trial numbers; this article covers the narrower but higher-traffic question of how long each specific side effect lasts, when to expect it to resolve, and what the trial data actually says about attribution (drug vs rapid weight loss vs coincidence). Sourced from STEP-1, SURMOUNT-1, and the FDA Wegovy and Zepbound prescribing information adverse-event tables.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 11,
+    citations: 6,
+    tags: ["Side effects", "Fatigue", "Hair loss", "Patient guide"],
+  },
+  {
+    slug: "why-am-i-not-losing-weight-glp1-plateau",
+    title:
+      "Why Am I Not Losing Weight on Semaglutide or Tirzepatide? The Plateau and Non-Responder Guide",
+    description:
+      "Roughly 10-15% of patients in the STEP-1 and SURMOUNT-1 trials did not lose meaningful weight on GLP-1 therapy. We walk through the documented causes of non-response, the early-titration vs late-plateau distinction, injection technique and dose math errors, and the evidence-based next steps when the scale stops moving.",
+    excerpt:
+      "Patient-reported 'the medication stopped working' complaints almost always fall into one of three buckets: (1) the patient is still in the early titration phase and the dose hasn't reached its full steady-state effect, (2) a technical error in dose or injection technique is silently reducing absorption, or (3) the patient has hit the natural trial-curve plateau that roughly 90% of participants reach in the second half of the STEP-1 / SURMOUNT-1 curves. This article walks through each bucket with the specific fix and the verified trial data.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 10,
+    citations: 5,
+    tags: ["Plateau", "Non-responder", "Patient guide"],
+  },
+  {
+    slug: "compounded-glp1-reconstitution-mixing-guide",
+    title:
+      "Compounded GLP-1 Reconstitution Guide: Mixing Lyophilized Semaglutide and Tirzepatide Safely",
+    description:
+      "A step-by-step FDA-cited guide to reconstituting lyophilized compounded semaglutide and tirzepatide with bacteriostatic water. Covers concentration math, vial handling, storage after reconstitution, and the common mistakes that ruin a vial or under-dose the patient.",
+    excerpt:
+      "Some compounding pharmacies ship lyophilized (freeze-dried) semaglutide or tirzepatide powder that the patient reconstitutes with bacteriostatic water at home. This format is uncommon but not rare, and the patient search data shows consistent confusion about the math (how much water do I add?) and the technique (can you use sterile saline instead?). This guide walks through the reconstitution process, the resulting concentration math, post-reconstitution storage, and the safety boundaries.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 9,
+    citations: 5,
+    tags: ["Reconstitution", "Compounded", "Patient guide"],
+  },
+  {
+    slug: "semaglutide-microdosing-evidence-guide",
+    title:
+      "Microdosing Semaglutide: What the Evidence Actually Says About Sub-Therapeutic GLP-1 Use",
+    description:
+      "'Microdosing' semaglutide and tirzepatide — using doses below the FDA-approved titration schedule — has become common in off-label practice. We walk through what the trial data shows about sub-therapeutic doses, why patients try it, what it can and cannot achieve, and the specific safety considerations and regulatory caveats around the practice.",
+    excerpt:
+      "The microdosing trend has almost no trial evidence but significant patient interest. The STEP-1 trial included a 0.25 mg starter dose that is functionally a 'microdose' and the dose-response data from that arm tells you roughly what a long-term sub-therapeutic dose would look like. This article walks through the actual STEP-1 0.25 mg arm results, the off-label nature of any dose below the FDA-approved maintenance, the practical safety profile, and why the honest answer to 'does microdosing work?' is 'less than full dose, and less than most patients expect.'",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 10,
+    citations: 5,
+    tags: ["Microdose", "Off-label", "Patient guide"],
+  },
+  {
+    slug: "what-to-eat-on-glp1-diet-protein-guide",
+    title:
+      "What to Eat on a GLP-1: The Protein, Hydration, and Fiber Guide for Semaglutide and Tirzepatide",
+    description:
+      "GLP-1 therapy reduces caloric intake automatically — but the remaining calories you eat still matter enormously. This guide walks through the evidence-based protein target for lean mass preservation, the fiber and hydration targets that reduce GI side effects, the foods that commonly trigger GI side effects, and how to actually eat during the slow-loss plateau phase.",
+    excerpt:
+      "Reduced appetite is the point of GLP-1 therapy but it creates a second-order problem: patients eat less of everything, including protein, fiber, and water, which accelerates lean mass loss and worsens GI side effects. This guide walks through the evidence-based daily targets for protein (1.2-1.6 g/kg of lean body mass), fiber (25-35 g), and water (2-3 L), plus the foods that commonly trigger nausea/constipation/reflux on a GLP-1 and the ones that don't.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 10,
+    citations: 6,
+    tags: ["Nutrition", "Protein", "Patient guide"],
+  },
+  {
     slug: "where-to-inject-semaglutide-tirzepatide-guide",
     title:
       "Where to Inject Semaglutide and Tirzepatide: The Complete Patient Guide",

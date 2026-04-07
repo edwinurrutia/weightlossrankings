@@ -100,15 +100,17 @@ should each be answered explicitly somewhere on the site:
 
 ## Build queue (in priority order)
 
-1. **Unit converter tool** — DONE 2026-04-06 (`/tools/glp1-unit-converter`)
-2. **Injection technique guide** — needs SVG diagram of abdomen / thigh / upper arm injection sites
-3. **Onset / time-to-work article** — STEP-1 + SURMOUNT-1 trial timing data
-4. **Storage & shelf-life article** — Wegovy/Ozempic/Zepbound/Mounjaro labels
-5. **Side effects: fatigue + hair loss + duration article(s)** — STEP/SURMOUNT AE tables
-6. **Plateau / non-responder article** — STEP-1 sub-analyses on response heterogeneity
-7. **Microdosing explainer** — needs careful YMYL framing (off-label, no FDA endorsement)
-8. **What to eat on a GLP-1 article** — protein, hydration, fiber, sugar guidance
-9. **Reconstitution guide** — paired with the unit converter
+1. **Unit converter tool** — ✅ DONE 2026-04-06 (`/tools/glp1-unit-converter`)
+2. **Injection technique guide** — ✅ DONE 2026-04-06 (`/research/where-to-inject-semaglutide-tirzepatide-guide`) — includes new reusable `InjectionSitesDiagram` SVG component
+3. **Onset / time-to-work article** — ✅ DONE 2026-04-06 (`/research/how-long-does-glp1-take-to-work`)
+4. **Storage & shelf-life article** — ✅ DONE 2026-04-06 (`/research/glp1-storage-shelf-life-refrigeration-guide`)
+5. **Side effects: fatigue + hair loss + duration article** — ✅ DONE 2026-04-07 (`/research/glp1-side-effects-fatigue-hair-loss-duration`)
+6. **Plateau / non-responder article** — ✅ DONE 2026-04-07 (`/research/why-am-i-not-losing-weight-glp1-plateau`)
+7. **Microdosing explainer** — ✅ DONE 2026-04-07 (`/research/semaglutide-microdosing-evidence-guide`) — careful YMYL framing with off-label disclaimer
+8. **What to eat on a GLP-1 article** — ✅ DONE 2026-04-07 (`/research/what-to-eat-on-glp1-diet-protein-guide`)
+9. **Reconstitution guide** — ✅ DONE 2026-04-07 (`/research/compounded-glp1-reconstitution-mixing-guide`)
+
+**Top 9 queue items all shipped.** Next quarter's refresh should surface new clusters.
 
 ## How to refresh the data
 
