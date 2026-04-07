@@ -22,13 +22,13 @@ export default function ToolsIndex() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-16">
       <header className="mb-12">
-        <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+        <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold mb-4">
           Free tools
         </p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight text-slate-900">
+        <h1 className="font-heading text-4xl font-bold tracking-tight text-brand-text-primary">
           GLP-1 calculators &amp; simulators
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-slate-600">
+        <p className="mt-4 max-w-2xl text-lg text-brand-text-secondary">
           Evidence-based, FDA-label-cited interactive tools for patients
           on or considering weight-loss medications. Every calculation is
           educational and the underlying clinical sources are documented
@@ -41,26 +41,26 @@ export default function ToolsIndex() {
           <li key={tool.slug}>
             <Link
               href={`/tools/${tool.slug}`}
-              className="block rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-amber-300 hover:shadow-md"
+              className="block rounded-2xl border border-brand-violet/15 bg-white p-8 shadow-sm transition hover:border-brand-violet/40 hover:shadow-md"
             >
               <div className="flex items-start justify-between gap-6">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-amber-600">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-brand-violet">
                     {tool.tag}
                   </p>
-                  <h2 className="mt-2 text-2xl font-bold text-slate-900">
+                  <h2 className="mt-2 text-2xl font-bold text-brand-text-primary">
                     {tool.title}
                   </h2>
-                  <p className="mt-3 text-slate-600">{tool.description}</p>
+                  <p className="mt-3 text-brand-text-secondary">{tool.description}</p>
                 </div>
-                <div className="text-2xl text-slate-400">→</div>
+                <div className="text-2xl text-brand-violet">→</div>
               </div>
             </Link>
           </li>
         ))}
       </ul>
 
-      <p className="mt-12 text-sm text-slate-500">
+      <p className="mt-12 text-sm text-brand-text-secondary">
         These tools are educational and do not provide medical advice,
         diagnosis, or treatment recommendations. Dosing decisions should
         always be made with a qualified healthcare provider.

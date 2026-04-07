@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import References from "@/components/research/References";
 import DosePlotter from "./DosePlotter";
 
 export const metadata: Metadata = {
@@ -15,27 +16,97 @@ export const metadata: Metadata = {
 // + 1000 random fuzz iterations + clinical landmark regressions). The
 // model is a one-compartment Bateman-equation simulation with linear
 // superposition for repeated dosing. Parameters are documented inline
-// in pk-model.ts and on this page below.
+// in pk-model.ts and listed in the References block below.
+
+const CITATIONS = [
+  {
+    authors: "Novo Nordisk Inc.",
+    title:
+      "WEGOVY (semaglutide) injection — US Prescribing Information.",
+    source: "FDA Approved Labeling",
+    year: 2025,
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf",
+  },
+  {
+    authors: "Novo Nordisk Inc.",
+    title:
+      "OZEMPIC (semaglutide) injection — US Prescribing Information.",
+    source: "FDA Approved Labeling",
+    year: 2025,
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/209637s029lbl.pdf",
+  },
+  {
+    authors: "Eli Lilly and Company.",
+    title:
+      "ZEPBOUND (tirzepatide) injection — US Prescribing Information.",
+    source: "FDA Approved Labeling",
+    year: 2025,
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/217806s016lbl.pdf",
+  },
+  {
+    authors: "Eli Lilly and Company.",
+    title:
+      "MOUNJARO (tirzepatide) injection — US Prescribing Information.",
+    source: "FDA Approved Labeling",
+    year: 2025,
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215866s019lbl.pdf",
+  },
+  {
+    authors: "Eli Lilly and Company.",
+    title:
+      "FOUNDAYO (orforglipron) tablets — US Prescribing Information.",
+    source: "FDA Approved Labeling",
+    year: 2026,
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/foundayo-pi.pdf",
+  },
+  {
+    authors:
+      "Ma X, Liu R, Pratt EJ, Benson CT, Bhattachar SN, Sloop KW.",
+    title:
+      "Effect of Food Consumption on the Pharmacokinetics, Safety, and Tolerability of Once-Daily Orally Administered Orforglipron (LY3502970), a Non-peptide GLP-1 Receptor Agonist.",
+    source: "Diabetes Therapy",
+    year: 2024,
+    pmid: "38402332",
+  },
+  {
+    authors:
+      "Hall S, Isaacs D, Clements JN.",
+    title:
+      "Pharmacokinetics and Clinical Implications of Semaglutide: A New Glucagon-Like Peptide (GLP)-1 Receptor Agonist.",
+    source: "Clinical Pharmacokinetics",
+    year: 2018,
+    pmid: "29915923",
+  },
+  {
+    authors:
+      "Urva S, Quinlan T, Landry J, Martin J, Loghin C.",
+    title:
+      "Effects of Renal Impairment on the Pharmacokinetics of the Dual GIP and GLP-1 Receptor Agonist Tirzepatide.",
+    source: "Clinical Pharmacokinetics",
+    year: 2021,
+    pmid: "33704694",
+  },
+];
 
 export default function GlpDosePlotterPage() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
-      <nav className="mb-6 text-sm text-slate-500">
-        <Link href="/tools" className="hover:text-slate-900">
+      <nav className="mb-6 text-sm text-brand-text-secondary">
+        <Link href="/tools" className="hover:text-brand-violet">
           Tools
         </Link>
         {" / "}
-        <span className="text-slate-700">GLP-1 dose plotter</span>
+        <span className="text-brand-text-primary">GLP-1 dose plotter</span>
       </nav>
 
       <header className="mb-10">
-        <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+        <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold mb-4">
           Pharmacokinetic simulator
         </p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight text-slate-900">
+        <h1 className="font-heading text-4xl font-bold tracking-tight text-brand-text-primary">
           GLP-1 Dose &amp; Concentration Plotter
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-slate-600">
+        <p className="mt-4 max-w-2xl text-lg text-brand-text-secondary leading-relaxed">
           Visualize how injectable semaglutide, injectable tirzepatide,
           and oral orforglipron build up in the body across the
           standard titration ramp. See steady-state convergence, peak
@@ -59,23 +130,20 @@ export default function GlpDosePlotterPage() {
         </p>
         <p>
           The titration schedules are taken directly from each drug&apos;s
-          FDA prescribing information:
+          FDA prescribing information [1, 2, 3, 4, 5]:
         </p>
         <ul>
           <li>
             <strong>Semaglutide:</strong> 0.25 mg → 0.5 mg → 1 mg →
-            1.7 mg → 2.4 mg, increased every 4 weeks (Wegovy /
-            Ozempic prescribing information)
+            1.7 mg → 2.4 mg, increased every 4 weeks
           </li>
           <li>
             <strong>Tirzepatide:</strong> 2.5 mg → 5 mg → 7.5 mg → 10
             mg → 12.5 mg → 15 mg, increased every 4 weeks
-            (Zepbound / Mounjaro prescribing information)
           </li>
           <li>
             <strong>Orforglipron (Foundayo):</strong> 0.8 mg → 2.5 mg →
             5.5 mg → 9 mg → 14.5 mg → 17.2 mg, increased every 4 weeks
-            (Foundayo prescribing information)
           </li>
         </ul>
 
@@ -83,13 +151,13 @@ export default function GlpDosePlotterPage() {
         <p>
           The single most important number for understanding how a
           GLP-1 dose &ldquo;feels&rdquo; over time is the elimination
-          half-life. For semaglutide it&apos;s about 7 days. For
-          tirzepatide, about 5 days. For oral orforglipron, about 36
-          hours. After 4-5 half-lives of constant dosing the drug
-          reaches steady state, which is the plateau the chart shows
-          at the yellow dashed line. This is why GLP-1 prescribers tell
-          patients it can take 4-5 weeks at each dose level for the
-          full effect to be felt.
+          half-life. For semaglutide it&apos;s about 7 days [7]. For
+          tirzepatide, about 5 days [8]. For oral orforglipron, about
+          36 hours [6]. After 4-5 half-lives of constant dosing the
+          drug reaches steady state, which is the plateau the chart
+          shows at the dashed reference line. This is why GLP-1
+          prescribers tell patients it can take 4-5 weeks at each dose
+          level for the full effect to be felt.
         </p>
 
         <h2>The missed-dose simulator</h2>
@@ -100,47 +168,13 @@ export default function GlpDosePlotterPage() {
           subsequent doses for levels to recover. The general FDA
           label guidance is: if your missed dose is less than 5 days
           late, take it as soon as you remember. If more than 5 days
-          late, skip it and resume on your normal schedule.
+          late, skip it and resume on your normal schedule [1, 3].
         </p>
         <p>
           The missed-dose simulator below the chart lets you skip any
-          single dose in the first 12 weeks and see how the
+          single dose across the full 24-week window and see how the
           concentration curve responds.
         </p>
-
-        <h2>Sources</h2>
-        <ul>
-          <li>
-            Wegovy (semaglutide 2.4 mg) US Prescribing Information,
-            Novo Nordisk
-          </li>
-          <li>
-            Ozempic (semaglutide) US Prescribing Information, Novo
-            Nordisk
-          </li>
-          <li>
-            Zepbound and Mounjaro (tirzepatide) US Prescribing
-            Information, Eli Lilly
-          </li>
-          <li>
-            Foundayo (orforglipron) US Prescribing Information, Eli
-            Lilly (April 2026)
-          </li>
-          <li>
-            Ma X et al. Effect of Food Consumption on the
-            Pharmacokinetics, Safety, and Tolerability of Once-Daily
-            Orally Administered Orforglipron. <em>Diabetes Therapy</em>{" "}
-            2024. PMID 38402332.
-          </li>
-          <li>
-            Hall S et al. Clinical Pharmacokinetics of Semaglutide.
-            <em>Clinical Pharmacokinetics</em> 2019.
-          </li>
-          <li>
-            Urva S et al. Tirzepatide Pharmacokinetics. <em>Clinical
-            Pharmacokinetics</em> 2022.
-          </li>
-        </ul>
 
         <h2>Important disclaimer</h2>
         <p>
@@ -155,20 +189,6 @@ export default function GlpDosePlotterPage() {
           should always be made with a qualified healthcare provider.
           Weight Loss Rankings does not provide medical advice,
           diagnosis, or treatment recommendations.
-        </p>
-
-        <h2>Verification</h2>
-        <p>
-          The pharmacokinetic math powering this plotter is implemented
-          in <code>src/lib/pk-model.ts</code> and verified by 79 unit
-          tests plus 1,000 randomized fuzz simulations covering
-          single-dose Bateman properties, half-life decay, steady-state
-          convergence, titration schedule construction, missed-dose
-          recovery, ka == ke degenerate cases, multi-miss stress
-          testing, 104-week numerical stability, and three clinical
-          landmark regressions. The full test suite is in{" "}
-          <code>scripts/test-pk-model.ts</code> and can be run with{" "}
-          <code>npx tsx scripts/test-pk-model.ts</code>.
         </p>
 
         <h2>Related research</h2>
@@ -203,6 +223,8 @@ export default function GlpDosePlotterPage() {
           </li>
         </ul>
       </section>
+
+      <References items={CITATIONS} />
     </main>
   );
 }

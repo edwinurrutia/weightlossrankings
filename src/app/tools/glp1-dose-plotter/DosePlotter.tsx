@@ -9,10 +9,13 @@ import {
   type SamplePoint,
 } from "@/lib/pk-model";
 
+// Brand-aligned palette: violet primary (#8b5cf6), blue secondary
+// (#3b82f6), darker indigo accent for the third drug. Stays inside the
+// site's brand-violet/brand-blue gradient family.
 const DRUG_OPTIONS: { id: DrugId; label: string; color: string }[] = [
-  { id: "semaglutide", label: "Semaglutide", color: "#2563eb" },
-  { id: "tirzepatide", label: "Tirzepatide", color: "#16a34a" },
-  { id: "orforglipron", label: "Orforglipron (Foundayo)", color: "#f97316" },
+  { id: "semaglutide", label: "Semaglutide", color: "#8b5cf6" },
+  { id: "tirzepatide", label: "Tirzepatide", color: "#3b82f6" },
+  { id: "orforglipron", label: "Orforglipron (Foundayo)", color: "#4338ca" },
 ];
 
 const DEFAULT_WEEKS = 24;
@@ -102,7 +105,7 @@ export default function DosePlotter() {
               }}
               className={`rounded-lg border px-4 py-2 text-sm font-semibold transition ${
                 drugId === opt.id && !compareMode
-                  ? "border-amber-500 bg-amber-50 text-amber-900"
+                  ? "border-brand-violet bg-brand-violet/10 text-brand-violet"
                   : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
               }`}
             >
@@ -168,15 +171,16 @@ export default function DosePlotter() {
               </g>
             );
           })}
-          {/* Steady-state reference line */}
+          {/* Steady-state reference line — brand violet, dashed */}
           <line
             x1={DIMS.padding.left}
             x2={DIMS.padding.left + innerW}
             y1={DIMS.padding.top + innerH - (1 / yMax) * innerH}
             y2={DIMS.padding.top + innerH - (1 / yMax) * innerH}
-            stroke="#fbbf24"
+            stroke="#8b5cf6"
             strokeWidth={2}
             strokeDasharray="6 4"
+            opacity={0.55}
           />
           {/* X-axis labels (weeks) */}
           {Array.from({ length: Math.floor(totalWeeks / 4) + 1 }, (_, i) => i * 4).map(
@@ -261,7 +265,7 @@ export default function DosePlotter() {
           </div>
         )}
         <p className="mt-4 text-xs text-slate-500">
-          Yellow dashed line = steady-state peak of the maintenance dose
+          Dashed violet line = steady-state peak of the maintenance dose
           (defined as 100%). Curves show the standard titration ramp;
           all values are educational and relative, not absolute blood
           levels.
@@ -310,7 +314,7 @@ export default function DosePlotter() {
                     onClick={() => setMissedDose(actualIdx)}
                     className={`rounded-md border px-3 py-1 text-xs font-semibold ${
                       missedDose === actualIdx
-                        ? "border-amber-500 bg-amber-100 text-amber-900"
+                        ? "border-brand-violet bg-brand-violet/10 text-brand-violet"
                         : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
                     }`}
                   >
@@ -363,16 +367,6 @@ export default function DosePlotter() {
               </dd>
             </div>
           </dl>
-          <div className="mt-4 border-t border-slate-200 pt-4">
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-              Sources
-            </p>
-            <ul className="mt-2 space-y-1 text-sm text-slate-600">
-              {drug.sources.map((s) => (
-                <li key={s}>· {s}</li>
-              ))}
-            </ul>
-          </div>
         </div>
       )}
     </div>
