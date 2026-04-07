@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 //   - STEP-1 (Wilding NEJM 2021, PMID 33567185) — Table S5 supplementary AE
 //   - SURMOUNT-1 (Jastreboff NEJM 2022, PMID 35658024) — Table S5 supplementary
 //   - Wegovy/Zepbound FDA Section 6 Adverse Reactions tables
-//   - Wharton et al. Postgrad Med 2022 (PMID 36177722) — clinical practice rec
+//   - Wharton et al. Postgrad Med 2022 (PMID 34775881) — clinical practice rec
 //   - Filippatos et al. 2014 (PMID 25396404) — adverse effects of GLP-1 RAs
 
 export default function NauseaGuideArticle() {
@@ -57,7 +57,7 @@ export default function NauseaGuideArticle() {
         "Managing the gastrointestinal side effects of GLP-1 receptor agonists in obesity: recommendations for clinical practice.",
       source: "Postgraduate Medicine",
       year: 2022,
-      pmid: "36177722",
+      pmid: "34775881",
     },
     {
       authors: "Novo Nordisk Inc.",

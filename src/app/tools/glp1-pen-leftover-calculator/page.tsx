@@ -60,7 +60,7 @@ const FAQS = [
   {
     question: "How many doses are in an Ozempic pen?",
     answer:
-      "Per the FDA label: the 0.25 mg/0.5 mg starter pen contains 2 mg of semaglutide in 1.5 mL and delivers 4 doses at 0.5 mg or 8 doses at 0.25 mg. The 1 mg pen contains 4 mg in 3 mL and delivers 4 doses at 1 mg. The 2 mg pen contains 8 mg in 3 mL and delivers 4 doses at 2 mg. Each Ozempic pen is a 4-week supply at the labeled dose.",
+      "Per the FDA Ozempic label (Section 3 Dosage Forms and Strengths): the 0.25 mg/0.5 mg starter pen contains 2 mg of semaglutide in 3 mL and is labeled to deliver 4 weekly doses at either 0.25 mg or 0.5 mg. The 1 mg pen contains 4 mg in 3 mL and delivers 4 doses at 1 mg. The 2 mg pen contains 8 mg in 3 mL and delivers 4 doses at 2 mg. Each Ozempic pen is a 4-week supply at the labeled dose.",
   },
   {
     question: "Can I get extra doses out of a Wegovy pen?",

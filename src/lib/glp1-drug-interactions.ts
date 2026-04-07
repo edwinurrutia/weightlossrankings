@@ -81,14 +81,14 @@ export const INTERACTIONS: DrugInteraction[] = [
     ],
     drugClass: "GLP-1 receptor agonist",
     appliesTo: "all",
-    severity: "contraindicated",
+    severity: "serious",
     effect:
-      "Combining two GLP-1 receptor agonists is not recommended. There is no added benefit and the risk of severe GI side effects, hypoglycemia, and pancreatitis is increased.",
+      "Co-administration of two GLP-1 receptor agonists is not recommended per the FDA Wegovy and Zepbound labels Section 7. No studies have evaluated combined use, and the additive risks (GI side effects, hypoglycemia in T2D, pancreatitis) make combination therapy clinically unjustified.",
     recommendation:
-      "Do not use two GLP-1 receptor agonists at the same time. Switch by stopping the first drug and starting the second at its lowest dose, with the standard 1-week washout (next scheduled injection day).",
+      "Do not use two GLP-1 receptor agonists at the same time. Switch by stopping the first drug and starting the second at its lowest dose on the next scheduled injection day (the standard practical-clinical switching guidance). Note: this is the practical clinical-practice guidance based on next-dose-day switching. Full pharmacokinetic washout (5 half-lives, ~35 days for semaglutide, ~25 days for tirzepatide) is what the [washout calculator](/tools/glp1-washout-calculator) uses for surgery/pregnancy planning. The two different guidances apply to different clinical contexts.",
     mechanism:
       "Both drugs target the same GLP-1 receptor. Co-administration produces no additional efficacy but doubles the receptor activation, magnifying side effects.",
-    source: "Wegovy PI Section 7.1; Zepbound PI Section 7.1; Foundayo PI",
+    source: "FDA Wegovy USPI Section 7; FDA Zepbound USPI Section 7",
   },
 
   // ============================================================
@@ -161,7 +161,8 @@ export const INTERACTIONS: DrugInteraction[] = [
       "Patients on warfarin should have their INR monitored more frequently when starting or escalating a GLP-1 receptor agonist. Dose adjustment is rarely needed but should be discussed with the prescriber managing your anticoagulation.",
     mechanism:
       "GLP-1 receptor agonists slow gastric emptying. Warfarin absorption may be delayed but total bioavailability is generally preserved.",
-    source: "Wegovy PI Section 7.3 (oral medications general)",
+    source:
+      "Extrapolated from the Wegovy / Zepbound PI Section 7 generic oral-medication caution (slowed gastric emptying may affect absorption of co-administered oral drugs). Warfarin INR monitoring is prudent during dose escalation.",
   },
 
   // ============================================================

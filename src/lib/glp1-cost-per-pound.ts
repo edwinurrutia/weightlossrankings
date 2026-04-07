@@ -9,8 +9,17 @@
 //
 // All efficacy percentages come from FDA prescribing information for
 // the labeled maintenance dose. Costs are typical brand-cash US monthly
-// list prices used as defaults; the user can override at runtime.
+// list prices used as defaults; the user can override at runtime. The
+// monthly WAC constants are imported from src/lib/citations.ts so any
+// future WAC update only needs to be made in one place.
 // ---------------------------------------------------------------------------
+
+import {
+  WEGOVY_MONTHLY_USD,
+  ZEPBOUND_MONTHLY_USD,
+  SAXENDA_MONTHLY_USD,
+  FOUNDAYO_MONTHLY_USD,
+} from "@/lib/citations";
 
 export interface DrugRow {
   /** Stable id used in <select> options. */
@@ -37,7 +46,7 @@ export const DRUGS: DrugRow[] = [
     trialPct: 14.9,
     trialWeeks: 68,
     trial: "STEP-1",
-    defaultMonthlyCost: 1349,
+    defaultMonthlyCost: WEGOVY_MONTHLY_USD,
   },
   {
     id: "zepbound-5",
@@ -46,7 +55,7 @@ export const DRUGS: DrugRow[] = [
     trialPct: 15.0,
     trialWeeks: 72,
     trial: "SURMOUNT-1",
-    defaultMonthlyCost: 1086,
+    defaultMonthlyCost: ZEPBOUND_MONTHLY_USD,
   },
   {
     id: "zepbound-10",
@@ -55,7 +64,7 @@ export const DRUGS: DrugRow[] = [
     trialPct: 19.5,
     trialWeeks: 72,
     trial: "SURMOUNT-1",
-    defaultMonthlyCost: 1086,
+    defaultMonthlyCost: ZEPBOUND_MONTHLY_USD,
   },
   {
     id: "zepbound-15",
@@ -64,16 +73,18 @@ export const DRUGS: DrugRow[] = [
     trialPct: 20.9,
     trialWeeks: 72,
     trial: "SURMOUNT-1",
-    defaultMonthlyCost: 1086,
+    defaultMonthlyCost: ZEPBOUND_MONTHLY_USD,
   },
   {
+    // 11.1% is the treatment-regimen estimand from the Foundayo USPI
+    // Section 14, not the 12.4% on-treatment efficacy estimand.
     id: "foundayo-17_2",
     label: "Foundayo 17.2 mg (orforglipron)",
     brand: "Foundayo 17.2 mg",
     trialPct: 11.1,
     trialWeeks: 72,
     trial: "ATTAIN-1 (label)",
-    defaultMonthlyCost: 999,
+    defaultMonthlyCost: FOUNDAYO_MONTHLY_USD,
   },
   {
     id: "saxenda-3",
@@ -82,7 +93,7 @@ export const DRUGS: DrugRow[] = [
     trialPct: 8.0,
     trialWeeks: 56,
     trial: "SCALE",
-    defaultMonthlyCost: 1349,
+    defaultMonthlyCost: SAXENDA_MONTHLY_USD,
   },
 ];
 

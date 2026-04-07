@@ -9,7 +9,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Can you take phentermine with semaglutide?",
     answer:
-      "There is no FDA-approved combination product containing phentermine and semaglutide, and no randomized controlled trial of the combination. Some obesity-medicine specialists prescribe both off-label in selected patients (typically GLP-1 plateau cases), with cardiovascular workup and monitoring. Phentermine has real contraindications (cardiovascular disease, hyperthyroidism, glaucoma, history of substance abuse) that don't change when a GLP-1 is added.",
+      "There is no FDA-approved combination product containing phentermine and semaglutide, and no randomized controlled trial of the combination. Some obesity-medicine specialists prescribe both off-label in selected patients (typically GLP-1 plateau cases), with cardiovascular workup and monitoring. Phentermine has real contraindications per the Adipex-P FDA label (cardiovascular disease, hyperthyroidism, glaucoma, history of substance abuse, MAO inhibitor use, pregnancy, agitated states) that don't change when a GLP-1 is added.",
   },
   {
     question: "Can you take phentermine with tirzepatide?",
@@ -19,7 +19,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Is phentermine + GLP-1 safe?",
     answer:
-      "There is no published long-term safety data on the specific combination. The known risks are: phentermine raises heart rate by 7-10 bpm and systolic BP by 4-7 mmHg (Hendricks 2011 cohort). GLP-1s independently raise heart rate by 2-4 bpm. Phentermine is contraindicated in cardiovascular disease, hyperthyroidism, glaucoma, history of substance abuse, MAO inhibitor use, pregnancy, agitated states, and is a relative contraindication over age 65. The combination should only be initiated by an obesity-medicine specialist with baseline cardiovascular workup.",
+      "There is no published long-term safety data on the specific combination. Phentermine has acute sympathomimetic effects on heart rate and blood pressure, though the Hendricks 2011 long-term cohort actually found that weight loss offset the stimulant effect — phentermine-treated patients showed neutral-to-decreased systolic and diastolic blood pressure at 26 and 52 weeks compared to controls, with no significant heart rate change. GLP-1s independently raise heart rate by 2-4 bpm. Phentermine is contraindicated in cardiovascular disease, hyperthyroidism, glaucoma, history of substance abuse, MAO inhibitor use, pregnancy, and agitated states. The combination should only be initiated by an obesity-medicine specialist with baseline cardiovascular workup.",
   },
   {
     question: "Will phentermine restart weight loss if my GLP-1 plateaus?",
@@ -88,7 +88,7 @@ export default function PhentermineComboArticle() {
         "Blood pressure and heart rate effects, weight loss and maintenance during long-term phentermine pharmacotherapy for obesity.",
       source: "Obesity (Silver Spring)",
       year: 2011,
-      pmid: "21331068",
+      pmid: "21527891",
     },
     {
       authors:
@@ -97,7 +97,7 @@ export default function PhentermineComboArticle() {
         "Safety and Effectiveness of Longer-Term Phentermine Use: Clinical Outcomes from an Electronic Health Record Cohort.",
       source: "Obesity (Silver Spring)",
       year: 2019,
-      pmid: "30421863",
+      pmid: "30900410",
     },
     {
       authors:
@@ -115,7 +115,7 @@ export default function PhentermineComboArticle() {
         "Evaluation of phentermine and topiramate versus phentermine/topiramate extended-release in obese adults.",
       source: "Obesity (Silver Spring)",
       year: 2013,
-      pmid: "23512441",
+      pmid: "24136928",
     },
   ];
 
@@ -252,12 +252,24 @@ export default function PhentermineComboArticle() {
           suppressant to add to the effect.
         </li>
         <li>
-          <strong>Cardiovascular load.</strong> Phentermine raises
-          heart rate and blood pressure<Cite n={4} />. Many obese
-          patients already have hypertension and elevated resting
-          heart rate at baseline. The Hendricks 2011 long-term
-          phentermine cohort showed mean increases of 4-7 mmHg
-          systolic and 7-10 bpm heart rate.
+          <strong>Cardiovascular load.</strong> Phentermine is a
+          sympathomimetic with acute effects on heart rate and
+          blood pressure, and many obese patients already have
+          hypertension and elevated resting heart rate at baseline.
+          The Hendricks 2011 long-term cohort<Cite n={4} /> is
+          frequently cited here, but it is worth being precise about
+          what that paper actually showed: in patients followed on
+          long-term phentermine, weight loss appeared to offset the
+          stimulant effect, and mean systolic and diastolic blood
+          pressure were neutral-to-decreased at 26 and 52 weeks
+          versus controls, with no significant change in heart rate.
+          The conventional &ldquo;phentermine raises BP and HR&rdquo;
+          framing reflects acute pharmacology and short-term studies;
+          it does not match the long-term cohort data. The clinical
+          implication for combination therapy is still that baseline
+          and on-treatment cardiovascular monitoring is mandatory,
+          because individual patients can and do have BP/HR
+          excursions even when the population mean is neutral.
         </li>
         <li>
           <strong>Schedule IV abuse potential.</strong> Phentermine
@@ -267,11 +279,14 @@ export default function PhentermineComboArticle() {
         </li>
         <li>
           <strong>
-            GLP-1 nausea and phentermine GI side effects can stack.
+            GLP-1 GI side effects and phentermine anticholinergic
+            effects can stack.
           </strong>{" "}
           Both drugs cause dry mouth, constipation, and reduced
           appetite — combined intake can be problematic for
-          nutrition and hydration.
+          nutrition and hydration. (Phentermine itself is not a
+          common cause of nausea — its typical adverse effects are
+          insomnia, dry mouth, constipation, and tachycardia.)
         </li>
         <li>
           <strong>
@@ -306,8 +321,13 @@ export default function PhentermineComboArticle() {
         <li>
           Agitated states or significant anxiety disorders
         </li>
-        <li>Age &gt;65 (relative contraindication)</li>
       </ul>
+      <p>
+        The Adipex-P label additionally flags caution (not formal
+        contraindication) in older adults, where reduced renal and
+        hepatic reserve may warrant lower starting doses, but age
+        alone is not listed as a contraindication on the FDA label.
+      </p>
       <p>
         If any of these apply, the combination is off the table —
         the conversation is about whether GLP-1 monotherapy at the

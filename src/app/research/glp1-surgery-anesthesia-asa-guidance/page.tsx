@@ -68,7 +68,7 @@ export default function GlpSurgeryArticle() {
         "Relationship between perioperative semaglutide use and residual gastric content: A retrospective analysis of patients undergoing elective upper endoscopy.",
       source: "J Clin Anesth",
       year: 2023,
-      pmid: "37146405",
+      pmid: "36870274",
     },
     {
       authors: "Novo Nordisk Inc.",
@@ -90,10 +90,10 @@ export default function GlpSurgeryArticle() {
       authors:
         "Joshi GP, Abdelmalak BB, Weigel WA, Harbell MW, Kuo CI, Soriano SG, Stricker PA, Tipton T, Grant MD, Marbella AM, Agarkar M, Blanck JF, Domino KB.",
       title:
-        "American Society of Anesthesiologists practice guidelines for preoperative fasting: carbohydrate-containing clear liquids with or without protein, chewing gum, and pediatric fasting duration—a modular update of the 2017 American Society of Anesthesiologists practice guidelines for preoperative fasting.",
+        "2023 American Society of Anesthesiologists Practice Guidelines for Preoperative Fasting: Carbohydrate-containing Clear Liquids with or without Protein, Chewing Gum, and Pediatric Fasting Duration—A Modular Update of the 2017 American Society of Anesthesiologists Practice Guidelines for Preoperative Fasting.",
       source: "Anesthesiology",
       year: 2023,
-      pmid: "36757388",
+      pmid: "36629465",
     },
     {
       authors:
@@ -102,7 +102,7 @@ export default function GlpSurgeryArticle() {
         "Semaglutide, delayed gastric emptying, and intraoperative pulmonary aspiration: a case report.",
       source: "Can J Anaesth",
       year: 2023,
-      pmid: "36450935",
+      pmid: "36977934",
     },
   ];
 
@@ -194,8 +194,10 @@ export default function GlpSurgeryArticle() {
         </li>
         <li>
           If the procedure cannot be delayed, treat the patient as &ldquo;full
-          stomach&rdquo; and use either rapid sequence induction with
-          cricoid pressure or consider regional anesthesia where feasible.
+          stomach&rdquo; and use either rapid sequence induction (with or
+          without cricoid pressure, which has become more controversial in
+          recent RSI literature and is no longer universally applied) or
+          consider regional anesthesia where feasible.
         </li>
       </ul>
 
@@ -206,30 +208,42 @@ export default function GlpSurgeryArticle() {
         Surgery, the International Society for the Perioperative Care of
         Patients with Obesity, and the Society of American Gastrointestinal
         and Endoscopic Surgeons jointly published an updated consensus
-        statement<Cite n={2} />. The 2024 update is more nuanced than the
-        2023 statement and tries to balance the aspiration concern against
-        the harms of unnecessary GLP-1 interruption (loss of glycemic
-        control in patients with type 2 diabetes, weight regain, and
-        rebound nausea on restart).
+        statement<Cite n={2} />. The 2024 update moved away from the
+        bright-line &ldquo;hold for one week&rdquo; default of the 2023
+        statement toward an <strong>individualized risk assessment</strong>{" "}
+        that weighs aspiration risk against the harms of an unplanned
+        GLP-1 interruption (loss of glycemic control in type 2 diabetes,
+        weight regain, and rebound nausea on restart). The 2024 update
+        does not broadly endorse continuing the drug; holding remains an
+        explicit option, and the decision is supposed to be made case by
+        case.
       </p>
       <p>
         The 2024 multidisciplinary recommendations, summarized:
       </p>
       <ul>
         <li>
-          For patients on a GLP-1 for <em>diabetes</em>, the risk of
-          stopping the drug (loss of glycemic control) often outweighs the
-          aspiration risk; many patients can <strong>continue</strong> the
-          GLP-1 with appropriate fasting modifications.
+          The hold-versus-continue decision is individualized based on
+          the indication for the GLP-1, the dose and duration of therapy,
+          the presence or absence of GI symptoms, the type of procedure,
+          and the depth of anesthesia.
+        </li>
+        <li>
+          For patients on a GLP-1 for <em>type 2 diabetes</em>, the harms
+          of an unplanned hold (loss of glycemic control) are explicitly
+          weighed against aspiration risk, and the team may decide that
+          continuing the drug with additional precautions is the safer
+          option for that specific patient. This is not a blanket
+          recommendation to continue.
         </li>
         <li>
           For patients on a GLP-1 for <em>weight management</em>, holding
-          the drug is generally still recommended.
+          the drug is more often the default, but is still individualized.
         </li>
         <li>
           A <strong>liquid-only diet for 24 hours</strong> before the
-          procedure is recommended for all GLP-1 patients regardless of
-          whether the drug is held.
+          procedure is recommended as a precaution for GLP-1 patients
+          regardless of whether the drug is held.
         </li>
         <li>
           Standard NPO fasting (8 hours solids, 2 hours clear liquids) is
@@ -238,14 +252,25 @@ export default function GlpSurgeryArticle() {
         <li>
           Point-of-care gastric ultrasound by the anesthesia team, where
           available, can be used to assess residual gastric contents
-          immediately before induction.
+          immediately before induction and inform the airway plan.
         </li>
         <li>
-          The decision is individualized: type of procedure, depth of
-          anesthesia, GLP-1 indication, time on the drug, and current GI
-          symptoms all factor in.
+          Symptomatic patients (active nausea, vomiting, bloating,
+          dyspepsia, or a sense of fullness) should be considered
+          high-risk for retained gastric contents regardless of fasting
+          status or hold timing.
         </li>
       </ul>
+      <p>
+        A practical wrinkle for the newest oral GLP-1: <strong>Foundayo
+        (orforglipron)</strong> has a 29-49 hour half-life, so a one-day
+        hold per the &ldquo;daily oral&rdquo; rule of thumb is essentially
+        notional — there will still be substantial drug exposure on the
+        day of the procedure. The anesthesia team should be told the
+        last-dose date specifically and may reasonably treat the patient
+        as &ldquo;on drug&rdquo; for the purposes of aspiration
+        precautions even if a calendar hold has been observed.
+      </p>
 
       <h2>What to actually do as a patient</h2>
       <p>
@@ -328,7 +353,8 @@ export default function GlpSurgeryArticle() {
         <li>Delay the procedure to a later date with proper hold timing</li>
         <li>
           Treat you as a &ldquo;full stomach&rdquo; patient using rapid
-          sequence induction with cricoid pressure
+          sequence induction (cricoid pressure is no longer universally
+          applied and is at the anesthesiologist&apos;s discretion)
         </li>
         <li>
           Use point-of-care gastric ultrasound to assess residual contents
@@ -373,9 +399,11 @@ export default function GlpSurgeryArticle() {
           hold daily GLP-1s for 1 day&rdquo; — simple and conservative.
         </li>
         <li>
-          The 2024 multi-society update is more nuanced: continue for
-          diabetes patients in many cases, hold for weight-management
-          patients, and add a 24-hour clear-liquid diet for everyone.
+          The 2024 multi-society update is more nuanced: it moved from
+          a default hold to an individualized risk assessment based on
+          indication, dose, GI symptoms, and procedure type, and added a
+          24-hour clear-liquid diet for all GLP-1 patients regardless of
+          whether the drug is held.
         </li>
         <li>
           The single most important action is to tell your surgeon AND

@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // Fuentes primarias: STEP-1 (Wilding NEJM 2021, PMID 33567185),
 // SURMOUNT-1 (Jastreboff NEJM 2022, PMID 35658024), Hall et al 2018
 // (PMID 29915923, farmacocinética de semaglutida), Urva et al 2021
-// (PMID 33704694, farmacocinética de tirzepatida), e información de
+// (PMID 33778934, farmacocinética de tirzepatida), e información de
 // prescripción aprobada por la FDA de Wegovy y Zepbound. Todos los
 // datos semana-a-semana se toman de los informes publicados de los
 // estudios y de sus suplementos.
@@ -73,7 +73,7 @@ export default function CuantoTardaGlp1EnHacerEfectoArticle() {
         "Effects of Renal Impairment on the Pharmacokinetics of the Dual GIP and GLP-1 Receptor Agonist Tirzepatide.",
       source: "Clinical Pharmacokinetics",
       year: 2021,
-      pmid: "33704694",
+      pmid: "33778934",
     },
     {
       authors: "Novo Nordisk Inc.",

@@ -17,7 +17,9 @@ const fmt = (n: number) =>
   });
 
 export default function SavingsCalculator() {
-  const [baselineId, setBaselineId] = useState<AccessPath>("wegovy-novocare");
+  const [baselineId, setBaselineId] = useState<AccessPath>(
+    "wegovy-novocare-baseline",
+  );
   const [alternativeId, setAlternativeId] =
     useState<AccessPath>("foundayo-self-pay");
 
@@ -27,10 +29,19 @@ export default function SavingsCalculator() {
   const baselineOpt = getAccessOption(baselineId);
   const alternativeOpt = getAccessOption(alternativeId);
 
+  // Use Number.isFinite + >= 0 instead of `parseFloat || default` so a
+  // user-entered 0 (e.g. modeling a free-medication scenario) is honored
+  // rather than silently reverting to the default monthly cost.
+  const parsedBaseline = parseFloat(baselineOverride);
+  const parsedAlternative = parseFloat(alternativeOverride);
   const baselineMonthly =
-    parseFloat(baselineOverride) || baselineOpt?.defaultMonthlyCost || 0;
+    Number.isFinite(parsedBaseline) && parsedBaseline >= 0
+      ? parsedBaseline
+      : baselineOpt?.defaultMonthlyCost ?? 0;
   const alternativeMonthly =
-    parseFloat(alternativeOverride) || alternativeOpt?.defaultMonthlyCost || 0;
+    Number.isFinite(parsedAlternative) && parsedAlternative >= 0
+      ? parsedAlternative
+      : alternativeOpt?.defaultMonthlyCost ?? 0;
 
   const comparison = useMemo(
     () => compareCosts(baselineMonthly, alternativeMonthly),

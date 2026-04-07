@@ -6,7 +6,9 @@
  * prescribing information for each pen. Do NOT introduce values
  * that are not in the label.
  *
- *  - Ozempic 0.25/0.5 mg starter pen: 2 mg / 1.5 mL  → 4 doses @ 0.5 mg or 8 doses @ 0.25 mg
+ *  - Ozempic 0.25/0.5 mg starter pen: 2 mg / 3 mL    → 4 doses at either 0.25 mg or 0.5 mg
+ *    (per FDA Ozempic USPI Section 3 Dosage Forms and Strengths — the
+ *    older 1.5 mL / 8-dose configuration is no longer marketed in the US)
  *  - Ozempic 1 mg pen:                4 mg / 3 mL    → 4 doses @ 1 mg
  *  - Ozempic 2 mg pen:                8 mg / 3 mL    → 4 doses @ 2 mg
  *  - Saxenda 18 mg/3 mL pen: titrated 0.6/1.2/1.8/2.4/3.0 mg per day
@@ -45,11 +47,15 @@ export const PEN_PRESETS: PenPreset[] = [
   {
     id: "ozempic-starter",
     label: "Ozempic 0.25/0.5 mg starter pen",
+    // Per FDA Ozempic USPI Section 3 Dosage Forms and Strengths: the
+    // current US starter pen is 2 mg / 3 mL (0.68 mg/mL) and dispenses
+    // 4 weekly doses at either 0.25 mg or 0.5 mg. The older 1.5 mL /
+    // 8-dose configuration is no longer marketed.
     totalMg: 2,
-    totalMl: 1.5,
+    totalMl: 3,
     frequency: "weekly",
     doses: [
-      { doseMg: 0.25, label: "0.25 mg", dosesPerPen: 8 },
+      { doseMg: 0.25, label: "0.25 mg", dosesPerPen: 4 },
       { doseMg: 0.5, label: "0.5 mg", dosesPerPen: 4 },
     ],
   },

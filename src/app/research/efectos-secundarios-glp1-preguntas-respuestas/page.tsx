@@ -3,8 +3,65 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema, { type FaqItem } from "@/components/research/FaqSchema";
 
 const SLUG = "efectos-secundarios-glp1-preguntas-respuestas";
+
+// FAQPage JSON-LD en español, paralelo a la versión en inglés. Cada
+// item corresponde a una pregunta H2 real del cuerpo del artículo.
+// Texto plano, sin markdown, ~300 caracteres por respuesta.
+const FAQ_ITEMS: FaqItem[] = [
+  {
+    question: "¿La semaglutida causa dolor de cabeza?",
+    answer:
+      "Sí. STEP-1 reportó dolor de cabeza en 14.2% de los pacientes con semaglutida 2.4 mg frente al 10.0% con placebo, una tasa atribuible al fármaco de aproximadamente 4 puntos porcentuales (~1 de cada 25 pacientes). El mecanismo más común es la deshidratación. Aumente la ingesta de agua a 2-3 litros por día.",
+  },
+  {
+    question: "¿La tirzepatida causa eructos con olor a azufre?",
+    answer:
+      "Sí. La eructación se reporta como reacción adversa común (≥5% según etiqueta) en las etiquetas de Wegovy y Zepbound de la FDA. Los eructos con olor a azufre o huevo podrido se deben al vaciamiento gástrico más lento, que cambia el perfil de fermentación bacteriana en el tracto GI superior. Comidas más pequeñas y menos azufre dietético ayudan.",
+  },
+  {
+    question: "¿La semaglutida o la tirzepatida causan depresión?",
+    answer:
+      "La revisión de 2024 del PRAC de la EMA sobre los agonistas del receptor de GLP-1 no encontró asociación causal con depresión o ideación suicida en datos de ensayos aleatorizados. Existe una señal observacional separada en algunas cohortes que no se considera causal. Pacientes con antecedentes de depresión deben vigilar el estado de ánimo durante las primeras 8-12 semanas.",
+  },
+  {
+    question: "¿El GLP-1 causa niebla mental?",
+    answer:
+      "La niebla mental no aparece en la tabla de reacciones adversas de las etiquetas de Wegovy o Zepbound y no se rastreó como un evento adverso formal en STEP-1 o SURMOUNT-1. El sistema FAERS de la FDA ha recibido informes de quejas cognitivas pero no se ha establecido una señal causal. Mecanismos posibles incluyen deshidratación e hipoglucemia.",
+  },
+  {
+    question: "¿La semaglutida o la tirzepatida causan acné?",
+    answer:
+      "El acné no aparece en la tabla de reacciones adversas de las etiquetas de la FDA y no se ha establecido formalmente como un efecto causal en ningún ensayo aleatorizado. Algunos pacientes reportan empeoramiento del acné con GLP-1; el mecanismo no está establecido. La mayoría de los reportes describen el acné como transitorio.",
+  },
+  {
+    question: "¿El GLP-1 afecta el sueño o causa insomnio?",
+    answer:
+      "El insomnio no aparece destacado en la etiqueta de la FDA como efecto secundario primario del GLP-1 pero figura en reportes postmarketing. Mecanismos posibles: náuseas nocturnas, hipoglucemia vespertina en pacientes diabéticos o el aumento de la frecuencia cardíaca de 2-4 lpm. Inyectar por la mañana en lugar de por la noche puede ayudar.",
+  },
+  {
+    question: "¿El GLP-1 afecta la libido o la función sexual?",
+    answer:
+      "No hay señal causal en los ensayos para libido o disfunción sexual con GLP-1, y los ensayos aleatorizados no reportaron tasas elevadas. El sistema FAERS de la FDA ha recibido informes pero no se ha establecido una señal causal. La pérdida de peso en sí suele mejorar la función sexual con el tiempo.",
+  },
+  {
+    question: "¿El GLP-1 causa cambios en el olor corporal?",
+    answer:
+      "Los reportes de cambios en el olor corporal con GLP-1 no aparecen en la etiqueta de la FDA y no tienen datos publicados de ensayos clínicos. El mecanismo más plausible es metabólico: la pérdida rápida de peso libera ácidos grasos almacenados y puede cambiar transitoriamente el microbioma de la piel y la composición del sudor.",
+  },
+  {
+    question: "¿El GLP-1 causa intolerancia al frío?",
+    answer:
+      "La intolerancia al frío no aparece en la etiqueta de la FDA pero es un reporte recurrente de los pacientes. El mecanismo más probable es la pérdida del aislamiento de la grasa subcutánea durante la pérdida rápida de peso. No es un efecto específico del fármaco — es una consecuencia general de la reducción importante de la masa grasa.",
+  },
+  {
+    question: "¿El GLP-1 afecta el gusto (disgeusia)?",
+    answer:
+      "Sí, modestamente. La disgeusia (alteración del gusto) figura en la tabla de reacciones adversas de la FDA tanto para Wegovy como para Zepbound, con una tasa de aproximadamente 1.7% en Wegovy frente a 0.5% en placebo en STEP-1. Suele describirse como sabor metálico o aplanado, particularmente en las primeras 4-8 semanas, y mejora con la dosis de mantenimiento.",
+  },
+];
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -81,7 +138,7 @@ export default function EfectosSecundariosGlp1PreguntasRespuestasArticle() {
         "Managing the gastrointestinal side effects of GLP-1 receptor agonists in obesity: recommendations for clinical practice.",
       source: "Postgraduate Medicine",
       year: 2022,
-      pmid: "36177722",
+      pmid: "34775881",
     },
     {
       authors: "European Medicines Agency.",
@@ -104,6 +161,7 @@ export default function EfectosSecundariosGlp1PreguntasRespuestasArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <FaqSchema items={FAQ_ITEMS} />
       <div className="mb-6 rounded-lg border border-brand-violet/20 bg-brand-violet/5 p-4 text-sm text-brand-text-secondary">
         Esta es la versión en español de nuestro artículo de preguntas y
         respuestas sobre los efectos secundarios específicos de los
@@ -197,9 +255,9 @@ export default function EfectosSecundariosGlp1PreguntasRespuestasArticle() {
           </tr>
           <tr>
             <td>Eructos (con olor a azufre)</td>
-            <td>~7%</td>
-            <td>2-5%</td>
-            <td>0-1%</td>
+            <td>≥5% (según etiqueta)</td>
+            <td>incluido (etiqueta)</td>
+            <td>menor</td>
             <td>ALTA</td>
           </tr>
           <tr>
@@ -292,15 +350,16 @@ export default function EfectosSecundariosGlp1PreguntasRespuestasArticle() {
       <p>
         Sí, y este es uno de los efectos secundarios más buscados y
         confusos de los GLP-1. La información de prescripción de la FDA
-        lista la eructación (término clínico para los eructos) en{" "}
-        <strong>aproximadamente 7% con semaglutida y 2-5% con
-        tirzepatida</strong>, frente a casi cero con placebo [3, 4].
+        lista la eructación (término clínico para los eructos) como una
+        reacción adversa común en las etiquetas de Wegovy y Zepbound
+        (≥5% según la etiqueta), frente a una tasa menor con placebo
+        [3, 4].
       </p>
 
       <p>
         El fenómeno reportado por los pacientes como &ldquo;eructos con
         olor a azufre&rdquo; o &ldquo;eructos con olor a huevo
-        podrido&rdquo; tiene un mecanismo específico: los GLP-1
+        podrido&rdquo; tiene un mecanismo plausible: los GLP-1
         retrasan el vaciamiento gástrico, lo que significa que los
         alimentos permanecen más tiempo en el estómago de lo habitual.
         Cuanto más tiempo esté disponible el sustrato alimentario para
@@ -388,16 +447,13 @@ export default function EfectosSecundariosGlp1PreguntasRespuestasArticle() {
       </p>
 
       <p>
-        Sin embargo, existe una señal emergente de farmacovigilancia
-        de la FDA. Los datos de FAERS (Sistema de Reporte de Eventos
-        Adversos de la FDA) analizados en 2025 detectaron una razón de
-        probabilidades de reporte (ROR) de 1.78 para las quejas
-        cognitivas en usuarios de GLP-1, con una mediana de tiempo
-        hasta el inicio de 32 días después de comenzar la terapia.
-        Esta es una señal que vale la pena conocer, pero NO se ha
-        añadido a la etiqueta de la FDA hasta abril de 2026 porque las
-        señales de farmacovigilancia son generadoras de hipótesis, no
-        confirmatorias.
+        Sin embargo, el sistema FAERS (Sistema de Reporte de Eventos
+        Adversos de la FDA) ha recibido informes de quejas cognitivas
+        asociadas con los agonistas del receptor de GLP-1, pero no se
+        ha establecido una señal causal. Esto vale la pena conocerlo,
+        pero NO se ha añadido a la etiqueta de la FDA hasta abril de
+        2026 porque las señales de farmacovigilancia son generadoras
+        de hipótesis, no confirmatorias.
       </p>
 
       <p>
@@ -431,12 +487,11 @@ export default function EfectosSecundariosGlp1PreguntasRespuestasArticle() {
         El acné no aparece en las tablas de eventos adversos de los
         ensayos STEP-1 o SURMOUNT-1 ni en las secciones de reacciones
         adversas de la información de prescripción aprobada por la FDA
-        [1, 2, 3, 4]. Un estudio de cohorte observacional de 2025
-        reportó una tasa 36% mayor de diagnóstico de acné en mujeres
-        con obesidad dentro de los 90 días de iniciar la terapia con
-        GLP-1 en comparación con controles pareados, pero esta es una
-        señal post hoc que no se ha replicado en ensayos clínicos
-        aleatorizados.
+        [1, 2, 3, 4], y no se ha establecido formalmente como un
+        efecto causal en ningún ensayo aleatorizado. Algunos pacientes
+        sí reportan empeoramiento del acné mientras toman GLP-1; el
+        mecanismo no está establecido y la mayoría de los reportes lo
+        describen como transitorio.
       </p>
 
       <p>
@@ -490,11 +545,12 @@ export default function EfectosSecundariosGlp1PreguntasRespuestasArticle() {
 
       <p>
         La disfunción sexual no aparece en las tablas de eventos
-        adversos de STEP-1 o SURMOUNT-1 [1, 2]. Los datos de
-        farmacovigilancia reportan aproximadamente 182 reportes de
-        casos en todos los GLP-1 desde 2003 hasta 2024, un número
-        absoluto muy bajo en relación con los millones de pacientes
-        tratados.
+        adversos de STEP-1 o SURMOUNT-1 [1, 2], y los ensayos
+        aleatorizados no reportaron tasas elevadas. El sistema FAERS
+        de la FDA ha recibido informes pero no se ha establecido una
+        señal causal. La tasa de fondo de disfunción sexual en
+        poblaciones con obesidad es alta, por lo que la atribución a
+        nivel individual es difícil.
       </p>
 
       <p>
@@ -571,9 +627,10 @@ export default function EfectosSecundariosGlp1PreguntasRespuestasArticle() {
         de reacciones adversas de la información de prescripción de la
         FDA [3]. Los reportes de los pacientes suelen describir sabor
         metálico, aversiones alimentarias o alimentos específicos con
-        sabor &ldquo;raro&rdquo;. Un análisis de FAERS de 2024
-        identificó aproximadamente 1,469 reportes de disgeusia en
-        todos los GLP-1.
+        sabor &ldquo;raro&rdquo;. El sistema FAERS de la FDA también
+        ha recibido informes de disgeusia asociada con los agonistas
+        del receptor de GLP-1, pero no se ha establecido una señal
+        causal cuantitativa más allá de las tasas de la etiqueta.
       </p>
 
       <p>

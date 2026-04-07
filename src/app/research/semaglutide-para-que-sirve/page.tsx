@@ -428,12 +428,12 @@ export default function SemaglutideParaQueSirveArticle() {
             pmid: "33567185",
           },
           {
-            authors: "Drucker DJ.",
-            title:
-              "Mechanisms of Action and Therapeutic Application of Glucagon-Like Peptide-1.",
-            source: "Cell Metab",
-            year: 2018,
-            pmid: "29320702",
+            authors:
+              "Müller TD, Finan B, Bloom SR, D'Alessio D, Drucker DJ, et al.",
+            title: "Glucagon-like peptide 1 (GLP-1).",
+            source: "Mol Metab",
+            year: 2019,
+            pmid: "31767182",
           },
           {
             authors: "Hall S, Isaacs D, Clements JN.",

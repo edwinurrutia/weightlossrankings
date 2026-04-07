@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title:
     "GLP-1 Savings Calculator 2026 — Wegovy, Zepbound, Compounded, Foundayo Cost Comparison",
   description:
-    "Calculate how much you'd save (or spend extra) by switching between brand-name Wegovy, Zepbound, compounded semaglutide or tirzepatide, and Foundayo (orforglipron) at $149/month self-pay. Real 2026 monthly costs across all 10 common access paths, with 1/2/5-year totals.",
+    "Calculate how much you'd save (or spend extra) by switching between brand-name Wegovy (NovoCare $199/$349/$499 tiers), Zepbound (LillyDirect $299–$699 dose-tiered vials), compounded semaglutide or tirzepatide, and Foundayo (orforglipron) at $149/month self-pay. Verified 2026 monthly costs across every common access path, with 1/2/5-year totals.",
   alternates: { canonical: "/tools/glp1-savings-calculator" },
 };
 
@@ -32,18 +32,18 @@ const CITATIONS = [
   {
     authors: "Novo Nordisk Inc.",
     title:
-      "NovoCare Pharmacy direct-pay program for Wegovy.",
+      "NovoCare savings offer for Wegovy — $199/month for first 2 fills (0.25/0.5 mg new self-pay), $349/month under the Take a Wegovy Step program, $499/month non-promotional baseline. Promotion effective 11/17/2025–6/30/2026.",
     source: "NovoCare",
-    year: 2025,
-    url: "https://www.novocare.com/wegovy.html",
+    year: 2026,
+    url: "https://www.novocare.com/patient/medicines/wegovy/savings-offer.html",
   },
   {
     authors: "Eli Lilly and Company.",
     title:
-      "LillyDirect direct-pay vials for Zepbound — single-vial $349-$599 depending on dose.",
-    source: "LillyDirect",
-    year: 2025,
-    url: "https://www.lillydirect.com",
+      "LillyDirect Zepbound self-pay pricing — 2.5 mg $299, 5 mg $399, 7.5 mg $499, 10/12.5/15 mg $699 (effective Dec 1, 2025); Self Pay Journey Program $449 for eligible 7.5–15 mg patients (effective Feb 23, 2026).",
+    source: "LillyDirect Zepbound pricing",
+    year: 2026,
+    url: "https://pricinginfo.lilly.com/zepbound",
   },
   {
     authors: "Weight Loss Rankings.",
@@ -68,7 +68,7 @@ export default function SavingsCalculatorPage() {
     <main className="mx-auto max-w-4xl px-4 sm:px-6 py-12">
       <ToolSchema
         name="GLP-1 Savings Calculator"
-        description="Compare 10 different GLP-1 access paths (brand-name with insurance, manufacturer direct-pay, compounded vials, Foundayo at $149/month) and see your monthly, yearly, and 5-year savings or extra cost."
+        description="Compare every GLP-1 access path — brand-name with insurance, NovoCare ($199 / $349 / $499 tiers), LillyDirect Zepbound dose-specific vials ($299–$699), compounded vials, and Foundayo at $149/month — and see your monthly, yearly, and 5-year savings or extra cost."
         url="https://weightlossrankings.org/tools/glp1-savings-calculator"
         image="https://weightlossrankings.org/tools/glp1-savings-calculator/opengraph-image"
         isMedical={false}
@@ -109,9 +109,10 @@ export default function SavingsCalculatorPage() {
           <strong>order of magnitude</strong> across the access paths
           available in 2026 — from $25/month with full commercial
           insurance coverage and a savings card, to $99-$199/month
-          for compounded semaglutide, to $499/month for Wegovy via
-          NovoCare direct-pay, to $1,300+/month list price without
-          any discounts.
+          for compounded semaglutide, to $199-$499/month for Wegovy
+          across the NovoCare promotional tiers, to $299-$699/month
+          for Zepbound across the LillyDirect dose-specific vial
+          tiers, to $1,300+/month list price without any discounts.
         </p>
         <p>
           The biggest 2026 change is the{" "}
@@ -149,10 +150,19 @@ export default function SavingsCalculatorPage() {
           <li>
             <strong>Brand-name self-pay direct-pay.</strong> Both
             manufacturers operate direct-pay pharmacies for patients
-            who can&apos;t use insurance: NovoCare for Wegovy ($499/mo)
-            and LillyDirect for Zepbound (single-vial pricing
-            $349-$599 depending on dose) [2, 3]. These are bypass
-            programs that skip the insurance system entirely.
+            who can&apos;t use insurance. NovoCare for Wegovy currently
+            runs a tiered promotion (effective 11/17/2025 through
+            6/30/2026): $199/month for the first 2 fills of 0.25/0.5
+            mg (new self-pay patients), $349/month thereafter under
+            the Take a Wegovy Step program, and $499/month as the
+            non-promotional baseline [2]. LillyDirect for Zepbound
+            uses dose-specific vial pricing (effective Dec 1, 2025):
+            $299 for 2.5 mg, $399 for 5 mg, $499 for 7.5 mg, and $699
+            for 10/12.5/15 mg maintenance. Lilly&apos;s Self Pay
+            Journey Program (effective Feb 23, 2026) offers $449/month
+            for eligible patients on the 7.5–15 mg vials [3]. These
+            are bypass programs that skip the insurance system
+            entirely.
           </li>
           <li>
             <strong>Compounded semaglutide and tirzepatide.</strong>{" "}

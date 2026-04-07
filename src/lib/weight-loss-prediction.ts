@@ -50,20 +50,23 @@
  *
  * ATTAIN-1 (Eli Lilly 2026 Foundayo approval):
  *   n=3127, orforglipron maintenance dose (17.2 mg daily), 72 weeks
- *   Published endpoint: 12.4% at week 72 (efficacy estimand)
- *   Intermediate timepoints approximated from the standard oral GLP-1
- *   curve shape and the 11.1% treatment-regimen estimand:
+ *   Published endpoint: 11.1% at week 72 (treatment-regimen / ITT
+ *   estimand from the FDA Foundayo USPI Section 14). The 12.4%
+ *   on-treatment efficacy estimand exists in the same label but is
+ *   NOT what we use here — site-wide consistency requires the ITT
+ *   number, matching the Wave 1 Foundayo article corrections.
+ *   Intermediate timepoints scaled to the 11.1% endpoint:
  *     Wk 0: 0%
- *     Wk 4: 1%
- *     Wk 8: 2.5%
- *     Wk 12: 4%
- *     Wk 16: 5.5%
- *     Wk 20: 6.5%
- *     Wk 28: 8%
- *     Wk 40: 10%
- *     Wk 52: 11.5%
- *     Wk 68: 12.2%
- *     Wk 72: 12.4%
+ *     Wk 4: 0.9%
+ *     Wk 8: 2.2%
+ *     Wk 12: 3.6%
+ *     Wk 16: 4.9%
+ *     Wk 20: 5.8%
+ *     Wk 28: 7.2%
+ *     Wk 40: 8.9%
+ *     Wk 52: 10.3%
+ *     Wk 68: 10.9%
+ *     Wk 72: 11.1%
  *
  * The trial curves are not linear so we use piecewise linear
  * interpolation between the published datapoints rather than a single
@@ -152,21 +155,24 @@ export const TRIAL_DATA: Record<DrugId, DrugTrialData> = {
     trialName: "ATTAIN-1",
     trialSource: "Eli Lilly FDA approval press release 2026",
     pmid: "",
+    // 11.1% is the treatment-regimen estimand from the Foundayo USPI
+    // Section 14, not the 12.4% on-treatment efficacy estimand. We
+    // standardize on 11.1% across all tools site-wide.
     curve: [
       { week: 0, meanLossPct: 0 },
-      { week: 4, meanLossPct: 1 },
-      { week: 8, meanLossPct: 2.5 },
-      { week: 12, meanLossPct: 4 },
-      { week: 16, meanLossPct: 5.5 },
-      { week: 20, meanLossPct: 6.5 },
-      { week: 28, meanLossPct: 8 },
-      { week: 40, meanLossPct: 10 },
-      { week: 52, meanLossPct: 11.5 },
-      { week: 68, meanLossPct: 12.2 },
-      { week: 72, meanLossPct: 12.4 },
+      { week: 4, meanLossPct: 0.9 },
+      { week: 8, meanLossPct: 2.2 },
+      { week: 12, meanLossPct: 3.6 },
+      { week: 16, meanLossPct: 4.9 },
+      { week: 20, meanLossPct: 5.8 },
+      { week: 28, meanLossPct: 7.2 },
+      { week: 40, meanLossPct: 8.9 },
+      { week: 52, meanLossPct: 10.3 },
+      { week: 68, meanLossPct: 10.9 },
+      { week: 72, meanLossPct: 11.1 },
     ],
     maxWeek: 72,
-    finalEndpointPct: 12.4,
+    finalEndpointPct: 11.1,
     maintenanceReachedWeek: 20,
   },
 };

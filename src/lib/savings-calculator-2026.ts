@@ -20,9 +20,15 @@
 
 export type AccessPath =
   | "wegovy-insurance"
-  | "wegovy-novocare"
+  | "wegovy-novocare-starter"
+  | "wegovy-novocare-step"
+  | "wegovy-novocare-baseline"
   | "zepbound-insurance"
-  | "zepbound-lilly-direct"
+  | "zepbound-lilly-2_5"
+  | "zepbound-lilly-5"
+  | "zepbound-lilly-7_5"
+  | "zepbound-lilly-10-15"
+  | "zepbound-lilly-journey"
   | "compounded-sema-cheap"
   | "compounded-sema-median"
   | "compounded-tirz-cheap"
@@ -54,13 +60,34 @@ export const ACCESS_OPTIONS: AccessOption[] = [
       "Requires PA approval and a Novo Nordisk savings card. $25/month is the typical eligible-patient price.",
   },
   {
-    id: "wegovy-novocare",
-    label: "Wegovy NovoCare direct-pay",
+    id: "wegovy-novocare-starter",
+    label: "Wegovy NovoCare — first 2 fills (0.25/0.5 mg)",
+    drug: "semaglutide",
+    defaultMonthlyCost: 199,
+    source:
+      "NovoCare savings offer (https://www.novocare.com/patient/medicines/wegovy/savings-offer.html), promotion effective 11/17/2025–6/30/2026",
+    notes:
+      "$199/month for the first 2 fills of 0.25 mg or 0.5 mg, new self-pay patients only. Promotion subject to change, verify at NovoCare.",
+  },
+  {
+    id: "wegovy-novocare-step",
+    label: "Wegovy NovoCare — Take a Wegovy Step (ongoing)",
+    drug: "semaglutide",
+    defaultMonthlyCost: 349,
+    source:
+      "NovoCare savings offer (https://www.novocare.com/patient/medicines/wegovy/savings-offer.html), promotion effective 11/17/2025–6/30/2026",
+    notes:
+      "$349/month under the Take a Wegovy Step program for ongoing self-pay patients. Promotion subject to change, verify at NovoCare.",
+  },
+  {
+    id: "wegovy-novocare-baseline",
+    label: "Wegovy NovoCare — non-promotional baseline",
     drug: "semaglutide",
     defaultMonthlyCost: 499,
-    source: "NovoCare direct-pay program",
+    source:
+      "NovoCare direct-pay program (https://www.novocare.com/patient/medicines/wegovy/savings-offer.html)",
     notes:
-      "Manufacturer direct-pay program for self-pay patients without commercial coverage. ~$499/month as of 2025.",
+      "$499/month is the non-promotional NovoCare self-pay baseline. Promotion subject to change, verify at NovoCare.",
   },
   {
     id: "zepbound-insurance",
@@ -72,13 +99,47 @@ export const ACCESS_OPTIONS: AccessOption[] = [
       "Requires PA approval and Lilly savings card. $25/month is the typical eligible-patient price.",
   },
   {
-    id: "zepbound-lilly-direct",
-    label: "Zepbound LillyDirect single-vial",
+    id: "zepbound-lilly-2_5",
+    label: "Zepbound LillyDirect — 2.5 mg starter",
+    drug: "tirzepatide",
+    defaultMonthlyCost: 299,
+    source: "LillyDirect Zepbound pricing (https://pricinginfo.lilly.com/zepbound), effective Dec 1 2025",
+    notes:
+      "$299/month for the 2.5 mg starter vial through LillyDirect self-pay.",
+  },
+  {
+    id: "zepbound-lilly-5",
+    label: "Zepbound LillyDirect — 5 mg",
+    drug: "tirzepatide",
+    defaultMonthlyCost: 399,
+    source: "LillyDirect Zepbound pricing (https://pricinginfo.lilly.com/zepbound), effective Dec 1 2025",
+    notes: "$399/month for 5 mg vial through LillyDirect self-pay.",
+  },
+  {
+    id: "zepbound-lilly-7_5",
+    label: "Zepbound LillyDirect — 7.5 mg",
     drug: "tirzepatide",
     defaultMonthlyCost: 499,
-    source: "LillyDirect direct-pay vials",
+    source: "LillyDirect Zepbound pricing (https://pricinginfo.lilly.com/zepbound), effective Dec 1 2025",
+    notes: "$499/month for 7.5 mg vial through LillyDirect self-pay.",
+  },
+  {
+    id: "zepbound-lilly-10-15",
+    label: "Zepbound LillyDirect — 10 / 12.5 / 15 mg maintenance",
+    drug: "tirzepatide",
+    defaultMonthlyCost: 699,
+    source: "LillyDirect Zepbound pricing (https://pricinginfo.lilly.com/zepbound), effective Dec 1 2025",
     notes:
-      "Single-vial direct pay through LillyDirect, $349-$599 depending on dose. ~$499/month is typical for the maintenance dose range.",
+      "$699/month for 10 mg, 12.5 mg, or 15 mg maintenance vials through LillyDirect self-pay.",
+  },
+  {
+    id: "zepbound-lilly-journey",
+    label: "Zepbound Self Pay Journey Program (eligible 7.5–15 mg)",
+    drug: "tirzepatide",
+    defaultMonthlyCost: 449,
+    source: "LillyDirect Self Pay Journey Program (https://pricinginfo.lilly.com/zepbound), effective Feb 23 2026",
+    notes:
+      "$449/month under the Self Pay Journey Program for eligible patients on 7.5/10/12.5/15 mg vials.",
   },
   {
     id: "compounded-sema-cheap",

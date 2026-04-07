@@ -585,12 +585,13 @@ export default function CompoundedBioequivalenceArticle() {
             url: "https://www.achc.org/pharmacy/",
           },
           {
-            authors: "Mahase E.",
+            authors: "U.S. Food and Drug Administration.",
             title:
-              "Compounded GLP-1 Drugs: What Doctors and Patients Need to Know.",
-            source: "BMJ",
+              "FDA's Concerns with Unapproved GLP-1 Drugs Used for Weight Loss (including statements on semaglutide salt forms).",
+            source:
+              "FDA Drug Safety and Availability",
             year: 2024,
-            pmid: "39379084",
+            url: "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss",
           },
           {
             authors: "Whitley HP, Trujillo JM, Neumiller JJ.",

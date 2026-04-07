@@ -50,7 +50,7 @@ export default function GlpAudArticle() {
         "Exenatide once weekly for alcohol use disorder investigated in a randomized, placebo-controlled clinical trial.",
       source: "JCI Insight",
       year: 2022,
-      pmid: "36256003",
+      pmid: "36066977",
     },
     {
       authors:
@@ -85,7 +85,7 @@ export default function GlpAudArticle() {
         "Semaglutide and Tirzepatide reduce alcohol consumption in individuals with obesity.",
       source: "Scientific Reports",
       year: 2023,
-      pmid: "38129444",
+      pmid: "38017205",
     },
     {
       authors:
@@ -94,7 +94,7 @@ export default function GlpAudArticle() {
         "Associations of semaglutide with incidence and recurrence of alcohol use disorder in real-world population.",
       source: "Nature Communications",
       year: 2024,
-      pmid: "38816386",
+      pmid: "38806481",
     },
     {
       authors:

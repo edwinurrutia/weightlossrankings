@@ -41,17 +41,15 @@ export default function MuscleMassArticle() {
 
       <p>
         The headline number that has been circulating in popular coverage
-        &mdash; that 30&ndash;40% of weight lost on semaglutide is lean
-        body mass &mdash; is essentially correct, but it deserves
-        unpacking. It comes from a DEXA sub-analysis of the STEP 1 trial,
-        and the picture it paints is more nuanced than either the
+        &mdash; that 20&ndash;40% of weight lost on a GLP-1 receptor
+        agonist is lean body mass &mdash; is essentially correct, but it
+        deserves unpacking. The picture is more nuanced than either the
         &ldquo;semaglutide melts your muscles&rdquo; takes or the
         defensive industry response that &ldquo;all weight loss looks like
         this&rdquo; would suggest. Both can be true at the same time.
-        <Cite n={1} />
       </p>
 
-      <h2>What STEP 1 actually measured</h2>
+      <h2>What the trials actually measured</h2>
 
       <p>
         STEP 1 was the pivotal phase 3 trial that put semaglutide on the
@@ -60,55 +58,47 @@ export default function MuscleMassArticle() {
         semaglutide 2.4 mg or placebo, both layered on top of lifestyle
         intervention. After 68 weeks, the semaglutide arm had lost a mean
         of 14.9% of body weight, versus 2.4% in the placebo arm.
+        <Cite n={1} />
+      </p>
+
+      <p>
+        The body-composition picture for GLP-1 receptor agonists comes
+        from several sources. The most directly comparable is the
+        SURMOUNT-1 body-composition sub-study (Look et al., Diabetes
+        Obes Metab 2025), which used DEXA in 160 participants from the
+        tirzepatide pivotal obesity trial. At week 72, the tirzepatide
+        arm lost 21.3% of body weight, with fat mass falling 33.9% and
+        lean mass falling 10.9%. Roughly 75% of the weight lost was
+        fat mass and 25% was lean mass &mdash; and the same ~75/25
+        split was seen in the placebo arm, suggesting the proportional
+        composition of the loss was no different than diet alone.
         <Cite n={2} />
       </p>
 
       <p>
-        Buried inside that trial was a body composition sub-study: 140
-        participants underwent DEXA (dual-energy X-ray absorptiometry)
-        scans at baseline and again at week 68. DEXA is the gold standard
-        non-invasive method for separating fat mass from lean mass. The
-        sub-study results were published as a separate analysis a year
-        after the main trial, and they are the source of every credible
-        statistic on this topic.
+        A 2025 systematic review and network meta-analysis by Karakasis
+        and colleagues pooled 22 randomized trials of GLP-1 receptor
+        agonists and co-agonists (2,258 participants) and found that
+        across the class, lean mass accounts for approximately 25% of
+        total weight loss. Semaglutide and tirzepatide produced the
+        largest absolute fat loss but were among the least effective at
+        preserving lean mass relative to other agents.
         <Cite n={3} />
       </p>
 
       <p>
-        Among DEXA participants in the semaglutide arm:
-      </p>
-
-      <ul>
-        <li>
-          Total body weight loss averaged <strong>15.8 kg</strong> (about
-          35 lb).
-        </li>
-        <li>
-          Of that loss, roughly <strong>9.7 kg was fat mass</strong>{" "}
-          (61%).
-        </li>
-        <li>
-          And roughly <strong>6.1 kg was lean body mass</strong> (39%).
-        </li>
-        <li>
-          Visceral adipose tissue dropped sharply &mdash; the metabolically
-          dangerous fat fell faster than subcutaneous fat, which is the
-          finding that matters most for cardiovascular and diabetes
-          outcomes.
-        </li>
-      </ul>
-
-      <p>
-        The 39% lean-mass figure is what gets quoted. But the qualifier
-        the original investigators added is important: the{" "}
-        <em>proportion</em> of lost weight that comes from lean tissue
-        during semaglutide therapy is comparable to what you see in any
-        unstructured caloric restriction of similar magnitude. In other
-        words, the issue isn&apos;t that GLP-1s are uniquely catabolic
-        &mdash; it&apos;s that fast weight loss without resistance training
-        and adequate protein causes lean-mass loss across the board, and
-        GLP-1s simply make fast weight loss possible at scale for the
-        first time.
+        The qualifier that matters: the <em>proportion</em> of lost
+        weight that comes from lean tissue during GLP-1 therapy is
+        comparable to what you see in unstructured caloric restriction
+        of similar magnitude. The Heymsfield 2024 modeling paper in
+        Obesity, drawing on 897 healthy adults followed longitudinally,
+        estimated that men lose roughly 26% of weight as skeletal muscle
+        during voluntary calorie restriction without exercise, and
+        women roughly 14%. In other words, GLP-1s aren&apos;t uniquely
+        catabolic &mdash; fast weight loss without resistance training
+        and adequate protein causes lean-mass loss across the board,
+        and GLP-1s simply make fast weight loss possible at scale for
+        the first time.
         <Cite n={4} />
       </p>
 
@@ -126,29 +116,27 @@ export default function MuscleMassArticle() {
           25&ndash;30% of total weight lost is lean mass, with significant
           variation by patient age and post-op activity. The percentage
           tends to be lower in younger, more active patients.
-          <Cite n={5} />
-        </li>
-        <li>
-          <strong>Very low calorie diets (VLCD, &lt;800 kcal/day).</strong>
-          {" "}25&ndash;45% lean mass loss, depending on protein intake.
-          High-protein VLCDs sit at the low end of that range.
           <Cite n={6} />
         </li>
         <li>
-          <strong>Intermittent fasting.</strong> Generally 20&ndash;40%
-          lean-mass share, with the same protein-and-resistance-training
-          modifiers.
-          <Cite n={7} />
+          <strong>Caloric restriction (general).</strong> Modeling
+          across pooled cohorts puts the share at roughly 26% of weight
+          loss as skeletal muscle in men and 14% in women without
+          structured exercise.
+          <Cite n={4} />
         </li>
         <li>
-          <strong>Semaglutide (STEP 1 sub-study).</strong> ~39% lean-mass
-          share.
+          <strong>Very low calorie diets and intermittent fasting.</strong>
+          {" "}Generally fall in the 20&ndash;40% lean-mass range,
+          modified heavily by protein intake and concurrent resistance
+          training.
+          <Cite n={7} /><Cite n={8} />
         </li>
         <li>
-          <strong>Tirzepatide (SURMOUNT 1 sub-study).</strong> Similar
-          range, with newer evidence suggesting comparable proportional
-          composition despite the larger absolute weight loss.
-          <Cite n={8} />
+          <strong>Tirzepatide (SURMOUNT-1 sub-study).</strong> ~25%
+          lean-mass share over 72 weeks &mdash; the same proportional
+          split as the placebo arm of the same trial.
+          <Cite n={2} /><Cite n={9} />
         </li>
       </ul>
 
@@ -177,8 +165,11 @@ export default function MuscleMassArticle() {
         intracellular water shifts can account for a meaningful chunk of
         early &ldquo;lean&rdquo; loss without representing actual muscle
         atrophy. That&apos;s the strongest argument for not panicking
-        about the headline number.
-        <Cite n={9} />
+        about the headline number, and it is the central point of a
+        2024 JAMA viewpoint by Conte, Hall and Klein arguing that the
+        clinical relevance of GLP-1-induced fat-free mass loss in most
+        adults with obesity has been overstated.
+        <Cite n={7} /><Cite n={5} />
       </p>
 
       <p>
@@ -305,14 +296,18 @@ export default function MuscleMassArticle() {
       </p>
 
       <p>
-        The thing nobody quotes: the same STEP 1 DEXA sub-study found
-        that visceral adipose tissue (the metabolically dangerous fat
-        around the organs) fell roughly twice as fast as subcutaneous fat
-        on semaglutide. That&apos;s the finding that drives the
-        cardiovascular outcome benefits seen in SELECT and other
-        post-marketing trials. From a longevity and metabolic-health
-        standpoint, the trade is heavily favorable for almost every
-        patient who would clinically qualify for the drug.
+        The thing worth keeping in view: in the SURMOUNT-1
+        body-composition sub-study, fat mass fell about three times
+        faster than lean mass on tirzepatide, and the proportional
+        ~75/25 split of weight loss into fat versus lean was no
+        different from the placebo arm of the same trial. That&apos;s
+        the finding consistent with the cardiovascular and metabolic
+        outcome benefits seen in SELECT and other post-marketing
+        trials of GLP-1 receptor agonists. From a longevity and
+        metabolic-health standpoint, the trade is heavily favorable
+        for almost every patient who would clinically qualify for
+        the drug.
+        <Cite n={2} />
       </p>
 
       <p>
@@ -370,20 +365,31 @@ export default function MuscleMassArticle() {
             pmid: "33567185",
           },
           {
-            authors: "Wilding JPH, Batterham RL, Davies M, et al.",
+            authors:
+              "Look M, Dunn JP, Kushner RF, Cao D, Harris C, Hunter Gibble T, Stefanski A, Griffin R.",
             title:
-              "Weight Regain and Cardiometabolic Effects After Withdrawal of Semaglutide: The STEP 1 Trial Extension.",
+              "Body Composition Changes During Weight Reduction with Tirzepatide in the SURMOUNT-1 Study of Adults with Obesity or Overweight.",
             source: "Diabetes Obes Metab",
-            year: 2022,
-            pmid: "35441470",
+            year: 2025,
+            pmid: "39996356",
           },
           {
-            authors: "Wilding JPH, Calanna S, Davies M, et al.",
+            authors:
+              "Karakasis P, Patoulias D, Fragakis N, Mantzoros CS.",
             title:
-              "Body Composition and Cardiometabolic Risk Factors in STEP 1 (Sub-Study).",
-            source: "Diabetes Obes Metab",
-            year: 2021,
-            pmid: "34514714",
+              "Effect of Glucagon-Like Peptide-1 Receptor Agonists and Co-Agonists on Body Composition: Systematic Review and Network Meta-Analysis.",
+            source: "Metabolism",
+            year: 2025,
+            pmid: "39719170",
+          },
+          {
+            authors:
+              "Heymsfield SB, Yang S, McCarthy C, Brown JB, Martin CK, Redman LM, Ravussin E, Shen W, Müller MJ, Bosy-Westphal A.",
+            title:
+              "Proportion of Caloric Restriction-Induced Weight Loss as Skeletal Muscle.",
+            source: "Obesity (Silver Spring)",
+            year: 2024,
+            pmid: "37807154",
           },
           {
             authors: "Conte C, Hall KD, Klein S.",
@@ -391,15 +397,16 @@ export default function MuscleMassArticle() {
               "Is Weight Loss-Induced Muscle Mass Loss Clinically Relevant?",
             source: "JAMA",
             year: 2024,
-            pmid: "38113043",
+            pmid: "38829659",
           },
           {
-            authors: "Ciangura C, Bouillot JL, Lloret-Linares C, et al.",
+            authors:
+              "Ciangura C, Bouillot JL, Lloret-Linares C, Poitou C, Veyrie N, Basdevant A, Oppert JM.",
             title:
               "Dynamics of Change in Total and Regional Body Composition After Gastric Bypass in Obese Patients.",
             source: "Obesity (Silver Spring)",
             year: 2010,
-            pmid: "19851307",
+            pmid: "19834464",
           },
           {
             authors: "Cava E, Yeat NC, Mittendorfer B.",
@@ -410,12 +417,13 @@ export default function MuscleMassArticle() {
             pmid: "28507015",
           },
           {
-            authors: "Tinsley GM, Moore ML, Graybeal AJ, et al.",
+            authors:
+              "Tinsley GM, Moore ML, Graybeal AJ, Paoli A, Kim Y, Gonzales JU, Harry JR, VanDusseldorp TA, Kennedy DN, Cruz MR.",
             title:
-              "Time-Restricted Feeding Plus Resistance Training in Active Females.",
+              "Time-Restricted Feeding Plus Resistance Training in Active Females: A Randomized Trial.",
             source: "Am J Clin Nutr",
             year: 2019,
-            pmid: "31180451",
+            pmid: "31268131",
           },
           {
             authors: "Jastreboff AM, Aronne LJ, Ahmad NN, et al.",
@@ -424,14 +432,6 @@ export default function MuscleMassArticle() {
             source: "N Engl J Med",
             year: 2022,
             pmid: "35658024",
-          },
-          {
-            authors: "Heymsfield SB, Yang S, McCarthy C, et al.",
-            title:
-              "Proportion of Caloric Restriction-Induced Weight Loss as Skeletal Muscle.",
-            source: "Obesity (Silver Spring)",
-            year: 2024,
-            pmid: "38311805",
           },
           {
             authors: "Cruz-Jentoft AJ, Bahat G, Bauer J, et al.",
@@ -447,15 +447,16 @@ export default function MuscleMassArticle() {
               "Sarcopenic Obesity in Older Adults: Aetiology, Epidemiology and Treatment Strategies.",
             source: "Nat Rev Endocrinol",
             year: 2018,
-            pmid: "29736588",
+            pmid: "30065268",
           },
           {
-            authors: "Sandsdal RM, Juhl CR, Jensen SBK, et al.",
+            authors:
+              "Sandsdal RM, Juhl CR, Jensen SBK, Lundgren JR, Janus C, Blond MB, Rosenkilde M, Bogh AF, Gliemann L, Jensen JB, Antoniades C, Stallknecht BM, Holst JJ, Madsbad S, Torekov SS.",
             title:
-              "Combination of Exercise and GLP-1 Receptor Agonist Treatment Reduces Severity of Metabolic Syndrome and Body Composition Changes.",
+              "Combination of Exercise and GLP-1 Receptor Agonist Treatment Reduces Severity of Metabolic Syndrome, Abdominal Obesity, and Inflammation: A Randomized Controlled Trial.",
             source: "Cardiovasc Diabetol",
             year: 2023,
-            pmid: "37202741",
+            pmid: "36841762",
           },
           {
             authors: "Phillips SM, Chevalier S, Leidy HJ.",
@@ -463,12 +464,12 @@ export default function MuscleMassArticle() {
               "Protein 'Requirements' Beyond the RDA: Implications for Optimizing Health.",
             source: "Appl Physiol Nutr Metab",
             year: 2016,
-            pmid: "26844893",
+            pmid: "26960445",
           },
           {
             authors: "Devries MC, Phillips SM.",
             title:
-              "Creatine Supplementation During Resistance Training in Older Adults.",
+              "Creatine Supplementation During Resistance Training in Older Adults: A Meta-Analysis.",
             source: "Med Sci Sports Exerc",
             year: 2014,
             pmid: "24576864",

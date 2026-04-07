@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // prescribing information adverse-event tables, the Kakouri et al
 // 2023 review of hair loss in weight loss contexts (PMID 37325499),
 // and the Wharton 2022 review of GLP-1 side effect management
-// (PMID 36177722).
+// (PMID 34775881).
 
 export default function SideEffectsDurationArticle() {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -73,7 +73,7 @@ export default function SideEffectsDurationArticle() {
         "Managing the gastrointestinal side effects of GLP-1 receptor agonists in obesity: recommendations for clinical practice.",
       source: "Postgraduate Medicine",
       year: 2022,
-      pmid: "36177722",
+      pmid: "34775881",
     },
     {
       authors:

@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // Sourced from STEP-1 (Wilding NEJM 2021, PMID 33567185), SURMOUNT-1
 // (Jastreboff NEJM 2022, PMID 35658024), the Wegovy/Ozempic/Zepbound/
 // Mounjaro FDA prescribing information PK sections, and the Hall et al
-// 2018 (PMID 29915923) and Urva et al 2021 (PMID 33704694) clinical
+// 2018 (PMID 29915923) and Urva et al 2021 (PMID 33778934) clinical
 // pharmacokinetics reviews. Trial-week-by-week numerical data are
 // quoted from the published study reports and supplements.
 
@@ -72,7 +72,7 @@ export default function HowLongDoesGlp1TakeToWorkArticle() {
         "Effects of Renal Impairment on the Pharmacokinetics of the Dual GIP and GLP-1 Receptor Agonist Tirzepatide.",
       source: "Clinical Pharmacokinetics",
       year: 2021,
-      pmid: "33704694",
+      pmid: "33778934",
     },
     {
       authors: "Novo Nordisk Inc.",

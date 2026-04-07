@@ -425,12 +425,13 @@ export default function TirzepatideParaQueSirveArticle() {
             pmid: "35658024",
           },
           {
-            authors: "Min T, Bain SC.",
+            authors:
+              "Rosenstock J, Wysham C, Frías JP, Kaneko S, Lee CJ, et al.",
             title:
-              "The Role of Tirzepatide, Dual GIP and GLP-1 Receptor Agonist, in the Management of Type 2 Diabetes: The SURPASS Clinical Trials.",
-            source: "Diabetes Ther",
+              "Efficacy and safety of a novel dual GIP and GLP-1 receptor agonist tirzepatide in patients with type 2 diabetes (SURPASS-1): a double-blind, randomised, phase 3 trial.",
+            source: "Lancet",
             year: 2021,
-            pmid: "33367985",
+            pmid: "34186022",
           },
           {
             authors: "Urva S, Quinlan T, Landry J, et al.",
@@ -438,7 +439,7 @@ export default function TirzepatideParaQueSirveArticle() {
               "Effects of Renal Impairment on the Pharmacokinetics of the Dual GIP and GLP-1 Receptor Agonist Tirzepatide.",
             source: "Clin Pharmacokinet",
             year: 2021,
-            pmid: "33704694",
+            pmid: "33778934",
           },
           {
             authors: "Malhotra A, Grunstein RR, Fietze I, et al.",

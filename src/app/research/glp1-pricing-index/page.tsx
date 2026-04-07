@@ -413,10 +413,10 @@ export default function PricingIndexArticle() {
           {
             authors: "Mahase E.",
             title:
-              "Compounded GLP-1 Drugs: What Doctors and Patients Need to Know.",
+              "GLP-1 shortages will not resolve this year, EMA warns, amid concern over off-label use.",
             source: "BMJ",
             year: 2024,
-            pmid: "39379084",
+            pmid: "38942431",
           },
         ]}
       />

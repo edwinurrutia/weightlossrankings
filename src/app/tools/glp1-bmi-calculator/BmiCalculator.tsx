@@ -26,20 +26,27 @@ const TRIAL_OUTCOMES = [
     color: "#3b82f6",
   },
   {
+    // 11.1% is the treatment-regimen / ITT estimand from the Foundayo
+    // USPI Section 14, not the 12.4% on-treatment efficacy estimand.
+    // Standardized site-wide for consistency with the Wave 1 fixes.
     label: "Foundayo (orforglipron)",
-    pct: 12.4,
-    trial: "ATTAIN-1, Lilly 2026",
+    pct: 11.1,
+    trial: "ATTAIN-1, Foundayo USPI Section 14",
     color: "#4338ca",
   },
 ];
 
+// Brand-only palette: brand-violet (#7c3aed) at varying opacities for
+// the BMI severity ramp, brand-blue (#3b82f6) for underweight, neutral
+// slate for the normal range. NO orange/amber/green/yellow/red — those
+// are explicit brand violations on this site.
 const CATEGORY_COLORS: Record<BmiCategory, string> = {
-  underweight: "#06b6d4",
-  normal: "#10b981",
-  overweight: "#facc15",
-  "obese-class-1": "#f97316",
-  "obese-class-2": "#ef4444",
-  "obese-class-3": "#b91c1c",
+  underweight: "#3b82f6", // brand-blue
+  normal: "#64748b", // slate-500 (neutral)
+  overweight: "rgba(124, 58, 237, 0.35)", // brand-violet 35%
+  "obese-class-1": "rgba(124, 58, 237, 0.55)", // brand-violet 55%
+  "obese-class-2": "rgba(124, 58, 237, 0.75)", // brand-violet 75%
+  "obese-class-3": "#7c3aed", // brand-violet full
 };
 
 function formatBmi(bmi: number): string {

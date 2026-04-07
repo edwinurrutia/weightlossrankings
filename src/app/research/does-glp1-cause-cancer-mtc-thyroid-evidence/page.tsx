@@ -95,7 +95,7 @@ export default function GlpCancerArticle() {
         "Glucagon-like Peptide-1 receptor agonists activate rodent thyroid C-cells causing calcitonin release and C-cell proliferation.",
       source: "Endocrinology",
       year: 2010,
-      pmid: "20133456",
+      pmid: "20203154",
     },
     {
       authors:
@@ -131,16 +131,7 @@ export default function GlpCancerArticle() {
         "Glucagon-like peptide-1 receptor agonists and pancreatic cancer: a meta-analysis with trial sequential analysis.",
       source: "Sci Rep",
       year: 2019,
-      pmid: "30679568",
-    },
-    {
-      authors:
-        "Wang J, Kim CH.",
-      title:
-        "Differential risk of cancer associated with glucagon-like peptide-1 receptor agonists: Analysis of real-world data.",
-      source: "J Diabetes Complications",
-      year: 2024,
-      pmid: "38199107",
+      pmid: "30787365",
     },
     {
       authors:
@@ -149,7 +140,7 @@ export default function GlpCancerArticle() {
         "Is there an association between liraglutide use and female breast cancer in a real-world setting?",
       source: "Diabetes Metab Syndr Obes",
       year: 2018,
-      pmid: "30214261",
+      pmid: "30538516",
     },
   ];
 
@@ -339,16 +330,6 @@ export default function GlpCancerArticle() {
         causal claim.
       </p>
 
-      <h3>The 2024 real-world data analysis<Cite n={8} /></h3>
-      <p>
-        Wang and Kim published a 2024 real-world data analysis
-        comparing cancer incidence across multiple GLP-1 cohorts and
-        found no consistent excess thyroid or pancreatic cancer
-        signal across drugs. Risk ratios for thyroid cancer were not
-        statistically elevated, and a small numeric signal for
-        pancreatic cancer was not robust to sensitivity analysis.
-      </p>
-
       <h2>Pancreatic cancer — the older signal that didn&apos;t pan out</h2>
       <p>
         In the early 2010s, a series of FAERS (FDA Adverse Event
@@ -366,7 +347,7 @@ export default function GlpCancerArticle() {
       <h2>Other cancers</h2>
       <p>
         Breast cancer was investigated in a 2018 cohort study by
-        Funch and colleagues<Cite n={9} /> with no signal found.
+        Funch and colleagues<Cite n={8} /> with no signal found.
         Other cancers (gastric, liver, kidney, colon) have been
         examined in subset analyses of the major trials and the
         large cohort databases without consistent positive findings.

@@ -79,7 +79,7 @@ export default function RetatrutideArticle() {
         "LY3437943, a novel triple glucagon, GIP, and GLP-1 receptor agonist for glycaemic control and weight loss: from discovery to clinical proof of concept.",
       source: "Cell Metabolism",
       year: 2022,
-      pmid: "36240769",
+      pmid: "35985340",
     },
     {
       authors:
@@ -88,7 +88,7 @@ export default function RetatrutideArticle() {
         "Retatrutide, a GIP, GLP-1 and glucagon receptor agonist, for people with type 2 diabetes: a randomised, double-blind, placebo and active-controlled, parallel-group, phase 2 trial conducted in the USA.",
       source: "Lancet",
       year: 2023,
-      pmid: "37364502",
+      pmid: "37385280",
     },
   ];
 
@@ -235,7 +235,7 @@ export default function RetatrutideArticle() {
       </p>
 
       <p>
-        Jastreboff et al. also published the diabetes phase 2 trial
+        Rosenstock et al. also published the diabetes phase 2 trial
         in The Lancet in 2023 [6], showing dose-dependent weight
         loss and HbA1c reduction in T2D patients consistent with
         the obesity-trial signal.

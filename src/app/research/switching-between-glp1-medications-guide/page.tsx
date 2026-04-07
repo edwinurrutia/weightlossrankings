@@ -66,7 +66,7 @@ export default function SwitchingGuideArticle() {
         "Managing the gastrointestinal side effects of GLP-1 receptor agonists in obesity: recommendations for clinical practice.",
       source: "Postgraduate Medicine",
       year: 2022,
-      pmid: "36177722",
+      pmid: "34775881",
     },
   ];
 

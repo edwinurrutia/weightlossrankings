@@ -499,20 +499,21 @@ export default function HeadToHeadArticle() {
       <References
         items={[
           {
-            authors: "Drucker DJ.",
-            title:
-              "Mechanisms of Action and Therapeutic Application of Glucagon-Like Peptide-1.",
-            source: "Cell Metab",
-            year: 2018,
-            pmid: "29320702",
+            authors:
+              "Müller TD, Finan B, Bloom SR, D'Alessio D, Drucker DJ, et al.",
+            title: "Glucagon-like peptide 1 (GLP-1).",
+            source: "Mol Metab",
+            year: 2019,
+            pmid: "31767182",
           },
           {
-            authors: "Min T, Bain SC.",
+            authors:
+              "Rosenstock J, Wysham C, Frías JP, Kaneko S, Lee CJ, et al.",
             title:
-              "The Role of Tirzepatide, Dual GIP and GLP-1 Receptor Agonist, in the Management of Type 2 Diabetes: The SURPASS Clinical Trials.",
-            source: "Diabetes Ther",
+              "Efficacy and safety of a novel dual GIP and GLP-1 receptor agonist tirzepatide in patients with type 2 diabetes (SURPASS-1): a double-blind, randomised, phase 3 trial.",
+            source: "Lancet",
             year: 2021,
-            pmid: "33367985",
+            pmid: "34186022",
           },
           {
             authors: "Wilding JPH, Batterham RL, Calanna S, et al.",
@@ -531,12 +532,13 @@ export default function HeadToHeadArticle() {
             pmid: "35658024",
           },
           {
-            authors: "Aronne LJ, Sattar N, Horn DB, et al.",
+            authors:
+              "Aronne LJ, Horn DB, le Roux CW, Ho W, Falcon BL, et al.",
             title:
               "Tirzepatide as Compared with Semaglutide for the Treatment of Obesity (SURMOUNT-5).",
             source: "N Engl J Med",
             year: 2025,
-            pmid: "40334173",
+            pmid: "40353578",
           },
           {
             authors: "Samms RJ, Coghlan MP, Sloop KW.",
@@ -547,12 +549,13 @@ export default function HeadToHeadArticle() {
             pmid: "32396843",
           },
           {
-            authors: "Gleason PP, Urick BY, Marshall LZ, et al.",
+            authors:
+              "Gleason PP, Urick BY, Marshall LZ, Friedlander N, Qiu Y, Leslie RS.",
             title:
-              "Real-World Persistence and Adherence to Glucagon-Like Peptide-1 Receptor Agonists Among Adults with Obesity Without Diabetes.",
-            source: "Obesity (Silver Spring)",
+              "Real-world persistence and adherence to glucagon-like peptide-1 receptor agonists among obese commercially insured adults without diabetes.",
+            source: "J Manag Care Spec Pharm",
             year: 2024,
-            pmid: "38937881",
+            pmid: "38717042",
           },
           {
             authors: "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.",
@@ -579,12 +582,13 @@ export default function HeadToHeadArticle() {
             pmid: "34170647",
           },
           {
-            authors: "Knop FK, Aroda VR, do Vale RD, et al.",
+            authors:
+              "Aroda VR, Aberle J, Bardtrum L, Christiansen E, Knop FK, et al.",
             title:
-              "Oral Semaglutide 25 mg and 50 mg Compared with 14 mg in Adults with Type 2 Diabetes (PIONEER PLUS).",
+              "Efficacy and safety of once-daily oral semaglutide 25 mg and 50 mg compared with 14 mg in adults with type 2 diabetes (PIONEER PLUS): a multicentre, randomised, phase 3b trial.",
             source: "Lancet",
             year: 2023,
-            pmid: "37356471",
+            pmid: "37385279",
           },
           {
             authors: "Jastreboff AM, Kaplan LM, Frías JP, et al.",
@@ -592,7 +596,7 @@ export default function HeadToHeadArticle() {
               "Triple-Hormone-Receptor Agonist Retatrutide for Obesity — A Phase 2 Trial.",
             source: "N Engl J Med",
             year: 2023,
-            pmid: "37345787",
+            pmid: "37366315",
           },
         ]}
       />

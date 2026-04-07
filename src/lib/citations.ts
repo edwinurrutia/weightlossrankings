@@ -926,13 +926,19 @@ export function getAllCitations(): CitationEntry[] {
 // ---------------------------------------------------------------------------
 
 /** Wegovy (semaglutide 2.4 mg) published list price per month. Source: novocare-wegovy-cash-price */
-export const WEGOVY_MONTHLY_USD = 1349;
+export const WEGOVY_MONTHLY_USD = 1349; // per Novo Nordisk official WAC, 2025
 
 /** Zepbound (tirzepatide) published list price per month. Source: lilly-zepbound-cash-price */
-export const ZEPBOUND_MONTHLY_USD = 1086;
+export const ZEPBOUND_MONTHLY_USD = 1086; // per Eli Lilly official WAC, 2025
 
 /** Ozempic (semaglutide 0.5–2 mg) published list price per month. Source: novocare-ozempic-cash-price */
-export const OZEMPIC_MONTHLY_USD = 968;
+export const OZEMPIC_MONTHLY_USD = 1029; // per Novo Nordisk official WAC, 2025
 
 /** Mounjaro (tirzepatide) published list price per month. Source: lilly-mounjaro-cash-price */
-export const MOUNJARO_MONTHLY_USD = 1023;
+export const MOUNJARO_MONTHLY_USD = 1069; // per Eli Lilly official WAC, 2025
+
+/** Saxenda (liraglutide 3 mg) published list price per month. Source: novocare-saxenda-cash-price */
+export const SAXENDA_MONTHLY_USD = 1349; // per Novo Nordisk official WAC, 2025
+
+/** Foundayo (orforglipron) published list price per month. Source: lilly-foundayo-cash-price */
+export const FOUNDAYO_MONTHLY_USD = 999; // per Eli Lilly official WAC, 2026

@@ -55,15 +55,15 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-// Verified against:
-//   - Jensterle et al. 2019 — liraglutide PCOS ovulation return (PMID 31099328)
-//   - Jensterle et al. 2022 — semaglutide PCOS pilot
-//   - Salamun et al. 2018 — liraglutide PCOS, IVF outcomes
+// Verified against (PubMed-confirmed 2026-04-07):
+//   - Jensterle et al. 2019 — GLP-1 in reproduction review, Hum Reprod Update (PMID 31260047)
+//   - Jensterle et al. 2020 — long-term metformin in PCOS, Endocr Connect (PMID 31829964)
+//   - Salamun et al. 2018 — liraglutide PCOS IVF, Eur J Endocrinol (PMID 29703793)
+//   - Cena et al. 2020 — PCOS obesity GLP-1 RA review, JCEM (PMID 32442310)
+//   - ASRM Practice Committee 2021 — obesity and reproduction, Fertil Steril (PMID 34583840)
+//   - Zhou et al. 2023 — GLP-1 RAs and menstrual cyclicity in PCOS meta-analysis, BMC Endocr Disord (PMID 37940910)
 //   - Wegovy/Foundayo PI Section 8.3 (Females and Males of Reproductive Potential)
 //   - Foundayo PI Section 7.1 (Oral Contraceptive interaction)
-//   - Cena et al. 2020 — PCOS obesity and reproductive function review
-//   - ASRM 2008 (and 2021 update) — weight loss and ovulation restoration
-//   - Hjorth-Hansen et al. 2024 — GLP-1 receptor agonists in subfertile women with obesity
 
 export default function MenstrualArticle() {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -92,7 +92,7 @@ export default function MenstrualArticle() {
         "Long-term efficacy of metformin in overweight-obese PCOS: longitudinal follow-up of retrospective cohort.",
       source: "Endocr Connect",
       year: 2020,
-      pmid: "31961797",
+      pmid: "31829964",
     },
     {
       authors:
@@ -110,16 +110,16 @@ export default function MenstrualArticle() {
         "The role of glucagon-like peptide-1 in reproduction: from physiology to therapeutic perspective.",
       source: "Hum Reprod Update",
       year: 2019,
-      pmid: "31099328",
+      pmid: "31260047",
     },
     {
       authors:
-        "Hjorth-Hansen A, Salvesen Ø, Engen Hanem LG, Eggebø T, Salvesen KÅ, Vanky E, Ødegård R.",
+        "Zhou L, Qu H, Yang L, Shou L.",
       title:
-        "GLP-1 receptor agonists in patients with overweight/obesity and infertility: a systematic review.",
-      source: "Reprod Biomed Online",
-      year: 2024,
-      pmid: "39307008",
+        "Effects of GLP1RAs on pregnancy rate and menstrual cyclicity in women with polycystic ovary syndrome: a meta-analysis and systematic review.",
+      source: "BMC Endocr Disord",
+      year: 2023,
+      pmid: "37940910",
     },
     {
       authors:
@@ -128,7 +128,7 @@ export default function MenstrualArticle() {
         "Obesity, Polycystic Ovary Syndrome, and Infertility: A New Avenue for GLP-1 Receptor Agonists.",
       source: "J Clin Endocrinol Metab",
       year: 2020,
-      pmid: "32797184",
+      pmid: "32442310",
     },
     {
       authors:
@@ -137,7 +137,7 @@ export default function MenstrualArticle() {
         "Obesity and reproduction: a committee opinion.",
       source: "Fertil Steril",
       year: 2021,
-      pmid: "34607705",
+      pmid: "34583840",
     },
   ];
 

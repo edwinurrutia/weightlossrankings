@@ -421,7 +421,9 @@ export function generateLetter(input: LetterInputs): string {
     return [
       "MEDICARE NOTICE",
       "",
-      "Medicare Part D currently does not cover anti-obesity medications such as Wegovy, Zepbound, Saxenda, or Foundayo for the treatment of obesity. This is a limitation of federal statute (Social Security Act §1860D-2(e)(2)(A)), not a plan-level decision, and a prior authorization letter cannot override it.",
+      "Medicare Part D does not cover GLP-1s for the weight management indication per SSA §1860D-2(e)(2)(A). However, per CMS HPMS guidance issued March 20, 2024, Part D plans may cover Wegovy when prescribed for the FDA-approved cardiovascular risk reduction indication in adults with established cardiovascular disease and obesity or overweight (no type 2 diabetes required).",
+      "",
+      "If your patient has documented established CVD, this letter template is not the right form — submit a Wegovy CV indication PA citing the SELECT trial (Lincoff NEJM 2023, PMID 37952131). For all other weight-loss indications and for Zepbound/Foundayo/Saxenda, Medicare Part D coverage is not currently available.",
       "",
       "If the patient has Type 2 diabetes, separate FDA-approved diabetes formulations (Ozempic, Mounjaro, Rybelsus) may be covered when prescribed for diabetes management — but those are different brand names and require a diabetes diagnosis.",
       "",

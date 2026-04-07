@@ -111,6 +111,7 @@ export default function Generator() {
   }
 
   const isMedicare = insurer.id === "medicare";
+  const isTricare = insurer.id === "tricare";
 
   return (
     <div className="rounded-2xl border border-brand-violet/15 bg-brand-violet/[0.04] p-6 sm:p-8">
@@ -327,12 +328,21 @@ export default function Generator() {
 
         {isMedicare && (
           <div className="mb-3 rounded-xl border border-brand-violet/20 bg-brand-violet/[0.06] p-4 text-sm text-brand-text-primary">
-            <p className="font-bold text-brand-violet">Medicare does not currently cover GLP-1s for weight loss.</p>
+            <p className="font-bold text-brand-violet">Medicare Part D does not cover GLP-1s for the weight management indication.</p>
             <p className="mt-1">
-              This letter cannot be used for Medicare submissions.{" "}
+              Per SSA §1860D-2(e)(2)(A), Medicare Part D excludes anti-obesity medications. However, per the CMS HPMS memo dated March 20, 2024, Part D plans may cover Wegovy for the FDA-approved cardiovascular risk reduction indication in adults with established CVD and obesity or overweight (no type 2 diabetes required). If your patient has documented established CVD, this letter template is not the right form — submit a Wegovy CV indication PA citing the SELECT trial (Lincoff NEJM 2023, PMID 37952131). For all other weight-loss indications and for Zepbound/Foundayo/Saxenda, Part D coverage is not currently available.{" "}
               <Link href="/research/glp1-insurance-coverage-medicare-medicaid-commercial" className="text-brand-violet underline">
                 Read about Medicare GLP-1 coverage →
               </Link>
+            </p>
+          </div>
+        )}
+
+        {isTricare && (
+          <div className="mb-3 rounded-xl border border-brand-violet/20 bg-brand-violet/[0.06] p-4 text-sm text-brand-text-primary">
+            <p className="font-bold text-brand-violet">Tricare For Life sub-warning</p>
+            <p className="mt-1">
+              Tricare For Life beneficiaries (Medicare-eligible) are subject to the Medicare Part D weight-loss drug exclusion under SSA §1860D-2(e)(2)(A) and cannot use this letter for the weight management indication. This template applies only to Tricare Prime/Select active duty and dependents.
             </p>
           </div>
         )}
