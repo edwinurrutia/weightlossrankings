@@ -13,13 +13,14 @@ import {
   unitsToMl,
   type DrugName,
 } from "@/lib/unit-converter";
+import { bacWaterVolumeMl } from "@/lib/weight-loss-prediction";
 
 const DRUGS: { id: DrugName; label: string; brand: string }[] = [
   { id: "semaglutide", label: "Semaglutide", brand: "Wegovy / Ozempic" },
   { id: "tirzepatide", label: "Tirzepatide", brand: "Zepbound / Mounjaro" },
 ];
 
-type Direction = "mg-to-units" | "units-to-mg";
+type Direction = "mg-to-units" | "units-to-mg" | "bac-water";
 
 export default function UnitConverter() {
   const [drug, setDrug] = useState<DrugName>("semaglutide");
@@ -29,6 +30,8 @@ export default function UnitConverter() {
   );
   const [mgInput, setMgInput] = useState<string>("0.25");
   const [unitsInput, setUnitsInput] = useState<string>("10");
+  const [vialMgInput, setVialMgInput] = useState<string>("10");
+  const [targetConcInput, setTargetConcInput] = useState<string>("2.5");
 
   // When drug changes, reset to its lowest common concentration
   function handleDrugChange(newDrug: DrugName) {
@@ -39,6 +42,8 @@ export default function UnitConverter() {
 
   const mgValue = parseFloat(mgInput);
   const unitsValue = parseFloat(unitsInput);
+  const vialMgValue = parseFloat(vialMgInput);
+  const targetConcValue = parseFloat(targetConcInput);
 
   const mgToUnitsResult = useMemo(
     () => mgToUnits(mgValue, concentration),
@@ -47,6 +52,10 @@ export default function UnitConverter() {
   const unitsToMgResult = useMemo(
     () => unitsToMg(unitsValue, concentration),
     [unitsValue, concentration],
+  );
+  const bacWaterResult = useMemo(
+    () => bacWaterVolumeMl(vialMgValue, targetConcValue),
+    [vialMgValue, targetConcValue],
   );
 
   const conversionTable = useMemo(() => buildConversionTable(drug), [drug]);
@@ -111,7 +120,7 @@ export default function UnitConverter() {
       {/* ── Direction picker ── */}
       <div>
         <p className="text-xs uppercase tracking-[0.18em] text-brand-text-secondary font-bold">
-          Conversion direction
+          What do you want to calculate?
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           <button
@@ -135,6 +144,17 @@ export default function UnitConverter() {
             }`}
           >
             units → mg
+          </button>
+          <button
+            type="button"
+            onClick={() => setDirection("bac-water")}
+            className={`rounded-lg border px-4 py-2 text-sm font-semibold transition ${
+              direction === "bac-water"
+                ? "border-brand-violet bg-brand-violet text-white"
+                : "border-slate-200 bg-white text-brand-text-primary hover:border-brand-violet/40"
+            }`}
+          >
+            Reconstitution (BAC water)
           </button>
         </div>
       </div>
@@ -289,13 +309,141 @@ export default function UnitConverter() {
           </div>
         )}
 
-        <div className="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+        {direction === "bac-water" && (
+          <div className="space-y-6">
+            <p className="text-sm text-brand-text-secondary">
+              For lyophilized vials: enter the total mg of drug in the
+              vial and the target concentration you want in the final
+              solution, and this will tell you how many mL of
+              bacteriostatic water to add. See our{" "}
+              <a
+                href="/research/compounded-glp1-reconstitution-mixing-guide"
+                className="text-brand-violet underline"
+              >
+                reconstitution guide
+              </a>{" "}
+              for the full safety protocol and the step-by-step process.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  htmlFor="vial-mg-input"
+                  className="block text-xs uppercase tracking-[0.18em] text-brand-text-secondary font-bold mb-2"
+                >
+                  Drug in vial (mg)
+                </label>
+                <div className="flex items-center gap-2">
+                  <input
+                    id="vial-mg-input"
+                    type="number"
+                    inputMode="decimal"
+                    step="1"
+                    min="0"
+                    value={vialMgInput}
+                    onChange={(e) => setVialMgInput(e.target.value)}
+                    className="w-28 rounded-lg border border-slate-300 px-4 py-3 text-2xl font-bold text-brand-text-primary tabular-nums focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/30"
+                  />
+                  <span className="text-lg font-semibold text-brand-text-secondary">
+                    mg
+                  </span>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {[5, 10, 15, 20, 30, 40].map((v) => (
+                    <button
+                      key={v}
+                      type="button"
+                      onClick={() => setVialMgInput(String(v))}
+                      className="text-xs font-semibold rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
+                    >
+                      {v} mg
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="target-conc-input"
+                  className="block text-xs uppercase tracking-[0.18em] text-brand-text-secondary font-bold mb-2"
+                >
+                  Target concentration (mg/mL)
+                </label>
+                <div className="flex items-center gap-2">
+                  <input
+                    id="target-conc-input"
+                    type="number"
+                    inputMode="decimal"
+                    step="0.5"
+                    min="0"
+                    value={targetConcInput}
+                    onChange={(e) => setTargetConcInput(e.target.value)}
+                    className="w-28 rounded-lg border border-slate-300 px-4 py-3 text-2xl font-bold text-brand-text-primary tabular-nums focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/30"
+                  />
+                  <span className="text-lg font-semibold text-brand-text-secondary">
+                    mg/mL
+                  </span>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {[2.5, 5, 10].map((v) => (
+                    <button
+                      key={v}
+                      type="button"
+                      onClick={() => setTargetConcInput(String(v))}
+                      className="text-xs font-semibold rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
+                    >
+                      {v} mg/mL
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-brand-violet/30 bg-brand-violet/5 p-6">
+              <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold">
+                Add this much bacteriostatic water
+              </p>
+              {Number.isFinite(bacWaterResult) ? (
+                <>
+                  <p className="mt-2 text-5xl font-bold text-brand-violet tabular-nums">
+                    {bacWaterResult.toFixed(bacWaterResult % 1 === 0 ? 0 : 2)}
+                    <span className="text-2xl font-semibold text-brand-text-secondary ml-2">
+                      mL
+                    </span>
+                  </p>
+                  <p className="mt-3 text-sm text-brand-text-secondary">
+                    {vialMgValue} mg ÷ {targetConcValue} mg/mL ={" "}
+                    <strong className="text-brand-text-primary">
+                      {bacWaterResult.toFixed(2)} mL
+                    </strong>
+                    {" "}of bacteriostatic water to reach the target
+                    concentration.
+                  </p>
+                  {bacWaterResult > 10 && (
+                    <p className="mt-3 rounded-lg border border-brand-violet/30 bg-white p-3 text-sm text-brand-text-primary">
+                      ⚠ This would exceed a typical 10 mL vial capacity.
+                      Consider a higher target concentration or confirm
+                      your vial size with the compounding pharmacy.
+                    </p>
+                  )}
+                </>
+              ) : (
+                <p className="mt-2 text-2xl font-bold text-brand-text-secondary">
+                  Enter valid vial mg and target concentration
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+
+        <div className="mt-6 rounded-lg border border-brand-violet/30 bg-brand-violet/5 p-4 text-sm text-brand-text-primary">
           <strong>Always verify the concentration on your vial label.</strong>{" "}
           Compounded GLP-1 vials can be dispensed at multiple
           concentrations and the same number of units means a different
           dose at each concentration. If the concentration on your vial
           doesn&apos;t match what you selected here, recalculate before
-          drawing your dose.
+          drawing your dose. For lyophilized vials, follow the
+          reconstitution instructions that shipped with your specific
+          product, not a generic recipe.
         </div>
       </div>
 

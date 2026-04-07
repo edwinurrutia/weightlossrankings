@@ -45,8 +45,14 @@ function formatDateLabel(date: string): string {
 
 // Range options — keeping these as a const-array so the URL parser
 // stays a single source of truth and the chips below can map over it.
+// `days` is how many days back from "now" the range covers. For
+// "today" and "yesterday" the day-based math still works because
+// `getDailyClicks(1)` returns only today and `getDailyClicks(2)`
+// returns today + yesterday; we handle the yesterday-specific slice
+// below.
 const RANGE_OPTIONS = [
-  { key: "24h", label: "24h", days: 1 },
+  { key: "today", label: "Today", days: 1 },
+  { key: "yesterday", label: "Yesterday", days: 2 },
   { key: "7d", label: "7d", days: 7 },
   { key: "30d", label: "30d", days: 30 },
   { key: "90d", label: "90d", days: 90 },
@@ -63,6 +69,20 @@ function parseRange(raw: string | string[] | undefined): RangeKey {
 
 function rangeDays(key: RangeKey): number {
   return RANGE_OPTIONS.find((o) => o.key === key)?.days ?? 30;
+}
+
+function rangeLabel(key: RangeKey): string {
+  if (key === "today") return "today";
+  if (key === "yesterday") return "yesterday";
+  if (key === "all") return "all-time";
+  return `last ${key}`;
+}
+
+function comparisonLabel(key: RangeKey): string {
+  if (key === "today") return "yesterday";
+  if (key === "yesterday") return "day before";
+  if (key === "all") return "period";
+  return key;
 }
 
 // ISO-2 → display name. Tiny manual list — covers the vast majority of
@@ -173,8 +193,25 @@ export default async function AdminDashboardPage({ searchParams }: PageProps) {
   ]);
 
   // Slice into current vs previous period.
-  const currentDaily: DailyClickEntry[] = dailyAll.slice(-days);
-  const prevDaily: DailyClickEntry[] = dailyAll.slice(-fetchDays, -days);
+  // Special-case "yesterday" — getDailyClicks(2) returns
+  // [yesterday, today] so the current slice is [0, 1] (yesterday
+  // only) and the comparison is [-1, 0] (the day before yesterday).
+  // Everything else uses the standard trailing-window slice.
+  let currentDaily: DailyClickEntry[];
+  let prevDaily: DailyClickEntry[];
+  if (rangeKey === "yesterday") {
+    // dailyAll has `fetchDays` entries. Yesterday = second-to-last.
+    const lastIdx = dailyAll.length - 1;
+    currentDaily = lastIdx - 1 >= 0 ? [dailyAll[lastIdx - 1]] : [];
+    prevDaily = lastIdx - 2 >= 0 ? [dailyAll[lastIdx - 2]] : [];
+  } else if (rangeKey === "today") {
+    const lastIdx = dailyAll.length - 1;
+    currentDaily = lastIdx >= 0 ? [dailyAll[lastIdx]] : [];
+    prevDaily = lastIdx - 1 >= 0 ? [dailyAll[lastIdx - 1]] : [];
+  } else {
+    currentDaily = dailyAll.slice(-days);
+    prevDaily = dailyAll.slice(-fetchDays, -days);
+  }
 
   const totalCurrent = currentDaily.reduce((acc, d) => acc + d.total, 0);
   const totalPrev = prevDaily.reduce((acc, d) => acc + d.total, 0);
@@ -311,8 +348,8 @@ export default async function AdminDashboardPage({ searchParams }: PageProps) {
               </span>
             </h2>
             <p className="text-sm text-brand-text-secondary mt-1">
-              Showing {rangeKey === "all" ? "all-time" : `last ${rangeKey}`} ·
-              compared to previous {rangeKey === "all" ? "period" : rangeKey}
+              Showing {rangeLabel(rangeKey)} · compared to{" "}
+              {comparisonLabel(rangeKey)}
             </p>
           </div>
           <div className="flex items-center gap-2 flex-wrap">
@@ -360,7 +397,7 @@ export default async function AdminDashboardPage({ searchParams }: PageProps) {
             label="Total Clicks"
             value={formatNumber(totalCurrent)}
             delta={totalsDelta}
-            sub={`vs prev ${rangeKey === "all" ? "period" : rangeKey}`}
+            sub={`vs prev ${comparisonLabel(rangeKey)}`}
           />
           <KpiCard
             label="Unique Visitors"
