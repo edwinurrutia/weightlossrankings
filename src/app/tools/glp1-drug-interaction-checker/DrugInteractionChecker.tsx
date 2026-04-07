@@ -10,35 +10,38 @@ import {
 } from "@/lib/glp1-drug-interactions";
 import { trackToolEvent } from "@/lib/analytics";
 
+// Severity tiers use brand-violet at varying intensities — never red,
+// orange, amber, yellow, or green. Severity is communicated by the
+// chip label and the border weight, not by warning-color semantics.
 const SEVERITY_STYLES: Record<
   Severity,
   { bg: string; border: string; chip: string; label: string; text: string }
 > = {
   contraindicated: {
-    bg: "bg-red-50",
-    border: "border-red-300",
-    chip: "bg-red-600 text-white",
+    bg: "bg-brand-violet/10",
+    border: "border-brand-violet",
+    chip: "bg-brand-violet text-white",
     label: "Do not combine",
-    text: "text-red-900",
+    text: "text-brand-text-primary",
   },
   serious: {
-    bg: "bg-orange-50",
-    border: "border-orange-300",
-    chip: "bg-orange-600 text-white",
+    bg: "bg-brand-violet/[0.07]",
+    border: "border-brand-violet/60",
+    chip: "bg-brand-violet/85 text-white",
     label: "Serious — close monitoring",
-    text: "text-orange-900",
+    text: "text-brand-text-primary",
   },
   moderate: {
-    bg: "bg-yellow-50",
-    border: "border-yellow-300",
-    chip: "bg-yellow-500 text-white",
+    bg: "bg-brand-violet/[0.05]",
+    border: "border-brand-violet/40",
+    chip: "bg-brand-violet/70 text-white",
     label: "Moderate — be aware",
-    text: "text-yellow-900",
+    text: "text-brand-text-primary",
   },
   minor: {
-    bg: "bg-brand-violet/5",
+    bg: "bg-brand-violet/[0.03]",
     border: "border-brand-violet/20",
-    chip: "bg-brand-violet text-white",
+    chip: "bg-brand-violet/55 text-white",
     label: "Minor — generally safe",
     text: "text-brand-text-primary",
   },

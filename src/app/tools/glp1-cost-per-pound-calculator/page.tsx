@@ -20,14 +20,14 @@ const CITATIONS = [
     title: "WEGOVY (semaglutide) injection — US Prescribing Information.",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s026lbl.pdf",
   },
   {
     authors: "Eli Lilly and Company.",
     title: "ZEPBOUND (tirzepatide) injection — US Prescribing Information.",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/217806s016lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217806s002lbl.pdf",
   },
   {
     authors: "Eli Lilly and Company.",
@@ -35,7 +35,7 @@ const CITATIONS = [
       "FOUNDAYO (orforglipron) tablets — US Prescribing Information.",
     source: "FDA Approved Labeling",
     year: 2026,
-    url: "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill",
+    url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ac446c5-feba-474f-a103-23facb9b5c62",
   },
   {
     authors: "Novo Nordisk Inc.",

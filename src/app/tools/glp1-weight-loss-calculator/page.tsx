@@ -54,7 +54,7 @@ const CITATIONS = [
       "WEGOVY (semaglutide) injection — US Prescribing Information.",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s026lbl.pdf",
   },
   {
     authors: "Eli Lilly and Company.",
@@ -62,7 +62,7 @@ const CITATIONS = [
       "ZEPBOUND (tirzepatide) injection — US Prescribing Information.",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/217806s016lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217806s002lbl.pdf",
   },
 ];
 

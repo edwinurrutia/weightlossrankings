@@ -20,7 +20,7 @@ const CITATIONS = [
       "WEGOVY (semaglutide) injection — US Prescribing Information, Section 7: Drug Interactions.",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s026lbl.pdf",
   },
   {
     authors: "Novo Nordisk Inc.",
@@ -28,7 +28,7 @@ const CITATIONS = [
       "OZEMPIC (semaglutide) injection — US Prescribing Information, Section 7: Drug Interactions.",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/209637s024lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/209637s035,209637s037lbl.pdf",
   },
   {
     authors: "Eli Lilly and Company.",
@@ -36,7 +36,7 @@ const CITATIONS = [
       "ZEPBOUND (tirzepatide) injection — US Prescribing Information, Section 7: Drug Interactions.",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/217806s016lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217806s002lbl.pdf",
   },
   {
     authors: "Eli Lilly and Company.",
@@ -44,7 +44,7 @@ const CITATIONS = [
       "MOUNJARO (tirzepatide) injection — US Prescribing Information, Section 7: Drug Interactions.",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215866s015lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215866s039lbl.pdf",
   },
   {
     authors: "Eli Lilly and Company.",

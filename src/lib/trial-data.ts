@@ -706,13 +706,13 @@ export const HALF_LIVES: Record<
 /** FDA label URLs (current as of April 2026) */
 export const FDA_LABEL_URLS: Record<string, string> = {
   wegovy:
-    "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf",
+    "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s026lbl.pdf",
   zepbound:
-    "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/217806s016lbl.pdf",
+    "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217806s002lbl.pdf",
   ozempic:
-    "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/209637s029lbl.pdf",
+    "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/209637s035,209637s037lbl.pdf",
   mounjaro:
-    "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215866s019lbl.pdf",
+    "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215866s039lbl.pdf",
   saxenda:
     "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/206321lbl.pdf",
   rybelsus:

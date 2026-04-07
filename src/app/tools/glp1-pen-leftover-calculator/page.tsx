@@ -20,7 +20,7 @@ const CITATIONS = [
       "OZEMPIC (semaglutide) injection — US Prescribing Information, Section 3 Dosage Forms and Strengths and Section 16 How Supplied (multi-dose pen fill volumes and labeled dose counts).",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/209637s033lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/209637s035,209637s037lbl.pdf",
   },
   {
     authors: "Novo Nordisk Inc.",
@@ -28,7 +28,7 @@ const CITATIONS = [
       "WEGOVY (semaglutide) injection — US Prescribing Information, Section 16 How Supplied (single-dose prefilled pen).",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s026lbl.pdf",
   },
   {
     authors: "Novo Nordisk Inc.",
@@ -36,7 +36,7 @@ const CITATIONS = [
       "SAXENDA (liraglutide) injection — US Prescribing Information, Section 3 Dosage Forms and Strengths (18 mg/3 mL multi-dose pen).",
     source: "FDA Approved Labeling",
     year: 2024,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/206321s022lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/206321s022lbl.pdf",
   },
   {
     authors: "Eli Lilly and Company.",
@@ -44,7 +44,7 @@ const CITATIONS = [
       "MOUNJARO (tirzepatide) injection — US Prescribing Information, Section 16 How Supplied (single-dose prefilled pen).",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215866s016lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215866s039lbl.pdf",
   },
   {
     authors: "Eli Lilly and Company.",
@@ -52,7 +52,7 @@ const CITATIONS = [
       "ZEPBOUND (tirzepatide) injection — US Prescribing Information, Section 16 How Supplied (single-dose prefilled pen and single-dose vial).",
     source: "FDA Approved Labeling",
     year: 2025,
-    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/217806s016lbl.pdf",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217806s002lbl.pdf",
   },
 ];
 

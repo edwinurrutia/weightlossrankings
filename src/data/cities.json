@@ -8,7 +8,16 @@
     "metro_population": 19500000,
     "obesity_rate": 27.3,
     "notable_clinics": ["NYU Langone Weight Management", "Mount Sinai Metabolism Center", "Weill Cornell Medicine"],
-    "intro": "New York City is the largest metropolitan area in the United States, home to over 8.3 million residents in the five boroughs and nearly 20 million across the metro region. While Manhattan has some of the country's leading academic obesity centers, wait times of 6-12 weeks have driven a major shift toward telehealth GLP-1 access. New York's strict pharmacy regulations mean most compounded semaglutide ships from licensed 503A pharmacies in New Jersey or Pennsylvania."
+    "intro": "New York City is the largest metropolitan area in the United States, home to over 8.3 million residents in the five boroughs and nearly 20 million across the metro region. While Manhattan has some of the country's leading academic obesity centers, wait times of 6-12 weeks have driven a major shift toward telehealth GLP-1 access. New York's strict pharmacy regulations mean most compounded semaglutide ships from licensed 503A pharmacies in New Jersey or Pennsylvania.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045223"
+      ],
+      "confidence": "medium",
+      "notes": "Cities data file note (applies to all 20 entries): populations are based on 2020 Census or early ACS estimates and are 1-3 years stale (NYC current is ~8.48M as of 2024). Notable_clinics names match real institutions but were not individually verified to operate dedicated 'weight management' programs by those exact names. Obesity_rate values appear consistent with state-level CDC BRFSS data but were not verified per-city. Telehealth-related narrative claims (e.g., 'most compounded semaglutide ships from NJ/PA pharmacies', 'wait times 6-12 weeks') are unverified marketing-style assertions and should be removed if specific sources cannot be cited. NO falsifiable specific GLP-1 regulatory claims in any city entry."
+    }
   },
   {
     "slug": "los-angeles-ca",

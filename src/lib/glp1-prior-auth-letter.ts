@@ -117,7 +117,7 @@ export const DRUGS: DrugSpec[] = [
     trialFull:
       "STEP-1 (Wilding et al., NEJM 2021) demonstrated mean total body weight loss of 14.9% over 68 weeks at the 2.4 mg maintenance dose.",
     fdaUrl:
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s026lbl.pdf",
     ndcQty: "four (4) single-dose 2.4 mg pens per 28 days",
   },
   {
@@ -130,7 +130,7 @@ export const DRUGS: DrugSpec[] = [
     trialFull:
       "SURMOUNT-1 (Jastreboff et al., NEJM 2022) demonstrated mean total body weight loss of 15.0% at the 5 mg maintenance dose over 72 weeks.",
     fdaUrl:
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/217806s016lbl.pdf",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217806s002lbl.pdf",
     ndcQty: "four (4) single-dose 5 mg vials or pens per 28 days",
   },
   {
@@ -143,7 +143,7 @@ export const DRUGS: DrugSpec[] = [
     trialFull:
       "SURMOUNT-1 (Jastreboff et al., NEJM 2022) demonstrated mean total body weight loss of 19.5% at the 10 mg maintenance dose over 72 weeks.",
     fdaUrl:
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/217806s016lbl.pdf",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217806s002lbl.pdf",
     ndcQty: "four (4) single-dose 10 mg vials or pens per 28 days",
   },
   {
@@ -156,7 +156,7 @@ export const DRUGS: DrugSpec[] = [
     trialFull:
       "SURMOUNT-1 (Jastreboff et al., NEJM 2022) demonstrated mean total body weight loss of 20.9% at the 15 mg maintenance dose over 72 weeks.",
     fdaUrl:
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/217806s016lbl.pdf",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217806s002lbl.pdf",
     ndcQty: "four (4) single-dose 15 mg vials or pens per 28 days",
   },
   {
@@ -182,7 +182,7 @@ export const DRUGS: DrugSpec[] = [
     trialFull:
       "ATTAIN-1, the pivotal trial supporting the Foundayo FDA approval, demonstrated mean total body weight loss of approximately 11.1% at the 17.2 mg maintenance dose.",
     fdaUrl:
-      "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ac446c5-feba-474f-a103-23facb9b5c62",
     ndcQty: "thirty (30) 17.2 mg tablets per 30 days",
   },
 ];

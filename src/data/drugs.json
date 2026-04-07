@@ -36,7 +36,17 @@
         "dose": "2.4mg/week (maintenance)"
       }
     ],
-    "clinical_trial_summary": "In the landmark STEP-1 trial (N=1,961), adults treated with semaglutide 2.4mg achieved an average body weight loss of 14.9% over 68 weeks, compared to 2.4% in the placebo group. 86.4% of participants lost at least 5% of body weight, versus 31.5% with placebo."
+    "clinical_trial_summary": "In the landmark STEP-1 trial (N=1,961), adults treated with semaglutide 2.4mg achieved an average body weight loss of 14.9% over 68 weeks, compared to 2.4% in the placebo group. 86.4% of participants lost at least 5% of body weight, versus 31.5% with placebo.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/215256s007lbl.pdf",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-reduce-risk-serious-heart-problems-specifically-adults-obesity-or"
+      ],
+      "confidence": "high",
+      "notes": "STEP-1 trial figures (N=1961, 14.9% vs 2.4%, 86.4% vs 31.5%) match published Wilding et al. NEJM 2021 (PMID 33567185). Wegovy approval date 2021-06-04 confirmed. Note: this entry conflates Ozempic (T2D, 2017), Wegovy (obesity, 2021) and Rybelsus (oral T2D, 2019) under one 'Semaglutide' molecule entry — fda_status text correctly disambiguates."
+    }
   },
   {
     "_id": "tirzepatide",
@@ -78,7 +88,17 @@
         "dose": "15mg/week (max maintenance)"
       }
     ],
-    "clinical_trial_summary": "In the SURMOUNT-1 trial (N=2,539), tirzepatide at the 15mg dose achieved an average weight loss of 22.5% over 72 weeks \u2014 nearly double the results seen with semaglutide. Participants on 10mg lost an average of 21.4%, and those on 5mg lost 15.0%, all versus 2.5% placebo."
+    "clinical_trial_summary": "In the SURMOUNT-1 trial (N=2,539), tirzepatide at the 15mg dose achieved an average weight loss of 22.5% over 72 weeks \u2014 nearly double the results seen with semaglutide. Participants on 10mg lost an average of 21.4%, and those on 5mg lost 15.0%, all versus 2.5% placebo.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215866",
+        "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217806"
+      ],
+      "confidence": "high",
+      "notes": "SURMOUNT-1 figures (Jastreboff et al. NEJM 2022, PMID 35658024) match: 15mg=22.5%, 10mg=21.4%, 5mg=15.0%, placebo=2.4% (file rounds to 2.5%). N=2,539 confirmed. Mounjaro (T2D) approved May 2022, Zepbound (obesity) approved Nov 8 2023. Approval_date in this combined entry reflects the obesity (Zepbound) approval."
+    }
   },
   {
     "_id": "wegovy",
@@ -115,7 +135,17 @@
         "dose": "2.4mg/week (maintenance)"
       }
     ],
-    "clinical_trial_summary": "The STEP-1 trial showed Wegovy users lost an average of 14.9% of body weight (about 34 lbs) over 68 weeks compared to 2.4% in placebo. The SELECT cardiovascular outcomes trial (N=17,604) demonstrated a 20% reduction in major adverse cardiovascular events in obese patients with established CVD."
+    "clinical_trial_summary": "The STEP-1 trial showed Wegovy users lost an average of 14.9% of body weight (about 34 lbs) over 68 weeks compared to 2.4% in placebo. The SELECT cardiovascular outcomes trial (N=17,604) demonstrated a 20% reduction in major adverse cardiovascular events in obese patients with established CVD.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/215256s007lbl.pdf",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-reduce-risk-serious-heart-problems-specifically-adults-obesity-or"
+      ],
+      "confidence": "high",
+      "notes": "Wegovy approval 2021-06-04 confirmed. CV indication added March 2024. SELECT trial N=17,604 and 20% MACE reduction match Lincoff et al. NEJM 2023 (PMID 37952131). Side effect frequencies (nausea 44%, etc.) match FDA label section 6 adverse reactions table."
+    }
   },
   {
     "_id": "ozempic",
@@ -148,7 +178,16 @@
         "dose": "2mg/week (max)"
       }
     ],
-    "clinical_trial_summary": "In the SUSTAIN-6 cardiovascular trial, Ozempic reduced the risk of major cardiovascular events by 26% vs. placebo. The STEP-8 head-to-head trial found Ozempic 1mg produced 15.8% weight loss vs. 6.4% for liraglutide \u2014 establishing it as the most effective approved GLP-1 for weight loss prior to Wegovy's approval."
+    "clinical_trial_summary": "In the SUSTAIN-6 cardiovascular trial, Ozempic reduced the risk of major cardiovascular events by 26% vs. placebo (Marso et al. NEJM 2016, PMID 27633186). For weight loss specifically, the STEP-8 head-to-head trial (Rubino et al. JAMA 2022, PMID 34962517) used semaglutide 2.4 mg \u2014 the Wegovy dose, not the Ozempic 1 mg dose \u2014 and showed 15.8% weight loss vs 6.4% for liraglutide 3 mg. Ozempic itself is FDA-approved only for type 2 diabetes; Wegovy is the FDA-approved semaglutide for chronic weight management.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/209637s020s021lbl.pdf"
+      ],
+      "confidence": "medium",
+      "notes": "Ozempic T2D approval December 2017 confirmed. SUSTAIN-6 26% MACE reduction matches Marso et al. NEJM 2016 (PMID 27633186). FLAG: STEP-8 was a semaglutide-vs-liraglutide trial but used semaglutide 2.4mg (Wegovy dose), not Ozempic 1mg as stated. Rubino et al. JAMA 2022 (PMID 34962517) showed 15.8% weight loss for semaglutide 2.4mg vs 6.4% for liraglutide 3mg. The trial summary text incorrectly attributes the 15.8% figure to 'Ozempic 1mg' — RECOMMEND CORRECTING."
+    }
   },
   {
     "_id": "mounjaro",
@@ -189,7 +228,16 @@
         "dose": "15mg/week (max)"
       }
     ],
-    "clinical_trial_summary": "In the SURPASS-2 trial, Mounjaro (tirzepatide 15mg) reduced HbA1c by 2.46 percentage points and produced 12.4 lbs more weight loss than semaglutide 1mg. Sub-analyses showed 41% of participants achieved an HbA1c below 5.7% \u2014 essentially normal blood sugar levels."
+    "clinical_trial_summary": "In the SURPASS-2 trial, Mounjaro (tirzepatide 15mg) reduced HbA1c by 2.46 percentage points and produced 12.4 lbs more weight loss than semaglutide 1mg. Sub-analyses showed 41% of participants achieved an HbA1c below 5.7% \u2014 essentially normal blood sugar levels.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215866"
+      ],
+      "confidence": "high",
+      "notes": "Mounjaro T2D approval May 13, 2022 confirmed (Drugs@FDA NDA 215866). SURPASS-2 results match Frias et al. NEJM 2021 (PMID 34170647): tirzepatide 15mg HbA1c reduction 2.46% (vs semaglutide 1mg). Side effect frequencies match FDA label."
+    }
   },
   {
     "_id": "zepbound",
@@ -230,7 +278,16 @@
         "dose": "15mg/week (maintenance)"
       }
     ],
-    "clinical_trial_summary": "In the SURMOUNT-1 trial, Zepbound (tirzepatide 15mg) produced an average weight loss of 22.5% (about 52 lbs) over 72 weeks \u2014 the highest of any anti-obesity medication ever studied. At 10mg, participants lost 21.4%; at 5mg, they lost 15.0%. 91% of participants lost at least 5% of body weight at the 15mg dose."
+    "clinical_trial_summary": "In the SURMOUNT-1 trial, Zepbound (tirzepatide 15mg) produced an average weight loss of 22.5% (about 52 lbs) over 72 weeks \u2014 the highest of any anti-obesity medication ever studied. At 10mg, participants lost 21.4%; at 5mg, they lost 15.0%. 91% of participants lost at least 5% of body weight at the 15mg dose.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217806"
+      ],
+      "confidence": "high",
+      "notes": "Zepbound obesity approval Nov 8, 2023 confirmed (Drugs@FDA NDA 217806). SURMOUNT-1 figures match Jastreboff et al. NEJM 2022 (PMID 35658024). 91% achieving ≥5% weight loss at 15mg matches published trial data."
+    }
   },
   {
     "_id": "foundayo",
@@ -259,6 +316,16 @@
         "dose": "14.5 mg, 17.2 mg (maintenance, highest tested in ATTAIN-1)"
       }
     ],
-    "clinical_trial_summary": "ATTAIN-1 (NCT05869903) was a 72-week phase 3 randomized placebo-controlled trial of 3,127 adults with obesity or overweight plus a weight-related comorbidity (no diabetes), conducted across 10 countries. Highest dose produced 12.4% mean body weight reduction (~27 lbs) versus 0.9% on placebo (efficacy estimand). Treatment-regimen estimand: 11.1% (~25 lbs) vs 2.1% placebo. Foundayo also reduced waist circumference, non-HDL cholesterol, triglycerides, and systolic blood pressure across all doses. ATTAIN-2 in patients with type 2 diabetes is ongoing."
+    "clinical_trial_summary": "ATTAIN-1 (NCT05869903) was a 72-week phase 3 randomized placebo-controlled trial of 3,127 adults with obesity or overweight plus a weight-related comorbidity (no diabetes), conducted across 10 countries. Highest dose produced 12.4% mean body weight reduction (~27 lbs) versus 0.9% on placebo (efficacy estimand). Treatment-regimen estimand: 11.1% (~25 lbs) vs 2.1% placebo. Foundayo also reduced waist circumference, non-HDL cholesterol, triglycerides, and systolic blood pressure across all doses. ATTAIN-2 in patients with type 2 diabetes is ongoing.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill",
+        "https://medicalupdateonline.com/2026/04/fda-approves-foundayo-orforglipron-for-adults-with-obesity-or-overweight-with-weight-related-medical-problems-eli-lilly/"
+      ],
+      "confidence": "high",
+      "notes": "Foundayo (orforglipron) FDA approval April 1, 2026 confirmed via Lilly investor relations and multiple secondary sources. Efficacy estimand 12.4% and treatment-regimen estimand 11.1% match Lilly's release. ATTAIN-1 NCT05869903 trial registry valid. Foundayo approved under FDA's National Priority Voucher Program."
+    }
   }
 ]

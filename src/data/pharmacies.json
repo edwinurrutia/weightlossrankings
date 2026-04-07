@@ -5,14 +5,14 @@
     "slug": "belmar-pharmacy",
     "city": "Lakewood",
     "state": "CO",
-    "established": 1999,
-    "type": "503A",
+    "established": 1985,
+    "type": "Both",
     "certifications": ["PCAB"],
-    "states_licensed": ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],
+    "states_licensed": ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","DC"],
     "produces_semaglutide": true,
     "produces_tirzepatide": true,
     "linked_providers": ["mochi-health", "found", "henry-meds"],
-    "website": "https://belmarrx.com",
+    "website": "https://www.belmarpharmasolutions.com",
     "phone": "(855) 778-7426",
     "regulatory_actions": [],
     "external_reviews": {
@@ -20,13 +20,17 @@
       "google_count": 188
     },
     "internal_score": 8.5,
-    "description": "One of the larger 503A compounding pharmacies in the United States, Belmar has been compounding bioidentical and specialty medications since 1999. The pharmacy expanded into compounded GLP-1 production during the 2023 semaglutide shortage and is PCAB-accredited.",
+    "description": "Belmar Pharmacy (now operating as Belmar Pharma Solutions) is a nationally recognized compounding pharmacy headquartered in Lakewood, Colorado. Founded in 1985, Belmar operates both 503A and 503B facilities and is licensed to ship to all 50 states. PCAB-accredited.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://belmarrx.com"],
-      "confidence": "medium",
-      "notes": "Initial seed data. Certifications and linked providers require scraper verification."
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.belmarpharmasolutions.com/about-us/belmar-pharmacy/",
+        "https://www.belmarpharmasolutions.com/licensed-states/",
+        "https://www.belmarpharmasolutions.com/discover/about-belmar/our-facilities/503b-lakewood-colorado/"
+      ],
+      "confidence": "high",
+      "notes": "Corrected: established 1985 (not 1999), type Both (Belmar now operates 503B in Lakewood), website updated to belmarpharmasolutions.com (belmarrx.com is legacy domain), licensed in all 50 states + DC. Linked providers (Mochi/Found/Henry Meds) NOT independently verified — requires scraper verification."
     }
   },
   {
@@ -52,11 +56,14 @@
     "internal_score": 9.1,
     "description": "Empower Pharmacy is the largest FDA-registered 503B outsourcing facility in the United States and also operates a 503A division. Headquartered in Houston, Empower supplies compounded semaglutide and tirzepatide to many of the nation's largest telehealth brands and is cGMP-compliant.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://empowerpharmacy.com"],
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.empowerpharmacy.com/about/technology-innovation/facilities/503b/",
+        "https://www.empowerpharmacy.com/"
+      ],
       "confidence": "high",
-      "notes": "Empower is publicly known as a 503B outsourcing facility."
+      "notes": "Empower confirmed as FDA-registered 503B outsourcing facility with 503A division per their own site. Linked providers (Hims/Hers/Mochi/Eden) not independently verified. State license list claims 50 states + DC — not independently confirmed against each state board."
     }
   },
   {
@@ -65,28 +72,37 @@
     "slug": "strive-pharmacy",
     "city": "Gilbert",
     "state": "AZ",
-    "established": 2018,
+    "established": null,
     "type": "503A",
-    "certifications": ["PCAB"],
-    "states_licensed": ["AZ","CA","CO","FL","GA","IL","NV","NM","NY","NC","OH","OR","PA","TX","UT","VA","WA"],
+    "certifications": ["PCAB", "NABP", "LegitScript"],
+    "states_licensed": ["all-50"],
     "produces_semaglutide": true,
     "produces_tirzepatide": true,
     "linked_providers": ["henry-meds", "ivim-health"],
-    "website": "https://strivepharmacy.com",
+    "website": "https://www.strivepharmacy.com",
     "phone": "(480) 680-9622",
-    "regulatory_actions": [],
+    "regulatory_actions": [
+      {
+        "date": "2024-02",
+        "description": "Arizona Board of Pharmacy consent agreement: Strive agreed to pay a $1,000 fine after the AZ BOP found that the pharmacy began compounding injectable semaglutide in August 2021, approximately seven months before semaglutide was added to the FDA drug shortage list. Source: Sherwood News reporting on AZ BOP consent agreement.",
+        "source_url": "https://sherwood.news/business/exclusive-before-hims-glp-1-pill-fallout-its-pharmacy-partner-was-already/"
+      }
+    ],
     "external_reviews": {
       "google_score": 4.2,
       "google_count": 95
     },
     "internal_score": 8.0,
-    "description": "Strive Pharmacy is a 503A compounding pharmacy based in Gilbert, Arizona that supplies compounded GLP-1 medications to several direct-to-consumer telehealth brands. PCAB-accredited with multi-state licensure.",
+    "description": "Strive Pharmacy is a 503A compounding pharmacy based in Gilbert, Arizona that supplies compounded GLP-1 medications to several direct-to-consumer telehealth brands. PCAB-, NABP-, and LegitScript-accredited and licensed in all 50 states.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://strivepharmacy.com"],
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.strivepharmacy.com/locations/arizona-gilbert-85233",
+        "https://sherwood.news/business/exclusive-before-hims-glp-1-pill-fallout-its-pharmacy-partner-was-already/"
+      ],
       "confidence": "medium",
-      "notes": "State list is partial and requires verification."
+      "notes": "Corrected: established date was 2018 (could not independently confirm from primary source — set null), all-50-state licensure per Strive's own site, added NABP + LegitScript accreditation, added Feb 2024 AZ BOP consent agreement (was missing). Linked providers not independently verified."
     }
   },
   {
@@ -112,11 +128,14 @@
     "internal_score": 8.3,
     "description": "Olympia Pharmaceuticals is a dual 503A/503B compounding pharmacy based in Orlando, Florida. It is FDA-registered as a 503B outsourcing facility and produces sterile injectable compounds including GLP-1 medications.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://olympiapharmaceuticals.com"],
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.olympiapharmacy.com/",
+        "https://www.olympiapharmacy.com/resources/quality-assurance/"
+      ],
       "confidence": "medium",
-      "notes": "Certifications and licensed states need periodic re-verification."
+      "notes": "Olympia confirmed as 503B FDA-registered outsourcing facility with 503A division. Note: actual website appears to be olympiapharmacy.com, not olympiapharmaceuticals.com — recommend verifying. Per-state licensure list NOT independently verified."
     }
   },
   {
@@ -125,39 +144,49 @@
     "slug": "hallandale-pharmacy",
     "city": "Hallandale Beach",
     "state": "FL",
-    "established": 1988,
+    "established": null,
     "type": "503A",
     "certifications": ["PCAB"],
-    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","IL","IN","KY","LA","MD","MA","MI","MS","MO","NV","NJ","NM","NY","NC","OH","OK","PA","SC","TN","TX","VA","WA"],
+    "states_licensed": [],
     "produces_semaglutide": true,
     "produces_tirzepatide": true,
     "linked_providers": ["eden", "found"],
-    "website": "https://hallandalepharmacy.com",
+    "website": "https://hallandalerx.com",
     "phone": "(954) 455-3822",
-    "regulatory_actions": [],
+    "regulatory_actions": [
+      {
+        "date": "2020-03",
+        "description": "Hallandale Pharmacy received an FDA warning letter in March 2020 citing significant violations at its prior facility, including insanitary conditions and lack of sterility assurance for aseptically processed drugs. Pharmacy subsequently relocated. Source: ivyrx.com summary; corroborated by FDA warning letter database.",
+        "source_url": "https://www.ivyrx.com/blog/hallandale-pharmacy-semaglutide-reviews"
+      }
+    ],
     "external_reviews": {
       "google_score": 4.0,
       "google_count": 74
     },
     "internal_score": 7.8,
-    "description": "Hallandale Pharmacy is a long-established 503A compounding pharmacy in South Florida offering sterile compounding, including GLP-1 medications. Known for bioidentical hormone work and peptide compounding.",
+    "description": "Hallandale Pharmacy is a Florida 503A compounding pharmacy in Hallandale Beach offering sterile compounding, including GLP-1 medications. The pharmacy received an FDA warning letter in 2020 for insanitary conditions and has since relocated.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://hallandalepharmacy.com"],
-      "confidence": "medium"
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://hallandalerx.com/",
+        "https://www.ivyrx.com/blog/hallandale-pharmacy-semaglutide-reviews"
+      ],
+      "confidence": "low",
+      "notes": "Corrected: website is hallandalerx.com (not hallandalepharmacy.com), established date 1988 could not be confirmed against primary source — set to null, multi-state license list cleared (could not be verified against FL BOP or any other primary source — was likely fabricated). Added 2020 FDA warning letter (previously missing). PCAB status from third party — needs ACHC PCAB directory confirmation."
     }
   },
   {
     "_id": "tailor-made",
     "name": "Tailor Made Compounding",
     "slug": "tailor-made-compounding",
-    "city": "Lexington",
+    "city": "Nicholasville",
     "state": "KY",
-    "established": 2015,
+    "established": null,
     "type": "503A",
     "certifications": ["State Licensed"],
-    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","IL","IN","IA","KS","KY","LA","MD","MA","MI","MN","MS","MO","NE","NV","NJ","NM","NY","NC","OH","OK","OR","PA","SC","TN","TX","UT","VA","WA","WI"],
+    "states_licensed": [],
     "produces_semaglutide": true,
     "produces_tirzepatide": true,
     "linked_providers": ["ivim-health"],
@@ -165,8 +194,9 @@
     "phone": "(859) 887-0013",
     "regulatory_actions": [
       {
-        "date": "2023-04-06",
-        "description": "FDA Form 483 observations issued during inspection related to sterile compounding practices. Pharmacy responded with corrective actions."
+        "date": "2018-10",
+        "description": "FDA Form 483 issued to Tailor Made Compounding, LLC, Nicholasville, KY. Inspection observations related to sterile drug production. Source: FDA media library document.",
+        "source_url": "https://www.fda.gov/media/134965/download"
       }
     ],
     "external_reviews": {
@@ -174,13 +204,15 @@
       "google_count": 52
     },
     "internal_score": 7.2,
-    "description": "Tailor Made Compounding is a 503A pharmacy in Lexington, Kentucky specializing in peptide and hormone compounding. The pharmacy has been a notable supplier of compounded GLP-1 medications to telehealth brands.",
+    "description": "Tailor Made Compounding is a 503A pharmacy located in Nicholasville, Kentucky (not Lexington as previously reported) specializing in peptide and hormone compounding. The pharmacy has been a notable supplier of compounded GLP-1 medications.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://tailormadecompounding.com"],
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.fda.gov/media/134965/download"
+      ],
       "confidence": "low",
-      "notes": "Regulatory history reference requires direct FDA confirmation."
+      "notes": "Corrected: city is Nicholasville (per FDA 483 document), not Lexington. Removed fabricated 2023-04-06 FDA 483 (the actual FDA 483 is dated October 2018). Cleared multi-state license list — no primary source. Established 2015 could not be verified. PCAB status: not claimed."
     }
   },
   {
@@ -189,10 +221,10 @@
     "slug": "innovation-compounding",
     "city": "Kennesaw",
     "state": "GA",
-    "established": 1988,
+    "established": 2007,
     "type": "503A",
     "certifications": ["PCAB"],
-    "states_licensed": ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],
+    "states_licensed": [],
     "produces_semaglutide": true,
     "produces_tirzepatide": true,
     "linked_providers": ["lifemd"],
@@ -204,12 +236,16 @@
       "google_count": 130
     },
     "internal_score": 8.2,
-    "description": "Innovation Compounding is a 503A pharmacy near Atlanta, Georgia that has been compounding sterile and non-sterile preparations for more than three decades. PCAB-accredited with broad state licensure.",
+    "description": "Innovation Compounding is a 503A pharmacy in Kennesaw, Georgia, founded in 2007 as a family-owned operation. Acquired by Revelation Pharma in January 2022. PCAB accreditation granted June 2024 via ACHC. Reportedly serves over 45 states.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://innovationcompounding.com"],
-      "confidence": "medium"
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.mdjonline.com/pressrelease/revelation-pharma-announces-pcab-accreditation-for-georgia-based-innovation-compounding/article_0dfd39ba-283d-11ef-ac5d-fb3967b7ce9d.html",
+        "https://innovationcompounding.com/"
+      ],
+      "confidence": "medium",
+      "notes": "Corrected: established 2007 (not 1988 — three decades claim was inflated by ~20 years). Cleared explicit per-state license list (was claiming all 50 states + DC; primary source says 'over 45 states' without naming them). PCAB confirmed via Revelation Pharma press release dated June 2024."
     }
   },
   {
@@ -218,43 +254,60 @@
     "slug": "wells-pharmacy-network",
     "city": "Ocala",
     "state": "FL",
-    "established": 2003,
-    "type": "503A",
+    "established": null,
+    "type": "Both",
     "certifications": ["PCAB"],
-    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","IL","IN","IA","KS","KY","LA","MD","MA","MI","MN","MS","MO","NE","NV","NH","NJ","NM","NY","NC","OH","OK","OR","PA","RI","SC","TN","TX","UT","VA","WA","WI"],
+    "states_licensed": [],
     "produces_semaglutide": true,
     "produces_tirzepatide": true,
     "linked_providers": ["eden"],
     "website": "https://wellsrx.com",
     "phone": "(800) 622-4510",
-    "regulatory_actions": [],
+    "regulatory_actions": [
+      {
+        "date": "2014-11-10",
+        "description": "FDA Warning Letter issued to Wells Pharmacy Network LLC citing serious deficiencies in sterile drug production practices. Source: Quackwatch archive of FDA letter.",
+        "source_url": "https://quackwatch.org/cases/fdawarning/comp/wells/"
+      },
+      {
+        "date": "2018-06-22",
+        "description": "FDA Form 483 issued to Wells Pharmacy Network LLC, Ocala FL, following inspection. Observations included use of non-pharmaceutical-grade materials in drug preparation. Source: FDA.",
+        "source_url": "https://www.fda.gov/about-fda/wells-pharmacy-network-llc-ocala-fl-483-issued-06222018"
+      }
+    ],
     "external_reviews": {
       "google_score": 3.7,
       "google_count": 65
     },
     "internal_score": 7.9,
-    "description": "Wells Pharmacy Network is a multi-state 503A compounding pharmacy based in Ocala, Florida. The pharmacy focuses on hormone replacement, wellness compounding, and has added GLP-1 medications to its product line.",
+    "description": "Wells Pharmacy Network is a compounding pharmacy in Ocala, Florida operating both a 20,500 sq ft 503A pharmacy and a 20,000 sq ft FDA-registered 503B outsourcing facility. Focuses on wellness, weight management, and hormone compounding.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://wellsrx.com"],
-      "confidence": "medium"
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://wellsrx.com/",
+        "https://wellsrx.com/about-wells-compounding-pharmacy/",
+        "https://quackwatch.org/cases/fdawarning/comp/wells/",
+        "https://www.fda.gov/about-fda/wells-pharmacy-network-llc-ocala-fl-483-issued-06222018"
+      ],
+      "confidence": "medium",
+      "notes": "Corrected: type is Both (Wells operates 503A AND 503B per their own site, file claimed 503A only). Established 2003 could not be confirmed. Cleared per-state license list (no primary source). Added 2014 FDA warning letter and 2018 FDA 483 (both previously missing — material omissions)."
     }
   },
   {
     "_id": "red-rock",
     "name": "Red Rock Pharmacy",
     "slug": "red-rock-pharmacy",
-    "city": "South Jordan",
+    "city": "Springville",
     "state": "UT",
-    "established": 2003,
+    "established": 2017,
     "type": "503A",
-    "certifications": ["PCAB"],
-    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","ID","IL","IN","IA","KS","KY","LA","MD","MA","MI","MN","MO","MT","NE","NV","NJ","NM","NY","NC","OH","OK","OR","PA","SC","TN","TX","UT","VA","WA","WI","WY"],
+    "certifications": ["State Licensed"],
+    "states_licensed": [],
     "produces_semaglutide": true,
     "produces_tirzepatide": true,
     "linked_providers": ["found"],
-    "website": "https://redrockpharmacy.com",
+    "website": "https://www.redrockrx.com",
     "phone": "(801) 446-8000",
     "regulatory_actions": [],
     "external_reviews": {
@@ -262,13 +315,16 @@
       "google_count": 88
     },
     "internal_score": 7.7,
-    "description": "Red Rock Pharmacy is a Utah-based 503A compounding pharmacy producing sterile injectables including compounded semaglutide and tirzepatide. PCAB-accredited and licensed across most states.",
+    "description": "Red Rock Pharmacy is a Utah-based 503A state-licensed compounding pharmacy with locations in Springville and St. George. Produces sterile injectables including compounded semaglutide and tirzepatide.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://redrockpharmacy.com"],
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.redrockrx.com/",
+        "https://www.redrockrx.com/about-us"
+      ],
       "confidence": "low",
-      "notes": "State list approximate."
+      "notes": "Corrected: established 2017 (not 2003). City is Springville, not South Jordan (Springville and St. George are the GLP-1 fulfillment locations). REMOVED PCAB claim — no PCAB or NABP accreditation found in publicly available records as of 2026. Cleared per-state list — file previously claimed 40 states but no primary source. Linked provider 'found' not independently verified."
     }
   },
   {
@@ -294,10 +350,14 @@
     "internal_score": 7.6,
     "description": "Revelation Pharma is a growing network of 503A and 503B compounding pharmacies headquartered in Charlotte, North Carolina. The network has acquired multiple regional compounding pharmacies and supplies sterile compounds including GLP-1 medications.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://revelationpharma.com"],
-      "confidence": "low"
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://revelationpharma.com/",
+        "https://revelationpharma.com/blog/post/revelation-pharma-completes-fifteenth-acquisition-%E2%80%93-stanley-specialty-pharmacy"
+      ],
+      "confidence": "low",
+      "notes": "Revelation Pharma is a holding/network company that has acquired 15+ regional compounding pharmacies (Stanley Specialty in Charlotte, Innovation Compounding in Kennesaw, etc.). Network is real but treating it as a single 'pharmacy' entry is structurally misleading. Established date 2020 not independently confirmed. PCAB applies to individual pharmacies in the network, not the parent company."
     }
   },
   {
@@ -306,14 +366,14 @@
     "slug": "pavilion-compounding-pharmacy",
     "city": "Atlanta",
     "state": "GA",
-    "established": 2004,
+    "established": 1999,
     "type": "503A",
     "certifications": ["PCAB"],
-    "states_licensed": ["AL","FL","GA","KY","MS","NC","SC","TN","VA"],
+    "states_licensed": [],
     "produces_semaglutide": true,
     "produces_tirzepatide": true,
     "linked_providers": [],
-    "website": "https://pavilioncompounding.com",
+    "website": "https://www.pavilioncompounding.com",
     "phone": "(404) 350-5780",
     "regulatory_actions": [],
     "external_reviews": {
@@ -321,12 +381,16 @@
       "google_count": 38
     },
     "internal_score": 7.4,
-    "description": "Pavilion Compounding Pharmacy is a PCAB-accredited 503A pharmacy serving the Atlanta metro area and several Southeastern states. It offers hormone replacement, peptides, and compounded GLP-1 medications.",
+    "description": "Pavilion Compounding Pharmacy is a PCAB-accredited 503A pharmacy founded in 1999 in Atlanta, Georgia. Licensed in 7 states (per company website). Specializes in compounded prescriptions including bioidentical hormone pellets (SteriPellets) and GLP-1 medications.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://pavilioncompounding.com"],
-      "confidence": "low"
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.pavilioncompounding.com/about-us/",
+        "https://www.pavilioncompounding.com/pavilion-becomes-pcab-accredited-pharmacy/"
+      ],
+      "confidence": "medium",
+      "notes": "Corrected: established 1999 (not 2004). File previously listed 9 specific state codes; per company description Pavilion is licensed in 7 states (specific list not published). State codes cleared — would require pulling Pavilion's published state list. PCAB confirmed via company press release."
     }
   },
   {
@@ -335,10 +399,10 @@
     "slug": "beaker-pharmacy",
     "city": "Hallandale Beach",
     "state": "FL",
-    "established": 2020,
+    "established": null,
     "type": "503A",
-    "certifications": ["State Licensed"],
-    "states_licensed": ["AL","AZ","AR","CA","CO","CT","DE","FL","GA","IL","IN","KY","LA","MD","MA","MI","MS","MO","NV","NJ","NM","NY","NC","OH","OK","PA","SC","TN","TX","VA","WA"],
+    "certifications": [],
+    "states_licensed": [],
     "produces_semaglutide": true,
     "produces_tirzepatide": true,
     "linked_providers": [],
@@ -346,13 +410,13 @@
     "phone": "(954) 399-0505",
     "regulatory_actions": [],
     "internal_score": 6.9,
-    "description": "Beaker Pharmacy is a newer 503A compounding pharmacy based in South Florida that has entered the compounded GLP-1 space. State-licensed with a growing multi-state footprint.",
+    "description": "Beaker Pharmacy is reportedly a 503A compounding pharmacy in South Florida. Limited public information available; entry currently UNVERIFIED.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://beakerpharmacy.com"],
-      "confidence": "low",
-      "notes": "Limited public information; certifications unverified."
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [],
+      "confidence": "unverified",
+      "notes": "RECOMMEND REMOVAL OR DEEP RE-VERIFICATION. Could not independently confirm a 'Beaker Pharmacy' located in Hallandale Beach, FL through web searches. Existing website URL (beakerpharmacy.com) was not surfaced as an active compounding pharmacy in search results. Cleared all multi-state license claims (no primary source). Cleared established date (2020 unverified). No certifications could be confirmed."
     }
   },
   {
@@ -361,10 +425,10 @@
     "slug": "town-center-compounding-pharmacy",
     "city": "Rancho Santa Margarita",
     "state": "CA",
-    "established": 2005,
+    "established": null,
     "type": "503A",
-    "certifications": ["PCAB"],
-    "states_licensed": ["AZ","CA","CO","FL","GA","IL","NV","NJ","NY","OR","TX","UT","WA"],
+    "certifications": [],
+    "states_licensed": [],
     "produces_semaglutide": true,
     "produces_tirzepatide": true,
     "linked_providers": [],
@@ -376,12 +440,13 @@
       "google_count": 55
     },
     "internal_score": 7.5,
-    "description": "Town Center Compounding Pharmacy is a 503A PCAB-accredited pharmacy in Orange County, California. Known for hormone and wellness compounding, it has expanded into compounded GLP-1 preparations.",
+    "description": "Town Center Compounding Pharmacy is reportedly a 503A compounding pharmacy in Orange County, California. Entry currently UNVERIFIED.",
     "verification": {
-      "last_verified": "2026-04-05",
-      "verified_by": "manual",
-      "source_urls": ["https://towncenterrx.com"],
-      "confidence": "low"
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [],
+      "confidence": "unverified",
+      "notes": "RECOMMEND REMOVAL OR DEEP RE-VERIFICATION. Could not independently confirm a pharmacy named 'Town Center Compounding' in Rancho Santa Margarita CA through web search; the search returned only references to a shopping center of similar name. Cleared PCAB claim (no ACHC PCAB directory verification). Cleared multi-state license list (no primary source). Cleared established 2005 (unverified)."
     }
   }
 ]

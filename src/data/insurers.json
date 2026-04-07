@@ -10,8 +10,17 @@
     "zepbound_coverage": "Varies dramatically by plan — many BCBS plans require BMI ≥35, prior auth, and step therapy.",
     "typical_copay_with_coverage": "$25–$75",
     "prior_auth_required": true,
-    "member_count": 115000000,
-    "alternative_providers_when_denied": ["Hims", "Ro", "Found"]
+    "member_count": 119100000,
+    "alternative_providers_when_denied": ["Hims", "Ro", "Found"],
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.markfarrah.com/mfa-briefs/profit-margins-trend-downwards-for-aggregate-bcbs-plans/"
+      ],
+      "confidence": "medium",
+      "notes": "Member count corrected from 115M to 119.1M (3Q25 BCBS aggregate per Mark Farrah Associates). Coverage claim text is GENERIC and DIRECTIONAL — BCBS is 34 independent licensees and coverage genuinely varies plan-by-plan. No specific BCBS plan clinical policy bulletin URLs cited; verbatim coverage text NOT traceable to a single primary source. RECOMMEND adding plan-specific bulletins (e.g., BCBS of Texas, BCBS of Michigan) when making more specific claims."
+    }
   },
   {
     "slug": "united-healthcare",
@@ -24,8 +33,17 @@
     "zepbound_coverage": "Many UHC plans excluded Zepbound from formularies in 2025. Coverage rare and requires extensive prior auth.",
     "typical_copay_with_coverage": "$30–$100",
     "prior_auth_required": true,
-    "member_count": 49000000,
-    "alternative_providers_when_denied": ["Hims", "Ro", "Mochi Health"]
+    "member_count": 49800000,
+    "alternative_providers_when_denied": ["Hims", "Ro", "Mochi Health"],
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.businesswire.com/news/home/20260126830491/en/UnitedHealth-Group-Reports-2025-Results-and-Issues-2026-Outlook"
+      ],
+      "confidence": "medium",
+      "notes": "Member count corrected from 49M to 49.8M (UHC 2025 year-end per UnitedHealth Group earnings release). UHC has publicly removed Wegovy and Zepbound from many large-employer formularies in 2024-2025 — directional claim is correct but no specific UHC PDL URL cited. RECOMMEND adding UHC's 2026 PDL link for specificity."
+    }
   },
   {
     "slug": "aetna",
@@ -39,7 +57,16 @@
     "typical_copay_with_coverage": "$25–$80",
     "prior_auth_required": true,
     "member_count": 39000000,
-    "alternative_providers_when_denied": ["Hims", "Ro", "Found"]
+    "alternative_providers_when_denied": ["Hims", "Ro", "Found"],
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.aetna.com/cpb/medical/data/600_699/0625.html"
+      ],
+      "confidence": "low",
+      "notes": "Aetna's CPB 0625 governs anti-obesity drugs but the file does NOT cite it. Coverage claim text is directional. Member count 39M not independently re-verified. Cigna/Aetna merger note: this entry refers to legacy Aetna business now within CVS Health. RECOMMEND linking to specific Aetna CPB 0625 for any specific claims about Wegovy/Zepbound criteria."
+    }
   },
   {
     "slug": "cigna",
@@ -53,7 +80,14 @@
     "typical_copay_with_coverage": "$25–$75",
     "prior_auth_required": true,
     "member_count": 18000000,
-    "alternative_providers_when_denied": ["Hims", "Ro", "Mochi Health"]
+    "alternative_providers_when_denied": ["Hims", "Ro", "Mochi Health"],
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "Coverage text is directional. Cigna's published clinical policies do require step therapy and BMI thresholds for Wegovy/Zepbound. No specific Cigna coverage policy URL cited. Member count 18M not independently re-verified."
+    }
   },
   {
     "slug": "humana",
@@ -67,7 +101,14 @@
     "typical_copay_with_coverage": "$30–$90",
     "prior_auth_required": true,
     "member_count": 17000000,
-    "alternative_providers_when_denied": ["Hims", "Ro", "Found"]
+    "alternative_providers_when_denied": ["Hims", "Ro", "Found"],
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "Humana Medicare Advantage non-coverage of Wegovy/Zepbound is directionally correct (federal law prohibits Medicare Part D coverage of weight-loss-only drugs). Commercial coverage varies. No specific policy bulletin URL cited. Member count not re-verified."
+    }
   },
   {
     "slug": "anthem",
@@ -81,7 +122,14 @@
     "typical_copay_with_coverage": "$25–$80",
     "prior_auth_required": true,
     "member_count": 47000000,
-    "alternative_providers_when_denied": ["Hims", "Ro", "Found"]
+    "alternative_providers_when_denied": ["Hims", "Ro", "Found"],
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "Anthem (now Elevance Health) is the parent of multiple BCBS-licensed plans. Listing Anthem separately from BCBS may double-count members. Member count 47M not re-verified — Elevance reported ~46M medical members in recent reporting. No specific policy URL cited."
+    }
   },
   {
     "slug": "kaiser-permanente",
@@ -95,7 +143,14 @@
     "typical_copay_with_coverage": "$10–$50",
     "prior_auth_required": true,
     "member_count": 12700000,
-    "alternative_providers_when_denied": ["Hims", "Ro", "Mochi Health"]
+    "alternative_providers_when_denied": ["Hims", "Ro", "Mochi Health"],
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "Kaiser Permanente integrated delivery system makes coverage rules different from traditional payers. Coverage text directionally accurate but no specific Kaiser formulary URL cited. Member count 12.7M directionally consistent with Kaiser's reported ~12.7M members."
+    }
   },
   {
     "slug": "medicare",
@@ -109,7 +164,16 @@
     "typical_copay_with_coverage": "$30–$100",
     "prior_auth_required": true,
     "member_count": 67000000,
-    "alternative_providers_when_denied": ["Hims", "Ro", "Found"]
+    "alternative_providers_when_denied": ["Hims", "Ro", "Found"],
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.cms.gov/newsroom/press-releases/cms-announces-action-help-people-medicare-medicaid-access-affordable-anti-obesity-medications"
+      ],
+      "confidence": "medium",
+      "notes": "Medicare Part D statutory exclusion of weight-loss drugs (Section 1860D-2(e)(2)(A) of the Social Security Act) is correctly cited in spirit. The 2024 CMS guidance allowing Wegovy coverage when prescribed for established CV disease is real (per CMS March 2024 announcement). Member count 67M reasonable for total Medicare beneficiaries."
+    }
   },
   {
     "slug": "medicaid",
@@ -123,7 +187,14 @@
     "typical_copay_with_coverage": "$0–$10",
     "prior_auth_required": true,
     "member_count": 90000000,
-    "alternative_providers_when_denied": ["Mochi Health", "Hims", "Ro"]
+    "alternative_providers_when_denied": ["Mochi Health", "Hims", "Ro"],
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "FLAG: claim that 'CA, MN, PA, RI cover Wegovy for obesity' is a specific factual claim that needs primary source verification against each state Medicaid pharmacy bulletin. Per recent KFF tracking, the actual list of states that cover anti-obesity GLP-1s under Medicaid has changed several times — VERIFY against KFF 2026 state Medicaid coverage tracker before publishing. Member count 90M not re-verified."
+    }
   },
   {
     "slug": "tricare",
@@ -137,6 +208,13 @@
     "typical_copay_with_coverage": "$0–$38",
     "prior_auth_required": true,
     "member_count": 9600000,
-    "alternative_providers_when_denied": ["Hims", "Ro", "Found"]
+    "alternative_providers_when_denied": ["Hims", "Ro", "Found"],
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [],
+      "confidence": "low",
+      "notes": "TRICARE Wegovy/Zepbound coverage criteria are real but evolving. No specific Express Scripts/TRICARE formulary URL cited. Member count 9.6M directionally reasonable for total TRICARE beneficiaries (~9.6M per DHA reporting)."
+    }
   }
 ]

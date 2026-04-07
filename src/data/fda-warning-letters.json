@@ -16,7 +16,16 @@
     "violations_summary": "FDA cited the company in connection with the marketing and distribution of compounded GLP-1 products. See the linked FDA warning letter for the full text of the agency's concerns and the specific provisions of the Federal Food, Drug, and Cosmetic Act referenced.",
     "matched_provider_slug": null,
     "status": "active",
-    "added_date": "2026-04-07"
+    "added_date": "2026-04-07",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "wave-3-agent",
+      "source_urls": [
+        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/prime-sciences-721805-03312026"
+      ],
+      "confidence": "medium",
+      "notes": "FILE-WIDE NOTE (applies to all 120 entries in this file): Spot-checked ~12 entries against Google search results. ALL spot-checked letter URLs (Prime Sciences 721805, Mile High Compounds 721600, Gram Peptides 721806, Novo Nordisk 717576, PharmaZee 721473, Refills Health 721475, Weightless Medical/WeightCare 721478, www.semaspace.com 665848, Summit Research Peptides 695607, AnuMed International 674310, Ozempen 684435) were CONFIRMED REAL via Google indexing of fda.gov. Letter numbers, dates, and recipient names appear authentic. CAVEAT: every entry has identical generic boilerplate violations_summary text — none of the violations are paraphrased from the actual letters, so the data is structurally honest about its limitation but provides no specific substance. matched_provider_slug is null on every entry. Direct WebFetch of fda.gov URLs returns 404 due to user-agent blocking, but Google indexing confirms URLs exist."
+    }
   },
   {
     "id": "mile-high-compounds-llc-721600",
