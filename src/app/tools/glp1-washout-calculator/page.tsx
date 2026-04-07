@@ -5,7 +5,7 @@ import WashoutCalculator from "./WashoutCalculator";
 
 export const metadata: Metadata = {
   title:
-    "GLP-1 Washout Calculator | How Long Does Semaglutide / Tirzepatide Stay in Your System | Weight Loss Rankings",
+    "GLP-1 Washout Calculator — How Long Does Semaglutide / Tirzepatide Stay in Your System",
   description:
     "Free GLP-1 washout calculator. Pick your drug (semaglutide, tirzepatide, orforglipron, or retatrutide) and see exactly how long until 50%, 25%, 10%, 5%, 1% remain after your last dose. Built on FDA-label half-life values, with clinical scenarios for switching, surgery, pregnancy planning, and trial enrollment.",
   alternates: { canonical: "/tools/glp1-washout-calculator" },

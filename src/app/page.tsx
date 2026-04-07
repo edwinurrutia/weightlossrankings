@@ -2,17 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   getFeaturedProviders,
-  getAllBlogPosts,
   getAllProviders,
 } from "@/lib/data";
-import type { Provider, BlogPost } from "@/lib/types";
+import type { Provider } from "@/lib/types";
+import { RESEARCH_ARTICLES } from "@/lib/research";
 import { computeOverallScore } from "@/lib/scoring";
 import { US_STATES } from "@/lib/states";
 import { WEGOVY_MONTHLY_USD } from "@/lib/citations";
 import CTAButton from "@/components/shared/CTAButton";
 import EmailCapture from "@/components/shared/EmailCapture";
 import JsonLd from "@/components/shared/JsonLd";
-import BlogCard from "@/components/blog/BlogCard";
 import GradientCTACallout from "@/components/marketing/GradientCTACallout";
 import TrustMarquee from "@/components/marketing/TrustMarquee";
 import HomeSavingsHeadline from "@/components/marketing/HomeSavingsHeadline";
@@ -55,11 +54,26 @@ const categories = [
 ];
 
 export default async function HomePage() {
-  const [featured, posts, allProviders] = await Promise.all([
+  const [featured, allProviders] = await Promise.all([
     getFeaturedProviders().catch(() => [] as Provider[]),
-    getAllBlogPosts(3).catch(() => [] as BlogPost[]),
     getAllProviders().catch(() => [] as Provider[]),
   ]);
+
+  // Homepage Latest Research feed: pull the 3 most recently published
+  // research articles directly from the registry. We deliberately lead
+  // with research (not blog) on the homepage because the research tier
+  // is the editorial flagship — primary-source PubMed/FDA-cited deep
+  // dives — and that's the E-E-A-T signal we want first-time visitors
+  // to see. Blog posts remain available at /blog but are no longer
+  // surfaced on the homepage.
+  const latestResearch = [...RESEARCH_ARTICLES]
+    .sort((a, b) => b.publishedDate.localeCompare(a.publishedDate))
+    .slice(0, 3);
+
+  const KIND_LABEL: Record<string, string> = {
+    "data-investigation": "Data investigation",
+    "scientific-deep-dive": "Scientific deep-dive",
+  };
 
   // Round provider count down to nearest 5 so the displayed number doesn't
   // jitter every time we add a single provider — and so it never overstates.
@@ -286,25 +300,61 @@ export default async function HomePage() {
         <StateCoverageMap />
       </section>
 
-      {/* ── Blog ── */}
-      {posts.length > 0 && (
+      {/* ── Latest Research ── */}
+      {latestResearch.length > 0 && (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="font-heading text-3xl font-bold text-brand-text-primary tracking-tight">
-              Latest Articles
-            </h2>
+            <div>
+              <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold mb-2">
+                Editorial flagship
+              </p>
+              <h2 className="font-heading text-3xl font-bold text-brand-text-primary tracking-tight">
+                Latest Research
+              </h2>
+              <p className="mt-2 text-sm text-brand-text-secondary max-w-2xl">
+                Primary-source deep-dives on GLP-1 weight-loss
+                medications, every claim cited from FDA prescribing
+                information and PubMed.
+              </p>
+            </div>
             <Link
-              href="/blog"
-              className="text-sm font-medium text-brand-violet hover:underline"
+              href="/research"
+              className="text-sm font-medium text-brand-violet hover:underline shrink-0"
             >
-              View all →
+              View all research →
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.slice(0, 3).map((post) => (
-              <BlogCard key={post._id} post={post} />
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {latestResearch.map((a) => (
+              <li key={a.slug}>
+                <Link
+                  href={`/research/${a.slug}`}
+                  className="group block h-full rounded-2xl border border-brand-violet/15 bg-white p-6 shadow-sm hover:shadow-md hover:border-brand-violet/40 hover:-translate-y-0.5 transition-all"
+                >
+                  <div className="flex items-baseline justify-between gap-3 mb-3">
+                    <span className="text-[10px] uppercase tracking-[0.15em] font-bold text-brand-violet">
+                      {KIND_LABEL[a.kind]}
+                    </span>
+                    <span className="text-[10px] text-brand-text-secondary">
+                      {a.readMinutes} min · {a.citations} sources
+                    </span>
+                  </div>
+                  <h3 className="font-heading text-lg font-bold text-brand-text-primary leading-tight tracking-tight group-hover:text-brand-violet transition-colors">
+                    {a.title}
+                  </h3>
+                  <p className="mt-3 text-sm text-brand-text-secondary leading-relaxed line-clamp-3">
+                    {a.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center text-sm font-semibold text-brand-violet">
+                    Read the analysis
+                    <span className="ml-1 group-hover:translate-x-1 transition-transform">
+                      →
+                    </span>
+                  </span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
       )}
 

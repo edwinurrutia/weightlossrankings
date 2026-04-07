@@ -6,7 +6,7 @@ import { getInteractionCount } from "@/lib/glp1-drug-interactions";
 
 export const metadata: Metadata = {
   title:
-    "GLP-1 Drug Interaction Checker | Wegovy, Ozempic, Zepbound, Mounjaro, Foundayo | Weight Loss Rankings",
+    "GLP-1 Drug Interaction Checker — Wegovy, Ozempic, Zepbound, Mounjaro, Foundayo",
   description:
     "Free GLP-1 drug interaction checker. Search any medication to see how it interacts with Wegovy, Ozempic, Zepbound, Mounjaro, or Foundayo. Severity-tiered results with FDA prescribing-information citations and clear what-to-do guidance.",
   alternates: { canonical: "/tools/glp1-drug-interaction-checker" },

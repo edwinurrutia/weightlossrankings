@@ -32,6 +32,8 @@ const MIGRATED_TO_ES_TREE = new Set<string>([
   "semaglutide-para-que-sirve",
   "tirzepatide-para-que-sirve",
   "cuanto-tarda-glp1-en-hacer-efecto",
+  "guia-marcas-wegovy-ozempic-zepbound-mounjaro",
+  "efectos-secundarios-glp1-preguntas-respuestas",
 ]);
 
 function spanishHrefFor(slug: string): string {

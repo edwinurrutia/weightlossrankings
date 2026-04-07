@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Medical Disclaimer | Weight Loss Rankings",
+  title: "Medical Disclaimer",
   description:
     "Weight Loss Rankings publishes educational research about GLP-1 weight-loss medications. We are not a healthcare provider and our content is not medical advice. Read the full disclaimer for what our content is, what it is not, and when to call your prescriber or 911.",
   alternates: { canonical: "/medical-disclaimer" },
