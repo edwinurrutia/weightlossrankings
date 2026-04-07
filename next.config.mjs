@@ -41,6 +41,18 @@ const nextConfig = {
         destination: "/es/research/efectos-secundarios-glp1-preguntas-respuestas",
         permanent: true,
       },
+      // Year-suffixed tool URLs are an SEO foot-gun: when 2027 rolls
+      // around, every backlink to a "2026" URL turns stale and we'd
+      // have to either keep the old URL fresh (confusing) or 301 to a
+      // new "2027" URL (fragments equity). Evergreen URLs with the
+      // year in the page title (which we refresh annually) are the
+      // pattern. The /tools/glp1-savings-calculator-2026 → /tools/
+      // glp1-savings-calculator rename is the first of several.
+      {
+        source: "/tools/glp1-savings-calculator-2026",
+        destination: "/tools/glp1-savings-calculator",
+        permanent: true,
+      },
     ];
   },
 };

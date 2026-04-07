@@ -28,7 +28,7 @@ const footerColumns = [
       { label: "Weight Loss Calculator", href: "/tools/glp1-weight-loss-calculator" },
       { label: "BMI Calculator", href: "/tools/glp1-bmi-calculator" },
       { label: "GLP-1 Unit Converter", href: "/tools/glp1-unit-converter" },
-      { label: "Savings Calculator 2026", href: "/tools/glp1-savings-calculator-2026" },
+      { label: "Savings Calculator", href: "/tools/glp1-savings-calculator" },
       { label: "Drug Interaction Checker", href: "/tools/glp1-drug-interaction-checker" },
       { label: "Insurance Employer Checker", href: "/tools/insurance-employer-checker" },
       { label: "All Tools", href: "/tools" },

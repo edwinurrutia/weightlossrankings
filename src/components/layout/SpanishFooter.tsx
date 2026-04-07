@@ -33,7 +33,7 @@ const footerColumns = [
       { label: "Calculadora de IMC", href: "/tools/glp1-bmi-calculator" },
       {
         label: "Calculadora de ahorros",
-        href: "/tools/glp1-savings-calculator-2026",
+        href: "/tools/glp1-savings-calculator",
       },
       { label: "Todas las herramientas", href: "/tools" },
     ],

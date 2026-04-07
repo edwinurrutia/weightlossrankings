@@ -5,11 +5,19 @@ import SavingsCalculator from "./SavingsCalculator";
 
 export const metadata: Metadata = {
   title:
-    "GLP-1 Savings Calculator 2026 | Wegovy, Zepbound, Compounded, Foundayo Cost Comparison",
+    "GLP-1 Savings Calculator 2026 — Wegovy, Zepbound, Compounded, Foundayo Cost Comparison",
   description:
-    "Calculate how much you'd save (or spend extra) by switching between brand-name Wegovy, Zepbound, compounded semaglutide or tirzepatide, and the new Foundayo (orforglipron) at $149/month self-pay. Real 2026 monthly costs across all 10 common access paths, with 1/2/5-year totals.",
-  alternates: { canonical: "/tools/glp1-savings-calculator-2026" },
+    "Calculate how much you'd save (or spend extra) by switching between brand-name Wegovy, Zepbound, compounded semaglutide or tirzepatide, and Foundayo (orforglipron) at $149/month self-pay. Real 2026 monthly costs across all 10 common access paths, with 1/2/5-year totals.",
+  alternates: { canonical: "/tools/glp1-savings-calculator" },
 };
+
+// The year lives in the page title (browser tab + Google SERP) and
+// in the visible "Updated [Month Year]" subhead — both can be
+// refreshed annually without changing the canonical URL. The URL
+// stays /tools/glp1-savings-calculator forever so all backlinks
+// and SEO equity accumulate on a single evergreen path. Bump this
+// to "2027" / "April 2027" when next year's price refresh ships.
+const PRICING_AS_OF = "April 2026";
 
 const CITATIONS = [
   {
@@ -63,23 +71,23 @@ export default function SavingsCalculatorPage() {
         </Link>
         {" / "}
         <span className="text-brand-text-primary">
-          GLP-1 savings calculator 2026
+          GLP-1 savings calculator
         </span>
       </nav>
 
       <header className="mb-10">
         <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold mb-4">
-          Cost comparison · 2026 prices
+          Cost comparison · pricing updated {PRICING_AS_OF}
         </p>
         <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-brand-text-primary">
           GLP-1 Savings Calculator
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-brand-text-secondary leading-relaxed">
           Compare what you&apos;re currently paying for your GLP-1 to
-          every other 2026 access path — brand-name with insurance,
-          manufacturer direct-pay, compounded vials, or the new
-          Foundayo at $149/month self-pay. See your monthly, yearly,
-          and 5-year savings or extra cost.
+          every other current access path — brand-name with insurance,
+          manufacturer direct-pay, compounded vials, or Foundayo at
+          $149/month self-pay. See your monthly, yearly, and 5-year
+          savings or extra cost. Pricing data updated {PRICING_AS_OF}.
         </p>
       </header>
 

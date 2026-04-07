@@ -24,10 +24,10 @@ const TOOLS = [
     tag: "BMI + eligibility",
   },
   {
-    slug: "glp1-savings-calculator-2026",
-    title: "GLP-1 Savings Calculator 2026",
+    slug: "glp1-savings-calculator",
+    title: "GLP-1 Savings Calculator",
     description:
-      "Compare 10 different access paths — brand-name, manufacturer direct-pay, compounded vials, and the new Foundayo at $149/month — and see your monthly, yearly, and 5-year savings or extra cost.",
+      "Compare 10 different access paths — brand-name, manufacturer direct-pay, compounded vials, and Foundayo at $149/month — and see your monthly, yearly, and 5-year savings or extra cost. Updated with current pricing.",
     tag: "Cost comparison",
   },
   {

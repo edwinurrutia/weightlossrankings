@@ -102,7 +102,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85, // BMI eligibility + GLP-1 outcome overlay
     },
     {
-      url: `${BASE_URL}/tools/glp1-savings-calculator-2026`,
+      url: `${BASE_URL}/tools/glp1-savings-calculator`,
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.85, // 10-path cost comparison

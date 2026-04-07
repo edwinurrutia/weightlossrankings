@@ -399,7 +399,7 @@ export default function WhereToBuyFoundayoArticle() {
           — the four-path buyer funnel for all GLP-1s
         </li>
         <li>
-          <Link href="/tools/glp1-savings-calculator-2026">
+          <Link href="/tools/glp1-savings-calculator">
             GLP-1 savings calculator 2026
           </Link>{" "}
           — compare 10 access paths over 1, 5, and 10 years

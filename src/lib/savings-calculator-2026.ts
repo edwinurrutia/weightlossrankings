@@ -1,6 +1,6 @@
 /**
  * GLP-1 total cost of ownership (TCO) calculator over 1, 2, or 5
- * years. Used by /tools/glp1-savings-calculator-2026.
+ * years. Used by /tools/glp1-savings-calculator.
  *
  * The math is straightforward — monthly cost × months — but the
  * value is in providing the verified 2026 monthly costs for every

@@ -65,7 +65,7 @@ const toolLinks = [
     body: "Calcule su índice de masa corporal y compruebe los criterios de elegibilidad para Wegovy y Zepbound.",
   },
   {
-    href: "/tools/glp1-savings-calculator-2026",
+    href: "/tools/glp1-savings-calculator",
     title: "Calculadora de ahorros",
     body: "Compare 10 rutas de costos para semaglutida y tirzepatida — marca, compuesto, con y sin seguro.",
   },

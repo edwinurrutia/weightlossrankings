@@ -513,7 +513,7 @@ export default function HowToGetGlp1Article() {
       <h2>Related research and tools</h2>
       <ul>
         <li>
-          <Link href="/tools/glp1-savings-calculator-2026">
+          <Link href="/tools/glp1-savings-calculator">
             GLP-1 savings calculator 2026
           </Link>{" "}
           — compare 10 different access paths over 1, 5, and 10

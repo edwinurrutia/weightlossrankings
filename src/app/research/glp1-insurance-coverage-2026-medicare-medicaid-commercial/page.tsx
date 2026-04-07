@@ -486,7 +486,7 @@ export default function InsuranceCoverageArticle() {
       <p>
         For the full cost comparison across all 10 access paths
         (commercial + direct-pay + compounded + Foundayo), see our{" "}
-        <Link href="/tools/glp1-savings-calculator-2026">
+        <Link href="/tools/glp1-savings-calculator">
           GLP-1 savings calculator
         </Link>
         .
@@ -560,7 +560,7 @@ export default function InsuranceCoverageArticle() {
         </Link>
         . For the cost comparison if you do end up self-paying, see
         our{" "}
-        <Link href="/tools/glp1-savings-calculator-2026">
+        <Link href="/tools/glp1-savings-calculator">
           savings calculator
         </Link>
         . For the new Foundayo $149/month launch that&apos;s
