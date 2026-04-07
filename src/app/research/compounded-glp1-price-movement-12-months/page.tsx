@@ -282,7 +282,7 @@ export default async function PriceMovementArticle() {
           <strong>FDA enforcement risk.</strong> Multiple GLP-1 telehealth
           providers received FDA warning letters for marketing language,
           labeling violations, and salt-form sourcing — see our{" "}
-          <Link href="/research/fda-warning-letters-glp1-2025-2026">
+          <Link href="/research/fda-warning-letters-glp1">
             FDA warning letter investigation
           </Link>{" "}
           for the full pattern. Every enforcement action shrinks the
@@ -301,7 +301,7 @@ export default async function PriceMovementArticle() {
         bottom of the table above — are the ones most likely to announce
         cuts in upcoming pricing updates. We&apos;ll surface those changes
         in our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           live pricing index
         </Link>{" "}
         as the data comes in.

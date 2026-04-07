@@ -1,12 +1,12 @@
 import { ImageResponse } from "next/og";
 import { getResearchArticleBySlug } from "@/lib/research";
 
-// Per-route OG image for /research/glp-1-pricing-index-2026. Each research article
+// Per-route OG image for /research/glp1-pricing-index. Each research article
 // gets a unique image so it can surface in Discover and look
 // individually branded on social shares. See
 // blog/[slug]/opengraph-image.tsx for the rationale.
 
-const SLUG = "glp-1-pricing-index-2026";
+const SLUG = "glp1-pricing-index";
 
 export const alt = "Weight Loss Rankings — research";
 export const size = { width: 1200, height: 630 };

@@ -487,7 +487,7 @@ export default function PregnancyArticle() {
       <p>
         For the broader weight loss trial data behind GLP-1 therapy,
         see our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           pricing index
         </Link>{" "}
         and{" "}

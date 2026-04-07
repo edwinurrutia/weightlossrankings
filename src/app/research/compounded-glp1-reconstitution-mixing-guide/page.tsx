@@ -406,7 +406,7 @@ export default function ReconstitutionArticle() {
         </Link>
         . For what FDA has actually cited compounded GLP-1
         pharmacies for, see our{" "}
-        <Link href="/research/fda-warning-letters-glp1-2025-2026">
+        <Link href="/research/fda-warning-letters-glp1">
           FDA warning letters database
         </Link>
         .

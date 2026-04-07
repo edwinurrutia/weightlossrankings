@@ -10,7 +10,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import { getAllProviders } from "@/lib/data";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 
-const SLUG = "cheapest-compounded-semaglutide-2026";
+const SLUG = "cheapest-compounded-semaglutide";
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -239,7 +239,7 @@ export default async function CheapestCompoundedSemaglutideArticle() {
           forms) instead of base semaglutide. Salt forms are not the same
           active ingredient as the molecule used in approved drugs and
           have not been evaluated for safety. See our{" "}
-          <Link href="/research/fda-warning-letters-glp1-2025-2026">
+          <Link href="/research/fda-warning-letters-glp1">
             FDA warning letter investigation
           </Link>{" "}
           for the full pattern.

@@ -514,7 +514,7 @@ export default function CompoundedBioequivalenceArticle() {
 
       <ul>
         <li>
-          <Link href="/research/fda-warning-letters-glp1-2025-2026">
+          <Link href="/research/fda-warning-letters-glp1">
             FDA warning letters to compounded GLP-1 telehealth
             providers
           </Link>{" "}
@@ -524,7 +524,7 @@ export default function CompoundedBioequivalenceArticle() {
           discussed above.
         </li>
         <li>
-          <Link href="/research/cheapest-compounded-semaglutide-2026">
+          <Link href="/research/cheapest-compounded-semaglutide">
             Is $99 compounded semaglutide real?
           </Link>{" "}
           — verification of the floor-price providers we track

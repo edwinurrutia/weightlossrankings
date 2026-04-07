@@ -50,7 +50,7 @@ const CITATIONS = [
       "GLP-1 Compounded Pricing Index 2026.",
     source: "Internal pricing index — live dataset",
     year: 2026,
-    url: "https://weightlossrankings.org/research/glp-1-pricing-index-2026",
+    url: "https://weightlossrankings.org/research/glp1-pricing-index",
   },
   {
     authors: "U.S. Food and Drug Administration.",
@@ -201,7 +201,7 @@ export default function SavingsCalculatorPage() {
             FDA warning letters, an unaccredited compounding facility,
             or a telehealth provider that disappears mid-year is
             cheaper for a reason. See our{" "}
-            <Link href="/research/fda-warning-letters-glp1-2025-2026">
+            <Link href="/research/fda-warning-letters-glp1">
               FDA warning letters database
             </Link>{" "}
             before optimizing purely for price.
@@ -222,7 +222,7 @@ export default function SavingsCalculatorPage() {
         <h2>Related tools and research</h2>
         <ul>
           <li>
-            <Link href="/research/glp-1-pricing-index-2026">
+            <Link href="/research/glp1-pricing-index">
               Live GLP-1 pricing index
             </Link>{" "}
             — full dataset across the entire compounded telehealth

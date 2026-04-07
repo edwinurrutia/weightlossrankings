@@ -238,7 +238,7 @@ export default function GlpDosePlotterPage() {
             </Link>
           </li>
           <li>
-            <Link href="/research/glp-1-pricing-index-2026">
+            <Link href="/research/glp1-pricing-index">
               GLP-1 compounded pricing index
             </Link>
           </li>

@@ -623,7 +623,7 @@ export default function FoundayoComparisonArticle() {
           — daily protocol, food restrictions, missed dose rules
         </li>
         <li>
-          <Link href="/research/how-to-get-glp1-prescription-2026">
+          <Link href="/research/how-to-get-glp1-prescription">
             How to get a GLP-1 prescription in 2026
           </Link>{" "}
           — buyer funnel for all four paths

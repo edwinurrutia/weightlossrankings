@@ -13,7 +13,7 @@ import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import PriceDistributionChart from "@/components/research/PriceDistributionChart";
 import References from "@/components/research/References";
 
-const SLUG = "glp-1-pricing-index-2026";
+const SLUG = "glp1-pricing-index";
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -343,7 +343,7 @@ export default function PricingIndexArticle() {
           near the median this article reports.
         </li>
         <li>
-          <Link href="/research/cheapest-compounded-semaglutide-2026">
+          <Link href="/research/cheapest-compounded-semaglutide">
             Is $99 compounded semaglutide real? Verifying every
             floor-price provider
           </Link>{" "}
@@ -360,7 +360,7 @@ export default function PricingIndexArticle() {
           years of expected use.
         </li>
         <li>
-          <Link href="/research/glp1-insurance-coverage-audit-2026">
+          <Link href="/research/glp1-insurance-coverage-audit">
             GLP-1 insurance coverage at the 10 largest US insurers
           </Link>{" "}
           — for patients deciding between insurance-covered brand

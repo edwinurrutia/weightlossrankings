@@ -269,14 +269,14 @@ export default function GlpUnitConverterPage() {
             prescription.
           </li>
           <li>
-            <Link href="/research/fda-warning-letters-glp1-2025-2026">
+            <Link href="/research/fda-warning-letters-glp1">
               FDA warning letters database
             </Link>
             : cross-check your provider against documented enforcement
             actions.
           </li>
           <li>
-            <Link href="/research/glp-1-pricing-index-2026">
+            <Link href="/research/glp1-pricing-index">
               GLP-1 compounded pricing index
             </Link>
             : the live pricing snapshot for the entire compounded

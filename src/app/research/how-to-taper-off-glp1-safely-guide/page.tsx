@@ -469,7 +469,7 @@ export default function TaperingGuideArticle() {
           stopping, explore lower-cost options: compounded vials,
           Foundayo $149/month, or the brand-name patient assistance
           programs. See our{" "}
-          <Link href="/research/glp-1-pricing-index-2026">
+          <Link href="/research/glp1-pricing-index">
             pricing index
           </Link>
           .

@@ -440,7 +440,7 @@ export default function DietArticle() {
         on GLP-1 therapy. This is consistent with the emerging
         literature on GLP-1 effects on the brain reward system
         (covered in our{" "}
-        <Link href="/research/glp1-alcohol-use-disorder-evidence-2026">
+        <Link href="/research/glp1-alcohol-use-disorder-evidence">
           GLP-1 and alcohol use disorder deep-dive
         </Link>
         ). Practical implications:
@@ -486,7 +486,7 @@ export default function DietArticle() {
           onset guide
         </Link>
         . For the alcohol context, see our{" "}
-        <Link href="/research/glp1-alcohol-use-disorder-evidence-2026">
+        <Link href="/research/glp1-alcohol-use-disorder-evidence">
           GLP-1 and alcohol deep-dive
         </Link>
         .

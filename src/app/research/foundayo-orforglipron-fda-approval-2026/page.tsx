@@ -374,7 +374,7 @@ export default function FoundayoArticle() {
         injectable cash prices. For the live state of compounded
         and brand-name GLP-1 pricing across the telehealth market,
         see our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           pricing index
         </Link>
         .
@@ -456,7 +456,7 @@ export default function FoundayoArticle() {
 
       <p>
         For our broader coverage of the GLP-1 landscape, see the{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           pricing index
         </Link>
         , the{" "}

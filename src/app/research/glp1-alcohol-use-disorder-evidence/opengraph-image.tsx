@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getResearchArticleBySlug } from "@/lib/research";
 
-const SLUG = "glp1-alcohol-use-disorder-evidence-2026";
+const SLUG = "glp1-alcohol-use-disorder-evidence";
 
 export const alt =
   "Weight Loss Rankings — GLP-1 drugs and alcohol use disorder, the actual trial evidence";

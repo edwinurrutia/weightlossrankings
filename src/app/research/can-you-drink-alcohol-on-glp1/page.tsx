@@ -203,7 +203,7 @@ export default function AlcoholArticle() {
         This is now the strongest evidence that GLP-1s have a real
         central effect on alcohol reward, independent of the weight
         loss effect. See our{" "}
-        <Link href="/research/glp1-alcohol-use-disorder-evidence-2026">
+        <Link href="/research/glp1-alcohol-use-disorder-evidence">
           GLP-1 alcohol use disorder evidence article
         </Link>{" "}
         for the full methodology and the limits of what can be
@@ -391,7 +391,7 @@ export default function AlcoholArticle() {
       <h2>Related research and tools</h2>
       <ul>
         <li>
-          <Link href="/research/glp1-alcohol-use-disorder-evidence-2026">
+          <Link href="/research/glp1-alcohol-use-disorder-evidence">
             GLP-1 and alcohol use disorder: the 2026 evidence
             review
           </Link>

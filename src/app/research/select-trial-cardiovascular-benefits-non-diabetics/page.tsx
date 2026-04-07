@@ -409,7 +409,7 @@ export default function SelectTrialArticle() {
         SELECT created a third covered indication (cardiovascular risk
         reduction in non-diabetics with established CVD) that some
         plans now reimburse where they previously denied. See our{" "}
-        <Link href="/research/glp1-insurance-coverage-audit-2026">
+        <Link href="/research/glp1-insurance-coverage-audit">
           GLP-1 insurance coverage audit
         </Link>{" "}
         for the per-insurer breakdown.

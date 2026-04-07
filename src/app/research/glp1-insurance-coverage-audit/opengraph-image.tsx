@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { getResearchArticleBySlug } from "@/lib/research";
 import { getAllInsurers } from "@/lib/insurers";
 
-const SLUG = "glp1-insurance-coverage-audit-2026";
+const SLUG = "glp1-insurance-coverage-audit";
 
 export const alt = "Weight Loss Rankings — GLP-1 insurance coverage audit";
 export const size = { width: 1200, height: 630 };

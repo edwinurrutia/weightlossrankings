@@ -278,7 +278,7 @@ export default function PcabInvestigation() {
           PCAB-accredited pharmacy and then ship orders through
           a different, non-accredited pharmacy. This is a
           documented enforcement issue — see our{" "}
-          <Link href="/research/fda-warning-letters-glp1-2025-2026">
+          <Link href="/research/fda-warning-letters-glp1">
             FDA warning letters investigation
           </Link>{" "}
           for examples.
@@ -420,7 +420,7 @@ export default function PcabInvestigation() {
           <strong>Has the pharmacy received any FDA warning
           letters in the past three years?</strong> Cross-check
           against our{" "}
-          <Link href="/research/fda-warning-letters-glp1-2025-2026">
+          <Link href="/research/fda-warning-letters-glp1">
             FDA warning letters database
           </Link>
           . A warning letter does not automatically disqualify a
@@ -468,7 +468,7 @@ export default function PcabInvestigation() {
         Use PCAB as a screening filter, not a final answer. Combine
         it with the 503A vs 503B distinction, the questions above,
         and our{" "}
-        <Link href="/research/fda-warning-letters-glp1-2025-2026">
+        <Link href="/research/fda-warning-letters-glp1">
           FDA warning letter cross-check
         </Link>{" "}
         to build a complete picture before placing an order.
@@ -483,11 +483,11 @@ export default function PcabInvestigation() {
           compounded semaglutide bioequivalence investigation
         </Link>
         , our{" "}
-        <Link href="/research/fda-warning-letters-glp1-2025-2026">
+        <Link href="/research/fda-warning-letters-glp1">
           FDA warning letters database
         </Link>
         , and our{" "}
-        <Link href="/research/cheapest-compounded-semaglutide-2026">
+        <Link href="/research/cheapest-compounded-semaglutide">
           floor-price provider verification
         </Link>
         . For context on the specific drugs being compounded, see

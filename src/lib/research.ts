@@ -33,7 +33,7 @@ export interface ResearchArticle {
 
 export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
-    slug: "glp-1-pricing-index-2026",
+    slug: "glp1-pricing-index",
     title: "GLP-1 Compounded Pricing Index 2026",
     description:
       "What 80+ telehealth providers actually charge for compounded semaglutide and tirzepatide — median, p10, p90, and how the gap to brand-name Wegovy has evolved.",
@@ -128,7 +128,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Compounded GLP-1", "Pharmacy regulation", "FDA sourced"],
   },
   {
-    slug: "fda-warning-letters-glp1-2025-2026",
+    slug: "fda-warning-letters-glp1",
     title:
       "FDA Warning Letters to Compounded GLP-1 Telehealth Providers: 2025-2026 Investigation",
     description:
@@ -142,7 +142,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["FDA enforcement", "Compounded GLP-1", "Live dataset"],
   },
   {
-    slug: "cheapest-compounded-semaglutide-2026",
+    slug: "cheapest-compounded-semaglutide",
     title:
       "Is $99 Compounded Semaglutide Real? We Verified Every Provider at the Floor Price",
     description:
@@ -184,7 +184,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Tirzepatide", "PubMed sourced"],
   },
   {
-    slug: "glp1-insurance-coverage-audit-2026",
+    slug: "glp1-insurance-coverage-audit",
     title:
       "GLP-1 Insurance Coverage at the 10 Largest US Insurers: A 2026 Audit",
     description:
@@ -268,7 +268,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Adolescents", "PubMed sourced"],
   },
   {
-    slug: "glp1-insurance-coverage-2026-medicare-medicaid-commercial",
+    slug: "glp1-insurance-coverage-medicare-medicaid-commercial",
     title:
       "GLP-1 Insurance Coverage 2026: Medicare, Medicaid, Commercial, Tricare, VA, and FEHB Explained",
     description:
@@ -324,7 +324,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Blood pressure", "Cardiovascular", "SELECT trial", "Patient question"],
   },
   {
-    slug: "where-to-buy-foundayo-2026",
+    slug: "where-to-buy-foundayo",
     title:
       "Where to Buy Foundayo (Orforglipron) in 2026: The Telehealth and Pharmacy Provider Directory",
     description:
@@ -422,7 +422,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Alcohol", "Patient question", "Safety", "Cravings"],
   },
   {
-    slug: "how-to-get-glp1-prescription-2026",
+    slug: "how-to-get-glp1-prescription",
     title:
       "How to Get a GLP-1 Prescription in 2026: The Patient Buyer Funnel",
     description:
@@ -730,7 +730,7 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Kidney disease", "PubMed sourced"],
   },
   {
-    slug: "glp1-alcohol-use-disorder-evidence-2026",
+    slug: "glp1-alcohol-use-disorder-evidence",
     title:
       "GLP-1 Drugs and Alcohol Use Disorder: What the Trial Evidence Actually Shows in 2026",
     description:

@@ -551,7 +551,7 @@ export default function GlpPipelineArticle() {
           SELECT trial deep-dive
         </Link>
         . For pricing context, see our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           GLP-1 pricing index
         </Link>
         .

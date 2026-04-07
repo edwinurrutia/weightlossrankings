@@ -322,7 +322,7 @@ export default function WhatHappensWhenYouStopSemaglutideArticle() {
           <strong>Cost matters more than usual.</strong> Because long-term
           therapy is the expectation, the per-month price gap between
           providers compounds dramatically over time. Our{" "}
-          <Link href="/research/glp-1-pricing-index-2026">
+          <Link href="/research/glp1-pricing-index">
             pricing index
           </Link>{" "}
           and{" "}

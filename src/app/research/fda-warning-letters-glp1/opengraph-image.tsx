@@ -6,7 +6,7 @@ import { getAllWarningLetters } from "@/lib/fda-warning-letters";
 // the image automatically updates when the bi-weekly scraper adds
 // new letters — no manual asset to maintain.
 
-const SLUG = "fda-warning-letters-glp1-2025-2026";
+const SLUG = "fda-warning-letters-glp1";
 
 export const alt = "Weight Loss Rankings — FDA Warning Letter Investigation";
 export const size = { width: 1200, height: 630 };

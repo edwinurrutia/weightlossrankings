@@ -4,7 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
 
-const SLUG = "glp1-insurance-coverage-2026-medicare-medicaid-commercial";
+const SLUG = "glp1-insurance-coverage-medicare-medicaid-commercial";
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;

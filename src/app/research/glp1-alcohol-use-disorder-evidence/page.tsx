@@ -4,7 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
 
-const SLUG = "glp1-alcohol-use-disorder-evidence-2026";
+const SLUG = "glp1-alcohol-use-disorder-evidence";
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -420,7 +420,7 @@ export default function GlpAudArticle() {
       <p>
         For the broader picture of how semaglutide is being used (and
         priced) for its FDA-approved indications, see our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           GLP-1 pricing index
         </Link>{" "}
         and our{" "}

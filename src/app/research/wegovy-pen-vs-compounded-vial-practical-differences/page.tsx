@@ -254,7 +254,7 @@ export default function WegovyPenVsCompoundedVialArticle() {
         require prior authorization and step therapy, and the
         out-of-pocket cost after authorization typically ranges from
         $25 to $200/month for covered patients. See our{" "}
-        <Link href="/research/glp1-insurance-coverage-audit-2026">
+        <Link href="/research/glp1-insurance-coverage-audit">
           insurance coverage audit
         </Link>{" "}
         for the per-insurer breakdown.
@@ -264,11 +264,11 @@ export default function WegovyPenVsCompoundedVialArticle() {
         <strong>Compounded vial:</strong> cash market median is around
         $199/month at the 0.5 mg dose tier, with the floor near
         $99/month at our cheapest verified providers. See our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           GLP-1 pricing index
         </Link>{" "}
         and{" "}
-        <Link href="/research/cheapest-compounded-semaglutide-2026">
+        <Link href="/research/cheapest-compounded-semaglutide">
           cheapest compounded semaglutide investigation
         </Link>{" "}
         for the live data. The compounded format is roughly 5–10× cheaper
@@ -291,7 +291,7 @@ export default function WegovyPenVsCompoundedVialArticle() {
         sterile compounding standards rigorously [3]. Others have
         received FDA warning letters for adulteration, salt-form
         sourcing, or inadequate sterility validation — see our{" "}
-        <Link href="/research/fda-warning-letters-glp1-2025-2026">
+        <Link href="/research/fda-warning-letters-glp1">
           FDA warning letter investigation
         </Link>{" "}
         for the documented patterns. Patients should verify the

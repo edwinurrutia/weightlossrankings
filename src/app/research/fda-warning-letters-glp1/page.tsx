@@ -4,7 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import { getAllWarningLetters } from "@/lib/fda-warning-letters";
 
-const SLUG = "fda-warning-letters-glp1-2025-2026";
+const SLUG = "fda-warning-letters-glp1";
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -302,7 +302,7 @@ export default function FdaWarningLettersInvestigation() {
           database.
         </li>
         <li>
-          <Link href="/research/cheapest-compounded-semaglutide-2026">
+          <Link href="/research/cheapest-compounded-semaglutide">
             Is $99 compounded semaglutide real?
           </Link>{" "}
           — verification of the floor-price providers we track,

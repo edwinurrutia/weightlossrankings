@@ -320,7 +320,7 @@ export default function SurmountOsaArticle() {
         requirements vary by insurer, but typically include a sleep
         study report with AHI and a treating physician&apos;s letter
         of medical necessity. See our{" "}
-        <Link href="/research/glp1-insurance-coverage-audit-2026">
+        <Link href="/research/glp1-insurance-coverage-audit">
           GLP-1 insurance coverage audit
         </Link>{" "}
         for the per-insurer breakdown of how the major commercial

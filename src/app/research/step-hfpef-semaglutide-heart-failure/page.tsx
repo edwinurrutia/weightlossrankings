@@ -506,7 +506,7 @@ export default function StepHfpefArticle() {
         </Link>
         . For the pricing of brand-name and compounded semaglutide,
         see our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           GLP-1 pricing index
         </Link>
         . For a head-to-head comparison with tirzepatide (which is

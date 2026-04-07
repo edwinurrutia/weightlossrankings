@@ -468,7 +468,7 @@ export default function RetatrutideArticle() {
       <p>
         For more on the FDA enforcement landscape around
         compounded GLP-1s, see our{" "}
-        <Link href="/research/fda-warning-letters-glp1-2025-2026">
+        <Link href="/research/fda-warning-letters-glp1">
           FDA warning letters investigation
         </Link>
         . For the difference between 503A and 503B compounding
@@ -533,7 +533,7 @@ export default function RetatrutideArticle() {
           SELECT trial deep-dive
         </Link>
         . For pricing context, see our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           GLP-1 pricing index
         </Link>
         .

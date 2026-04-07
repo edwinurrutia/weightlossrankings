@@ -4,7 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
 
-const SLUG = "how-to-get-glp1-prescription-2026";
+const SLUG = "how-to-get-glp1-prescription";
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // Pricing verified against the live manufacturer pages and our
 // own pricing index as of 2026-04-07. The Wegovy NovoCare and
 // Zepbound LillyDirect tiers are checked weekly by the editorial
-// research subagent — see /research/glp-1-pricing-index-2026.
+// research subagent — see /research/glp1-pricing-index.
 
 export default function HowToGetGlp1Article() {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -170,7 +170,7 @@ export default function HowToGetGlp1Article() {
         </li>
         <li>
           Check our{" "}
-          <Link href="/research/glp1-insurance-coverage-2026-medicare-medicaid-commercial">
+          <Link href="/research/glp1-insurance-coverage-medicare-medicaid-commercial">
             insurance coverage 2026 article
           </Link>{" "}
           for the Medicare, Medicaid, and commercial landscape.
@@ -328,7 +328,7 @@ export default function HowToGetGlp1Article() {
         </li>
         <li>
           See our live{" "}
-          <Link href="/research/glp-1-pricing-index-2026">
+          <Link href="/research/glp1-pricing-index">
             compounded pricing index
           </Link>{" "}
           for the median, p10, and p90 across the entire telehealth
@@ -347,7 +347,7 @@ export default function HowToGetGlp1Article() {
         dose, different concentration, different delivery), but
         FDA has issued multiple warning letters to compounders and
         marketers — see our{" "}
-        <Link href="/research/fda-warning-letters-glp1-2025-2026">
+        <Link href="/research/fda-warning-letters-glp1">
           FDA warning letters tracker
         </Link>
         .
@@ -454,7 +454,7 @@ export default function HowToGetGlp1Article() {
         <li>
           <strong>You have Medicare</strong> → coverage for weight
           management is limited; see our{" "}
-          <Link href="/research/glp1-insurance-coverage-2026-medicare-medicaid-commercial">
+          <Link href="/research/glp1-insurance-coverage-medicare-medicaid-commercial">
             insurance coverage article
           </Link>{" "}
           for the current Medicare situation.
@@ -532,13 +532,13 @@ export default function HowToGetGlp1Article() {
           — coverage at 30 large US employers
         </li>
         <li>
-          <Link href="/research/glp-1-pricing-index-2026">
+          <Link href="/research/glp1-pricing-index">
             GLP-1 compounded pricing index 2026
           </Link>{" "}
           — live median, p10, and p90 across the telehealth market
         </li>
         <li>
-          <Link href="/research/glp1-insurance-coverage-2026-medicare-medicaid-commercial">
+          <Link href="/research/glp1-insurance-coverage-medicare-medicaid-commercial">
             Insurance coverage 2026: Medicare, Medicaid, commercial
           </Link>
         </li>

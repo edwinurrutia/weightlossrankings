@@ -468,7 +468,7 @@ export default function CagrisemaArticle() {
         </Link>
         . For pricing context across the entire GLP-1 market, see
         our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           pricing index
         </Link>
         .

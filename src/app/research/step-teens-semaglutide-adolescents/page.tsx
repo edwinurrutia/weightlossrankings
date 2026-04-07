@@ -489,7 +489,7 @@ export default function StepTeensArticle() {
       <p>
         For the broader picture of how GLP-1 therapy fits into modern
         obesity treatment, see our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           pricing index
         </Link>{" "}
         and our editorial coverage of the{" "}

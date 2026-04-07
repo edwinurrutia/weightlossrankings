@@ -4,7 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
 
-const SLUG = "where-to-buy-foundayo-2026";
+const SLUG = "where-to-buy-foundayo";
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -393,7 +393,7 @@ export default function WhereToBuyFoundayoArticle() {
           — daily protocol, food restrictions, missed dose rules
         </li>
         <li>
-          <Link href="/research/how-to-get-glp1-prescription-2026">
+          <Link href="/research/how-to-get-glp1-prescription">
             How to get a GLP-1 prescription in 2026
           </Link>{" "}
           — the four-path buyer funnel for all GLP-1s

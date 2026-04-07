@@ -452,7 +452,7 @@ export default function FoundayoHowToTakeArticle() {
           — the same dietary and antiemetic playbook applies to Foundayo
         </li>
         <li>
-          <Link href="/research/how-to-get-glp1-prescription-2026">
+          <Link href="/research/how-to-get-glp1-prescription">
             How to get a GLP-1 prescription in 2026
           </Link>{" "}
           — the telehealth and in-person paths to a Foundayo prescription

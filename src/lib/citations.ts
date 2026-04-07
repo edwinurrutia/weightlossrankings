@@ -107,7 +107,7 @@ const CITATIONS_LIST: CitationEntry[] = [
     label:
       "Weight Loss Rankings — GLP-1 Pricing Index 2026 (our independent dataset)",
     publisher: "WeightLossRankings.org",
-    url: "/research/glp-1-pricing-index-2026",
+    url: "/research/glp1-pricing-index",
     category: "pricing",
     accessedDate: "2026-04-06",
     dataYear: "2026",

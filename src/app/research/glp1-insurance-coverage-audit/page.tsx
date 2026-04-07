@@ -4,7 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import { getAllInsurers } from "@/lib/insurers";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 
-const SLUG = "glp1-insurance-coverage-audit-2026";
+const SLUG = "glp1-insurance-coverage-audit";
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -229,12 +229,12 @@ export default function InsuranceCoverageAuditArticle() {
         providers, which sell the same active molecule (semaglutide or
         tirzepatide) at cash-pay prices below most insurance copays.
         Our{" "}
-        <Link href="/research/glp-1-pricing-index-2026">
+        <Link href="/research/glp1-pricing-index">
           GLP-1 pricing index
         </Link>{" "}
         tracks the current market median across 80+ telehealth providers,
         and our{" "}
-        <Link href="/research/cheapest-compounded-semaglutide-2026">
+        <Link href="/research/cheapest-compounded-semaglutide">
           cheapest compounded semaglutide investigation
         </Link>{" "}
         documents the floor-price providers we&apos;ve verified.
