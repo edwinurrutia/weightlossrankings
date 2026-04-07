@@ -211,6 +211,34 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 4,
     tags: ["Tirzepatide", "Sleep apnea", "PubMed sourced"],
   },
+  {
+    slug: "step-teens-semaglutide-adolescents",
+    title:
+      "What STEP-TEENS Showed: Semaglutide for Adolescents with Obesity",
+    description:
+      "STEP-TEENS (Weghuber et al., NEJM 2022) is the trial that made Wegovy the first FDA-approved GLP-1 for adolescent obesity. 201 adolescents aged 12-17 randomized to weekly semaglutide or placebo for 68 weeks produced a 16.7-percentage-point separation in BMI change. Here's what the trial actually showed, what the AAP now recommends, and the long-term follow-up question that hasn't been answered yet.",
+    excerpt:
+      "STEP-TEENS is the trial that made Wegovy the first FDA-approved GLP-1 medication for adolescents with obesity. Published in NEJM in November 2022, the 68-week randomized trial of 201 adolescents aged 12-17 produced a remarkable 16.7-percentage-point separation in BMI change between the semaglutide and placebo arms — the largest pediatric pharmacological weight loss result ever recorded. The FDA approved the indication in December 2022, and the AAP's 2023 clinical practice guideline now recommends pharmacotherapy as adjunct treatment for adolescents with obesity. Here's the full trial data, the AAP guidance, and the open long-term safety question that the field hasn't yet answered.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 12,
+    citations: 6,
+    tags: ["Semaglutide", "Adolescents", "PubMed sourced"],
+  },
+  {
+    slug: "glp1-alcohol-use-disorder-evidence-2026",
+    title:
+      "GLP-1 Drugs and Alcohol Use Disorder: What the Trial Evidence Actually Shows in 2026",
+    description:
+      "TikTok and the lay press have run far ahead of the trial evidence on semaglutide for alcohol cravings. We walk through the actual literature — exactly one completed Phase 2 RCT (Hendershot 2025, n=48), one ongoing Phase 2 protocol, the preclinical animal evidence, the mesolimbic dopamine mechanism, and the head-to-head against the three FDA-approved AUD medications (naltrexone, acamprosate, disulfiram).",
+    excerpt:
+      "Patient-reported and case-series accounts of semaglutide reducing alcohol cravings have made the rounds on TikTok and in the lay press for two years. The trial-level evidence is much narrower than the social-media coverage suggests. Exactly one completed Phase 2 randomized trial of semaglutide for alcohol use disorder has been published as of 2026 (Hendershot et al., JAMA Psychiatry, n=48). One additional Phase 2 trial (SEMALCO) is in progress. The preclinical animal-model evidence is real and points at a specific mesolimbic dopamine mechanism. But this is not yet an FDA-approved indication, the safety profile in patients with active heavy alcohol use is unstudied, and the standard of care remains naltrexone, acamprosate, and disulfiram. Here's the honest evidence map.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 13,
+    citations: 8,
+    tags: ["Semaglutide", "Alcohol use disorder", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
