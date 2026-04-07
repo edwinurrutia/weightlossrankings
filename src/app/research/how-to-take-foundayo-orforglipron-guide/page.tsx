@@ -7,28 +7,28 @@ import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
 
 const HOW_TO_STEPS: HowToStep[] = [
   {
-    name: "Take Foundayo first thing in the morning",
-    text: "Take Foundayo with a sip of plain water within the first 30 minutes of waking, before any food, beverage, or other oral medication.",
-  },
-  {
-    name: "Wait at least 30 minutes before eating or drinking anything else",
-    text: "No coffee, no tea, no protein shake, no other pills. Plain water only. Any other oral intake in the 30-minute window will substantially reduce Foundayo absorption.",
+    name: "Take Foundayo once daily, any time of day",
+    text: "Swallow one Foundayo tablet whole, once daily. The Foundayo prescribing information allows administration at any time of day, with or without food, with no water restrictions. Pick a time that fits your routine and take it consistently to keep the daily rhythm steady.",
   },
   {
     name: "Use the labeled titration schedule",
-    text: "Foundayo titrates over 6 four-week steps: 0.8 mg → 2.5 mg → 5.5 mg → 9 mg → 14.5 mg → 17.2 mg. Do not skip steps. Stay on the current dose at least 4 weeks before escalating.",
+    text: "Foundayo titrates upward in steps with at least 30 days between each dose increase, per the FDA label. Do not skip steps and do not escalate faster than every 30 days, even if you are tolerating the current dose well — slow titration is the main lever for minimizing nausea.",
   },
   {
-    name: "If you miss a dose, do not double up the next day",
-    text: "If you remember within several hours of your normal time, take it as soon as possible (still on an empty stomach). If you only remember the next morning, skip the missed dose and take your normal dose. Never take two Foundayo doses in the same day.",
+    name: "If you miss a dose, take it as soon as you remember the same day",
+    text: "If you remember the same day you missed your dose, take it as soon as you remember. If it is already the next day, skip the missed dose and resume your normal once-daily schedule. Never take two doses in the same day.",
   },
   {
-    name: "Use backup contraception for 30 days after starting and after each dose increase",
-    text: "Per Foundayo PI Section 7.1, women on oral contraceptives should add a barrier method (or switch to a non-oral hormonal method, IUD, or implant) for 30 days after starting Foundayo and 30 days after each dose increase, because oral contraceptive absorption is slowed.",
+    name: "Use backup contraception around start and dose escalations",
+    text: "Per the Foundayo prescribing information, women on oral contraceptives should add a barrier method (or switch to a non-oral hormonal method, IUD, or implant) for 4 weeks after initiating Foundayo and for 4 weeks after each dose escalation, because GLP-1 receptor agonists slow gastric emptying and can affect oral contraceptive absorption. Confirm the exact protocol with your prescriber.",
+  },
+  {
+    name: "Watch for strong CYP3A4 inhibitors and interacting medications",
+    text: "Co-administration with strong CYP3A4 inhibitors increases orforglipron exposure. The Foundayo label limits the maximum dose to 9 mg once daily when used with a strong CYP3A4 inhibitor. Tell your prescriber about every prescription, OTC medication, and supplement you take before starting and at every dose change.",
   },
   {
     name: "Store at room temperature",
-    text: "Foundayo is a tablet — no refrigeration required. Store in the original bottle at room temperature, away from moisture and direct sunlight. Major travel advantage over the injectable GLP-1s.",
+    text: "Foundayo is a tablet — no refrigeration required. Store at controlled room temperature in the original packaging, away from moisture and direct sunlight, and out of reach of children. The lack of cold chain is a real advantage over the injectable GLP-1s when traveling.",
   },
 ];
 
@@ -117,16 +117,17 @@ export default function FoundayoHowToTakeArticle() {
         data-speakable="lead"
       >
         Foundayo (orforglipron) is the first oral, non-peptide GLP-1
-        receptor agonist approved by the FDA for chronic weight management,
-        cleared on <strong>April 1, 2026</strong> based on the ATTAIN-1
-        phase 3 trial<Cite n={1} /><Cite n={2} />. Unlike Wegovy and
-        Zepbound, it is a daily tablet — but unlike Rybelsus, it is a
-        small molecule rather than a peptide, which gives it more
-        forgiving but still strict food and timing rules. This guide
-        walks through exactly how to take it: the titration steps from
-        the FDA label, the morning empty-stomach window, the food and
-        beverage pitfall that can wreck absorption, the missed-dose
-        rule, the 30-day backup contraception requirement, and what to
+        receptor agonist approved by the FDA for chronic weight
+        management, cleared on <strong>April 1, 2026</strong> based on
+        the ATTAIN-1 phase 3 trial<Cite n={1} /><Cite n={2} />. Unlike
+        Wegovy and Zepbound it is a daily tablet, and unlike Rybelsus
+        (oral semaglutide) it is a small molecule rather than a peptide,
+        which is why the FDA-approved Foundayo label allows it to be
+        taken <strong>any time of day, with or without food, with no
+        water restrictions</strong><Cite n={1} /><Cite n={3} />. This
+        guide walks through exactly how to take it: the titration steps
+        from the FDA label, the missed-dose rule, the contraceptive
+        warning, the strong CYP3A4 inhibitor dose cap, and what to
         expect at each step of the schedule.
       </p>
 
@@ -141,11 +142,10 @@ export default function FoundayoHowToTakeArticle() {
         GLP-1 currently FDA-approved for chronic weight management in
         adults with obesity (BMI &ge; 30) or overweight (BMI &ge; 27)
         with at least one weight-related comorbidity<Cite n={1} />. At
-        the FDA-approved 17.2 mg labeled maximum dose, adults without
-        type 2 diabetes lost approximately <strong>11.1%</strong> of
-        body weight on average (about 24.9 lbs) at 72 weeks per the
-        Foundayo prescribing information; adults with type 2 diabetes
-        lost about 9.6% (21.2 lbs)<Cite n={1} />.
+        the FDA-approved labeled maintenance dose, ATTAIN-1 participants
+        without type 2 diabetes lost approximately <strong>11.1%</strong>{" "}
+        of body weight on average at 72 weeks per the Foundayo
+        prescribing information<Cite n={1} /><Cite n={2} />.
       </p>
 
       <h2>The titration schedule from the FDA label</h2>
@@ -196,67 +196,47 @@ export default function FoundayoHowToTakeArticle() {
         evidence that a slower titration reduces final weight loss.
       </p>
 
-      <h2>Time of day: morning, on an empty stomach</h2>
+      <h2>Time of day and food: any time, with or without food</h2>
       <p>
-        The Foundayo label requires you to take the tablet{" "}
+        This is where Foundayo differs sharply from the older oral
+        semaglutide pill (Rybelsus). The Foundayo prescribing
+        information allows the tablet to be taken{" "}
         <strong>
-          in the morning, on an empty stomach, with no more than 4
-          ounces of plain water, at least 30 minutes before any food,
-          beverage other than water, or other oral medications
+          at any time of day, with or without food, with no water
+          restrictions
         </strong>
-        <Cite n={1} />. This rule mirrors the administration paradigm
-        for oral semaglutide (Rybelsus)<Cite n={4} /> and exists because
-        food and other liquids can dramatically reduce orforglipron
-        absorption. In the dedicated food-effect pharmacokinetic study
-        by Ma et al. 2024, taking orforglipron with a high-fat meal
-        substantially decreased peak concentration and total
-        exposure compared to the fasted state<Cite n={3} />.
+        <Cite n={1} />. There is no morning fasting window, no 4-ounce
+        plain water rule, and no 30-minute wait before coffee, food, or
+        other medications. The dedicated food-effect pharmacokinetic
+        study by Ma et al. 2024 supported this label position: peak
+        concentration and total exposure were not affected in a
+        clinically meaningful way by food<Cite n={3} />. That food-
+        independent administration was a major part of the design
+        rationale for orforglipron and is one of the central practical
+        differences from Rybelsus<Cite n={4} />.
       </p>
       <p>
-        The practical version of the rule is simple: the moment you
-        wake up, swallow the tablet with a small sip of plain water,
-        then start a 30-minute timer. During those 30 minutes you may
-        drink more plain water, but nothing else — no coffee, no tea,
-        no juice, no sparkling water, no electrolyte mix, no milk, no
-        food, and no other pills or supplements. After 30 minutes you
-        can have your normal breakfast, coffee, and any other
-        medications.
+        The only practical guidance is the standard advice that applies
+        to any daily medication: pick a time you will remember,
+        consistently take it at that time, and swallow the tablet whole
+        rather than crushing, splitting, or chewing it. Many patients
+        anchor it to a daily habit they already have — first thing in
+        the morning, with breakfast, with dinner, or at bedtime — to
+        keep adherence high.
       </p>
 
-      <h2>The food and drink rule is the practical pitfall</h2>
+      <h2>Drug interaction note: strong CYP3A4 inhibitors cap the dose</h2>
       <p>
-        This is the single most important thing to get right. Patients
-        who take Foundayo with their morning coffee, or who swallow it
-        with juice or milk, or who eat breakfast 10 minutes after the
-        tablet, are likely cutting their absorbed dose by a meaningful
-        fraction<Cite n={3} />. They will lose less weight than the
-        trial participants did, blame the drug, and switch to an
-        injectable that they could have avoided.
+        Orforglipron is metabolized in part by CYP3A4. The Foundayo
+        label limits the maximum dose to{" "}
+        <strong>9 mg once daily when co-administered with a strong
+        CYP3A4 inhibitor</strong> (for example clarithromycin,
+        itraconazole, ketoconazole, or ritonavir-boosted antivirals)
+        <Cite n={1} />. Tell your prescriber about every prescription,
+        OTC product, and supplement you take before starting Foundayo
+        and at every dose change so the labeled dose cap can be applied
+        if needed.
       </p>
-      <ul>
-        <li>
-          <strong>Plain water only</strong> for swallowing the tablet
-          and for the 30-minute window. Mineral water and sparkling
-          water are not on the label as acceptable; stick to plain
-          still water.
-        </li>
-        <li>
-          <strong>No coffee, tea, or any caloric beverage</strong>{" "}
-          before the 30-minute window closes. This is the most common
-          accidental violation.
-        </li>
-        <li>
-          <strong>No other oral medications or supplements</strong>{" "}
-          inside the 30-minute window. If you take a morning thyroid
-          tablet, blood pressure pill, or multivitamin, plan the order:
-          Foundayo first, wait 30 minutes, then everything else with
-          breakfast.
-        </li>
-        <li>
-          <strong>Do not crush, split, or chew the tablet.</strong>{" "}
-          Swallow whole.
-        </li>
-      </ul>
 
       <h2>What to do if you miss a dose</h2>
       <p>
@@ -266,16 +246,13 @@ export default function FoundayoHowToTakeArticle() {
       </p>
       <ul>
         <li>
-          If you remember <strong>the same day</strong> and you have
-          not yet eaten or had any non-water beverage, take the missed
-          dose immediately on an empty stomach and start a fresh
-          30-minute fasting window.
+          If you remember <strong>the same day</strong> you missed the
+          dose, take it as soon as you remember.
         </li>
         <li>
-          If you have already eaten or had coffee or other beverages
-          that morning, <strong>skip the dose for that day</strong> and
-          resume your normal once-daily morning schedule the next
-          morning. Do not double up the next day.
+          If it is already the next day, <strong>skip the missed
+          dose</strong> and resume your normal once-daily schedule.
+          Never take two doses in the same day.
         </li>
         <li>
           If you miss more than a few consecutive days, contact your
@@ -286,26 +263,22 @@ export default function FoundayoHowToTakeArticle() {
         </li>
       </ul>
 
-      <h2>The 30-day backup contraception rule</h2>
+      <h2>The backup contraception rule</h2>
       <p>
-        Section 7.1 of the Foundayo PI includes an important warning
-        for women using oral hormonal contraceptives<Cite n={1} />.
-        Because GLP-1 receptor agonists slow gastric emptying and
-        because Foundayo itself can affect the absorption of co-
-        administered oral medications, the label recommends that women
-        on combined oral contraceptives or progestin-only pills{" "}
+        The Foundayo prescribing information includes an important
+        warning for women using oral hormonal contraceptives
+        <Cite n={1} />. Because GLP-1 receptor agonists slow gastric
+        emptying and because orforglipron can affect the absorption of
+        co-administered oral medications, the label recommends that
+        women on combined oral contraceptives or progestin-only pills{" "}
         <strong>
           add a barrier method (or switch to a non-oral contraceptive)
           for 4 weeks after initiating Foundayo and for 4 weeks after
           each dose escalation
         </strong>
-        . The conservative practical rule that many prescribers give
-        is: assume your oral contraceptive is unreliable for the first
-        30 days of Foundayo and for 30 days after every dose step-up,
-        and use condoms or another non-oral method during those
-        windows. If you are sexually active and pregnancy would be a
-        problem, this is not optional — confirm the exact protocol with
-        your prescriber before starting.
+        . If you are sexually active and pregnancy would be a problem,
+        this is not optional — confirm the exact protocol with your
+        prescriber before starting.
       </p>
 
       <h2>What to expect at each titration step</h2>
@@ -383,16 +356,16 @@ export default function FoundayoHowToTakeArticle() {
           prescription medication.
         </li>
         <li>
-          <strong>No injection routine to disrupt.</strong> The only
-          travel logistics are timing your morning fasted window —
-          which is the same problem as taking a daily levothyroxine on
-          the road and is solved the same way.
+          <strong>No injection routine to disrupt.</strong> Just take
+          the daily tablet on your normal schedule, with or without
+          food, exactly as you would at home.
         </li>
         <li>
           <strong>Time zone changes:</strong> shift the dose to the new
-          local morning. Because the half-life of orforglipron is long
-          enough to support once-daily dosing, a single shifted day
-          will not meaningfully change steady-state concentration.
+          local time you plan to take it. Because the half-life of
+          orforglipron is long enough to support once-daily dosing, a
+          single shifted day will not meaningfully change steady-state
+          concentration.
         </li>
       </ul>
 
@@ -406,19 +379,17 @@ export default function FoundayoHowToTakeArticle() {
           <strong>Choose Foundayo if:</strong> needles are a hard stop
           for you, you travel frequently and the cold chain is a real
           obstacle, you live somewhere without reliable refrigeration,
-          you have a morning routine that already includes a
-          well-spaced fasted period (e.g. you already take morning
-          thyroid medication), or you have tried injectables and
-          discontinued for injection-site or needle reasons.
+          you prefer a daily oral pill over a weekly injection, or you
+          have tried injectables and discontinued for injection-site or
+          needle reasons.
         </li>
         <li>
           <strong>Choose an injectable (Wegovy or Zepbound) if:</strong>{" "}
           you want the highest possible average weight loss (the
-          tirzepatide trials produced ~21% mean loss vs Foundayo&apos;s
-          ~11.1% at the 17.2 mg labeled dose<Cite n={1} />), you know
-          you will not reliably take a daily morning fasted tablet,
-          your morning routine is chaotic, or you are already happy on
-          once-weekly dosing.
+          tirzepatide trials produced ~21% mean loss at the 15 mg dose
+          vs Foundayo&apos;s ~11.1% at the labeled maintenance dose
+          <Cite n={1} />), you know you will not reliably take a daily
+          tablet, or you are already happy on once-weekly dosing.
         </li>
       </ul>
       <p>
@@ -434,26 +405,26 @@ export default function FoundayoHowToTakeArticle() {
       <ul>
         <li>
           Foundayo is the first oral, non-peptide GLP-1 approved for
-          weight management, dosed as a once-daily tablet titrated over
-          20 weeks from 0.8 mg to a maintenance dose of 17.2 mg
-          <Cite n={1} />.
+          weight management, dosed as a once-daily tablet titrated upward
+          to a maintenance dose with at least 30 days between dose
+          increases<Cite n={1} />.
         </li>
         <li>
-          Take it in the morning on an empty stomach with no more than
-          4 oz of plain water, then wait at least 30 minutes before any
-          food, non-water beverage, or other oral medication
-          <Cite n={1} /><Cite n={3} />.
+          The Foundayo label allows administration{" "}
+          <strong>any time of day, with or without food, with no water
+          restrictions</strong> — there is no morning fasting window
+          <Cite n={1} /><Cite n={3} />. This is the central practical
+          difference from Rybelsus<Cite n={4} />.
         </li>
         <li>
-          The food-and-drink rule is the single biggest practical
-          pitfall. Coffee, juice, milk, or breakfast inside the
-          30-minute window can substantially reduce absorbed dose
-          <Cite n={3} />.
+          With strong CYP3A4 inhibitors the labeled maximum dose is
+          capped at 9 mg once daily<Cite n={1} />. Always reconcile your
+          medication list with your prescriber before starting.
         </li>
         <li>
-          Missed a dose? If you have not yet eaten, take it that
-          morning. If you already broke the fast, skip and resume the
-          next morning — never double up.
+          Missed a dose? If you remember the same day, take it. If it is
+          already the next day, skip and resume the normal schedule. Never
+          double up.
         </li>
         <li>
           Women on oral contraceptives should add a barrier method for
