@@ -9,6 +9,7 @@ const footerColumns = [
       { label: "All Providers", href: "/compare" },
       { label: "Best Semaglutide", href: "/best/semaglutide-providers" },
       { label: "Best Tirzepatide", href: "/best/tirzepatide-providers" },
+      { label: "Best Orforglipron", href: "/best/orforglipron-providers" },
       { label: "Best Programs", href: "/best/weight-loss-programs" },
     ],
   },
