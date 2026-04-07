@@ -226,6 +226,62 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Adolescents", "PubMed sourced"],
   },
   {
+    slug: "foundayo-orforglipron-fda-approval-2026",
+    title:
+      "Foundayo (orforglipron) Approved: The First Once-Daily Oral GLP-1 Pill for Weight Loss",
+    description:
+      "Eli Lilly's Foundayo (orforglipron) was approved by the FDA on April 1, 2026, becoming the first once-daily small-molecule oral GLP-1 receptor agonist approved for chronic weight management. We walk through the ATTAIN-1 trial data, the dosing, the $25-$149/month pricing, and how the oral pill compares to injectable semaglutide and tirzepatide.",
+    excerpt:
+      "On April 1, 2026, the FDA approved Foundayo (orforglipron), Eli Lilly's once-daily oral GLP-1 pill for chronic weight management — the first non-peptide small-molecule GLP-1 receptor agonist ever approved for obesity. In the 72-week ATTAIN-1 phase 3 trial, the highest dose produced 12.4% weight loss (about 27 pounds) versus 0.9% on placebo. Lilly is launching at $25/month with commercial coverage and $149/month for self-pay through LillyDirect, making this the most accessible branded GLP-1 to date. Here's the verified trial data, dosing, safety profile, and how it compares to injectable Wegovy and Zepbound.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 12,
+    citations: 5,
+    tags: ["Orforglipron", "Foundayo", "FDA approval"],
+  },
+  {
+    slug: "cagrisema-redefine-trial-results-2026",
+    title:
+      "CagriSema REDEFINE: What Novo Nordisk's Amylin Combination Actually Showed",
+    description:
+      "CagriSema (cagrilintide + semaglutide) is Novo Nordisk's next-generation amylin-GLP-1 combination injection. We walk through the REDEFINE 1 and REDEFINE 2 phase 3 trial results — 22.7% adherent weight loss in non-diabetic patients, 15.7% in patients with type 2 diabetes — and explain why the result missed the 25% target Novo had guided to but still beat semaglutide alone.",
+    excerpt:
+      "CagriSema is Novo Nordisk's combination of cagrilintide (an amylin analog) and semaglutide (a GLP-1 agonist) — designed to outperform semaglutide alone by adding a second appetite-suppression mechanism. The REDEFINE 1 trial in 3,400+ adults with overweight or obesity (no diabetes) reported 20.4% mean weight loss at 68 weeks — 22.7% on the adherent estimand — versus 14.9% with semaglutide alone, 11.5% with cagrilintide alone, and 3.0% with placebo. REDEFINE 2 in patients with type 2 diabetes showed 13.7% vs 3.4% placebo. The results missed the 25% benchmark Novo had guided investors toward, but still represent the largest weight loss ever shown for an injectable combination of approved or near-approved drugs. Novo has filed an NDA. Here's the verified trial data and what it means for patients.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 13,
+    citations: 6,
+    tags: ["CagriSema", "Cagrilintide", "Pipeline"],
+  },
+  {
+    slug: "retatrutide-triple-agonist-evidence-2026",
+    title:
+      "Retatrutide: What We Know About Lilly's Triple Agonist as TRIUMPH-4 Reads Out",
+    description:
+      "Retatrutide is Eli Lilly's investigational triple agonist targeting GLP-1, GIP, and glucagon receptors. The first phase 3 readout (TRIUMPH-4) reported 28.7% mean weight loss at the highest dose in adults with obesity and knee osteoarthritis. We walk through the published phase 2 data, the TRIUMPH-4 results, the open trials, and the new safety signal that emerged in the phase 3 program.",
+    excerpt:
+      "Retatrutide (LY3437943) is Eli Lilly's investigational triple agonist — it activates GLP-1, GIP, and glucagon receptors simultaneously. The phase 2 trial published in NEJM 2023 (Jastreboff et al.) showed up to 24.2% body weight reduction at 48 weeks at the highest dose, the largest weight loss any pharmacological obesity therapy had ever produced in a controlled trial. The first phase 3 readout, TRIUMPH-4 (n=445, knee osteoarthritis + obesity, December 2025), confirmed and extended that signal: 28.7% mean weight loss (about 71 pounds) and 75.8% reduction in OA pain at the highest dose. Seven additional TRIUMPH phase 3 readouts are expected throughout 2026. Here's the verified trial data, the proposed mechanism, and the new safety signal flagged in the TRIUMPH program.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 13,
+    citations: 6,
+    tags: ["Retatrutide", "Pipeline", "Triple agonist"],
+  },
+  {
+    slug: "step-hfpef-semaglutide-heart-failure",
+    title:
+      "STEP-HFpEF: How Semaglutide Treats Heart Failure With Preserved Ejection Fraction",
+    description:
+      "The STEP-HFpEF trial family (Kosiborod et al., NEJM 2023 and 2024) randomized 1,145 patients with heart failure with preserved ejection fraction and obesity to semaglutide 2.4 mg or placebo. The KCCQ symptom score improved 7-8 points more than placebo, body weight dropped 6-11 percentage points more, and the 6-minute walk distance improved 17 meters. Here's the verified trial data and where semaglutide fits alongside the SGLT2 inhibitors in HFpEF care.",
+    excerpt:
+      "Heart failure with preserved ejection fraction (HFpEF) is one of the hardest cardiovascular phenotypes to treat. For decades there were no disease-modifying therapies. The SGLT2 inhibitors changed that with EMPEROR-Preserved (2021) and DELIVER (2022). Then Kosiborod et al. published STEP-HFpEF in NEJM in 2023 and STEP-HFpEF DM in 2024, demonstrating that semaglutide 2.4 mg in patients with HFpEF and obesity improved both heart failure symptoms (KCCQ-CSS) and functional capacity (6-minute walk distance) on top of weight loss. The pooled analysis (Lancet 2024) confirmed the benefit. Here's the verified trial data, how it compares to the SGLT2 inhibitor evidence, and what it means for the obesity-HFpEF phenotype.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 14,
+    citations: 8,
+    tags: ["Semaglutide", "Heart failure", "PubMed sourced"],
+  },
+  {
     slug: "flow-trial-semaglutide-kidney-disease",
     title:
       "FLOW: How Semaglutide Became the First GLP-1 Approved for Diabetic Kidney Disease",
