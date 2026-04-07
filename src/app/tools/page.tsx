@@ -10,10 +10,31 @@ export const metadata: Metadata = {
 
 const TOOLS = [
   {
+    slug: "glp1-weight-loss-calculator",
+    title: "GLP-1 Weight Loss Calculator",
+    description:
+      "STEP-1, SURMOUNT-1, and ATTAIN-1 trial-data-backed predictor. Enter your starting weight and target week to see week-by-week predicted weight loss across all three drugs.",
+    tag: "Weight loss predictor",
+  },
+  {
+    slug: "glp1-bmi-calculator",
+    title: "GLP-1 BMI Calculator",
+    description:
+      "BMI calculator with a GLP-1 outcome overlay. See your current WHO BMI category, your Wegovy/Zepbound FDA eligibility, and what category you'd land in at each trial endpoint.",
+    tag: "BMI + eligibility",
+  },
+  {
+    slug: "glp1-savings-calculator-2026",
+    title: "GLP-1 Savings Calculator 2026",
+    description:
+      "Compare 10 different access paths — brand-name, manufacturer direct-pay, compounded vials, and the new Foundayo at $149/month — and see your monthly, yearly, and 5-year savings or extra cost.",
+    tag: "Cost comparison",
+  },
+  {
     slug: "glp1-unit-converter",
     title: "GLP-1 Unit ↔ mg Converter",
     description:
-      "Convert prescribed milligrams of compounded semaglutide or tirzepatide to insulin syringe units (and back) at any vial concentration. Answers 'how many units is 2.5 mg of tirzepatide?' and every variation. FDA prescribing information and BD insulin syringe specifications cited.",
+      "Convert prescribed milligrams of compounded semaglutide or tirzepatide to insulin syringe units (and back) at any vial concentration. Now includes a reconstitution (BAC water) calculator for lyophilized vials. FDA prescribing information cited.",
     tag: "Dosage calculator",
   },
   {

@@ -25,8 +25,11 @@ const footerColumns = [
   {
     heading: "Tools",
     links: [
+      { label: "Weight Loss Calculator", href: "/tools/glp1-weight-loss-calculator" },
+      { label: "BMI Calculator", href: "/tools/glp1-bmi-calculator" },
       { label: "GLP-1 Unit Converter", href: "/tools/glp1-unit-converter" },
       { label: "GLP-1 Dose Plotter", href: "/tools/glp1-dose-plotter" },
+      { label: "Savings Calculator 2026", href: "/tools/glp1-savings-calculator-2026" },
       { label: "Savings Calculator", href: "/savings-calculator" },
       { label: "Price Tracker", href: "/price-tracker" },
       { label: "Insurance Checker", href: "/insurance-checker" },

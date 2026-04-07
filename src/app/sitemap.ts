@@ -89,6 +89,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9, // huge low-KD search demand (~31k/mo)
     },
     {
+      url: `${BASE_URL}/tools/glp1-weight-loss-calculator`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.9, // STEP-1/SURMOUNT-1/ATTAIN-1 trial-backed predictor
+    },
+    {
+      url: `${BASE_URL}/tools/glp1-bmi-calculator`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85, // BMI eligibility + GLP-1 outcome overlay
+    },
+    {
+      url: `${BASE_URL}/tools/glp1-savings-calculator-2026`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85, // 10-path cost comparison
+    },
+    {
       url: `${BASE_URL}/tools/insurance-employer-checker`,
       lastModified: now,
       changeFrequency: "weekly" as const,

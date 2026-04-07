@@ -491,6 +491,32 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 8,
     tags: ["Semaglutide", "Alcohol use disorder", "PubMed sourced"],
   },
+  {
+    slug: "semaglutide-para-que-sirve",
+    title: "Semaglutida: para qué sirve, cómo funciona y qué dicen los estudios clínicos",
+    description:
+      "Guía en español sobre la semaglutida (Wegovy, Ozempic): para qué sirve, cómo actúa como agonista del receptor de GLP-1, qué pérdida de peso mostró el estudio STEP 1, reacciones adversas, contraindicaciones y costo en Estados Unidos.",
+    excerpt:
+      "La semaglutida es un agonista del receptor de GLP-1 aprobado por la FDA para la diabetes tipo 2 (Ozempic) y el manejo crónico del peso (Wegovy). En el estudio STEP 1 (Wilding, NEJM 2021, n=1,961), los adultos con sobrepeso u obesidad sin diabetes perdieron en promedio 14.9% del peso corporal en 68 semanas con una inyección subcutánea semanal de 2.4 mg. Esta guía en español explica cómo funciona, para qué sirve, las reacciones adversas más frecuentes, quién no debe usarla y qué costos esperar en Estados Unidos.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 12,
+    citations: 8,
+    tags: ["Semaglutida", "Español", "PubMed sourced"],
+  },
+  {
+    slug: "tirzepatide-para-que-sirve",
+    title: "Tirzepatida: para qué sirve, cómo funciona y qué dicen los estudios clínicos",
+    description:
+      "Guía en español sobre la tirzepatida (Zepbound, Mounjaro): para qué sirve, cómo actúa como agonista dual de los receptores de GIP y GLP-1, qué pérdida de peso mostró el estudio SURMOUNT-1, reacciones adversas, contraindicaciones y costo en Estados Unidos.",
+    excerpt:
+      "La tirzepatida es un agonista dual de los receptores de GIP y GLP-1 aprobado por la FDA para la diabetes tipo 2 (Mounjaro) y el manejo crónico del peso (Zepbound). En el estudio SURMOUNT-1 (Jastreboff, NEJM 2022, n=2,539), los adultos con sobrepeso u obesidad sin diabetes perdieron en promedio 20.9% del peso corporal en 72 semanas con la dosis de 15 mg en inyección subcutánea semanal. Esta guía en español explica cómo funciona, para qué sirve, las reacciones adversas más frecuentes, quién no debe usarla y qué costos esperar en Estados Unidos.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 12,
+    citations: 8,
+    tags: ["Tirzepatida", "Español", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
