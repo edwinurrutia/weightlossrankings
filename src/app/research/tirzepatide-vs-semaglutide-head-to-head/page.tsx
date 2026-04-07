@@ -122,22 +122,46 @@ export default function HeadToHeadArticle() {
       <ul>
         <li>
           <strong>Semaglutide 2.4 mg:</strong> mean weight loss of
-          14.9% at 68 weeks. About 32% of patients reached &ge;20% body
-          weight loss.
+          &minus;14.9% at 68 weeks (STEP-1 treatment-regimen estimand,
+          the primary ITT-style published value). About 32% of patients
+          reached &ge;20% body weight loss.
         </li>
         <li>
-          <strong>Tirzepatide 15 mg:</strong> mean weight loss of 22.5%
-          at 72 weeks. About 57% of patients reached &ge;20% body weight
-          loss.
+          <strong>Tirzepatide 15 mg:</strong> mean weight loss of
+          &minus;20.9% at 72 weeks (SURMOUNT-1 treatment-regimen
+          estimand, the primary published value; the lower 5 mg and
+          10 mg doses produced &minus;15.0% and &minus;19.5%
+          respectively). About 50% of patients reached &ge;20% body
+          weight loss on the treatment-regimen estimand.
         </li>
       </ul>
 
       <p>
-        That&apos;s roughly a 7-8 percentage point absolute difference,
-        which translates to about 50% more weight loss on tirzepatide
+        That&apos;s roughly a 6 percentage point absolute difference,
+        which translates to about 40% more weight loss on tirzepatide
         than semaglutide at maximum dose. The difference is large, it&apos;s
         statistically robust, and it has held up across subsequent trial
         replications.
+      </p>
+
+      <p>
+        <strong>A note on estimands.</strong> Both of the numbers above
+        are the FDA-approved primary &ldquo;treatment-regimen&rdquo;
+        estimand &mdash; the ITT-equivalent that includes all
+        randomized participants regardless of whether they stayed
+        adherent to the drug. The published &ldquo;efficacy
+        estimand&rdquo; (on-treatment, adherent population) is somewhat
+        higher for both drugs: roughly &minus;16.0% for semaglutide
+        2.4 mg in STEP-1, and &minus;16.0% / &minus;21.4% / &minus;22.5%
+        at the 5/10/15 mg tirzepatide doses in SURMOUNT-1. The
+        headline &ldquo;22.5% vs 14.9%&rdquo; comparison you&apos;ll
+        see quoted in many places mixes a tirzepatide efficacy estimand
+        with a semaglutide treatment-regimen estimand, which isn&apos;t
+        an apples-to-apples comparison. When comparing GLP-1s, always
+        use the same estimand for both drugs. We use the
+        treatment-regimen values throughout this article because
+        that&apos;s the primary estimand on both the Wegovy and Zepbound
+        FDA labels.
       </p>
 
       <p>
@@ -305,8 +329,8 @@ export default function HeadToHeadArticle() {
         </li>
         <li>
           <strong>Brand-name Zepbound</strong> at ~$1,086/month list
-          price (Lilly recently lowered cash-pay), producing 22.5%
-          weight loss over 72 weeks: roughly <strong>$120 per pound
+          price (Lilly recently lowered cash-pay), producing 20.9%
+          weight loss over 72 weeks: roughly <strong>$129 per pound
           lost</strong>.
         </li>
         <li>
@@ -349,7 +373,7 @@ export default function HeadToHeadArticle() {
       <ul>
         <li>
           <strong>Higher BMI (40+) seeking maximum weight loss:</strong>{" "}
-          tirzepatide. The 7-8 point absolute weight-loss advantage is
+          tirzepatide. The ~6 point absolute weight-loss advantage is
           larger in absolute terms when you have more weight to lose,
           and the cost differential matters less proportionally.
         </li>

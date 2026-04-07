@@ -222,13 +222,16 @@ export default function MuscleMassArticle() {
       <h2>What the trials show actually preserves lean mass</h2>
 
       <p>
-        The good news is that resistance training and adequate protein
-        intake during semaglutide therapy have been studied directly, and
-        the results are encouraging. A 2024 randomized trial paired
-        semaglutide with a structured resistance-training program in
-        healthy adults with overweight; the training arm lost the same
-        amount of total weight as the semaglutide-only arm but preserved
-        roughly twice as much lean body mass at 32 weeks.
+        The good news is that exercise and adequate protein intake
+        during GLP-1 therapy have been studied directly, and the
+        results are encouraging. Several trials have shown that
+        structured exercise during or after GLP-1 receptor agonist
+        therapy preserves more lean body mass than diet or drug
+        alone &mdash; Sandsdal and colleagues (Cardiovascular
+        Diabetology, 2023) reported that combining exercise with
+        GLP-1 receptor agonist treatment reduced the severity of
+        adverse body composition changes compared with the drug
+        alone in adults with obesity.
         <Cite n={12} />
       </p>
 

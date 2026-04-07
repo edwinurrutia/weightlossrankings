@@ -63,11 +63,11 @@ export default function GlpAudArticle() {
     },
     {
       authors:
-        "Vallöf D, Maccioni P, Colombo G, Mandrapa M, Jörnulf JW, Egecioglu E, Engel JA, Jerlhag E.",
+        "Vallöf D, Vestlund J, Jerlhag E.",
       title:
-        "The glucagon-like peptide 1 receptor agonist liraglutide attenuates the reinforcing properties of alcohol in rodents.",
-      source: "Addiction Biology",
-      year: 2016,
+        "Glucagon-like peptide-1 receptors within the nucleus of the solitary tract regulate alcohol-mediated behaviors in rodents.",
+      source: "Neuropharmacology",
+      year: 2019,
       pmid: "30771711",
     },
     {
@@ -164,10 +164,12 @@ export default function GlpAudArticle() {
       </ul>
 
       <p>
-        The headline result was that semaglutide significantly reduced
-        the amount of alcohol consumed per drinking day during the
-        laboratory session (β = −0.48 grams per drinking day, P=0.01) [1].
-        The trial also reported reductions in alcohol craving and weekly
+        The headline result was that semaglutide produced a
+        statistically significant reduction in grams of alcohol
+        consumed per drinking day in the semaglutide arm versus
+        placebo during the laboratory self-administration session
+        [1]. The trial also reported reductions in alcohol craving
+        and weekly
         alcohol consumption in the semaglutide arm relative to placebo.
         Importantly, the trial <strong>did not</strong> demonstrate a
         statistically significant reduction in the number of drinking
@@ -222,8 +224,9 @@ export default function GlpAudArticle() {
         semaglutide reduced alcohol intake and relapse-like drinking
         in both male and female rats across multiple exposure
         paradigms [3]. Earlier work from Vallöf and colleagues
-        established that liraglutide attenuated the reinforcing
-        properties of alcohol in rodent models [4]. The Jerlhag
+        (Neuropharmacology, 2019) established that GLP-1 receptors
+        within the nucleus of the solitary tract regulate
+        alcohol-mediated behaviors in rodent models [4]. The Jerlhag
         (Frontiers in Pharmacology, 2023) review summarized the
         broader preclinical literature across multiple GLP-1 agents
         and multiple addictive substances [5].

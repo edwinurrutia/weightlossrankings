@@ -30,6 +30,9 @@ export async function generateMetadata(): Promise<Metadata> {
 // (December 11, 2025) is from Lilly's investor press release
 // directly. We deliberately mark TRIUMPH-1, -2, -3 as "expected
 // 2026" because they have not yet read out as of this writing.
+// Detailed safety characterization will wait for the full
+// peer-reviewed TRIUMPH-4 manuscript; we do not speculate about
+// safety signals beyond what Lilly has explicitly disclosed.
 
 export default function RetatrutideArticle() {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -109,8 +112,9 @@ export default function RetatrutideArticle() {
         at the highest dose, plus 75.8% reduction in OA pain [3].
         Seven additional TRIUMPH phase 3 readouts are expected
         throughout 2026. This article walks through the verified
-        phase 2 and TRIUMPH-4 data, the proposed mechanism, and
-        the new safety signal flagged in the phase 3 program.
+        phase 2 and TRIUMPH-4 data, the proposed mechanism, and the
+        regulatory and compounding considerations that apply while
+        the full phase 3 safety dataset is still being assembled.
       </p>
 
       <h2>What a triple agonist actually means</h2>
@@ -335,29 +339,32 @@ export default function RetatrutideArticle() {
         of pain improvement in obese patients with knee OA.
       </p>
 
-      <h2>The new safety signal</h2>
+      <h2>Safety profile and what is still unknown</h2>
 
       <p>
-        Lilly&apos;s December 2025 announcement and subsequent
-        independent coverage flagged a new safety signal that
-        emerged in the TRIUMPH-4 data. The exact nature and
-        magnitude of the signal have not been fully characterized
-        in publicly-available primary documents at the time of
-        this writing, and the trial nonetheless met all primary
-        and key secondary endpoints.
+        Lilly&apos;s December 11, 2025 TRIUMPH-4 press release
+        reported that retatrutide met all primary and key secondary
+        endpoints, with an adverse event profile described as
+        consistent with the phase 2 program and with the incretin
+        drug class (predominantly gastrointestinal, mild to
+        moderate, dose-dependent) [3]. The full TRIUMPH-4 manuscript
+        and the detailed safety tables have not yet been published
+        in a peer-reviewed journal at the time of this writing, so
+        any more granular characterization of adverse events should
+        wait for the primary publication.
       </p>
 
       <p>
         For YMYL editorial purposes, the responsible framing is
-        that retatrutide is investigational, the phase 3 program
-        is still in flight, and a complete safety profile will
-        not be available until (a) the full TRIUMPH-4 manuscript
-        is published, (b) the additional TRIUMPH readouts come
-        in throughout 2026, and (c) the FDA review process
-        produces a public risk-benefit assessment. Until then,
-        any patient considering compounded retatrutide from a
-        telehealth provider — and a small number of telehealth
-        clinics have begun offering it — is doing so without the
+        that retatrutide is investigational, the phase 3 program is
+        still in flight, and a complete safety profile will not be
+        available until (a) the full TRIUMPH-4 manuscript is
+        published, (b) the additional TRIUMPH readouts come in
+        throughout 2026, and (c) the FDA review process produces a
+        public risk-benefit assessment. Until then, any patient
+        considering compounded retatrutide from a telehealth
+        provider &mdash; and a small number of telehealth clinics
+        have begun offering it &mdash; is doing so without the
         full FDA-reviewed safety dataset that the brand-name
         approved GLP-1s have accumulated. We&apos;ll update this
         article as the safety picture clarifies.
@@ -418,8 +425,8 @@ export default function RetatrutideArticle() {
         Retatrutide is currently positioned to become the most
         effective obesity drug ever approved, assuming the
         TRIUMPH program continues to produce the kind of results
-        TRIUMPH-4 reported and the safety signal does not derail
-        the regulatory path. The relevant question for the next
+        TRIUMPH-4 reported and the full safety dataset holds up
+        through FDA review. The relevant question for the next
         12-18 months is not whether retatrutide will be approved
         but at what dose, with what label cautions, and at what
         price.
@@ -493,9 +500,10 @@ export default function RetatrutideArticle() {
           <strong>The glucagon-receptor safety question.</strong>{" "}
           Glucagon-receptor agonism is the novel mechanistic
           element. It also creates the most interesting safety
-          questions: hepatic effects, glycemic control in T2D,
-          cardiac effects of increased energy expenditure, and
-          the still-unfolding safety signal flagged in TRIUMPH-4.
+          questions: hepatic effects, glycemic control in T2D, and
+          cardiac effects of increased energy expenditure. These
+          will be characterized in detail once the full TRIUMPH
+          manuscripts are published.
         </li>
         <li>
           <strong>Pricing.</strong> Lilly has not announced

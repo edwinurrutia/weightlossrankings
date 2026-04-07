@@ -76,6 +76,14 @@ export default function FoundayoArticle() {
       year: 2022,
       pmid: "35658024",
     },
+    {
+      authors: "Eli Lilly and Company.",
+      title:
+        "FOUNDAYO (orforglipron) tablets — US Prescribing Information. Section 2 (dosage), Section 5 (warnings), Section 7 (drug interactions, strong CYP3A4 inhibitor 9 mg dose cap), Section 12.3 (pharmacokinetics, half-life 29-49 h).",
+      source: "FDA Approved Labeling",
+      year: 2026,
+      url: "https://pi.lilly.com/us/foundayo-uspi.pdf",
+    },
   ];
 
   return (
@@ -156,9 +164,9 @@ export default function FoundayoArticle() {
           <strong>Duration:</strong> 72 weeks
         </li>
         <li>
-          <strong>Geography:</strong> 10 countries — US, Brazil,
-          China, India, Japan, South Korea, Puerto Rico, Slovakia,
-          Spain, and Taiwan
+          <strong>Geography:</strong> 9 countries — US (including
+          Puerto Rico, a US territory), Brazil, China, India, Japan,
+          South Korea, Slovakia, Spain, and Taiwan
         </li>
         <li>
           <strong>Primary endpoint:</strong> Percent change in body
@@ -201,17 +209,11 @@ export default function FoundayoArticle() {
         </thead>
         <tbody>
           <tr>
-            <td>FDA label (17.2 mg, no T2D)</td>
+            <td>FDA label (17.2 mg, adults without T2D)</td>
             <td>Label-reported</td>
             <td>
               <strong>−11.1% (−24.9 lbs)</strong>
             </td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>FDA label (17.2 mg, with T2D)</td>
-            <td>Label-reported</td>
-            <td>−9.6% (−21.2 lbs)</td>
             <td>—</td>
           </tr>
           <tr>
@@ -305,7 +307,28 @@ export default function FoundayoArticle() {
         consistent with the GI-tolerability strategy used by all
         modern GLP-1 agonists. Like semaglutide and tirzepatide,
         Foundayo cannot be combined with other GLP-1 receptor
-        agonist medications.
+        agonist medications. Per the FDA label, the half-life of
+        orforglipron is <strong>29-49 hours</strong>, which is why
+        the drug is dosed once daily [6].
+      </p>
+
+      <h2>Drug interactions: the strong CYP3A4 inhibitor dose cap</h2>
+
+      <p>
+        Orforglipron is metabolized primarily by CYP3A4, and the
+        Foundayo prescribing information carries a specific
+        drug-drug interaction warning: when co-administered with a{" "}
+        <strong>strong CYP3A4 inhibitor</strong> (e.g., clarithromycin,
+        itraconazole, ketoconazole, or ritonavir-boosted antivirals),
+        the maximum labeled Foundayo dose is reduced to{" "}
+        <strong>9 mg once daily</strong> [6]. Patients already
+        titrated above 9 mg who are started on a strong CYP3A4
+        inhibitor should be stepped back to the 9 mg dose for the
+        duration of the interacting medication. This is a labeled
+        DDI warning unique to Foundayo among the GLP-1 weight-loss
+        class — the injectable peptide GLP-1s (semaglutide,
+        tirzepatide) are not metabolized by CYP3A4 and carry no
+        comparable dose cap.
       </p>
 
       <h2>Safety and the boxed warning</h2>
@@ -360,8 +383,15 @@ export default function FoundayoArticle() {
           dose
         </li>
         <li>
-          <strong>Medicare Part D (eligible):</strong> as low as
-          $50 per month, beginning July 1, 2026
+          <strong>Medicare Part D:</strong> not covered for the
+          weight management indication. Section 1860D-2(e)(2)(A) of
+          the Social Security Act excludes &ldquo;agents when used
+          for anorexia, weight loss, or weight gain&rdquo; from
+          Medicare Part D, which is why no FDA-approved GLP-1
+          obesity drug (Wegovy, Zepbound, Saxenda, or Foundayo) is
+          currently covered by Part D for weight loss. Medicare
+          beneficiaries on Foundayo for weight management must pay
+          cash.
         </li>
       </ul>
 

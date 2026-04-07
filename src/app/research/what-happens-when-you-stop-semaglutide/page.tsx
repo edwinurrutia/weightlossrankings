@@ -174,7 +174,7 @@ export default function WhatHappensWhenYouStopSemaglutideArticle() {
         The STEP-1 extension followed 327 participants from the original
         STEP-1 trial [2]. In the original trial, semaglutide produced a
         mean weight loss of 17.3% (SD 9.3%) over 68 weeks of active
-        treatment, versus 2.0% (SD 6.1%) on placebo [2]. After the active
+        treatment, versus 2.4% (SD 6.1%) on placebo [2]. After the active
         treatment phase ended at week 68, semaglutide was discontinued —
         the extension simply tracked what happened next.
       </p>
@@ -237,25 +237,28 @@ export default function WhatHappensWhenYouStopSemaglutideArticle() {
       </table>
 
       <p>
-        SURMOUNT-4 also reported that{" "}
-        <strong>82.5% of the placebo-switched arm regained at least 25%
-        of the weight they had lost during the initial 36-week treatment
-        phase</strong> [4]. That&apos;s a stronger regain signal than
-        STEP-4 produced for semaglutide, possibly because tirzepatide&apos;s
-        deeper appetite suppression creates a larger gap between the
-        on-drug and off-drug homeostatic set point.
+        SURMOUNT-4 also reported that only a small minority of the
+        placebo-switched arm maintained most of their original weight
+        loss over the 52-week randomization phase — the majority
+        regained a substantial fraction of the weight lost during
+        the initial 36-week tirzepatide lead-in [4]. That&apos;s a
+        stronger regain signal than STEP-4 produced for semaglutide,
+        possibly because tirzepatide&apos;s deeper appetite
+        suppression creates a larger gap between the on-drug and
+        off-drug homeostatic set point.
       </p>
 
       <h2>Why the regain happens: the mechanism</h2>
 
       <p>
-        GLP-1 receptor agonists work centrally in the hypothalamus. They
-        activate satiety-promoting neurons (particularly POMC and CART
-        neurons in the dorsomedial hypothalamus) and suppress
-        appetite-stimulating NPY/AgRP neurons. The result is a sustained
-        downward shift in the body&apos;s appetite set point — patients
-        feel full faster, stop thinking about food between meals, and
-        spontaneously eat less without willpower mediation.
+        GLP-1 receptor agonists modulate appetite circuits in the
+        arcuate nucleus of the hypothalamus, including the
+        POMC/CART satiety neurons and the NPY/AgRP hunger neurons
+        (well-established neuroendocrine literature). The net
+        effect is a sustained downward shift in the body&apos;s
+        appetite set point — patients feel full faster, stop
+        thinking about food between meals, and spontaneously eat
+        less without willpower mediation.
       </p>
 
       <p>
@@ -264,17 +267,20 @@ export default function WhatHappensWhenYouStopSemaglutideArticle() {
 
       <ol>
         <li>
-          The central appetite suppression disappears within days, because
-          semaglutide&apos;s half-life is roughly one week. Hunger and
-          food preoccupation return rapidly.
+          The central appetite suppression dissipates as the drug
+          is cleared. Semaglutide has a half-life of roughly one
+          week, so hunger and food preoccupation return over the
+          weeks following the last dose.
         </li>
         <li>
-          The body&apos;s compensatory hormonal signals — ghrelin (the
-          appetite-stimulating gut hormone) and leptin (the satiety
-          hormone secreted by fat tissue) — recalibrate to defend the
-          higher pre-treatment body weight. Ghrelin rises, leptin
-          sensitivity drops as fat stores rebuild, and the homeostatic
-          system actively pulls weight back toward the original set point.
+          Compensatory hormonal signals that regulate long-term
+          energy balance — including ghrelin (the
+          appetite-stimulating gut hormone) and leptin (the
+          satiety hormone secreted by fat tissue) — adjust as
+          fat stores rebuild, and the homeostatic system pulls
+          weight back toward its pre-treatment set point. This
+          defended-set-point physiology is well described in the
+          obesity literature and is not specific to GLP-1s.
         </li>
       </ol>
 

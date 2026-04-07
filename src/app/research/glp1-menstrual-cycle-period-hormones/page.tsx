@@ -101,7 +101,7 @@ export default function MenstrualArticle() {
         "Liraglutide increases IVF pregnancy rates in obese PCOS women with poor response to first-line reproductive treatments: a pilot randomized study.",
       source: "Eur J Endocrinol",
       year: 2018,
-      pmid: "29475877",
+      pmid: "29703793",
     },
     {
       authors:

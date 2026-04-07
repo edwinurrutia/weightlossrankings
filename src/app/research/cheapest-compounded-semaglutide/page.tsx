@@ -9,6 +9,7 @@ import {
 import { getResearchArticleBySlug } from "@/lib/research";
 import { getAllProviders } from "@/lib/data";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
+import References from "@/components/research/References";
 
 const SLUG = "cheapest-compounded-semaglutide";
 
@@ -64,6 +65,33 @@ export default async function CheapestCompoundedSemaglutideArticle() {
   // Floor price as % of median (used to dramatize how cheap it is)
   const floorVsMedian = ((floorPrice / stats.median) * 100).toFixed(0);
 
+  const citations = [
+    {
+      authors: "U.S. Food and Drug Administration.",
+      title:
+        "FDA Declaratory Order: Resolution of the Semaglutide Injection Shortage (Feb 21, 2025).",
+      source: "FDA Drug Shortages Database",
+      year: 2025,
+      url: "https://www.accessdata.fda.gov/scripts/drugshortages/dsp_ActiveIngredientDetails.cfm?AI=Semaglutide+Injection&st=r",
+    },
+    {
+      authors: "U.S. Food and Drug Administration.",
+      title:
+        "Medications Containing Semaglutide Marketed for Type 2 Diabetes or Weight Loss — consumer safety alert on salt forms (semaglutide sodium, semaglutide acetate).",
+      source: "FDA.gov",
+      year: 2024,
+      url: "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss",
+    },
+    {
+      authors: "U.S. Food and Drug Administration.",
+      title:
+        "Compounding and the FDA: Questions and Answers — 503A compounding pharmacy guidance.",
+      source: "FDA.gov",
+      year: 2024,
+      url: "https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers",
+    },
+  ];
+
   return (
     <ResearchArticleLayout article={article} dataAsOf={verifiedDate}>
       <p data-speakable="lead">
@@ -76,6 +104,65 @@ export default async function CheapestCompoundedSemaglutideArticle() {
         pricing index and pharmacy database to answer one question: is the
         floor price legitimate, or are there hidden gotchas?
       </p>
+
+      <div className="my-8 rounded-lg border-l-4 border-brand-violet bg-brand-violet/5 px-6 py-5 not-prose">
+        <p className="font-heading text-base font-bold text-brand-text-primary mb-3">
+          Read this first: the regulatory landscape changed in 2025
+        </p>
+        <p className="text-sm text-brand-text-secondary leading-relaxed mb-3">
+          The compounded semaglutide market in April 2026 is a very
+          different animal from the 2023-2024 shortage-era market
+          most older articles describe. Before you shop on price,
+          you need to understand four things:
+        </p>
+        <ol className="text-sm text-brand-text-secondary leading-relaxed list-decimal pl-5 space-y-2">
+          <li>
+            <strong>The FDA declared the semaglutide shortage resolved
+            on February 21, 2025.</strong> Semaglutide is no longer on
+            the FDA Drug Shortages list. The Declaratory Order ended
+            the regulatory discretion that let 503B outsourcing
+            facilities mass-compound semaglutide during the shortage
+            window.
+          </li>
+          <li>
+            <strong>503A compounding for individual patients is the
+            only remaining legal pathway.</strong> A state-licensed
+            503A pharmacy can still compound semaglutide for a
+            specific patient when a prescriber documents a
+            patient-specific clinical need (e.g., an allergy to an
+            excipient, a dose not commercially available). This is
+            not the same as the bulk-compounding that dominated the
+            market in 2024. Any provider still operating as though
+            nothing changed is worth an extra round of diligence.
+          </li>
+          <li>
+            <strong>Be extremely wary of &ldquo;semaglutide sodium&rdquo;
+            or &ldquo;semaglutide acetate.&rdquo;</strong> FDA has
+            issued repeated warnings that these salt forms are{" "}
+            <em>not</em> the same API as FDA-approved semaglutide
+            and have not been evaluated for safety or efficacy. Ask
+            any prospective pharmacy to confirm in writing that
+            they compound with base semaglutide, not a salt form.
+          </li>
+          <li>
+            <strong>The market is contracting.</strong> Many of the
+            large 503B outsourcing facilities that supplied
+            telehealth platforms during the shortage have exited
+            compounded semaglutide entirely. Pricing data on this
+            page reflects the providers still actively offering it
+            — that universe is smaller than it was a year ago, and
+            availability may change without notice. Verify
+            availability and legal status directly with any
+            provider before signing up.
+          </li>
+        </ol>
+        <p className="text-xs text-brand-text-secondary leading-relaxed mt-4">
+          Sources: FDA Declaratory Order resolving the semaglutide
+          shortage (Feb 21, 2025); FDA consumer alert on salt-form
+          semaglutide; FDA 503A compounding guidance. Full citations
+          in the References section below.
+        </p>
+      </div>
 
       <h2>The market context: where {formatUsd(floorPrice)} sits in the distribution</h2>
 
@@ -290,6 +377,8 @@ export default async function CheapestCompoundedSemaglutideArticle() {
       <p>
         Last data refresh: {verifiedDate}.
       </p>
+
+      <References items={citations} />
     </ResearchArticleLayout>
   );
 }

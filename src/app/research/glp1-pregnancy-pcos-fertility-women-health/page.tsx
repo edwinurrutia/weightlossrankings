@@ -28,8 +28,9 @@ export async function generateMetadata(): Promise<Metadata> {
 // plus the published PCOS pilot trials. Cited primary sources:
 // - Salamun 2018 European Journal of Endocrinology PMID 29703793
 //   (liraglutide IVF pregnancy rates in PCOS)
-// - Jensterle 2017 PMID 28479118 (liraglutide ovarian dysfunction
-//   PCOS RCT, n=72, 26 weeks)
+// - Jensterle 2017 PMID 28143456 (BMC Endocrine Disorders,
+//   low-dose liraglutide + metformin vs high-dose liraglutide
+//   alone in obese PCOS, randomized trial)
 // - FDA prescribing information for all 5 GLP-1 drugs.
 
 export default function PregnancyArticle() {
@@ -68,7 +69,7 @@ export default function PregnancyArticle() {
         "Short-term effectiveness of low dose liraglutide in combination with metformin versus high dose liraglutide alone in treatment of obese PCOS: randomized trial.",
       source: "BMC Endocrine Disorders",
       year: 2017,
-      pmid: "28479118",
+      pmid: "28143456",
     },
     {
       authors: "American College of Obstetricians and Gynecologists.",
@@ -84,7 +85,7 @@ export default function PregnancyArticle() {
         "FOUNDAYO (orforglipron) tablets — US Prescribing Information, pregnancy section + contraception interaction during dose escalation.",
       source: "FDA Approved Labeling",
       year: 2026,
-      url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/foundayo-pi.pdf",
+      url: "https://pi.lilly.com/us/foundayo-uspi.pdf",
     },
     {
       authors: "Novo Nordisk Inc.",
@@ -285,25 +286,27 @@ export default function PregnancyArticle() {
 
       <p>
         A second RCT — Jensterle et al., BMC Endocrine Disorders
-        2017 (PMID 28479118) [4] — randomized n=72 women with
-        obese PCOS to liraglutide regimens for 26 weeks. The trial
-        reported improved menstrual bleeding patterns, decreased
-        free testosterone, and a trend toward lower ovarian volume.
+        2017 (PMID 28143456) [4] — randomized 30 obese PCOS women
+        to low-dose liraglutide (1.2 mg) plus metformin versus
+        high-dose liraglutide (3.0 mg) monotherapy for 12 weeks.
+        Both regimens produced clinically meaningful weight loss
+        and reductions in BMI and visceral adiposity in this
+        population.
       </p>
 
       <p>
-        A 2024 meta-analysis of 4 RCTs (176 participants) of
-        semaglutide and tirzepatide in PCOS reported:
+        Multiple smaller RCTs and observational studies have
+        reported that GLP-1 receptor agonists (including
+        semaglutide and tirzepatide) produce meaningful weight
+        loss in women with PCOS, with magnitudes consistent with
+        the broader obesity trial population. Reported secondary
+        outcomes in this literature have included reductions in
+        waist circumference, BMI, triglycerides, and total
+        testosterone. We do not cite a specific pooled effect
+        size here because the PCOS-specific literature remains
+        heterogeneous and the pooled estimates vary substantially
+        across published analyses.
       </p>
-
-      <ul>
-        <li>Tirzepatide: mean weight reduction −17.60 kg</li>
-        <li>Semaglutide: mean weight reduction −11.85 kg</li>
-        <li>
-          Both produced reductions in waist circumference, BMI,
-          triglycerides, and total testosterone
-        </li>
-      </ul>
 
       <p>
         <strong>Important caveat:</strong> none of the GLP-1 drugs —

@@ -71,12 +71,12 @@ export default function WhatIsOrforglipronArticle() {
 
   const citations = [
     {
-      authors: "U.S. Food and Drug Administration.",
+      authors: "Eli Lilly and Company.",
       title:
-        "FOUNDAYO (orforglipron) tablets — US Prescribing Information (FDA-approved April 1, 2026).",
+        "FOUNDAYO (orforglipron) tablets — US Prescribing Information (FDA-approved April 1, 2026). Section 2 (dosage), Section 7 (strong CYP3A4 inhibitor 9 mg dose cap), Section 12.3 (half-life 29-49 h), Section 14 (clinical studies, 17.2 mg labeled-dose 72-week results).",
       source: "FDA Approved Labeling",
       year: 2026,
-      url: "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm",
+      url: "https://pi.lilly.com/us/foundayo-uspi.pdf",
     },
     {
       authors: "Eli Lilly and Company.",
@@ -104,12 +104,12 @@ export default function WhatIsOrforglipronArticle() {
       url: "https://www.foundayo.lilly.com",
     },
     {
-      authors: "U.S. Food and Drug Administration.",
+      authors: "U.S. National Library of Medicine.",
       title:
-        "Drugs@FDA: FDA-Approved Drugs — Foundayo (orforglipron) approval record.",
-      source: "Drugs@FDA Database",
+        "FOUNDAYO (orforglipron) tablet — DailyMed label record.",
+      source: "DailyMed",
       year: 2026,
-      url: "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm",
+      url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ac446c5-feba-474f-a103-23facb9b5c62",
     },
     {
       authors: "Endocrine News.",
@@ -186,13 +186,24 @@ export default function WhatIsOrforglipronArticle() {
       </p>
       <p>
         Foundayo is supplied as a once-daily oral tablet in six
-        labeled strengths — 1 mg, 2 mg, 4 mg, 8 mg, 12 mg, and{" "}
-        <strong>17.2 mg</strong> (the labeled maximum) — taken at
-        any time of day with or without food, and with no water
-        restrictions<Cite n={1} />. The half-life is approximately
-        30 hours, much shorter than injectable semaglutide
-        (~7 days) or injectable tirzepatide (~5 days), which is
-        why it is dosed once daily instead of once weekly.
+        labeled strengths — 0.8 mg, 2.5 mg, 5.5 mg, 9 mg, 14.5 mg,
+        and <strong>17.2 mg</strong> (the labeled maximum) — taken
+        at any time of day with or without food, and with no water
+        restrictions<Cite n={1} />. The half-life per the FDA
+        prescribing information is <strong>29-49 hours</strong>,
+        much shorter than injectable semaglutide (~7 days) or
+        injectable tirzepatide (~5 days), which is why it is dosed
+        once daily instead of once weekly<Cite n={1} />.
+      </p>
+      <p>
+        One important labeled drug-drug interaction: when
+        co-administered with a <strong>strong CYP3A4 inhibitor</strong>{" "}
+        (e.g., clarithromycin, itraconazole, ketoconazole, or
+        ritonavir-boosted antivirals), the maximum labeled Foundayo
+        dose is reduced to <strong>9 mg once daily</strong>
+        <Cite n={1} />. Orforglipron is metabolized primarily by
+        CYP3A4, so strong inhibitors raise drug exposure meaningfully
+        and the label caps the dose accordingly.
       </p>
 
       <h2>Who makes orforglipron?</h2>
@@ -348,7 +359,7 @@ export default function WhatIsOrforglipronArticle() {
             <td>Foundayo (orforglipron)</td>
             <td>Oral tablet</td>
             <td>Daily</td>
-            <td>~30 hours</td>
+            <td>29-49 hours</td>
             <td>~11.1% (17.2 mg)</td>
             <td>2026</td>
           </tr>
@@ -393,16 +404,14 @@ export default function WhatIsOrforglipronArticle() {
         Foundayo&apos;s approval was anchored on the{" "}
         <strong>ATTAIN-1</strong> phase 3 trial, a 72-week
         randomized, double-blind, placebo-controlled trial in
-        3,127 adults with obesity or overweight without type 2
-        diabetes<Cite n={3} />. The FDA-labeled mean weight loss
+        3,127 adults with obesity or overweight{" "}
+        <strong>without type 2 diabetes</strong> (the T2D population
+        is being studied separately under the ATTAIN-2 / ACHIEVE
+        program)<Cite n={3} />. The FDA-labeled mean weight loss
         at the labeled maximum 17.2 mg dose was approximately{" "}
-        <strong>11.1% (about 24.9 pounds)</strong> in the
-        non-diabetic population<Cite n={1} />. In the parallel
-        ATTAIN trial population that included adults with type 2
-        diabetes, the labeled-dose result was approximately 9.6%
-        (about 21.2 pounds) — slightly less weight loss, which is
-        the consistent pattern across the GLP-1 class for diabetic
-        versus non-diabetic populations<Cite n={1} />.
+        <strong>11.1% (about 24.9 pounds)</strong> over 72 weeks
+        in the non-diabetic population per the Foundayo prescribing
+        information<Cite n={1} />.
       </p>
       <p>
         Honest framing: Foundayo&apos;s effect size sits below
@@ -438,8 +447,15 @@ export default function WhatIsOrforglipronArticle() {
           labeled doses.
         </li>
         <li>
-          <strong>Medicare Part D (eligible):</strong> as low as
-          $50 per month, beginning July 1, 2026.
+          <strong>Medicare Part D:</strong> does NOT cover Foundayo
+          for the weight management indication. Section
+          1860D-2(e)(2)(A) of the Social Security Act explicitly
+          excludes agents used for weight loss from Medicare Part
+          D coverage, which means no FDA-approved GLP-1 obesity
+          drug (Wegovy, Zepbound, Saxenda, or Foundayo) is
+          currently covered by Part D for weight management.
+          Medicare beneficiaries who want Foundayo for weight
+          management must pay cash.
         </li>
       </ul>
       <p>

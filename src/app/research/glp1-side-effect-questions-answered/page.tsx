@@ -18,7 +18,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Does tirzepatide cause sulfur burps?",
     answer:
-      "Yes — sulfur (rotten-egg) burps are a real and well-documented tirzepatide side effect, though not on the FDA label adverse reactions table by name. They are caused by slowed gastric emptying changing the bacterial fermentation profile in the upper GI tract. Smaller meals, less fat, less garlic/onion/eggs in the first weeks of titration help.",
+      "Yes — eructation (burping) is listed as a common adverse reaction in the Wegovy and Zepbound FDA labels. Patient-reported 'sulfur' or 'rotten-egg' burps are thought to be driven by slowed gastric emptying changing the bacterial fermentation profile in the upper GI tract. Smaller meals, less fat, and less garlic/onion/eggs in the first weeks of titration typically help.",
   },
   {
     question: "Does semaglutide or tirzepatide cause depression?",
@@ -28,12 +28,12 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Does GLP-1 cause brain fog?",
     answer:
-      "Brain fog is an emerging FDA pharmacovigilance signal as of 2025, not yet on the FDA label adverse reactions table. Patient reports describe difficulty concentrating, word-finding problems, and mental sluggishness. Possible mechanisms include dehydration, hypoglycemia (especially with insulin/sulfonylurea co-treatment), and rapid weight loss. The signal is real but not yet quantified in randomized trials.",
+      "Brain fog is not on the FDA label adverse reactions table for Wegovy or Zepbound and was not tracked as a formal adverse event in STEP-1 or SURMOUNT-1. The FDA's Adverse Event Reporting System (FAERS) has received some reports of cognitive complaints associated with GLP-1 receptor agonists, but no causal signal has been established. Possible mechanisms include dehydration, hypoglycemia (especially with insulin/sulfonylurea co-treatment), and rapid weight loss. Patients reporting brain fog should discuss it with their prescriber.",
   },
   {
     question: "Does semaglutide or tirzepatide cause acne?",
     answer:
-      "Acne is not on the FDA label adverse reactions table for either drug, but a 2025 observational cohort study found a 36% higher acne diagnosis rate in patients on GLP-1s vs matched controls (post-hoc, unreplicated). The mechanism is not established. Most patient reports describe the acne as transient and improving by month 3 of treatment.",
+      "Acne is not on the FDA label adverse reactions table for either drug and has not been formally established as a causal effect in any randomized trial. Some patients do report worsening acne while on GLP-1s; the mechanism is not established. Most patient reports describe the acne as transient and improving over the first few months of treatment.",
   },
   {
     question: "Does GLP-1 affect sleep or cause insomnia?",
@@ -43,7 +43,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Does GLP-1 affect libido or sexual function?",
     answer:
-      "There is no causal trial signal for libido or sexual dysfunction on GLP-1s. Roughly 182 case reports of sexual dysfunction in GLP-1 patients have been logged in FDA pharmacovigilance between 2003-2024 — these are unconfirmed and the background rate of sexual dysfunction in obese populations is high, so attribution is difficult. Weight loss itself often improves sexual function over time.",
+      "There is no causal trial signal for libido or sexual dysfunction on GLP-1s, and randomized trials did not report elevated rates. The background rate of sexual dysfunction in obese populations is high, so attribution of individual patient reports is difficult. In general, weight loss itself often improves sexual function over time.",
   },
   {
     question: "Does GLP-1 cause body odor changes?",
@@ -242,9 +242,9 @@ export default function SideEffectQAArticle() {
           </tr>
           <tr>
             <td>Eructation (sulfur burps)</td>
-            <td>~7%</td>
-            <td>2-5%</td>
-            <td>0-1%</td>
+            <td>≥5% (label)</td>
+            <td>listed (label)</td>
+            <td>lower</td>
             <td>HIGH</td>
           </tr>
           <tr>
@@ -333,10 +333,12 @@ export default function SideEffectQAArticle() {
 
       <p>
         Yes — and this is one of the most-searched and most-
-        confusing GLP-1 side effects. The FDA label lists eructation
-        (clinical term for burping) at <strong>~7% on semaglutide
-        and 2-5% on tirzepatide</strong>, vs near-zero on placebo
-        [3, 4].
+        confusing GLP-1 side effects. Eructation (the clinical
+        term for burping) is listed in the Wegovy and Zepbound
+        FDA label adverse reactions sections as a common reaction
+        occurring more frequently than on placebo [3, 4]. The
+        Wegovy label lists it among adverse reactions reported
+        in at least 5% of treated patients.
       </p>
 
       <p>
@@ -422,14 +424,15 @@ export default function SideEffectQAArticle() {
       </p>
 
       <p>
-        However, an emerging FDA pharmacovigilance signal exists.
-        FAERS (FDA Adverse Event Reporting System) data analyzed
-        in 2025 detected a reporting odds ratio (ROR) of 1.78 for
-        cognitive complaints in GLP-1 users, with a median time-
-        to-onset of 32 days after starting therapy. This is a
-        signal worth knowing about but it has NOT been added to
-        the FDA label as of April 2026 because pharmacovigilance
-        signals are hypothesis-generating, not confirmatory.
+        The FDA&apos;s Adverse Event Reporting System (FAERS) has
+        received some reports of cognitive complaints associated
+        with GLP-1 receptor agonists, but no causal signal has
+        been established and brain fog is not on the Wegovy or
+        Zepbound label as of April 2026. Pharmacovigilance
+        reports are hypothesis-generating, not confirmatory —
+        we are deliberately not citing a specific reporting odds
+        ratio here because we have not been able to source one
+        to a peer-reviewed publication.
       </p>
 
       <p>
@@ -459,21 +462,22 @@ export default function SideEffectQAArticle() {
       <p>
         Acne is not in the STEP-1 or SURMOUNT-1 trial AE tables
         and is not in the FDA label adverse reactions sections
-        [1, 2, 3, 4]. A 2025 observational cohort study reported
-        a 36% higher acne diagnosis rate in obese women within 90
-        days of starting GLP-1 therapy compared to matched
-        controls, but this is a post-hoc signal that has not been
-        replicated in RCTs.
+        for Wegovy or Zepbound [1, 2, 3, 4]. Some patients report
+        worsening acne while on GLP-1s, but this has not been
+        formally established as a causal effect in any randomized
+        trial. We are not citing a specific magnitude here
+        because we have not been able to source a peer-reviewed
+        effect size to a primary publication.
       </p>
 
       <p>
-        Plausible mechanisms include increased growth hormone
-        secretion → increased IGF-1 → increased sebum production,
-        and the fact that rapid weight loss in any context can
-        transiently affect skin barrier function and oil
-        production. The signal is more pronounced in women than
-        men in the published cohort data, suggesting a hormonal
-        component.
+        Plausible mechanisms discussed in the dermatology
+        literature include shifts in growth-hormone and IGF-1
+        signalling during rapid weight loss (which can increase
+        sebum production) and the fact that rapid weight loss in
+        any context can transiently affect skin barrier function
+        and oil production. None of these have been confirmed as
+        causal in the GLP-1 context specifically.
       </p>
 
       <p>
@@ -512,10 +516,15 @@ export default function SideEffectQAArticle() {
 
       <p>
         Sexual dysfunction is not in the STEP-1 or SURMOUNT-1 AE
-        tables [1, 2]. Pharmacovigilance data reports
-        approximately 182 case reports across all GLP-1s from
-        2003-2024 — a very low absolute number relative to
-        millions of treated patients.
+        tables [1, 2] and is not on the Wegovy or Zepbound FDA
+        label adverse reactions tables [3, 4]. Some
+        patient-reported cases exist in post-marketing
+        pharmacovigilance, but these are unconfirmed and we
+        deliberately do not cite a specific count here because
+        we could not source one to a peer-reviewed publication.
+        The background rate of sexual dysfunction in obese
+        populations is high, which makes individual attribution
+        to the drug difficult.
       </p>
 
       <p>
@@ -580,8 +589,7 @@ export default function SideEffectQAArticle() {
         approximately <strong>1.7% of Wegovy patients</strong> in
         the FDA label adverse reactions table [3]. Patient reports
         often describe metallic taste, food aversions, or specific
-        foods tasting &ldquo;off.&rdquo; A 2024 FAERS analysis identified
-        ~1,469 reports of dysgeusia across all GLP-1s.
+        foods tasting &ldquo;off.&rdquo;
       </p>
 
       <p>

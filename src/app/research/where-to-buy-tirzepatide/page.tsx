@@ -57,6 +57,14 @@ export default function WhereToBuyTirzepatideArticle() {
       url: "https://lillydirect.lilly.com/pharmacy-solutions/zepbound",
     },
     {
+      authors: "Eli Lilly and Company.",
+      title:
+        "Zepbound Pricing Information — official Lilly pricing page (reflects Dec 1, 2025 price reduction and Feb 23, 2026 Self Pay Journey Program).",
+      source: "pricinginfo.lilly.com",
+      year: 2026,
+      url: "https://pricinginfo.lilly.com/zepbound",
+    },
+    {
       authors: "U.S. Food and Drug Administration.",
       title:
         "Tirzepatide Injection — Resolved Drug Shortage (resolved December 19, 2024).",
@@ -96,12 +104,12 @@ export default function WhereToBuyTirzepatideArticle() {
     {
       question: "What is the cheapest legal way to get Zepbound?",
       answer:
-        "For commercially insured patients with Zepbound on formulary, the Lilly savings card combined with insurance coverage is usually the cheapest path. Without insurance, LillyDirect single-dose vials at $399-$499/month are the cheapest brand-name option. Compounded tirzepatide via 503A telehealth is typically $149-$349/month.",
+        "For commercially insured patients with Zepbound on formulary, the Lilly savings card combined with insurance coverage is usually the cheapest path. Without insurance, LillyDirect single-dose vials start at $299/month (2.5 mg) and range up to $699/month (10 mg, 12.5 mg, 15 mg) as of April 2026, following Lilly's December 1, 2025 price reduction. Eligible self-pay patients on 7.5 mg and above may qualify for the Lilly Self Pay Journey Program at $449/month. Compounded tirzepatide via 503A telehealth is typically $149-$349/month.",
     },
     {
       question: "How much does Zepbound cost at a regular pharmacy?",
       answer:
-        "List price for the Zepbound autoinjector pen at retail pharmacies is roughly $1,000-$1,300/month depending on the dose. The single-dose vial program through LillyDirect is significantly cheaper at $399-$499/month for cash-paying patients without insurance coverage.",
+        "List price for the Zepbound autoinjector pen at retail pharmacies is roughly $1,000-$1,300/month depending on the dose. The single-dose vial program through LillyDirect is significantly cheaper, ranging from $299/month (2.5 mg) to $699/month (10 mg, 12.5 mg, 15 mg) as of April 2026 for cash-paying patients without insurance coverage.",
     },
     {
       question: "Does Medicare cover Zepbound?",
@@ -128,7 +136,7 @@ export default function WhereToBuyTirzepatideArticle() {
         also still legally available as a 503A compounded
         injectable through telehealth platforms, even though the
         FDA declared the tirzepatide shortage resolved in December
-        2024<Cite n={4} />. This article walks through every
+        2024<Cite n={5} />. This article walks through every
         legitimate US channel a patient can use to buy tirzepatide
         in 2026, with verified pricing from FDA labels, the
         LillyDirect patient site, and our live 80-provider
@@ -144,7 +152,7 @@ export default function WhereToBuyTirzepatideArticle() {
         following.
       </p>
 
-      <h3>1. Brand Zepbound via LillyDirect single-dose vials (the cheapest brand path)<Cite n={3} /></h3>
+      <h3>1. Brand Zepbound via LillyDirect single-dose vials (the cheapest brand path)<Cite n={3} /><Cite n={4} /></h3>
       <ul>
         <li>
           <strong>What it is:</strong> Eli Lilly&apos;s own
@@ -152,7 +160,10 @@ export default function WhereToBuyTirzepatideArticle() {
           single-dose vials (rather than the autoinjector pen).
           Launched in August 2024 to give cash-paying patients a
           dramatically cheaper brand-name option during and after
-          the tirzepatide shortage.
+          the tirzepatide shortage. Lilly significantly reduced
+          LillyDirect vial pricing on <strong>December 1, 2025</strong>,
+          and introduced an additional discount program on{" "}
+          <strong>February 23, 2026</strong>.
         </li>
         <li>
           <strong>How to get it:</strong> Get a Zepbound
@@ -162,11 +173,24 @@ export default function WhereToBuyTirzepatideArticle() {
           LillyDirect Pharmacy.
         </li>
         <li>
-          <strong>Cash price:</strong>{" "}
-          <strong>$399/month for the 2.5 mg starter vial</strong>{" "}
-          and <strong>$499/month for the 5 mg, 7.5 mg, 10 mg, 12.5
-          mg, and 15 mg single-dose vials</strong>. That is roughly
-          a 60% discount versus retail pen pricing.
+          <strong>Cash price (as of April 2026, post-Dec 1, 2025 reduction):</strong>
+          <ul>
+            <li><strong>2.5 mg:</strong> $299/month</li>
+            <li><strong>5 mg:</strong> $399/month</li>
+            <li><strong>7.5 mg:</strong> $499/month</li>
+            <li><strong>10 mg:</strong> $699/month</li>
+            <li><strong>12.5 mg:</strong> $699/month</li>
+            <li><strong>15 mg:</strong> $699/month</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Lilly Self Pay Journey Program (effective Feb 23, 2026):</strong>{" "}
+          Eligible self-pay patients on the 7.5 mg, 10 mg, 12.5 mg,
+          and 15 mg doses can access these higher tiers at{" "}
+          <strong>$449/month</strong> through Lilly&apos;s Self Pay
+          Journey Program, a significant discount versus the
+          standard $499-$699 vial pricing. Eligibility is determined
+          at the point of purchase on LillyDirect.
         </li>
         <li>
           <strong>Format:</strong> Single-dose vials, drawn up with
@@ -183,6 +207,13 @@ export default function WhereToBuyTirzepatideArticle() {
         <li>
           <strong>Shipping:</strong> Direct to patient, all 50
           states.
+        </li>
+        <li className="text-sm text-brand-text-secondary">
+          <em>Pricing as of April 2026 — always verify current
+          pricing directly against{" "}
+          <a href="https://pricinginfo.lilly.com/zepbound" target="_blank" rel="noopener noreferrer">pricinginfo.lilly.com/zepbound</a>{" "}
+          and LillyDirect before purchase. Lilly has changed these
+          tiers multiple times in the past 18 months.</em>
         </li>
       </ul>
 
@@ -205,7 +236,9 @@ export default function WhereToBuyTirzepatideArticle() {
         <li>
           <strong>Cash price without insurance:</strong> Roughly
           $1,000-$1,300/month for the pen at the major retail
-          pharmacies, depending on dose.
+          pharmacies, depending on dose. The LillyDirect single-dose
+          vial channel (above) is dramatically cheaper for
+          cash-paying patients.
         </li>
         <li>
           <strong>Insured copay:</strong> Highly variable. With a
@@ -246,7 +279,7 @@ export default function WhereToBuyTirzepatideArticle() {
         </li>
       </ul>
 
-      <h3>4. Compounded tirzepatide via 503A telehealth pharmacy<Cite n={5} /></h3>
+      <h3>4. Compounded tirzepatide via 503A telehealth pharmacy<Cite n={6} /></h3>
       <ul>
         <li>
           <strong>What it is:</strong> A compounded preparation of
@@ -258,7 +291,9 @@ export default function WhereToBuyTirzepatideArticle() {
         <li>
           <strong>Legal status in 2026:</strong> The FDA declared
           the tirzepatide shortage resolved on December 19, 2024
-          <Cite n={4} />. After resolution, 503B outsourcing
+          <Cite n={5} />. The FDA gave 503B outsourcing facilities
+          until <strong>March 19, 2025</strong> to wind down
+          bulk-compounding of tirzepatide; since that date, 503B
           facilities can no longer mass-compound tirzepatide. 503A
           pharmacies can still compound tirzepatide for an
           individual patient when a prescriber documents a clinical
@@ -317,9 +352,12 @@ export default function WhereToBuyTirzepatideArticle() {
         </li>
         <li>
           <strong>LillyDirect single-dose Zepbound vials</strong>{" "}
-          — $399/month for the 2.5 mg starter and $499/month for
-          the higher doses. The cheapest path to brand-name
-          tirzepatide for cash-pay patients.
+          — $299/month (2.5 mg), $399 (5 mg), $499 (7.5 mg), and
+          $699/month for the 10 mg, 12.5 mg, and 15 mg tiers as of
+          April 2026. Eligible self-pay patients on 7.5 mg and
+          above can access the Lilly Self Pay Journey Program at
+          $449/month. The cheapest path to brand-name tirzepatide
+          for cash-pay patients.
         </li>
         <li>
           <strong>Retail pharmacy cash pay (pen)</strong> —
@@ -404,7 +442,7 @@ export default function WhereToBuyTirzepatideArticle() {
           neither legal nor safe. The FDA has issued multiple
           warnings about the unverified identity, purity, and
           sterility of tirzepatide products sourced outside the
-          legitimate compounding pathway<Cite n={5} />. Avoid.
+          legitimate compounding pathway<Cite n={6} />. Avoid.
         </li>
       </ul>
 
@@ -448,8 +486,11 @@ export default function WhereToBuyTirzepatideArticle() {
           <strong>If insurance doesn&apos;t cover it,</strong>{" "}
           decide whether you want brand-name tirzepatide or a
           compounded preparation. Brand-name via LillyDirect
-          single-dose vials is $399-$499/month. Compounded via 503A
-          telehealth is $149-$349/month.
+          single-dose vials ranges from $299/month (2.5 mg) to
+          $699/month (10-15 mg) as of April 2026, with the Self
+          Pay Journey Program bringing eligible 7.5-15 mg patients
+          to $449/month. Compounded via 503A telehealth is
+          $149-$349/month.
         </li>
         <li>
           <strong>Get a clinician consult.</strong> See our{" "}
@@ -532,8 +573,9 @@ export default function WhereToBuyTirzepatideArticle() {
       <h3>Is compounded tirzepatide still legal in 2026?</h3>
       <p>
         Yes, with limits. After the FDA declared the tirzepatide
-        shortage resolved on December 19, 2024<Cite n={4} />, 503B
-        outsourcing facilities can no longer mass-compound
+        shortage resolved on December 19, 2024<Cite n={5} />, 503B
+        outsourcing facilities wound down bulk-compounding by
+        March 19, 2025 and can no longer mass-compound
         tirzepatide. 503A pharmacies can still compound tirzepatide
         for an individual patient when a prescriber documents a
         clinical need. Most telehealth platforms continue to
@@ -545,10 +587,15 @@ export default function WhereToBuyTirzepatideArticle() {
         For commercially insured patients with Zepbound on
         formulary, the Lilly savings card combined with insurance
         coverage is usually the cheapest path. Without insurance,
-        LillyDirect single-dose vials at $399-$499/month
-        <Cite n={3} /> are the cheapest brand-name option.
-        Compounded tirzepatide via 503A telehealth is typically
-        $149-$349/month.
+        LillyDirect single-dose vials start at{" "}
+        <strong>$299/month for 2.5 mg</strong> and range up to{" "}
+        <strong>$699/month for 10, 12.5, and 15 mg</strong> as of
+        April 2026, following Lilly&apos;s December 1, 2025 price
+        reduction<Cite n={3} /><Cite n={4} />. Eligible self-pay
+        patients on 7.5 mg and above may qualify for the Lilly
+        Self Pay Journey Program at <strong>$449/month</strong>{" "}
+        (effective Feb 23, 2026). Compounded tirzepatide via 503A
+        telehealth is typically $149-$349/month.
       </p>
 
       <h3>How much does Zepbound cost at a regular pharmacy?</h3>
@@ -556,8 +603,11 @@ export default function WhereToBuyTirzepatideArticle() {
         List price for the Zepbound autoinjector pen at retail
         pharmacies is roughly $1,000-$1,300/month depending on the
         dose. The single-dose vial program through LillyDirect is
-        significantly cheaper at $399-$499/month for cash-paying
-        patients without insurance coverage.
+        significantly cheaper: $299/month (2.5 mg), $399 (5 mg),
+        $499 (7.5 mg), and $699/month (10, 12.5, 15 mg) as of
+        April 2026, with an additional Self Pay Journey Program
+        discount available to eligible patients on the higher
+        doses.
       </p>
 
       <h3>Does Medicare cover Zepbound?</h3>
@@ -575,7 +625,7 @@ export default function WhereToBuyTirzepatideArticle() {
         Commission for Health Care, verify the pharmacy is licensed
         in your state through your state board of pharmacy, and
         confirm it operates as a 503A compounding pharmacy with a
-        valid patient-specific prescription<Cite n={6} />. Avoid
+        valid patient-specific prescription<Cite n={7} />. Avoid
         any seller offering tirzepatide without a prescription or
         shipping from outside the US.
       </p>

@@ -61,21 +61,20 @@ export default function WhereToBuyFoundayoArticle() {
       url: "https://lillydirect.lilly.com/pharmacy-solutions/foundayo",
     },
     {
-      authors:
-        "Endocrine News.",
+      authors: "Eli Lilly and Company.",
       title:
-        "Pharma Friday: April 3, 2026 — Foundayo approval and rollout coverage.",
-      source: "Endocrine Society",
+        "Lilly begins commercial dispensing of Foundayo (orforglipron) through LillyDirect — investor update, April 2026.",
+      source: "Eli Lilly Investor Relations",
       year: 2026,
-      url: "https://endocrinenews.endocrine.org/pharma-friday-april-3-2026",
+      url: "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill",
     },
     {
-      authors: "U.S. Food and Drug Administration.",
+      authors: "Eli Lilly and Company.",
       title:
         "FOUNDAYO (orforglipron) tablets — US Prescribing Information (FDA-approved April 1, 2026).",
       source: "FDA Approved Labeling",
       year: 2026,
-      url: "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm",
+      url: "https://pi.lilly.com/us/foundayo-uspi.pdf",
     },
     {
       authors: "Eli Lilly and Company.",
@@ -103,7 +102,21 @@ export default function WhereToBuyFoundayoArticle() {
         each provider&apos;s website. We update this list weekly.
       </p>
 
-      <h2>Confirmed Foundayo providers (as of April 7, 2026)</h2>
+      <h2>Foundayo channels we have verified (as of April 7, 2026)</h2>
+      <p className="text-sm text-brand-text-secondary">
+        <strong>Verification caveat.</strong> Foundayo commercial
+        dispensing began on April 6, 2026 — one day before this
+        article&apos;s publication. The only channel we have
+        confirmed as operational for Foundayo is{" "}
+        <strong>LillyDirect Pharmacy</strong>, the manufacturer&apos;s
+        direct-to-patient dispensing channel. Third-party telehealth
+        platforms (including Weight Watchers Med+ and NowPatient)
+        have publicly signaled intent to add Foundayo to their
+        catalogs, but patients should verify directly with any
+        telehealth provider before enrolling — catalog updates and
+        actual prescribing capability often lag press announcements
+        by several weeks in the first month of a new drug launch.
+      </p>
 
       <h3>1. LillyDirect (manufacturer direct-pay)<Cite n={3} /></h3>
       <ul>
@@ -122,9 +135,12 @@ export default function WhereToBuyFoundayoArticle() {
           to write it, then you fill it through LillyDirect.
         </li>
         <li>
-          <strong>Cash price:</strong> $149/month for the starting
-          dose (0.8 mg), scaling up to roughly $299/month for the
-          higher labeled doses<Cite n={2} />.
+          <strong>Cash price:</strong> as low as $149/month for
+          the lowest dose per Lilly&apos;s published LillyDirect
+          pricing. Higher labeled doses are priced above that; the
+          precise per-strength pricing tier should be confirmed
+          directly on the LillyDirect product page at the time of
+          fill<Cite n={3} />.
         </li>
         <li>
           <strong>With the Lilly Savings Card:</strong>{" "}
@@ -139,61 +155,42 @@ export default function WhereToBuyFoundayoArticle() {
         </li>
       </ul>
 
-      <h3>2. Weight Watchers Med+<Cite n={2} /></h3>
+      <h3>2. Weight Watchers Med+ (expected, not yet verified)<Cite n={2} /></h3>
       <ul>
         <li>
           <strong>What it is:</strong> The medication-management
-          tier of Weight Watchers, launched alongside Sequence
-          (which WW acquired in 2023). Med+ provides the clinician
-          consult, the wraparound nutrition program, and the
-          GLP-1 Success behavioral program; the actual Foundayo
-          prescription is dispensed through LillyDirect. WW is
-          essentially a clinician + program layer on top of
-          LillyDirect.
+          tier of Weight Watchers, which already prescribes
+          injectable GLP-1s through its Sequence-acquired clinician
+          network. Weight Watchers has publicly indicated it plans
+          to add Foundayo to Med+, with the actual prescription
+          expected to be dispensed through LillyDirect. As of
+          April 7, 2026, we have <strong>not independently
+          verified</strong> that Foundayo is live on Med+ or that
+          clinicians are actively writing Foundayo prescriptions on
+          the platform. Patients should verify directly with
+          Weight Watchers Med+ support before enrolling on the
+          expectation of receiving Foundayo.
         </li>
         <li>
-          <strong>How to get it:</strong> Take WW&apos;s 5-minute
-          eligibility quiz, join Med+, complete a clinician
-          consult, and receive a prescription if eligible.
-        </li>
-        <li>
-          <strong>Med+ membership cost:</strong> $25 first month
-          with a 12-month commitment, then $74/month for the
-          remainder. That&apos;s the WW program fee — separate
-          from the drug.
-        </li>
-        <li>
-          <strong>Foundayo drug cost (cash pay):</strong>{" "}
-          $149/month for the starting dose, up to $299/month for
-          the higher labeled doses, billed by LillyDirect not WW.
-        </li>
-        <li>
-          <strong>Insurance:</strong> Foundayo is currently NOT
-          eligible for insurance billing through Weight Watchers
-          Med+, per their own provider page<Cite n={2} />.
-          Patients who want insurance coverage need to use a
-          different prescriber and pharmacy path.
-        </li>
-        <li>
-          <strong>States:</strong> All 50 states (per WW&apos;s
-          general telehealth coverage).
+          <strong>How to verify:</strong> Contact Weight Watchers
+          Med+ support directly and ask whether Foundayo is
+          currently being prescribed. Catalog listings often lag
+          actual prescribing capability, and vice versa.
         </li>
       </ul>
 
-      <h3>3. NowPatient (telehealth)<Cite n={4} /></h3>
+      <h3>3. Other telehealth platforms (expected additions)</h3>
       <ul>
         <li>
-          <strong>What it is:</strong> A telehealth platform that
-          public reporting indicates is offering Foundayo via its
-          weight management program<Cite n={4} />. We have not
-          independently verified the pricing tier or the
-          dispensing channel as of this article&apos;s publication
-          date.
-        </li>
-        <li>
-          <strong>Status:</strong> Confirmed via Endocrine News
-          coverage of the Foundayo rollout. Pricing and
-          state-by-state availability TBD.
+          Industry trade coverage of the Foundayo rollout has named
+          several telehealth platforms — including{" "}
+          <strong>NowPatient</strong> — as expected early adopters.
+          We have not independently confirmed an active Foundayo
+          prescribing workflow at any of these platforms as of
+          April 7, 2026. Patients interested in Foundayo through a
+          non-LillyDirect channel should ask their telehealth
+          provider directly and confirm before paying for a
+          membership.
         </li>
       </ul>
 
@@ -276,11 +273,13 @@ export default function WhereToBuyFoundayoArticle() {
         </li>
         <li>
           <strong>If you do not have commercial insurance,</strong>{" "}
-          the cash-pay options are LillyDirect direct ($149-$299/mo
-          depending on dose) or Weight Watchers Med+ ($25 first
-          month + $74/mo Med+ fee + $149-$299/mo for the drug).
-          The math favors going direct to LillyDirect unless you
-          want the WW program.
+          the cash-pay path is LillyDirect direct, starting at
+          $149/month for the lowest dose per Lilly&apos;s published
+          pricing. If and when Weight Watchers Med+ confirms
+          Foundayo is live on its platform, the WW path adds the
+          Med+ program fee on top of the LillyDirect drug cost —
+          the math favors going direct to LillyDirect unless you
+          want the WW behavioral program.
         </li>
         <li>
           <strong>
@@ -348,16 +347,17 @@ export default function WhereToBuyFoundayoArticle() {
           own self-pay channel.
         </li>
         <li>
-          <strong>Weight Watchers Med+</strong> and <strong>NowPatient</strong>{" "}
-          are the two telehealth platforms we have confirmed as
-          Foundayo prescribing channels in the first week of the
-          rollout, both ultimately routing to LillyDirect for the
-          actual drug.
+          <strong>Weight Watchers Med+</strong> and{" "}
+          <strong>NowPatient</strong> are two telehealth platforms
+          that have publicly signaled intent to add Foundayo, but
+          we have not independently verified active prescribing at
+          either platform as of April 7, 2026. Verify directly
+          before enrolling.
         </li>
         <li>
-          Cash-pay pricing: <strong>$149-$299/month</strong>{" "}
-          depending on labeled dose (the starting dose is the
-          cheapest).
+          Cash-pay pricing: <strong>as low as $149/month</strong>{" "}
+          for the lowest dose per Lilly&apos;s published pricing,
+          with higher labeled-dose tiers priced above that.
         </li>
         <li>
           With commercial insurance and the Lilly Savings Card:{" "}

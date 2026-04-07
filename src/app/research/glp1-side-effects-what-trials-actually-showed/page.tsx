@@ -116,23 +116,23 @@ export default function GLP1SideEffectsArticle() {
         <tbody>
           <tr>
             <td>Any GI adverse event</td>
-            <td>72.9%</td>
-            <td>47.1%</td>
+            <td>74.2%</td>
+            <td>47.9%</td>
           </tr>
           <tr>
             <td>Nausea</td>
-            <td>43.9%</td>
-            <td>16.1%</td>
+            <td>44.2%</td>
+            <td>9.8%</td>
           </tr>
           <tr>
             <td>Diarrhea</td>
             <td>29.7%</td>
-            <td>15.9%</td>
+            <td>11.8%</td>
           </tr>
           <tr>
             <td>Vomiting</td>
-            <td>24.5%</td>
-            <td>6.3%</td>
+            <td>24.8%</td>
+            <td>2.9%</td>
           </tr>
           <tr>
             <td>Discontinued due to AE</td>
@@ -201,9 +201,9 @@ export default function GLP1SideEffectsArticle() {
           </tr>
           <tr>
             <td>Constipation</td>
-            <td>16.8%</td>
-            <td>—</td>
-            <td>—</td>
+            <td>16.4%</td>
+            <td>11.7%</td>
+            <td>11.1%</td>
             <td>10.8%</td>
           </tr>
           <tr>
@@ -226,7 +226,7 @@ export default function GLP1SideEffectsArticle() {
 
       <p>
         At their maximum doses, semaglutide 2.4 mg had{" "}
-        <strong>43.9% nausea and 24.5% vomiting</strong> [1], while
+        <strong>44.2% nausea and 24.8% vomiting</strong> [1], while
         tirzepatide 15 mg had <strong>31.0% nausea and 12.2%
         vomiting</strong> [2]. Semaglutide&apos;s GI burden is materially
         higher — particularly for vomiting, where the absolute risk

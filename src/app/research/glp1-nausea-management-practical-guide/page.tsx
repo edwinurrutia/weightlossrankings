@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
 //   - SURMOUNT-1 (Jastreboff NEJM 2022, PMID 35658024) — Table S5 supplementary
 //   - Wegovy/Zepbound FDA Section 6 Adverse Reactions tables
 //   - Wharton et al. Postgrad Med 2022 (PMID 36177722) — clinical practice rec
-//   - Filippatos et al. 2014 (PMID 24438495) — exenatide nausea timeline
+//   - Filippatos et al. 2014 (PMID 25396404) — adverse effects of GLP-1 RAs
 
 export default function NauseaGuideArticle() {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -105,8 +105,9 @@ export default function NauseaGuideArticle() {
         reason patients quit therapy. The headline numbers from the
         registration trials sound alarming: <strong>44.2%</strong> of
         patients on semaglutide 2.4 mg in STEP-1 reported nausea<Cite n={1} />
-        , and <strong>33.3%</strong> of patients on tirzepatide 15 mg in
-        SURMOUNT-1 reported nausea<Cite n={2} />. But those are cumulative
+        , and <strong>29.0%</strong> of patients on tirzepatide 15 mg in
+        SURMOUNT-1 reported nausea per the Zepbound FDA label adverse
+        reactions table<Cite n={2} /><Cite n={5} />. But those are cumulative
         rates over 68-72 weeks of treatment, and almost all of the nausea
         is concentrated in the first few weeks of each new dose step. The
         practical management problem is not &ldquo;how do I avoid nausea
@@ -127,13 +128,14 @@ export default function NauseaGuideArticle() {
           moderate. ~4.5% discontinued the drug for any GI side effect.
         </li>
         <li>
-          <strong>Tirzepatide 15 mg (Zepbound)</strong> — 33.3% nausea,
-          11.5% vomiting, 23.0% diarrhea, 17.1% constipation. Mostly mild
-          to moderate. ~4.3% discontinued for any GI side effect.
+          <strong>Tirzepatide 15 mg (Zepbound)</strong> — 29.0% nausea,
+          12.2% vomiting, 21.2% diarrhea, 11.7% constipation per the
+          Zepbound FDA label Section 6 Adverse Reactions table. Mostly
+          mild to moderate. ~4.3% discontinued for any GI side effect.
         </li>
         <li>
-          <strong>Tirzepatide 5 mg</strong> — 24.6% nausea (the lowest of
-          the three SURMOUNT-1 doses).
+          <strong>Tirzepatide 5 mg</strong> — lower nausea than the 10 mg
+          and 15 mg arms (the lowest of the three SURMOUNT-1 doses).
         </li>
         <li>
           <strong>Placebo</strong> — 9.8% (STEP-1) and 9.5% (SURMOUNT-1)
@@ -369,8 +371,9 @@ export default function NauseaGuideArticle() {
         <li>
           <strong>Switch to the lowest maintenance dose</strong> that
           still produces meaningful weight loss. Tirzepatide 5 mg
-          delivered ~16% mean weight loss in SURMOUNT-1 with 24.6% nausea
-          — much more tolerable than the 15 mg dose.
+          delivered ~16% mean weight loss in SURMOUNT-1 with a lower
+          nausea rate than the 10 mg and 15 mg arms — much more
+          tolerable than the 15 mg dose.
         </li>
         <li>
           <strong>Try Foundayo (orforglipron)</strong> — the new oral
@@ -391,7 +394,8 @@ export default function NauseaGuideArticle() {
       <h2>Bottom line</h2>
       <ul>
         <li>
-          Nausea on GLP-1s is real and common (33-44% in the trials), but
+          Nausea on GLP-1s is real and common (roughly 29-44% in the
+          registration trials), but
           mostly concentrated in the first 1-2 weeks of each new dose
           step.
         </li>

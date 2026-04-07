@@ -50,10 +50,10 @@ export default function WhereToBuySemaglutideArticle() {
     {
       authors: "Novo Nordisk Inc.",
       title:
-        "NovoCare Pharmacy direct-to-patient cash pay program for Wegovy.",
+        "NovoCare Pharmacy direct-to-patient cash pay program for Wegovy — Take a Wegovy Step savings offer (effective 11/17/2025 through 6/30/2026).",
       source: "NovoCare patient program",
       year: 2026,
-      url: "https://www.novocare.com/wegovy/savings-offer.html",
+      url: "https://www.novocare.com/patient/medicines/wegovy/savings-offer.html",
     },
     {
       authors: "U.S. Food and Drug Administration.",
@@ -90,7 +90,7 @@ export default function WhereToBuySemaglutideArticle() {
     {
       question: "What is the cheapest legal way to get semaglutide?",
       answer:
-        "For commercially insured patients, the Wegovy savings card combined with insurance coverage is usually the cheapest path. Without insurance, NovoCare Pharmacy direct-pay at $499/month for the all-dose Wegovy pen is the cheapest brand-name option. 503A compounded semaglutide via telehealth ranges from roughly $99 to $249/month depending on the provider and dose.",
+        "For commercially insured patients, the Wegovy savings card combined with insurance coverage is usually the cheapest path. Without insurance, the current NovoCare Pharmacy Take a Wegovy Step promotion (effective 11/17/2025 through 6/30/2026) offers new self-pay patients $199/month for the first two fills of 0.25 mg and 0.5 mg starter doses and $349/month thereafter; the non-promotional baseline is $499/month for all doses. 503A compounded semaglutide via telehealth ranges from roughly $99 to $249/month depending on the provider and dose. Promotion subject to change — verify current pricing at NovoCare.",
     },
     {
       question: "Can I buy Ozempic for weight loss?",
@@ -100,7 +100,7 @@ export default function WhereToBuySemaglutideArticle() {
     {
       question: "How much does Wegovy cost without insurance in 2026?",
       answer:
-        "List price at retail pharmacies is roughly $1,350/month. Through Novo Nordisk's NovoCare Pharmacy direct-pay program, eligible cash-pay patients can get all Wegovy doses for $499/month. Compounded semaglutide via telehealth is typically $99-$249/month but is not the brand-name product.",
+        "List price at retail pharmacies is roughly $1,350/month. Through Novo Nordisk's NovoCare Pharmacy direct-pay program, the current Take a Wegovy Step promotion (effective 11/17/2025 through 6/30/2026) offers new self-pay patients $199/month for the first two fills of the 0.25 mg and 0.5 mg starter doses and $349/month thereafter. The non-promotional baseline is $499/month for all doses. Compounded semaglutide via telehealth is typically $99-$249/month but is not the brand-name product. Promotion subject to change — verify current pricing at NovoCare.",
     },
     {
       question: "Does Medicare cover semaglutide?",
@@ -189,11 +189,20 @@ export default function WhereToBuySemaglutideArticle() {
           prescription; NovoCare dispenses and ships.
         </li>
         <li>
-          <strong>Cash price:</strong>{" "}
-          <strong>$499/month for all Wegovy doses</strong>,
-          including the higher 1.7 mg and 2.4 mg maintenance doses
-          that are normally the most expensive at retail pharmacies.
-          That is roughly a 65% discount versus retail cash pay.
+          <strong>Cash price (current Take a Wegovy Step promotion,
+          effective November 17, 2025 through June 30, 2026):</strong>{" "}
+          new self-pay patients pay{" "}
+          <strong>$199/month for the first two fills</strong> of the
+          0.25 mg and 0.5 mg starter doses, then{" "}
+          <strong>$349/month for all doses thereafter</strong> under
+          the promotional tier. The{" "}
+          <strong>non-promotional baseline is $499/month for all
+          Wegovy doses</strong>, including the higher 1.7 mg and 2.4
+          mg maintenance doses that are normally the most expensive
+          at retail pharmacies. Even the $499 baseline is roughly a
+          65% discount versus retail cash pay. Promotion is subject
+          to change &mdash; verify current pricing directly at
+          NovoCare before enrolling.
         </li>
         <li>
           <strong>Eligibility:</strong> Cash-paying US patients only.
@@ -307,9 +316,14 @@ export default function WhereToBuySemaglutideArticle() {
           product.
         </li>
         <li>
-          <strong>NovoCare Pharmacy direct-pay</strong> — $499/month
-          flat for all Wegovy doses. The cheapest path to brand-name
-          semaglutide for cash-pay patients.
+          <strong>NovoCare Pharmacy direct-pay</strong> — currently
+          $199/month for the first two starter-dose fills and
+          $349/month thereafter for new self-pay patients under the
+          Take a Wegovy Step promotion (effective 11/17/2025 through
+          6/30/2026); the non-promotional baseline is $499/month for
+          all doses. The cheapest path to brand-name semaglutide for
+          cash-pay patients. Verify current pricing directly at
+          NovoCare.
         </li>
         <li>
           <strong>Retail pharmacy cash pay</strong> — $1,000-$1,400/
@@ -407,9 +421,12 @@ export default function WhereToBuySemaglutideArticle() {
         <li>
           <strong>If insurance doesn&apos;t cover it,</strong>{" "}
           decide whether you want brand-name semaglutide or a
-          compounded preparation. Brand-name via NovoCare is
-          $499/month flat for any Wegovy dose. Compounded via 503A
-          telehealth is $99-$249/month.
+          compounded preparation. Brand-name via NovoCare currently
+          runs $199/month for the first two starter-dose fills and
+          $349/month thereafter under the Take a Wegovy Step
+          promotion through 6/30/2026, with a $499/month
+          non-promotional baseline for all doses. Compounded via
+          503A telehealth is $99-$249/month.
         </li>
         <li>
           <strong>Get a clinician consult.</strong> See our{" "}
@@ -501,11 +518,17 @@ export default function WhereToBuySemaglutideArticle() {
       <p>
         For commercially insured patients, the Wegovy savings card
         combined with insurance coverage is usually the cheapest
-        path. Without insurance, NovoCare Pharmacy direct-pay at
-        $499/month for the all-dose Wegovy pen is the cheapest
-        brand-name option. 503A compounded semaglutide via
-        telehealth ranges from roughly $99 to $249/month depending
-        on the provider and dose.
+        path. Without insurance, the current NovoCare Pharmacy{" "}
+        <em>Take a Wegovy Step</em> promotion (effective November 17,
+        2025 through June 30, 2026) offers new self-pay patients{" "}
+        <strong>$199/month for the first two fills</strong> of the
+        0.25 mg and 0.5 mg starter doses and{" "}
+        <strong>$349/month thereafter</strong>; the non-promotional
+        baseline is <strong>$499/month</strong> for all Wegovy doses
+        <Cite n={3} />. 503A compounded semaglutide via telehealth
+        ranges from roughly $99 to $249/month depending on the
+        provider and dose. Promotion subject to change &mdash;
+        verify current pricing directly at NovoCare.
       </p>
 
       <h3>Can I buy Ozempic for weight loss?</h3>
@@ -522,10 +545,17 @@ export default function WhereToBuySemaglutideArticle() {
       <p>
         List price at retail pharmacies is roughly $1,350/month.
         Through Novo Nordisk&apos;s NovoCare Pharmacy direct-pay
-        program, eligible cash-pay patients can get all Wegovy doses
-        for $499/month<Cite n={3} />. Compounded semaglutide via
-        telehealth is typically $99-$249/month but is not the
-        brand-name product.
+        program, the current <em>Take a Wegovy Step</em> promotion
+        (effective November 17, 2025 through June 30, 2026) offers
+        new self-pay patients{" "}
+        <strong>$199/month for the first two fills</strong> of the
+        0.25 mg and 0.5 mg starter doses and{" "}
+        <strong>$349/month for all doses thereafter</strong>. The
+        non-promotional baseline is $499/month for all Wegovy doses
+        <Cite n={3} />. Compounded semaglutide via telehealth is
+        typically $99-$249/month but is not the brand-name product.
+        Promotion subject to change &mdash; verify current pricing
+        directly at NovoCare.
       </p>
 
       <h3>Does Medicare cover semaglutide?</h3>

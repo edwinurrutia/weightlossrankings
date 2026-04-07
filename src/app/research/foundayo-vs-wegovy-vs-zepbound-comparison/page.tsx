@@ -25,7 +25,8 @@ export async function generateMetadata(): Promise<Metadata> {
 //   - Wegovy PI (2025) — STEP-1 −14.9% at week 68
 //   - Zepbound PI (2025) — SURMOUNT-1 −20.9% at week 72
 //   - Foundayo FDA label — 17.2 mg labeled max produces -11.1% / -24.9 lbs
-//     in adults without T2D, -9.6% / -21.2 lbs in adults with T2D, both 72 wk
+//     in adults without T2D at 72 wk (ATTAIN-1 population). The T2D population
+//     is studied separately under ATTAIN-2 / ACHIEVE — not reported here.
 //   - ATTAIN-1 trial publication: Wharton S et al. NEJM 2025 PMID 40960239,
 //     NCT05869903. Tested 6/12/36 mg (NOT 17.2 mg) over 72 weeks.
 //     36 mg arm: -12.4% efficacy estimand / -11.2% treatment-regimen estimand
@@ -129,7 +130,7 @@ export default function FoundayoComparisonArticle() {
     {
       authors: "Eli Lilly and Company.",
       title:
-        "FOUNDAYO (orforglipron) tablets — US Prescribing Information, Section 14 Clinical Studies. Labeled maintenance dose 17.2 mg produces −11.1% / −24.9 lbs in adults without T2D and −9.6% / −21.2 lbs with T2D, both at 72 weeks.",
+        "FOUNDAYO (orforglipron) tablets — US Prescribing Information. Section 2 (dosage, 30-day minimum between dose increases, 9 mg cap with strong CYP3A4 inhibitors), Section 12.3 (pharmacokinetics, half-life 29-49 h), Section 14 (clinical studies, 17.2 mg labeled dose produces approximately −11.1% / −24.9 lbs at 72 weeks in the ATTAIN-1 population without type 2 diabetes).",
       source: "FDA Approved Labeling",
       year: 2026,
       url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ac446c5-feba-474f-a103-23facb9b5c62",
@@ -236,9 +237,10 @@ export default function FoundayoComparisonArticle() {
           dose of <strong>17.2 mg</strong> in adults without type
           2 diabetes — <strong>−11.1%</strong> mean weight loss
           (about −24.9 lbs) at 72 weeks per the FDA-approved
-          prescribing information<Cite n={11} />. In adults with
-          type 2 diabetes the labeled-dose result is −9.6% (about
-          −21.2 lbs).
+          prescribing information<Cite n={11} />. ATTAIN-1, the
+          registration trial, excluded adults with type 2 diabetes;
+          the T2D population for orforglipron is being evaluated
+          separately under the ATTAIN-2 / ACHIEVE program.
         </li>
       </ul>
       <p className="text-sm text-brand-text-secondary">
@@ -358,16 +360,18 @@ export default function FoundayoComparisonArticle() {
       <p>
         Foundayo is a daily oral tablet. No injections, no needle
         disposal, no refrigeration, no cold chain, no airport
-        pat-down conversation about medical-device exemptions. It
-        is taken in the morning on an empty stomach, with water
-        only, at least 30 minutes before any food, drink, or other
-        oral medication<Cite n={6} />. The empty-stomach
-        requirement is the practical pitfall: any food or beverage
-        other than water in the 30-minute window before dosing
-        substantially reduces absorption. Patients who cannot
-        reliably fast for 30 minutes after waking (shift workers,
-        parents of young children, anyone with a chaotic morning
-        routine) may struggle with adherence.
+        pat-down conversation about medical-device exemptions. Per
+        the FDA-approved prescribing information, Foundayo can be
+        taken <strong>any time of day, with or without food, and
+        with no water restrictions</strong><Cite n={11} />. This
+        is the central dosing-experience differentiator from
+        Rybelsus (oral semaglutide), which is a peptide that must
+        be taken on an empty stomach with no more than 4 ounces of
+        water followed by a 30-minute wait before anything else by
+        mouth. Because orforglipron is a non-peptide small molecule,
+        it survives stomach acid and digestion without an absorption
+        enhancer — so the Foundayo label carries none of Rybelsus&apos;s
+        food, water, or timing restrictions.
       </p>
       <p>
         See our (forthcoming){" "}
@@ -382,21 +386,25 @@ export default function FoundayoComparisonArticle() {
       <ul>
         <li>
           <strong>Wegovy</strong> — 5 dose steps: 0.25 mg → 0.5 mg
-          → 1 mg → 1.7 mg → 2.4 mg, 4 weeks per step. Total
-          escalation time to maintenance: ~16-20 weeks.
+          → 1 mg → 1.7 mg → 2.4 mg, with at least 4 weeks between
+          each dose increase per the Wegovy label. Total escalation
+          time to maintenance: ~16-20 weeks.
         </li>
         <li>
           <strong>Zepbound</strong> — 6 dose steps: 2.5 mg → 5 mg
-          → 7.5 mg → 10 mg → 12.5 mg → 15 mg, 4 weeks per step.
-          Total: ~20-24 weeks. Lower maintenance doses (5 mg or 10
-          mg) are also FDA-labeled and produce meaningful weight
-          loss, so not every patient escalates to 15 mg.
+          → 7.5 mg → 10 mg → 12.5 mg → 15 mg, with at least 4 weeks
+          between each dose increase per the Zepbound label. Total:
+          ~20-24 weeks. Lower maintenance doses (5 mg or 10 mg) are
+          also FDA-labeled and produce meaningful weight loss, so
+          not every patient escalates to 15 mg.
         </li>
         <li>
           <strong>Foundayo</strong> — 6 dose steps per the FDA
           label: 0.8 mg → 2.5 mg → 5.5 mg → 9 mg → 14.5 mg →
-          17.2 mg, 4 weeks per step. Total: ~24 weeks to the
-          maintenance dose.
+          17.2 mg, with <strong>at least 30 days between each dose
+          increase</strong> per the Foundayo prescribing information
+          <Cite n={11} />. Total: roughly 6 months to the labeled
+          maximum dose.
         </li>
       </ul>
       <p>
@@ -418,9 +426,10 @@ export default function FoundayoComparisonArticle() {
           constipation. ~4.5% discontinued for GI side effects.
         </li>
         <li>
-          <strong>Zepbound (SURMOUNT-1)</strong><Cite n={3} /> —
-          33.3% nausea, 11.5% vomiting, 23.0% diarrhea, 17.1%
-          constipation. ~4.3% discontinued for GI.
+          <strong>Zepbound (SURMOUNT-1)</strong><Cite n={3} /> at
+          the 15 mg dose — approximately 29.0% nausea, 12.2%
+          vomiting, 21.2% diarrhea, 11.7% constipation (SURMOUNT-1
+          supplementary tables). ~4.3% discontinued for GI.
         </li>
         <li>
           <strong>Foundayo (ATTAIN-1)</strong> — preliminary data
@@ -464,6 +473,16 @@ export default function FoundayoComparisonArticle() {
           is itself an oral drug and the gastric-emptying-and-
           absorption interaction is more direct.
         </li>
+        <li>
+          <strong>Foundayo + strong CYP3A4 inhibitors</strong> —
+          when co-administered with a strong CYP3A4 inhibitor
+          (e.g., clarithromycin, itraconazole, ketoconazole, or
+          ritonavir-boosted antivirals), the Foundayo label caps
+          the maximum daily dose at <strong>9 mg once daily</strong>
+          <Cite n={11} />. This is a labeled drug-drug interaction
+          warning unique to Foundayo among the three weight-loss
+          GLP-1s.
+        </li>
       </ul>
       <p>
         See our{" "}
@@ -486,9 +505,11 @@ export default function FoundayoComparisonArticle() {
           washout in clinical practice.
         </li>
         <li>
-          <strong>Foundayo</strong> — orforglipron t½ ~36 hours.
-          Steady state in 3-5 days. Much shorter washout — useful
-          for pre-procedure hold and pre-pregnancy planning.
+          <strong>Foundayo</strong> — orforglipron t½ 29-49 hours
+          per the FDA label<Cite n={11} />. Steady state in
+          approximately 5-10 days (roughly 4-5 half-lives). Much
+          shorter washout than the injectables — useful for
+          pre-procedure hold and pre-pregnancy planning.
         </li>
       </ul>
       <p>
@@ -554,12 +575,13 @@ export default function FoundayoComparisonArticle() {
         </li>
         <li>
           You expect to need short-notice surgery or a procedure
-          (Foundayo&apos;s 36-hour half-life means a much shorter
+          (Foundayo&apos;s 29-49 hour half-life means a much shorter
           ASA hold timeline than the injectables)
         </li>
         <li>
-          You can reliably take a pill on an empty stomach 30
-          minutes before food every morning
+          You want a drug you can take any time of day with or
+          without food — no empty-stomach rule, no water
+          restrictions, no 30-minute fast before eating
         </li>
         <li>
           An ~11% expected weight loss is meaningful enough for

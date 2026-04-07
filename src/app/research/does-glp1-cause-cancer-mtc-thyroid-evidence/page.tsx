@@ -22,9 +22,9 @@ const FAQ_ITEMS: FaqItem[] = [
       "The boxed warning on Wegovy and Zepbound states that semaglutide and tirzepatide cause thyroid C-cell tumors in rats at clinically relevant exposures. It is unknown whether the drugs cause thyroid C-cell tumors, including MTC, in humans. The drugs are contraindicated in patients with personal or family history of MTC and in patients with MEN2.",
   },
   {
-    question: "Did the 2023 BMJ French cohort study find a thyroid cancer link?",
+    question: "Did the 2023 Bezin French study find a thyroid cancer link?",
     answer:
-      "Yes — Bezin et al. published a 2023 French national cohort study finding a statistically significant elevated risk of thyroid cancer in GLP-1 users at 1-3 years of cumulative exposure (adjusted hazard ratio approximately 1.58). The signal triggered formal regulatory reviews. The EMA Pharmacovigilance Risk Assessment Committee in October 2023 concluded that no causal association has been established and the available data do not support a change to product information. The FDA reached the same conclusion.",
+      "Yes — Bezin et al. published a 2023 nested case-control study in Diabetes Care (PMID 36356111) drawn from the French national health data system, matching 2,562 thyroid cancer cases to 45,184 controls within a type 2 diabetes cohort. They found a statistically significant elevated risk of thyroid cancer with 1-3 years of cumulative GLP-1 exposure (adjusted hazard ratio approximately 1.58). The signal triggered formal regulatory reviews. The EMA Pharmacovigilance Risk Assessment Committee in October 2023 concluded that no causal association has been established and the available data do not support a change to product information. The FDA reached the same conclusion.",
   },
   {
     question: "Should I get my thyroid checked before starting a GLP-1?",
@@ -59,7 +59,8 @@ export async function generateMetadata(): Promise<Metadata> {
 //   - Wegovy/Zepbound FDA boxed warning text (Section 5.1, thyroid C-cell tumors)
 //   - Bjerre Knudsen et al. 2010 — liraglutide rodent C-cell hyperplasia
 //   - Funch et al. 2014, 2017 — exenatide thyroid cancer cohort, Diabetes Obes Metab
-//   - Bezin et al. 2023 — French national cohort thyroid signal, BMJ
+//   - Bezin et al. 2023 — French nested case-control thyroid signal,
+//     Diabetes Care 46(2):384-390, PMID 36356111
 //   - EMA PRAC review July 2023, October 2023, April 2024 — concluded no causal link
 //   - Wang et al. 2023 — meta-analysis of thyroid cancer in GLP-1 RCTs
 //   - Pinto et al. 2019 — pancreatic cancer cohort
@@ -166,8 +167,9 @@ export default function GlpCancerArticle() {
         That warning is real, comes from rodent studies, and has not
         been demonstrated in humans. The pancreatic cancer signal has
         been investigated in multiple large cohorts and found to be
-        null or inconclusive. The 2023 BMJ-published French national
-        cohort generated a fresh thyroid signal that the EMA and FDA
+        null or inconclusive. The 2023 Bezin French nested
+        case-control study (published in Diabetes Care) generated a
+        fresh thyroid signal that the EMA and FDA
         both reviewed and did not find sufficient to change labeling.
         This article walks through the actual evidence — the rodent
         data, the human cohorts, the regulatory reviews, and the
@@ -274,17 +276,21 @@ export default function GlpCancerArticle() {
         randomized dataset we have.
       </p>
 
-      <h3>The 2023 BMJ-published French cohort signal<Cite n={4} /></h3>
+      <h3>The 2023 Bezin French case-control signal<Cite n={4} /></h3>
       <p>
-        Bezin and colleagues used the French national health data
-        system (SNDS) to compare thyroid cancer incidence in 2,562
-        patients on a GLP-1 receptor agonist with matched diabetic
-        controls on other drugs. They found a statistically
-        significant elevated risk of thyroid cancer at 1-3 years of
-        cumulative exposure (adjusted hazard ratio approximately
-        1.58 for any thyroid cancer, 1.78 for medullary thyroid
-        cancer specifically). This is the strongest human signal
-        published to date.
+        Bezin and colleagues published a nested case-control study
+        in <em>Diabetes Care</em> using the French national health
+        data system (SNDS). Within a cohort of adults with type 2
+        diabetes, they identified <strong>2,562 incident thyroid
+        cancer cases</strong> and matched them to <strong>45,184
+        controls</strong> on age, sex, and index date. Exposure to
+        GLP-1 receptor agonists was then compared between cases and
+        controls. They found a statistically significant elevated
+        risk of thyroid cancer with 1-3 years of cumulative GLP-1
+        exposure (adjusted hazard ratio approximately 1.58 for any
+        thyroid cancer, 1.78 for medullary thyroid cancer
+        specifically). This is the strongest human signal published
+        to date.
       </p>
       <p>
         The signal generated significant attention and triggered
@@ -383,7 +389,7 @@ export default function GlpCancerArticle() {
           discuss with your prescriber and your endocrinologist. The
           black-box warning specifically refers to medullary
           thyroid cancer, not other thyroid cancers, but the 2023
-          BMJ signal does not distinguish subtypes well, so caution
+          Bezin signal did not cleanly separate subtypes, so caution
           is reasonable.
         </li>
         <li>
@@ -446,7 +452,7 @@ export default function GlpCancerArticle() {
       <p>
         This article does not say GLP-1s are risk-free. It does not
         say the boxed warning should be ignored. It does not say
-        the 2023 BMJ signal is wrong — only that the regulatory
+        the 2023 Bezin signal is wrong — only that the regulatory
         agencies that reviewed it did not find it sufficient to
         change labeling. New data may emerge. Long-term human
         cohorts are still accumulating, and the longer the
@@ -465,10 +471,10 @@ export default function GlpCancerArticle() {
           personal or family history of MTC and in MEN2.
         </li>
         <li>
-          The 2023 French BMJ-published cohort signal generated a
-          fresh thyroid cancer concern, but the EMA and FDA both
-          reviewed it in 2023-2024 and concluded that no causal
-          association has been established.
+          The 2023 Bezin nested case-control study (Diabetes Care,
+          PMID 36356111) generated a fresh thyroid cancer concern,
+          but the EMA and FDA both reviewed it in 2023-2024 and
+          concluded that no causal association has been established.
         </li>
         <li>
           The pancreatic cancer signal from the early 2010s has not

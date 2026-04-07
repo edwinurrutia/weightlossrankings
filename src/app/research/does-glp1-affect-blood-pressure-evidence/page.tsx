@@ -58,7 +58,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // Verified against:
 //   - STEP-1 supplementary appendix BP table (PMID 33567185)
 //   - SURMOUNT-1 supplementary appendix BP table (PMID 35658024)
-//   - SELECT cardiovascular outcomes trial (Lincoff et al. NEJM 2023, PMID 38018037)
+//   - SELECT cardiovascular outcomes trial (Lincoff et al. NEJM 2023, PMID 37952131)
 //   - Marso et al. LEADER 2016 (PMID 27295427) — liraglutide CV outcomes
 //   - Davies et al. SUSTAIN-6 (PMID 27633186) — semaglutide CV outcomes
 //   - Sun et al. 2015 meta-analysis of GLP-1 RA blood pressure effects
@@ -93,7 +93,7 @@ export default function GlpBloodPressureArticle() {
         "Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes (SELECT).",
       source: "N Engl J Med",
       year: 2023,
-      pmid: "38018037",
+      pmid: "37952131",
     },
     {
       authors:
@@ -211,10 +211,11 @@ export default function GlpBloodPressureArticle() {
         <strong>20% reduction in major adverse cardiovascular
         events</strong> (cardiovascular death, non-fatal MI,
         non-fatal stroke) in the semaglutide arm vs placebo. The
-        BP component contributed: at year 2, the semaglutide arm
-        had a sustained 4.3 mmHg lower systolic BP than placebo,
-        an effect that contributed to but did not fully explain
-        the CV benefit.
+        BP component contributed: secondary blood pressure
+        analyses showed sustained reductions in systolic blood
+        pressure of several mmHg on semaglutide vs placebo during
+        follow-up, an effect that contributed to but did not fully
+        explain the CV benefit.
       </p>
 
       <h3>LEADER and SUSTAIN-6 (older liraglutide and semaglutide
@@ -416,14 +417,20 @@ export default function GlpBloodPressureArticle() {
           HR 0.80, 95% CI 0.72-0.90
         </li>
         <li>
-          15% reduction in cardiovascular death
+          A non-significant 15% relative reduction in
+          cardiovascular death (HR 0.85, 95% CI 0.71-1.01, P=0.07)
+          — the primary MACE composite was significant, but the
+          CV death subcomponent on its own did not reach
+          statistical significance
         </li>
         <li>
           19% reduction in heart failure hospitalization
         </li>
         <li>
-          The BP component (4.3 mmHg lower systolic at year 2)
-          contributed to but did not fully explain the benefit
+          Secondary blood pressure analyses showed sustained
+          systolic BP reductions of several mmHg on semaglutide vs
+          placebo during follow-up, contributing to but not fully
+          explaining the MACE benefit
         </li>
       </ul>
       <p>

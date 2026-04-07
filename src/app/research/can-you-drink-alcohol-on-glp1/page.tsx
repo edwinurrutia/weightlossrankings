@@ -13,12 +13,12 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Is alcohol contraindicated on a GLP-1?",
     answer:
-      "No. Alcohol is not listed in Section 7 (Drug Interactions) of the Wegovy, Zepbound, Ozempic, or Mounjaro prescribing information. There is no formal prohibition. But that is not the same as 'safe in any quantity for everyone' — most patients report a marked drop in tolerance and the pancreatitis risk in the boxed warning interacts with the well-known alcohol-pancreatitis link.",
+      "No. Alcohol is not listed in Section 7 (Drug Interactions) of the Wegovy, Zepbound, Ozempic, or Mounjaro prescribing information. There is no formal prohibition. But that is not the same as 'safe in any quantity for everyone' — most patients report a marked drop in tolerance and the pancreatitis risk listed in Section 5.4 Warnings and Precautions interacts with the well-known alcohol-pancreatitis link.",
   },
   {
     question: "Does alcohol affect GLP-1 efficacy?",
     answer:
-      "There is no published evidence that moderate alcohol use reduces the weight-loss efficacy of semaglutide or tirzepatide. However, alcohol is empty calories (7 kcal/g) that displace protein intake, which can contribute to lean-mass loss during rapid weight loss. Heavy alcohol use also increases pancreatitis risk on top of the GLP-1 boxed warning.",
+      "There is no published evidence that moderate alcohol use reduces the weight-loss efficacy of semaglutide or tirzepatide. However, alcohol is empty calories (7 kcal/g) that displace protein intake, which can contribute to lean-mass loss during rapid weight loss. Heavy alcohol use also increases pancreatitis risk on top of the GLP-1 pancreatitis warning in Section 5.4 of the Wegovy and Zepbound labels.",
   },
   {
     question: "Does GLP-1 reduce alcohol cravings?",
@@ -38,7 +38,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Can alcohol cause pancreatitis on GLP-1?",
     answer:
-      "Acute pancreatitis is in the boxed warning of the Wegovy and Zepbound labels. Alcohol is one of the most common causes of acute pancreatitis in the general population. The combination is not formally documented in trials but is biologically plausible. Severe abdominal pain (especially radiating to the back), nausea, and vomiting on a GLP-1 with recent heavy drinking is a reason to seek emergency care.",
+      "Acute pancreatitis is listed in Section 5.4 Warnings and Precautions of the Wegovy and Zepbound labels (the single boxed warning on both labels is for thyroid C-cell tumors, not pancreatitis). Alcohol is one of the most common causes of acute pancreatitis in the general population. The combination is not formally documented in trials but is biologically plausible. Severe abdominal pain (especially radiating to the back), nausea, and vomiting on a GLP-1 with recent heavy drinking is a reason to seek emergency care.",
   },
 ];
 
@@ -267,10 +267,14 @@ export default function AlcoholArticle() {
 
       <h3>2. Pancreatitis risk</h3>
       <p>
-        Acute pancreatitis is in the boxed warning section of the
-        Wegovy<Cite n={1} /> and Zepbound<Cite n={2} /> labels.
-        Alcohol is one of the most common causes of acute
-        pancreatitis in the general population. The interaction
+        Acute pancreatitis is listed in Section 5.4 Warnings and
+        Precautions of the Wegovy<Cite n={1} /> and Zepbound
+        <Cite n={2} /> labels. (The single boxed warning on both
+        labels is for thyroid C-cell tumors / medullary thyroid
+        carcinoma, based on rodent data &mdash; not pancreatitis.
+        Pancreatitis is one of several Section 5 Warnings and
+        Precautions.) Alcohol is one of the most common causes of
+        acute pancreatitis in the general population. The interaction
         is not formally documented in trials but is biologically
         plausible: a patient on a GLP-1 is already at slightly
         elevated baseline pancreatitis risk, and heavy alcohol use
