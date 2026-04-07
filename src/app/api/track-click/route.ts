@@ -42,7 +42,10 @@ export async function POST(req: Request) {
       req.headers.get("x-real-ip") ||
       null;
     const userAgent = req.headers.get("user-agent");
-    await incrementClick(p, s, position, { ip, userAgent });
+    // Vercel edge headers for aggregate country/region counters.
+    const country = req.headers.get("x-vercel-ip-country");
+    const region = req.headers.get("x-vercel-ip-country-region");
+    await incrementClick(p, s, position, { ip, userAgent, country, region });
 
     return NextResponse.json({ ok: true });
   } catch (err) {

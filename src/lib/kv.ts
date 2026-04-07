@@ -65,6 +65,10 @@ export interface ClickContext {
   ip?: string | null;
   /** User-Agent header — server-side only. */
   userAgent?: string | null;
+  /** ISO-2 country code from x-vercel-ip-country — server-side only. */
+  country?: string | null;
+  /** Region/state code from x-vercel-ip-country-region — server-side only. */
+  region?: string | null;
 }
 
 /**
@@ -103,6 +107,9 @@ export async function incrementClick(
   if (!isKvConfigured()) return;
   try {
     const day = todayKey();
+    const now = new Date();
+    const dow = now.getUTCDay(); // 0=Sun..6=Sat
+    const hour = now.getUTCHours(); // 0..23
     const ops: Promise<unknown>[] = [
       kv.incr(`clicks:provider:${provider}`),
       kv.incr(`clicks:source:${provider}:${source}`),
@@ -111,7 +118,32 @@ export async function incrementClick(
       kv.sadd("clicks:providers", provider),
       kv.sadd(`clicks:sources:${provider}`, source),
       kv.sadd("clicks:all_sources", source),
+      // Source → Provider flow (for the Sankey-style table)
+      kv.hincrby(`clicks:source_provider:${source}`, provider, 1),
+      // Hour-of-day heatmap bucket — UTC day-of-week × hour-of-day
+      kv.hincrby(`clicks:hour:${dow}`, String(hour), 1),
     ];
+
+    // Geo aggregate counters — only stores rolled-up counts by country
+    // and region. No per-visitor records, no IP storage. Privacy-safe.
+    if (context?.country) {
+      const country = context.country.toUpperCase().slice(0, 2);
+      ops.push(
+        kv.hincrby(`clicks:geo:country:${day}`, country, 1),
+        kv.hincrby(`clicks:geo:country_total`, country, 1),
+        kv.sadd("clicks:geo:countries", country),
+      );
+      if (context.region) {
+        const safeRegion = context.region.replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 16);
+        if (safeRegion) {
+          const geoKey = `${country}-${safeRegion}`;
+          ops.push(
+            kv.hincrby(`clicks:geo:region:${day}`, geoKey, 1),
+            kv.hincrby(`clicks:geo:region_total`, geoKey, 1),
+          );
+        }
+      }
+    }
 
     if (typeof position === "number" && position > 0 && position <= 100) {
       const pos = Math.floor(position);
@@ -349,6 +381,111 @@ export interface DailyClickEntry {
   date: string;
   total: number;
   byProvider: Record<string, number>;
+}
+
+/**
+ * Returns top countries by click count (descending). Aggregate-only —
+ * no per-visitor records exist, only rolled-up counters.
+ */
+export async function getCountryClicks(): Promise<
+  Array<{ country: string; total: number }>
+> {
+  if (!isKvConfigured()) return [];
+  try {
+    const hash =
+      (await kv.hgetall<Record<string, number>>(`clicks:geo:country_total`)) ??
+      {};
+    return Object.entries(hash)
+      .map(([country, total]) => ({ country, total: Number(total ?? 0) }))
+      .filter((row) => row.total > 0)
+      .sort((a, b) => b.total - a.total);
+  } catch (err) {
+    console.error("[kv] getCountryClicks error", err);
+    return [];
+  }
+}
+
+/**
+ * Returns top regions by click count (descending). Region keys are of
+ * the form "US-CA" — country ISO-2 + region code.
+ */
+export async function getRegionClicks(): Promise<
+  Array<{ region: string; total: number }>
+> {
+  if (!isKvConfigured()) return [];
+  try {
+    const hash =
+      (await kv.hgetall<Record<string, number>>(`clicks:geo:region_total`)) ??
+      {};
+    return Object.entries(hash)
+      .map(([region, total]) => ({ region, total: Number(total ?? 0) }))
+      .filter((row) => row.total > 0)
+      .sort((a, b) => b.total - a.total);
+  } catch (err) {
+    console.error("[kv] getRegionClicks error", err);
+    return [];
+  }
+}
+
+/**
+ * Returns flattened source → provider pairs sorted by click count desc.
+ * Used by the admin dashboard to show "which page drove clicks to which
+ * provider" — e.g. "homepage_top_rated → coreage-rx: 4 clicks".
+ */
+export async function getSourceProviderPairs(): Promise<
+  Array<{ source: string; provider: string; total: number }>
+> {
+  if (!isKvConfigured()) return [];
+  try {
+    const sources = ((await kv.smembers("clicks:all_sources")) as string[]) ?? [];
+    if (sources.length === 0) return [];
+    const out: Array<{ source: string; provider: string; total: number }> = [];
+    const hashes = await Promise.all(
+      sources.map((s) =>
+        kv.hgetall<Record<string, number>>(`clicks:source_provider:${s}`),
+      ),
+    );
+    sources.forEach((source, i) => {
+      const hash = hashes[i] ?? {};
+      for (const [provider, total] of Object.entries(hash)) {
+        const n = Number(total ?? 0);
+        if (n > 0) out.push({ source, provider, total: n });
+      }
+    });
+    return out.sort((a, b) => b.total - a.total);
+  } catch (err) {
+    console.error("[kv] getSourceProviderPairs error", err);
+    return [];
+  }
+}
+
+/**
+ * Returns hour-of-day heatmap data: hour[dow][hour] = count.
+ * dow: 0=Sun..6=Sat, hour: 0..23 (UTC).
+ */
+export async function getHourHeatmap(): Promise<number[][]> {
+  const grid: number[][] = Array.from({ length: 7 }, () =>
+    Array.from({ length: 24 }, () => 0),
+  );
+  if (!isKvConfigured()) return grid;
+  try {
+    const hashes = await Promise.all(
+      Array.from({ length: 7 }, (_, dow) =>
+        kv.hgetall<Record<string, number>>(`clicks:hour:${dow}`),
+      ),
+    );
+    hashes.forEach((hash, dow) => {
+      const h = hash ?? {};
+      for (const [hourStr, count] of Object.entries(h)) {
+        const hr = parseInt(hourStr, 10);
+        if (hr >= 0 && hr < 24) grid[dow][hr] = Number(count ?? 0);
+      }
+    });
+    return grid;
+  } catch (err) {
+    console.error("[kv] getHourHeatmap error", err);
+    return grid;
+  }
 }
 
 /** Returns last N days of clicks (most recent last) */

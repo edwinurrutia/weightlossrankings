@@ -95,7 +95,17 @@ export async function GET(
       req.headers.get("x-real-ip") ||
       null;
     const userAgent = req.headers.get("user-agent");
-    await incrementClick(slug, source, position, { ip, userAgent });
+    // Vercel edge headers — present in production behind Vercel's
+    // edge network. Aggregate-only: only used to bump rolled-up
+    // country/region counters in KV. No per-visitor records.
+    const country = req.headers.get("x-vercel-ip-country");
+    const region = req.headers.get("x-vercel-ip-country-region");
+    await incrementClick(slug, source, position, {
+      ip,
+      userAgent,
+      country,
+      region,
+    });
   } catch (err) {
     // Never let a logging failure break the redirect. The user came
     // here to be sent to the provider — that's the contract.

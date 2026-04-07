@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         Privacy Policy
       </h1>
       <p className="text-sm text-brand-text-secondary/70 mb-8">
-        Effective date: April 6, 2026
+        Effective date: April 7, 2026
       </p>
 
       <div className="space-y-6 text-brand-text-secondary leading-relaxed">
@@ -112,19 +112,42 @@ export default function PrivacyPage() {
         </ul>
 
         <h2 className="font-heading text-xl font-bold text-brand-text-primary pt-4">
-          3. Cookies and Tracking Technologies
+          3. Cookies, Tracking Technologies, and Your Consent Choices
         </h2>
+        <p>
+          <strong className="text-brand-text-primary">
+            Your cookie preferences are under your control.
+          </strong>{" "}
+          On your first visit to the Site you will see a cookie consent
+          banner at the bottom of the page with two choices:{" "}
+          <em>Accept all</em> (enables Google Analytics and other
+          non-essential tracking described below) or{" "}
+          <em>Necessary only</em> (only first-party functional storage
+          required to make the Site work — no Google Analytics, no
+          analytics cookies). Your decision is stored in your
+          browser&apos;s local storage. You can change your choice at
+          any time by clearing your browser&apos;s site data for
+          weightlossrankings.org, which will cause the consent banner
+          to reappear on your next visit.
+        </p>
         <p>
           The Site uses a small number of cookies and tracking technologies:
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong className="text-brand-text-primary">
-              Analytics cookies.
+              Analytics cookies (consent-gated).
             </strong>{" "}
-            We use Google Analytics to measure traffic and understand reader
-            behavior in aggregate. Google Analytics sets its own cookies and
-            collects data governed by{" "}
+            If — and only if — you select &ldquo;Accept all&rdquo; on
+            the consent banner, we load Google Analytics 4 (GA4) to
+            measure traffic and understand reader behavior in aggregate.
+            GA4 automatically anonymizes IP addresses at collection and
+            does not allow us to identify individual visitors. If you
+            select &ldquo;Necessary only&rdquo; or make no selection,
+            the Google Analytics scripts are not loaded at all and no
+            GA cookies are set. Google Analytics is also disabled
+            entirely on our admin pages. Data Google does process is
+            governed by{" "}
             <a
               href="https://policies.google.com/privacy"
               className="text-brand-violet underline"
@@ -133,7 +156,8 @@ export default function PrivacyPage() {
             >
               Google&apos;s Privacy Policy
             </a>
-            . You can opt out of Google Analytics using Google&apos;s{" "}
+            . You can also opt out of Google Analytics across all sites
+            using Google&apos;s{" "}
             <a
               href="https://tools.google.com/dlpage/gaoptout"
               className="text-brand-violet underline"
@@ -148,17 +172,41 @@ export default function PrivacyPage() {
             <strong className="text-brand-text-primary">
               Affiliate tracking pixels.
             </strong>{" "}
-            Some of our affiliate partners use pixels and first-party cookies
-            to attribute conversions. These are set when you click an
-            affiliate link and leave our Site.
+            When you click an outbound affiliate link and leave our
+            Site, the destination partner (and its affiliate network)
+            may set its own tracking cookies to attribute the
+            conversion. These are first-party cookies of the
+            destination site, not ours, and are governed by that
+            partner&apos;s privacy policy. We do not set affiliate
+            pixels on the Weight Loss Rankings domain itself.
+          </li>
+          <li>
+            <strong className="text-brand-text-primary">
+              Internal click attribution (no personal data).
+            </strong>{" "}
+            When you click an outbound affiliate link, we record the
+            click on our own servers so we can count which reviews
+            help readers most and report aggregate traffic to
+            partners. This internal tracking does{" "}
+            <strong>not</strong> store your IP address, user agent, or
+            any personally identifying data. For daily-unique-visitor
+            counting we compute a daily-rotating salted hash of your
+            IP address and user agent; the hash is rotated every day
+            and the raw values are never written to our database.
+            This internal click analytics runs whether or not you
+            accept GA cookies — it is a necessary functional system
+            for our affiliate reporting and cannot be disabled.
           </li>
           <li>
             <strong className="text-brand-text-primary">
               Functional storage.
             </strong>{" "}
-            We use local storage and Vercel KV to remember small preferences
-            (for example, which comparison filters you applied) and to
-            deduplicate outbound-click counts.
+            We use your browser&apos;s local storage to remember your
+            cookie consent choice, any comparison filters you
+            applied, and similar preferences. These do not leave
+            your device and are not transmitted to our servers. We
+            use Vercel KV on the server side to store the
+            deduplicated outbound-click counts described above.
           </li>
         </ul>
         <p>
@@ -184,10 +232,23 @@ export default function PrivacyPage() {
           </li>
           <li>
             <strong className="text-brand-text-primary">
-              Analytics (Google Analytics).
+              Analytics (Google Analytics 4).
             </strong>{" "}
-            Pseudonymous traffic data is processed by Google to help us
-            understand site usage.
+            If — and only if — you have accepted cookies on our
+            consent banner, pseudonymous traffic data is processed
+            by Google Analytics 4 (GA4) to help us understand site
+            usage. GA4 anonymizes IP addresses by default at the
+            point of collection. Google acts as a processor on our
+            behalf and is bound by its own published terms. See{" "}
+            <a
+              href="https://policies.google.com/privacy"
+              className="text-brand-violet underline"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Google&apos;s Privacy Policy
+            </a>
+            {" "}for Google&apos;s own disclosures.
           </li>
           <li>
             <strong className="text-brand-text-primary">
@@ -215,7 +276,7 @@ export default function PrivacyPage() {
         </ul>
 
         <h2 className="font-heading text-xl font-bold text-brand-text-primary pt-4">
-          5. Your Rights
+          5. Your Rights and How to Exercise Them
         </h2>
         <p>
           Regardless of where you live, you may contact us at{" "}
@@ -228,7 +289,17 @@ export default function PrivacyPage() {
           to ask what personal information we hold about you, request that we
           correct or delete it, unsubscribe from our newsletter, or opt out
           of analytics. We aim to respond to verifiable requests within 30
-          days.
+          days. If we need to verify your identity before acting on a
+          request, we will ask you for the minimum information needed to
+          match your request against records we already hold.
+        </p>
+        <p>
+          For the fastest way to withdraw analytics consent,{" "}
+          clear your browser cookies and site data for
+          weightlossrankings.org; the cookie consent banner will
+          reappear on your next visit, and selecting
+          &ldquo;Necessary only&rdquo; will prevent Google Analytics
+          from loading on all subsequent visits.
         </p>
 
         <h2 className="font-heading text-xl font-bold text-brand-text-primary pt-4">
@@ -276,21 +347,107 @@ export default function PrivacyPage() {
           7. EU / UK Residents (GDPR)
         </h2>
         <p>
-          If you are located in the European Economic Area, the United
-          Kingdom, or Switzerland, the General Data Protection Regulation
-          gives you the rights of access, rectification, erasure, restriction
-          of processing, data portability, and objection. You also have the
-          right to lodge a complaint with your local data protection
-          authority.
+          <strong className="text-brand-text-primary">
+            Jurisdictional scope.
+          </strong>{" "}
+          Weight Loss Rankings is a United States publication operated
+          by a Delaware-registered company. The GLP-1 telehealth
+          providers, compounding pharmacies, and insurance products
+          we review are{" "}
+          <strong>available only to patients located in the United
+          States</strong> and, in most cases, only to patients with
+          a valid US prescription issued by a US-licensed healthcare
+          provider. We do not market the Site to residents of the
+          European Economic Area, the United Kingdom, or Switzerland,
+          and the product information on the Site should not be
+          construed as an offer of telehealth services or prescription
+          medication to EU, UK, or Swiss residents. If you are
+          located outside the United States, the reviews and tools
+          on this Site are unlikely to be relevant to you, and you
+          may not be able to access any of the telehealth or
+          compounding-pharmacy services we review.
         </p>
         <p>
-          The legal bases on which we process your personal data are: (a)
-          your <strong>consent</strong> for newsletter subscriptions and
-          non-essential cookies, which you can withdraw at any time; (b) our{" "}
-          <strong>legitimate interests</strong> in operating and improving a
-          secure, high-quality comparison site, which includes aggregate
-          analytics and affiliate-click attribution; and (c) compliance with
-          a <strong>legal obligation</strong> where required.
+          That said, if you are located in the European Economic
+          Area, the United Kingdom, or Switzerland and you do visit
+          the Site, the General Data Protection Regulation (GDPR)
+          and the UK GDPR still give you the rights of access,
+          rectification, erasure (&ldquo;right to be forgotten&rdquo;),
+          restriction of processing, data portability, and objection
+          with respect to any data we process about you. You also
+          have the right to withdraw any consent you previously gave
+          (for example, by selecting &ldquo;Necessary only&rdquo; on
+          our cookie banner to disable Google Analytics), and the
+          right to lodge a complaint with your local data protection
+          authority (for EU residents, this is typically your
+          national DPA; for UK residents, the Information
+          Commissioner&apos;s Office). We honor these rights
+          regardless of whether you can actually use the products
+          we review.
+        </p>
+        <p>
+          <strong className="text-brand-text-primary">
+            Our GDPR Article 6 lawful bases for processing.
+          </strong>{" "}
+          We rely on the following lawful bases under GDPR Article 6(1):
+        </p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>Art. 6(1)(a) — Consent.</strong> We rely on your
+            freely-given, specific, informed, and unambiguous consent
+            for (i) loading Google Analytics and its associated
+            cookies, which happens only if you click &ldquo;Accept
+            all&rdquo; on the cookie consent banner, and (ii)
+            subscribing you to our email newsletter. You can withdraw
+            either consent at any time — for analytics, by clearing
+            your cookies and selecting &ldquo;Necessary only&rdquo;
+            when the banner reappears; for newsletters, by clicking
+            the unsubscribe link in any email or emailing us. Withdrawal
+            does not affect processing that already occurred before
+            the withdrawal.
+          </li>
+          <li>
+            <strong>Art. 6(1)(b) — Contract.</strong> When you email
+            us with a question or submit a provider correction, we
+            process your message to respond to your request. This is
+            processing necessary to take steps at your request.
+          </li>
+          <li>
+            <strong>Art. 6(1)(f) — Legitimate interests.</strong> We
+            rely on our legitimate interests in running a secure,
+            high-quality comparison site for the following: (i)
+            operating and securing the Site, including server logs
+            and abuse prevention; (ii) the internal click-attribution
+            system described in Section 3, which does not store
+            personal data but does track outbound click counts; and
+            (iii) replying to partner-relationship correspondence.
+            We balance these interests against your rights and
+            freedoms, and you can object to processing on this basis
+            by contacting us at hello@weightlossrankings.org.
+          </li>
+          <li>
+            <strong>Art. 6(1)(c) — Legal obligation.</strong> We
+            process data where required by applicable law — for
+            example, in response to a valid legal request from a
+            competent authority.
+          </li>
+        </ul>
+        <p>
+          We do not process special categories of personal data
+          (health data, biometric data, etc.) under GDPR Article 9.
+          We do not ask for and do not store any patient health
+          information; our calculators run in your browser and the
+          values you enter are not transmitted to our servers unless
+          we explicitly say so.
+        </p>
+        <p>
+          <strong className="text-brand-text-primary">
+            Automated decision-making.
+          </strong>{" "}
+          We do not make any decisions about you that are based
+          solely on automated processing (including profiling) that
+          produce legal or similarly significant effects, within the
+          meaning of GDPR Article 22.
         </p>
 
         <h2 className="font-heading text-xl font-bold text-brand-text-primary pt-4">

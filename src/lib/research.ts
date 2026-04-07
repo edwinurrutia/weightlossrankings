@@ -226,6 +226,48 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Adolescents", "PubMed sourced"],
   },
   {
+    slug: "wegovy-ozempic-zepbound-mounjaro-brand-name-cheat-sheet",
+    title:
+      "Wegovy vs Ozempic vs Zepbound vs Mounjaro: The GLP-1 Brand Name Cheat Sheet",
+    description:
+      "Five brand names, three active ingredients, two drugs, one confusing market. We untangle which brand is which, which are identical products with different labels, which insurance covers what, and why 'is Zepbound the same as Mounjaro?' is the most-searched GLP-1 brand question.",
+    excerpt:
+      "The GLP-1 market is a mess of brand names: Wegovy, Ozempic, Rybelsus, Zepbound, Mounjaro, Foundayo. Most patients don't know that Zepbound and Mounjaro contain the same active ingredient dispensed by the same manufacturer, or that Wegovy and Ozempic are similarly related, or that Foundayo is the first non-peptide pill in the class. This cheat sheet explains which brand equals which drug, which indication each is approved for, and which insurance landscape each falls into — answering every brand confusion query in one place.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-07",
+    readMinutes: 8,
+    citations: 6,
+    tags: ["Brand names", "Patient guide", "Cheat sheet"],
+  },
+  {
+    slug: "switching-between-glp1-medications-guide",
+    title:
+      "Switching Between GLP-1 Medications: The Complete Protocol Guide",
+    description:
+      "Can you switch from semaglutide to tirzepatide? From Ozempic to Wegovy? From Wegovy to Zepbound? From compounded to brand-name? This guide walks through every switching scenario with the recommended protocol, the washout timing, the dose mapping, and what to expect during the transition period.",
+    excerpt:
+      "Switching between GLP-1 medications is increasingly common as patients plateau on one drug, chase lower prices, move between insurance coverage tiers, or want the larger effect size of tirzepatide. Each switching scenario has a different protocol and different pitfalls. This guide walks through all of them: sema→tirz, tirz→sema, Ozempic→Wegovy, Wegovy→Zepbound, brand→compounded, and compounded→brand. Includes dose-equivalence mapping tables and the 1-2 week washout guidance from the FDA labels.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 11,
+    citations: 5,
+    tags: ["Switching", "Patient guide", "Protocol"],
+  },
+  {
+    slug: "how-to-taper-off-glp1-safely-guide",
+    title:
+      "How to Taper Off Semaglutide and Tirzepatide Safely: The Discontinuation Protocol Guide",
+    description:
+      "Stopping a GLP-1 medication isn't the same as skipping a few weeks. The STEP-4 trial showed that patients who stopped semaglutide regained 67% of their lost weight within a year. This guide walks through the evidence-based tapering options, when to stop versus continue, and the rebound prevention protocol.",
+    excerpt:
+      "There is no FDA-approved tapering schedule for semaglutide or tirzepatide — the prescribing information treats discontinuation as 'simply stop.' But the clinical reality is more complicated: the STEP-4 trial showed that patients who stopped cold regained about 67% of their lost weight within a year. This guide walks through the evidence-based options: continuing at maintenance (the trial-supported protocol), stepping down to a lower dose (off-label but increasingly used), or full discontinuation with a lifestyle bridge plan. Includes the medical reasons to actually stop and when to call your prescriber instead.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 10,
+    citations: 5,
+    tags: ["Tapering", "Discontinuation", "Patient guide"],
+  },
+  {
     slug: "glp1-side-effects-fatigue-hair-loss-duration",
     title:
       "GLP-1 Side Effects Duration: Fatigue, Hair Loss, and How Long Everything Actually Lasts",
