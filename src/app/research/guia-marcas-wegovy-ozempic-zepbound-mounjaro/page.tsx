@@ -17,6 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
         "en-US":
           "/research/wegovy-ozempic-zepbound-mounjaro-brand-name-cheat-sheet",
         "es-US": `/research/${SLUG}`,
+        es: `/research/${SLUG}`,
       },
     },
     openGraph: {

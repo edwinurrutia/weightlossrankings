@@ -289,7 +289,12 @@ export default function SurmountOsaArticle() {
         weight-loss-mediated approach as a legitimate treatment for
         OSA itself. That precedent is likely to influence the
         regulatory and clinical conversation around adjacent
-        pharmacological approaches over the coming years.
+        pharmacological approaches over the coming years — see also
+        the parallel evidence in our{" "}
+        <Link href="/research/step-hfpef-semaglutide-heart-failure">
+          STEP-HFpEF semaglutide heart failure deep-dive
+        </Link>{" "}
+        for the same pattern playing out in heart failure.
       </p>
 
       <p>
@@ -412,7 +417,12 @@ export default function SurmountOsaArticle() {
           that semaglutide produces comparable benefits given its
           effective weight loss profile, but absent direct trial
           data, the FDA-approved indication is currently limited to
-          tirzepatide.
+          tirzepatide. For the broader efficacy comparison between the
+          two drugs, see our{" "}
+          <Link href="/research/tirzepatide-vs-semaglutide-head-to-head">
+            tirzepatide vs semaglutide head-to-head deep dive
+          </Link>
+          .
         </li>
         <li>
           <strong>Mechanism — weight loss alone, or more?</strong>{" "}

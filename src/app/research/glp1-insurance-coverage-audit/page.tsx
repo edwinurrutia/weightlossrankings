@@ -93,7 +93,13 @@ export default function InsuranceCoverageAuditArticle() {
         offers consistent plan-wide approval. This is what &ldquo;varies
         by plan&rdquo; actually means in practice — and it&apos;s why so
         many patients pivot to compounded alternatives instead of fighting
-        through the prior auth maze.
+        through the prior auth maze. If your employer is one of the 30
+        large US firms we track, our{" "}
+        <Link href="/tools/insurance-employer-checker">
+          insurance employer checker
+        </Link>{" "}
+        will tell you the reported coverage status before you call
+        member services.
       </p>
 
       <h2>The headline numbers from our audit</h2>
@@ -262,7 +268,11 @@ export default function InsuranceCoverageAuditArticle() {
           cash-pay floor is roughly half what most insurance copays
           would be even for an approved prescription. Use our{" "}
           <Link href="/savings-calculator">savings calculator</Link> to
-          see your specific number.
+          see your specific number, and our{" "}
+          <Link href="/research/glp1-insurance-coverage-medicare-medicaid-commercial">
+            Medicare, Medicaid, and commercial coverage deep-dive
+          </Link>{" "}
+          for the payer-by-payer rules behind the prior auth process.
         </li>
       </ol>
 

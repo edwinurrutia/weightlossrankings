@@ -23,7 +23,6 @@ export default function ProviderCard({
     name,
     scores,
     best_for,
-    external_reviews,
     pricing,
     features,
     fda_warnings,
@@ -35,9 +34,8 @@ export default function ProviderCard({
   const visibleFeatures = features.slice(0, 4);
   const hasFdaWarning = fda_warnings && fda_warnings.length > 0;
 
-  const trustpilot = external_reviews?.trustpilot_score;
-  const trustpilotCount = external_reviews?.trustpilot_count;
   const overall = computeOverallScore(scores);
+  const fiveStar = Math.round((overall / 2) * 10) / 10;
 
   return (
     <div
@@ -69,10 +67,11 @@ export default function ProviderCard({
         </div>
       </div>
 
-      {/* Star rating */}
-      {trustpilot !== undefined && (
-        <StarRating score={trustpilot} count={trustpilotCount} />
-      )}
+      {/* Editorial star rating (our own methodology, not third-party) */}
+      <StarRating score={fiveStar} />
+      <p className="text-[11px] text-brand-text-secondary -mt-2">
+        Editorial score · <a href="/methodology" className="underline hover:text-brand-violet">methodology</a>
+      </p>
 
       {/* Pricing */}
       <PricingDisplay pricing={pricing} selectedDose={selectedDose} />

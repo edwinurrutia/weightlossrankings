@@ -122,10 +122,6 @@
     ],
     "best_for": "best overall value",
     "is_featured": true,
-    "external_reviews": {
-      "trustpilot_score": 4.7,
-      "trustpilot_count": 850
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -6952,10 +6948,6 @@
     ],
     "best_for": "behavior change without medication",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 3.8,
-      "trustpilot_count": 45000
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -7083,14 +7075,10 @@
     "cons": [
       "Lower effectiveness without medication tier",
       "App UX feels dated vs. newer competitors",
-      "Mixed Trustpilot reviews (3.5/5)"
+      "Mixed user reviews across third-party sites"
     ],
     "best_for": "community support + proven system",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 3.5,
-      "trustpilot_count": 18000
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -7196,10 +7184,6 @@
     ],
     "best_for": "serious gym-goers",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.5,
-      "trustpilot_count": 3200
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -7305,10 +7289,6 @@
     ],
     "best_for": "metabolic energy support",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.3,
-      "trustpilot_count": 1800
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -7414,10 +7394,6 @@
     ],
     "best_for": "doctor-recommended quality",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.6,
-      "trustpilot_count": 5400
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -7524,10 +7500,6 @@
     ],
     "best_for": "ready-to-eat convenience",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.4,
-      "trustpilot_count": 12500
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -7634,10 +7606,6 @@
     ],
     "best_for": "medically-designed nutrition",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.1,
-      "trustpilot_count": 4200
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -7743,10 +7711,6 @@
     ],
     "best_for": "proven weight loss system",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 3.9,
-      "trustpilot_count": 28000
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -7852,10 +7816,6 @@
     ],
     "best_for": "organic ingredients",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4,
-      "trustpilot_count": 6700
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -7966,10 +7926,6 @@
     ],
     "best_for": "calorie counting",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.3,
-      "trustpilot_count": 45000
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -8075,10 +8031,6 @@
     ],
     "best_for": "simple calorie tracking",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.4,
-      "trustpilot_count": 18000
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -8175,10 +8127,6 @@
     ],
     "best_for": "psychology + medication combo",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.2,
-      "trustpilot_count": 8900
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -8284,10 +8232,6 @@
     ],
     "best_for": "activity-based tracking",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4,
-      "trustpilot_count": 32000
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -8393,10 +8337,6 @@
     ],
     "best_for": "guided workouts",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.6,
-      "trustpilot_count": 12000
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -8554,9 +8494,6 @@
     ],
     "best_for": "men's weight loss",
     "is_featured": false,
-    "external_reviews": {
-      "trustpilot_score": 4.9
-    },
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -9275,7 +9212,7 @@
     ],
     "cons": [
       "Pricing higher than aggressive compounded competitors",
-      "3.0\u2605 Trustpilot score lower than peers \u2014 review independent feedback before committing"
+      "Lower-than-peer ratings on independent review sites \u2014 read recent user feedback before committing"
     ],
     "best_for": "patients wanting required-labs structure rather than questionnaire-only intake",
     "is_featured": false,
@@ -9287,7 +9224,7 @@
         "https://thepeptidelist.com/providers"
       ],
       "confidence": "medium",
-      "notes": "Verified via thepeptidelist.com competitive intelligence (Apr 2026). Trustpilot score 3.0 noted in source \u2014 flagged in cons."
+      "notes": "Verified via thepeptidelist.com competitive intelligence (Apr 2026). Below-peer third-party rating noted in source \u2014 flagged in cons."
     }
   },
   {

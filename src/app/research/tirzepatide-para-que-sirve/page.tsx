@@ -57,7 +57,12 @@ export default function TirzepatideParaQueSirveArticle() {
         bajo dos nombres comerciales: <strong>Mounjaro</strong>, para el
         tratamiento de la diabetes tipo 2, y <strong>Zepbound</strong>,
         para el manejo crónico del peso en adultos con obesidad o
-        sobrepeso con enfermedades relacionadas con el peso. En el estudio
+        sobrepeso con enfermedades relacionadas con el peso. Si quiere
+        comparar estas marcas con Wegovy y Ozempic, consulte nuestra{" "}
+        <Link href="/research/guia-marcas-wegovy-ozempic-zepbound-mounjaro">
+          guía en español de las marcas de GLP-1
+        </Link>
+        . En el estudio
         clínico SURMOUNT-1 (Jastreboff y colaboradores, <em>New England
         Journal of Medicine</em> 2022), los adultos sin diabetes que
         recibieron 15 mg de tirzepatida por vía subcutánea una vez por
@@ -224,7 +229,13 @@ export default function TirzepatideParaQueSirveArticle() {
         de un ensayo clínico. En la vida real, la pérdida de peso suele
         ser algo menor debido a factores como interrupciones del
         tratamiento, costo del medicamento, tolerabilidad y adherencia al
-        plan de alimentación y ejercicio.
+        plan de alimentación y ejercicio. Para entender en cuánto
+        tiempo se empiezan a notar los efectos de un GLP-1, consulte
+        nuestra{" "}
+        <Link href="/research/cuanto-tarda-glp1-en-hacer-efecto">
+          guía en español sobre cuánto tarda un GLP-1 en hacer efecto
+        </Link>
+        .
       </p>
 
       <h2>Reacciones adversas más frecuentes</h2>
@@ -249,7 +260,13 @@ export default function TirzepatideParaQueSirveArticle() {
         La mayoría de estas reacciones fueron leves o moderadas. En
         SURMOUNT-1, aproximadamente el 6.2% de los participantes con
         tirzepatida 15 mg suspendió el tratamiento por reacciones
-        adversas, en comparación con el 2.6% en el grupo placebo.
+        adversas, en comparación con el 2.6% en el grupo placebo. Para
+        más detalle sobre los efectos secundarios de los GLP-1 en
+        formato de preguntas y respuestas, consulte nuestra{" "}
+        <Link href="/research/efectos-secundarios-glp1-preguntas-respuestas">
+          guía en español sobre efectos secundarios de los GLP-1
+        </Link>
+        .
       </p>
 
       <p>

@@ -24,8 +24,6 @@ export interface FdaWarning {
 }
 
 export interface ExternalReviews {
-  trustpilot_score?: number;
-  trustpilot_count?: number;
   google_score?: number;
   google_count?: number;
 }

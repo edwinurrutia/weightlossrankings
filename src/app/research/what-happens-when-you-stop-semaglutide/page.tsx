@@ -316,7 +316,16 @@ export default function WhatHappensWhenYouStopSemaglutideArticle() {
           some clinical experience suggesting that stretching dosing
           intervals (e.g., moving from weekly to every 10-14 days) can
           help maintain weight loss at lower drug exposure, but the
-          rigorous trial data isn&apos;t there yet.
+          rigorous trial data isn&apos;t there yet. Our{" "}
+          <Link href="/research/how-to-taper-off-glp1-safely-guide">
+            practical guide to tapering off a GLP-1 safely
+          </Link>{" "}
+          and our{" "}
+          <Link href="/research/semaglutide-microdosing-evidence-guide">
+            semaglutide microdosing evidence guide
+          </Link>{" "}
+          walk through what is and isn&apos;t known about lower-dose
+          maintenance strategies.
         </li>
         <li>
           <strong>Cost matters more than usual.</strong> Because long-term

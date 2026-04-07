@@ -50,8 +50,8 @@ function sortProviders(
     case "most-reviewed":
       return sorted.sort(
         (a, b) =>
-          (b.external_reviews?.trustpilot_count ?? 0) -
-          (a.external_reviews?.trustpilot_count ?? 0)
+          (b.external_reviews?.google_count ?? 0) -
+          (a.external_reviews?.google_count ?? 0)
       );
     default:
       return sorted;

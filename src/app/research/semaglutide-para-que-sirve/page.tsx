@@ -56,7 +56,12 @@ export default function SemaglutideParaQueSirveArticle() {
         principales: <strong>Ozempic</strong>, para el tratamiento de la
         diabetes tipo 2, y <strong>Wegovy</strong>, para el manejo crónico
         del peso en adultos y adolescentes con obesidad o sobrepeso con
-        enfermedades relacionadas con el peso. En el estudio clínico STEP 1
+        enfermedades relacionadas con el peso. Si quiere ver cómo se
+        comparan estas marcas con Mounjaro y Zepbound, consulte nuestra{" "}
+        <Link href="/research/guia-marcas-wegovy-ozempic-zepbound-mounjaro">
+          guía en español de las marcas de GLP-1
+        </Link>
+        . En el estudio clínico STEP 1
         (Wilding y colaboradores, <em>New England Journal of Medicine</em>{" "}
         2021), los adultos sin diabetes que recibieron 2.4 mg de semaglutida
         por vía subcutánea una vez por semana durante 68 semanas perdieron
@@ -227,7 +232,12 @@ export default function SemaglutideParaQueSirveArticle() {
         medicamento. En la práctica real, la pérdida de peso suele ser
         algo menor, ya que muchos pacientes no completan la titulación
         completa de la dosis, pierden dosis o descontinúan el tratamiento
-        por razones de costo o tolerabilidad.
+        por razones de costo o tolerabilidad. Para entender en cuánto
+        tiempo se empiezan a notar los efectos, consulte nuestra{" "}
+        <Link href="/research/cuanto-tarda-glp1-en-hacer-efecto">
+          guía en español sobre cuánto tarda un GLP-1 en hacer efecto
+        </Link>
+        .
       </p>
 
       <h2>Reacciones adversas más frecuentes</h2>
@@ -255,7 +265,12 @@ export default function SemaglutideParaQueSirveArticle() {
         tratamiento, mientras la dosis se aumentaba de forma escalonada.
         Aproximadamente el 7% de los participantes suspendió el medicamento
         por reacciones adversas, en comparación con el 3.1% en el grupo
-        placebo.
+        placebo. Para una guía más amplia con preguntas y respuestas
+        sobre los efectos secundarios de los GLP-1, consulte nuestra{" "}
+        <Link href="/research/efectos-secundarios-glp1-preguntas-respuestas">
+          guía en español sobre efectos secundarios de los GLP-1
+        </Link>
+        .
       </p>
 
       <p>

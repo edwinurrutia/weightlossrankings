@@ -142,21 +142,18 @@ export default function HomeHeroProviders({
                   </span>
                 </div>
               )}
-              {pick.external_reviews?.trustpilot_score && (
-                <div className="text-sm text-brand-text-secondary">
-                  ★{" "}
-                  <span className="font-semibold text-brand-text-primary">
-                    {pick.external_reviews.trustpilot_score.toFixed(1)}
-                  </span>
-                  {pick.external_reviews.trustpilot_count && (
-                    <span>
-                      {" "}
-                      ({pick.external_reviews.trustpilot_count.toLocaleString()}{" "}
-                      reviews)
-                    </span>
-                  )}
-                </div>
-              )}
+              <div className="text-sm text-brand-text-secondary">
+                <span className="text-brand-violet">★</span>{" "}
+                <span className="font-semibold text-brand-text-primary">
+                  {(pickScore / 2).toFixed(1)}
+                </span>{" "}
+                <span>
+                  /5 ·{" "}
+                  <a href="/methodology" className="underline hover:text-brand-violet">
+                    editorial score
+                  </a>
+                </span>
+              </div>
             </div>
 
             {/* Feature chips */}

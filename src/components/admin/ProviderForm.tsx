@@ -244,8 +244,6 @@ export default function ProviderForm({
     if (cleaned.external_reviews) {
       const er = cleaned.external_reviews;
       const filtered: typeof er = {};
-      if (er.trustpilot_score) filtered.trustpilot_score = Number(er.trustpilot_score);
-      if (er.trustpilot_count) filtered.trustpilot_count = Number(er.trustpilot_count);
       if (er.google_score) filtered.google_score = Number(er.google_score);
       if (er.google_count) filtered.google_count = Number(er.google_count);
       cleaned.external_reviews = Object.keys(filtered).length ? filtered : undefined;
@@ -674,36 +672,6 @@ export default function ProviderForm({
       {/* External reviews */}
       <Section title="External Reviews">
         <Grid>
-          <Field label="Trustpilot Score">
-            <input
-              type="number"
-              step="0.1"
-              min="0"
-              max="5"
-              value={provider.external_reviews?.trustpilot_score ?? ""}
-              onChange={(e) =>
-                update("external_reviews", {
-                  ...provider.external_reviews,
-                  trustpilot_score: e.target.value ? Number(e.target.value) : undefined,
-                })
-              }
-              className={inputCls}
-            />
-          </Field>
-          <Field label="Trustpilot Count">
-            <input
-              type="number"
-              min="0"
-              value={provider.external_reviews?.trustpilot_count ?? ""}
-              onChange={(e) =>
-                update("external_reviews", {
-                  ...provider.external_reviews,
-                  trustpilot_count: e.target.value ? Number(e.target.value) : undefined,
-                })
-              }
-              className={inputCls}
-            />
-          </Field>
           <Field label="Google Score">
             <input
               type="number"

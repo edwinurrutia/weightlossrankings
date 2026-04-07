@@ -175,40 +175,29 @@ export default async function ProviderReviewPage({
     oneLineVerdict = `${provider.name} is a solid telehealth option with balanced features and pricing.`;
   }
 
-  const hasTrustpilot =
-    provider.external_reviews?.trustpilot_score !== undefined &&
-    provider.external_reviews?.trustpilot_count !== undefined;
-
   // Convert our 0-10 internal score to a 0-5 scale that Google's rich
   // result rendering pipeline expects. Most SERP star previews are on
   // a 5-star scale; emitting on a 10-star scale renders correctly but
   // is less commonly picked up by Google's ratings parser.
   const overallScoreFiveStar = Math.round((overallScore / 2) * 10) / 10;
 
-  // AggregateRating fallback chain:
-  //   1. If we have Trustpilot data, use it (real third-party reviews)
-  //   2. Otherwise use our own editorial review as a single-author
-  //      AggregateRating so the provider page is still eligible for
-  //      SERP star ratings on Google. This is honest because we DO
-  //      have a structured editorial review, and Google's policy
-  //      explicitly allows AggregateRating from a single editorial
-  //      reviewer as long as the review is real and visible on the
-  //      page (which it is — see the score breakdown table below).
-  const aggregateRating = hasTrustpilot
-    ? {
-        "@type": "AggregateRating",
-        ratingValue: String(provider.external_reviews!.trustpilot_score),
-        reviewCount: String(provider.external_reviews!.trustpilot_count),
-        bestRating: "5",
-        worstRating: "1",
-      }
-    : {
-        "@type": "AggregateRating",
-        ratingValue: String(overallScoreFiveStar),
-        reviewCount: "1",
-        bestRating: "5",
-        worstRating: "1",
-      };
+  // AggregateRating sourced from our own editorial methodology.
+  // Google deprecated third-party review snippets in 2019, so only
+  // self-hosted first-party editorial reviews are eligible for SERP
+  // star rich results. Our /methodology page documents the 6-dimension
+  // scoring rubric (value, effectiveness, UX, trust, accessibility,
+  // support) and every provider has real scores in providers.json —
+  // a structured, transparent editorial review.
+  // The AggregateRating reviewCount is set to 1 (single editorial
+  // reviewer); the embedded Review below carries the full review
+  // body and the reviewBy attribution.
+  const aggregateRating = {
+    "@type": "AggregateRating",
+    ratingValue: String(overallScoreFiveStar),
+    reviewCount: "1",
+    bestRating: "5",
+    worstRating: "1",
+  };
 
   const productJsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -308,15 +297,10 @@ export default async function ProviderReviewPage({
               </p>
             )}
 
-            {/* Score badge + star rating row */}
+            {/* Score badge + editorial star rating row */}
             <div className="flex items-center gap-4 flex-wrap">
               <ScoreBadge scores={provider.scores} size="lg" />
-              {provider.external_reviews?.trustpilot_score !== undefined && (
-                <StarRating
-                  score={provider.external_reviews.trustpilot_score}
-                  count={provider.external_reviews.trustpilot_count}
-                />
-              )}
+              <StarRating score={overallScoreFiveStar} />
             </div>
 
             {/* Feature badges */}

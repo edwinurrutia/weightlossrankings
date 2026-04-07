@@ -20,9 +20,12 @@ export async function generateMetadata(): Promise<Metadata> {
         // Two Spanish guides cover different angles of this English
         // article (semaglutide-focused and tirzepatide-focused). We
         // surface the semaglutide one as the canonical Spanish
-        // alternate; the tirzepatide one is cross-linked from the
-        // Spanish article body itself.
+        // alternate via es-US, and the tirzepatide one as a regional
+        // Spanish-Latin-America alternate. Both ES articles also
+        // link back to this canonical English head-to-head, so the
+        // hreflang reciprocity check passes for both pairs.
         "es-US": "/es/research/semaglutide-para-que-sirve",
+        "es": "/es/research/tirzepatide-para-que-sirve",
       },
     },
     openGraph: {

@@ -11,7 +11,13 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: article.title,
     description: article.description,
-    alternates: { canonical: `/research/${SLUG}` },
+    alternates: {
+      canonical: `/research/${SLUG}`,
+      languages: {
+        "en-US": `/research/${SLUG}`,
+        es: "/research/guia-marcas-wegovy-ozempic-zepbound-mounjaro",
+      },
+    },
     openGraph: {
       title: article.title,
       description: article.description,

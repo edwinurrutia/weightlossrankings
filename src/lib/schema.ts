@@ -68,8 +68,6 @@ export const ProviderSchema = z.object({
   is_featured: z.boolean(),
   external_reviews: z
     .object({
-      trustpilot_score: z.number().optional(),
-      trustpilot_count: z.number().optional(),
       google_score: z.number().optional(),
       google_count: z.number().optional(),
     })

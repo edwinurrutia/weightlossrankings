@@ -20,6 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       languages: {
         "en-US": `/research/${ENGLISH_COUNTERPART}`,
         "es-US": `/es/research/${SLUG}`,
+        es: `/es/research/${SLUG}`,
       },
     },
     openGraph: {

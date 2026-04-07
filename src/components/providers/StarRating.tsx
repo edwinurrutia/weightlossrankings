@@ -10,7 +10,7 @@ export default function StarRating({ score, count }: StarRatingProps) {
 
   return (
     <div className="flex items-center gap-1">
-      <span className="text-brand-warning">
+      <span className="text-brand-violet">
         {"★".repeat(fullStars)}
         {hasHalf ? "★" : ""}
         {"☆".repeat(emptyStars)}

@@ -69,7 +69,14 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: article.title,
     description: article.description,
-    alternates: { canonical: `/research/${SLUG}` },
+    alternates: {
+      canonical: `/research/${SLUG}`,
+      languages: {
+        "en-US": `/research/${SLUG}`,
+        es: "/research/efectos-secundarios-glp1-preguntas-respuestas",
+        "es-US": "/research/efectos-secundarios-glp1-preguntas-respuestas",
+      },
+    },
     openGraph: {
       title: article.title,
       description: article.description,

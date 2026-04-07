@@ -276,7 +276,12 @@ export default async function PriceMovementArticle() {
           provider review aggregators, made it trivial for patients to
           compare prices across providers. When the cheapest provider is
           one click away, charging 50% above the floor isn&apos;t a
-          sustainable strategy.
+          sustainable strategy. Our{" "}
+          <Link href="/research/cheapest-compounded-semaglutide">
+            cheapest compounded semaglutide investigation
+          </Link>{" "}
+          documents the floor-price providers we&apos;ve verified at any
+          given snapshot.
         </li>
         <li>
           <strong>FDA enforcement risk.</strong> Multiple GLP-1 telehealth
@@ -288,7 +293,12 @@ export default async function PriceMovementArticle() {
           for the full pattern. Every enforcement action shrinks the
           potential customer base of the cited provider, increasing
           competitive pressure on the survivors and forcing prices down
-          further.
+          further. The{" "}
+          <Link href="/research/pcab-accreditation-compounding-pharmacy-investigation">
+            PCAB accreditation investigation
+          </Link>{" "}
+          breaks down which fulfillment pharmacies actually meet the
+          higher quality bar.
         </li>
       </ol>
 

@@ -150,7 +150,12 @@ export default function GLP1SideEffectsArticle() {
         that only 4.5% of trial participants discontinued treatment because
         of side effects, which means the vast majority of the GI symptoms
         were mild-to-moderate and resolved with continued use, especially
-        as the dose escalation phase ended [1].
+        as the dose escalation phase ended [1]. For practical strategies
+        to keep nausea manageable during titration, see our{" "}
+        <Link href="/research/glp1-nausea-management-practical-guide">
+          GLP-1 nausea management guide
+        </Link>
+        .
       </p>
 
       <h2>SURMOUNT-1: tirzepatide adverse events at three doses</h2>
@@ -343,7 +348,11 @@ export default function GLP1SideEffectsArticle() {
       <p>
         Practically: if you don&apos;t have a personal or family history of
         thyroid cancer, the rodent thyroid signal is not a meaningful
-        clinical concern. If you do, both drugs are off the table.
+        clinical concern. If you do, both drugs are off the table. Our{" "}
+        <Link href="/research/does-glp1-cause-cancer-mtc-thyroid-evidence">
+          deep dive on GLP-1s and thyroid cancer evidence
+        </Link>{" "}
+        walks through the rodent-to-human translation in detail.
       </p>
 
       <h2>Hypoglycemia: low risk, with one important exception</h2>

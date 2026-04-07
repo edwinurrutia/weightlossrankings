@@ -282,7 +282,12 @@ export default function InsuranceCoverageArticle() {
         The trend line is for more employers to add coverage but
         with stricter prior auth criteria — BMI thresholds,
         documented lifestyle program participation, step therapy
-        through cheaper drugs. See the prior auth section below.
+        through cheaper drugs. See the prior auth section below, and
+        our broader{" "}
+        <Link href="/research/glp1-insurance-coverage-audit">
+          insurer-by-insurer GLP-1 coverage audit
+        </Link>{" "}
+        for the per-payer formulary picture.
       </p>
 
       <h2>Tricare (military families and retirees)</h2>
@@ -457,7 +462,13 @@ export default function InsuranceCoverageArticle() {
 
       <p>
         For patients without coverage, the manufacturer direct-pay
-        prices as of April 2026 are:
+        prices as of April 2026 are (and our{" "}
+        <Link href="/research/glp1-pricing-index">
+          live GLP-1 pricing index
+        </Link>{" "}
+        tracks the cash-pay compounded benchmark across 80+
+        telehealth providers for patients comparing against an
+        insurance copay):
       </p>
 
       <ul>

@@ -148,15 +148,9 @@ export default async function MatchupPage({
 
   const categoryLabel = providerA.category;
 
-  // Best external review score for each provider
-  const reviewScoreA =
-    providerA.external_reviews?.trustpilot_score ??
-    providerA.external_reviews?.google_score ??
-    null;
-  const reviewScoreB =
-    providerB.external_reviews?.trustpilot_score ??
-    providerB.external_reviews?.google_score ??
-    null;
+  // Editorial review score on a 5-star scale (our methodology, not third-party)
+  const reviewScoreA = Math.round((scoreA / 2) * 10) / 10;
+  const reviewScoreB = Math.round((scoreB / 2) * 10) / 10;
 
   return (
     <div className="min-h-screen bg-brand-gradient-light pb-24 lg:pb-0">
@@ -193,13 +187,7 @@ export default async function MatchupPage({
           {[providerA, providerB].map((p) => {
             const minPrice = getMinPrice(p);
             const reviewScore =
-              p.external_reviews?.trustpilot_score ??
-              p.external_reviews?.google_score ??
-              null;
-            const reviewCount =
-              p.external_reviews?.trustpilot_count ??
-              p.external_reviews?.google_count ??
-              undefined;
+              Math.round((computeOverallScore(p.scores) / 2) * 10) / 10;
 
             return (
               <div
@@ -221,10 +209,8 @@ export default async function MatchupPage({
                   </div>
                 </div>
 
-                {/* Star rating */}
-                {reviewScore !== null && (
-                  <StarRating score={reviewScore} count={reviewCount} />
-                )}
+                {/* Editorial star rating */}
+                <StarRating score={reviewScore} />
 
                 {/* Starting price */}
                 {minPrice !== null && (
@@ -328,30 +314,16 @@ export default async function MatchupPage({
                 }
               />
 
-              {/* Rating */}
+              {/* Editorial Rating */}
               <CompareRow
-                label="Customer Rating"
-                cellA={
-                  reviewScoreA !== null ? (
-                    <span>{reviewScoreA} ★</span>
-                  ) : (
-                    <span className="text-brand-text-secondary">—</span>
-                  )
-                }
-                cellB={
-                  reviewScoreB !== null ? (
-                    <span>{reviewScoreB} ★</span>
-                  ) : (
-                    <span className="text-brand-text-secondary">—</span>
-                  )
-                }
+                label="Editorial Rating"
+                cellA={<span>{reviewScoreA} ★ /5</span>}
+                cellB={<span>{reviewScoreB} ★ /5</span>}
                 winnerSide={
-                  reviewScoreA !== null && reviewScoreB !== null
-                    ? reviewScoreA > reviewScoreB
-                      ? "a"
-                      : reviewScoreB > reviewScoreA
-                      ? "b"
-                      : null
+                  reviewScoreA > reviewScoreB
+                    ? "a"
+                    : reviewScoreB > reviewScoreA
+                    ? "b"
                     : null
                 }
               />

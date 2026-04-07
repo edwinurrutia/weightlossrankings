@@ -191,7 +191,11 @@ export default async function CheapestCompoundedSemaglutideArticle() {
         progress through your dose schedule, the monthly cost on most
         floor-priced providers rises to match the higher-dose tier on
         their pricing page. We track maintenance pricing on the same{" "}
-        <Link href="/price-tracker">price tracker</Link>.
+        <Link href="/price-tracker">price tracker</Link>, and our{" "}
+        <Link href="/research/compounded-glp1-price-movement-12-months">
+          12-month price movement investigation
+        </Link>{" "}
+        documents how that floor has shifted over time.
       </p>
 
       <p>
@@ -199,6 +203,12 @@ export default async function CheapestCompoundedSemaglutideArticle() {
         verified providers above: a synchronous or asynchronous medical
         consultation, a prescription written by a licensed clinician, the
         compounded medication itself, basic patient support, and shipping.
+        For a closer look at how the compounded vial actually compares
+        to the brand-name pen on a day-to-day level, see our{" "}
+        <Link href="/research/wegovy-pen-vs-compounded-vial-practical-differences">
+          Wegovy pen vs compounded vial breakdown
+        </Link>
+        .
       </p>
 
       <p>
@@ -238,7 +248,12 @@ export default async function CheapestCompoundedSemaglutideArticle() {
           providers using semaglutide sodium or semaglutide acetate (salt
           forms) instead of base semaglutide. Salt forms are not the same
           active ingredient as the molecule used in approved drugs and
-          have not been evaluated for safety. See our{" "}
+          have not been evaluated for safety — our{" "}
+          <Link href="/research/compounded-semaglutide-bioequivalence">
+            compounded semaglutide bioequivalence investigation
+          </Link>{" "}
+          walks through what &ldquo;same molecule&rdquo; actually means
+          in this context. See our{" "}
           <Link href="/research/fda-warning-letters-glp1">
             FDA warning letter investigation
           </Link>{" "}
