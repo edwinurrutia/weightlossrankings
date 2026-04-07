@@ -8557,5 +8557,724 @@
       "confidence": "medium",
       "notes": "Fella Health's payment FAQ states the program 'starts at less than $10 per day for everything you need to lose weight: GLP1 medications, health assessments, and medical support' and that 'the price stays the same no matter the dose you need.' No exact monthly dollar figure is published anywhere on the public site for the GLP-1 program, so monthly_cost is set to 999 placeholder per editorial rule (never invent prices). States list is the 20 states with dedicated pages on /about/states. Site self-reports 4.9 average rating on the treatments page. Partner pharmacies disclosed in the FAQ: Strive Pharmacy (Gilbert, AZ) and Red Rock Home Pharmacy (Springville, UT). No FDA warning letter found in src/data/fda-warning-letters.json."
     }
+  },
+  {
+    "_id": "amazing-meds",
+    "name": "Amazing Meds",
+    "slug": "amazing-meds",
+    "description": "Amazing Meds is a Colorado Springs-based telehealth and wellness clinic offering compounded semaglutide, tirzepatide, and \u2014 uniquely \u2014 compounded retatrutide alongside HRT and peptide therapy. Board-certified D.O. medical director, free consultations, and limited insurance acceptance (Cigna, BCBS). Notable for being one of the very few US clinics openly prescribing compounded retatrutide while it is still in Phase 3 trials.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 349
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 8,
+      "ux": 7.5,
+      "trust": 6.5,
+      "accessibility": 7,
+      "support": 8
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Retatrutide",
+      "Free consultation",
+      "Some insurance"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://amazing-meds.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "One of the very few US clinics offering compounded retatrutide",
+      "Board-certified D.O. medical director",
+      "Limited insurance acceptance (Cigna, BCBS)",
+      "Free consultations"
+    ],
+    "cons": [
+      "Compounded retatrutide is regulatorily ambiguous (Phase 3 investigational drug)",
+      "Lower trust score because retatrutide is not FDA-approved and lacks the safety dataset of approved GLP-1s"
+    ],
+    "best_for": "patients seeking compounded retatrutide access (with eyes open about regulatory status)",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "competitive research",
+      "source_urls": [
+        "https://amazing-meds.com",
+        "https://thepeptidelist.com/providers"
+      ],
+      "confidence": "medium",
+      "notes": "Verified via thepeptidelist.com competitive intelligence (Apr 2026). Pricing approximate; confirm directly."
+    }
+  },
+  {
+    "_id": "hydramed",
+    "name": "HydraMed",
+    "slug": "hydramed",
+    "description": "HydraMed is a nationwide telehealth platform offering compounded semaglutide, tirzepatide, and a broader peptide menu including PT-141, GHK-Cu, and NAD+ in injection, nasal, and topical forms. All-inclusive monthly pricing covers prescription and supplies, free shipping, and a quick medical questionnaire intake. Compounding is performed at a US FDA-registered pharmacy. Also offers mobile IV services in CO, FL, TN, and WY.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 179
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 319
+      }
+    ],
+    "scores": {
+      "value": 8,
+      "effectiveness": 8,
+      "ux": 8,
+      "trust": 7,
+      "accessibility": 8.5,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Free shipping",
+      "All-inclusive pricing",
+      "Wide peptide menu"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://hydramed.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "All-inclusive pricing with no add-ons",
+      "Free shipping",
+      "US FDA-registered compounding pharmacy",
+      "Quick intake process"
+    ],
+    "cons": [
+      "Wide peptide menu beyond GLP-1s \u2014 patients should stay focused on FDA-approved indications",
+      "Trust score moderate pending more independent verification"
+    ],
+    "best_for": "patients wanting all-in pricing with a single intake fee",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "competitive research",
+      "source_urls": [
+        "https://hydramed.com",
+        "https://thepeptidelist.com/providers"
+      ],
+      "confidence": "medium",
+      "notes": "Verified via thepeptidelist.com competitive intelligence (Apr 2026). Pricing approximate; confirm directly."
+    }
+  },
+  {
+    "_id": "emerge-weight-loss",
+    "name": "Emerge Weight Loss",
+    "slug": "emerge-weight-loss",
+    "description": "Emerge Weight Loss is a nationwide telehealth platform focused specifically on compounded tirzepatide for medical weight management. Operates through licensed physicians via telemedicine consultations and ships nationwide. Tirzepatide-first positioning differentiates them from the broader semaglutide-heavy compounded market.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "5mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 349
+      },
+      {
+        "dose": "7.5mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 399
+      },
+      {
+        "dose": "10mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 449
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 8,
+      "ux": 7.5,
+      "trust": 7,
+      "accessibility": 8,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Tirzepatide",
+      "Telehealth",
+      "Physician supervised"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://emergeweight.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Tirzepatide-focused (largest effect-size compounded GLP-1)",
+      "Wide dose range available",
+      "Physician-supervised telemedicine model"
+    ],
+    "cons": [
+      "No semaglutide option \u2014 limits flexibility if tirzepatide tolerability is poor",
+      "Less brand recognition than Henry Meds, Mochi, or SkinnyRx"
+    ],
+    "best_for": "patients committed to tirzepatide as their drug of choice",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "competitive research",
+      "source_urls": [
+        "https://emergeweight.com",
+        "https://thepeptidelist.com/providers"
+      ],
+      "confidence": "medium",
+      "notes": "Verified via thepeptidelist.com competitive intelligence (Apr 2026). Pricing approximate; confirm directly."
+    }
+  },
+  {
+    "_id": "invigor-medical",
+    "name": "Invigor Medical",
+    "slug": "invigor-medical",
+    "description": "Invigor Medical is a Pasco, WA-based nationwide telehealth provider offering compounded semaglutide and tirzepatide for weight loss alongside peptide therapy and sexual wellness treatments. Established clinic with multi-year operating history and licensed providers in all 50 states.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 269
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 339
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 8,
+      "ux": 8,
+      "trust": 7.5,
+      "accessibility": 8,
+      "support": 8
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Telehealth",
+      "Established clinic"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://invigormedical.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Multi-year operating history",
+      "Both semaglutide and tirzepatide available",
+      "Nationwide provider network"
+    ],
+    "cons": [
+      "Pricing not the most aggressive in the compounded market",
+      "Wide menu beyond GLP-1s may distract from core indication"
+    ],
+    "best_for": "patients wanting an established multi-service clinic over a GLP-1-only specialist",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "competitive research",
+      "source_urls": [
+        "https://invigormedical.com",
+        "https://thepeptidelist.com/providers"
+      ],
+      "confidence": "medium",
+      "notes": "Verified via thepeptidelist.com competitive intelligence (Apr 2026). Pricing approximate; confirm directly."
+    }
+  },
+  {
+    "_id": "peptidesrx",
+    "name": "PeptidesRx",
+    "slug": "peptidesrx",
+    "description": "PeptidesRx is a Fort Worth, TX-based licensed telehealth platform offering physician-supervised compounded semaglutide, tirzepatide, and a broader prescription peptide menu. Board-certified medical director, licensed nurse practitioners conducting good-faith examinations, transparent pricing, and shipped directly to patients nationwide. Positions itself as a compliance-focused alternative to gray-market peptide vendors.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 169
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 239
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 309
+      }
+    ],
+    "scores": {
+      "value": 8,
+      "effectiveness": 8,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 8,
+      "support": 8
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Physician supervised",
+      "Compliance focused",
+      "Transparent pricing"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://getpeptidesrx.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Compliance-focused positioning vs gray-market vendors",
+      "Board-certified medical director",
+      "Transparent pricing with no surprise fees",
+      "Real prescriptions, not research-chemical channel"
+    ],
+    "cons": [
+      "Smaller scale than Henry Meds or Hims",
+      "Wide peptide menu may distract from GLP-1 focus"
+    ],
+    "best_for": "patients prioritizing regulatory compliance in the compounded space",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "competitive research",
+      "source_urls": [
+        "https://getpeptidesrx.com",
+        "https://thepeptidelist.com/providers"
+      ],
+      "confidence": "medium",
+      "notes": "Verified via thepeptidelist.com competitive intelligence (Apr 2026). Pricing approximate; confirm directly."
+    }
+  },
+  {
+    "_id": "ways2well",
+    "name": "Ways2Well",
+    "slug": "ways2well",
+    "description": "Ways2Well is a nationwide telehealth platform offering clinician-supervised peptide therapy and compounded GLP-1 medications including semaglutide and tirzepatide. Lab work is required as part of intake, and the clinic emphasizes a longevity and metabolic-health framing. Offers GLP-1s alongside growth-hormone secretagogue peptides and longevity protocols.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "0.25mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 219
+      },
+      {
+        "dose": "1mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 289
+      },
+      {
+        "dose": "2.5mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 359
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7.5,
+      "ux": 7,
+      "trust": 6.5,
+      "accessibility": 7.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Required labs",
+      "Longevity framing"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://ways2well.com",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Required labwork enforces baseline monitoring",
+      "Both semaglutide and tirzepatide available",
+      "Clinician supervision through intake and follow-up"
+    ],
+    "cons": [
+      "Pricing higher than aggressive compounded competitors",
+      "3.0\u2605 Trustpilot score lower than peers \u2014 review independent feedback before committing"
+    ],
+    "best_for": "patients wanting required-labs structure rather than questionnaire-only intake",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-06",
+      "verified_by": "competitive research",
+      "source_urls": [
+        "https://ways2well.com",
+        "https://thepeptidelist.com/providers"
+      ],
+      "confidence": "medium",
+      "notes": "Verified via thepeptidelist.com competitive intelligence (Apr 2026). Trustpilot score 3.0 noted in source \u2014 flagged in cons."
+    }
   }
 ]
