@@ -226,6 +226,48 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Adolescents", "PubMed sourced"],
   },
   {
+    slug: "where-to-inject-semaglutide-tirzepatide-guide",
+    title:
+      "Where to Inject Semaglutide and Tirzepatide: The Complete Patient Guide",
+    description:
+      "A clear, FDA-label-cited guide to GLP-1 injection technique. The three approved injection sites (abdomen, front of thigh, back of upper arm), why patients rotate sites, what depth to inject at, and the patient-reported tricks that reduce injection-site soreness. Includes a labeled body diagram and answers every variation of 'where to inject semaglutide' and 'how to inject tirzepatide.'",
+    excerpt:
+      "Most GLP-1 telehealth providers ship a vial and a syringe with a one-line dosing instruction and almost no detail about where on the body the injection actually goes. The FDA prescribing information for Wegovy, Ozempic, Zepbound, and Mounjaro all approve three injection sites — the abdomen, the front of the thigh, and the back of the upper arm — and the patient-reported soreness varies meaningfully across them. This guide walks through the labeled anatomy, the rotation pattern that minimizes lipohypertrophy and bruising, the injection depth and angle, and the small technique details (skin pinch, needle size, post-injection pressure) that the FDA labels reference but that most prescribers never explain.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 11,
+    citations: 6,
+    tags: ["Injection technique", "Patient guide", "FDA label sourced"],
+  },
+  {
+    slug: "how-long-does-glp1-take-to-work",
+    title:
+      "How Long Does Semaglutide and Tirzepatide Take to Work? The Trial Data on Onset, Appetite, and Weight Loss Timing",
+    description:
+      "When does appetite suppression actually start on a GLP-1? When do patients first see the scale move? When does steady state hit? We answer every onset and time-to-effect question using the published STEP-1, SURMOUNT-1, and FDA prescribing information data, with the actual trial timing curves quoted by week.",
+    excerpt:
+      "The most common patient question after starting a GLP-1 is some variant of 'how long until this starts working?' The answer comes from three different timescales that the trial data measures separately: the appetite-suppression onset (hours to days, driven by gastric emptying delay), the steady-state pharmacokinetics (4-5 weeks at each dose level), and the meaningful weight-loss curve (week 4 first measurable, week 16 ~5%, week 68 maintenance plateau). This article walks through all three using STEP-1 (Wilding NEJM 2021), SURMOUNT-1 (Jastreboff NEJM 2022), and the FDA prescribing information for each drug, so a patient can know what to expect at every milestone.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 12,
+    citations: 6,
+    tags: ["Onset", "Appetite", "STEP-1", "SURMOUNT-1"],
+  },
+  {
+    slug: "glp1-storage-shelf-life-refrigeration-guide",
+    title:
+      "GLP-1 Storage Guide: Refrigeration, Room Temperature, Travel, and Expiration for Wegovy, Ozempic, Zepbound, and Mounjaro",
+    description:
+      "The complete FDA-label-cited storage and shelf-life reference for GLP-1 weight loss medications. How long Wegovy and Ozempic last in the fridge vs at room temperature, what to do if the pen sat in a hot car, how to travel with semaglutide, when to throw out an expired vial, and how compounded GLP-1 storage rules differ from brand-name pen rules.",
+    excerpt:
+      "GLP-1 storage rules are not common knowledge and the FDA labels are buried inside multi-page prescribing information PDFs. This reference walks through the actual approved storage rules for Wegovy, Ozempic, Zepbound, and Mounjaro pens (refrigerated and room-temperature limits, light exposure, freezing, expiration), what compounded vial pharmacies typically advise (which differs because BUDs work differently for compounded preparations), how to fly with a GLP-1, what to do if your medication was accidentally frozen or left at room temperature too long, and the patient-side practices that can extend or shorten effective shelf life.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-06",
+    readMinutes: 10,
+    citations: 6,
+    tags: ["Storage", "Shelf life", "Patient guide", "FDA label sourced"],
+  },
+  {
     slug: "glp1-pipeline-2026-survodutide-maridebart-ecnoglutide",
     title:
       "Beyond Wegovy and Zepbound: Three Pipeline GLP-1 Drugs That Could Reach Approval in 2026-2027",
