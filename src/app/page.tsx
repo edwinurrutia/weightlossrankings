@@ -20,6 +20,7 @@ import HomeHeroProviders from "@/components/marketing/HomeHeroProviders";
 import HomeQuickMatch, {
   type QuickMatchProvider,
 } from "@/components/marketing/HomeQuickMatch";
+import StateCoverageMap from "@/components/marketing/StateCoverageMap";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -267,12 +268,22 @@ export default async function HomePage() {
             ctaText="Savings Calculator"
           />
           <GradientCTACallout
-            heading="GLP-1 Dose Plotter (NEW)"
+            heading="GLP-1 Dose Plotter"
             description="Interactive pharmacokinetic simulator showing how semaglutide, tirzepatide, and Foundayo (orforglipron) build up across the standard FDA titration schedule."
             ctaHref="/tools/glp1-dose-plotter"
             ctaText="Open Dose Plotter"
           />
         </div>
+      </section>
+
+      {/* ── State Coverage Map ── SEO entry points for "[state] semaglutide" */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="mb-6">
+          <h2 className="font-heading text-3xl font-bold text-brand-text-primary tracking-tight">
+            Find providers in your state
+          </h2>
+        </div>
+        <StateCoverageMap />
       </section>
 
       {/* ── Blog ── */}

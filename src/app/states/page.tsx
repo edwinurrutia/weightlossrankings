@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { US_STATES } from "@/lib/states";
+import StateCoverageMap from "@/components/marketing/StateCoverageMap";
 
 export const metadata: Metadata = {
   title: "Weight Loss Providers by State — Browse All 50 States",
@@ -20,6 +21,10 @@ export default function StatesIndexPage() {
           Find the best weight loss providers available in your state. Prices,
           features, and availability vary by location.
         </p>
+      </div>
+
+      <div className="mb-12">
+        <StateCoverageMap />
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">

@@ -29,6 +29,7 @@ const footerColumns = [
       { label: "Savings Calculator", href: "/savings-calculator" },
       { label: "Price Tracker", href: "/price-tracker" },
       { label: "Insurance Checker", href: "/insurance-checker" },
+      { label: "Insurance Employer Checker", href: "/tools/insurance-employer-checker" },
       { label: "Dose Timeline", href: "/dose-timeline" },
       { label: "All Tools", href: "/tools" },
     ],

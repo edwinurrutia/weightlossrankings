@@ -16,6 +16,13 @@ const TOOLS = [
       "Visualize how semaglutide, tirzepatide, and orforglipron build up in the body across the standard titration schedule. Sourced from FDA prescribing information and the published pharmacokinetic literature.",
     tag: "Pharmacokinetics",
   },
+  {
+    slug: "insurance-employer-checker",
+    title: "Insurance Employer Checker",
+    description:
+      "Look up Wegovy, Zepbound, Ozempic, and Mounjaro coverage at 30 large US employers including Amazon, Walmart, Google, Microsoft, and the federal government. Patient-reported and publicly-sourced — verify with your HR before assuming coverage.",
+    tag: "Insurance coverage",
+  },
 ];
 
 export default function ToolsIndex() {

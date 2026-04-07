@@ -113,7 +113,7 @@ console.log("\n[3] Half-life decay verification");
 
 // For each drug, simulate a single dose, find Cmax, then check that
 // concentration roughly halves every half-life past the peak.
-for (const id of ["semaglutide", "tirzepatide", "orforglipron"] as DrugId[]) {
+for (const id of ["semaglutide", "tirzepatide", "orforglipron", "retatrutide"] as DrugId[]) {
   const drug = DRUGS[id];
   const ka_d = halfLifeToK(drug.absorptionHalfLifeHours);
   const ke_d = halfLifeToK(drug.halfLifeHours);
@@ -153,7 +153,7 @@ console.log("\n[4] Steady-state convergence");
 // For each drug, repeated maintenance dosing should converge to a
 // steady-state plateau. The peak after 5+ half-lives should be
 // stable (next-cycle peak within 5%).
-for (const id of ["semaglutide", "tirzepatide", "orforglipron"] as DrugId[]) {
+for (const id of ["semaglutide", "tirzepatide", "orforglipron", "retatrutide"] as DrugId[]) {
   const drug = DRUGS[id];
   const dosesPerWeek = Math.round((7 * 24) / drug.intervalHours);
   const events = [];
@@ -188,7 +188,7 @@ for (const id of ["semaglutide", "tirzepatide", "orforglipron"] as DrugId[]) {
 }
 
 // Verify steadyStatePeak() returns a positive value for each drug
-for (const id of ["semaglutide", "tirzepatide", "orforglipron"] as DrugId[]) {
+for (const id of ["semaglutide", "tirzepatide", "orforglipron", "retatrutide"] as DrugId[]) {
   const peak = steadyStatePeak(DRUGS[id]);
   check(
     `${id}: steadyStatePeak() returns positive value`,
@@ -324,7 +324,7 @@ check(
 // ============================================================
 console.log("\n[8] simulateTitrationCurve smoke tests");
 
-for (const id of ["semaglutide", "tirzepatide", "orforglipron"] as DrugId[]) {
+for (const id of ["semaglutide", "tirzepatide", "orforglipron", "retatrutide"] as DrugId[]) {
   const points = simulateTitrationCurve(DRUGS[id], 24);
   // 24 weeks = 4032 hours; default step 6h → 4032/6 + 1 = 673 points
   check(
@@ -382,7 +382,7 @@ console.log("\n[10] Cross-drug invariants");
 // All three drugs should reach steady state by ramp + 5 half-lives.
 // We need to include the full titration ramp before SS testing because
 // the ramp dose is below the maintenance dose.
-for (const id of ["semaglutide", "tirzepatide", "orforglipron"] as DrugId[]) {
+for (const id of ["semaglutide", "tirzepatide", "orforglipron", "retatrutide"] as DrugId[]) {
   const drug = DRUGS[id];
   const rampWeeks = drug.titration
     .filter((s) => s.weeks < 999)
@@ -502,7 +502,7 @@ function rng(seed: number) {
   let fuzzFails = 0;
   for (let i = 0; i < 1000; i++) {
     const drug = DRUGS[
-      (["semaglutide", "tirzepatide", "orforglipron"] as DrugId[])[
+      (["semaglutide", "tirzepatide", "orforglipron", "retatrutide"] as DrugId[])[
         Math.floor(rand() * 3)
       ]
     ];
@@ -537,6 +537,103 @@ function rng(seed: number) {
     fuzzFails === 0,
     `passes=${fuzzPasses} fails=${fuzzFails}`,
   );
+}
+
+// ============================================================
+// Section 13b: retatrutide-specific tests
+// ============================================================
+console.log("\n[13b] Retatrutide-specific tests");
+
+{
+  const reta = DRUGS.retatrutide;
+  check(
+    "retatrutide is once weekly (168h interval)",
+    reta.intervalHours === 168,
+  );
+  check(
+    "retatrutide half-life is 144h (~6 days)",
+    reta.halfLifeHours === 144,
+  );
+  check(
+    "retatrutide maintenance dose is 12 mg",
+    reta.maintenanceDoseMg === 12,
+  );
+  check(
+    "retatrutide titration ramp has 6 steps",
+    reta.titration.length === 6,
+  );
+  check(
+    "retatrutide first step is 2 mg",
+    reta.titration[0].doseMg === 2,
+  );
+  check(
+    "retatrutide ramp ends at 12 mg",
+    reta.titration[reta.titration.length - 1].doseMg === 12,
+  );
+  check(
+    "retatrutide brand list flags it as investigational",
+    reta.brandNames.some((n) => n.toLowerCase().includes("investigational")),
+  );
+
+  // Long half-life means accumulation should be even more pronounced
+  // than semaglutide. Verify SS accumulation ratio for retatrutide.
+  const events = [];
+  for (let w = 0; w < 30; w++) {
+    events.push({ tHours: w * 168, doseMg: reta.maintenanceDoseMg });
+  }
+  let cmax1 = 0;
+  for (let t = 0; t < 168; t += 1) {
+    const c = accumulatedConcentration(t, [events[0]], reta);
+    if (c > cmax1) cmax1 = c;
+  }
+  let cmaxSS = 0;
+  for (let t = 28 * 168; t < 30 * 168; t += 1) {
+    const c = accumulatedConcentration(t, events, reta);
+    if (c > cmaxSS) cmaxSS = c;
+  }
+  const accumulationRatio = cmaxSS / cmax1;
+  check(
+    "retatrutide: SS accumulation ratio > 2 (long half-life)",
+    accumulationRatio > 2,
+    `ratio = ${accumulationRatio.toFixed(2)}`,
+  );
+
+  // Retatrutide titration curve over the full 24 weeks should be
+  // monotonically non-decreasing across week-boundaries (titration
+  // dose increases or stays the same, never decreases mid-ramp).
+  const points = simulateTitrationCurve(reta, 24);
+  for (let i = 1; i < points.length; i++) {
+    const dose1 = points[i - 1].currentDoseMg;
+    const dose2 = points[i].currentDoseMg;
+    if (dose2 < dose1) {
+      check(
+        `retatrutide titration is non-decreasing (point ${i})`,
+        false,
+        `dose dropped from ${dose1} to ${dose2}`,
+      );
+      break;
+    }
+  }
+  check("retatrutide titration is non-decreasing across all 24 weeks", true);
+
+  // Missed-dose simulation works for retatrutide
+  const missedCurve = simulateTitrationCurve(reta, 24, {
+    missedDoseIndices: [3],
+  });
+  check(
+    "retatrutide missed-dose simulation: all points finite",
+    missedCurve.every((p) => Number.isFinite(p.relativeConcentration)),
+  );
+  // Concentration at week 5 should be lower than no-miss baseline
+  const baseline = simulateTitrationCurve(reta, 24);
+  const week5Idx = baseline.findIndex((p) => Math.abs(p.day - 35) < 1);
+  if (week5Idx >= 0) {
+    check(
+      "retatrutide: missing dose 4 reduces week-5 concentration",
+      missedCurve[week5Idx].relativeConcentration <
+        baseline[week5Idx].relativeConcentration,
+    );
+  }
 }
 
 // ============================================================

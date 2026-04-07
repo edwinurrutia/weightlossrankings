@@ -5,17 +5,28 @@ import {
   DRUGS,
   type DrugId,
   simulateTitrationCurve,
-  buildDoseSchedule,
+  currentDoseAtWeek,
   type SamplePoint,
 } from "@/lib/pk-model";
 
-// Brand-aligned palette: violet primary (#8b5cf6), blue secondary
-// (#3b82f6), darker indigo accent for the third drug. Stays inside the
-// site's brand-violet/brand-blue gradient family.
-const DRUG_OPTIONS: { id: DrugId; label: string; color: string }[] = [
+// Brand-aligned palette: violet primary (#8b5cf6), brand-blue (#3b82f6),
+// indigo (#4338ca) and a slightly darker indigo for the 4th drug. All
+// stay inside the site's brand-violet/brand-blue gradient family.
+const DRUG_OPTIONS: {
+  id: DrugId;
+  label: string;
+  color: string;
+  investigational?: boolean;
+}[] = [
   { id: "semaglutide", label: "Semaglutide", color: "#8b5cf6" },
   { id: "tirzepatide", label: "Tirzepatide", color: "#3b82f6" },
-  { id: "orforglipron", label: "Orforglipron (Foundayo)", color: "#4338ca" },
+  { id: "orforglipron", label: "Orforglipron", color: "#4338ca" },
+  {
+    id: "retatrutide",
+    label: "Retatrutide",
+    color: "#6366f1",
+    investigational: true,
+  },
 ];
 
 const DEFAULT_WEEKS = 24;
@@ -45,8 +56,7 @@ function buildPath(
   points.forEach((p, i) => {
     const x = dims.padding.left + (p.day / totalDays) * innerW;
     const yVal = Math.min(p.relativeConcentration, yMax);
-    const y =
-      dims.padding.top + innerH - (yVal / yMax) * innerH;
+    const y = dims.padding.top + innerH - (yVal / yMax) * innerH;
     cmds.push(`${i === 0 ? "M" : "L"}${x.toFixed(2)},${y.toFixed(2)}`);
   });
   return cmds.join(" ");
@@ -77,21 +87,21 @@ export default function DosePlotter() {
 
   const yMax = 1.4; // headroom above SS = 1.0
 
-  // Doses in the visible window for the missed-dose picker
-  const allDoses = useMemo(
-    () => buildDoseSchedule(drug, totalWeeks),
-    [drug, totalWeeks],
-  );
+  // Compute the titration "steps" excluding the open-ended maintenance.
+  const titrationSteps = drug.titration;
 
   const totalDays = totalWeeks * 7;
   const innerW = DIMS.width - DIMS.padding.left - DIMS.padding.right;
   const innerH = DIMS.height - DIMS.padding.top - DIMS.padding.bottom;
 
+  // Compute steady-state weeks heuristic for the PK card
+  const ssWeeks = Math.ceil((5 * drug.halfLifeHours) / 168);
+
   return (
     <div className="not-prose space-y-8">
-      {/* Drug picker */}
+      {/* ── Drug picker ── */}
       <div>
-        <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+        <p className="text-xs uppercase tracking-[0.18em] text-brand-text-secondary font-bold">
           Select medication
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
@@ -102,14 +112,20 @@ export default function DosePlotter() {
               onClick={() => {
                 setDrugId(opt.id);
                 setMissedDose(null);
+                setCompareMode(false);
               }}
-              className={`rounded-lg border px-4 py-2 text-sm font-semibold transition ${
+              className={`rounded-lg border px-4 py-2 text-sm font-semibold transition flex items-center gap-2 ${
                 drugId === opt.id && !compareMode
                   ? "border-brand-violet bg-brand-violet/10 text-brand-violet"
-                  : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
+                  : "border-slate-200 bg-white text-brand-text-primary hover:border-brand-violet/40"
               }`}
             >
               {opt.label}
+              {opt.investigational && (
+                <span className="text-[10px] font-bold uppercase tracking-wide text-brand-blue bg-brand-blue/10 border border-brand-blue/20 rounded-full px-2 py-0.5">
+                  Investigational
+                </span>
+              )}
             </button>
           ))}
           <button
@@ -117,28 +133,69 @@ export default function DosePlotter() {
             onClick={() => setCompareMode((c) => !c)}
             className={`rounded-lg border px-4 py-2 text-sm font-semibold transition ${
               compareMode
-                ? "border-slate-900 bg-slate-900 text-white"
-                : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
+                ? "border-brand-violet bg-brand-violet text-white"
+                : "border-slate-200 bg-white text-brand-text-primary hover:border-brand-violet/40"
             }`}
           >
-            {compareMode ? "Compare mode (on)" : "Compare all"}
+            {compareMode ? "Comparing all" : "Compare all"}
           </button>
         </div>
         {!compareMode && (
-          <p className="mt-3 text-sm text-slate-600">
+          <p className="mt-3 text-sm text-brand-text-secondary">
             Brand names: {drug.brandNames.join(", ")} · Half-life{" "}
-            {drug.halfLifeHours} h · Dosing every{" "}
+            {drug.halfLifeHours} h ({(drug.halfLifeHours / 24).toFixed(1)} d) ·{" "}
             {drug.intervalHours === 168
-              ? "week"
+              ? "Once weekly"
               : drug.intervalHours === 24
-                ? "day"
-                : `${drug.intervalHours} h`}
+                ? "Once daily"
+                : `Every ${drug.intervalHours} h`}
           </p>
         )}
       </div>
 
-      {/* Chart */}
-      <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      {/* ── Titration step row ── */}
+      {!compareMode && (
+        <div>
+          <p className="text-xs uppercase tracking-[0.18em] text-brand-text-secondary font-bold">
+            Standard titration schedule
+          </p>
+          <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
+            {titrationSteps.map((step, i) => {
+              const stepStartWeek = titrationSteps
+                .slice(0, i)
+                .reduce((sum, s) => sum + s.weeks, 0);
+              const stepEndWeek = stepStartWeek + step.weeks;
+              const isMaintenance = step.weeks >= 999;
+              return (
+                <div
+                  key={i}
+                  className="rounded-xl border border-brand-violet/15 bg-white p-4 text-center"
+                >
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
+                    {isMaintenance
+                      ? "Maintenance"
+                      : `Wk ${stepStartWeek + 1}–${stepEndWeek}`}
+                  </p>
+                  <p className="mt-1 text-2xl font-bold text-brand-violet">
+                    {step.doseMg}
+                    <span className="text-sm font-semibold text-brand-text-secondary ml-0.5">
+                      mg
+                    </span>
+                  </p>
+                  {isMaintenance && (
+                    <p className="mt-1 text-[10px] uppercase tracking-wide text-brand-text-secondary">
+                      target dose
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* ── Chart ── */}
+      <div className="overflow-x-auto rounded-2xl border border-brand-violet/15 bg-white p-6 shadow-sm">
         <svg
           viewBox={`0 0 ${DIMS.width} ${DIMS.height}`}
           className="w-full"
@@ -147,8 +204,7 @@ export default function DosePlotter() {
         >
           {/* Y-axis grid */}
           {[0, 0.25, 0.5, 0.75, 1.0, 1.25].map((yv) => {
-            const y =
-              DIMS.padding.top + innerH - (yv / yMax) * innerH;
+            const y = DIMS.padding.top + innerH - (yv / yMax) * innerH;
             return (
               <g key={yv}>
                 <line
@@ -171,7 +227,7 @@ export default function DosePlotter() {
               </g>
             );
           })}
-          {/* Steady-state reference line — brand violet, dashed */}
+          {/* Steady-state reference line — brand violet dashed */}
           <line
             x1={DIMS.padding.left}
             x2={DIMS.padding.left + innerW}
@@ -185,8 +241,7 @@ export default function DosePlotter() {
           {/* X-axis labels (weeks) */}
           {Array.from({ length: Math.floor(totalWeeks / 4) + 1 }, (_, i) => i * 4).map(
             (wk) => {
-              const x =
-                DIMS.padding.left + ((wk * 7) / totalDays) * innerW;
+              const x = DIMS.padding.left + ((wk * 7) / totalDays) * innerW;
               return (
                 <g key={wk}>
                   <line
@@ -259,114 +314,134 @@ export default function DosePlotter() {
                   className="inline-block h-3 w-6 rounded"
                   style={{ background: opt.color }}
                 />
-                <span className="text-slate-700">{opt.label}</span>
+                <span className="text-brand-text-primary">{opt.label}</span>
+                {opt.investigational && (
+                  <span className="text-[10px] font-bold uppercase tracking-wide text-brand-blue">
+                    investigational
+                  </span>
+                )}
               </div>
             ))}
           </div>
         )}
-        <p className="mt-4 text-xs text-slate-500">
+        <p className="mt-4 text-xs text-brand-text-secondary">
           Dashed violet line = steady-state peak of the maintenance dose
-          (defined as 100%). Curves show the standard titration ramp;
-          all values are educational and relative, not absolute blood
-          levels.
+          (defined as 100%). Curves show the standard titration ramp; all
+          values are educational and relative, not absolute blood levels.
         </p>
       </div>
 
-      {/* Missed dose simulator */}
+      {/* ── PK constants ── */}
       {!compareMode && (
-        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <h3 className="text-base font-semibold text-slate-900">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          <div className="rounded-xl border border-brand-violet/15 bg-white p-4">
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
+              Half-life
+            </p>
+            <p className="mt-1 text-xl font-bold text-brand-text-primary">
+              {(drug.halfLifeHours / 24).toFixed(1)} d
+            </p>
+            <p className="text-xs text-brand-text-secondary">
+              {drug.halfLifeHours} h
+            </p>
+          </div>
+          <div className="rounded-xl border border-brand-violet/15 bg-white p-4">
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
+              Steady state
+            </p>
+            <p className="mt-1 text-xl font-bold text-brand-text-primary">
+              ~{ssWeeks} weeks
+            </p>
+            <p className="text-xs text-brand-text-secondary">
+              4–5 half-lives at constant dose
+            </p>
+          </div>
+          <div className="rounded-xl border border-brand-violet/15 bg-white p-4">
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
+              Dosing interval
+            </p>
+            <p className="mt-1 text-xl font-bold text-brand-text-primary">
+              {drug.intervalHours === 168
+                ? "Weekly"
+                : drug.intervalHours === 24
+                  ? "Daily"
+                  : `Every ${drug.intervalHours} h`}
+            </p>
+            <p className="text-xs text-brand-text-secondary">
+              {drug.intervalHours === 168
+                ? "Subcutaneous injection"
+                : "Oral tablet"}
+            </p>
+          </div>
+          <div className="rounded-xl border border-brand-violet/15 bg-white p-4">
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-text-secondary">
+              Maintenance dose
+            </p>
+            <p className="mt-1 text-xl font-bold text-brand-text-primary">
+              {drug.maintenanceDoseMg} mg
+            </p>
+            <p className="text-xs text-brand-text-secondary">
+              target after titration
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* ── Missed dose simulator (compact: first 8 doses only) ── */}
+      {!compareMode && (
+        <div className="rounded-2xl border border-brand-violet/15 bg-brand-bg-purple/60 p-6">
+          <h3 className="font-heading text-base font-bold text-brand-text-primary">
             Missed dose simulator
           </h3>
-          <p className="mt-1 text-sm text-slate-600">
+          <p className="mt-1 text-sm text-brand-text-secondary">
             Tap a dose number below to skip that injection and see how the
-            concentration curve responds.
+            concentration curve responds. Showing the first 8{" "}
+            {drug.intervalHours === 168 ? "weekly doses" : "weeks"} of the
+            titration ramp.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             <button
               type="button"
               onClick={() => setMissedDose(null)}
-              className={`rounded-md border px-3 py-1 text-xs font-semibold ${
+              className={`rounded-md border px-3 py-1.5 text-xs font-semibold ${
                 missedDose === null
-                  ? "border-slate-900 bg-slate-900 text-white"
-                  : "border-slate-300 bg-white text-slate-700"
+                  ? "border-brand-violet bg-brand-violet text-white"
+                  : "border-slate-300 bg-white text-brand-text-primary hover:border-brand-violet/40"
               }`}
             >
               No missed dose
             </button>
-            {/* Show only weekly doses (or every 7th for daily drugs) so the
-                button list stays manageable across all 24 weeks. */}
-            {allDoses
-              .filter((_, i) =>
-                drug.intervalHours === 168 ? true : i % 7 === 0,
-              )
-              .map((d, displayIdx) => {
-                // Map displayIdx back to the actual index in allDoses
-                const actualIdx =
-                  drug.intervalHours === 168 ? displayIdx : displayIdx * 7;
-                const wkLabel = Math.floor(
-                  (actualIdx * drug.intervalHours) / (7 * 24),
-                ) + 1;
-                return (
-                  <button
-                    key={actualIdx}
-                    type="button"
-                    onClick={() => setMissedDose(actualIdx)}
-                    className={`rounded-md border px-3 py-1 text-xs font-semibold ${
-                      missedDose === actualIdx
-                        ? "border-brand-violet bg-brand-violet/10 text-brand-violet"
-                        : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
-                    }`}
-                  >
-                    Wk {wkLabel} ({d.doseMg} mg)
-                  </button>
-                );
-              })}
+            {/* For weekly drugs, show one button per week (1-8). For daily
+                drugs, show one button per week, mapping to the first dose
+                of that week. */}
+            {Array.from({ length: 8 }, (_, weekIdx) => {
+              const actualIdx =
+                drug.intervalHours === 168 ? weekIdx : weekIdx * 7;
+              const doseMg = currentDoseAtWeek(drug, weekIdx);
+              return (
+                <button
+                  key={weekIdx}
+                  type="button"
+                  onClick={() => setMissedDose(actualIdx)}
+                  className={`rounded-md border px-3 py-1.5 text-xs font-semibold transition ${
+                    missedDose === actualIdx
+                      ? "border-brand-violet bg-brand-violet text-white"
+                      : "border-slate-300 bg-white text-brand-text-primary hover:border-brand-violet/40"
+                  }`}
+                >
+                  Week {weekIdx + 1} ({doseMg} mg)
+                </button>
+              );
+            })}
           </div>
-          <p className="mt-3 text-xs text-slate-500">
-            {drug.intervalHours === 168
-              ? "Tap any week to skip that injection."
-              : "Tap any week to skip that day's tablet (showing one button per week for daily-dose drugs)."}
-          </p>
-        </div>
-      )}
-
-      {/* PK constants table */}
-      {!compareMode && (
-        <div className="rounded-2xl border border-slate-200 bg-white p-6">
-          <h3 className="text-base font-semibold text-slate-900">
-            Pharmacokinetic parameters
-          </h3>
-          <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-sm md:grid-cols-4">
-            <div>
-              <dt className="text-slate-500">Half-life</dt>
-              <dd className="font-semibold text-slate-900">
-                {drug.halfLifeHours} h ({(drug.halfLifeHours / 24).toFixed(1)} d)
-              </dd>
-            </div>
-            <div>
-              <dt className="text-slate-500">Steady state</dt>
-              <dd className="font-semibold text-slate-900">
-                ~{Math.ceil((5 * drug.halfLifeHours) / 168)} weeks of constant dose
-              </dd>
-            </div>
-            <div>
-              <dt className="text-slate-500">Dosing interval</dt>
-              <dd className="font-semibold text-slate-900">
-                {drug.intervalHours === 168
-                  ? "Once weekly"
-                  : drug.intervalHours === 24
-                    ? "Once daily"
-                    : `Every ${drug.intervalHours} h`}
-              </dd>
-            </div>
-            <div>
-              <dt className="text-slate-500">Maintenance dose</dt>
-              <dd className="font-semibold text-slate-900">
-                {drug.maintenanceDoseMg} mg
-              </dd>
-            </div>
-          </dl>
+          {missedDose !== null && (
+            <p className="mt-3 text-xs text-brand-text-secondary italic">
+              Skipping the dose at week{" "}
+              {Math.floor((missedDose * drug.intervalHours) / (7 * 24)) + 1}.
+              Notice how the concentration drops and then recovers over the
+              following 2–3 doses.
+            </p>
+          )}
         </div>
       )}
     </div>

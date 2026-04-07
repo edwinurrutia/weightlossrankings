@@ -33,7 +33,11 @@
  *   PMID 38402332.
  */
 
-export type DrugId = "semaglutide" | "tirzepatide" | "orforglipron";
+export type DrugId =
+  | "semaglutide"
+  | "tirzepatide"
+  | "orforglipron"
+  | "retatrutide";
 
 export interface DrugSpec {
   id: DrugId;
@@ -116,6 +120,28 @@ export const DRUGS: Record<DrugId, DrugSpec> = {
     sources: [
       "Foundayo (orforglipron) US Prescribing Information",
       "Ma X et al. Diabetes Therapy 2024 PMID 38402332 — orforglipron food-effect/PK",
+    ],
+  },
+  retatrutide: {
+    id: "retatrutide",
+    displayName: "Retatrutide",
+    brandNames: ["LY3437943 — investigational"],
+    intervalHours: 168,
+    halfLifeHours: 144, // ~6 days, per Coskun et al. Cell Metabolism 2022
+    absorptionHalfLifeHours: 24,
+    titration: [
+      { weeks: 4, doseMg: 2 },
+      { weeks: 4, doseMg: 4 },
+      { weeks: 4, doseMg: 6 },
+      { weeks: 4, doseMg: 8 },
+      { weeks: 4, doseMg: 10 },
+      { weeks: 999, doseMg: 12 },
+    ],
+    maintenanceDoseMg: 12,
+    sources: [
+      "Jastreboff AM et al. NEJM 2023 PMID 37366315 — phase 2 obesity trial",
+      "Coskun T et al. Cell Metabolism 2022 PMID 36240769 — discovery and PK",
+      "TRIUMPH-4 readout, Eli Lilly investor press release December 11, 2025",
     ],
   },
 };
