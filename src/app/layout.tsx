@@ -59,11 +59,20 @@ export const metadata: Metadata = {
       },
     ],
   },
+  // Twitter card metadata. We deliberately do NOT set title /
+  // description / images at the root layout level because Next.js
+  // does not auto-fill twitter:* fields from openGraph:* — and
+  // research articles set their own openGraph but inherit twitter
+  // from this root layout. The previous hardcoded title/description
+  // here meant every shared article on X showed the homepage card
+  // instead of the article-specific one. By setting only the card
+  // type here, Next.js falls back to the page-level `title` and
+  // `description` from each route's generateMetadata, which already
+  // surface the article-specific values via the layout-level
+  // title.template. Per-page generateMetadata can still override
+  // explicitly via metadata.twitter.* if needed.
   twitter: {
     card: "summary_large_image",
-    title: "Weight Loss Rankings",
-    description: "Compare GLP-1 providers, prices, and reviews.",
-    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
