@@ -59,6 +59,13 @@ const TOOLS = [
     tag: "Drug interactions",
   },
   {
+    slug: "glp1-pen-leftover-calculator",
+    title: "GLP-1 Pen Leftover Calculator",
+    description:
+      "How many doses are left in your Ozempic or Saxenda pen? Built on FDA-label fill volumes and dose counts. Explains why Wegovy, Zepbound, and Mounjaro pens are single-dose and cannot be extended.",
+    tag: "Pen tracker",
+  },
+  {
     slug: "insurance-employer-checker",
     title: "Insurance Employer Checker",
     description:

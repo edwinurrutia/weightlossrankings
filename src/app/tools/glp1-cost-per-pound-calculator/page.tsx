@@ -3,7 +3,8 @@ import Link from "next/link";
 import References from "@/components/research/References";
 import ToolSchema from "@/components/research/ToolSchema";
 import FaqSchema from "@/components/research/FaqSchema";
-import Calculator, { DRUGS, projectDrug } from "./Calculator";
+import Calculator from "./Calculator";
+import { DRUGS, projectDrug } from "@/lib/glp1-cost-per-pound";
 
 export const metadata: Metadata = {
   title:

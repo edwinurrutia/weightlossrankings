@@ -402,6 +402,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Pharmacokinetics", "Half-life", "Washout", "Patient question", "Safety"],
   },
   {
+    slug: "what-is-orforglipron-foundayo",
+    title:
+      "What Is Orforglipron (Foundayo)? Mechanism, Maker & Pronunciation",
+    description:
+      "Orforglipron (brand name Foundayo) is the first oral GLP-1 pill approved for weight loss, made by Eli Lilly and FDA-approved on April 1, 2026. This is the foundational explainer: what it is, who makes it, how the small-molecule GLP-1 mechanism works, what it's used for, how it compares to injectable GLP-1s, what it costs, and how to pronounce it.",
+    excerpt:
+      "Orforglipron is the generic name for Foundayo — Eli Lilly's once-daily oral GLP-1 receptor agonist for chronic weight management, FDA-approved on April 1, 2026. It is the first small-molecule, non-peptide GLP-1 ever approved for weight loss, which is the chemistry reason it can be a pill instead of an injection. This article walks through the drug class, the manufacturer, the mechanism, the FDA-approved indication, the ATTAIN-1 trial efficacy (~11.1% labeled-dose mean weight loss at 17.2 mg over 72 weeks), how it compares head-to-head with injectable semaglutide and tirzepatide, the launch pricing ($999/month list, $25/month with the Lilly Savings Card for commercially insured patients), and the syllable-by-syllable pronunciation.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
+    readMinutes: 10,
+    citations: 6,
+    tags: ["Foundayo", "Orforglipron", "Oral GLP-1", "Patient guide", "Drug profile"],
+  },
+  {
     slug: "where-to-buy-foundayo",
     title:
       "Where to Buy Foundayo (Orforglipron) in 2026: The Telehealth and Pharmacy Provider Directory",
@@ -790,6 +805,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     readMinutes: 10,
     citations: 5,
     tags: ["Compounding", "PCAB", "Pharmacy quality"],
+  },
+  {
+    slug: "orforglipron-foundayo-side-effects",
+    title:
+      "Orforglipron (Foundayo) Side Effects: ATTAIN-1 Trial Rates",
+    description:
+      "What the FDA Foundayo label and the ATTAIN-1 phase 3 trial actually report for orforglipron side effects — the GI rates, the boxed MTC warning, the pancreatitis and gallbladder signal, and how the oral pill compares to injectable Wegovy and Zepbound.",
+    excerpt:
+      "Foundayo (orforglipron) is the first oral GLP-1 pill approved for weight loss, and the side effect questions patients are searching for are the same ones they ask about Wegovy and Zepbound: how bad is the nausea, what's the boxed warning, can it cause pancreatitis, what about pregnancy. We walk through the FDA Foundayo prescribing information, the ATTAIN-1 phase 3 trial adverse event data, the GLP-1 class boxed warning for medullary thyroid carcinoma, the rare but serious safety signals (pancreatitis, gallbladder, kidney injury, hypoglycemia in combination with insulin or sulfonylureas), the pregnancy contraindication, and how the oral pill compares to injectable semaglutide and tirzepatide on tolerability.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
+    readMinutes: 11,
+    citations: 7,
+    tags: ["Foundayo", "Orforglipron", "Side effects", "ATTAIN-1", "Patient guide", "Safety"],
   },
   {
     slug: "foundayo-orforglipron-fda-approval-2026",
