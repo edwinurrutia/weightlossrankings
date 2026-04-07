@@ -219,6 +219,25 @@ export default async function HomePage() {
               Calculate your savings →
             </Link>
           </div>
+
+          {/* FTC affiliate disclosure — above the fold per FTC 16 CFR
+              Part 255 best practice. Most monetized template pages
+              already render the inline AffiliateDisclosure component
+              near their links; the homepage hero gets a slimmed-down
+              version of the same disclosure so first-time visitors
+              see the relationship before they click through to any
+              ranked provider page. */}
+          <p className="mt-8 text-xs text-white/60 max-w-xl mx-auto">
+            Reader-supported. When you sign up with a provider through
+            our links we may earn a commission at no extra cost to you.{" "}
+            <Link
+              href="/disclosure"
+              className="underline underline-offset-2 hover:text-white/90"
+            >
+              How we make money
+            </Link>
+            .
+          </p>
         </div>
 
         {/* Category cards — overhang the hero bottom */}

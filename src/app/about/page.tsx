@@ -32,13 +32,17 @@ export default function AboutPage() {
           brand has the biggest ad budget.
         </p>
         <p>
-          The site is operated by an independent publisher. Every provider is
-          evaluated using a structured scoring methodology that weighs value,
-          clinical effectiveness, user experience, safety and compliance,
-          accessibility, and ongoing support. The same algorithm is applied to
-          every provider, whether or not they have a commercial relationship
-          with us. For full details on how commercial relationships affect
-          placement (but not scores), see our{" "}
+          WeightLossRankings.org is published by{" "}
+          <strong className="text-brand-text-primary">
+            MEAS Partners, LLC
+          </strong>
+          , an independent publisher. Every provider is evaluated using a
+          structured scoring methodology that weighs value, clinical
+          effectiveness, user experience, safety and compliance,
+          accessibility, and ongoing support. The same algorithm is applied
+          to every provider, whether or not they have a commercial
+          relationship with us. For full details on how commercial
+          relationships affect placement (but not scores), see our{" "}
           <Link href="/disclosure" className="text-brand-violet underline">
             Affiliate Disclosure
           </Link>{" "}

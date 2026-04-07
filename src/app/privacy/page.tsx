@@ -262,8 +262,26 @@ export default function PrivacyPage() {
               Affiliate networks and partners.
             </strong>{" "}
             When you click an outbound affiliate link, the destination
-            partner and its tracking network will receive referral data. They
-            do not receive any information you provided directly to us.
+            partner and its tracking network will receive referral data
+            (the page you came from, the timestamp, and a non-identifying
+            sub-tracking ID we generate to attribute the click). The
+            networks and direct partners we work with include{" "}
+            <strong className="text-brand-text-primary">
+              Katalys (Katalys LLC),
+            </strong>{" "}
+            Impact, ShareASale, CJ Affiliate, PartnerStack, Refersion,
+            and direct partnerships with telehealth providers we cover.
+            Each network operates under its own privacy policy and is
+            responsible for the data it collects after the click hands
+            off. None of these partners receive any information you
+            provided directly to us (e.g., the email address you gave to
+            our newsletter or the answers you typed into our calculators).
+            See our{" "}
+            <a href="/disclosure" className="text-brand-violet underline">
+              Affiliate Disclosure
+            </a>{" "}
+            for the editorial framework that governs which providers we
+            cover and how commercial relationships factor in.
           </li>
           <li>
             <strong className="text-brand-text-primary">
