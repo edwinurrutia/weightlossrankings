@@ -10,6 +10,7 @@ import {
   type BmiCategory,
   type Unit,
 } from "@/lib/bmi";
+import { trackToolEvent } from "@/lib/analytics";
 
 const TRIAL_OUTCOMES = [
   {
@@ -83,7 +84,10 @@ export default function BmiCalculator() {
           <div className="flex rounded-lg border border-slate-200 overflow-hidden w-fit">
             <button
               type="button"
-              onClick={() => setUnit("imperial")}
+              onClick={() => {
+                setUnit("imperial");
+                trackToolEvent("bmi_calculator", "unit_change", { unit: "imperial" });
+              }}
               className={`px-4 py-2 text-sm font-semibold ${
                 unit === "imperial"
                   ? "bg-brand-violet text-white"
@@ -94,7 +98,10 @@ export default function BmiCalculator() {
             </button>
             <button
               type="button"
-              onClick={() => setUnit("metric")}
+              onClick={() => {
+                setUnit("metric");
+                trackToolEvent("bmi_calculator", "unit_change", { unit: "metric" });
+              }}
               className={`px-4 py-2 text-sm font-semibold ${
                 unit === "metric"
                   ? "bg-brand-violet text-white"

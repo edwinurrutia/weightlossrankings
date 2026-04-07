@@ -7,6 +7,7 @@ import {
   getAccessOption,
   type AccessPath,
 } from "@/lib/savings-calculator-2026";
+import { trackToolEvent } from "@/lib/analytics";
 
 const fmt = (n: number) =>
   n.toLocaleString("en-US", {
@@ -53,6 +54,9 @@ export default function SavingsCalculator() {
             onChange={(e) => {
               setBaselineId(e.target.value as AccessPath);
               setBaselineOverride("");
+              trackToolEvent("savings_calculator", "baseline_change", {
+                baseline: e.target.value,
+              });
             }}
             className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-brand-text-primary bg-white focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/30"
           >
@@ -99,6 +103,9 @@ export default function SavingsCalculator() {
             onChange={(e) => {
               setAlternativeId(e.target.value as AccessPath);
               setAlternativeOverride("");
+              trackToolEvent("savings_calculator", "alternative_change", {
+                alternative: e.target.value,
+              });
             }}
             className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-brand-text-primary bg-white focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/30"
           >

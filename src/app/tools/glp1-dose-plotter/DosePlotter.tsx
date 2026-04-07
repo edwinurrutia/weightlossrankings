@@ -8,6 +8,7 @@ import {
   currentDoseAtWeek,
   type SamplePoint,
 } from "@/lib/pk-model";
+import { trackToolEvent } from "@/lib/analytics";
 
 // Compare-mode palette: each drug gets a clearly distinct hue while
 // staying brand-aligned. Brand-violet and brand-blue are the two
@@ -115,6 +116,7 @@ export default function DosePlotter() {
                 setDrugId(opt.id);
                 setMissedDose(null);
                 setCompareMode(false);
+                trackToolEvent("dose_plotter", "drug_change", { drug: opt.id });
               }}
               className={`rounded-lg border px-4 py-2 text-sm font-semibold transition flex items-center gap-2 ${
                 drugId === opt.id && !compareMode
@@ -132,7 +134,12 @@ export default function DosePlotter() {
           ))}
           <button
             type="button"
-            onClick={() => setCompareMode((c) => !c)}
+            onClick={() => {
+              setCompareMode((c) => {
+                trackToolEvent("dose_plotter", "compare_toggle", { enabled: !c });
+                return !c;
+              });
+            }}
             className={`rounded-lg border px-4 py-2 text-sm font-semibold transition ${
               compareMode
                 ? "border-brand-violet bg-brand-violet text-white"
@@ -469,7 +476,13 @@ export default function DosePlotter() {
                 <button
                   key={weekIdx}
                   type="button"
-                  onClick={() => setMissedDose(actualIdx)}
+                  onClick={() => {
+                    setMissedDose(actualIdx);
+                    trackToolEvent("dose_plotter", "missed_dose_select", {
+                      drug: drugId,
+                      week: weekIdx + 1,
+                    });
+                  }}
                   className={`rounded-md border px-3 py-1.5 text-xs font-semibold transition ${
                     missedDose === actualIdx
                       ? "border-brand-violet bg-brand-violet text-white"

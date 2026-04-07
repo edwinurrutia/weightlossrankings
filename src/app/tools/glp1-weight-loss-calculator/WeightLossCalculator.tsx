@@ -7,6 +7,7 @@ import {
   predict,
   buildPredictionCurve,
 } from "@/lib/weight-loss-prediction";
+import { trackToolEvent } from "@/lib/analytics";
 
 type WeightUnit = "lbs" | "kg";
 
@@ -196,7 +197,12 @@ export default function WeightLossCalculator() {
                 <button
                   key={opt.id}
                   type="button"
-                  onClick={() => setDrug(opt.id)}
+                  onClick={() => {
+                    setDrug(opt.id);
+                    trackToolEvent("weight_loss_calc", "drug_change", {
+                      drug: opt.id,
+                    });
+                  }}
                   className={`rounded-lg border px-4 py-3 text-sm font-semibold transition text-left ${
                     drug === opt.id
                       ? "border-brand-violet bg-brand-violet/10 text-brand-violet"

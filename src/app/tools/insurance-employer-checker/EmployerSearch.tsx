@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import employersData from "@/data/employer-coverage.json";
+import { trackToolEvent } from "@/lib/analytics";
 
 type CoverageStatus =
   | "Covered"
@@ -125,7 +126,12 @@ export default function EmployerSearch() {
             <select
               id="industry-filter"
               value={industry}
-              onChange={(e) => setIndustry(e.target.value)}
+              onChange={(e) => {
+                setIndustry(e.target.value);
+                trackToolEvent("employer_checker", "industry_filter", {
+                  industry: e.target.value,
+                });
+              }}
               className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm text-brand-text-primary focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/20"
             >
               <option value="All">All industries</option>

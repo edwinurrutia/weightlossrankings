@@ -14,6 +14,7 @@ import {
   type DrugName,
 } from "@/lib/unit-converter";
 import { bacWaterVolumeMl } from "@/lib/weight-loss-prediction";
+import { trackToolEvent } from "@/lib/analytics";
 
 const DRUGS: { id: DrugName; label: string; brand: string }[] = [
   { id: "semaglutide", label: "Semaglutide", brand: "Wegovy / Ozempic" },
@@ -38,6 +39,7 @@ export default function UnitConverter() {
     setDrug(newDrug);
     setConcentration(COMMON_CONCENTRATIONS[newDrug][0]);
     setMgInput(String(STANDARD_TITRATION_DOSES[newDrug][0]));
+    trackToolEvent("unit_converter", "drug_change", { drug: newDrug });
   }
 
   const mgValue = parseFloat(mgInput);
@@ -125,7 +127,10 @@ export default function UnitConverter() {
         <div className="mt-3 flex flex-wrap gap-2">
           <button
             type="button"
-            onClick={() => setDirection("mg-to-units")}
+            onClick={() => {
+              setDirection("mg-to-units");
+              trackToolEvent("unit_converter", "mode_change", { mode: "mg_to_units" });
+            }}
             className={`rounded-lg border px-4 py-2 text-sm font-semibold transition ${
               direction === "mg-to-units"
                 ? "border-brand-violet bg-brand-violet text-white"
@@ -136,7 +141,10 @@ export default function UnitConverter() {
           </button>
           <button
             type="button"
-            onClick={() => setDirection("units-to-mg")}
+            onClick={() => {
+              setDirection("units-to-mg");
+              trackToolEvent("unit_converter", "mode_change", { mode: "units_to_mg" });
+            }}
             className={`rounded-lg border px-4 py-2 text-sm font-semibold transition ${
               direction === "units-to-mg"
                 ? "border-brand-violet bg-brand-violet text-white"
@@ -147,7 +155,10 @@ export default function UnitConverter() {
           </button>
           <button
             type="button"
-            onClick={() => setDirection("bac-water")}
+            onClick={() => {
+              setDirection("bac-water");
+              trackToolEvent("unit_converter", "mode_change", { mode: "bac_water" });
+            }}
             className={`rounded-lg border px-4 py-2 text-sm font-semibold transition ${
               direction === "bac-water"
                 ? "border-brand-violet bg-brand-violet text-white"
