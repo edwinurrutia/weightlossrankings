@@ -251,8 +251,8 @@ export default function SemaglutideParaQueSirveArticle() {
 
       <p>
         La mayoría de estos efectos fueron de intensidad leve o moderada y
-        ocurrieron sobre todo durante las primeras semanas del tratamiento,
-        cuando la dosis se está incrementando de forma escalonada.
+        se presentaron sobre todo durante las primeras semanas del
+        tratamiento, mientras la dosis se aumentaba de forma escalonada.
         Aproximadamente el 7% de los participantes suspendió el medicamento
         por reacciones adversas, en comparación con el 3.1% en el grupo
         placebo.

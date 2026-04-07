@@ -423,12 +423,73 @@ export default function InsuranceCoverageArticle() {
       </p>
 
       <p>
-        At the state level, several states have considered
-        legislation mandating commercial insurance coverage of
-        anti-obesity drugs, but as of April 2026 no state has passed
-        a binding mandate beyond the existing parity-of-coverage
-        statutes. The patchwork of state mandates is documented in
-        the KFF state legislation tracker.
+        At the state level, two states have already passed binding
+        mandates requiring commercial insurance coverage of GLP-1
+        anti-obesity drugs:
+      </p>
+
+      <ul>
+        <li>
+          <strong>North Dakota</strong> became the first US state in
+          January 2025 to amend its Essential Health Benefits clause
+          to require all individual and group health plans to cover
+          FDA-approved GLP-1 and GIP medications for weight loss as
+          part of ACA compliance.
+        </li>
+        <li>
+          <strong>California</strong> followed with AB 575, effective
+          January 1, 2026, requiring health service plans and
+          insurers to cover at least one FDA-approved GLP-1 receptor
+          agonist with no prior authorization required, and
+          prohibiting coverage criteria more restrictive than the
+          FDA approval label.
+        </li>
+      </ul>
+
+      <p>
+        At least 14 other states introduced similar legislation in
+        the first half of 2025. The patchwork is tracked by the KFF
+        state legislation database and the Pharmacy Times state
+        mandate tracker.
+      </p>
+
+      <h2>Self-pay pricing snapshot (April 2026)</h2>
+
+      <p>
+        For patients without coverage, the manufacturer direct-pay
+        prices as of April 2026 are:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Wegovy (NovoCare Pharmacy Direct):</strong>{" "}
+          injectable $199-$499/month depending on dose and
+          introductory status; oral formulation $149-$349/month
+          (the introductory $149 4 mg offer ends August 31, 2026,
+          then reverts to $199/month).
+        </li>
+        <li>
+          <strong>Zepbound (LillyDirect single-vial):</strong>{" "}
+          following the December 1, 2025 price reduction:
+          2.5 mg vial $299/month, 5 mg $399/month, and 7.5/10/12.5/15
+          mg $449/month with a 45-day refill incentive.
+        </li>
+        <li>
+          <strong>Foundayo (Lilly oral GLP-1):</strong> $25/month
+          with commercial insurance + savings card; $149-$299/month
+          self-pay depending on dose; ~$50/month for eligible
+          Medicare Part D patients via the Bridge program starting
+          July 1, 2026.
+        </li>
+      </ul>
+
+      <p>
+        For the full cost comparison across all 10 access paths
+        (commercial + direct-pay + compounded + Foundayo), see our{" "}
+        <Link href="/tools/glp1-savings-calculator-2026">
+          GLP-1 savings calculator
+        </Link>
+        .
       </p>
 
       <h2>How to find out what your specific plan covers</h2>
