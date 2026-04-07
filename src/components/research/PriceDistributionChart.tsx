@@ -41,12 +41,17 @@ export default function PriceDistributionChart({
       ) : (
         <ul className="flex flex-col gap-3">
           {buckets.map((b) => {
-            // Bar fill is proportional to the SECOND-largest count rather than
-            // the absolute max so the label sitting after the bar always has
-            // room. The "max" of 100% is reserved for the visually largest
-            // bucket; all others get capped at 92% so the label fits.
-            const rawPct = (b.count / max) * 100;
+            // Bar fill: cap the largest bar at 75% of the track width so the
+            // count label rendered after the bar always fits inside the same
+            // grid column without overflowing into the percentage column.
+            // For wide bars (>30% of track) we render the label INSIDE the
+            // bar in white text, right-aligned, which keeps long labels like
+            // "18 providers" comfortably within the track regardless of how
+            // wide the bar gets.
+            const MAX_BAR_PCT = 75;
+            const rawPct = max > 0 ? (b.count / max) * MAX_BAR_PCT : 0;
             const widthPct = b.count === 0 ? 0 : Math.max(rawPct, 4);
+            const labelInside = widthPct >= 30;
             const sharePct = total > 0 ? (b.count / total) * 100 : 0;
             return (
               <li
@@ -56,16 +61,22 @@ export default function PriceDistributionChart({
                 <span className="font-mono text-xs text-brand-text-secondary text-right tabular-nums">
                   {b.label}
                 </span>
-                <div className="relative h-7 bg-brand-violet/[0.06] rounded-md flex items-center">
+                <div className="relative h-7 bg-brand-violet/[0.06] rounded-md overflow-hidden">
                   <div
-                    className="absolute inset-y-0 left-0 bg-brand-violet rounded-md"
+                    className="absolute inset-y-0 left-0 bg-brand-violet rounded-md flex items-center justify-end pr-3"
                     style={{ width: `${widthPct}%` }}
                     aria-hidden
-                  />
-                  {b.count > 0 && (
+                  >
+                    {b.count > 0 && labelInside && (
+                      <span className="text-xs font-semibold text-white whitespace-nowrap">
+                        {b.count} provider{b.count === 1 ? "" : "s"}
+                      </span>
+                    )}
+                  </div>
+                  {b.count > 0 && !labelInside && (
                     <span
-                      className="relative z-10 ml-3 text-xs font-semibold text-brand-text-primary whitespace-nowrap"
-                      style={{ marginLeft: `calc(${widthPct}% + 0.5rem)` }}
+                      className="absolute inset-y-0 flex items-center text-xs font-semibold text-brand-text-primary whitespace-nowrap"
+                      style={{ left: `calc(${widthPct}% + 0.5rem)` }}
                     >
                       {b.count} provider{b.count === 1 ? "" : "s"}
                     </span>
