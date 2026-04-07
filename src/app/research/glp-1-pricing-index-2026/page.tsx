@@ -324,6 +324,50 @@ export default function PricingIndexArticle() {
         full source is open on GitHub for anyone who wants to audit it.
       </p>
 
+      <h2>Related research</h2>
+
+      <p>
+        This pricing index is one of several editorial pieces in our
+        compounded GLP-1 market coverage:
+      </p>
+
+      <ul>
+        <li>
+          <Link href="/research/compounded-glp1-price-movement-12-months">
+            How compounded GLP-1 prices moved over the last 16
+            months
+          </Link>{" "}
+          — provider-by-provider trajectories from January 2025
+          forward, showing every tracked provider has cut prices
+          and the market is converging toward a structural floor
+          near the median this article reports.
+        </li>
+        <li>
+          <Link href="/research/cheapest-compounded-semaglutide-2026">
+            Is $99 compounded semaglutide real? Verifying every
+            floor-price provider
+          </Link>{" "}
+          — a deep dive on the cheapest tier in the distribution
+          this article describes.
+        </li>
+        <li>
+          <Link href="/research/what-happens-when-you-stop-semaglutide">
+            What happens when you stop taking semaglutide
+          </Link>{" "}
+          — important context for the cost calculation: GLP-1
+          therapy is a long-term commitment, not a course, so
+          per-month price differences compound dramatically over
+          years of expected use.
+        </li>
+        <li>
+          <Link href="/research/glp1-insurance-coverage-audit-2026">
+            GLP-1 insurance coverage at the 10 largest US insurers
+          </Link>{" "}
+          — for patients deciding between insurance-covered brand
+          name and cash-pay compounded.
+        </li>
+      </ul>
+
       <References
         items={[
           {

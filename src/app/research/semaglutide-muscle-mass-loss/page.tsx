@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
@@ -322,6 +323,38 @@ export default function MuscleMassArticle() {
         less obviously favorable &mdash; and that&apos;s a conversation
         worth having with the prescribing clinician before starting.
       </p>
+
+      <h2>Related research</h2>
+
+      <p>For the broader picture beyond body composition:</p>
+
+      <ul>
+        <li>
+          <Link href="/research/what-happens-when-you-stop-semaglutide">
+            What happens when you stop taking semaglutide
+          </Link>{" "}
+          — STEP-4, STEP-1 extension, and SURMOUNT-4 on weight regain
+          after discontinuation. Lean mass loss during treatment is
+          one half of the body composition story; weight regain after
+          stopping is the other.
+        </li>
+        <li>
+          <Link href="/research/glp1-side-effects-what-trials-actually-showed">
+            GLP-1 side effects from the RCT adverse-event tables
+          </Link>{" "}
+          — including the &ldquo;Ozempic face&rdquo; discussion and
+          how it relates to the lean-mass loss documented above.
+        </li>
+        <li>
+          <Link href="/research/select-trial-cardiovascular-benefits-non-diabetics">
+            What SELECT showed about cardiovascular outcomes
+          </Link>{" "}
+          — semaglutide&apos;s 20% MACE reduction in non-diabetic
+          adults with established CVD, and the finding that the
+          cardiovascular benefit appears largely independent of how
+          much weight patients actually lost.
+        </li>
+      </ul>
 
       <References
         items={[

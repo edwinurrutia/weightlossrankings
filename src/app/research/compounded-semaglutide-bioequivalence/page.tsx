@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
@@ -503,6 +504,42 @@ export default function CompoundedBioequivalenceArticle() {
         the right to ask and providers being willing to answer
         plainly.
       </p>
+
+      <h2>Related research</h2>
+
+      <p>
+        For the regulatory and market context behind the
+        bioequivalence question:
+      </p>
+
+      <ul>
+        <li>
+          <Link href="/research/fda-warning-letters-glp1-2025-2026">
+            FDA warning letters to compounded GLP-1 telehealth
+            providers
+          </Link>{" "}
+          — every letter we&apos;ve verified, with the violation
+          patterns FDA is actually citing in 2025-2026 enforcement
+          actions, including the salt-form sourcing issue
+          discussed above.
+        </li>
+        <li>
+          <Link href="/research/cheapest-compounded-semaglutide-2026">
+            Is $99 compounded semaglutide real?
+          </Link>{" "}
+          — verification of the floor-price providers we track
+          against our pharmacy database, including which
+          compounders have transparent pharmacy partner disclosures.
+        </li>
+        <li>
+          <Link href="/research/wegovy-pen-vs-compounded-vial-practical-differences">
+            Wegovy pen vs compounded vial: 12 operational
+            differences
+          </Link>{" "}
+          — the practical patient-experience side of the same
+          choice this article addresses scientifically.
+        </li>
+      </ul>
 
       <References
         items={[

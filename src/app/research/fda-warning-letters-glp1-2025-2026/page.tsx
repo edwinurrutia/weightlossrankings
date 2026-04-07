@@ -283,6 +283,42 @@ export default function FdaWarningLettersInvestigation() {
         <Link href="/sources">our master sources page</Link>. The
         underlying FDA letter records are in our public repository.
       </p>
+
+      <h2>Related research</h2>
+
+      <p>
+        For the regulatory and market context this enforcement
+        database fits into:
+      </p>
+
+      <ul>
+        <li>
+          <Link href="/research/compounded-semaglutide-bioequivalence">
+            Compounded semaglutide bioequivalence
+          </Link>{" "}
+          — what 503A and 503B compounding pharmacies are actually
+          required to test, including the salt-form sourcing issue
+          that drives several of the warning letters in our
+          database.
+        </li>
+        <li>
+          <Link href="/research/cheapest-compounded-semaglutide-2026">
+            Is $99 compounded semaglutide real?
+          </Link>{" "}
+          — verification of the floor-price providers we track,
+          which uses this enforcement database as one of the
+          editorial inputs to the verification process.
+        </li>
+        <li>
+          <Link href="/research/wegovy-pen-vs-compounded-vial-practical-differences">
+            Wegovy pen vs compounded vial: 12 operational
+            differences
+          </Link>{" "}
+          — the practical-experience comparison between the two
+          delivery formats. The compounded format is what most
+          enforcement letters in this database concern.
+        </li>
+      </ul>
     </ResearchArticleLayout>
   );
 }

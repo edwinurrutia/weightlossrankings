@@ -404,6 +404,51 @@ export default function HeadToHeadArticle() {
         <Link href="/compare">our compare page</Link>.
       </p>
 
+      <h2>Related research</h2>
+
+      <p>
+        The head-to-head efficacy comparison above is one of several
+        editorial deep dives we maintain on this drug class. For
+        readers who want the full picture beyond the weight-loss
+        primary endpoint:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Cardiovascular outcomes:</strong>{" "}
+          <Link href="/research/select-trial-cardiovascular-benefits-non-diabetics">
+            What SELECT showed about semaglutide and heart attack
+            risk
+          </Link>{" "}
+          — the first randomized cardiovascular outcomes trial of
+          a GLP-1 in non-diabetic patients, with a 20% MACE reduction.
+        </li>
+        <li>
+          <strong>Sleep apnea:</strong>{" "}
+          <Link href="/research/surmount-osa-tirzepatide-sleep-apnea">
+            Tirzepatide for sleep apnea — what SURMOUNT-OSA showed
+          </Link>{" "}
+          — the trial that made Zepbound the first FDA-approved
+          medication for obstructive sleep apnea.
+        </li>
+        <li>
+          <strong>What happens when you stop:</strong>{" "}
+          <Link href="/research/what-happens-when-you-stop-semaglutide">
+            STEP-4, STEP-1 extension, and SURMOUNT-4 on weight regain
+          </Link>{" "}
+          — the trials that measured what happens to body weight
+          after these drugs are discontinued.
+        </li>
+        <li>
+          <strong>Side effects:</strong>{" "}
+          <Link href="/research/glp1-side-effects-what-trials-actually-showed">
+            GLP-1 side effects from the actual RCT adverse-event tables
+          </Link>{" "}
+          — including the counterintuitive finding that semaglutide
+          had higher nausea rates than tirzepatide at maximum dose.
+        </li>
+      </ul>
+
       <References
         items={[
           {

@@ -461,6 +461,12 @@ export default function GLP1SideEffectsArticle() {
         <Link href="/best/semaglutide-providers">semaglutide provider rankings</Link>{" "}
         and the{" "}
         <Link href="/best/tirzepatide-providers">tirzepatide provider rankings</Link>.
+        For the head-to-head efficacy comparison between the two drugs
+        beyond just side effects, see our{" "}
+        <Link href="/research/tirzepatide-vs-semaglutide-head-to-head">
+          tirzepatide vs semaglutide head-to-head deep dive
+        </Link>
+        .
       </p>
 
       <References items={citations} />
