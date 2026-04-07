@@ -387,6 +387,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Dosing", "Compounded", "Unit conversion", "Patient guide", "Reference"],
   },
   {
+    slug: "how-long-does-glp1-stay-in-your-system",
+    title:
+      "How Long Does Semaglutide & Tirzepatide Stay In Your System?",
+    description:
+      "Semaglutide has a ~7-day half-life and takes ~5 weeks to fully clear. Tirzepatide has a ~5-day half-life and clears in ~25 days. Orforglipron (Foundayo) has a ~30-hour half-life and clears in ~6 days. Here is the FDA-label pharmacokinetics for every GLP-1, what 'in your system' actually means, and what it means for surgery, pregnancy planning, and side-effect resolution.",
+    excerpt:
+      "Three thousand patients a month search 'how long does semaglutide stay in your system' or the equivalent question for tirzepatide. The honest answer comes straight from the FDA labels: semaglutide's elimination half-life is about 7 days, tirzepatide's is about 5 days, and the standard pharmacokinetic threshold for 'fully out of the body' is five half-lives — about 5 weeks for semaglutide and about 25 days for tirzepatide. Orforglipron, the new oral GLP-1, clears in about 6 days because its half-life is only 30 hours. This article walks through what 'in your system' actually means (half-life vs steady state vs full washout), the FDA-label pharmacokinetics for every approved GLP-1, why the long half-life is engineered by design, and the practical implications for pregnancy planning, surgery, and side-effect resolution.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
+    readMinutes: 12,
+    citations: 7,
+    tags: ["Pharmacokinetics", "Half-life", "Washout", "Patient question", "Safety"],
+  },
+  {
     slug: "where-to-buy-foundayo",
     title:
       "Where to Buy Foundayo (Orforglipron) in 2026: The Telehealth and Pharmacy Provider Directory",
