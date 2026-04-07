@@ -25,6 +25,7 @@ const footerColumns = [
   {
     heading: "Tools",
     links: [
+      { label: "GLP-1 Unit Converter", href: "/tools/glp1-unit-converter" },
       { label: "GLP-1 Dose Plotter", href: "/tools/glp1-dose-plotter" },
       { label: "Savings Calculator", href: "/savings-calculator" },
       { label: "Price Tracker", href: "/price-tracker" },

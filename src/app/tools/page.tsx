@@ -10,10 +10,17 @@ export const metadata: Metadata = {
 
 const TOOLS = [
   {
+    slug: "glp1-unit-converter",
+    title: "GLP-1 Unit ↔ mg Converter",
+    description:
+      "Convert prescribed milligrams of compounded semaglutide or tirzepatide to insulin syringe units (and back) at any vial concentration. Answers 'how many units is 2.5 mg of tirzepatide?' and every variation. FDA prescribing information and BD insulin syringe specifications cited.",
+    tag: "Dosage calculator",
+  },
+  {
     slug: "glp1-dose-plotter",
     title: "GLP-1 Dose & Concentration Plotter",
     description:
-      "Visualize how semaglutide, tirzepatide, and orforglipron build up in the body across the standard titration schedule. Sourced from FDA prescribing information and the published pharmacokinetic literature.",
+      "Visualize how semaglutide, tirzepatide, orforglipron, and retatrutide build up in the body across the standard titration schedule. Sourced from FDA prescribing information and the published pharmacokinetic literature.",
     tag: "Pharmacokinetics",
   },
   {

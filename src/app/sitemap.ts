@@ -71,6 +71,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Static tool / guide pages
     {
+      url: `${BASE_URL}/tools`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/tools/glp1-dose-plotter`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/tools/glp1-unit-converter`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.9, // huge low-KD search demand (~31k/mo)
+    },
+    {
+      url: `${BASE_URL}/tools/insurance-employer-checker`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/savings-calculator`,
       lastModified: now,
       changeFrequency: "monthly" as const,
