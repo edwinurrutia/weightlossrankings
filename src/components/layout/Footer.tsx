@@ -25,10 +25,12 @@ const footerColumns = [
   {
     heading: "Tools",
     links: [
+      { label: "GLP-1 Dose Plotter", href: "/tools/glp1-dose-plotter" },
       { label: "Savings Calculator", href: "/savings-calculator" },
       { label: "Price Tracker", href: "/price-tracker" },
       { label: "Insurance Checker", href: "/insurance-checker" },
       { label: "Dose Timeline", href: "/dose-timeline" },
+      { label: "All Tools", href: "/tools" },
     ],
   },
   {

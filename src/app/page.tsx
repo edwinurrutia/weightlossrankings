@@ -259,12 +259,20 @@ export default async function HomePage() {
 
       {/* ── Tools Banner ── */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <GradientCTACallout
-          heading="Free Tools to Save You Money"
-          description="Use our savings calculator to see what you could pay — then compare providers side by side to find the best deal."
-          ctaHref="/savings-calculator"
-          ctaText="Savings Calculator"
-        />
+        <div className="grid gap-6 md:grid-cols-2">
+          <GradientCTACallout
+            heading="Free Tools to Save You Money"
+            description="Use our savings calculator to see what you could pay — then compare providers side by side to find the best deal."
+            ctaHref="/savings-calculator"
+            ctaText="Savings Calculator"
+          />
+          <GradientCTACallout
+            heading="GLP-1 Dose Plotter (NEW)"
+            description="Interactive pharmacokinetic simulator showing how semaglutide, tirzepatide, and Foundayo (orforglipron) build up across the standard FDA titration schedule."
+            ctaHref="/tools/glp1-dose-plotter"
+            ctaText="Open Dose Plotter"
+          />
+        </div>
       </section>
 
       {/* ── Blog ── */}

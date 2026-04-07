@@ -290,21 +290,40 @@ export default function DosePlotter() {
             >
               No missed dose
             </button>
-            {allDoses.slice(0, 12).map((d, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setMissedDose(i)}
-                className={`rounded-md border px-3 py-1 text-xs font-semibold ${
-                  missedDose === i
-                    ? "border-amber-500 bg-amber-100 text-amber-900"
-                    : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
-                }`}
-              >
-                Dose {i + 1} ({d.doseMg} mg)
-              </button>
-            ))}
+            {/* Show only weekly doses (or every 7th for daily drugs) so the
+                button list stays manageable across all 24 weeks. */}
+            {allDoses
+              .filter((_, i) =>
+                drug.intervalHours === 168 ? true : i % 7 === 0,
+              )
+              .map((d, displayIdx) => {
+                // Map displayIdx back to the actual index in allDoses
+                const actualIdx =
+                  drug.intervalHours === 168 ? displayIdx : displayIdx * 7;
+                const wkLabel = Math.floor(
+                  (actualIdx * drug.intervalHours) / (7 * 24),
+                ) + 1;
+                return (
+                  <button
+                    key={actualIdx}
+                    type="button"
+                    onClick={() => setMissedDose(actualIdx)}
+                    className={`rounded-md border px-3 py-1 text-xs font-semibold ${
+                      missedDose === actualIdx
+                        ? "border-amber-500 bg-amber-100 text-amber-900"
+                        : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
+                    }`}
+                  >
+                    Wk {wkLabel} ({d.doseMg} mg)
+                  </button>
+                );
+              })}
           </div>
+          <p className="mt-3 text-xs text-slate-500">
+            {drug.intervalHours === 168
+              ? "Tap any week to skip that injection."
+              : "Tap any week to skip that day's tablet (showing one button per week for daily-dose drugs)."}
+          </p>
         </div>
       )}
 
