@@ -457,7 +457,7 @@ export default function DosePlotter() {
             <button
               type="button"
               onClick={() => setMissedDose(null)}
-              className={`rounded-md border px-3 py-1.5 text-xs font-semibold ${
+              className={`rounded-md border px-3 py-2 text-sm font-semibold min-h-[44px] ${
                 missedDose === null
                   ? "border-brand-violet bg-brand-violet text-white"
                   : "border-slate-300 bg-white text-brand-text-primary hover:border-brand-violet/40"
@@ -483,7 +483,7 @@ export default function DosePlotter() {
                       week: weekIdx + 1,
                     });
                   }}
-                  className={`rounded-md border px-3 py-1.5 text-xs font-semibold transition ${
+                  className={`rounded-md border px-3 py-2 text-sm font-semibold min-h-[44px] transition ${
                     missedDose === actualIdx
                       ? "border-brand-violet bg-brand-violet text-white"
                       : "border-slate-300 bg-white text-brand-text-primary hover:border-brand-violet/40"

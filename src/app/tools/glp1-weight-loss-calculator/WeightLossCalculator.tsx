@@ -170,13 +170,13 @@ export default function WeightLossCalculator() {
                 Wk {targetWeek}
               </div>
             </div>
-            <div className="mt-2 flex flex-wrap gap-1.5">
+            <div className="mt-2 flex flex-wrap gap-2">
               {[4, 12, 20, 28, 52, 68].map((w) => (
                 <button
                   key={w}
                   type="button"
                   onClick={() => setTargetWeek(w)}
-                  className="text-xs font-semibold rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
+                  className="text-sm font-semibold rounded-md border border-slate-200 bg-slate-50 px-3 py-2 min-h-[40px] text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
                 >
                   Wk {w}
                 </button>
@@ -221,16 +221,16 @@ export default function WeightLossCalculator() {
       </div>
 
       {/* ── Prediction output card ── */}
-      <div className="rounded-2xl border border-brand-violet/30 bg-brand-violet/5 p-8">
+      <div className="rounded-2xl border border-brand-violet/30 bg-brand-violet/5 p-6 sm:p-8">
         <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold">
           Predicted weight loss at week {targetWeek} on {trial.displayName}
         </p>
 
         <div className="mt-3 flex items-baseline gap-3 flex-wrap">
-          <p className="text-5xl font-bold text-brand-violet tabular-nums">
+          <p className="text-4xl sm:text-5xl font-bold text-brand-violet tabular-nums">
             −{formatNum(prediction.meanPct)}%
           </p>
-          <p className="text-2xl font-semibold text-brand-text-primary">
+          <p className="text-xl sm:text-2xl font-semibold text-brand-text-primary">
             ≈ {displayLoss(prediction.meanLossAbsolute)}
           </p>
         </div>

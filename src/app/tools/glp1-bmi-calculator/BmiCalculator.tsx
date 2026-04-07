@@ -192,16 +192,16 @@ export default function BmiCalculator() {
       </div>
 
       {/* ── Result card ── */}
-      <div className="rounded-2xl border border-brand-violet/30 bg-brand-violet/5 p-8">
+      <div className="rounded-2xl border border-brand-violet/30 bg-brand-violet/5 p-6 sm:p-8">
         <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold">
           Your BMI
         </p>
         <div className="mt-2 flex items-baseline gap-3 flex-wrap">
-          <p className="text-6xl font-bold text-brand-violet tabular-nums">
+          <p className="text-5xl sm:text-6xl font-bold text-brand-violet tabular-nums">
             {formatBmi(result.bmi)}
           </p>
           <p
-            className="text-xl font-semibold px-3 py-1 rounded-full text-white"
+            className="text-base sm:text-xl font-semibold px-3 py-1 rounded-full text-white"
             style={{ background: CATEGORY_COLORS[result.category] }}
           >
             {result.categoryLabel}

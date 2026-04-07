@@ -205,7 +205,7 @@ export default function UnitConverter() {
                     key={d}
                     type="button"
                     onClick={() => setMgInput(String(d))}
-                    className="text-xs font-semibold rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
+                    className="text-sm font-semibold rounded-md border border-slate-200 bg-slate-50 px-3 py-2 min-h-[40px] text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
                   >
                     {d} mg
                   </button>
@@ -238,7 +238,7 @@ export default function UnitConverter() {
                     into a U-100 insulin syringe
                   </p>
                   {mgToUnitsResult > 100 && (
-                    <p className="mt-3 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+                    <p className="mt-3 rounded-lg border border-brand-violet/30 bg-brand-violet/5 p-3 text-sm text-brand-text-primary">
                       ⚠ This dose exceeds the 100-unit capacity of a standard
                       U-100 insulin syringe. You will need to either split
                       the dose into two injections or use a higher-concentration
@@ -286,7 +286,7 @@ export default function UnitConverter() {
                     key={u}
                     type="button"
                     onClick={() => setUnitsInput(String(u))}
-                    className="text-xs font-semibold rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
+                    className="text-sm font-semibold rounded-md border border-slate-200 bg-slate-50 px-3 py-2 min-h-[40px] text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
                   >
                     {u}u
                   </button>
@@ -364,7 +364,7 @@ export default function UnitConverter() {
                       key={v}
                       type="button"
                       onClick={() => setVialMgInput(String(v))}
-                      className="text-xs font-semibold rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
+                      className="text-sm font-semibold rounded-md border border-slate-200 bg-slate-50 px-3 py-2 min-h-[40px] text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
                     >
                       {v} mg
                     </button>
@@ -400,7 +400,7 @@ export default function UnitConverter() {
                       key={v}
                       type="button"
                       onClick={() => setTargetConcInput(String(v))}
-                      className="text-xs font-semibold rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
+                      className="text-sm font-semibold rounded-md border border-slate-200 bg-slate-50 px-3 py-2 min-h-[40px] text-brand-text-secondary hover:border-brand-violet/40 hover:text-brand-violet transition"
                     >
                       {v} mg/mL
                     </button>
@@ -501,7 +501,7 @@ export default function UnitConverter() {
                     >
                       {p.units} units
                       {p.units > 100 && (
-                        <span className="ml-1 text-xs text-amber-700">
+                        <span className="ml-1 text-xs text-brand-blue">
                           (over 100u)
                         </span>
                       )}

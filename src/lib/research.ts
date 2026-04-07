@@ -226,6 +226,48 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Adolescents", "PubMed sourced"],
   },
   {
+    slug: "glp1-insurance-coverage-2026-medicare-medicaid-commercial",
+    title:
+      "GLP-1 Insurance Coverage 2026: Medicare, Medicaid, Commercial, Tricare, VA, and FEHB Explained",
+    description:
+      "What Medicare Part D, Medicaid, commercial insurance, Tricare, the VA, and FEHB actually covered for Wegovy, Zepbound, Ozempic, and Foundayo in 2026. Verified against CMS rules, the Medicare GLP-1 Bridge program, KFF/Mercer surveys, and the Trump administration's November 2025 deal with Novo Nordisk and Eli Lilly. With prior auth criteria, BMI thresholds, and what to ask your benefits administrator.",
+    excerpt:
+      "Insurance coverage for GLP-1 weight loss drugs is the most volatile category in employer pharmacy benefits. The 2025-2026 landscape changed dramatically: the original CMS proposed rule allowing Wegovy under Part D was rejected in April 2025, then reversed by a November 2025 Trump administration deal that created a Medicare GLP-1 Bridge program (July-December 2026) and the BALANCE permanent model starting 2027. Medicaid coverage shrank from 16 states in October 2025 to 13 in January 2026 after California and Pennsylvania ended their programs. Commercial coverage expanded — 49% of large employers covered GLP-1s in 2025 per Mercer. Tricare changed too, dropping coverage for retirees on Medicare. Here's the verified state of coverage across every major US payer category, with prior auth criteria and the questions to ask your benefits administrator.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-07",
+    readMinutes: 14,
+    citations: 8,
+    tags: ["Insurance", "Medicare", "Medicaid", "Coverage"],
+  },
+  {
+    slug: "glp1-pregnancy-pcos-fertility-women-health",
+    title:
+      "GLP-1s and Pregnancy, PCOS, and Fertility: What the FDA Labels and the Trial Evidence Actually Say",
+    description:
+      "Wegovy, Zepbound, Ozempic, and Foundayo are all contraindicated in pregnancy and require discontinuation 2 months before planned conception. We walk through the FDA prescribing information for each drug, the published PCOS pilot trials (Salamun, Jensterle), the contraception interaction during dose escalation, and the emerging 'GLP-1 babies' fertility restoration phenomenon — with primary source citations throughout.",
+    excerpt:
+      "GLP-1 weight loss drugs are contraindicated in pregnancy and the FDA labels recommend discontinuation at least 2 months before planned conception. But the women's health story is more nuanced than that headline: GLP-1-induced weight loss in PCOS patients consistently improves menstrual regularity, reduces androgen levels, and the most-cited fertility study (Salamun et al., European Journal of Endocrinology 2018, PMID 29703793) showed that pre-conception liraglutide therapy improved IVF pregnancy rates in obese PCOS women beyond what metformin alone achieved. This article walks through the verified FDA labels, the published PCOS evidence, the contraception interaction during dose escalation that the labels specifically warn about, and how to think about GLP-1 use through the family-planning timeline.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 13,
+    citations: 7,
+    tags: ["Pregnancy", "PCOS", "Fertility", "Women's health"],
+  },
+  {
+    slug: "glp1-side-effect-questions-answered",
+    title:
+      "GLP-1 Side Effect Q&A: Headache, Sulfur Burps, Brain Fog, Mood, Acne, and 12 Other Patient Questions",
+    description:
+      "Specific patient-reported GLP-1 side effects with verified rates from STEP-1, SURMOUNT-1, and the FDA prescribing information adverse reactions tables. Includes the headache rate (14.2% sema vs 10% placebo), the sulfur-burp mechanism, the FDA suicidal ideation review conclusion, and the emerging brain fog FDA pharmacovigilance signal.",
+    excerpt:
+      "Our broader side effects investigation covered the headline GI tolerability numbers. This article answers the specific Q&A-style queries patients search for: 'does semaglutide cause headaches' (14.2% in STEP-1 vs 10% placebo), 'does tirzepatide cause sulfur burps' (yes — slowed gastric emptying changes the bacterial fermentation profile), 'does semaglutide cause depression' (no signal in 2024 EMA/FDA review of RCTs, but a separate observational signal exists), 'does GLP-1 cause brain fog' (an emerging FDA pharmacovigilance signal as of 2025), and 13 other specific symptom questions. Every rate is sourced from the STEP-1 and SURMOUNT-1 NEJM publications and the Wegovy and Zepbound FDA prescribing information.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    readMinutes: 12,
+    citations: 7,
+    tags: ["Side effects", "FAQ", "Patient guide"],
+  },
+  {
     slug: "wegovy-ozempic-zepbound-mounjaro-brand-name-cheat-sheet",
     title:
       "Wegovy vs Ozempic vs Zepbound vs Mounjaro: The GLP-1 Brand Name Cheat Sheet",

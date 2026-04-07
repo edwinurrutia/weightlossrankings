@@ -58,7 +58,7 @@ export default function SavingsCalculator() {
                 baseline: e.target.value,
               });
             }}
-            className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-brand-text-primary bg-white focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/30"
+            className="w-full rounded-lg border border-slate-300 px-3 py-3 text-base font-semibold text-brand-text-primary bg-white focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/30"
           >
             {ACCESS_OPTIONS.map((o) => (
               <option key={o.id} value={o.id}>
@@ -107,7 +107,7 @@ export default function SavingsCalculator() {
                 alternative: e.target.value,
               });
             }}
-            className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-brand-text-primary bg-white focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/30"
+            className="w-full rounded-lg border border-slate-300 px-3 py-3 text-base font-semibold text-brand-text-primary bg-white focus:border-brand-violet focus:outline-none focus:ring-2 focus:ring-brand-violet/30"
           >
             {ACCESS_OPTIONS.map((o) => (
               <option key={o.id} value={o.id}>
@@ -145,7 +145,7 @@ export default function SavingsCalculator() {
 
       {/* ── Result card ── */}
       <div
-        className={`rounded-2xl border p-8 ${
+        className={`rounded-2xl border p-6 sm:p-8 ${
           isCheaper
             ? "border-brand-violet/30 bg-brand-violet/5"
             : isMoreExpensive
@@ -162,10 +162,10 @@ export default function SavingsCalculator() {
         </p>
 
         <div className="mt-3 flex items-baseline gap-3 flex-wrap">
-          <p className="text-5xl font-bold text-brand-violet tabular-nums">
+          <p className="text-4xl sm:text-5xl font-bold text-brand-violet tabular-nums">
             {fmt(Math.abs(comparison.monthlySavings))}
           </p>
-          <p className="text-xl font-semibold text-brand-text-secondary">
+          <p className="text-lg sm:text-xl font-semibold text-brand-text-secondary">
             per month
           </p>
         </div>
