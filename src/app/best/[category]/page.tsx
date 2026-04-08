@@ -323,9 +323,18 @@ export default async function RankingsPage({
 
   const top5 = sorted.slice(0, 5);
 
+  // ItemList enriched with name, description, numberOfItems, and
+  // explicit ordering so Google's comparison rich result has all
+  // the metadata it needs to render. Caught in the 2026-04-08
+  // schema audit follow-up.
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
+    name: `Best ${label}`,
+    description: `Ranked list of ${label.toLowerCase()} based on Weight Loss Rankings' six-dimension scoring methodology (value, clinical effectiveness, user experience, safety, accessibility, support).`,
+    url: `https://weightlossrankings.org/best/${category}`,
+    itemListOrder: "https://schema.org/ItemListOrderDescending",
+    numberOfItems: sorted.length,
     itemListElement: sorted.map((provider, index) => ({
       "@type": "ListItem",
       position: index + 1,
