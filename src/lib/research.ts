@@ -984,6 +984,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 7,
     tags: ["Efectos secundarios", "Español", "STEP-1", "SURMOUNT-1", "Preguntas frecuentes"],
   },
+  {
+    slug: "berberine-vs-glp1-evidence-review",
+    title:
+      "Berberine vs GLP-1s: What the Evidence Actually Shows About \"Nature's Ozempic\"",
+    description:
+      "Berberine has been called \"nature's Ozempic\" on TikTok and in the supplement press. The peer-reviewed evidence is far narrower: a 2.07 kg average weight loss in a 12-RCT meta-analysis (Asbaghi 2020) versus 14.9% on semaglutide (STEP-1) and 20.9% on tirzepatide (SURMOUNT-1) — and an oral bioavailability under 1%. Here is the verified primary-source evidence.",
+    excerpt:
+      "TikTok and the supplement industry have spent two years marketing berberine as \"nature's Ozempic.\" The peer-reviewed evidence tells a much narrower story. Berberine does have a real but modest A1c effect in small T2D trials (Yin 2008) and a real but modest weight effect in meta-analysis (Asbaghi 2020 — mean difference −2.07 kg over ~12 weeks across 12 RCTs). It has never been compared head-to-head with semaglutide or tirzepatide in any peer-reviewed RCT. Its oral bioavailability is under 1% in the only published pharmacokinetic study. And the magnitude gap to GLP-1s is approximately 7-10×. Here is the verified evidence map, anchored to PubMed primary sources.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
+    readMinutes: 12,
+    citations: 11,
+    tags: ["Berberine", "Supplements", "PubMed sourced", "Myth-bust"],
+  },
 ];
 
 export function getResearchArticleBySlug(
