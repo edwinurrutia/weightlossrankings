@@ -544,13 +544,13 @@
       {
         "dose": "Starting",
         "form": "compounded",
-        "monthly_cost": 299,
+        "monthly_cost": 58,
         "drug": "semaglutide"
       },
       {
         "dose": "Starting",
         "form": "compounded",
-        "monthly_cost": 399,
+        "monthly_cost": 99,
         "drug": "tirzepatide"
       }
     ],
@@ -2312,16 +2312,10 @@
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Starting",
+        "dose": "Starting ($299 medication + $49 membership)",
         "form": "compounded",
-        "monthly_cost": 30,
+        "monthly_cost": 348,
         "drug": "semaglutide"
-      },
-      {
-        "dose": "Starting",
-        "form": "compounded",
-        "monthly_cost": 30,
-        "drug": "tirzepatide"
       }
     ],
     "scores": {
@@ -3037,7 +3031,7 @@
       {
         "dose": "Injectable",
         "form": "compounded",
-        "monthly_cost": 279,
+        "monthly_cost": 150,
         "drug": "semaglutide"
       },
       {

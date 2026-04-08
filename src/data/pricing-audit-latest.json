@@ -1,5 +1,5 @@
 {
-  "runDate": "2026-04-08T15:56:05.682Z",
+  "runDate": "2026-04-08T16:11:58.407Z",
   "providersAudited": 74,
   "results": [
     {
@@ -31,8 +31,8 @@
       ],
       "deltaUsd": 59,
       "deltaPct": 59.59595959595959,
-      "severity": "HIGH",
-      "evidence": "source=per-month-pattern-glp1-context, 7 candidates, mode/median=$158"
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 7 candidates, mode/median=$158 | downgraded by verification 2026-04-08 (high)"
     },
     {
       "slug": "amberhealth",
@@ -51,8 +51,8 @@
       ],
       "deltaUsd": 45,
       "deltaPct": 45,
-      "severity": "HIGH",
-      "evidence": "source=per-month-pattern-glp1-context, 7 candidates, mode/median=$145"
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 7 candidates, mode/median=$145 | downgraded by verification 2026-04-08 (high)"
     },
     {
       "slug": "amble",
@@ -65,8 +65,8 @@
       ],
       "deltaUsd": -44,
       "deltaPct": -24.581005586592177,
-      "severity": "HIGH",
-      "evidence": "source=per-month-pattern-glp1-context, 1 candidates, mode/median=$135"
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 1 candidates, mode/median=$135 | downgraded by verification 2026-04-08 (high)"
     },
     {
       "slug": "beyondmd",
@@ -84,17 +84,17 @@
       "slug": "bliv",
       "name": "Bliv",
       "url": "https://joinbliv.com",
-      "datasetPrice": 299,
+      "datasetPrice": 58,
       "extractedPrice": 99,
       "candidates": [
         58,
         99,
         116
       ],
-      "deltaUsd": -200,
-      "deltaPct": -66.88963210702342,
-      "severity": "HIGH",
-      "evidence": "source=per-month-pattern-glp1-context, 3 candidates, mode/median=$99"
+      "deltaUsd": 41,
+      "deltaPct": 70.6896551724138,
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 3 candidates, mode/median=$99 | downgraded by verification 2026-04-08 (high)"
     },
     {
       "slug": "bmimd",
@@ -238,8 +238,8 @@
       ],
       "deltaUsd": 521,
       "deltaPct": 403.8759689922481,
-      "severity": "HIGH",
-      "evidence": "source=per-month-pattern-glp1-context, 4 candidates, mode/median=$650"
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 4 candidates, mode/median=$650 | downgraded by verification 2026-04-08 (medium)"
     },
     {
       "slug": "fridays",
@@ -460,15 +460,15 @@
       "slug": "lemonaid-health",
       "name": "Lemonaid Health",
       "url": "https://www.lemonaidhealth.com",
-      "datasetPrice": 30,
+      "datasetPrice": 348,
       "extractedPrice": 129,
       "candidates": [
         129
       ],
-      "deltaUsd": 99,
-      "deltaPct": 330,
-      "severity": "HIGH",
-      "evidence": "source=per-month-pattern-glp1-context, 1 candidates, mode/median=$129"
+      "deltaUsd": -219,
+      "deltaPct": -62.93103448275862,
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 1 candidates, mode/median=$129 | downgraded by verification 2026-04-08 (high)"
     },
     {
       "slug": "lifemd",
@@ -578,8 +578,8 @@
       ],
       "deltaUsd": -99,
       "deltaPct": -71.73913043478261,
-      "severity": "HIGH",
-      "evidence": "source=per-month-pattern-glp1-context, 8 candidates, mode/median=$39"
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 8 candidates, mode/median=$39 | downgraded by verification 2026-04-08 (high)"
     },
     {
       "slug": "mojoon",
@@ -664,16 +664,16 @@
       "slug": "onlinesemaglutideorg",
       "name": "OnlineSemaglutide.org",
       "url": "https://onlinesemaglutide.org",
-      "datasetPrice": 279,
+      "datasetPrice": 150,
       "extractedPrice": 150,
       "candidates": [
         150,
         241,
         150
       ],
-      "deltaUsd": -129,
-      "deltaPct": -46.236559139784944,
-      "severity": "HIGH",
+      "deltaUsd": 0,
+      "deltaPct": 0,
+      "severity": "OK",
       "evidence": "source=per-month-pattern-glp1-context, 3 candidates, mode/median=$150"
     },
     {
@@ -799,17 +799,14 @@
       "name": "Sesame",
       "url": "https://sesamecare.com",
       "datasetPrice": 349,
-      "extractedPrice": 59,
+      "extractedPrice": 149,
       "candidates": [
-        59,
-        113,
-        59,
         149
       ],
-      "deltaUsd": -290,
-      "deltaPct": -83.0945558739255,
+      "deltaUsd": -200,
+      "deltaPct": -57.306590257879655,
       "severity": "OK",
-      "evidence": "source=per-month-pattern-glp1-context, 4 candidates, mode/median=$59 | downgraded by verification 2026-04-08 (high)"
+      "evidence": "source=per-month-pattern-glp1-context, 1 candidates, mode/median=$149 | downgraded by verification 2026-04-08 (high)"
     },
     {
       "slug": "shedrx",
@@ -1179,9 +1176,9 @@
     }
   ],
   "summary": {
-    "high": 13,
+    "high": 5,
     "medium": 8,
-    "ok": 11,
+    "ok": 19,
     "unknown": 42
   }
 }
