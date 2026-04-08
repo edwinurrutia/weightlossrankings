@@ -1029,6 +1029,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 13,
     tags: ["Antidepressants", "Wellbutrin", "Drug interactions", "PubMed sourced"],
   },
+  {
+    slug: "sglt2-inhibitors-vs-glp1-jardiance-farxiga",
+    title:
+      "Jardiance, Farxiga, and SGLT2 Inhibitors vs GLP-1s: Weight, Cardio-Renal Benefits, and Where Each Fits in 2026",
+    description:
+      "SGLT2 inhibitors (Jardiance, Farxiga, Invokana) and GLP-1 receptor agonists (Ozempic, Wegovy, Mounjaro, Zepbound, Foundayo) are the two diabetes drug classes with proven cardiovascular and kidney outcome benefits. We walk through EMPA-REG OUTCOME, EMPEROR-Reduced/Preserved, DECLARE-TIMI 58, DAPA-HF, DAPA-CKD, DELIVER, CANVAS, CREDENCE, and the GLP-1 trials side by side: weight loss magnitudes, MACE/HF/kidney HRs, and where ADA Standards of Care 2025 puts each class.",
+    excerpt:
+      "SGLT2 inhibitors and GLP-1 receptor agonists are the two drug classes that earned cardiovascular and kidney indications in T2D over the last decade. Patients (and clinicians) increasingly ask which class to use, when, and whether to combine. The honest answer is that they target different problems with different magnitudes. SGLT2 inhibitors produce ~2-3 kg of weight loss via urinary glucose excretion, but their landmark trials are about heart failure (DAPA-HF, EMPEROR-Reduced/Preserved, DELIVER) and chronic kidney disease (DAPA-CKD, CREDENCE). GLP-1s produce ~14-21% weight loss (STEP-1, SURMOUNT-1, ATTAIN-1) and have parallel cardio-renal indications via SUSTAIN-6, LEADER, SELECT, and FLOW. The two classes are now routinely combined in T2D + obesity. Here is the verified evidence.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
+    readMinutes: 16,
+    citations: 16,
+    tags: ["SGLT2", "Jardiance", "Farxiga", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
