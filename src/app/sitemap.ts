@@ -443,6 +443,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "guia-marcas-wegovy-ozempic-zepbound-mounjaro",
     "efectos-secundarios-glp1-preguntas-respuestas",
     "wegovy-vs-ozempic-diferencias",
+    "como-inyectar-semaglutida-guia-paso-a-paso",
   ]);
 
   // Dynamic: /research/[slug] — feed lastUpdated when present, else

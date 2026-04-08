@@ -912,6 +912,31 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Alcohol use disorder", "PubMed sourced"],
   },
   {
+    slug: "como-inyectar-semaglutida-guia-paso-a-paso",
+    title:
+      "Cómo inyectar semaglutida / tirzepatida paso a paso (Wegovy, Ozempic, Zepbound, Mounjaro)",
+    description:
+      "Guía en español paso a paso para la técnica de inyección subcutánea de agonistas del receptor de GLP-1. Incluye los tiempos exactos de retención de cada etiqueta aprobada por la FDA (Wegovy 5-10 segundos, Zepbound 10 segundos, Ozempic 6 segundos), los tres sitios aprobados (abdomen, muslo, brazo superior), la verificación de flujo de plumas multidosis, errores comunes, y las ventanas para recuperar dosis olvidadas (Wegovy 48 horas, Ozempic 5 días, Zepbound/Mounjaro 96 horas). Técnica verificada contra las etiquetas FDA de Wegovy, Ozempic, Zepbound y Mounjaro (2025) y las recomendaciones internacionales de Frid 2016 (PMID 27594187).",
+    excerpt:
+      "La mayoría de los pacientes que comienzan un agonista del receptor de GLP-1 nunca reciben una demostración práctica completa. Esta es la guía escrita paso a paso para las cuatro marcas aprobadas por la FDA — Wegovy, Ozempic, Zepbound y Mounjaro — con los tiempos exactos que cada etiqueta especifica, las tres reglas universales (subcutánea no intramuscular, rotar sitios, técnica limpia), los tres sitios aprobados por la FDA (abdomen, muslo, brazo superior), la técnica específica de plumas precargadas vs plumas multidosis, los errores más comunes (levantar la pluma demasiado pronto es la causa más frecuente de dosis parciales), cómo se ve una reacción normal vs una preocupante, y las ventanas exactas para recuperar una dosis olvidada (que son distintas para cada medicamento). Incluye HowToSchema para que Google muestre los pasos numerados directamente en los resultados de búsqueda.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 12,
+    citations: 5,
+    tags: [
+      "Técnica de inyección",
+      "Semaglutida",
+      "Tirzepatida",
+      "Wegovy",
+      "Ozempic",
+      "Zepbound",
+      "Mounjaro",
+      "Español",
+      "Guía paso a paso",
+    ],
+  },
+  {
     slug: "wegovy-vs-ozempic-diferencias",
     title:
       "Wegovy vs Ozempic: diferencias, indicaciones y costo en 2026",

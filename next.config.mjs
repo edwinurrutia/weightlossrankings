@@ -69,6 +69,11 @@ const nextConfig = {
         destination: "/es/research/wegovy-vs-ozempic-diferencias",
         permanent: true,
       },
+      {
+        source: "/research/como-inyectar-semaglutida-guia-paso-a-paso",
+        destination: "/es/research/como-inyectar-semaglutida-guia-paso-a-paso",
+        permanent: true,
+      },
       // Year-suffixed URLs are an SEO foot-gun: when 2027 rolls
       // around, every backlink to a "2026" URL turns stale and we'd
       // have to either keep the URL fresh (confusing) or 301 to a
