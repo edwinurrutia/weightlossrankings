@@ -625,12 +625,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch live pull",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://bmimd.com"
       ],
-      "confidence": "low",
-      "notes": "Live-verified 2026-04-07: bmimd.com returns 403 (Cloudflare blocked). Unable to verify GLP-1 offering or state availability via WebFetch. Re-verify via Chrome MCP."
+      "confidence": "high",
+      "notes": "Chrome MCP verified 2026-04-07 (bmimd.com): compounded semaglutide $149/mo, compounded tirzepatide $249/mo, plus lipotropic MIC+B12, metformin ER, bupropion/naltrexone, sermorelin. FAQ explicitly states bmiMD 'connects patients to licensed healthcare professionals in all 50 states.' 80,000+ members."
     }
   },
   {
@@ -727,12 +727,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch live pull",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://brellohealth.com"
       ],
       "confidence": "low",
-      "notes": "Live-verified 2026-04-07: brellohealth.com shows a tirzepatide bottle image but no explicit confirmation of GLP-1 prescribing service. Platform description is a marketplace connecting users with providers. Unable to confirm direct GLP-1 prescribing or state availability from public pages \u2014 needs deeper verification."
+      "notes": "Chrome MCP attempted 2026-04-07 (brellohealth.com): page is canvas/JS-heavy, no text content extractable. Title 'Brello Health | Connect with Healthcare Providers Online' suggests generic telehealth marketplace, not a GLP-1-specific provider. GLP-1 offering cannot be independently confirmed \u2014 recommend removal from provider database if still unverified on next pass."
     }
   },
   {
@@ -1369,12 +1369,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://www.g-plans.com"
       ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: g-plans.com (West Hollywood, CA) is primarily a diet/meal plan app \u2014 WebFetch did not confirm any GLP-1 prescribing service. May not belong in provider database at all."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (g-plans.com): G-Plans (West Hollywood, CA) prescribes Ozempic, Zepbound, and other GLP-1/GLP-1+GIP medications plus metabolic-type-matched nutrition plans. LegitScript-certified, licensed US clinicians and US pharmacies. State list not publicly disclosed."
     }
   },
   {
@@ -1428,12 +1428,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://getreliefrx.com"
       ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: getreliefrx.com returned ECONNREFUSED on WebFetch \u2014 domain may be offline or misconfigured."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (getreliefrx.com): homepage title 'GLP-1/GIP Weight Management Online | Tirzepatide | GetReliefRX' confirms tirzepatide weight management program. Patient intake gated behind health assessment \u2014 state list not publicly disclosed."
     }
   },
   {
@@ -1520,12 +1520,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://goodlifemeds.com"
       ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: goodlifemeds.com returned 404 on WebFetch \u2014 URL may be wrong."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (goodlifemeds.com): Good Life Meds offers compounded semaglutide, compounded tirzepatide, oral tirzepatide, plus brand-name Wegovy (injectable + pill), Ozempic, Zepbound, Mounjaro, and Microdose GLP-1. Also sexual health, hair, daily wellness. State list not publicly disclosed."
     }
   },
   {
@@ -1562,12 +1562,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://www.goodrx.com/care"
       ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: goodrx.com/care returned 403 on WebFetch (bot-blocked). Re-verify via Chrome MCP. GoodRx Care is known to operate as a telehealth marketplace but GLP-1 weight loss coverage needs separate confirmation."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (goodrx.com/care): GoodRx Care offers 'FDA-approved weight-loss meds' with 'GLP-1 plans without the hoopla.' Online visits $39-$70 (or $19 with Gold membership). FAQ link 'Where is GoodRx Care available?' \u2014 state list not publicly itemized."
     }
   },
   {
@@ -2517,12 +2517,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://joinlivv.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. CONFIRMED Livv at joinlivv.com IS a GLP-1 weight loss telehealth provider (\"Livv Telehealth | GLP-1 Weight Loss & Specialized Care\"). Note: livv.com (without \"join\") is an unrelated Las Vegas luxury real estate developer \u2014 easy confusion. Livv prescribes GLP-1 weight loss treatments via US-licensed providers and compounding pharmacies. State list NOT publicly published \u2014 needs eligibility check."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (joinlivv.com): Livv Telehealth offers personalized GLP-1 weight loss plus longevity, hormone, and sexual health protocols. US-licensed providers, US-licensed FDA-regulated compounding pharmacies. Three flat-price plans, all-in pricing. State list not publicly disclosed."
     }
   },
   {
@@ -2801,12 +2801,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://mojoon.com"
       ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: mojoon.com content returned only CSS/JS and a Chinese-language note describing it as a Chinese-language online consultation platform ('\u7f8e\u56fd\u7b2c\u4e00\u7684\u4e2d\u6587\u5728\u7ebf\u95ee\u8bca\u5e73\u53f0'). Cannot confirm English-language GLP-1 service or US state availability."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (mojoon.com): Chinese-language telehealth platform serving Chinese-speaking US residents. Prescribes semaglutide injection ($350+) and oral semaglutide ($400+). LegitScript-certified. 48-state footprint (excluded: New Mexico, Mississippi). Bilingual service limited to Chinese speakers \u2014 not a mainstream English-language option."
     }
   },
   {
@@ -2843,12 +2843,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://www.noom.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Noom homepage references \"high-quality GLP-1 meds\" alongside its psychology-based weight loss program. Noom Med (separate slug noom-med, /noom.com/med) is the actual prescribing program. State list NOT publicly published."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (noom.com/med): Noom Med prescribes Wegovy, Zepbound, Ozempic, Mounjaro, Wegovy oral pill, metformin, plus compounded Microdose GLP-1 (starting $99) and brand-name access (starting $69 + medication cost). Clinical plans paired with Noom behavior-change app. State list not publicly disclosed."
     }
   },
   {
@@ -3560,12 +3560,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch live pull",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://www.reflexmd.com"
       ],
-      "confidence": "low",
-      "notes": "Live-verified 2026-04-07: reflexmd.com homepage is JS-rendered and returns only tracking pixel / embeddables code on WebFetch. Cannot verify GLP-1 offering or state availability without browser rendering. Re-verify via Chrome MCP or direct intake flow."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (reflexmd.com): homepage title 'Semaglutide & GLP-1: Online Weight Loss Solution' confirms GLP-1 service. About page confirms telehealth platform with licensed providers. Specific state list not disclosed publicly \u2014 requires signup intake."
     }
   },
   {
@@ -3623,48 +3623,6 @@
       ],
       "confidence": "medium",
       "notes": "Live-verified 2026-04-07: Remedy Meds offers compounded semaglutide and tirzepatide + microdose plans. Site states coverage in '49 states' with 405 licensed providers. Specific excluded state not listed on homepage \u2014 requires direct contact to confirm exact coverage."
-    }
-  },
-  {
-    "_id": "rnk-health",
-    "name": "RNK Health",
-    "slug": "rnk-health",
-    "description": "Telehealth wellness clinic offering GLP-1 weight management.",
-    "category": "GLP-1 Provider",
-    "pricing": [],
-    "scores": {
-      "value": 6.5,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
-    },
-    "features": [
-      "Semaglutide",
-      "Tirzepatide"
-    ],
-    "states_available": [],
-    "affiliate_url": "https://rnkhealth.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Both semaglutide and tirzepatide available"
-    ],
-    "cons": [
-      "Pricing not publicly disclosed"
-    ],
-    "best_for": "mainstream telehealth GLP-1 access",
-    "is_featured": false,
-    "external_reviews": {},
-    "verification": {
-      "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
-      "source_urls": [
-        "https://rnkhealth.com"
-      ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: rnkhealth.com redirects to rnkhealthmeds.com which has expired SSL certificate. Unable to verify from WebFetch. Re-verify via Chrome MCP."
     }
   },
   {
@@ -3762,12 +3720,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch live pull",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://sesamecare.com"
       ],
-      "confidence": "low",
-      "notes": "Live-verified 2026-04-07: Sesame Care offers weight loss bundle service (confirmed via page config). Specific GLP-1 drug offerings and state list not disclosed on weight-loss page \u2014 Sesame operates as a marketplace where individual providers set their own state coverage. Cannot verify specific state availability without intake flow."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (sesamecare.com/service/online-weight-loss-program): Sesame Care marketplace connects patients with independent providers who prescribe semaglutide (Ozempic/Wegovy/Rybelsus), tirzepatide (Zepbound/Mounjaro), and liraglutide (Saxenda). State availability depends on individual provider licensure."
     }
   },
   {
@@ -3885,12 +3843,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://www.skinnyrx.com"
       ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: skinnyrx.com serves only tracking/analytics code on WebFetch (no crawlable marketing content). Cannot verify GLP-1 offering or state list without browser rendering. Re-verify via Chrome MCP."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (skinnyrx.com): homepage title 'SkinnyRx: GLP-1 Weight Loss Telemedicine' confirms GLP-1 weight loss service. Page content is JS-rendered / heavy on tracking, specific drug options and state list require intake to see."
     }
   },
   {
@@ -4479,12 +4437,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://www.walgreens.com/topic/virtual-healthcare/weight-loss.jsp"
       ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: walgreens.com/topic/virtual-healthcare/weight-loss.jsp returned 403 (bot-blocked). Walgreens does operate a virtual weight management clinic but GLP-1 specifics need Chrome MCP verification."
+      "confidence": "high",
+      "notes": "Chrome MCP verified 2026-04-07 (walgreens.com/topic/virtual-healthcare/weight-loss.jsp): Walgreens Weight Management prescribes Wegovy (injectable + oral pill), Ozempic, Zepbound, Saxenda via $49 video visits with Walgreens-affiliated medical practices. Explicit 28-state footprint in page disclaimer: AZ, CA, CO, CT, FL, GA, IL, IN, KS, KY, MA, MD, MI, MN, MO, NC, NJ, NV, NY, OH, OK, PA, SC, TN, TX, VA, WA, WI."
     }
   },
   {
@@ -5072,74 +5030,6 @@
     }
   },
   {
-    "_id": "amazing-meds",
-    "name": "Amazing Meds",
-    "slug": "amazing-meds",
-    "description": "Amazing Meds is a Colorado Springs-based telehealth and wellness clinic offering compounded semaglutide, tirzepatide, and \u2014 uniquely \u2014 compounded retatrutide alongside HRT and peptide therapy. Board-certified D.O. medical director, free consultations, and limited insurance acceptance (Cigna, BCBS). Notable for being one of the very few US clinics openly prescribing compounded retatrutide while it is still in Phase 3 trials.",
-    "category": "GLP-1 Provider",
-    "pricing": [
-      {
-        "dose": "0.25mg",
-        "form": "compounded",
-        "drug": "semaglutide",
-        "monthly_cost": 199
-      },
-      {
-        "dose": "1mg",
-        "form": "compounded",
-        "drug": "semaglutide",
-        "monthly_cost": 299
-      },
-      {
-        "dose": "2.5mg",
-        "form": "compounded",
-        "drug": "tirzepatide",
-        "monthly_cost": 349
-      }
-    ],
-    "scores": {
-      "value": 7.5,
-      "effectiveness": 8,
-      "ux": 7.5,
-      "trust": 6.5,
-      "accessibility": 7,
-      "support": 8
-    },
-    "features": [
-      "Compounded",
-      "Semaglutide",
-      "Tirzepatide",
-      "Retatrutide",
-      "Free consultation",
-      "Some insurance"
-    ],
-    "states_available": [],
-    "affiliate_url": "https://amazing-meds.com",
-    "affiliate_network": "direct",
-    "fda_warnings": [],
-    "pros": [
-      "One of the very few US clinics offering compounded retatrutide",
-      "Board-certified D.O. medical director",
-      "Limited insurance acceptance (Cigna, BCBS)",
-      "Free consultations"
-    ],
-    "cons": [
-      "Compounded retatrutide is regulatorily ambiguous (Phase 3 investigational drug)",
-      "Lower trust score because retatrutide is not FDA-approved and lacks the safety dataset of approved GLP-1s"
-    ],
-    "best_for": "patients seeking compounded retatrutide access (with eyes open about regulatory status)",
-    "is_featured": false,
-    "verification": {
-      "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
-      "source_urls": [
-        "https://amazing-meds.com"
-      ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: amazing-meds.com WebFetch returned CSS/tech markup only \u2014 tagged as 'Online HRT and Peptide Therapy Clinic.' Cannot confirm GLP-1 weight loss service specifically vs peptide therapy."
-    }
-  },
-  {
     "_id": "hydramed",
     "name": "HydraMed",
     "slug": "hydramed",
@@ -5282,12 +5172,12 @@
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://emergeweight.com"
       ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: emergeweight.com WebFetch returned only HTML/CSS structure \u2014 no substantive content extractable. Cannot verify GLP-1 service or state availability."
+      "confidence": "medium",
+      "notes": "Chrome MCP verified 2026-04-07 (emergeweight.com): homepage title 'Emerge Weight Loss. Trusted Leader in GLP-1 Compounded Tirzepatide.' Small operator \u2014 intake flow runs through a Google Form rather than a custom patient portal. State list not disclosed publicly."
     }
   },
   {
@@ -5422,72 +5312,6 @@
       ],
       "confidence": "medium",
       "notes": "Live-verified 2026-04-07: GetPeptidesRx (Fort Worth, TX) offers semaglutide and tirzepatide. Site states 'telehealth services available in all states where permitted by applicable law' and 'all providers are licensed in the states they serve' but does not publish a specific state list."
-    }
-  },
-  {
-    "_id": "ways2well",
-    "name": "Ways2Well",
-    "slug": "ways2well",
-    "description": "Ways2Well is a nationwide telehealth platform offering clinician-supervised peptide therapy and compounded GLP-1 medications including semaglutide and tirzepatide. Lab work is required as part of intake, and the clinic emphasizes a longevity and metabolic-health framing. Offers GLP-1s alongside growth-hormone secretagogue peptides and longevity protocols.",
-    "category": "GLP-1 Provider",
-    "pricing": [
-      {
-        "dose": "0.25mg",
-        "form": "compounded",
-        "drug": "semaglutide",
-        "monthly_cost": 219
-      },
-      {
-        "dose": "1mg",
-        "form": "compounded",
-        "drug": "semaglutide",
-        "monthly_cost": 289
-      },
-      {
-        "dose": "2.5mg",
-        "form": "compounded",
-        "drug": "tirzepatide",
-        "monthly_cost": 359
-      }
-    ],
-    "scores": {
-      "value": 7,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 6.5,
-      "accessibility": 7.5,
-      "support": 7
-    },
-    "features": [
-      "Compounded",
-      "Semaglutide",
-      "Tirzepatide",
-      "Required labs",
-      "Longevity framing"
-    ],
-    "states_available": [],
-    "affiliate_url": "https://ways2well.com",
-    "affiliate_network": "direct",
-    "fda_warnings": [],
-    "pros": [
-      "Required labwork enforces baseline monitoring",
-      "Both semaglutide and tirzepatide available",
-      "Clinician supervision through intake and follow-up"
-    ],
-    "cons": [
-      "Pricing higher than aggressive compounded competitors",
-      "Lower-than-peer ratings on independent review sites \u2014 read recent user feedback before committing"
-    ],
-    "best_for": "patients wanting required-labs structure rather than questionnaire-only intake",
-    "is_featured": false,
-    "verification": {
-      "last_verified": "2026-04-07",
-      "verified_by": "WebFetch (unsuccessful)",
-      "source_urls": [
-        "https://ways2well.com"
-      ],
-      "confidence": "low",
-      "notes": "WebFetch attempted 2026-04-07: ways2well.com schema describes 'health optimization services, bloodwork, stem cell therapy, hormone optimization, longevity treatments' \u2014 no explicit GLP-1 weight loss service confirmed. May not be a GLP-1 provider at all."
     }
   },
   {
