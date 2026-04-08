@@ -4,6 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "tirzepatide-para-que-sirve";
 
@@ -480,6 +481,35 @@ export default function TirzepatideParaQueSirveArticle() {
             source: "FDA Label",
             year: 2024,
             url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/215866s013lbl.pdf",
+          },
+        ]}
+      />
+      <FaqSchema
+        items={[
+          {
+            question: "¿Para qué sirve la tirzepatida?",
+            answer:
+              "La tirzepatida es un agonista dual de los receptores GLP-1 y GIP aprobado por la FDA para el manejo crónico del peso (bajo la marca Zepbound), para diabetes tipo 2 (bajo la marca Mounjaro), y para apnea obstructiva del sueño moderada a severa en adultos con obesidad. Funciona dirigiéndose a dos hormonas intestinales que regulan el apetito, el azúcar en sangre y el vaciado gástrico.",
+          },
+          {
+            question: "¿Cuánto peso puedo perder con tirzepatida?",
+            answer:
+              "En el ensayo SURMOUNT-1, los pacientes que tomaron tirzepatida 15mg semanalmente perdieron en promedio aproximadamente el 21% de su peso corporal a lo largo de 72 semanas, en comparación con aproximadamente el 3% con placebo. Esta es la mayor pérdida de peso documentada de cualquier medicamento aprobado por la FDA para obesidad. Los resultados individuales varían.",
+          },
+          {
+            question: "¿Es Zepbound mejor que Wegovy?",
+            answer:
+              "En el ensayo SURMOUNT-5, una comparación directa, la tirzepatida (Zepbound) produjo más pérdida de peso promedio que la semaglutida (Wegovy). Sin embargo, ambos medicamentos son altamente efectivos en comparación con tratamientos anteriores, y los perfiles de efectos secundarios son ampliamente similares. La elección entre ellos a menudo depende de la cobertura del seguro y la respuesta individual.",
+          },
+          {
+            question: "¿Cómo se toma la tirzepatida?",
+            answer:
+              "La tirzepatida (Zepbound y Mounjaro) se administra como inyección subcutánea una vez por semana, mismo día cada semana, en el abdomen, muslo o brazo. La dosis comienza en 2.5mg y se incrementa gradualmente cada 4 semanas hasta alcanzar la dosis de mantenimiento (5mg, 10mg o 15mg). Siempre sigue las instrucciones específicas de tu médico.",
+          },
+          {
+            question: "¿Cuáles son los efectos secundarios de la tirzepatida?",
+            answer:
+              "Los efectos secundarios más comunes son gastrointestinales (náuseas, vómitos, diarrea, estreñimiento) y son típicamente más fuertes durante las primeras 4 semanas y después de cada aumento de dosis. La tirzepatida también tiene una advertencia recuadrada por riesgo de tumores tiroideos en estudios animales. La etiqueta de tirzepatida incluye una advertencia específica sobre que el medicamento puede reducir la efectividad de los anticonceptivos orales.",
           },
         ]}
       />

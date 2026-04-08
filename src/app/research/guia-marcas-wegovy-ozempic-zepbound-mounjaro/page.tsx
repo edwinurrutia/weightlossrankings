@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "guia-marcas-wegovy-ozempic-zepbound-mounjaro";
 
@@ -542,6 +543,35 @@ export default function GuiaMarcasArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "¿Cuál es la diferencia entre Wegovy y Ozempic?",
+            answer:
+              "Wegovy y Ozempic son fabricados por Novo Nordisk y contienen el mismo ingrediente activo (semaglutida), pero están aprobados por la FDA para indicaciones diferentes. Ozempic está aprobado para diabetes tipo 2 (dosis máxima 2.0mg por semana); Wegovy está aprobado para el manejo crónico del peso (dosis máxima 2.4mg por semana) y para reducción de riesgo cardiovascular.",
+          },
+          {
+            question: "¿Cuál es la diferencia entre Mounjaro y Zepbound?",
+            answer:
+              "Mounjaro y Zepbound son fabricados por Eli Lilly y contienen el mismo ingrediente activo (tirzepatida), pero están aprobados por la FDA para indicaciones diferentes. Mounjaro está aprobado para diabetes tipo 2; Zepbound está aprobado para el manejo crónico del peso y para apnea obstructiva del sueño (añadido en 2024). La dosis máxima de ambos es 15mg por semana.",
+          },
+          {
+            question: "¿Cuál medicamento GLP-1 funciona mejor para perder peso?",
+            answer:
+              "En el ensayo SURMOUNT-5, una comparación directa, tirzepatida (Zepbound) produjo más pérdida de peso promedio que semaglutida (Wegovy). Entre las cuatro marcas, Zepbound tiene actualmente la mayor evidencia publicada para pérdida de peso. Sin embargo, la respuesta individual varía, los perfiles de efectos secundarios son distintos, y la cobertura del seguro frecuentemente determina la elección práctica.",
+          },
+          {
+            question: "¿Wegovy, Ozempic, Zepbound y Mounjaro son el mismo medicamento?",
+            answer:
+              "No — son DOS medicamentos diferentes vendidos bajo CUATRO marcas. Semaglutida se vende como Wegovy (manejo del peso) y Ozempic (diabetes). Tirzepatida se vende como Zepbound (manejo del peso) y Mounjaro (diabetes). Semaglutida y tirzepatida tienen mecanismos diferentes, eficacia diferente y perfiles de efectos secundarios diferentes.",
+          },
+          {
+            question: "¿Es Ozempic lo mismo que Wegovy para perder peso?",
+            answer:
+              "El ingrediente activo es el mismo (semaglutida), pero la indicación aprobada por la FDA y la dosis estudiada son diferentes. Wegovy llega hasta 2.4mg por semana con datos de pérdida de peso del programa STEP; Ozempic llega hasta 2.0mg por semana con datos de diabetes del programa SUSTAIN. Muchos pacientes usan Ozempic fuera de etiqueta para perder peso, pero los datos más altos de eficacia para pérdida de peso vienen específicamente de la dosis de Wegovy 2.4mg.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

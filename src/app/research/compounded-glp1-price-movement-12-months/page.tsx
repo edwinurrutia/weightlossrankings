@@ -4,6 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import { getPriceHistory } from "@/lib/price-history";
 import { getAllProviders } from "@/lib/data";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "compounded-glp1-price-movement-12-months";
 
@@ -341,6 +342,35 @@ export default async function PriceMovementArticle() {
         trajectory — is available on the{" "}
         <Link href="/price-tracker">live price tracker</Link>.
       </p>
+      <FaqSchema
+        items={[
+          {
+            question: "Has compounded semaglutide gotten cheaper or more expensive in the last year?",
+            answer:
+              "The 12-month direction depends on the provider and dose. Across the providers we track, average compounded semaglutide pricing has been broadly stable to modestly down for entry doses and modestly up for higher doses, with significant per-provider variance. Our live price tracker shows the current numbers; this article documents the per-provider 12-month trajectory in detail.",
+          },
+          {
+            question: "Why did compounded semaglutide prices change?",
+            answer:
+              "Several drivers: (1) Wegovy and Zepbound coming off the FDA shortage list in 2025 narrowed the legal grounds for bulk compounding under sections 503A(b)(1)(D) and 503B(a)(2), (2) API supply costs from key suppliers fluctuated, (3) competitive pressure from new entrants, (4) some providers raised prices to reflect new clinical-oversight costs. The post-shortage regulatory environment is the single biggest driver.",
+          },
+          {
+            question: "Are compounded GLP-1 prices still falling?",
+            answer:
+              "No — the period of rapid price compression that characterized 2023-2024 has stabilized. Most providers we track have held prices flat for 6+ months as the post-shortage regulatory and supply-cost picture has settled. Some have raised prices modestly. Patients seeking the absolute lowest entry price should compare current prices in our live tracker rather than relying on older snapshots.",
+          },
+          {
+            question: "Will compounded semaglutide get more expensive?",
+            answer:
+              "Possibly. The post-shortage regulatory framework limits which compounded preparations can legally be made, and the supply of legal compounded GLP-1 may shrink as providers adjust. Reduced supply with continued demand typically pushes prices up. The single biggest variable is whether FDA enforcement of the shortage-end rules tightens further.",
+          },
+          {
+            question: "How do I know I'm getting the current price for compounded GLP-1?",
+            answer:
+              "Always verify the price on the provider's own pricing page on the day you sign up — telehealth pricing can change without notice. Our price tracker is updated on a monthly cadence and our pricing database is verified continuously, but the source of truth for any specific transaction is the provider's checkout page.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

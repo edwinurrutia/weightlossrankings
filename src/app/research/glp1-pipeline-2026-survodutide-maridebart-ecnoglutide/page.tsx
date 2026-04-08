@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-pipeline-2026-survodutide-maridebart-ecnoglutide";
 
@@ -559,6 +560,35 @@ export default function GlpPipelineArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What is survodutide?",
+            answer:
+              "Survodutide is an investigational once-weekly injectable dual GLP-1 / glucagon receptor agonist developed by Boehringer Ingelheim and Zealand Pharma. It targets two complementary metabolic pathways and is in late-stage development for chronic weight management and MASH (metabolic dysfunction-associated steatohepatitis). It is not yet FDA-approved.",
+          },
+          {
+            question: "What is maridebart cafraglutide?",
+            answer:
+              "Maridebart cafraglutide (MariTide) is Amgen's once-monthly investigational obesity drug — a long-acting GLP-1 receptor agonist conjugated to an antibody fragment to enable monthly rather than weekly dosing. It is in phase 3 for chronic weight management. The monthly dosing schedule is a major practical differentiator if it reaches market.",
+          },
+          {
+            question: "What is ecnoglutide?",
+            answer:
+              "Ecnoglutide (XW003) is an investigational once-weekly GLP-1 receptor agonist developed by Sciwind Biosciences. It is in late-stage development primarily in China and parts of Asia for chronic weight management and type 2 diabetes. US development and FDA submission timeline are limited.",
+          },
+          {
+            question: "When will the next-generation GLP-1s be available?",
+            answer:
+              "Approval timelines vary by drug and depend on phase 3 trial completion, regulatory review, and manufacturer submission decisions. Survodutide and MariTide are expected to file for approval in the next several years if phase 3 trials are positive. Pipeline status changes frequently — check the manufacturer's investor communications for the current timeline.",
+          },
+          {
+            question: "Are these next-gen drugs better than Wegovy and Zepbound?",
+            answer:
+              "It depends on the metric. Survodutide adds a glucagon receptor target (potentially more energy expenditure). MariTide offers monthly dosing (major adherence advantage). Several pipeline drugs report numerically larger weight loss in phase 2 than Wegovy in STEP. Direct head-to-head trials are limited, and long-term safety/efficacy data are still being generated. None are yet FDA-approved.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

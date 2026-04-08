@@ -4,6 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "semaglutide-para-que-sirve";
 
@@ -482,6 +483,35 @@ export default function SemaglutideParaQueSirveArticle() {
             source: "N Engl J Med",
             year: 2022,
             pmid: "35658024",
+          },
+        ]}
+      />
+      <FaqSchema
+        items={[
+          {
+            question: "¿Para qué sirve la semaglutida?",
+            answer:
+              "La semaglutida es un agonista del receptor GLP-1 aprobado por la FDA para el manejo crónico del peso (bajo la marca Wegovy) y para diabetes tipo 2 (bajo la marca Ozempic). Wegovy también está aprobado para reducción de riesgo cardiovascular en pacientes con enfermedad cardiovascular establecida y obesidad. Funciona ralentizando el vaciado gástrico, regulando el azúcar en sangre y reduciendo el apetito.",
+          },
+          {
+            question: "¿Cuánto peso puedo perder con semaglutida?",
+            answer:
+              "En el ensayo STEP-1, los pacientes que tomaron semaglutida 2.4mg semanalmente perdieron en promedio aproximadamente el 15% de su peso corporal a lo largo de 68 semanas, en comparación con aproximadamente el 2.4% con placebo. Los resultados individuales varían considerablemente; algunos pacientes pierden mucho más del promedio y otros menos.",
+          },
+          {
+            question: "¿La semaglutida es segura?",
+            answer:
+              "Los efectos secundarios más comunes son gastrointestinales (náuseas, vómitos, diarrea, estreñimiento) y son típicamente más fuertes durante las primeras 4 semanas y después de cada aumento de dosis. Los efectos secundarios graves son raros pero pueden incluir pancreatitis, problemas de la vesícula biliar y reacciones alérgicas. La semaglutida tiene una advertencia recuadrada por riesgo de tumores tiroideos en estudios animales; no debe usarse en pacientes con antecedentes personales o familiares de cáncer medular de tiroides o MEN 2.",
+          },
+          {
+            question: "¿Cómo se toma la semaglutida?",
+            answer:
+              "La semaglutida (Wegovy y Ozempic) se administra como inyección subcutánea una vez por semana, mismo día cada semana, en el abdomen, muslo o brazo. La dosis comienza baja (0.25mg) y se incrementa gradualmente cada 4 semanas hasta alcanzar la dosis de mantenimiento (2.4mg para Wegovy o 2.0mg para Ozempic). Siempre sigue las instrucciones específicas de tu médico.",
+          },
+          {
+            question: "¿Cuánto cuesta la semaglutida?",
+            answer:
+              "El precio de lista de Wegovy de marca es aproximadamente $1,300 por mes en farmacias de retail; con la tarjeta de ahorros del fabricante baja a aproximadamente $650 por mes. La semaglutida compuesta de farmacias de telesalud licenciadas tiene un rango típico de $150 a $400 por mes, dependiendo de la dosis y del proveedor. Los precios varían y siempre debes verificarlos en la página del proveedor antes de inscribirte.",
           },
         ]}
       />

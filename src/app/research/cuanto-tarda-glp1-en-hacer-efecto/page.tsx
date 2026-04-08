@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "cuanto-tarda-glp1-en-hacer-efecto";
 
@@ -565,6 +566,35 @@ export default function CuantoTardaGlp1EnHacerEfectoArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "¿Cuánto tarda el GLP-1 en hacer efecto?",
+            answer:
+              "Los efectos sobre el apetito y la sensación de saciedad pueden notarse dentro de los primeros 7 a 14 días después de la primera inyección, especialmente con semaglutida y tirzepatida. La pérdida de peso medible suele aparecer en las primeras 4 a 8 semanas. La pérdida de peso máxima en los ensayos clínicos STEP y SURMOUNT se observó entre las 60 y 72 semanas de tratamiento continuo.",
+          },
+          {
+            question: "¿Cuándo empezaré a perder peso con Wegovy?",
+            answer:
+              "La mayoría de los pacientes en el ensayo STEP-1 (semaglutida 2.4mg) comenzaron a ver pérdida de peso medible en las primeras 4 semanas, con pérdida sostenida durante los siguientes 60 a 68 semanas. La velocidad inicial varía: algunos pacientes pierden rápidamente al principio y se estabilizan, otros pierden de forma más gradual y constante.",
+          },
+          {
+            question: "¿Por qué no estoy perdiendo peso en mi GLP-1?",
+            answer:
+              "Las causas más comunes incluyen: dosis insuficiente (todavía estás en titulación inicial), expectativas no realistas sobre la velocidad, ingesta insuficiente de proteína, falta de ejercicio de resistencia, otros medicamentos que aumentan el peso, condiciones tiroideas no diagnosticadas, o simplemente la variabilidad individual en la respuesta. Habla con tu proveedor si llevas más de 12 semanas en la dosis máxima sin progreso.",
+          },
+          {
+            question: "¿Cuánto peso puedo esperar perder en 3 meses?",
+            answer:
+              "Aproximadamente el 5-8% del peso corporal en 12 semanas para semaglutida 2.4mg en STEP-1, y aproximadamente el 7-10% en 12 semanas para tirzepatide a dosis máxima en SURMOUNT-1. Los promedios de los ensayos esconden mucha variación individual; algunos pacientes pierden mucho más rápido y otros más lento.",
+          },
+          {
+            question: "¿La pérdida de peso es continua o se estabiliza?",
+            answer:
+              "La pérdida de peso es típicamente más rápida en los primeros 6 meses y luego se desacelera, alcanzando un punto de meseta alrededor de las 60-72 semanas en la mayoría de los pacientes. La meseta no significa fracaso del tratamiento — significa que has llegado al nuevo punto de equilibrio del cuerpo bajo la dosis actual del medicamento.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }
