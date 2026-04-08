@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "tirzepatide-microdosing-evidence-guide";
 
@@ -430,6 +431,35 @@ export default function TirzMicrodoseArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What is tirzepatide microdosing?",
+            answer:
+              "Tirzepatide microdosing is the practice of using doses below the FDA-approved 2.5/5/7.5/10/12.5/15mg titration schedule — typically 0.5mg to 2mg weekly. It is most often discussed in the context of compounded vials where the prescriber has flexibility to dose by volume. There are no FDA-approved microdosing protocols and no published RCTs of tirzepatide microdosing for weight loss.",
+          },
+          {
+            question: "Does microdosing tirzepatide work?",
+            answer:
+              "There are no published randomized controlled trials of tirzepatide microdosing. The pivotal SURMOUNT trials studied the 2.5-15mg titration. Anecdotal patient reports describe meaningful effects at lower doses, but the evidence base is observational. Most clinicians reserve microdosing for patients who cannot tolerate standard doses or who have specific clinical reasons.",
+          },
+          {
+            question: "Is tirzepatide microdosing safer than full doses?",
+            answer:
+              "Lower doses generally produce fewer GI side effects (nausea, vomiting, diarrhea, constipation) but the formal safety profile of microdosing is uncharacterized. Risks not directly tied to dose — pancreatitis, gallbladder disease, contraindications, the labeled contraceptive interaction — apply at any dose. Always work with a prescriber who is monitoring you.",
+          },
+          {
+            question: "How much weight will I lose on a tirzepatide microdose?",
+            answer:
+              "Without published trial data, defensible averages don't exist. Anecdotal reports vary widely. The dose-response relationship for tirzepatide is not linear at the lower end of the curve, and individual response varies. Patients seeking the predictable efficacy shown in SURMOUNT-1 should follow the standard titration schedule.",
+          },
+          {
+            question: "Why would a prescriber recommend tirzepatide microdosing?",
+            answer:
+              "Common reasons: severe GI intolerance at standard doses, lower BMI patients, supply or cost constraints, post-discontinuation maintenance, or tolerability concerns from prior GLP-1 use. Microdosing tirzepatide is an off-label clinical decision that should be made jointly with a clinician who knows your full medical history.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

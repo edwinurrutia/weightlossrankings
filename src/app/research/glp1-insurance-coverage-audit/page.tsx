@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import { getAllInsurers } from "@/lib/insurers";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-insurance-coverage-audit";
 
@@ -294,6 +295,35 @@ export default function InsuranceCoverageAuditArticle() {
         editorial methodology, see our{" "}
         <Link href="/methodology">methodology page</Link>.
       </p>
+      <FaqSchema
+        items={[
+          {
+            question: "Which insurance companies cover Wegovy?",
+            answer:
+              "Coverage varies dramatically by plan and is decided by the employer or government program rather than the insurer itself. Among large commercial insurers (BCBS, UHC, Aetna, Cigna, Humana), about 40-50% of self-insured employer groups cover Wegovy for weight loss as of 2025. Coverage is more common for the diabetes indication (Ozempic, Mounjaro). See our insurance index for plan-by-plan rules.",
+          },
+          {
+            question: "Why is GLP-1 insurance coverage so confusing?",
+            answer:
+              "Because anti-obesity medication coverage is an OPTIONAL employer benefit at most large commercial plans — the same insurer can have completely different formulary rules across two employer groups. Medicare Part D was statutorily prohibited from covering weight-loss drugs until the 2024 Wegovy CV indication created a workaround. Medicaid varies by state. There is no single 'does insurance cover Wegovy' answer; the answer depends on YOUR specific plan.",
+          },
+          {
+            question: "How do I find out if my plan covers Wegovy or Zepbound?",
+            answer:
+              "(1) Log into your insurance member portal and search the formulary for the specific drug name. (2) Call the member services number on your insurance card and ask about prior authorization criteria for the specific drug. (3) Check the SPD (summary plan description) from your employer for any anti-obesity exclusion language. (4) Use our insurance checker tool for plan-by-plan rules.",
+          },
+          {
+            question: "What can I do if my plan denies Wegovy coverage?",
+            answer:
+              "Standard appeal pathway: get the written denial letter and the specific criterion you failed, gather supporting documentation (BMI history, comorbidities, prior weight-loss attempts), have your prescriber submit a letter of medical necessity, file the formal appeal within the plan's deadline, and escalate to external review if denied. Our prior auth letter generator drafts the medical-necessity letter for the most common scenarios.",
+          },
+          {
+            question: "Is GLP-1 coverage getting better or worse?",
+            answer:
+              "Mixed. Coverage is expanding in some areas: more state Medicaid programs are adding coverage, the Wegovy CV indication unlocked Medicare Part D coverage for a subset of patients, and more employers are adding the benefit each year. Coverage is contracting in others: BCBS FEP and CVS Caremark made restrictive formulary changes in mid-2025. The overall trend is gradual expansion with employer cost pressure as the main brake.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

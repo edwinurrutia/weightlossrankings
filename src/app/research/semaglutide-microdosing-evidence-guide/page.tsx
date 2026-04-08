@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "semaglutide-microdosing-evidence-guide";
 
@@ -377,6 +378,35 @@ export default function MicrodoseArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What is semaglutide microdosing?",
+            answer:
+              "Semaglutide microdosing is the practice of using doses below the FDA-approved 0.25mg/0.5mg/1.0mg/1.7mg/2.4mg titration schedule — typically 0.05mg to 0.15mg weekly. It is most often discussed in the context of compounded vials where the prescriber has flexibility to dose by volume rather than by fixed pen click. There are no FDA-approved microdosing protocols and no published RCTs of microdosing for weight loss.",
+          },
+          {
+            question: "Does microdosing semaglutide work?",
+            answer:
+              "There are no published randomized controlled trials of microdosing semaglutide for weight loss. The pivotal STEP trials studied the standard 0.25-2.4mg titration. Anecdotal patient reports describe meaningful appetite suppression at lower doses, but the evidence base is observational. Most clinicians reserve microdosing for patients who cannot tolerate standard doses due to side effects.",
+          },
+          {
+            question: "Is microdosing semaglutide safer?",
+            answer:
+              "Lower doses generally produce fewer GI side effects (nausea, vomiting, constipation) but the safety profile of microdosing has not been formally characterized. Risks not directly tied to dose — pancreatitis, gallbladder disease, contraindications — apply at any dose. Always work with a prescriber who is monitoring you, regardless of dose.",
+          },
+          {
+            question: "How much weight will I lose on a microdose?",
+            answer:
+              "Without published trial data, it's impossible to give a defensible average. Anecdotal reports range from minimal to substantial weight loss. The dose-response curve for semaglutide is not linear at the lower end, and individual response varies. Patients seeking the predictable efficacy of the published trials should follow the standard titration schedule.",
+          },
+          {
+            question: "Why would a prescriber recommend microdosing?",
+            answer:
+              "Common reasons: severe GI intolerance at standard doses, supply or cost constraints, lower BMI patients who don't need full doses, post-discontinuation maintenance, or patient preference. Microdosing is an off-label clinical decision and should be made jointly with a clinician who knows your full medical history, not based on internet protocols.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

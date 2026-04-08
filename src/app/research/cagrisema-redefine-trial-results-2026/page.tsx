@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "cagrisema-redefine-trial-results-2026";
 
@@ -475,6 +476,35 @@ export default function CagrisemaArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What is CagriSema?",
+            answer:
+              "CagriSema is Novo Nordisk's investigational once-weekly combination of cagrilintide (a long-acting amylin analog) and semaglutide (a GLP-1 agonist). It targets two complementary appetite-regulation pathways simultaneously and is being developed for chronic weight management as a potential successor to Wegovy.",
+          },
+          {
+            question: "How effective is CagriSema?",
+            answer:
+              "In the REDEFINE-1 phase 3 trial, CagriSema produced approximately 22-23% mean weight loss at 68 weeks, compared to ~15% for Wegovy in the parallel STEP comparator and ~21% for Zepbound in SURMOUNT-1. The CagriSema result fell short of internal expectations of ~25% but is still numerically larger than current standard-of-care semaglutide.",
+          },
+          {
+            question: "When will CagriSema be FDA-approved?",
+            answer:
+              "Novo Nordisk has not announced a definitive FDA submission timeline. The phase 3 REDEFINE program is generating the efficacy and safety data needed for an FDA filing. Approval, assuming positive results and a standard NDA review, would follow in the years after submission. Current analyst estimates place a possible launch in the late 2020s but this is speculative.",
+          },
+          {
+            question: "How is CagriSema different from Wegovy?",
+            answer:
+              "Wegovy is a single GLP-1 agonist (semaglutide alone). CagriSema combines semaglutide with cagrilintide, an amylin agonist that targets a different appetite-regulation pathway. The hypothesis is that hitting two pathways gives larger weight loss than either alone. The REDEFINE-1 result supports this hypothesis but with a smaller delta than Novo's internal projections.",
+          },
+          {
+            question: "Is CagriSema better than Zepbound?",
+            answer:
+              "Direct head-to-head data is not yet available. In separate trials, CagriSema produced ~22-23% weight loss in REDEFINE-1 and tirzepatide produced ~21% in SURMOUNT-1. The numbers are similar enough that head-to-head trials would be needed to determine which is genuinely superior, and none have been conducted yet.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

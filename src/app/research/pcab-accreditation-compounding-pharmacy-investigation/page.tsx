@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 import pharmaciesData from "@/data/pharmacies.json";
 
 const SLUG = "pcab-accreditation-compounding-pharmacy-investigation";
@@ -499,6 +500,35 @@ export default function PcabInvestigation() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What is PCAB accreditation?",
+            answer:
+              "PCAB (Pharmacy Compounding Accreditation Board) is a voluntary accreditation program operated by the Accreditation Commission for Health Care (ACHC) that audits compounding pharmacies against quality, sterility, and process standards beyond the minimum required by state pharmacy boards. PCAB accreditation is voluntary — most US compounding pharmacies do NOT have it — but it is widely regarded as the strongest non-FDA quality signal for a 503A or 503B compounder.",
+          },
+          {
+            question: "Is PCAB accreditation required for compounded GLP-1 pharmacies?",
+            answer:
+              "No. PCAB accreditation is voluntary and not required by federal or state law. A 503A or 503B pharmacy can legally dispense compounded semaglutide or tirzepatide without PCAB accreditation provided it meets state board licensure and (for 503B) FDA registration requirements. PCAB is an additional layer of voluntary quality assurance, not a legal floor.",
+          },
+          {
+            question: "How do I verify a compounding pharmacy is PCAB-accredited?",
+            answer:
+              "Search the public PCAB / ACHC accreditation directory at achc.org. Each pharmacy listing shows accreditation status, expiration date, and the specific scope (sterile compounding vs non-sterile, etc.). Pharmacies that claim PCAB accreditation in their marketing should be verifiable in this directory; if they're not listed, treat the claim as unverified.",
+          },
+          {
+            question: "Are non-PCAB compounding pharmacies unsafe?",
+            answer:
+              "Not necessarily. PCAB is one quality signal among several. A compounding pharmacy without PCAB accreditation can still be high-quality if it has a clean state-board record, no FDA warning letters, transparent quality controls, and third-party sterility testing. Conversely, PCAB accreditation alone does not guarantee zero risk — accredited pharmacies have been the subject of warning letters in the past. Use PCAB as one input, not the only one.",
+          },
+          {
+            question: "Which compounded GLP-1 pharmacies have PCAB accreditation?",
+            answer:
+              "We track PCAB status on every compounding pharmacy in our database. See our pharmacies index for the current list — it's verified against the ACHC public directory rather than just the pharmacy's marketing claims.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }
