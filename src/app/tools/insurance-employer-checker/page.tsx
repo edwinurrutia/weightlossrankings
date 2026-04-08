@@ -3,12 +3,14 @@ import Link from "next/link";
 import References from "@/components/research/References";
 import ToolSchema from "@/components/research/ToolSchema";
 import EmployerSearch from "./EmployerSearch";
+import employersData from "@/data/employer-coverage.json";
+
+const EMPLOYER_COUNT = employersData.length;
 
 export const metadata: Metadata = {
   title:
-    "Does My Employer Cover Wegovy or Zepbound? Verified Benchmarks + DIY Guide",
-  description:
-    "Six verified employer GLP-1 coverage benchmarks (Amazon, FedEx, JPMorgan Chase, Microsoft, Federal Government, USPS) plus a step-by-step guide to finding out whether YOUR employer covers Wegovy, Zepbound, Ozempic, or Mounjaro. Most US employers do not publish their pharmacy formularies; this page shows you how to find yours.",
+    "Does My Employer Cover Wegovy or Zepbound? Verified Coverage Database",
+  description: `Verified GLP-1 coverage data for ${EMPLOYER_COUNT} major US employers, plus a step-by-step DIY guide for finding your own employer's pharmacy benefit. Every entry is anchored in a primary source with a direct quote.`,
   alternates: { canonical: "/tools/insurance-employer-checker" },
 };
 
@@ -86,63 +88,39 @@ export default function InsuranceEmployerCheckerPage() {
 
       <header className="mb-10">
         <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold mb-4">
-          6 verified employer benchmarks · DIY guide for the rest
+          {EMPLOYER_COUNT} verified employers · DIY guide for everyone else
         </p>
         <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-brand-text-primary">
           Does my employer cover Wegovy or Zepbound?
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-brand-text-secondary leading-relaxed">
-          Most US employers do not publish their pharmacy formularies.
-          KFF, Mercer, and Sequoia survey 200+ companies but anonymize
-          the answers. SEC filings rarely disclose benefit details.
-          So instead of guessing, this page does two things: it shows
-          the <strong>6 employers we have verified primary sources for</strong>,
-          and it walks you through{" "}
-          <strong>how to find out about YOUR specific employer</strong> in
+          Most US employers don&apos;t publish their pharmacy formulary.
+          Below are <strong>{EMPLOYER_COUNT} employers we have
+          verified directly</strong> from primary sources (employer
+          benefits portals, vendor partnership pages, OPM filings, or
+          plan documents) — every entry includes the source URL and a
+          direct quote. If your employer isn&apos;t listed, scroll
+          down for the 5-step DIY guide that works for any plan in
           under 10 minutes.
         </p>
       </header>
 
-      <div className="mb-10 rounded-2xl border-2 border-brand-violet/30 bg-brand-bg-purple p-6">
-        <h2 className="font-heading text-lg font-bold text-brand-text-primary mb-3">
-          Why only 6 employers?
-        </h2>
-        <p className="text-sm text-brand-text-secondary leading-relaxed mb-3">
-          We previously listed 30 employers based on industry-survey
-          aggregate data. When we audited the dataset for primary
-          sources during our 2026-04-07 verification pass, only 5
-          entries had verifiable employer-specific information (Amazon
-          via the 9amHealth program page, FedEx, JPMorgan Chase, the
-          US Federal Government&apos;s FEHB program, and USPS&apos;s
-          PSHB program). We added Microsoft as medium-confidence
-          because the Premera 5.01.621 policy framework is public even
-          though Microsoft&apos;s specific election is not.
-        </p>
-        <p className="text-sm text-brand-text-secondary leading-relaxed mb-3">
-          The other 24 employers we previously listed (Walmart, Target,
-          Apple, Google, Meta, Costco, Home Depot, Lowe&apos;s,
-          Starbucks, Nike, Disney, Boeing, Delta, United, UPS, Bank of
-          America, Wells Fargo, IBM, Salesforce, Oracle, Cisco, Intel,
-          AT&amp;T, Verizon) had no verifiable primary source. KFF,
-          Mercer, and Sequoia interview 200+ employers each year but
-          deliberately anonymize the responses. SEC 10-K filings
-          rarely break out specific drug benefit decisions. Benefits
-          portals require employee logins. So we removed those rows
-          rather than fabricate coverage data — per our editorial
-          policy, &ldquo;honest unverified&rdquo; beats
-          &ldquo;invented coverage.&rdquo;
-        </p>
-        <p className="text-sm text-brand-text-secondary leading-relaxed">
-          The DIY guide below is now the primary use case for this
-          page. The 6 verified rows are reference benchmarks of how
-          the major plan administrators (Aetna, BCBS, UnitedHealthcare,
-          Premera, OPM) handle GLP-1 weight management drugs.
-        </p>
-      </div>
-
-      <h2 className="font-heading text-2xl font-bold text-brand-text-primary mb-4">
-        Verified employer benchmarks (6)
+      <h2 className="font-heading text-2xl font-bold text-brand-text-primary mb-2">
+        Verified employer database ({EMPLOYER_COUNT})
       </h2>
+      <p className="text-sm text-brand-text-secondary mb-5 max-w-2xl">
+        Each entry below is anchored in a primary source. Click
+        &ldquo;Read full source notes&rdquo; on any card to see the
+        exact verification quote and URL. New employers added as we
+        verify them — see our{" "}
+        <Link
+          href="/methodology"
+          className="text-brand-violet underline hover:no-underline"
+        >
+          methodology
+        </Link>{" "}
+        for how we verify.
+      </p>
       <EmployerSearch />
 
       <div className="mt-12 rounded-2xl border-2 border-brand-violet bg-white p-6 sm:p-8">
