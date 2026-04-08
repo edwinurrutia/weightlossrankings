@@ -1044,6 +1044,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 16,
     tags: ["SGLT2", "Jardiance", "Farxiga", "PubMed sourced"],
   },
+  {
+    slug: "bariatric-surgery-vs-glp1-2026",
+    title:
+      "Bariatric Surgery vs GLP-1s in 2026: Cost, Insurance Coverage, and Long-Term Outcomes",
+    description:
+      "9,650+ monthly searches ask whether bariatric surgery or GLP-1 receptor agonists are the right answer for obesity. We walk through the NIH 1991 and ASMBS 2022 eligibility criteria, the STAMPEDE trial (Schauer 2017), SLEEVEPASS and SM-BOSS, the Swedish Obese Subjects long-term mortality data (Sjöström 2007), the Adams 2007 NEJM cohort, the SPLENDID cancer outcomes (Aminian 2022), Medicare NCD 100.1, and the cost reality.",
+    excerpt:
+      "Bariatric surgery and GLP-1 receptor agonists are the two most effective treatments for severe obesity. They are not interchangeable. Bariatric surgery has 30+ years of long-term data — the Swedish Obese Subjects study, the Adams 2007 NEJM cohort, the STAMPEDE diabetes-remission trial, and the SLEEVEPASS/SM-BOSS sleeve-vs-bypass head-to-head trials — showing roughly 25% sustained body weight loss at 10 years and a 40% reduction in all-cause mortality. GLP-1s have produced 14-21% weight loss in 68-72 week trials but no comparable long-term mortality data yet, and the SELECT trial (Lincoff 2023) is the closest analog. The 2024-2025 real-world comparative data show bariatric surgery still produces ~5x the weight loss of GLP-1 monotherapy at 2 years. Eligibility, insurance coverage, and complication profiles differ enormously. Here is the verified comparison.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
+    readMinutes: 16,
+    citations: 14,
+    tags: ["Bariatric surgery", "Weight loss surgery", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
