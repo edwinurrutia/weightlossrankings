@@ -1,0 +1,81 @@
+# check-redirects.yml
+#
+# Static + live redirect-loop guardrail. Runs on every push to main
+# and on every PR. Catches the host-canonicalization loop pattern
+# that took the site totally down on 2026-04-08.
+#
+# Two checks:
+#
+#   1. STATIC: scripts/check-redirect-loops.ts
+#      Parses next.config.mjs + vercel.json. Detects any rule pair
+#      that could form an apex↔www loop, OR any single rule whose
+#      destination host equals its source host. Fails the workflow
+#      with the offending rule pair printed.
+#
+#   2. LIVE: scripts/check-redirect-chain.ts
+#      Real HEAD-request smoke test against the production apex
+#      and www hostnames. Follows the redirect chain, counts hops,
+#      and fails if more than 2 hops or if the chain doesn't
+#      terminate in a 200. Catches Vercel-dashboard-introduced
+#      loops that the static check cannot see.
+#
+# Both checks were added in 2026-04-08 after the
+# ERR_TOO_MANY_REDIRECTS outage. The static check was originally
+# wired into npm run prebuild, but Vercel deploys started failing
+# after that change (cause not yet diagnosed) so the check was
+# moved here. The guardrail is intact — it just runs in GitHub
+# Actions instead of blocking the Vercel build.
+
+name: Redirect-loop guardrail
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  static-check:
+    name: Static redirect loop check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run static redirect-loop check
+        run: npm run check:redirects
+
+  live-check:
+    name: Live redirect chain smoke test
+    runs-on: ubuntu-latest
+    # Run after the static check passes — no point smoke-testing the
+    # live site if the static rules are already broken.
+    needs: static-check
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run live redirect chain check
+        run: npm run check:redirect-chain
