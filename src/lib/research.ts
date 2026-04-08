@@ -1070,6 +1070,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutida", "Tirzepatida", "Español", "STEP-1", "SURMOUNT-1"],
   },
   {
+    slug: "cuanto-peso-se-pierde-wegovy-zepbound",
+    title:
+      "¿Cuánto peso se pierde con Wegovy y Zepbound? Datos de STEP-1 y SURMOUNT-1",
+    description:
+      "Guía en español sobre la pérdida de peso promedio con Wegovy (semaglutida 2.4 mg) y Zepbound (tirzepatida 15 mg) en los ensayos clínicos clave. Cifras verificadas de STEP-1 (14.9% a las 68 semanas), SURMOUNT-1 (20.9% a las 72 semanas), porcentajes de pacientes que alcanzan cada umbral de pérdida (≥5%, ≥10%, ≥15%, ≥20%), y lo que muestran STEP-4 y SURMOUNT-4 sobre la recuperación del peso al suspender el tratamiento.",
+    excerpt:
+      "La pregunta más frecuente de los pacientes que consideran empezar un agonista del receptor de GLP-1 es: ¿cuánto voy a perder? La respuesta basada en ensayos clínicos aleatorizados es que los adultos con sobrepeso u obesidad sin diabetes pierden en promedio 14.9% del peso corporal con Wegovy (semaglutida 2.4 mg) a las 68 semanas según STEP-1 (PMID 33567185) y 20.9% con Zepbound (tirzepatida 15 mg) a las 72 semanas según SURMOUNT-1 (PMID 35658024). Esta guía recorre las cifras exactas, los umbrales que alcanza cada porcentaje de pacientes, la comparación indirecta entre los dos fármacos, y lo que muestran los ensayos de retirada STEP-4 y SURMOUNT-4 sobre la recuperación del peso al suspender el tratamiento.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 13,
+    citations: 6,
+    tags: ["Wegovy", "Zepbound", "Pérdida de peso", "Español", "STEP-1", "SURMOUNT-1"],
+  },
+  {
     slug: "semaglutida-efectos-secundarios-duracion",
     title:
       "Semaglutida: cuánto duran los efectos secundarios y cuándo llamar al médico",

@@ -446,6 +446,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "como-inyectar-semaglutida-guia-paso-a-paso",
     "ozempic-precio-costo-comprar",
     "semaglutida-efectos-secundarios-duracion",
+    "cuanto-peso-se-pierde-wegovy-zepbound",
   ]);
 
   // Dynamic: /research/[slug] — feed lastUpdated when present, else
