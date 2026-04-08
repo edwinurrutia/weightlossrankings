@@ -445,6 +445,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "wegovy-vs-ozempic-diferencias",
     "como-inyectar-semaglutida-guia-paso-a-paso",
     "ozempic-precio-costo-comprar",
+    "semaglutida-efectos-secundarios-duracion",
   ]);
 
   // Dynamic: /research/[slug] — feed lastUpdated when present, else

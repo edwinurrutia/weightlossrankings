@@ -1070,6 +1070,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutida", "Tirzepatida", "Español", "STEP-1", "SURMOUNT-1"],
   },
   {
+    slug: "semaglutida-efectos-secundarios-duracion",
+    title:
+      "Semaglutida: cuánto duran los efectos secundarios y cuándo llamar al médico",
+    description:
+      "Guía en español sobre la duración de los efectos secundarios de la semaglutida (Wegovy, Ozempic): calendario completo de la escalada de 16 semanas, cuándo aparecen y cuándo disminuyen las náuseas, los vómitos, la diarrea, el estreñimiento, el dolor de cabeza, la fatiga y el efluvio telógeno. Incluye los signos de alarma que requieren atención médica inmediata según la información de prescripción aprobada por la FDA.",
+    excerpt:
+      "La pregunta que más escuchan los médicos después de recetar semaglutida es cuánto van a durar las náuseas. La respuesta basada en STEP-1 (PMID 33567185) y la información de prescripción aprobada por la FDA para Wegovy es que los efectos gastrointestinales siguen un patrón predecible: son más intensos en las primeras 2 a 4 semanas después de cada aumento de dosis, disminuyen gradualmente, y suelen estabilizarse alrededor de la semana 20, ya en dosis de mantenimiento de 2.4 mg. Esta guía recorre el calendario completo de la escalada, qué esperar en cada fase, el patrón del efluvio telógeno asociado a la pérdida rápida de peso, y los signos de alarma que requieren atención médica inmediata.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 11,
+    citations: 7,
+    tags: ["Semaglutida", "Efectos secundarios", "Español", "STEP-1", "Wegovy"],
+  },
+  {
     slug: "efectos-secundarios-glp1-preguntas-respuestas",
     title:
       "Efectos secundarios del GLP-1: preguntas y respuestas",
