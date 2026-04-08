@@ -1070,6 +1070,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutida", "Tirzepatida", "Español", "STEP-1", "SURMOUNT-1"],
   },
   {
+    slug: "mounjaro-vs-ozempic-diabetes-surpass-2",
+    title:
+      "Mounjaro vs Ozempic en diabetes tipo 2: los datos del ensayo SURPASS-2",
+    description:
+      "Guía en español sobre el único ensayo aleatorizado cabeza a cabeza entre tirzepatida (Mounjaro) y semaglutida 1 mg (Ozempic) en pacientes con diabetes tipo 2: SURPASS-2 (Frías, NEJM 2021, PMID 34170647). Cifras verificadas de reducción de A1C (2.30 puntos porcentuales con tirzepatida 15 mg frente a 1.86 con semaglutida 1 mg), diferencias de pérdida de peso (1.9 a 5.5 kg adicionales con tirzepatida), tasas de efectos secundarios gastrointestinales, y las limitaciones que un paciente debe considerar al elegir entre los dos fármacos.",
+    excerpt:
+      "Mounjaro y Ozempic son los dos agonistas del receptor de GLP-1 más recetados en Estados Unidos para la diabetes tipo 2, pero son moléculas distintas con mecanismos distintos: Ozempic contiene semaglutida (agonista puro de GLP-1) y Mounjaro contiene tirzepatida (agonista dual de GIP y GLP-1). En 2021 se publicó el primer ensayo aleatorizado cabeza a cabeza entre ambos, SURPASS-2, en 1,879 pacientes con diabetes tipo 2 durante 40 semanas. Los autores concluyeron que la tirzepatida fue no inferior y superior a la semaglutida 1 mg tanto en el control glucémico como en la pérdida de peso. Esta guía recorre las cifras exactas, las tasas de efectos secundarios gastrointestinales, y las limitaciones del ensayo que un paciente debe tener en cuenta al elegir entre los dos fármacos.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 13,
+    citations: 4,
+    tags: ["Mounjaro", "Ozempic", "Diabetes", "Español", "SURPASS-2", "Comparación"],
+  },
+  {
     slug: "zepbound-apnea-del-sueno-surmount-osa",
     title:
       "Zepbound para la apnea del sueño: los datos del ensayo SURMOUNT-OSA",

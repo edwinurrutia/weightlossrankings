@@ -448,6 +448,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "semaglutida-efectos-secundarios-duracion",
     "cuanto-peso-se-pierde-wegovy-zepbound",
     "zepbound-apnea-del-sueno-surmount-osa",
+    "mounjaro-vs-ozempic-diabetes-surpass-2",
   ]);
 
   // Dynamic: /research/[slug] — feed lastUpdated when present, else

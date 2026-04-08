@@ -94,6 +94,11 @@ const nextConfig = {
         destination: "/es/research/zepbound-apnea-del-sueno-surmount-osa",
         permanent: true,
       },
+      {
+        source: "/research/mounjaro-vs-ozempic-diabetes-surpass-2",
+        destination: "/es/research/mounjaro-vs-ozempic-diabetes-surpass-2",
+        permanent: true,
+      },
       // Year-suffixed URLs are an SEO foot-gun: when 2027 rolls
       // around, every backlink to a "2026" URL turns stale and we'd
       // have to either keep the URL fresh (confusing) or 301 to a
