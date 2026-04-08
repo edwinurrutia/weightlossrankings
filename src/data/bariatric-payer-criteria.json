@@ -1,0 +1,176 @@
+{
+  "$schema": "internal — payer-by-payer bariatric surgery prior auth criteria",
+  "lastVerified": "2026-04-07",
+  "verificationNotes": "Every entry verified live by research subagent on 2026-04-07 against the cited source URL. Re-verify quarterly per the staleness audit recommendation.",
+  "payers": [
+    {
+      "id": "nih-1991",
+      "label": "NIH 1991 Consensus (academic standard)",
+      "type": "guideline",
+      "bmiMin": 40,
+      "bmiMinWithComorbidity": 35,
+      "qualifyingComorbidities": [
+        "type-2-diabetes",
+        "severe-osa",
+        "obesity-cardiomyopathy",
+        "severe-joint-disease"
+      ],
+      "supervisedDietMonths": null,
+      "ageMin": null,
+      "psychEvalRequired": true,
+      "smokingCessationRequired": false,
+      "sourceUrl": "https://consensus.nih.gov/1991/1991gisurgeryobesity084html.htm",
+      "lastVerified": "2026-04-07",
+      "notes": "Foundational 1991 NIH Consensus Development Conference statement; still the academic baseline cited by Medicare and most commercial insurers."
+    },
+    {
+      "id": "asmbs-2022",
+      "label": "ASMBS / IFSO 2022 (current academic standard)",
+      "type": "guideline",
+      "bmiMin": 35,
+      "bmiMinWithComorbidity": 30,
+      "qualifyingComorbidities": [
+        "type-2-diabetes",
+        "dyslipidemia",
+        "hypertension",
+        "severe-osa",
+        "nash",
+        "pcos"
+      ],
+      "supervisedDietMonths": null,
+      "ageMin": null,
+      "psychEvalRequired": false,
+      "smokingCessationRequired": false,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36280539/",
+      "lastVerified": "2026-04-07",
+      "notes": "Eisenberg et al. 2022 ASMBS/IFSO indications statement (PMID 36280539). Recommends MBS at BMI ≥35 regardless of comorbidities and at BMI 30-34.9 with metabolic disease. Most US payers have not yet adopted these lower thresholds."
+    },
+    {
+      "id": "medicare-ncd-100-1",
+      "label": "Medicare NCD 100.1",
+      "type": "payer",
+      "bmiMin": null,
+      "bmiMinWithComorbidity": 35,
+      "qualifyingComorbidities": [
+        "type-2-diabetes",
+        "hypertension",
+        "severe-osa",
+        "dyslipidemia"
+      ],
+      "supervisedDietMonths": null,
+      "ageMin": 18,
+      "psychEvalRequired": false,
+      "smokingCessationRequired": false,
+      "facilityRequirement": "ASMBS Center of Excellence or MBSAQIP-accredited",
+      "sourceUrl": "https://www.cms.gov/medicare-coverage-database/view/ncd.aspx?NCDId=57",
+      "lastVerified": "2026-04-07",
+      "notes": "Medicare NCD 100.1 requires BMI ≥35 + at least one obesity-related comorbidity + prior failure of medical weight management. Covers RYGB, BPD/DS, sleeve gastrectomy, LAGB. Vertical-banded gastroplasty not covered."
+    },
+    {
+      "id": "aetna-cpb-0157",
+      "label": "Aetna CPB 0157",
+      "type": "payer",
+      "bmiMin": 40,
+      "bmiMinWithComorbidity": 35,
+      "qualifyingComorbidities": [
+        "type-2-diabetes",
+        "severe-osa",
+        "coronary-heart-disease",
+        "medically-refractory-hypertension",
+        "nash"
+      ],
+      "supervisedDietMonths": 6,
+      "ageMin": 18,
+      "psychEvalRequired": true,
+      "smokingCessationRequired": false,
+      "sourceUrl": "https://www.aetna.com/cpb/medical/data/100_199/0157.html",
+      "lastVerified": "2026-04-07",
+      "notes": "Aetna requires 12 supervised diet sessions on separate dates within 2 years (≈6 months elapsed). 2-year documented duration of obesity. Adolescents (post-bone-growth) ≥40 BMI eligible."
+    },
+    {
+      "id": "cigna-0051",
+      "label": "Cigna Coverage Policy 0051",
+      "type": "payer",
+      "bmiMin": 40,
+      "bmiMinWithComorbidity": 35,
+      "qualifyingComorbidities": [
+        "type-2-diabetes",
+        "hypertension",
+        "severe-osa",
+        "gerd",
+        "nash"
+      ],
+      "supervisedDietMonths": 6,
+      "ageMin": 18,
+      "psychEvalRequired": true,
+      "smokingCessationRequired": false,
+      "sourceUrl": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0051_coveragepositioncriteria_bariatric_surgery.pdf",
+      "lastVerified": "2026-04-07",
+      "notes": "Cigna requires preauthorization, documented prior failed weight loss attempts, psychological evaluation, nutritional counseling, and letters of medical necessity."
+    },
+    {
+      "id": "uhc",
+      "label": "UnitedHealthcare",
+      "type": "payer",
+      "bmiMin": 40,
+      "bmiMinWithComorbidity": 35,
+      "qualifyingComorbidities": [
+        "cardiomyopathy",
+        "cardiovascular-disease",
+        "type-2-diabetes",
+        "severe-osa",
+        "coronary-artery-disease"
+      ],
+      "supervisedDietMonths": null,
+      "ageMin": 18,
+      "psychEvalRequired": true,
+      "smokingCessationRequired": false,
+      "facilityRequirement": "MBSAQIP-accredited or equivalent",
+      "sourceUrl": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/bariatric-surgery.pdf",
+      "lastVerified": "2026-04-07",
+      "notes": "UnitedHealthcare requires detailed weight/dietary/exercise history and psychosocial-behavioral evaluation. Plan variation across UHC products."
+    },
+    {
+      "id": "bcbs-fep",
+      "label": "Blue Cross Blue Shield (FEP reference)",
+      "type": "payer",
+      "bmiMin": 40,
+      "bmiMinWithComorbidity": 35,
+      "bmiMinWithT2D": 30,
+      "qualifyingComorbidities": [
+        "type-2-diabetes",
+        "hypertension",
+        "severe-osa",
+        "dyslipidemia"
+      ],
+      "supervisedDietMonths": null,
+      "ageMin": 18,
+      "psychEvalRequired": true,
+      "smokingCessationRequired": false,
+      "sourceUrl": "https://www.fepblue.org/-/media/PDFs/Medical%20Policies/2024/January/Medical%20Policies%20Dec%202023/New%20Add/70147%20Bariatric%20Surgery.pdf",
+      "lastVerified": "2026-04-07",
+      "notes": "FEP medical policy 7.01.47. State BCBS licensees vary; this is the federal employee program reference. Includes a Class 1 obesity + T2D pathway at BMI 30-34.9."
+    },
+    {
+      "id": "humana",
+      "label": "Humana",
+      "type": "payer",
+      "bmiMin": 40,
+      "bmiMinWithComorbidity": 35,
+      "qualifyingComorbidities": [
+        "type-2-diabetes",
+        "hypertension",
+        "severe-osa",
+        "cardiovascular-disease"
+      ],
+      "supervisedDietMonths": 6,
+      "ageMin": 18,
+      "psychEvalRequired": true,
+      "smokingCessationRequired": false,
+      "facilityRequirement": "Center of Excellence; in-network surgeon",
+      "sourceUrl": "https://assets.humana.com/is/content/humana/Bariatric_Surgerypdf",
+      "lastVerified": "2026-04-07",
+      "notes": "Humana requires a 6-month physician-supervised weight loss program, multidisciplinary surgical preparatory regimen, psychological evaluation, and PCP letter of recommendation."
+    }
+  ]
+}
