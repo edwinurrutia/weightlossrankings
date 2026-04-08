@@ -5338,5 +5338,68 @@
       "confidence": "high",
       "notes": "Verified directly via LillyDirect and indirectly via Weight Watchers Med+ disclosure that Foundayo is dispensed through LillyDirect pharmacy. Pricing per Lilly investor announcement and the LillyDirect Self Pay page."
     }
+  },
+  {
+    "_id": "weightwatchers",
+    "name": "WeightWatchers",
+    "slug": "weightwatchers",
+    "description": "WeightWatchers offers Foundayo (orforglipron) through its Med+ program, with care delivered by the WeightWatchers Clinic affiliate medical group. Foundayo is self-pay at $149/mo for the starting dose and up to $299/mo at higher doses, billed separately from the Med+ membership ($25 first month, $74/mo after with a 12-month commitment). WW is one of the few non-pharmacy telehealth programs that lists Foundayo transparently.",
+    "category": "Weight Loss Program",
+    "pricing": [
+      {
+        "dose": "Foundayo starting dose (0.8mg / 2.5mg)",
+        "form": "brand",
+        "monthly_cost": 149,
+        "drug": "orforglipron"
+      },
+      {
+        "dose": "Foundayo higher doses (5.5mg - 17.2mg)",
+        "form": "brand",
+        "monthly_cost": 299,
+        "drug": "orforglipron"
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.5,
+      "ux": 8,
+      "trust": 9,
+      "accessibility": 8.5,
+      "support": 8.5
+    },
+    "features": [
+      "Foundayo",
+      "Board-Certified Clinicians",
+      "70+ Year Track Record"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://www.weightwatchers.com/us/weight-loss-medication/foundayo",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "One of the first non-pharmacy telehealth programs to list Foundayo transparently",
+      "Care delivered by WeightWatchers Clinic (affiliated medical group)",
+      "Supports all 6 Foundayo doses: 0.8mg, 2.5mg, 5.5mg, 9mg, 14.5mg, 17.2mg",
+      "Publishes self-pay drug price on the product page (rare for a telehealth program)",
+      "Combines pharmacotherapy with the WW Points/behavior-change program"
+    ],
+    "cons": [
+      "Med+ membership ($25 first month, $74/mo ongoing) is billed separately from the drug cost \u2014 actual out-of-pocket is higher than the listed $149/mo",
+      "State availability list not published publicly \u2014 requires eligibility quiz",
+      "Insurance coverage for Foundayo not yet available per WW's own disclosure",
+      "No compounded GLP-1 option; Foundayo only",
+      "12-month Med+ commitment required to lock the introductory $25 price"
+    ],
+    "best_for": "Foundayo access with a structured behavior-change program",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "WebFetch live pull",
+      "source_urls": [
+        "https://www.weightwatchers.com/us/weight-loss-medication/foundayo"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07 via the dedicated Foundayo product page at weightwatchers.com/us/weight-loss-medication/foundayo. Page explicitly states: 'Foundayo (self-pay): Starting at $149/mo for your starting dose and up to $299/mo for higher doses' and 'Programs do not include the cost of GLP-1 medications' \u2014 i.e., the membership and drug are billed separately. Foundayo offered in 6 doses: 0.8mg, 2.5mg, 5.5mg, 9mg, 14.5mg, 17.2mg. State list not published on the page \u2014 'All medical services are provided through our affiliated medical group, WeightWatchers Clinic.' Insurance coverage not available per WW's own disclosure ('Weight Watchers is not able to check insurance coverage for Foundayo at this time, but will be able to in the future'). CORRECTION: earlier Wave 5.7 removal was based on an incomplete Chrome MCP scrape that missed this page \u2014 the Foundayo offering is real and pricing is verified against WW's own product page."
+    }
   }
 ]
