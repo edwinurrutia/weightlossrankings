@@ -186,6 +186,30 @@
       "verifier_notes": "PARTIAL DRIFT: dataset showed $74/mo for sema which is TECHNICALLY correct for the 3-month starter period ($224 paid upfront = $74.67/mo effective) but misleading without context. True ongoing price is $149/mo for semaglutide. Restructured dataset to show BOTH tiers with explicit starter vs ongoing dose labels. Cross-verified by 2 independent sources (Med Consumer Watch review + comparesemaglutide.com). Previous WebFetch attempts returned JS-rendered content with no visible pricing; cross-source agent used review aggregation. Per YMYL rule, 2-source minimum met."
     },
     {
+      "slug": "invigor-medical",
+      "verified_price_usd": null,
+      "verified_currency": "USD",
+      "verified_drug": "compounded-semaglutide",
+      "verification_date": "2026-04-08",
+      "verification_method": "cross-source-agent",
+      "evidence_url": "https://invigormedical.com/plans/glp-1-gip-treatments/",
+      "evidence_quote": "Active product pages confirmed: /plans/glp-1-gip-treatments/, /plans/buy-semaglutide-injections/, /where-can-i-get-compounded-tirzepatide-online/. Invigor partners with Tailor Made Compounding (Kentucky) for patient-specific tirzepatide formulations.",
+      "confidence": "medium",
+      "verifier_notes": "OFFERING CONFIRMED, PRICING NOT YET VERIFIED. A first cross-source agent (adb539d4c399b63db) claimed Invigor had discontinued all GLP-1 medications, citing a Nutrition & Nourishment Collective review. A tie-breaker WebFetch-only agent (ae3b425c09fe73a66) contradicted that finding: Invigor's product pages for both compounded semaglutide and compounded tirzepatide are still active, and my own direct WebFetch of invigormedical.com confirmed 'Semaglutide Weight Loss' is still mapped as an active product category in the site tracking code. First agent was wrong — do NOT remove Invigor from the dataset. Current dataset pricing ($199/$269/$339) was NOT verified in this pass because the product pages are JS-rendered and WebFetch cannot see the price tiers. Chrome MCP follow-up required for pricing verification. Confidence: medium — offering is verified, pricing is not."
+    },
+    {
+      "slug": "getrelief-rx",
+      "verified_price_usd": 165,
+      "verified_currency": "USD",
+      "verified_drug": "compounded-semaglutide",
+      "verification_date": "2026-04-08",
+      "verification_method": "chrome-mcp-primary-only",
+      "evidence_url": "https://getreliefrx.com",
+      "evidence_quote": "Semaglutide $165/mo (multiple locations on homepage). Tirzepatide $369 (promotional pricing for first 3 months, $30 off) then $399/mo thereafter. Tirzepatide + Tadalafil combo: $369 promo / $399 standard. Banner: 'Begin a GLP-1 Weight-Care Program Starting at $369'",
+      "confidence": "medium",
+      "verifier_notes": "CHROME MCP PRIMARY SOURCE EXTRACTED but NO independent second source found. Chrome MCP find tool returned 12 semantic element matches with consistent pricing across the homepage: $165/mo sema, $369→$399/mo tirz. Dataset currently has $750/mo for both drugs (with 'Range up to $1000/mo' note) — clearly stale. HOWEVER the cross-source agent (a842abfe7eca72425) explicitly reported 'The search did not return any independent third-party sources (SeekPeptides, GLP-1.com provider database, major telehealth comparison site, or Trustpilot reviews) with their own assessment of GetReliefRx pricing.' Per the YMYL 125% accuracy rule, a single-source price change cannot be committed to the dataset. DATASET INTENTIONALLY NOT UPDATED. The $750 value is almost certainly wrong but we require 2 independent sources before writing a replacement. Recommendation: manual follow-up — either (1) contact GetReliefRx directly for official pricing confirmation, (2) wait for a future audit run to find an independent source, or (3) escalate for manual YMYL review given the magnitude of the discrepancy. Confidence: medium — primary source is strong but insufficient per the rule."
+    },
+    {
       "slug": "fella-health",
       "verified_price_usd": 299,
       "verified_currency": "USD",
