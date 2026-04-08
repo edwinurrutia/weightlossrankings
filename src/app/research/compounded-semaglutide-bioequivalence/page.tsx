@@ -5,6 +5,7 @@ import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import LiveDataCallout from "@/components/research/LiveDataCallout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "compounded-semaglutide-bioequivalence";
 
@@ -618,6 +619,35 @@ export default function CompoundedBioequivalenceArticle() {
             source: "ISMP",
             year: 2024,
             url: "https://www.ismp.org/recommendations/high-alert-medications-acute-list",
+          },
+        ]}
+      />
+      <FaqSchema
+        items={[
+          {
+            question: "Is compounded semaglutide the same as Wegovy?",
+            answer:
+              "Same active ingredient (semaglutide) but produced by different manufacturers under different regulatory frameworks. Brand-name Wegovy is FDA-approved with rigorous purity, potency, and stability testing. Compounded semaglutide is produced by 503A or 503B compounding pharmacies under more limited oversight. There are no head-to-head bioequivalence studies between brand and compounded semaglutide.",
+          },
+          {
+            question: "Is compounded semaglutide as effective as Wegovy?",
+            answer:
+              "Probably similar in patients receiving correctly-dosed, high-quality compounded product, but there is no rigorous head-to-head evidence proving bioequivalence. The clinical effectiveness depends on the API source quality, the compounding pharmacy's processes, and dosing accuracy. Patient reports range from 'identical experience' to 'noticeably different,' which is consistent with variable quality across the 503A pharmacy market.",
+          },
+          {
+            question: "Is compounded semaglutide FDA-approved?",
+            answer:
+              "No. Compounded semaglutide is NOT FDA-approved. Compounding pharmacies are regulated under sections 503A (state-licensed) and 503B (federal outsourcing facilities), but the compounded products themselves do not undergo FDA pre-market review for efficacy, safety, or quality. As of February 2025, FDA enforcement discretion for compounded semaglutide ended, with grace periods through April 2025 for 503A and May 2025 for 503B.",
+          },
+          {
+            question: "How do I know if my compounded semaglutide is high quality?",
+            answer:
+              "Look for: (1) PCAB accreditation of the compounding pharmacy, (2) third-party purity and potency testing certificates, (3) clear labeling with concentration in mg/mL, (4) appropriate refrigerated storage and shipping, (5) disclosed lot numbers and beyond-use dates. Avoid pharmacies that won't disclose where they source the API, won't share testing results, or that ship at room temperature. See our PCAB accreditation investigation for the vetting framework.",
+          },
+          {
+            question: "Are compounded semaglutide and tirzepatide legal in 2026?",
+            answer:
+              "The legal landscape is unsettled. After February 2025 (tirzepatide) and April 2025 (semaglutide), FDA enforcement discretion for routine compounding ended. 503A pharmacies can still compound for individual patients with specific clinical needs (e.g., documented allergy to brand-name inactive ingredients), but routine compounding for patients who could use the brand-name product is no longer protected. Some pharmacies continue compounding under various interpretations of the law; this is an active enforcement area.",
           },
         ]}
       />

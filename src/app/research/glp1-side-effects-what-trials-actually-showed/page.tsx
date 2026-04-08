@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-side-effects-what-trials-actually-showed";
 
@@ -479,6 +480,35 @@ export default function GLP1SideEffectsArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What are the most common side effects of Wegovy and Zepbound?",
+            answer:
+              "Gastrointestinal side effects dominate. STEP-1 reported nausea (44% on semaglutide vs 18% placebo), diarrhea (~30%), constipation (~24%), and vomiting (~25%). SURMOUNT-1 reported similar rates for tirzepatide. Most are mild-to-moderate and concentrated in the first 4-8 weeks. Discontinuation rates due to adverse events were approximately 6-7% in both trials.",
+          },
+          {
+            question: "What percentage of GLP-1 trial patients had to stop because of side effects?",
+            answer:
+              "About 6-7% in both STEP-1 (semaglutide 2.4 mg) and SURMOUNT-1 (tirzepatide 15 mg). The vast majority of patients tolerated the maintenance dose. Slow titration, dose reduction (from the maintenance dose to the previous step), and supportive care for nausea help most patients stay on the drug.",
+          },
+          {
+            question: "Are pancreatitis and thyroid cancer real risks of GLP-1s?",
+            answer:
+              "Both have small numerical signals in trials but neither has been definitively established as causal. The thyroid C-cell tumor signal comes from rodent studies and led to the FDA boxed warning; human studies have not confirmed an increased risk. Pancreatitis has a small numerical excess in some trials, generally accepted as a low-frequency adverse event. Patients with personal or family history of medullary thyroid carcinoma or MEN 2 syndrome should not use GLP-1s.",
+          },
+          {
+            question: "Does Zepbound cause more side effects than Wegovy?",
+            answer:
+              "Counterintuitively, no. Side effect rates between tirzepatide 15 mg and semaglutide 2.4 mg are similar in their pivotal trials, and at the highest doses tirzepatide actually had slightly LOWER nausea rates than semaglutide. Both drugs share the GI side effect profile characteristic of GLP-1 receptor activation.",
+          },
+          {
+            question: "How long do GLP-1 side effects last?",
+            answer:
+              "Most GI side effects are concentrated in the first 4-8 weeks and at each new dose escalation. By the time patients reach the maintenance dose, side effects have substantially diminished or resolved for the majority. A small subset experiences ongoing nausea or constipation requiring management strategies. Severe persistent symptoms warrant a conversation with the prescriber about dose reduction or alternative drugs.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "foundayo-vs-wegovy-vs-zepbound-comparison";
 
@@ -701,6 +702,35 @@ export default function FoundayoComparisonArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Foundayo vs Wegovy vs Zepbound: which is best for weight loss?",
+            answer:
+              "Tirzepatide (Zepbound) produces the most weight loss at -20.9% in SURMOUNT-1, followed by semaglutide (Wegovy) at -14.9% in STEP-1, and orforglipron (Foundayo) at -12.4% in ATTAIN-1. Foundayo is the only oral option (no injection); Wegovy and Zepbound are weekly injections. Zepbound has the highest magnitude but requires injection; Foundayo has the lowest magnitude but is taken as a daily pill.",
+          },
+          {
+            question: "How much does Foundayo cost compared to Wegovy and Zepbound?",
+            answer:
+              "Foundayo is the cheapest of the three brand-name options through manufacturer self-pay programs in 2026: $25/month with insurance through LillyDirect, $149/month self-pay. Wegovy through NovoCare runs $349-499/month dose-tiered. Zepbound through LillyDirect runs $299-699/month dose-tiered. Compounded semaglutide and tirzepatide range from $99-450/month across the telehealth market.",
+          },
+          {
+            question: "Is Foundayo as effective as injectable GLP-1s?",
+            answer:
+              "Roughly 60% as effective as semaglutide and 60% as effective as tirzepatide in absolute terms. ATTAIN-1 reported -12.4% body weight loss at the 36 mg dose vs -14.9% for semaglutide in STEP-1 and -20.9% for tirzepatide in SURMOUNT-1. The trade-off is convenience (daily oral pill, no injection, no refrigeration) and substantially lower cost ($149/month self-pay vs $349-699/month for the injectables).",
+          },
+          {
+            question: "Can I switch from Wegovy to Foundayo or Zepbound?",
+            answer:
+              "Yes, with appropriate clinical oversight and re-titration. Switching always starts at the lowest dose of the new drug regardless of your current dose, and the full titration takes several months. There is no formal washout required. Discuss with your prescribing clinician — particular attention to GI tolerability during the re-titration period.",
+          },
+          {
+            question: "Which drug has the most side effects: Wegovy, Zepbound, or Foundayo?",
+            answer:
+              "Side effect rates are broadly similar across all three, all dominated by GI symptoms (nausea, vomiting, diarrhea, constipation). The Foundayo (orforglipron) trials showed comparable rates to semaglutide. All three carry the same FDA boxed warning for thyroid C-cell tumors (animal data, not confirmed in humans). Discontinuation rates due to adverse events range from 6-9% across the three.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

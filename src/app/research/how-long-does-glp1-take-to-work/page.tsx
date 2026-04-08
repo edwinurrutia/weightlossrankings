@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "how-long-does-glp1-take-to-work";
 
@@ -507,6 +508,35 @@ export default function HowLongDoesGlp1TakeToWorkArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "How long does it take for Wegovy or Zepbound to start working?",
+            answer:
+              "Three different timescales. Appetite suppression starts within hours to days from the first dose. Steady-state plasma concentration is reached in 4-5 weeks per dose level. Measurable weight loss begins around week 4 of the maintenance dose, with clinically meaningful loss (≥5%) around week 16. The trial average plateau is at month 12-18.",
+          },
+          {
+            question: "When will I see weight loss on Ozempic?",
+            answer:
+              "Most patients see measurable weight loss starting around week 4 of the starter dose, with the rate accelerating once they reach the maintenance dose. By week 16 the average STEP-1 patient had lost about 5% body weight; by week 68 they had lost 14.9%. Individual variation is large — some lose faster, some slower, and about 10-15% lose less than 5% even at maintenance.",
+          },
+          {
+            question: "How long does it take to lose 20 pounds on a GLP-1?",
+            answer:
+              "Roughly 4-6 months for the trial average patient. STEP-1 reported approximately 9-10% body weight loss by week 24 of semaglutide 2.4 mg. For a 200 lb starting weight, that's 18-20 lb. SURMOUNT-1 with tirzepatide 15 mg was faster — approximately 13% by week 24 (about 26 lb from a 200 lb baseline). Individual rates vary substantially.",
+          },
+          {
+            question: "Why am I not losing weight in the first month of Wegovy?",
+            answer:
+              "Because you're still on the starter dose (0.25 mg) which is sub-therapeutic. The first month is the titration ramp, not the maintenance phase. The drug hasn't reached steady-state plasma concentration yet, and the dose isn't high enough to produce meaningful weight loss. Patience through the titration period is the right answer.",
+          },
+          {
+            question: "How long until appetite suppression kicks in?",
+            answer:
+              "Within hours to days of the first injection. The gastric emptying delay is mechanical and starts immediately. Most patients notice reduced appetite, smaller portions, and earlier fullness within the first week. The full appetite-suppressive effect takes about 4 weeks at each dose level to reach steady state.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }
