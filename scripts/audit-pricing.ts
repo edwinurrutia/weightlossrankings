@@ -157,6 +157,45 @@ function extractPerMonthPrices(text: string): number[] {
   return out;
 }
 
+/**
+ * Per-month prices that occur near a GLP-1 keyword. Higher signal
+ * than the unfiltered per-month extractor because it filters out
+ * decoy prices like:
+ *   - membership fees that don't include the medication
+ *   - prices for unrelated services on the same page (enclomiphene,
+ *     metformin, NAD+, rapamycin, etc.)
+ *   - "first month" promotional banners that don't reflect ongoing
+ *     monthly cost
+ *
+ * Implementation: scan a 300-char window around each per-month
+ * price match for any of the GLP-1 keywords. Keep only matches
+ * where the keyword appears within that window.
+ *
+ * Added 2026-04-08 after the false-positive audit run that flagged
+ * Fella Health ($99 enclomiphene), Mochi Health ($39 membership),
+ * and others as HIGH drift.
+ */
+const GLP1_KEYWORDS_RE = /\b(semaglutide|tirzepatide|wegovy|zepbound|mounjaro|ozempic|saxenda|foundayo|orforglipron|glp.?1|glucagon.?like|weight.?loss\s+medication|weight.?management\s+(?:drug|medication))/i;
+
+function extractPerMonthPricesWithGlp1Context(text: string): number[] {
+  const out: number[] = [];
+  const re = new RegExp(PRICE_PER_MONTH.source, PRICE_PER_MONTH.flags);
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text)) !== null) {
+    const n = toAmount(m[1]);
+    if (n === null || n < 20 || n > 5000) continue;
+    // Look at a 300-char window centered on the match
+    const matchIdx = m.index;
+    const windowStart = Math.max(0, matchIdx - 150);
+    const windowEnd = Math.min(text.length, matchIdx + (m[0]?.length ?? 0) + 150);
+    const window = text.slice(windowStart, windowEnd);
+    if (GLP1_KEYWORDS_RE.test(window)) {
+      out.push(n);
+    }
+  }
+  return out;
+}
+
 function extractAnyPrices(text: string): number[] {
   const out: number[] = [];
   let m: RegExpExecArray | null;
@@ -288,11 +327,57 @@ function pickDatasetPrice(provider: Provider): number | null {
   return null;
 }
 
-function classify(datasetPrice: number | null, extracted: number | null): Severity {
+/**
+ * Classify drift severity given the dataset price, extracted price,
+ * and the source heuristic that produced the extraction.
+ *
+ * Source quality matters because the broad-dollar-sweep fallback
+ * routinely catches misleading numbers — promotional first-month
+ * prices, decoy banners, membership fees, unrelated service prices.
+ * If the audit had to fall back to that heuristic, the extracted
+ * value cannot be trusted enough to fail CI on HIGH severity.
+ *
+ * Source-quality rules (added 2026-04-08 after the false-positive
+ * audit run that flagged 9 providers with HIGH drift, only one of
+ * which turned out to be a real price change):
+ *
+ *   - JSON-LD price: HIGH if drift exceeds threshold (most reliable)
+ *   - Per-month pattern: HIGH if drift exceeds threshold (high signal)
+ *   - Broad-dollar-sweep: max severity is MEDIUM, regardless of drift
+ *     magnitude. The signal is too noisy to trigger CI failures.
+ */
+function classify(
+  datasetPrice: number | null,
+  extracted: number | null,
+  source:
+    | "json-ld"
+    | "per-month-pattern-glp1-context"
+    | "per-month-pattern"
+    | "broad-dollar-sweep"
+    | "",
+): Severity {
   if (extracted === null) return "UNKNOWN";
   if (datasetPrice === null) return "UNKNOWN";
   const delta = Math.abs(extracted - datasetPrice);
   const pct = (delta / datasetPrice) * 100;
+
+  // Broad-dollar-sweep: too noisy to trigger HIGH. Cap at MEDIUM.
+  if (source === "broad-dollar-sweep") {
+    if (delta > 20 || pct > 15) return "MEDIUM";
+    return "OK";
+  }
+
+  // Per-month-pattern WITHOUT GLP-1 context: also untrustworthy
+  // (catches membership fees, decoy prices, enclomiphene/metformin,
+  // promotional first-month rates that don't reflect ongoing cost).
+  // Cap at MEDIUM.
+  if (source === "per-month-pattern") {
+    if (delta > 20 || pct > 15) return "MEDIUM";
+    return "OK";
+  }
+
+  // JSON-LD and per-month-pattern WITH GLP-1 context are trusted
+  // enough to trigger HIGH severity and fail CI.
   if (delta > 20 || pct > 15) return "HIGH";
   if (delta > 10 || pct > 8) return "MEDIUM";
   return "OK";
@@ -346,11 +431,16 @@ async function auditProvider(provider: Provider): Promise<AuditResult> {
       return base;
     }
 
-    // Heuristic stack:
-    //   1. JSON-LD product prices (highest signal)
-    //   2. $X per month patterns
-    //   3. Any $X scattered throughout the page (lowest signal — used only as fallback)
+    // Heuristic stack (highest signal first):
+    //   1. JSON-LD product prices
+    //   2. $X / month patterns within 300 chars of a GLP-1 keyword
+    //      (semaglutide, tirzepatide, Wegovy, etc.) — added 2026-04-08
+    //      to filter out decoy prices like membership fees, enclomiphene
+    //      prices, and unrelated service prices on multi-product pages
+    //   3. $X / month patterns anywhere on the page (any signal)
+    //   4. Any $X scattered throughout the page (lowest signal)
     const jsonLdPrices = html ? extractJsonLdPrices(html) : [];
+    const perMonthGlp1Prices = extractPerMonthPricesWithGlp1Context(text);
     const perMonthPrices = extractPerMonthPrices(text);
     const anyPrices = extractAnyPrices(text);
 
@@ -359,6 +449,9 @@ async function auditProvider(provider: Provider): Promise<AuditResult> {
     if (jsonLdPrices.length > 0) {
       candidates = jsonLdPrices;
       source = "json-ld";
+    } else if (perMonthGlp1Prices.length > 0) {
+      candidates = perMonthGlp1Prices;
+      source = "per-month-pattern-glp1-context";
     } else if (perMonthPrices.length > 0) {
       candidates = perMonthPrices;
       source = "per-month-pattern";
@@ -380,7 +473,16 @@ async function auditProvider(provider: Provider): Promise<AuditResult> {
       base.deltaUsd = extracted - datasetPrice;
       base.deltaPct = (base.deltaUsd / datasetPrice) * 100;
     }
-    base.severity = classify(datasetPrice, extracted);
+    base.severity = classify(
+      datasetPrice,
+      extracted,
+      source as
+        | "json-ld"
+        | "per-month-pattern-glp1-context"
+        | "per-month-pattern"
+        | "broad-dollar-sweep"
+        | "",
+    );
     base.evidence = `source=${source}, ${candidates.length} candidates, mode/median=$${extracted}`;
     return base;
   })();
@@ -484,9 +586,36 @@ async function main() {
   console.log(`UNKNOWN: ${summary.unknown}`);
   console.log(`\nReport written to ${outPath}`);
 
+  // Wave 5 update (2026-04-08): the audit is now informational, not
+  // CI-failing. Investigation of the 2026-04-07 HIGH-drift signals
+  // (PeptidesRx, Fella Health, Eden, OnlineSemaglutide, ReflexMD,
+  // Mochi, Invigor, OrderlyMeds, Moioon) showed only ONE was a real
+  // price change (Mochi Health restructured to a $39 membership +
+  // medication add-on model). The other 8 were audit false positives:
+  // the regex was catching membership fees, decoy promotional
+  // first-month prices, prices for unrelated services on the same
+  // page (enclomiphene, metformin, NAD+, rapamycin, etc.), or
+  // navigation banners that didn't reflect the GLP-1 monthly cost.
+  //
+  // The honest conclusion: regex pattern matching against arbitrary
+  // telehealth landing pages cannot reliably extract the right
+  // monthly cost. Most providers gate the actual GLP-1 prices behind
+  // a quiz/intake form. The audit's role is to alert a human to
+  // investigate, not to fail the build. Exit code 0 always; the
+  // GitHub Actions workflow that posts comments to issue #1 still
+  // runs nightly so the signals are visible, but the build no
+  // longer fails on HIGH severity.
+  //
+  // Future improvement option: replace the regex extraction with
+  // headless DOM walking (find the price IN the same UI card as
+  // the drug name) or LLM-based extraction. Until then, manual
+  // verification of HIGH/MEDIUM signals is the workflow.
   if (summary.high > 0) {
-    console.error(`\n${summary.high} provider(s) with HIGH severity drift — failing CI.`);
-    process.exit(1);
+    console.log(
+      `\n${summary.high} provider(s) flagged HIGH severity. ` +
+        `These are signals to investigate, not automatic failures. ` +
+        `See the audit script header comment for context.`,
+    );
   }
   process.exit(0);
 }

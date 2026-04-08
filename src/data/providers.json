@@ -2725,16 +2725,16 @@
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Starting",
+        "dose": "All doses (membership $39/mo + medication add-on)",
         "form": "compounded",
-        "monthly_cost": 99,
-        "drug": "semaglutide"
+        "drug": "semaglutide",
+        "monthly_cost": 138
       },
       {
-        "dose": "Starting",
+        "dose": "All doses (membership $39/mo + medication add-on)",
         "form": "compounded",
-        "monthly_cost": 199,
-        "drug": "tirzepatide"
+        "drug": "tirzepatide",
+        "monthly_cost": 238
       }
     ],
     "scores": {
@@ -2782,13 +2782,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-07",
+      "last_verified": "2026-04-08",
       "verified_by": "wave-4-main-session-webfetch",
       "source_urls": [
         "https://joinmochi.com"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. Mochi Health locations page confirms 15 states: AZ, CO, FL, GA, IL, MA, MD, MN, NY, OR, PA, RI, TX, VA, WA. Prescribes compounded semaglutide ($99/mo add-on) and compounded tirzepatide ($199/mo add-on). Previously incorrectly marked as 50 states \u2014 CRITICAL BUG FIX."
+      "notes": "Verified 2026-04-08 via direct WebFetch of joinmochi.com homepage. Mochi Health restructured to a membership + medication add-on model: $39/mo membership PLUS $99/mo for compounded semaglutide ($138 total) or $199/mo for compounded tirzepatide ($238 total). Quoted directly from the homepage: 'Compounded Semaglutide, + $99/mo' and 'Compounded Tirzepatide, + $199/mo'. Membership available in 1-mo, 3-mo, or 12-mo subscription options at the stated rate. The previous dataset value of $99 for both drugs was either pre-restructure or scraped the medication add-on alone without the membership; the new total-cost values are the right comparable figure for cost-comparison tools. Source URL: https://joinmochi.com\n\nPrior notes: Verified live via WebFetch 2026-04-07. Mochi Health locations page confirms 15 states: AZ, CO, FL, GA, IL, MA, MD, MN, NY, OR, PA, RI, TX, VA, WA. Prescribes compounded semaglutide ($99/mo add-on) and compounded tirzepatide ($199/mo add-on). Previously incorrectly marked as 50 states \u2014 CRITICAL BUG "
     }
   },
   {
