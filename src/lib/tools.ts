@@ -333,6 +333,23 @@ export const TOOLS: ToolEntry[] = [
         "src/data/non-glp1-drug-weight-effects.json — 20 drugs with PMID-anchored magnitudes verified by research subagent",
     },
   },
+  {
+    slug: "glp1-exercise-pairing-configurator",
+    title: "GLP-1 Exercise Pairing Configurator",
+    description:
+      "Personalized weekly exercise template for patients on (or starting) a GLP-1 receptor agonist. Inputs your fitness level, age, goal, and time on the drug; outputs a research-backed weekly plan with resistance days, cardio minutes, step target, and protein guidance — all anchored on the S-LiTE trial, ACSM position stands, and the Neeland 2024 lean mass mitigation review.",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    sitemapPriority: 0.85,
+    changeFrequency: "monthly",
+    dataFreshness: {
+      lastVerified: "2026-04-08",
+      nextReview: "2027-04-08",
+      cadence: "annual",
+      sourceSummary:
+        "src/lib/exercise-configurator.ts — anchored on S-LiTE (PMID 33951361), ACSM 2009/2011 position stands, Saint-Maurice 2020 step count cohort, Neeland 2024 GLP-1 review",
+    },
+  },
 ];
 
 /**
