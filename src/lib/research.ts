@@ -912,6 +912,32 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Alcohol use disorder", "PubMed sourced"],
   },
   {
+    slug: "donde-comprar-tirzepatida-mounjaro",
+    title:
+      "Dónde comprar tirzepatida (Mounjaro y Zepbound): precios, programas y cobertura en EE.UU. (2026)",
+    description:
+      "Guía en español sobre los precios de tirzepatida en Estados Unidos — tanto Mounjaro (diabetes tipo 2) como Zepbound (manejo del peso y apnea obstructiva del sueño). Incluye el Self Pay Journey Program de Eli Lilly ($299-$449/mes según la dosis), las tarjetas de ahorro de Mounjaro y Zepbound ($25 por receta con seguro comercial / $499/mes sin cobertura), la alerta crítica de que NO existe un Programa de Asistencia al Paciente para estos medicamentos (a diferencia de Novo Nordisk con Ozempic), la cobertura limitada de Medicare Parte D (Mounjaro para diabetes, Zepbound solo para apnea del sueño a $50/mes desde abril 2026), la cobertura de Medicaid (solo 13 estados cubren Zepbound para obesidad, cuatro estados eliminaron la cobertura en 2025-2026), el estado regulatorio de la tirzepatida compuesta (efectivamente prohibida desde febrero-marzo 2025), y las advertencias de la FDA sobre productos fraudulentos. Todos los datos verificados contra zepbound.lilly.com, mounjaro.lilly.com, lillycares.com, FDA MedWatch y el informe de KFF 2026.",
+    excerpt:
+      "Tirzepatida se vende bajo dos nombres comerciales de Eli Lilly: Mounjaro (aprobado para diabetes tipo 2) y Zepbound (aprobado para el manejo crónico del peso y para apnea obstructiva del sueño moderada a severa). Los precios actuales de auto-pago de Zepbound son $299/mes para 2.5 mg, $399/mes para 5 mg, y $449/mes para 7.5-15 mg con el Journey Program (si el paciente mantiene los surtidos dentro de 45 días). Mounjaro tiene una tarjeta de ahorro de $25 por receta para pacientes con seguro comercial con cobertura, y $499/mes para pacientes con seguro comercial SIN cobertura de Mounjaro. La diferencia CRÍTICA con Ozempic: a diferencia de Novo Nordisk, Eli Lilly NO ofrece un Programa de Asistencia al Paciente gratuito para Mounjaro ni Zepbound — no hay ruta de medicamento gratis para pacientes sin seguro con ingresos bajos. Medicare Parte D cubre Mounjaro para diabetes pero cubre Zepbound ÚNICAMENTE bajo la indicación de apnea obstructiva del sueño (con un copago de $50/mes desde abril de 2026). La tirzepatida compuesta está efectivamente prohibida desde que la FDA terminó la discreción de cumplimiento el 18 de febrero de 2025 (503A) y el 19 de marzo de 2025 (503B). Eli Lilly y la FDA han documentado productos fraudulentos vendidos como 'tirzepatida compuesta' que contenían bacterias, impurezas, o en un caso solo alcohol de azúcar. Esta guía desglosa cada ruta de precio y cobertura con los datos verificados directamente contra las páginas oficiales de Eli Lilly y las comunicaciones de la FDA.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 15,
+    citations: 6,
+    tags: [
+      "Tirzepatida",
+      "Mounjaro",
+      "Zepbound",
+      "Precios",
+      "LillyDirect",
+      "Tarjeta de ahorro",
+      "Medicare OSA",
+      "Compuestos FDA",
+      "Español",
+      "Guía de pacientes",
+    ],
+  },
+  {
     slug: "ozempic-precio-costo-comprar",
     title:
       "Ozempic precio: cuánto cuesta y dónde comprar en Estados Unidos (2026)",
