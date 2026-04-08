@@ -6,9 +6,9 @@ import EmployerSearch from "./EmployerSearch";
 
 export const metadata: Metadata = {
   title:
-    "Does My Employer Cover Wegovy or Zepbound? | Insurance Employer Checker",
+    "Does My Employer Cover Wegovy or Zepbound? Verified Benchmarks + DIY Guide",
   description:
-    "Look up GLP-1 weight loss drug coverage by employer. Wegovy, Zepbound, Ozempic, and Mounjaro coverage status for 30 large US employers including Amazon, Walmart, Google, Microsoft, and the federal government. Patient-reported and publicly-sourced — verify with your HR before assuming coverage.",
+    "Six verified employer GLP-1 coverage benchmarks (Amazon, FedEx, JPMorgan Chase, Microsoft, Federal Government, USPS) plus a step-by-step guide to finding out whether YOUR employer covers Wegovy, Zepbound, Ozempic, or Mounjaro. Most US employers do not publish their pharmacy formularies; this page shows you how to find yours.",
   alternates: { canonical: "/tools/insurance-employer-checker" },
 };
 
@@ -68,11 +68,11 @@ export default function InsuranceEmployerCheckerPage() {
     <main className="mx-auto max-w-4xl px-4 sm:px-6 py-12">
       <ToolSchema
         name="Insurance Employer Checker"
-        description="Look up Wegovy, Zepbound, Ozempic, and Mounjaro coverage at 30 large US employers including Amazon, Walmart, Google, Microsoft, and the federal government."
+        description="Verified employer GLP-1 coverage benchmarks (Amazon, FedEx, JPMorgan Chase, Microsoft, Federal Government, USPS) plus a DIY guide to checking your own employer's pharmacy benefit."
         url="https://weightlossrankings.org/tools/insurance-employer-checker"
         image="https://weightlossrankings.org/tools/insurance-employer-checker/opengraph-image"
         isMedical={false}
-        datePublished="2026-04-07"
+        datePublished="2026-04-08"
       />
       <nav className="mb-6 text-sm text-brand-text-secondary">
         <Link href="/tools" className="hover:text-brand-violet">
@@ -86,37 +86,238 @@ export default function InsuranceEmployerCheckerPage() {
 
       <header className="mb-10">
         <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold mb-4">
-          Employer coverage lookup
+          6 verified employer benchmarks · DIY guide for the rest
         </p>
         <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-brand-text-primary">
           Does my employer cover Wegovy or Zepbound?
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-brand-text-secondary leading-relaxed">
-          A patient-facing lookup of GLP-1 weight loss drug coverage at
-          30 large US employers. Search by name or industry to see
-          reported coverage status for Wegovy, Zepbound, Ozempic, and
-          Mounjaro — then verify the result with your HR or benefits
-          portal before assuming anything.
+          Most US employers do not publish their pharmacy formularies.
+          KFF, Mercer, and Sequoia survey 200+ companies but anonymize
+          the answers. SEC filings rarely disclose benefit details.
+          So instead of guessing, this page does two things: it shows
+          the <strong>6 employers we have verified primary sources for</strong>,
+          and it walks you through{" "}
+          <strong>how to find out about YOUR specific employer</strong> in
+          under 10 minutes.
         </p>
       </header>
 
+      <div className="mb-10 rounded-2xl border-2 border-brand-violet/30 bg-brand-bg-purple p-6">
+        <h2 className="font-heading text-lg font-bold text-brand-text-primary mb-3">
+          Why only 6 employers?
+        </h2>
+        <p className="text-sm text-brand-text-secondary leading-relaxed mb-3">
+          We previously listed 30 employers based on industry-survey
+          aggregate data. When we audited the dataset for primary
+          sources during our 2026-04-07 verification pass, only 5
+          entries had verifiable employer-specific information (Amazon
+          via the 9amHealth program page, FedEx, JPMorgan Chase, the
+          US Federal Government&apos;s FEHB program, and USPS&apos;s
+          PSHB program). We added Microsoft as medium-confidence
+          because the Premera 5.01.621 policy framework is public even
+          though Microsoft&apos;s specific election is not.
+        </p>
+        <p className="text-sm text-brand-text-secondary leading-relaxed mb-3">
+          The other 24 employers we previously listed (Walmart, Target,
+          Apple, Google, Meta, Costco, Home Depot, Lowe&apos;s,
+          Starbucks, Nike, Disney, Boeing, Delta, United, UPS, Bank of
+          America, Wells Fargo, IBM, Salesforce, Oracle, Cisco, Intel,
+          AT&amp;T, Verizon) had no verifiable primary source. KFF,
+          Mercer, and Sequoia interview 200+ employers each year but
+          deliberately anonymize the responses. SEC 10-K filings
+          rarely break out specific drug benefit decisions. Benefits
+          portals require employee logins. So we removed those rows
+          rather than fabricate coverage data — per our editorial
+          policy, &ldquo;honest unverified&rdquo; beats
+          &ldquo;invented coverage.&rdquo;
+        </p>
+        <p className="text-sm text-brand-text-secondary leading-relaxed">
+          The DIY guide below is now the primary use case for this
+          page. The 6 verified rows are reference benchmarks of how
+          the major plan administrators (Aetna, BCBS, UnitedHealthcare,
+          Premera, OPM) handle GLP-1 weight management drugs.
+        </p>
+      </div>
+
+      <h2 className="font-heading text-2xl font-bold text-brand-text-primary mb-4">
+        Verified employer benchmarks (6)
+      </h2>
       <EmployerSearch />
+
+      <div className="mt-12 rounded-2xl border-2 border-brand-violet bg-white p-6 sm:p-8">
+        <h2 className="font-heading text-2xl font-bold text-brand-text-primary mb-4">
+          How to find out if YOUR employer covers Wegovy or Zepbound
+        </h2>
+        <p className="text-base text-brand-text-secondary leading-relaxed mb-6">
+          A 5-step process that works for any US employer-sponsored
+          health plan. Total time: about 10 minutes. The output is
+          the single source of truth for your specific plan year.
+        </p>
+
+        <ol className="space-y-6">
+          <li>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-violet text-white font-bold flex items-center justify-center text-sm">
+                1
+              </div>
+              <div>
+                <h3 className="font-heading text-base font-bold text-brand-text-primary mb-2">
+                  Log into your benefits portal
+                </h3>
+                <p className="text-sm text-brand-text-secondary leading-relaxed">
+                  Most US employers use one of: BenefitFocus, Workday
+                  Benefits, ADP, BSwift, Empyrean, Mercer Marketplace,
+                  Businessolver, or a custom HR portal. Your HR
+                  department can point you at the right URL. The portal
+                  is where the Summary of Benefits and Coverage (SBC),
+                  the Summary Plan Description (SPD), and the
+                  prescription drug formulary all live.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-violet text-white font-bold flex items-center justify-center text-sm">
+                2
+              </div>
+              <div>
+                <h3 className="font-heading text-base font-bold text-brand-text-primary mb-2">
+                  Download the prescription drug formulary
+                </h3>
+                <p className="text-sm text-brand-text-secondary leading-relaxed">
+                  Look for a PDF labeled &ldquo;Formulary,&rdquo;{" "}
+                  &ldquo;Drug List,&rdquo; or &ldquo;Pharmacy Benefit
+                  Summary&rdquo; for the current plan year. It will
+                  list every covered drug with its tier (1, 2, 3, 4)
+                  and any prior authorization or step therapy
+                  requirements. If your plan uses a separate Pharmacy
+                  Benefit Manager (Caremark, ESI, OptumRx, MedImpact,
+                  Prime, Navitus, Costco PBM), the formulary may be on
+                  the PBM&apos;s site instead.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-violet text-white font-bold flex items-center justify-center text-sm">
+                3
+              </div>
+              <div>
+                <h3 className="font-heading text-base font-bold text-brand-text-primary mb-2">
+                  Search the formulary for these exact terms
+                </h3>
+                <ul className="text-sm text-brand-text-secondary leading-relaxed space-y-1 list-disc list-inside">
+                  <li>
+                    <strong>&ldquo;Wegovy&rdquo;</strong> (semaglutide
+                    for weight management)
+                  </li>
+                  <li>
+                    <strong>&ldquo;Zepbound&rdquo;</strong> (tirzepatide
+                    for weight management)
+                  </li>
+                  <li>
+                    <strong>&ldquo;semaglutide&rdquo;</strong>
+                  </li>
+                  <li>
+                    <strong>&ldquo;tirzepatide&rdquo;</strong>
+                  </li>
+                  <li>
+                    <strong>&ldquo;orforglipron&rdquo;</strong> or{" "}
+                    <strong>&ldquo;Foundayo&rdquo;</strong> (the new
+                    oral GLP-1)
+                  </li>
+                  <li>
+                    <strong>
+                      &ldquo;weight management drugs&rdquo;
+                    </strong>{" "}
+                    or <strong>&ldquo;anti-obesity drugs&rdquo;</strong>
+                  </li>
+                  <li>
+                    <strong>&ldquo;exclusion&rdquo;</strong> (some plans
+                    list weight-loss drugs as a category-level
+                    exclusion)
+                  </li>
+                </ul>
+                <p className="text-sm text-brand-text-secondary leading-relaxed mt-3">
+                  If you find Wegovy or Zepbound listed: read the tier
+                  and any PA / step therapy notes. If you don&apos;t
+                  find them at all, they are almost certainly excluded
+                  from your plan&apos;s weight-management benefit.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-violet text-white font-bold flex items-center justify-center text-sm">
+                4
+              </div>
+              <div>
+                <h3 className="font-heading text-base font-bold text-brand-text-primary mb-2">
+                  Cross-reference with the plan administrator&apos;s
+                  clinical policy bulletin
+                </h3>
+                <p className="text-sm text-brand-text-secondary leading-relaxed">
+                  Even if your formulary lists Wegovy, the actual
+                  approval criteria live in the plan administrator&apos;s
+                  clinical policy bulletin. Aetna publishes CPB 0040,
+                  Cigna publishes coverage policies under their{" "}
+                  <em>medical necessity</em> manual, UnitedHealthcare
+                  publishes its &ldquo;Pharmacy Coverage Determination
+                  Guidelines,&rdquo; and BCBS plans publish per-state
+                  medical policies. These documents tell you the
+                  specific BMI thresholds, comorbidity requirements,
+                  and supervised-weight-management prerequisites that
+                  apply.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-violet text-white font-bold flex items-center justify-center text-sm">
+                5
+              </div>
+              <div>
+                <h3 className="font-heading text-base font-bold text-brand-text-primary mb-2">
+                  Call member services if anything is unclear
+                </h3>
+                <p className="text-sm text-brand-text-secondary leading-relaxed">
+                  The phone number is on the back of your insurance
+                  card. Ask: &ldquo;Is Wegovy covered for chronic weight
+                  management on my specific plan, and what are the
+                  prior authorization requirements?&rdquo; They are
+                  required to answer. Get the answer in writing if you
+                  can — chat transcripts and email confirmations
+                  protect you if there is later confusion.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
 
       <div className="mt-10 rounded-2xl border border-brand-violet/30 bg-brand-violet/5 p-6">
         <h2 className="font-heading text-lg font-bold text-brand-text-primary">
-          This is not authoritative coverage information
+          Reference benchmarks, not authoritative for your plan
         </h2>
         <p className="mt-2 text-sm text-brand-text-secondary leading-relaxed">
-          Employer health plans change every plan year. Coverage of
-          anti-obesity GLP-1s like Wegovy and Zepbound is one of the
-          most volatile categories in employer pharmacy benefits right
-          now — plans add, drop, or restrict access mid-year. Even
+          The 6 employer entries above are reference benchmarks. Even
           within the same employer, coverage frequently differs by plan
-          tier, by union vs. non-union status, by state, by deductible
-          status, and by which PBM administers the pharmacy benefit.
-          Use this tool as a starting point only. The single source of
-          truth is your plan&apos;s formulary document and your HR
-          benefits portal.
+          tier, union vs. non-union status, state, deductible status,
+          and which PBM administers the pharmacy benefit. Coverage of
+          anti-obesity GLP-1s changes mid-year as plans add, drop, or
+          restrict access. The single source of truth for{" "}
+          <em>your</em> coverage is the formulary document for{" "}
+          <em>your</em> plan year on <em>your</em> benefits portal.
+          Follow the 5-step DIY guide above.
         </p>
       </div>
 
