@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getDrugBySlug, getAllDrugSlugs } from "@/lib/drugs";
 import { getAllProviders } from "@/lib/data";
+import { sortProvidersByRank } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import ProviderGrid from "@/components/providers/ProviderGrid";
@@ -77,28 +78,8 @@ export default async function DrugPage({
   const allProviders = await getAllProviders();
   const glp1Providers = filterProvidersByDrug(allProviders);
 
-  // Sort by score descending for the grid (top 6)
-  const topProviders = [...glp1Providers]
-    .sort((a, b) => {
-      const scoreA =
-        (a.scores.value +
-          a.scores.effectiveness +
-          a.scores.ux +
-          a.scores.trust +
-          a.scores.accessibility +
-          a.scores.support) /
-        6;
-      const scoreB =
-        (b.scores.value +
-          b.scores.effectiveness +
-          b.scores.ux +
-          b.scores.trust +
-          b.scores.accessibility +
-          b.scores.support) /
-        6;
-      return scoreB - scoreA;
-    })
-    .slice(0, 6);
+  // Sort by score desc with verification tiebreak for the grid (top 6).
+  const topProviders = sortProvidersByRank(glp1Providers).slice(0, 6);
 
   // For cost comparison table: sort all GLP-1 providers by cheapest price ascending
   const providersWithPrice = glp1Providers

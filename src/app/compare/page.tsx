@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo, useCallback, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { Provider } from "@/lib/types";
-import { computeOverallScore } from "@/lib/scoring";
+import { sortProvidersByRank } from "@/lib/scoring";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import ProviderGrid from "@/components/providers/ProviderGrid";
 
@@ -381,7 +381,7 @@ function ComparePageInner() {
   // Filter + sort
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    const out = allProviders.filter((p) => {
+    let out = allProviders.filter((p) => {
       if (q && !p.name.toLowerCase().includes(q)) return false;
       if (selectedCategory !== "all" && p.category !== selectedCategory)
         return false;
@@ -410,9 +410,7 @@ function ComparePageInner() {
     });
 
     if (selectedSort === "score") {
-      out.sort(
-        (a, b) => computeOverallScore(b.scores) - computeOverallScore(a.scores),
-      );
+      out = sortProvidersByRank(out);
     } else if (selectedSort === "price") {
       out.sort((a, b) => minPrice(a) - minPrice(b));
     } else {

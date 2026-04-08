@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getStateBySlug, US_STATES } from "@/lib/states";
-import { getProvidersByState } from "@/lib/data";
+import {
+  getProvidersByState,
+  getProvidersWithUndisclosedStateList,
+} from "@/lib/data";
+import { sortProvidersByRank } from "@/lib/scoring";
 import { getStateContent } from "@/lib/states-content";
 import type { Provider } from "@/lib/types";
 import ProviderGrid from "@/components/providers/ProviderGrid";
@@ -69,7 +73,14 @@ export default async function StatePage({
   }
 
   const allProviders: Provider[] = await getProvidersByState(stateData.code);
-  const providers = allProviders.filter((p) => GLP1_CATEGORIES.has(p.category));
+  const providers = sortProvidersByRank(
+    allProviders.filter((p) => GLP1_CATEGORIES.has(p.category))
+  );
+  const undisclosedProviders = sortProvidersByRank(
+    (await getProvidersWithUndisclosedStateList()).filter((p) =>
+      GLP1_CATEGORIES.has(p.category)
+    )
+  );
   const content = getStateContent(stateData.code);
 
   const stateName = stateData.name;
@@ -247,6 +258,40 @@ export default async function StatePage({
             </p>
           )}
         </section>
+
+        {/* Providers with undisclosed state lists — GLP-1 service verified
+            on the provider's own site, but the full state-availability list
+            is gated behind signup intake. Surfaced separately so users see
+            the option but understand we have not confirmed {stateName}
+            coverage specifically. */}
+        {undisclosedProviders.length > 0 && (
+          <section
+            aria-labelledby="undisclosed-heading"
+            className="space-y-4"
+          >
+            <div className="rounded-xl border border-brand-violet/20 bg-brand-violet/5 p-5">
+              <h2
+                id="undisclosed-heading"
+                className="text-xl font-bold text-brand-text-primary mb-2"
+              >
+                Also consider: {undisclosedProviders.length} providers with
+                undisclosed state coverage
+              </h2>
+              <p className="text-sm text-brand-text-secondary leading-relaxed">
+                These providers offer GLP-1 weight loss service (verified on
+                their own websites) but do not publish a complete
+                state-availability list publicly — their intake flow determines
+                eligibility. We have not independently confirmed {stateName}{" "}
+                coverage for the providers below. Start the signup intake to
+                check whether they serve your state before proceeding.
+              </p>
+            </div>
+            <ProviderGrid
+              providers={undisclosedProviders}
+              trackingSource={`state_${stateData.slug}_undisclosed`}
+            />
+          </section>
+        )}
 
         {/* Top Cities */}
         {content && content.top_cities.length > 0 && (

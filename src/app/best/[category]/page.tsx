@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAllProviders } from "@/lib/data";
-import { computeOverallScore } from "@/lib/scoring";
+import { sortProvidersByRank } from "@/lib/scoring";
 import type { Provider, DrugType } from "@/lib/types";
 import RankedProviderCard from "@/components/providers/RankedProviderCard";
 import QuickPicksTable from "@/components/providers/QuickPicksTable";
@@ -317,13 +317,9 @@ export default async function RankingsPage({
   const providers: Provider[] = filter(all);
 
   // For "cheapest-*" the filter already sorts by price; preserve that.
-  // For all others, sort by overall score descending.
+  // For all others, sort by overall score desc with verification tiebreak.
   const isCheapest = category.startsWith("cheapest-");
-  const sorted = isCheapest
-    ? providers
-    : [...providers].sort(
-        (a, b) => computeOverallScore(b.scores) - computeOverallScore(a.scores)
-      );
+  const sorted = isCheapest ? providers : sortProvidersByRank(providers);
 
   const top5 = sorted.slice(0, 5);
 

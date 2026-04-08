@@ -610,7 +610,58 @@
       "Semaglutide",
       "Tirzepatide"
     ],
-    "states_available": [],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
     "affiliate_url": "https://bmimd.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
@@ -766,57 +817,6 @@
       "verified_by": "Chrome MCP screenshot (user-provided)",
       "confidence": "high",
       "notes": "User-provided screenshot 2026-04-07 of brellohealth.com live state availability map: Brello ships to 34 states + DC (all dark purple 'Available'). Unavailable: WA, CA, NV, MI, IN, WV, NC, SC, AR, AL, TN, HI, MA, CT, NJ, MD. Brello offers compounded GLP-1 (tirzepatide/semaglutide) \u2014 compounded drug disclosure visible on the same page. Page states 'Coming to More States Soon.'"
-    }
-  },
-  {
-    "_id": "callondoc",
-    "name": "CallonDoc",
-    "slug": "callondoc",
-    "description": "On-demand telehealth platform offering compounded semaglutide prescriptions.",
-    "category": "GLP-1 Provider",
-    "pricing": [
-      {
-        "dose": "Starting",
-        "form": "compounded",
-        "monthly_cost": 190,
-        "drug": "semaglutide"
-      }
-    ],
-    "scores": {
-      "value": 8,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
-    },
-    "features": [
-      "Compounded",
-      "Semaglutide",
-      "Tirzepatide"
-    ],
-    "states_available": [],
-    "affiliate_url": "https://www.callondoc.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Both semaglutide and tirzepatide available",
-      "Compounded GLP-1 access"
-    ],
-    "cons": [
-      "Limited public information on program details"
-    ],
-    "best_for": "mainstream telehealth GLP-1 access",
-    "is_featured": false,
-    "external_reviews": {},
-    "verification": {
-      "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
-      "source_urls": [
-        "https://www.callondoc.com/weight-loss"
-      ],
-      "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. CallOnDoc explicitly does NOT prescribe GLP-1 medications. They offer Contrave (naltrexone/bupropion) for weight management and state they do not prescribe controlled or dangerous drugs. Should be removed from the GLP-1 provider directory or recategorized as a non-GLP-1 weight loss platform."
     }
   },
   {
@@ -5468,60 +5468,6 @@
       ],
       "confidence": "high",
       "notes": "Verified directly via LillyDirect and indirectly via Weight Watchers Med+ disclosure that Foundayo is dispensed through LillyDirect pharmacy. Pricing per Lilly investor announcement and the LillyDirect Self Pay page."
-    }
-  },
-  {
-    "_id": "nowpatient-foundayo",
-    "name": "NowPatient",
-    "slug": "nowpatient-foundayo",
-    "description": "Telehealth platform offering Foundayo (orforglipron) prescriptions via online clinician consultation. Confirmed as a Foundayo channel via Endocrine News coverage of the April 2026 rollout. Pricing tier and full state availability TBD as the rollout matures.",
-    "category": "GLP-1 Provider",
-    "pricing": [
-      {
-        "dose": "Foundayo (consult + drug, pricing TBD)",
-        "form": "brand",
-        "monthly_cost": 199,
-        "drug": "orforglipron"
-      }
-    ],
-    "scores": {
-      "value": 7,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7,
-      "support": 7
-    },
-    "features": [
-      "Foundayo",
-      "Telehealth",
-      "Brand Name"
-    ],
-    "states_available": [],
-    "affiliate_url": "https://nowpatient.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Confirmed early Foundayo channel (April 2026 rollout)",
-      "Daily oral pill \u2014 no needles, no refrigeration",
-      "Telehealth consultation included"
-    ],
-    "cons": [
-      "Pricing tier not yet publicly verified \u2014 confirm directly with the provider",
-      "State-by-state availability still being phased in",
-      "Lower mean weight loss vs injectable GLP-1s (~11.1% vs 14.9% Wegovy and 20.9% Zepbound at labeled max)"
-    ],
-    "best_for": "early adopters who want Foundayo via a one-stop telehealth platform",
-    "is_featured": false,
-    "external_reviews": {},
-    "verification": {
-      "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
-      "source_urls": [
-        "https://nowpatient.com"
-      ],
-      "confidence": "high",
-      "notes": "CRITICAL FINDING \u2014 Verified live via WebFetch 2026-04-07. NowPatient website does NOT mention Foundayo (orforglipron) on their treatment listings. They DO prescribe other GLP-1s: Mounjaro (tirzepatide), Wegovy (semaglutide injection AND tablets), Saxenda (liraglutide). HQ Austin TX (1-866-967-1977). The earlier \"NowPatient is a Foundayo dispenser\" claim was based on a fabricated \"Endocrine News\" article. RECOMMEND: rename to \"nowpatient\" without \"-foundayo\" suffix and reclassify as a general GLP-1 provider, OR remove this entry entirely if we already have a more appropriate NowPatient listing."
     }
   }
 ]

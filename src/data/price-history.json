@@ -44,17 +44,6 @@
     ]
   },
   {
-    "provider_slug": "bistromd",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 155
-      }
-    ]
-  },
-  {
     "provider_slug": "bliv",
     "dose": "0.5mg",
     "form": "compounded",
@@ -170,17 +159,6 @@
     ]
   },
   {
-    "provider_slug": "factor",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 107
-      }
-    ]
-  },
-  {
     "provider_slug": "fella-health",
     "dose": "0.5mg",
     "form": "compounded",
@@ -281,17 +259,6 @@
       {
         "date": "2026-04-01",
         "price": 119
-      }
-    ]
-  },
-  {
-    "provider_slug": "green-chef",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 109
       }
     ]
   },
@@ -526,17 +493,6 @@
     ]
   },
   {
-    "provider_slug": "mitoq",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 59
-      }
-    ]
-  },
-  {
     "provider_slug": "mochi-health",
     "dose": "0.5mg",
     "form": "compounded",
@@ -577,17 +533,6 @@
       {
         "date": "2026-04-01",
         "price": 179
-      }
-    ]
-  },
-  {
-    "provider_slug": "nutrisystem",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 360
       }
     ]
   },
@@ -851,17 +796,6 @@
       {
         "date": "2026-04-01",
         "price": 999
-      }
-    ]
-  },
-  {
-    "provider_slug": "thorne-metabolic-health-bundle",
-    "dose": "0.5mg",
-    "form": "compounded",
-    "history": [
-      {
-        "date": "2026-04-01",
-        "price": 129
       }
     ]
   },

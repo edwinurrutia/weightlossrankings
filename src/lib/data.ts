@@ -87,6 +87,25 @@ export async function getProvidersByState(
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
+/**
+ * Providers whose GLP-1 service is verified but whose public-facing
+ * state list is gated behind signup intake. Surfaced in a separate
+ * "Coverage not disclosed" section on /states/[state] so users know
+ * the option exists without implying we've confirmed coverage for
+ * that state.
+ */
+export async function getProvidersWithUndisclosedStateList(): Promise<
+  Provider[]
+> {
+  return providers
+    .filter(
+      (p) =>
+        (p.states_available?.length ?? 0) === 0 &&
+        p.verification?.confidence === "medium"
+    )
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
 export async function getAllBlogPosts(
   limit: number = 20
 ): Promise<BlogPost[]> {
