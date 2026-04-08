@@ -8,7 +8,26 @@
 // same data + functions for the interactive form. Without this split
 // Next 14 errors during static generation when the server tries to
 // serialize a function reference exported from a client module.
+//
+// LAST-DATA-REFRESH: 2026-04-07
+// NEXT-DATA-REFRESH: 2026-07-07 (quarterly — insurer PA policies)
+// REFRESH-CADENCE: quarterly. Each insurer entry below should be
+// re-verified against the published clinical policy bulletin every
+// 90 days (Aetna CPB, Cigna IP_*, UHC PA Notification, BCBS plan
+// policies, Humana, Kaiser, Tricare, Medicare Part D). Cross-check
+// with src/data/insurers.json verification blocks.
 // ---------------------------------------------------------------------------
+
+/**
+ * Verification metadata surfaced by /tools/glp1-prior-auth-letter-generator
+ * in its "Data last verified" footer.
+ */
+export const PRIOR_AUTH_LETTER_DATA_VERIFICATION = {
+  lastVerified: "2026-04-07",
+  nextReview: "2026-07-07",
+  source:
+    "Aetna CPB, Cigna coverage policies, UHC clinical policy bulletins, BCBS FEP, Humana, Kaiser, Tricare, Medicare Part D — re-verified quarterly per the Wave 5 staleness audit",
+} as const;
 
 // ---------------------------------------------------------------------------
 // Types

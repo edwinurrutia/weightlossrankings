@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import References from "@/components/research/References";
 import ToolSchema from "@/components/research/ToolSchema";
+import ToolDataFreshness from "@/components/tools/ToolDataFreshness";
 import ProteinCalculator from "./ProteinCalculator";
 
 export const metadata: Metadata = {
@@ -317,6 +318,7 @@ export default function ProteinCalculatorPage() {
       </section>
 
       <References items={CITATIONS} />
+      <ToolDataFreshness slug="glp1-protein-calculator" />
     </main>
   );
 }

@@ -12,6 +12,7 @@ import { SAVINGS_COMPARISONS } from "@/lib/savings-comparisons";
 import { getAllInsurers } from "@/lib/insurers";
 import { getAllPharmacies } from "@/lib/pharmacies";
 import { RESEARCH_ARTICLES } from "@/lib/research";
+import { TOOLS, NON_TOOLS_INTERACTIVE_PAGES } from "@/lib/tools";
 import {
   getAllWarningLetters,
   getAllWarningLetterSlugs,
@@ -70,73 +71,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily" as const,
       priority: 0.9,
     },
-    // Static tool / guide pages
+    // /tools index page
     {
       url: `${BASE_URL}/tools`,
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.85,
     },
-    {
-      url: `${BASE_URL}/tools/glp1-dose-plotter`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/tools/glp1-unit-converter`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.9, // huge low-KD search demand (~31k/mo)
-    },
-    {
-      url: `${BASE_URL}/tools/glp1-weight-loss-calculator`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.9, // STEP-1/SURMOUNT-1/ATTAIN-1 trial-backed predictor
-    },
-    {
-      url: `${BASE_URL}/tools/glp1-bmi-calculator`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.85, // BMI eligibility + GLP-1 outcome overlay
-    },
-    {
-      url: `${BASE_URL}/tools/glp1-savings-calculator`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.85, // 10-path cost comparison
-    },
-    {
-      url: `${BASE_URL}/tools/glp1-washout-calculator`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/tools/glp1-drug-interaction-checker`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/tools/insurance-employer-checker`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/savings-calculator`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/insurance-checker`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
+    // /tools/* — auto-iterated from src/lib/tools.ts TOOLS registry.
+    // Adding a new tool to that registry now automatically inserts
+    // it here. This was the SEO bug fixed in the Wave 5 staleness
+    // audit; previously tools were manually enumerated and several
+    // shipped tools were missing from the sitemap until somebody
+    // remembered to update this file.
+    ...TOOLS.map((t) => ({
+      url: `${BASE_URL}/tools/${t.slug}`,
+      lastModified: safeDate(t.lastUpdated ?? t.publishedDate),
+      changeFrequency: t.changeFrequency,
+      priority: t.sitemapPriority,
+    })),
+    // Top-level non-/tools-prefixed interactive pages (savings,
+    // insurance checker), also from the registry
+    ...NON_TOOLS_INTERACTIVE_PAGES.map((t) => ({
+      url: `${BASE_URL}/${t.slug}`,
+      lastModified: safeDate(t.lastUpdated ?? t.publishedDate),
+      changeFrequency: t.changeFrequency,
+      priority: t.sitemapPriority,
+    })),
     {
       url: `${BASE_URL}/dose-timeline`,
       lastModified: now,

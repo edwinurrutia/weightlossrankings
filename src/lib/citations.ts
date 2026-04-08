@@ -8,6 +8,16 @@
  *
  * Update `accessedDate` whenever you re-verify a source is still live and
  * accurate. This drives the freshness stamp shown to readers.
+ *
+ * LAST-DATA-REFRESH: 2026-04-07
+ * NEXT-DATA-REFRESH: 2026-05-06 (monthly — pricing constants)
+ * REFRESH-CADENCE:
+ *   - WEGOVY/ZEPBOUND/SAXENDA/FOUNDAYO _MONTHLY_USD constants → monthly
+ *     (manufacturer WAC pricing changes; LillyDirect / NovoCare programs
+ *     update their tiers periodically)
+ *   - PMID-anchored trial citations (STEP-1, SURMOUNT-1, ATTAIN-1, etc.)
+ *     → annual or on label revision (rare)
+ *   - FDA prescribing information → annual or on label revision
  */
 
 export type CitationCategory =

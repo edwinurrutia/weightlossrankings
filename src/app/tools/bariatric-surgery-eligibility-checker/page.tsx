@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import References from "@/components/research/References";
 import ToolSchema from "@/components/research/ToolSchema";
+import ToolDataFreshness from "@/components/tools/ToolDataFreshness";
 import BariatricEligibilityChecker from "./BariatricEligibilityChecker";
 import { DATA_LAST_VERIFIED } from "@/lib/bariatric-eligibility";
 
@@ -341,6 +342,7 @@ export default function BariatricEligibilityCheckerPage() {
       </section>
 
       <References items={CITATIONS} />
+      <ToolDataFreshness slug="bariatric-surgery-eligibility-checker" />
     </main>
   );
 }

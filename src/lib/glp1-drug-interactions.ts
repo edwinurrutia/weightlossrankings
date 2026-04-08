@@ -12,11 +12,34 @@
  * research subagent against the live FDA labels for Wegovy,
  * Ozempic, Zepbound, Mounjaro, and Foundayo.
  *
+ * LAST-DATA-REFRESH: 2026-04-07
+ * NEXT-DATA-REFRESH: 2026-07-07 (quarterly)
+ * REFRESH-CADENCE: quarterly — re-pull FDA Section 7 of all 5
+ * labels via DailyMed and add any newly-flagged interactions.
+ * The current population is initial seed (2026-04-07) and is
+ * NOT exhaustive — it covers the highest-frequency interactions
+ * patient communities surface. Expansion target by 2026-07-07:
+ * 10-15 additional moderate-severity interactions covering
+ * common statins, additional SSRIs, and antihypertensive classes.
+ *
  * SAFETY: This is an educational lookup tool, NOT a clinical
  * decision support system. The patient is always responsible
  * for confirming any specific interaction with their prescriber
  * and pharmacist.
  */
+
+/**
+ * Single source of truth for the verification metadata that
+ * the /tools/glp1-drug-interaction-checker page surfaces in its
+ * "Data last verified" footer. Update both this constant and the
+ * comment block above whenever the FDA labels are re-pulled.
+ */
+export const DRUG_INTERACTION_DATA_VERIFICATION = {
+  lastVerified: "2026-04-07",
+  nextReview: "2026-07-07",
+  source:
+    "FDA Section 7 of Wegovy, Ozempic, Mounjaro, Zepbound, Foundayo prescribing information (DailyMed)",
+} as const;
 
 export type Severity = "contraindicated" | "serious" | "moderate" | "minor";
 

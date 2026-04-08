@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import References from "@/components/research/References";
 import ToolSchema from "@/components/research/ToolSchema";
+import ToolDataFreshness from "@/components/tools/ToolDataFreshness";
 import ReconstitutionCalculator from "./ReconstitutionCalculator";
 
 export const metadata: Metadata = {
@@ -308,6 +309,7 @@ export default function ReconstitutionCalculatorPage() {
       </section>
 
       <References items={CITATIONS} />
+      <ToolDataFreshness slug="glp1-reconstitution-calculator" />
     </main>
   );
 }

@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run check:providers",
+    "prebuild": "npm run check:providers && npm run check:tool-freshness",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "check:providers": "npx tsx scripts/check-provider-schema.ts",
+    "check:tool-freshness": "npx tsx scripts/check-tool-freshness.ts",
     "verify": "npx tsx scripts/verify-providers.ts",
     "mark-verified": "npx tsx scripts/mark-verified.ts",
     "backfill-verification": "npx tsx scripts/backfill-verification.ts",

@@ -108,6 +108,20 @@ export const DRUGS: DrugRow[] = [
  *   Month  6: 80% of total
  *   Month  9: 95% of total
  *   Month 12+: 100% of total
+ *
+ * EDITORIAL APPROXIMATION (not from a single published trial).
+ * Derived as a smoothed envelope across the published weight-loss
+ * trajectories in STEP-1 (Wilding NEJM 2021, PMID 33567185), SURMOUNT-1
+ * (Jastreboff NEJM 2022, PMID 35658024), and ATTAIN-1 (Foundayo USPI
+ * Section 14). All three trials show a steep early decline through
+ * roughly month 6-9 followed by a plateau, and the anchor fractions
+ * here approximate the population mean trajectory across those three
+ * curves. Patient-level variance is large; tools that surface this
+ * function should hedge accordingly.
+ *
+ * LAST-DATA-REFRESH: 2026-04-07
+ * NEXT-DATA-REFRESH: 2026-10-07 (annual editorial review against any
+ * new long-term trial publications)
  */
 export function timeFactor(months: number): number {
   if (months <= 0) return 0;

@@ -22,7 +22,7 @@ interface Employer {
   mounjaro_coverage: CoverageStatus;
   notes: string;
   data_as_of: string;
-  confidence: "verified" | "reported" | "unverified";
+  confidence: "high" | "medium" | "low" | "unverified";
 }
 
 const EMPLOYERS = employersData as Employer[];
@@ -49,10 +49,12 @@ function chipClasses(status: CoverageStatus): string {
 
 function confidenceLabel(c: Employer["confidence"]): string {
   switch (c) {
-    case "verified":
-      return "Verified from plan documents";
-    case "reported":
-      return "Reported / publicly discussed";
+    case "high":
+      return "Verified from primary employer or plan source";
+    case "medium":
+      return "Reported from secondary source — patient should confirm";
+    case "low":
+      return "Low confidence — patient must confirm with HR";
     case "unverified":
     default:
       return "Unverified — patient must confirm";
