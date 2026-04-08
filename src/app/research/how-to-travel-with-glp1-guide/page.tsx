@@ -4,6 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
 import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const HOW_TO_STEPS: HowToStep[] = [
   {
@@ -553,6 +554,35 @@ export default function TravelGuideArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Can I bring my GLP-1 pen through TSA security?",
+            answer:
+              "Yes. TSA explicitly allows injectable medications and the cooling supplies (ice packs, gel packs, freezer bags) needed to keep them cold in carry-on baggage. You do not need a prescription, but bringing the original pharmacy label or a doctor's note avoids questions. Declare the medication to the officer at the start of screening.",
+          },
+          {
+            question: "Should I put my Wegovy or Zepbound in checked baggage?",
+            answer:
+              "No. Cargo holds at altitude can drop below freezing, and freezing destroys GLP-1 medications. Always carry the pen on with you in an insulated medical travel case with an ice pack. Frozen GLP-1 should be discarded even after thawing.",
+          },
+          {
+            question: "How long will an ice pack keep my pen cold during travel?",
+            answer:
+              "A standard insulated diabetic travel case (FRIO, MedAngel) with a frozen gel ice pack typically keeps a pen at refrigerated temperatures for 8-12 hours. For longer trips, plan a refrigeration stop or use a powered cooler. Don't let the ice pack directly contact the pen — wrap it in cloth or use a case with an insulated divider so the medication doesn't freeze.",
+          },
+          {
+            question: "What if my GLP-1 pen gets warm during travel?",
+            answer:
+              "If the pen stayed below 86°F (30°C) and the cumulative time at room temperature is within the in-use window (28 days for Wegovy, 56 days for Ozempic, 21 days for Zepbound/Mounjaro), the pen is still safe per the FDA labels. If it exceeded 86°F or you are unsure, the conservative call is to discard and replace.",
+          },
+          {
+            question: "How do I handle GLP-1 dosing across time zones?",
+            answer:
+              "GLP-1s are once-weekly, so a few hours of time-zone shift is not clinically significant. Take your dose on the same calendar day as usual; if the trip permanently shifts your schedule, choose a new injection day at the destination and stick with it. Do not double-dose to 'catch up' if you are off by a day — skip and resume the next week.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

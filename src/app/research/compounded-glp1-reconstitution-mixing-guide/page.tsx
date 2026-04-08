@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "compounded-glp1-reconstitution-mixing-guide";
 
@@ -428,6 +429,35 @@ export default function ReconstitutionArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Do I need to reconstitute compounded semaglutide or tirzepatide myself?",
+            answer:
+              "It depends on how the compounding pharmacy ships the product. Most 503A pharmacies ship compounded GLP-1 pre-reconstituted in liquid form with a BUD (beyond-use-date) already assigned — no mixing required. Some pharmacies ship lyophilized (freeze-dried) powder vials that require you to add bacteriostatic water before use. Always follow the instructions your specific pharmacy provides.",
+          },
+          {
+            question: "What kind of water do I use to reconstitute compounded GLP-1?",
+            answer:
+              "Bacteriostatic water for injection (0.9% benzyl alcohol preserved) is the standard diluent for multi-dose compounded peptide vials. Do not use sterile water, tap water, or saline unless your pharmacy specifically directs it. The pharmacy should supply the correct diluent with the vial.",
+          },
+          {
+            question: "How do I figure out the dose in 'units' on my syringe?",
+            answer:
+              "The dose math depends on the concentration the pharmacy reconstituted to. For a 10mg/mL compounded semaglutide vial, 0.25mg = 0.025mL = 2.5 units on a U-100 insulin syringe. Use our GLP-1 unit converter tool to run the math for your specific vial concentration and prescribed dose — never guess.",
+          },
+          {
+            question: "How long does a reconstituted compounded vial last?",
+            answer:
+              "The beyond-use-date (BUD) assigned by the compounding pharmacy on the vial label is the single source of truth. Typical BUDs for refrigerated compounded GLP-1 range from 28 to 90 days depending on the pharmacy's stability data. Do not extrapolate past the printed BUD.",
+          },
+          {
+            question: "Can I reconstitute a lyophilized GLP-1 vial with the wrong amount of water?",
+            answer:
+              "No — using the wrong volume of diluent changes the concentration and makes every dose calculation wrong. Always add the exact volume specified on the pharmacy label. If the instructions are unclear, call the pharmacy before drawing any dose.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

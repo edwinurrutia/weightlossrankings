@@ -4,6 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
 import InjectionSitesDiagram from "@/components/research/InjectionSitesDiagram";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "where-to-inject-semaglutide-tirzepatide-guide";
 
@@ -415,6 +416,35 @@ export default function InjectionGuideArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Where should I inject Wegovy, Ozempic, Zepbound, or Mounjaro?",
+            answer:
+              "The FDA-approved injection sites for all four GLP-1 pens are the abdomen (at least 2 inches from the navel), the front of the thigh, and the back of the upper arm. Rotate the site each week to avoid lipohypertrophy (lumps under the skin from repeated injection in the same spot).",
+          },
+          {
+            question: "Does it matter which site I pick for absorption?",
+            answer:
+              "For once-weekly GLP-1s the difference between sites is clinically small. The prescribing information treats abdomen, thigh, and upper arm as interchangeable. Consistency and rotation matter more than which site you pick. If you have very little subcutaneous fat in one area, use a site with more tissue for a more reliable subcutaneous (not intramuscular) injection.",
+          },
+          {
+            question: "Can I inject in the same spot every week?",
+            answer:
+              "No. Repeated injection in the exact same spot causes lipohypertrophy — firm, lumpy tissue that absorbs medication unpredictably and can reduce drug effect. Rotate at least 1 inch from the previous site, and ideally rotate between the abdomen, thigh, and arm over consecutive weeks.",
+          },
+          {
+            question: "Is the abdomen the best site for GLP-1 injections?",
+            answer:
+              "The abdomen is the most commonly chosen site because it's easy to see, easy to pinch, and has ample subcutaneous tissue in most adults. That said, the FDA labels treat thigh and upper arm as equally valid — pick whichever you can access consistently and rotate between them.",
+          },
+          {
+            question: "How deep should the needle go for a GLP-1 injection?",
+            answer:
+              "GLP-1 pens use short (4-5mm) subcutaneous needles designed to deliver the drug into the fat layer just under the skin, not into muscle. Pinch a fold of skin, insert the needle perpendicular to the pinch, and hold for 5-10 seconds after the click to ensure the full dose is delivered.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

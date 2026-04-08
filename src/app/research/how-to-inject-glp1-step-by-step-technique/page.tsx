@@ -4,6 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
 import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
+import FaqSchema from "@/components/research/FaqSchema";
 
 // HowTo JSON-LD source. Each step maps to a real instruction in the
 // article body. Google's HowTo SERP card renders these as numbered
@@ -670,6 +671,35 @@ export default function InjectionTechniqueArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does a GLP-1 injection hurt?",
+            answer:
+              "Most patients describe the injection as a brief pinch or pressure sensation, not significant pain. The pen needles are very short (4-5mm) and thin (typically 32G). Technique matters: inject at room temperature (not straight from the fridge), use a relaxed skinfold, and go in perpendicular to reduce discomfort.",
+          },
+          {
+            question: "Should I inject my GLP-1 cold from the fridge or let it warm up?",
+            answer:
+              "Letting the pen sit at room temperature for 15-30 minutes before injecting reduces sting and discomfort. The FDA labels do not require room-temperature injection, but it's a widely recommended technique. Do not microwave or heat the pen.",
+          },
+          {
+            question: "How long do I hold the pen against my skin after clicking?",
+            answer:
+              "For Wegovy, Ozempic, Zepbound, and Mounjaro, hold the pen in place for at least 5-10 seconds after the dose button clicks to ensure the full dose is delivered. Removing the needle too early can leave medication on the skin instead of inside the tissue.",
+          },
+          {
+            question: "Do I need to pinch the skin before injecting?",
+            answer:
+              "A gentle skinfold pinch helps ensure the needle stays in the subcutaneous fat layer rather than going into muscle, which is especially important for lean patients. Release the pinch only after removing the needle.",
+          },
+          {
+            question: "What should I do if I see a drop of blood after injection?",
+            answer:
+              "A small drop of blood or a tiny bruise is common and harmless — you likely nicked a superficial capillary. Apply gentle pressure with a clean tissue or cotton pad for 30-60 seconds. Do not rub the site. The full dose is already delivered; do not re-inject.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

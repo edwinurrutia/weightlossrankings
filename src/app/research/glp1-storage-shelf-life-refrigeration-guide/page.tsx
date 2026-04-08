@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-storage-shelf-life-refrigeration-guide";
 
@@ -374,6 +375,35 @@ export default function StorageGuideArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "How long can Wegovy stay out of the fridge?",
+            answer:
+              "Wegovy can be stored at room temperature (up to 86°F / 30°C) for up to 28 days per the FDA prescribing information. Beyond 28 days at room temperature, the pen should be discarded. Refrigerated storage (36-46°F / 2-8°C) is the default.",
+          },
+          {
+            question: "How long can Ozempic stay out of the fridge?",
+            answer:
+              "Ozempic can be stored at room temperature (up to 86°F / 30°C) for up to 56 days per the FDA prescribing information — twice as long as Wegovy. Refrigerated storage is the default. Once in use, the pen lasts 56 days regardless of refrigeration.",
+          },
+          {
+            question: "How long can Zepbound and Mounjaro stay out of the fridge?",
+            answer:
+              "Both Zepbound and Mounjaro tirzepatide pens and vials can be stored at room temperature (up to 86°F / 30°C) for up to 21 days per the FDA prescribing information. After 21 days at room temperature, the product should be discarded.",
+          },
+          {
+            question: "Does Foundayo (orforglipron) need to be refrigerated?",
+            answer:
+              "No. Foundayo is the first oral GLP-1 and is stable at room temperature with no refrigeration required. This is one of the major practical advantages of the oral formulation over injectable GLP-1s — no cold chain, no travel ice packs, no spoiled doses.",
+          },
+          {
+            question: "What happens if my Wegovy or Zepbound gets warm?",
+            answer:
+              "If the medication exceeds 86°F (30°C), the FDA prescribing information recommends discarding it. The proteins are heat-sensitive and degradation can reduce potency. Brief excursions below 86°F (e.g., a few hours in a warm car under 86°F) are usually safe; sustained heat exposure or temperatures above 86°F warrant discarding.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }
