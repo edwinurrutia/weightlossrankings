@@ -8,7 +8,6 @@ const navLinks = [
   { label: "Compare", href: "/compare" },
   { label: "Semaglutide", href: "/best/semaglutide-providers" },
   { label: "Tirzepatide", href: "/best/tirzepatide-providers" },
-  { label: "Prices", href: "/price-tracker" },
   { label: "Savings Calculator", href: "/tools/glp1-savings-calculator" },
   { label: "Weight Loss Calculator", href: "/tools/glp1-weight-loss-calculator" },
 ];

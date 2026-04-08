@@ -30,6 +30,7 @@ const footerColumns = [
     // src/components/layout/Navbar.tsx), so surfacing them here is
     // duplicative and wastes footer column space.
     links: [
+      { label: "Live Price Tracker", href: "/price-tracker" },
       { label: "BMI Calculator", href: "/tools/glp1-bmi-calculator" },
       { label: "GLP-1 Unit Converter", href: "/tools/glp1-unit-converter" },
       { label: "Drug Interaction Checker", href: "/tools/glp1-drug-interaction-checker" },
