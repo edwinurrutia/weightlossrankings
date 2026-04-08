@@ -25,11 +25,13 @@ const footerColumns = [
   },
   {
     heading: "Tools",
+    // Weight Loss Calculator and Savings Calculator intentionally
+    // omitted from the footer — both live in the header nav (see
+    // src/components/layout/Navbar.tsx), so surfacing them here is
+    // duplicative and wastes footer column space.
     links: [
-      { label: "Weight Loss Calculator", href: "/tools/glp1-weight-loss-calculator" },
       { label: "BMI Calculator", href: "/tools/glp1-bmi-calculator" },
       { label: "GLP-1 Unit Converter", href: "/tools/glp1-unit-converter" },
-      { label: "Savings Calculator", href: "/tools/glp1-savings-calculator" },
       { label: "Drug Interaction Checker", href: "/tools/glp1-drug-interaction-checker" },
       { label: "Insurance Employer Checker", href: "/tools/insurance-employer-checker" },
       { label: "All Tools", href: "/tools" },
