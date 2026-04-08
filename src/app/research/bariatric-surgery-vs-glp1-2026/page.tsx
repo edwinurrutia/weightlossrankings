@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "bariatric-surgery-vs-glp1-2026";
 
@@ -714,6 +715,35 @@ export default function BariatricVsGlp1Article() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Is bariatric surgery better than Wegovy or Zepbound?",
+            answer:
+              "For absolute weight loss in real-world cohorts, yes. Recent matched-cohort data from NYU Langone (51,085 patients) showed bariatric surgery patients lost approximately 58 lb (24% body weight) at 2 years vs 12 lb (4.7%) on GLP-1 monotherapy — roughly a 5x advantage for surgery, driven largely by GLP-1 discontinuation. Surgery has 30+ years of long-term mortality data (Adams 2007 NEJM PMID 17715409: 40% reduction in all-cause mortality).",
+          },
+          {
+            question: "Do I qualify for bariatric surgery?",
+            answer:
+              "Under the older NIH 1991 criteria still used by Medicare and most commercial insurers: BMI ≥40, OR BMI ≥35 with at least one comorbidity. The 2022 ASMBS / IFSO update (PMID 36280539) lowered the academic threshold to BMI ≥35 regardless of comorbidities and BMI 30-34.9 with metabolic disease — but most US payers have not yet adopted these lower thresholds. Use our bariatric eligibility checker tool to see your status under each standard.",
+          },
+          {
+            question: "How much does bariatric surgery cost?",
+            answer:
+              "Sleeve gastrectomy typically costs $9,500-$23,000 in the US (cash pay or insurance billed); Roux-en-Y gastric bypass $13,000-$25,000. Average commercial billings for both procedures are around $17,000-$22,000. Geographic variation is roughly 2-fold between low-cost and high-cost states. Medicare and 48 of 50 state Medicaid programs cover bariatric surgery with prior authorization for patients meeting the BMI + comorbidity criteria.",
+          },
+          {
+            question: "Can I take a GLP-1 after bariatric surgery?",
+            answer:
+              "Yes. Approximately 25-30% of bariatric surgery patients experience weight regain over time. GLP-1 receptor agonists are now commonly used as a non-revisional option for post-bariatric weight regain, with both semaglutide and tirzepatide showing meaningful additional weight loss in retrospective cohorts. Most commonly initiated 2-4 years after surgery. Check our perioperative GLP-1 guidance article for the safety considerations.",
+          },
+          {
+            question: "What's the long-term mortality benefit of bariatric surgery?",
+            answer:
+              "Adams 2007 in NEJM (PMID 17715409) studied 7,925 gastric bypass patients matched to non-surgical controls and reported a 40% reduction in adjusted all-cause mortality at 7 years. The Swedish Obese Subjects (SOS) study (PMID 17715408) reported a hazard ratio of 0.71 for all-cause mortality at 10.9 years, with sustained benefit at 24-year follow-up (HR 0.77). Cause-specific reductions include 56% lower CAD mortality, 92% lower diabetes mortality, and 60% lower cancer mortality.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

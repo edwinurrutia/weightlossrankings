@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "supplements-weight-loss-glp1-evidence-grade";
 
@@ -893,6 +894,35 @@ export default function SupplementsArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What's the best supplement for weight loss?",
+            answer:
+              "Berberine has the strongest evidence (Asbaghi 2020 meta-analysis: -2.07 kg over 12 weeks across 12 RCTs). Green tea catechins, glucomannan and psyllium fiber, CLA, and MCT oil reach grade B with modest effects of 0.5-2 kg. Even the best supplements produce roughly 1-5% of the weight loss magnitude of semaglutide (-14.9% in STEP-1) or tirzepatide (-20.9% in SURMOUNT-1).",
+          },
+          {
+            question: "Does ashwagandha cause weight loss?",
+            answer:
+              "Probably not directly. Choudhary 2017 (PMID 27055824) tested ashwagandha in 52 chronically stressed adults and showed improvements in stress and food cravings, but the exact weight effect was not disclosed in the abstract. Ashwagandha has better evidence for cortisol reduction than for weight loss specifically. Treat it as a stress-management adjunct, not a primary weight intervention.",
+          },
+          {
+            question: "Is creatine good for weight loss?",
+            answer:
+              "No — creatine actually increases scale weight short-term via water retention. Forbes 2019 meta-analysis showed +0.86 kg total body weight on creatine monotherapy. However, creatine is excellent for preserving lean mass during caloric deficit when paired with resistance training (lean mass +0.68 kg). For a GLP-1 patient trying to preserve muscle, creatine + resistance training is a defensible adjunct, but it's not a weight-loss supplement.",
+          },
+          {
+            question: "Does lemon balm cause weight loss?",
+            answer:
+              "There is no human RCT evidence for lemon balm causing weight loss. The Heshmati 2020 meta-analysis (PMID 32614129) of lemon balm's cardiometabolic effects did not measure body weight. Lemon balm has modest evidence for anxiety and stress, but the weight-loss claim — despite 2,700+ monthly searches — is folklore.",
+          },
+          {
+            question: "Should I take collagen peptides for weight loss?",
+            answer:
+              "No. The Proksch 2014 RCT (PMID 23949208) tested oral collagen peptides for 8 weeks in 69 women and showed significant improvement in skin elasticity, but did not measure weight. Collagen is protein, so it contributes to satiety like any other protein source, but there is no evidence it produces weight loss above and beyond an equivalent protein dose. Collagen IS useful for skin elasticity in mid-life women losing weight rapidly on a GLP-1.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

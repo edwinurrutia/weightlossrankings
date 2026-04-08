@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "exercise-pairing-glp1-lean-mass-preservation";
 
@@ -648,6 +649,35 @@ export default function ExerciseGlp1Article() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Do I still need to exercise on a GLP-1?",
+            answer:
+              "Yes — exercise dramatically improves outcomes. The S-LiTE trial (Lundgren NEJM 2021, PMID 33951361) randomized 195 adults to liraglutide alone, exercise alone, or both for 1 year after a low-calorie diet. The combination produced -9.5 kg vs -6.8 kg with the drug alone and -4.1 kg with exercise alone — a 40% bigger weight loss and roughly double the body fat reduction in the combination arm.",
+          },
+          {
+            question: "What kind of exercise is best on a GLP-1?",
+            answer:
+              "Resistance training plus aerobic activity. The single highest-leverage intervention is 2-3 days/week of compound resistance training (squat, hinge, push, pull, carry) to preserve lean mass. Add 250+ minutes/week of moderate-intensity cardio per ACSM 2009 (PMID 19127177). Walking 8,000-10,000 steps/day per Saint-Maurice 2020 (PMID 32207799) covers most of the cardio requirement.",
+          },
+          {
+            question: "Will Pilates or yoga help me lose weight on a GLP-1?",
+            answer:
+              "Modestly. Pilates has weak weight-loss evidence (Aladro-Gonzalvo 2012, PMID 22196436) but improves core strength and flexibility. Yoga produces no significant body weight effect overall (Lauche 2016, PMID 27058944) but benefits stress and quality of life. Both are reasonable adjuncts for mobility and stress management on a GLP-1, not primary fat-loss modalities.",
+          },
+          {
+            question: "How much protein do I need on a GLP-1 for muscle preservation?",
+            answer:
+              "1.6-2.0 g per kg of body weight per day for most patients on a GLP-1. The Neeland 2024 review (PMID 38937282) recommends targeting 1.6-2.3 g/kg fat-free mass to mitigate the 25-45% lean tissue loss seen in GLP-1 trial body composition substudies. Longland 2016 (PMID 26817506) showed 2.4 g/kg/day plus resistance training added 1.2 kg of lean body mass in a 4-week severe deficit.",
+          },
+          {
+            question: "Can a calorie deficit on a GLP-1 be too aggressive?",
+            answer:
+              "Yes. Murphy & Koehler 2022 (PMID 34623696) showed deficits >500 kcal/day below maintenance impair lean mass gains in resistance-trained adults. GLP-1 appetite suppression can mask under-eating; many patients drop into 800-1000 kcal/day from a 2200-2500 baseline without realizing. Tracking calories and protein for the first 3-6 months catches this. The combination of intense training plus an aggressive deficit produces more lean mass loss than either alone.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "antidepressants-weight-glp1-evidence";
 
@@ -599,6 +600,35 @@ export default function AntidepressantsArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Can I take an SSRI with a GLP-1 like Wegovy or Zepbound?",
+            answer:
+              "Yes. None of the FDA labels for Wegovy, Ozempic, Mounjoint Zepbound, or Foundayo flag any antidepressant as a contraindication or pharmacokinetic interaction. The general gastric-emptying note applies to all oral medications but does not specifically affect SSRIs. Watch for additive nausea in the first 4-8 weeks; staggering dose escalations by 4-8 weeks is a clinical workaround.",
+          },
+          {
+            question: "Which antidepressants cause weight gain?",
+            answer:
+              "Mirtazapine and paroxetine are the most weight-positive. Mirtazapine causes 1.4-3.6 kg gain in the first 6-8 weeks via histamine H1 antagonism. Paroxetine consistently produces more ≥7% weight gain than other SSRIs in head-to-head trials (Fava 2000, PMID 11105740). Citalopram and escitalopram are mildly weight-positive long-term. Sertraline and fluoxetine are roughly weight-neutral.",
+          },
+          {
+            question: "Does Wellbutrin (bupropion) cause weight loss?",
+            answer:
+              "Yes. Anderson 2002 (PMID 12105285) reported 7.2% weight loss with bupropion SR 300 mg/day and 10.1% with 400 mg/day at 24 weeks in obese non-diabetic adults. Bupropion is a norepinephrine and dopamine reuptake inhibitor with no serotonergic activity; it is also one half of Contrave (FDA-approved for chronic weight management).",
+          },
+          {
+            question: "Do GLP-1s cause depression or suicidal thoughts?",
+            answer:
+              "The 2024 EMA PRAC review of 11 GLP-1 products and the Wang 2024 Nature Medicine cohort of 1.8 million patients (PMID 38182782) both concluded there is no causal link between GLP-1 receptor agonists and suicidal ideation. The Wang cohort actually reported a 73% lower hazard for incident suicidal ideation in semaglutide-treated patients. Mood symptoms that emerge after starting a GLP-1 should be evaluated as in any patient, not attributed reflexively to the drug.",
+          },
+          {
+            question: "What's the best antidepressant if I'm trying to lose weight?",
+            answer:
+              "Bupropion (Wellbutrin) and vortioxetine (Trintellix) are the antidepressants with the most favorable weight profile. Bupropion produces meaningful weight loss; vortioxetine is weight-neutral and has cognitive benefits. Sertraline is the most-studied SSRI in obesity-comorbid populations and is a defensible second choice. Avoid mirtazapine and paroxetine first-line if weight is a major concern.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

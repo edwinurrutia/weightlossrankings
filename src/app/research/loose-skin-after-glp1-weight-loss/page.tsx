@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "loose-skin-after-glp1-weight-loss";
 
@@ -596,6 +597,35 @@ export default function LooseSkinArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does GLP-1 weight loss cause loose skin?",
+            answer:
+              "Yes, in patients losing significant weight (typically >20% body weight or >50 kg). Hasanbegovic 2013 (PMID 23578737) studied 360 bariatric patients and reported 92.8% experienced redundant skin problems, with weight loss >50 kg independently predicting severity. The same physiology applies to rapid GLP-1 weight loss. Histology shows real collagen and elastin remodeling that does not fully reverse (Rocha 2021, Light 2010).",
+          },
+          {
+            question: "How can I prevent loose skin while losing weight on a GLP-1?",
+            answer:
+              "The single highest-leverage intervention is preserving lean mass with high-protein intake (1.2-1.6 g/kg/day, or higher on a GLP-1) plus resistance training at least 3 days per week. Longland 2016 (PMID 26817506) showed 2.4 g/kg/day protein plus resistance training added 1.2 kg of lean body mass during a 4-week severe caloric deficit. Lean mass underneath the skin gives it shape; preserving it reduces redundancy.",
+          },
+          {
+            question: "Do collagen supplements help with loose skin after weight loss?",
+            answer:
+              "Proksch 2014 (PMID 23949208) tested oral collagen peptides in 69 healthy mid-life women and showed statistically significant improvement in skin elasticity over 8 weeks — but in healthy women, not post-massive-weight-loss patients. There is no RCT specifically testing collagen for post-weight-loss skin redundancy. Modest evidence for general elasticity, no evidence for repairing existing redundancy.",
+          },
+          {
+            question: "When should I consider body contouring surgery?",
+            answer:
+              "After 12-18 months at stable maintenance weight. The plastic surgery consensus is to wait until weight is stable and ideally at BMI 25-30 before scheduling contouring procedures. Body contouring includes panniculectomy, abdominoplasty, brachioplasty, and circumferential body lift. Quality of life and body image improvements are well-documented (Song 2006), but the underlying skin remains structurally compromised so results have realistic limits.",
+          },
+          {
+            question: "Does drinking more water prevent loose skin on a GLP-1?",
+            answer:
+              "There is no peer-reviewed RCT supporting hydration as primary prevention for post-weight-loss skin redundancy. Adequate hydration is good general advice for skin appearance and GI tolerance on a GLP-1, but the 'drink water to prevent loose skin' claim is folklore, not evidence. Smoking cessation and sun protection have stronger mechanism-level evidence (Knuutinen 2002 PMID 11966688) for skin elasticity overall.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

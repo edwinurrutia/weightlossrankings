@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "hrt-perimenopause-glp1-women-weight";
 
@@ -564,6 +565,35 @@ export default function HrtArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does HRT cause weight loss?",
+            answer:
+              "No. The Norman 2000 Cochrane systematic review of 28 RCTs (n=28,559) concluded that HRT has no significant effect on body weight and cannot prevent menopausal weight gain. Both unopposed estrogen and combined estrogen + progestogen showed weight differences of essentially zero versus no HRT. HRT is appropriate for vasomotor symptoms and bone protection, not for weight management.",
+          },
+          {
+            question: "Why do women gain weight at menopause?",
+            answer:
+              "The menopausal metabolic shift is real. Lovejoy 2008 (PMID 18332882) documented increased visceral adipose tissue, decreased resting energy expenditure, and decreased fat oxidation across the menopausal transition. The shift is primarily visceral fat redistribution rather than total weight gain — same scale weight, more central fat, worse cardiometabolic risk. Estrogen receptor alpha changes drive most of the mechanism.",
+          },
+          {
+            question: "Do women lose more weight on Wegovy than men?",
+            answer:
+              "Yes. The STEP-1 trial sex subgroup analysis reported approximately 14% body weight loss in women on semaglutide 2.4 mg versus approximately 8% in men. Across the STEP and SURMOUNT trials, women generally lose slightly more body weight than men in percent terms on GLP-1 receptor agonists, partly because of higher baseline fat percentages and partly due to behavioral adherence patterns.",
+          },
+          {
+            question: "Can I take HRT and a GLP-1 together?",
+            answer:
+              "Yes, with one important caveat: prefer transdermal estradiol over oral estrogen if you are also on a GLP-1. Tirzepatide reduces oral contraceptive exposure by approximately 20% after the 5 mg dose, and Foundayo (orforglipron) advises 30-day barrier contraception around initiation and dose escalations because of CYP3A4 metabolism plus gastric emptying. Transdermal HRT bypasses both mechanisms. The drug combination is otherwise well tolerated and complementary.",
+          },
+          {
+            question: "Should I start HRT for weight loss?",
+            answer:
+              "No. HRT is appropriate for vasomotor symptoms (hot flashes, night sweats), genitourinary symptoms, and osteoporosis prevention in women under 60 or within 10 years of menopause (NAMS 2022 position statement, PMID 35797481). The Cochrane review confirms HRT does not produce meaningful weight loss. For weight loss specifically, GLP-1 receptor agonists, lifestyle change, or Qsymia are the evidence-based options.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

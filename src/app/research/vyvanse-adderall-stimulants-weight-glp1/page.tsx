@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "vyvanse-adderall-stimulants-weight-glp1";
 
@@ -591,6 +592,35 @@ export default function StimulantsArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does Vyvanse cause weight loss?",
+            answer:
+              "Yes, as a documented secondary effect. McElroy 2015 (PMID 25587645) reported -4.9 kg weight loss in adults with binge-eating disorder treated with Vyvanse 50-70 mg/day over 11 weeks vs -0.1 kg on placebo. Vyvanse is FDA-approved for moderate-to-severe binge-eating disorder in adults (since January 2015), NOT for weight loss as a primary indication. Use for weight loss alone is off-label and not evidence-based.",
+          },
+          {
+            question: "Is Adderall approved for weight loss?",
+            answer:
+              "No. Adderall (mixed amphetamine salts) is FDA-approved only for ADHD and narcolepsy. Any use for weight loss is off-label and not evidence-based. The FDA and DEA both warn that weight lost on stimulants is regained upon discontinuation and that misuse for cosmetic weight loss contributes to stimulant use disorder risk.",
+          },
+          {
+            question: "What is binge-eating disorder?",
+            answer:
+              "BED is a DSM-5 eating disorder defined by recurrent binge episodes (at least one per week for at least three months) with marked distress, eating much more rapidly than normal, eating until uncomfortably full, eating large amounts when not physically hungry, eating alone due to embarrassment, and feelings of disgust or guilt afterward. Hudson 2007 (PMID 16815322) reported lifetime BED prevalence of approximately 2.8% in US adults. It is strongly associated with obesity but distinct from occasional overeating.",
+          },
+          {
+            question: "Can I take Vyvanse with Wegovy or Zepbound?",
+            answer:
+              "There is no published RCT data on combining stimulants with GLP-1 receptor agonists. Theoretical concerns include additive cardiovascular effects (both raise heart rate and blood pressure), additive appetite suppression that may produce excessive nausea or under-eating, and the lack of any specific FDA guidance. The closest analog is the phentermine + GLP-1 literature, which is also off-label. Combination should only be considered with specialist oversight and cardiovascular monitoring.",
+          },
+          {
+            question: "Is Vyvanse generic available?",
+            answer:
+              "Yes. Generic lisdexamfetamine launched on August 25, 2023, after the original compound patent expired and a 6-month pediatric exclusivity extension. Multiple manufacturers (Actavis Elizabeth, Teva, Aurobindo, others) now produce generic versions. Prices have dropped 50-85% from the brand peak. Both Vyvanse and generic lisdexamfetamine remain DEA Schedule II controlled substances.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

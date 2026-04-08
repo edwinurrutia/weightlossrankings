@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "tiktok-water-lemon-chia-weight-loss-myths";
 
@@ -658,6 +659,35 @@ export default function WaterMythsArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does lemon water cause weight loss?",
+            answer:
+              "No. There is no peer-reviewed RCT testing lemon water specifically as a weight-loss intervention. The 'lemon water detox' framing is folklore — the liver and kidneys handle endogenous detoxification continuously in healthy adults. Plain water has weak but real weight evidence (Stookey 2008, Dennis 2010); the lemon adds nothing measurable.",
+          },
+          {
+            question: "Is drinking water before meals an effective weight loss strategy?",
+            answer:
+              "Modestly. Dennis 2010 (PMID 19661958) randomized 48 adults aged 55-75 on a hypocaloric diet to drink 500 mL of water before each main meal versus no premeal water. The water group lost approximately 2 kg more over 12 weeks — a 44% greater weight loss. Mechanism: gastric volume expansion produces acute satiety. The effect attenuates after the first few weeks but the cumulative effect is real.",
+          },
+          {
+            question: "Do chia seeds help with weight loss?",
+            answer:
+              "Modestly, in calorie-restricted contexts. Vuksan 2017 (PMID 28089080) randomized 77 overweight T2D patients to Salba-chia or control over 6 months and reported -1.9 kg vs -0.3 kg (p=0.020). Tavares Toscano 2015 (PMID 25726210) was underpowered (n=26). Chia seeds provide soluble fiber and omega-3 ALA; the effect is small and requires calorie restriction.",
+          },
+          {
+            question: "Does apple cider vinegar cause weight loss?",
+            answer:
+              "Probably not meaningfully. The Launholt 2020 systematic review (PMID 32170375) concluded the evidence for ACV's metabolic and weight effects is insufficient. The Khezri 2018 trial (n=39, J Funct Foods, not PubMed-indexed) reported ~1.2 kg additional weight loss in a calorie-restricted-diet context. The Abou-Khalil 2024 BMJ Nutrition Prevention Health adolescent ACV trial was retracted in September 2025 for improbable data characteristics. Treat any ACV claim with skepticism.",
+          },
+          {
+            question: "What about pink salt water for weight loss?",
+            answer:
+              "There are zero peer-reviewed RCTs of pink salt water (the TikTok 'internal shower') for weight loss. The high sodium load is a real concern for hypertensive, kidney disease, and salt-sensitive patients. Himalayan pink salt is chemically nearly identical to table salt with negligible trace mineral content. This trend is folklore and potentially harmful in vulnerable populations.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

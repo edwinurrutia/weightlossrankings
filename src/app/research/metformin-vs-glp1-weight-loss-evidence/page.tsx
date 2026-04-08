@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "metformin-vs-glp1-weight-loss-evidence";
 
@@ -607,6 +608,35 @@ export default function MetforminArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does metformin cause weight loss?",
+            answer:
+              "Yes, but modestly. The Diabetes Prevention Program (Knowler 2002 NEJM, PMID 11832527) reported -2.1 kg with metformin vs -0.1 kg placebo over 2.8 years in 3,234 adults with prediabetes. The 15-year DPPOS follow-up (Apolzan 2019, PMID 31009939) reported -6.2% sustained weight loss in metformin responders. The Seifarth 2013 study in non-diabetic obese adults (PMID 23147210) reported -5.8 kg over 6 months. Real but small.",
+          },
+          {
+            question: "Is metformin as good as Ozempic for weight loss?",
+            answer:
+              "No. Metformin produces approximately 1/5 the weight loss of semaglutide and 1/7 of tirzepatide. STEP-1 reported -14.9% body weight on semaglutide 2.4 mg over 68 weeks; SURMOUNT-1 reported -20.9% on tirzepatide 15 mg. Metformin's typical 2-3 kg over 1-2 years is real and durable but dramatically smaller in absolute terms.",
+          },
+          {
+            question: "How much weight will I lose on metformin?",
+            answer:
+              "Approximately 2-3 kg over the first year for most people, with larger effects in patients with significant insulin resistance or PCOS. The DPP cohort averaged -2.1 kg over 2.8 years; the Seifarth non-diabetic obesity cohort averaged -5.8 kg over 6 months. Individual responses vary substantially; about 25% of patients are 'responders' who achieve ≥5% weight loss long-term.",
+          },
+          {
+            question: "Can I take metformin and a GLP-1 together?",
+            answer:
+              "Yes. Metformin + GLP-1 is the standard of care in type 2 diabetes and has been studied in the GLP-1 registration trials. There is no pharmacokinetic interaction. Adding metformin to a GLP-1 in T2D adds a small additional weight benefit and contributes the cardiovascular and possibly cancer benefits documented in long-term metformin cohorts.",
+          },
+          {
+            question: "Is metformin safer than a GLP-1?",
+            answer:
+              "Metformin has the longest safety record of any obesity drug — over 60 years of widespread clinical use. It is contraindicated in severe renal impairment and during contrast imaging due to lactic acidosis risk. GLP-1 receptor agonists have a shorter safety record but are also generally safe in trials, with main concerns being GI side effects, the boxed warning for thyroid C-cell tumors in animal models, and rare pancreatitis. Both are generally well tolerated when used appropriately.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

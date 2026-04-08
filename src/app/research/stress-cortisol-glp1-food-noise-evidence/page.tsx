@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "stress-cortisol-glp1-food-noise-evidence";
 
@@ -691,6 +692,35 @@ export default function CortisolArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does stress cause weight gain?",
+            answer:
+              "Yes, indirectly. Chronic stress activates the HPA axis (cortisol release) which is mechanistically linked to visceral fat accumulation (Björntorp 2001, PMID 12119665). Epel 2000 (PMID 11020091) showed women with central body fat secrete more cortisol under stress. The Wardle 2011 longitudinal meta-analysis (PMID 20948519) confirmed a small but significant positive association between stress and weight gain, with stronger effects in men and over longer follow-up.",
+          },
+          {
+            question: "Does sleep deprivation cause weight gain?",
+            answer:
+              "Yes. Cappuccio 2008 (PMID 18517032) meta-analyzed 45 studies of 634,511 participants and reported that short sleep duration is independently associated with adult obesity (OR 1.55, 95% CI 1.43-1.68). Spiegel 2004 (PMID 15583226) showed that just 2 nights of sleep restriction in healthy young men reduced leptin 18%, increased ghrelin 28%, and increased cravings for high-carbohydrate foods 33-45%. Sleep is the highest-leverage modifiable factor.",
+          },
+          {
+            question: "What is 'food noise' and do GLP-1s reduce it?",
+            answer:
+              "Food noise refers to persistent intrusive thoughts about food that drive eating behavior. GLP-1 receptor agonists appear to reduce food noise via mesolimbic reward pathway modulation — the GLP-1 receptor is expressed in the ventral tegmental area and nucleus accumbens. Patient surveys suggest that before starting a GLP-1, 62% report constant food-related thoughts; on semaglutide, that drops to about 16%. Neuroimaging shows decreased cortical activation to high-calorie food cues.",
+          },
+          {
+            question: "Does ashwagandha help with weight loss through cortisol reduction?",
+            answer:
+              "Modestly. Salve 2019 (PMID 32021735) and Lopresti 2019 (PMID 31517876) both showed ashwagandha reduces cortisol in stressed adults — 18-48% magnitude across the trials. Neither was a weight-loss trial; weight effects were not measured directly. Treat ashwagandha as a stress-management adjunct that may indirectly support stress eating, not as a primary weight-loss intervention.",
+          },
+          {
+            question: "How effective is mindfulness for weight loss?",
+            answer:
+              "Mindfulness-based stress reduction has moderate evidence for anxiety and depression but only weak evidence for direct weight loss. Goyal 2014 in JAMA Internal Medicine (PMID 24395196) meta-analyzed 47 trials covering 3,515 participants and rated MBSR evidence as moderate for anxiety (effect size 0.38) and depression (0.30) but low for direct weight gain prevention. MBSR is a defensible adjunct for stress-eating patients; not a primary weight-loss intervention.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "berberine-vs-glp1-evidence-review";
 
@@ -588,6 +589,40 @@ export default function BerberineVsGlp1Article() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Is berberine really 'nature's Ozempic'?",
+            answer:
+              "No. The largest meta-analysis of berberine and body weight (Asbaghi 2020, 12 RCTs, PMID 32690176) reported a mean weight reduction of −2.07 kg over ~12 weeks. Semaglutide (STEP-1) produced −14.9% body weight and tirzepatide (SURMOUNT-1) −20.9% — roughly 7-10× berberine's magnitude. There is no peer-reviewed RCT comparing berberine head-to-head with any GLP-1.",
+          },
+          {
+            question: "How much weight loss does berberine cause?",
+            answer:
+              "Approximately 2 kg (about 4-5 lb) over 12 weeks in the published meta-analysis (Asbaghi 2020). This is real, statistically significant, and modest. By comparison, semaglutide produces ~15 kg over 68 weeks and tirzepatide ~22 kg over 72 weeks at the highest tested doses.",
+          },
+          {
+            question: "Does berberine work for type 2 diabetes?",
+            answer:
+              "Yes, modestly. The Yin 2008 trial (PMID 18442638, n=36) reported A1c reductions of about 2 percentage points with berberine 500 mg three times daily over 3 months — similar to metformin 500 mg three times daily in the same trial. Larger meta-analyses (Lan 2015, Dong 2012) confirm directional benefit but most underlying trials are small, short, and methodologically weak.",
+          },
+          {
+            question: "Why does berberine have such low oral bioavailability?",
+            answer:
+              "Liu 2010 (PMID 20634337) measured oral bioavailability in rats at approximately 0.36% — about half the dose passes intact through the GI tract and another half is disposed of by the small intestine before reaching systemic circulation. Human bioavailability data of comparable rigor are essentially absent. The very low absorption is the single biggest reason berberine cannot replicate the systemic effects of injectable GLP-1s.",
+          },
+          {
+            question: "Is berberine safe to take with other medications?",
+            answer:
+              "Berberine inhibits CYP3A4, the same liver enzyme that metabolizes statins, and Feng 2018 (PMID 30086269) demonstrated enhanced cardiotoxicity when berberine was combined with statins in vitro. Berberine should also be avoided in pregnancy and in jaundiced neonates because it displaces bilirubin from albumin (Chan 1993, PMID 8513024). Discuss any berberine use with your prescriber, especially if you take statins.",
+          },
+          {
+            question: "Should I take berberine instead of a GLP-1?",
+            answer:
+              "Probably not, if your goal is significant weight loss. Berberine produces roughly 1/7 to 1/10 the magnitude of semaglutide or tirzepatide. For patients who cannot access or tolerate GLP-1s, berberine has a real but modest place as an adjunct in mild glucose elevation. For patients seeking ≥10% weight loss, neither berberine nor any other supplement is going to get them there alone.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

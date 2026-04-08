@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "topamax-qsymia-topiramate-weight-loss";
 
@@ -643,6 +644,35 @@ export default function TopamaxArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does topiramate cause weight loss?",
+            answer:
+              "Yes. Bray 2003 (PMID 12805393) reported approximately 6.3% body weight loss at the 192-384 mg/day doses over 6 months in obese adults. Astrup 2004 (PMID 15536230) showed 16.5% weight loss from baseline after a low-calorie diet plus 192 mg topiramate maintenance over 52 weeks. Topiramate is FDA-approved for epilepsy and migraine, NOT monotherapy weight loss — only the Qsymia combination is approved for weight management.",
+          },
+          {
+            question: "How much weight does Qsymia cause patients to lose?",
+            answer:
+              "At the maximum 15 mg phentermine / 92 mg topiramate dose, approximately 10% body weight loss at 56 weeks (CONQUER, PMID 21481449: -10.2 kg) and 12% at 108 weeks (SEQUEL, PMID 22158731). EQUIP (PMID 22051941) in severely obese adults reported -10.9% at 56 weeks. Roughly two-thirds of semaglutide's magnitude and half of tirzepatide's.",
+          },
+          {
+            question: "What is the 'dopamax' effect?",
+            answer:
+              "'Dopamax' is the patient nickname for topiramate's cognitive side effects: word-finding difficulty, slowed processing speed, memory impairment, and difficulty with concentration. Incidence is dose-dependent — roughly 10-20% at the lower Qsymia doses, climbing to 40-50% or higher at the high monotherapy doses (192-384 mg) used in epilepsy. Effects are reversible on discontinuation but limit how high the dose can be pushed in clinical practice.",
+          },
+          {
+            question: "Does Qsymia cause kidney stones or birth defects?",
+            answer:
+              "Yes, both are real risks. Maalouf 2010 (PMID 21165738) reported 10.7% symptomatic kidney stones and 20% asymptomatic stones in long-term topiramate users, driven by hypocitraturia from carbonic anhydrase inhibition. Topiramate also causes a 5.16-fold increased risk of cleft lip/palate at doses >100 mg/day during the first trimester (FDA Drug Safety Communication 2011), which is why Qsymia ships with a REMS program requiring effective contraception and monthly pregnancy testing in women of childbearing age.",
+          },
+          {
+            question: "Can Qsymia be combined with a GLP-1 like Wegovy?",
+            answer:
+              "There is no published RCT data on combining Qsymia with a GLP-1, and the combination is not FDA-approved. Some obesity-medicine specialists use the combination off-label for GLP-1 plateau cases, but cardiovascular monitoring is warranted because phentermine raises heart rate and blood pressure while GLP-1s also raise heart rate by 2-4 bpm. The phentermine + GLP-1 combination has more clinical experience documented than Qsymia + GLP-1.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

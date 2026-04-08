@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "sglt2-inhibitors-vs-glp1-jardiance-farxiga";
 
@@ -643,6 +644,35 @@ export default function Sglt2VsGlp1Article() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does Jardiance cause weight loss?",
+            answer:
+              "Yes, but modestly. Empagliflozin (Jardiance) and other SGLT2 inhibitors typically produce 2-3 kg of weight loss via urinary glucose excretion. The EMPA-REG OUTCOME trial (PMID 26378978) showed cardiovascular benefits as the dominant indication, with weight loss as a secondary effect. By comparison, semaglutide (STEP-1) produces ~14.9% body weight reduction.",
+          },
+          {
+            question: "What's the difference between SGLT2 inhibitors and GLP-1s?",
+            answer:
+              "SGLT2 inhibitors block glucose reabsorption in the kidneys, causing the body to excrete ~70 g of glucose per day via urine. GLP-1 receptor agonists work centrally and on the GI tract to reduce appetite and slow gastric emptying. SGLT2 produces 2-3 kg weight loss; GLP-1s produce 14-21%. Both have cardiovascular and kidney outcome benefits but with different evidence bases and indications.",
+          },
+          {
+            question: "Can I take Jardiance and Ozempic together?",
+            answer:
+              "Yes. The combination of an SGLT2 inhibitor with a GLP-1 receptor agonist is now first-line in the ADA 2025 Standards of Care for type 2 diabetes patients with both obesity and cardiovascular or kidney comorbidities. DURATION-8 (PMID 27651331) and AWARD-10 (PMID 29483060) tested combinations and showed additive benefits. There is no pharmacokinetic interaction.",
+          },
+          {
+            question: "Which SGLT2 inhibitor is best for heart failure?",
+            answer:
+              "Empagliflozin (Jardiance) and dapagliflozin (Farxiga) both have FDA-approved heart failure indications based on EMPEROR-Reduced (PMID 32865377), EMPEROR-Preserved (PMID 34449189), DAPA-HF (PMID 31535829), and DELIVER (PMID 36027570). Both work in HFrEF and HFpEF — and both work whether or not the patient has diabetes. The two are largely equivalent for HF; choice often comes down to insurance coverage.",
+          },
+          {
+            question: "What are the main side effects of SGLT2 inhibitors?",
+            answer:
+              "Genital mycotic infections are the most common, occurring in approximately 6% of patients (vs 2% on placebo) and more frequently in women than men. Rare but serious side effects include euglycemic diabetic ketoacidosis (FDA Drug Safety Communication 2015) and Fournier's gangrene (FDA boxed warning 2018). Volume depletion is common in elderly patients on diuretics. The CANVAS amputation signal (PMID 28605608) was specific to canagliflozin.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }
