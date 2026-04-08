@@ -7,6 +7,29 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Canonical host normalization: 301 every www.weightlossrankings.org
+      // request to weightlossrankings.org. Vercel serves both hostnames
+      // because the apex and www DNS records both point at the project,
+      // and before this rule Google was indexing www variants and marking
+      // them "Alternate page with proper canonical tag" because the
+      // <link rel="canonical"> tag (and the OpenGraph URL, the sitemap
+      // entries, and the JSON-LD organization URL) all use the bare apex.
+      // The 301 below makes the redirect happen at the edge before Next
+      // renders, so Google never sees the www variant. This eliminates
+      // the GSC warning and consolidates link equity onto a single
+      // canonical host. Pairs with the canonical declaration in
+      // src/app/layout.tsx and src/app/sitemap.ts.
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.weightlossrankings.org",
+          },
+        ],
+        destination: "https://weightlossrankings.org/:path*",
+        permanent: true,
+      },
       // Spanish-language articles originally lived under the English
       // /research/ tree because that's where the registry pointed at
       // launch. We've moved them to a proper /es/research/ subdirectory
