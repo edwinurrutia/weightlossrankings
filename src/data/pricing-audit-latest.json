@@ -1,0 +1,7 @@
+{
+  "_comment": "This file is auto-written by scripts/audit-pricing.ts. It is the most recent audit snapshot, committed so the verifier (scripts/verify-pricing.ts) and CI workflows can read it. The empty initial state below is overwritten on the first audit run.",
+  "runDate": "1970-01-01T00:00:00.000Z",
+  "providersAudited": 0,
+  "results": [],
+  "summary": { "high": 0, "medium": 0, "ok": 0, "unknown": 0 }
+}

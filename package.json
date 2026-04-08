@@ -18,6 +18,7 @@
     "scrape:fast": "npx tsx scripts/scrape-providers.ts --no-browser",
     "scrape:auto": "npx tsx scripts/scrape-providers.ts --auto-update",
     "audit:pricing": "npx tsx scripts/audit-pricing.ts",
+    "verify:pricing": "npx tsx scripts/verify-pricing.ts",
     "audit:sources": "npx tsx scripts/audit-sources.ts",
     "scrape:fda-letters": "npx tsx scripts/scrape-fda-warning-letters.ts"
   },

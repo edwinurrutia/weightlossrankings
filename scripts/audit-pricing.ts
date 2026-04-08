@@ -68,6 +68,32 @@ interface AuditReport {
   summary: { high: number; medium: number; ok: number; unknown: number };
 }
 
+interface VerificationEntry {
+  slug: string;
+  verified_price_usd: number | null;
+  verified_currency: string;
+  verified_drug: string;
+  verification_date: string;
+  verification_method: string;
+  evidence_url: string;
+  evidence_quote: string;
+  confidence: "high" | "medium" | "low";
+  verifier_notes: string;
+}
+
+interface VerificationLog {
+  _schema?: unknown;
+  entries: VerificationEntry[];
+}
+
+const VERIFICATION_LOG_PATH = "src/data/pricing-verification-log.json";
+const AUDIT_LATEST_PATH = "src/data/pricing-audit-latest.json";
+const VERIFICATION_DOWNGRADE_WINDOW_DAYS = 30;
+// Drift tolerance: a verified price within 5% of the dataset price
+// is considered a match (covers cents-level rounding, A/B-tested
+// pricing, and mid-cycle adjustments).
+const VERIFICATION_MATCH_TOLERANCE_PCT = 5;
+
 // ---------------- args ----------------
 
 const args = process.argv.slice(2);
@@ -346,6 +372,50 @@ function pickDatasetPrice(provider: Provider): number | null {
  *   - Broad-dollar-sweep: max severity is MEDIUM, regardless of drift
  *     magnitude. The signal is too noisy to trigger CI failures.
  */
+// Load the human/Chrome-MCP-verified pricing log. Used to auto-
+// downgrade severity for any provider where a recent verification
+// confirms the dataset price is correct.
+function loadVerificationLog(): VerificationLog {
+  try {
+    const path = join(process.cwd(), VERIFICATION_LOG_PATH);
+    const raw = readFileSync(path, "utf-8");
+    return JSON.parse(raw);
+  } catch {
+    return { entries: [] };
+  }
+}
+
+// Returns the most recent verification entry for the given slug if
+// it falls within the downgrade window AND the verified price
+// matches the current dataset price within the tolerance band.
+// Returns null if no match (i.e., severity should NOT be downgraded).
+function findMatchingVerification(
+  slug: string,
+  datasetPrice: number | null,
+  log: VerificationLog,
+): VerificationEntry | null {
+  if (datasetPrice === null) return null;
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - VERIFICATION_DOWNGRADE_WINDOW_DAYS);
+  const cutoffIso = cutoff.toISOString().slice(0, 10);
+
+  const recent = log.entries
+    .filter(
+      (e) => e.slug === slug && e.verification_date >= cutoffIso && e.verified_price_usd !== null,
+    )
+    .sort((a, b) => b.verification_date.localeCompare(a.verification_date));
+
+  if (recent.length === 0) return null;
+
+  const top = recent[0];
+  const verifiedPrice = top.verified_price_usd as number;
+  const delta = Math.abs(verifiedPrice - datasetPrice);
+  const pct = (delta / datasetPrice) * 100;
+
+  if (pct <= VERIFICATION_MATCH_TOLERANCE_PCT) return top;
+  return null;
+}
+
 function classify(
   datasetPrice: number | null,
   extracted: number | null,
@@ -545,8 +615,12 @@ async function main() {
     process.exit(2);
   }
 
+  // Load the human/Chrome-MCP-verified pricing log so we can auto-
+  // downgrade any drift signals that have already been confirmed
+  // correct within the downgrade window.
+  const verificationLog = loadVerificationLog();
   console.log(
-    `audit-pricing: auditing ${sample.length}/${providers.length} providers (browser=${!NO_BROWSER})`
+    `audit-pricing: auditing ${sample.length}/${providers.length} providers (browser=${!NO_BROWSER}, verification log: ${verificationLog.entries.length} entries)`
   );
 
   const results: AuditResult[] = [];
@@ -554,6 +628,22 @@ async function main() {
     const p = sample[i];
     process.stdout.write(`[${i + 1}/${sample.length}] ${p.name}... `);
     const r = await auditProvider(p);
+
+    // Auto-downgrade severity if a recent verification entry confirms
+    // the dataset price. Verification log is the source of truth when
+    // it exists.
+    if (r.severity === "HIGH" || r.severity === "MEDIUM") {
+      const verification = findMatchingVerification(
+        r.slug,
+        r.datasetPrice,
+        verificationLog,
+      );
+      if (verification) {
+        r.evidence = `${r.evidence} | downgraded by verification ${verification.verification_date} (${verification.confidence})`;
+        r.severity = "OK";
+      }
+    }
+
     results.push(r);
     console.log(r.severity + (r.error ? ` (${r.error})` : ""));
     // Tiny politeness delay between providers
@@ -578,6 +668,14 @@ async function main() {
   const outPath = `/tmp/pricing-audit-${isoDate}.json`;
   writeFileSync(outPath, JSON.stringify(report, null, 2));
 
+  // Also write a committed snapshot at src/data/pricing-audit-latest.json
+  // so the verifier (scripts/verify-pricing.ts) and CI workflows can
+  // read the most recent candidates without having to dig in /tmp.
+  // This file is meant to be committed; it represents the audit's
+  // last-known-state across runs.
+  const committedSnapshotPath = join(process.cwd(), AUDIT_LATEST_PATH);
+  writeFileSync(committedSnapshotPath, JSON.stringify(report, null, 2));
+
   printTable(results);
   console.log("\n========== SUMMARY ==========");
   console.log(`HIGH:    ${summary.high}`);
@@ -585,37 +683,45 @@ async function main() {
   console.log(`OK:      ${summary.ok}`);
   console.log(`UNKNOWN: ${summary.unknown}`);
   console.log(`\nReport written to ${outPath}`);
+  console.log(`Committed snapshot:  ${committedSnapshotPath}`);
 
-  // Wave 5 update (2026-04-08): the audit is now informational, not
-  // CI-failing. Investigation of the 2026-04-07 HIGH-drift signals
-  // (PeptidesRx, Fella Health, Eden, OnlineSemaglutide, ReflexMD,
-  // Mochi, Invigor, OrderlyMeds, Moioon) showed only ONE was a real
-  // price change (Mochi Health restructured to a $39 membership +
-  // medication add-on model). The other 8 were audit false positives:
-  // the regex was catching membership fees, decoy promotional
-  // first-month prices, prices for unrelated services on the same
-  // page (enclomiphene, metformin, NAD+, rapamycin, etc.), or
-  // navigation banners that didn't reflect the GLP-1 monthly cost.
+  // Severity model (rebuilt 2026-04-08 with the verifier split):
   //
-  // The honest conclusion: regex pattern matching against arbitrary
-  // telehealth landing pages cannot reliably extract the right
-  // monthly cost. Most providers gate the actual GLP-1 prices behind
-  // a quiz/intake form. The audit's role is to alert a human to
-  // investigate, not to fail the build. Exit code 0 always; the
-  // GitHub Actions workflow that posts comments to issue #1 still
-  // runs nightly so the signals are visible, but the build no
-  // longer fails on HIGH severity.
+  //   1. Cheap regex sweep (this script) flags candidates as HIGH/
+  //      MEDIUM based on source quality (JSON-LD, GLP-1-context
+  //      per-month patterns) and drift magnitude.
+  //   2. Verification log auto-downgrades any HIGH/MEDIUM signal
+  //      where a recent Chrome-MCP verification confirms the
+  //      dataset price is correct. Verified entries become OK.
+  //   3. Whatever HIGH severity signals remain are *unverified* —
+  //      the regex saw drift AND no human/Chrome-MCP verifier has
+  //      confirmed it within the downgrade window. These are the
+  //      cases that warrant human investigation.
   //
-  // Future improvement option: replace the regex extraction with
-  // headless DOM walking (find the price IN the same UI card as
-  // the drug name) or LLM-based extraction. Until then, manual
-  // verification of HIGH/MEDIUM signals is the workflow.
+  // CI behavior: exit(1) on unverified HIGH so the regression is
+  // visible. The verifier workflow (scripts/verify-pricing.ts) is
+  // the escape hatch — once a Chrome-MCP verifier confirms the
+  // signal is a false positive (or appends a real-drift entry),
+  // the next audit run auto-downgrades or auto-applies and CI
+  // returns to green.
+  //
+  // In practice this means the audit + verifier loop is:
+  //   a) audit-pricing flags drift → CI fails
+  //   b) human runs `npx tsx scripts/verify-pricing.ts`
+  //   c) Chrome-MCP verifier confirms or rejects each candidate
+  //   d) verifier appends to src/data/pricing-verification-log.json
+  //   e) next audit run downgrades verified signals → CI green
   if (summary.high > 0) {
     console.log(
-      `\n${summary.high} provider(s) flagged HIGH severity. ` +
-        `These are signals to investigate, not automatic failures. ` +
-        `See the audit script header comment for context.`,
+      `\n${summary.high} unverified HIGH severity drift signal(s) detected.`,
     );
+    console.log(
+      `Run \`npx tsx scripts/verify-pricing.ts\` to verify each candidate.`,
+    );
+    console.log(
+      `Verified entries are appended to src/data/pricing-verification-log.json.`,
+    );
+    process.exit(1);
   }
   process.exit(0);
 }

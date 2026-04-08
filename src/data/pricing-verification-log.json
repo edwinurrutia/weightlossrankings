@@ -1,0 +1,20 @@
+{
+  "_schema": {
+    "description": "Append-only log of human/Chrome-MCP-verified provider prices. The audit script (scripts/audit-pricing.ts) reads this file to auto-downgrade severity for any drift signal that has a recent verification entry matching the current dataset price. The verification CLI (scripts/verify-pricing.ts) appends to this file when a Chrome-MCP verifier confirms a price.",
+    "entry_shape": {
+      "slug": "provider slug (matches src/data/providers.json)",
+      "verified_price_usd": "number — the actual monthly cost found on the provider's live pricing page",
+      "verified_currency": "USD (always)",
+      "verified_drug": "compounded-semaglutide | compounded-tirzepatide | brand-wegovy | brand-zepbound | brand-ozempic | brand-mounjaro",
+      "verification_date": "ISO date YYYY-MM-DD",
+      "verification_method": "chrome-mcp | manual-web-fetch | manual-screenshot | playwright-llm",
+      "evidence_url": "the exact URL the verifier was on",
+      "evidence_quote": "the exact text from the page that shows the price",
+      "confidence": "high | medium | low",
+      "verifier_notes": "any caveats — e.g. 'price shown after intake quiz', 'membership $39 + medication $99', 'requires login'"
+    },
+    "downgrade_window_days": 30,
+    "comment": "Verifications older than 30 days no longer auto-downgrade severity — providers re-pricing requires re-verification."
+  },
+  "entries": []
+}
