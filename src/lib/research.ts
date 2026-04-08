@@ -999,6 +999,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 11,
     tags: ["Berberine", "Supplements", "PubMed sourced", "Myth-bust"],
   },
+  {
+    slug: "loose-skin-after-glp1-weight-loss",
+    title:
+      "Loose Skin After Rapid GLP-1 Weight Loss: What the Evidence Actually Shows (And What Helps)",
+    description:
+      "Loose skin after rapid GLP-1 weight loss is one of the most-searched patient questions, with 15,000+ monthly queries. We walk through the dermatology and plastic surgery evidence — collagen and elastin remodeling (Rocha 2021, Light 2010), the rate-of-loss risk factor (Hasanbegovic 2013), the protein and resistance training data that mitigates lean-mass loss (Longland 2016, PROT-AGE 2013), GLP-1 trial body composition substudies, the oral collagen peptide RCT (Proksch 2014), and what the body-contouring literature says about timing and outcomes.",
+    excerpt:
+      "Loose skin is the most-searched downside of rapid GLP-1 weight loss. The published dermatology and plastic surgery literature is more specific than the TikTok version. Histology shows real collagen disorganization and elastin degradation in post-massive-weight-loss skin (Rocha 2021, Light 2010). The Hasanbegovic 2013 cohort of 360 bariatric patients found 92.8% had redundant-skin problems, and weight loss >50 kg independently predicted severity. The single best mitigation is preserving lean mass during the loss — the Longland 2016 RCT showed 2.4 g/kg/day protein plus resistance training added 1.2 kg of lean mass during a 4-week deficit vs 1.2 g/kg. The STEP-1 and SURMOUNT-1 body composition substudies confirm GLP-1 weight loss is roughly 25-45% lean tissue without exercise. Body contouring is the surgical option, with an 18-month-stable-weight prerequisite and well-documented quality-of-life benefit. Here is the verified evidence.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
+    readMinutes: 14,
+    citations: 12,
+    tags: ["Loose skin", "Body composition", "Resistance training", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
