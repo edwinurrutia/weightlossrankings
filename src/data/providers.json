@@ -109,7 +109,7 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "LegitScript certified \u2014 rigorous pharmacy standards",
+      "LegitScript certified — rigorous pharmacy standards",
       "Free 2-day shipping nationwide",
       "Both semaglutide and tirzepatide available",
       "Lowest per-month pricing in the compounded segment",
@@ -117,7 +117,7 @@
       "All 50 states covered"
     ],
     "cons": [
-      "Compounded only \u2014 no brand-name Ozempic or Wegovy",
+      "Compounded only — no brand-name Ozempic or Wegovy",
       "Newer brand with fewer independent reviews than legacy players"
     ],
     "best_for": "best overall value",
@@ -255,7 +255,7 @@
         "https://alanmeds.com/faq"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch on /faq page 2026-04-07. Alan Meds explicitly lists 46 states + DC. Excludes: Alaska, Hawaii, Louisiana, Mississippi. Excerpt: \"Alan Meds serves the following US states for compounded medication orders: Alabama, Arizona, Arkansas, California...\" DC included in service area but not in states_available array (which is US states only). Note: Wave 3A search-pass said \"excludes AK, HI, MS\" \u2014 close but missed LA. Live verification corrected."
+      "notes": "Verified live via WebFetch on /faq page 2026-04-07. Alan Meds explicitly lists 46 states + DC. Excludes: Alaska, Hawaii, Louisiana, Mississippi. Excerpt: \"Alan Meds serves the following US states for compounded medication orders: Alabama, Arizona, Arkansas, California...\" DC included in service area but not in states_available array (which is US states only). Note: Wave 3A search-pass said \"excludes AK, HI, MS\" — close but missed LA. Live verification corrected."
     }
   },
   {
@@ -531,7 +531,7 @@
         "https://beyondmd.com"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: BeyondMD prescribes tirzepatide (confirmed via patient testimonial). Site states 'serves most U.S. states' and delivers nationwide. Specific state list not disclosed \u2014 contact customerservice@beyondmd.com for state-specific availability."
+      "notes": "Live-verified 2026-04-07: BeyondMD prescribes tirzepatide (confirmed via patient testimonial). Site states 'serves most U.S. states' and delivers nationwide. Specific state list not disclosed — contact customerservice@beyondmd.com for state-specific availability."
     }
   },
   {
@@ -816,7 +816,7 @@
       "last_verified": "2026-04-07",
       "verified_by": "Chrome MCP screenshot (user-provided)",
       "confidence": "high",
-      "notes": "User-provided screenshot 2026-04-07 of brellohealth.com live state availability map: Brello ships to 34 states + DC (all dark purple 'Available'). Unavailable: WA, CA, NV, MI, IN, WV, NC, SC, AR, AL, TN, HI, MA, CT, NJ, MD. Brello offers compounded GLP-1 (tirzepatide/semaglutide) \u2014 compounded drug disclosure visible on the same page. Page states 'Coming to More States Soon.'"
+      "notes": "User-provided screenshot 2026-04-07 of brellohealth.com live state availability map: Brello ships to 34 states + DC (all dark purple 'Available'). Unavailable: WA, CA, NV, MI, IN, WV, NC, SC, AR, AL, TN, HI, MA, CT, NJ, MD. Brello offers compounded GLP-1 (tirzepatide/semaglutide) — compounded drug disclosure visible on the same page. Page states 'Coming to More States Soon.'"
     }
   },
   {
@@ -970,7 +970,7 @@
         "https://tryeden.com"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. Eden FAQ explicitly states: \"We are currently able to serve GLP-1 programs to all 50 states.\" Prescribes Ozempic, Wegovy, Zepbound, Mounjaro and compounded GLP-1s. Domain is tryeden.com (the old eden.com URL returns CSS only). Earlier Wave 3 search-pass exclusion-list claim (AR/LA/MS/NM excluded) was WRONG \u2014 Eden serves all 50 per their own page. CORRECTED."
+      "notes": "Verified live via WebFetch 2026-04-07. Eden FAQ explicitly states: \"We are currently able to serve GLP-1 programs to all 50 states.\" Prescribes Ozempic, Wegovy, Zepbound, Mounjaro and compounded GLP-1s. Domain is tryeden.com (the old eden.com URL returns CSS only). Earlier Wave 3 search-pass exclusion-list claim (AR/LA/MS/NM excluded) was WRONG — Eden serves all 50 per their own page. CORRECTED."
     }
   },
   {
@@ -1105,7 +1105,7 @@
         "https://www.empowerpharmacy.com/compound-medication/weight-management/"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. Empower is a 503A/503B compounding pharmacy supplier, NOT a direct-to-consumer telehealth prescriber. Patient-specific 503A orders ship to all 50 states; 503B bulk orders to clinics are restricted in AL/MS/CA but patient-specific prescriptions can still ship there. Patients must obtain a Rx from their own clinician. Note: this entry is technically a pharmacy not a telehealth platform \u2014 recommend categorization review."
+      "notes": "Verified live via WebFetch 2026-04-07. Empower is a 503A/503B compounding pharmacy supplier, NOT a direct-to-consumer telehealth prescriber. Patient-specific 503A orders ship to all 50 states; 503B bulk orders to clinics are restricted in AL/MS/CA but patient-specific prescriptions can still ship there. Patients must obtain a Rx from their own clinician. Note: this entry is technically a pharmacy not a telehealth platform — recommend categorization review."
     }
   },
   {
@@ -1365,7 +1365,7 @@
         "https://joinfridays.com"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Fridays (joinfridays.com) offers compounded tirzepatide and semaglutide. California-based (Irvine). State list not publicly disclosed \u2014 prescriptions not guaranteed and depend on provider discretion."
+      "notes": "Live-verified 2026-04-07: Fridays (joinfridays.com) offers compounded tirzepatide and semaglutide. California-based (Irvine). State list not publicly disclosed — prescriptions not guaranteed and depend on provider discretion."
     }
   },
   {
@@ -1466,7 +1466,7 @@
         "https://getreliefrx.com"
       ],
       "confidence": "medium",
-      "notes": "Chrome MCP verified 2026-04-07 (getreliefrx.com): homepage title 'GLP-1/GIP Weight Management Online | Tirzepatide | GetReliefRX' confirms tirzepatide weight management program. Patient intake gated behind health assessment \u2014 state list not publicly disclosed."
+      "notes": "Chrome MCP verified 2026-04-07 (getreliefrx.com): homepage title 'GLP-1/GIP Weight Management Online | Tirzepatide | GetReliefRX' confirms tirzepatide weight management program. Patient intake gated behind health assessment — state list not publicly disclosed."
     }
   },
   {
@@ -1600,7 +1600,7 @@
         "https://www.goodrx.com/care"
       ],
       "confidence": "medium",
-      "notes": "Chrome MCP verified 2026-04-07 (goodrx.com/care): GoodRx Care offers 'FDA-approved weight-loss meds' with 'GLP-1 plans without the hoopla.' Online visits $39-$70 (or $19 with Gold membership). FAQ link 'Where is GoodRx Care available?' \u2014 state list not publicly itemized."
+      "notes": "Chrome MCP verified 2026-04-07 (goodrx.com/care): GoodRx Care offers 'FDA-approved weight-loss meds' with 'GLP-1 plans without the hoopla.' Online visits $39-$70 (or $19 with Gold membership). FAQ link 'Where is GoodRx Care available?' — state list not publicly itemized."
     }
   },
   {
@@ -1766,7 +1766,7 @@
         "https://support.hims.com/hc/en-us/categories/360002033551-The-Basics"
       ],
       "confidence": "high",
-      "notes": "Verified live 2026-04-07 via support.hims.com/hc/en-us/categories/360002033551-The-Basics \"Where is Hims & Hers available?\" article. The article explicitly states: \"Hims & Hers is currently available in all 50 states across the United States. However, it is important to note that specific treatments may be limited to certain states. Please be aware that our platform is not currently accessible in Puerto Rico.\" All 50 US states confirmed for the brand overall; specific GLP-1 weight loss program may have a narrower state list \u2014 patient should verify at intake."
+      "notes": "Verified live 2026-04-07 via support.hims.com/hc/en-us/categories/360002033551-The-Basics \"Where is Hims & Hers available?\" article. The article explicitly states: \"Hims & Hers is currently available in all 50 states across the United States. However, it is important to note that specific treatments may be limited to certain states. Please be aware that our platform is not currently accessible in Puerto Rico.\" All 50 US states confirmed for the brand overall; specific GLP-1 weight loss program may have a narrower state list — patient should verify at intake."
     }
   },
   {
@@ -1866,7 +1866,7 @@
         "https://support.hims.com/hc/en-us/categories/360002033551-The-Basics"
       ],
       "confidence": "high",
-      "notes": "Verified live 2026-04-07 via support.hims.com/hc/en-us/categories/360002033551-The-Basics \"Where is Hims & Hers available?\" article. The article explicitly states: \"Hims & Hers is currently available in all 50 states across the United States. However, it is important to note that specific treatments may be limited to certain states. Please be aware that our platform is not currently accessible in Puerto Rico.\" All 50 US states confirmed for the brand overall; specific GLP-1 weight loss program may have a narrower state list \u2014 patient should verify at intake."
+      "notes": "Verified live 2026-04-07 via support.hims.com/hc/en-us/categories/360002033551-The-Basics \"Where is Hims & Hers available?\" article. The article explicitly states: \"Hims & Hers is currently available in all 50 states across the United States. However, it is important to note that specific treatments may be limited to certain states. Please be aware that our platform is not currently accessible in Puerto Rico.\" All 50 US states confirmed for the brand overall; specific GLP-1 weight loss program may have a narrower state list — patient should verify at intake."
     }
   },
   {
@@ -2038,7 +2038,7 @@
         "https://ivimhealth.com"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Ivim Health confirmed offering compounded semaglutide ($75/mo) and tirzepatide ($149/mo), plus brand-name Zepbound, Mounjaro, Ozempic, Wegovy, Saxenda, Liraglutide. State availability not publicly disclosed \u2014 requires contact or signup intake."
+      "notes": "Live-verified 2026-04-07: Ivim Health confirmed offering compounded semaglutide ($75/mo) and tirzepatide ($149/mo), plus brand-name Zepbound, Mounjaro, Ozempic, Wegovy, Saxenda, Liraglutide. State availability not publicly disclosed — requires contact or signup intake."
     }
   },
   {
@@ -2192,7 +2192,7 @@
         "https://jumpstartmd.com"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. JumpstartMD operates exclusively in California with 14 physical locations (Burlingame, Campbell, Irvine, Marin, Monterey Bay, Mountain View, Piedmont, Pleasanton, Redwood City, San Francisco x2, San Jose, Santa Cruz, Walnut Creek). Prescribes Ozempic, Wegovy, Mounjaro, Zepbound. Previously incorrectly marked as 50 states \u2014 CRITICAL BUG FIX."
+      "notes": "Verified live via WebFetch 2026-04-07. JumpstartMD operates exclusively in California with 14 physical locations (Burlingame, Campbell, Irvine, Marin, Monterey Bay, Mountain View, Piedmont, Pleasanton, Redwood City, San Francisco x2, San Jose, Santa Cruz, Walnut Creek). Prescribes Ozempic, Wegovy, Mounjaro, Zepbound. Previously incorrectly marked as 50 states — CRITICAL BUG FIX."
     }
   },
   {
@@ -2714,7 +2714,7 @@
         "https://home.medvi.org/"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Medvi (Newark, DE) prescribes compounded GLP-1s produced in FDA-regulated facilities through partner network of US-licensed doctors. State list not publicly disclosed \u2014 contact help@medvi.org."
+      "notes": "Live-verified 2026-04-07: Medvi (Newark, DE) prescribes compounded GLP-1s produced in FDA-regulated facilities through partner network of US-licensed doctors. State list not publicly disclosed — contact help@medvi.org."
     }
   },
   {
@@ -2788,7 +2788,7 @@
         "https://joinmochi.com"
       ],
       "confidence": "high",
-      "notes": "Verified 2026-04-08 via direct WebFetch of joinmochi.com homepage. Mochi Health restructured to a membership + medication add-on model: $39/mo membership PLUS $99/mo for compounded semaglutide ($138 total) or $199/mo for compounded tirzepatide ($238 total). Quoted directly from the homepage: 'Compounded Semaglutide, + $99/mo' and 'Compounded Tirzepatide, + $199/mo'. Membership available in 1-mo, 3-mo, or 12-mo subscription options at the stated rate. The previous dataset value of $99 for both drugs was either pre-restructure or scraped the medication add-on alone without the membership; the new total-cost values are the right comparable figure for cost-comparison tools. Source URL: https://joinmochi.com\n\nPrior notes: Verified live via WebFetch 2026-04-07. Mochi Health locations page confirms 15 states: AZ, CO, FL, GA, IL, MA, MD, MN, NY, OR, PA, RI, TX, VA, WA. Prescribes compounded semaglutide ($99/mo add-on) and compounded tirzepatide ($199/mo add-on). Previously incorrectly marked as 50 states \u2014 CRITICAL BUG "
+      "notes": "Verified 2026-04-08 via direct WebFetch of joinmochi.com homepage. Mochi Health restructured to a membership + medication add-on model: $39/mo membership PLUS $99/mo for compounded semaglutide ($138 total) or $199/mo for compounded tirzepatide ($238 total). Quoted directly from the homepage: 'Compounded Semaglutide, + $99/mo' and 'Compounded Tirzepatide, + $199/mo'. Membership available in 1-mo, 3-mo, or 12-mo subscription options at the stated rate. The previous dataset value of $99 for both drugs was either pre-restructure or scraped the medication add-on alone without the membership; the new total-cost values are the right comparable figure for cost-comparison tools. Source URL: https://joinmochi.com\n\nPrior notes: Verified live via WebFetch 2026-04-07. Mochi Health locations page confirms 15 states: AZ, CO, FL, GA, IL, MA, MD, MN, NY, OR, PA, RI, TX, VA, WA. Prescribes compounded semaglutide ($99/mo add-on) and compounded tirzepatide ($199/mo add-on). Previously incorrectly marked as 50 states — CRITICAL BUG "
     }
   },
   {
@@ -2839,7 +2839,7 @@
         "https://mojoon.com"
       ],
       "confidence": "medium",
-      "notes": "Chrome MCP verified 2026-04-07 (mojoon.com): Chinese-language telehealth platform serving Chinese-speaking US residents. Prescribes semaglutide injection ($350+) and oral semaglutide ($400+). LegitScript-certified. 48-state footprint (excluded: New Mexico, Mississippi). Bilingual service limited to Chinese speakers \u2014 not a mainstream English-language option."
+      "notes": "Chrome MCP verified 2026-04-07 (mojoon.com): Chinese-language telehealth platform serving Chinese-speaking US residents. Prescribes semaglutide injection ($350+) and oral semaglutide ($400+). LegitScript-certified. 48-state footprint (excluded: New Mexico, Mississippi). Bilingual service limited to Chinese speakers — not a mainstream English-language option."
     }
   },
   {
@@ -2923,7 +2923,7 @@
         "https://nuimagemedical.com"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: NuImage Medical confirmed offering GLP-1 treatment / compounded semaglutide via nuimagemedical.com. State availability not publicly disclosed \u2014 100% online prescription service, requires intake to confirm state."
+      "notes": "Live-verified 2026-04-07: NuImage Medical confirmed offering GLP-1 treatment / compounded semaglutide via nuimagemedical.com. State availability not publicly disclosed — 100% online prescription service, requires intake to confirm state."
     }
   },
   {
@@ -3089,7 +3089,7 @@
         "https://onlinesemaglutide.org"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: onlinesemaglutide.org offers compounded semaglutide and tirzepatide through US-licensed healthcare professionals. National telehealth service \u2014 specific state restrictions not disclosed publicly."
+      "notes": "Live-verified 2026-04-07: onlinesemaglutide.org offers compounded semaglutide and tirzepatide through US-licensed healthcare professionals. National telehealth service — specific state restrictions not disclosed publicly."
     }
   },
   {
@@ -3537,7 +3537,7 @@
         "https://joinpomegranate.com"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Pomegranate Health (joinpomegranate.com) offers compounded semaglutide and tirzepatide. State list not disclosed publicly \u2014 contact support@joinpomegranate.com."
+      "notes": "Live-verified 2026-04-07: Pomegranate Health (joinpomegranate.com) offers compounded semaglutide and tirzepatide. State list not disclosed publicly — contact support@joinpomegranate.com."
     }
   },
   {
@@ -3598,7 +3598,7 @@
         "https://www.reflexmd.com"
       ],
       "confidence": "medium",
-      "notes": "Chrome MCP verified 2026-04-07 (reflexmd.com): homepage title 'Semaglutide & GLP-1: Online Weight Loss Solution' confirms GLP-1 service. About page confirms telehealth platform with licensed providers. Specific state list not disclosed publicly \u2014 requires signup intake."
+      "notes": "Chrome MCP verified 2026-04-07 (reflexmd.com): homepage title 'Semaglutide & GLP-1: Online Weight Loss Solution' confirms GLP-1 service. About page confirms telehealth platform with licensed providers. Specific state list not disclosed publicly — requires signup intake."
     }
   },
   {
@@ -3655,7 +3655,7 @@
         "https://remedymeds.com"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Remedy Meds offers compounded semaglutide and tirzepatide + microdose plans. Site states coverage in '49 states' with 405 licensed providers. Specific excluded state not listed on homepage \u2014 requires direct contact to confirm exact coverage."
+      "notes": "Live-verified 2026-04-07: Remedy Meds offers compounded semaglutide and tirzepatide + microdose plans. Site states coverage in '49 states' with 405 licensed providers. Specific excluded state not listed on homepage — requires direct contact to confirm exact coverage."
     }
   },
   {
@@ -3974,7 +3974,7 @@
         "https://www.strivepharmacy.com"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Strive Pharmacy (Gilbert, AZ) dispenses compounded semaglutide/glycine/B12 and tirzepatide/glycine/B12. State shipping list not publicly disclosed \u2014 contact pharmacy to confirm coverage."
+      "notes": "Live-verified 2026-04-07: Strive Pharmacy (Gilbert, AZ) dispenses compounded semaglutide/glycine/B12 and tirzepatide/glycine/B12. State shipping list not publicly disclosed — contact pharmacy to confirm coverage."
     }
   },
   {
@@ -4019,7 +4019,7 @@
         "https://thecalibrateclinic.com"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. thecalibrateclinic.com is OXFORD'S Medical Weight Loss, a brick-and-mortar clinic with two locations: Lafayette LA (913 South College Drive, Suite 201) and Clemson SC (864-210-9885 consultation). Prescribes compounded semaglutide and tirzepatide. NOT the same as the national Calibrate (joincalibrate.com) \u2014 these are entirely distinct entities. CRITICAL BUG FIX from previously claiming 50 states."
+      "notes": "Verified live via WebFetch 2026-04-07. thecalibrateclinic.com is OXFORD'S Medical Weight Loss, a brick-and-mortar clinic with two locations: Lafayette LA (913 South College Drive, Suite 201) and Clemson SC (864-210-9885 consultation). Prescribes compounded semaglutide and tirzepatide. NOT the same as the national Calibrate (joincalibrate.com) — these are entirely distinct entities. CRITICAL BUG FIX from previously claiming 50 states."
     }
   },
   {
@@ -4623,7 +4623,7 @@
       {
         "dose": "Starting",
         "form": "compounded",
-        "monthly_cost": 99,
+        "monthly_cost": 83,
         "drug": "semaglutide"
       }
     ],
@@ -4660,7 +4660,7 @@
         "https://home.weightrx.com/"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: WeightRx is a technology platform connecting users to licensed clinicians (incl. MDI Medical Group) for compounded semaglutide and tirzepatide. '60,000+ patients nationwide.' State list not disclosed publicly \u2014 contact support@weightrx.com."
+      "notes": "Live-verified 2026-04-07: WeightRx is a technology platform connecting users to licensed clinicians (incl. MDI Medical Group) for compounded semaglutide and tirzepatide. '60,000+ patients nationwide.' State list not disclosed publicly — contact support@weightrx.com."
     }
   },
   {
@@ -4724,7 +4724,7 @@
     "_id": "noom-med",
     "name": "Noom Med",
     "slug": "noom-med",
-    "description": "Noom Med integrates GLP-1 medication access with Noom's proven cognitive behavioral therapy curriculum, 1-on-1 dietitian coaching, and dedicated care team \u2014 the most comprehensive psychology-plus-medication program available.",
+    "description": "Noom Med integrates GLP-1 medication access with Noom's proven cognitive behavioral therapy curriculum, 1-on-1 dietitian coaching, and dedicated care team — the most comprehensive psychology-plus-medication program available.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
@@ -4758,7 +4758,7 @@
       "Noom's proven behavioral curriculum"
     ],
     "cons": [
-      "Available in only 40 states \u2014 excludes AK, HI, ID, MT, NM, SD, VT, WV, WY, ND",
+      "Available in only 40 states — excludes AK, HI, ID, MT, NM, SD, VT, WV, WY, ND",
       "More expensive than app-only alternatives",
       "Requires commitment to both medication and coaching program"
     ],
@@ -4771,7 +4771,7 @@
         "https://www.noom.com/med"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Site title confirms GLP-1 medication service. Detailed state availability not publicly disclosed \u2014 requires signup intake."
+      "notes": "Live-verified 2026-04-07: Site title confirms GLP-1 medication service. Detailed state availability not publicly disclosed — requires signup intake."
     }
   },
   {
@@ -4818,16 +4818,16 @@
     "fda_warnings": [],
     "pros": [
       "Built specifically for type 2 diabetic and pre-diabetic patients",
-      "Integrated service \u2014 prescriber, pharmacy, and delivery handled in one flow",
+      "Integrated service — prescriber, pharmacy, and delivery handled in one flow",
       "Offers both compounded semaglutide and compounded tirzepatide",
       "Temperature-controlled home delivery via UPS or FedEx",
       "Ongoing prescriber monitoring and support included"
     ],
     "cons": [
-      "No pricing published on the public website \u2014 must register to see costs",
+      "No pricing published on the public website — must register to see costs",
       "No states list published on the site",
       "Newer brand with limited independent reviews",
-      "Compounded only \u2014 no brand-name Ozempic, Wegovy, or Mounjaro"
+      "Compounded only — no brand-name Ozempic, Wegovy, or Mounjaro"
     ],
     "best_for": "diabetic GLP-1 access",
     "is_featured": false,
@@ -4906,7 +4906,7 @@
     "affiliate_url": "https://www.fellahealth.com",
     "fda_warnings": [],
     "pros": [
-      "Specialized vertical \u2014 program designed for men, particularly 'bigger guys'",
+      "Specialized vertical — program designed for men, particularly 'bigger guys'",
       "Free 1:1 health coaching included with the membership",
       "6-month money-back guarantee if the program doesn't work",
       "Flat monthly price stays the same as your dose escalates",
@@ -4914,9 +4914,9 @@
       "Discloses partner pharmacies (Strive Pharmacy in AZ, Red Rock Home Pharmacy in UT)"
     ],
     "cons": [
-      "Limited to men's health vertical \u2014 not available to women",
+      "Limited to men's health vertical — not available to women",
       "Available in only 20 published states (not nationwide)",
-      "Exact GLP-1 monthly cost not published on the public site \u2014 only an 'under $10/day' starting figure",
+      "Exact GLP-1 monthly cost not published on the public site — only an 'under $10/day' starting figure",
       "Pricing transparency below industry standard for compounded GLP-1 telehealth"
     ],
     "best_for": "men's weight loss",
@@ -4928,7 +4928,7 @@
         "https://www.fellahealth.com/about/states"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. Fella Health /about/states page explicitly lists 20 states: CA, TX, FL, NY, WA, AZ, IL, MI, MN, MO, NC, OH, PA, WI, NJ, MA, CO, IN, VA, GA. Each state has a dedicated landing page. Fella is a male-focused GLP-1 telehealth platform \u2014 prescribes tirzepatide (~22.5% mean weight loss per their site) and semaglutide (~16.9%)."
+      "notes": "Verified live via WebFetch 2026-04-07. Fella Health /about/states page explicitly lists 20 states: CA, TX, FL, NY, WA, AZ, IL, MI, MN, MO, NC, OH, PA, WI, NJ, MA, CO, IN, VA, GA. Each state has a dedicated landing page. Fella is a male-focused GLP-1 telehealth platform — prescribes tirzepatide (~22.5% mean weight loss per their site) and semaglutide (~16.9%)."
     }
   },
   {
@@ -4996,7 +4996,7 @@
       "Quick intake process"
     ],
     "cons": [
-      "Wide peptide menu beyond GLP-1s \u2014 patients should stay focused on FDA-approved indications",
+      "Wide peptide menu beyond GLP-1s — patients should stay focused on FDA-approved indications",
       "Trust score moderate pending more independent verification"
     ],
     "best_for": "patients wanting all-in pricing with a single intake fee",
@@ -5067,7 +5067,7 @@
       "Physician-supervised telemedicine model"
     ],
     "cons": [
-      "No semaglutide option \u2014 limits flexibility if tirzepatide tolerability is poor",
+      "No semaglutide option — limits flexibility if tirzepatide tolerability is poor",
       "Less brand recognition than Henry Meds, Mochi, or SkinnyRx"
     ],
     "best_for": "patients committed to tirzepatide as their drug of choice",
@@ -5079,7 +5079,7 @@
         "https://emergeweight.com"
       ],
       "confidence": "medium",
-      "notes": "Chrome MCP verified 2026-04-07 (emergeweight.com): homepage title 'Emerge Weight Loss. Trusted Leader in GLP-1 Compounded Tirzepatide.' Small operator \u2014 intake flow runs through a Google Form rather than a custom patient portal. State list not disclosed publicly."
+      "notes": "Chrome MCP verified 2026-04-07 (emergeweight.com): homepage title 'Emerge Weight Loss. Trusted Leader in GLP-1 Compounded Tirzepatide.' Small operator — intake flow runs through a Google Form rather than a custom patient portal. State list not disclosed publicly."
     }
   },
   {
@@ -5145,7 +5145,7 @@
         "https://invigormedical.com"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Invigor Medical (invigormedical.com, based in Pasco, WA) lists 'Semaglutide Weight Loss' as a telehealth service. Specific brand vs compounded status and state list not disclosed on public-facing pages \u2014 requires intake or direct contact."
+      "notes": "Live-verified 2026-04-07: Invigor Medical (invigormedical.com, based in Pasco, WA) lists 'Semaglutide Weight Loss' as a telehealth service. Specific brand vs compounded status and state list not disclosed on public-facing pages — requires intake or direct contact."
     }
   },
   {
@@ -5315,14 +5315,14 @@
     "fda_warnings": [],
     "pros": [
       "Cheapest legal path to a brand-name GLP-1 in 2026 ($25/mo with savings card for commercial insurance)",
-      "Direct from manufacturer \u2014 no compounding, no third-party reseller",
+      "Direct from manufacturer — no compounding, no third-party reseller",
       "Daily oral pill, no injections, no refrigeration",
       "Available in all 50 states"
     ],
     "cons": [
-      "Lower mean weight loss vs Wegovy (14.9%) and Zepbound (20.9%) \u2014 labeled-dose 11.1% per Foundayo PI",
+      "Lower mean weight loss vs Wegovy (14.9%) and Zepbound (20.9%) — labeled-dose 11.1% per Foundayo PI",
       "Requires existing prescription from a separate prescriber (LillyDirect does not write the prescription)",
-      "$25 savings card requires commercial insurance \u2014 Medicare and Medicaid not eligible",
+      "$25 savings card requires commercial insurance — Medicare and Medicaid not eligible",
       "Strict empty-stomach 30-minute window may be hard for some patients to follow"
     ],
     "best_for": "patients with commercial insurance who want the cheapest legal brand-name GLP-1",
@@ -5384,8 +5384,8 @@
       "Combines pharmacotherapy with the WW Points/behavior-change program"
     ],
     "cons": [
-      "Med+ membership ($25 first month, $74/mo ongoing) is billed separately from the drug cost \u2014 actual out-of-pocket is higher than the listed $149/mo",
-      "State availability list not published publicly \u2014 requires eligibility quiz",
+      "Med+ membership ($25 first month, $74/mo ongoing) is billed separately from the drug cost — actual out-of-pocket is higher than the listed $149/mo",
+      "State availability list not published publicly — requires eligibility quiz",
       "Insurance coverage for Foundayo not yet available per WW's own disclosure",
       "No compounded GLP-1 option; Foundayo only",
       "12-month Med+ commitment required to lock the introductory $25 price"
@@ -5399,7 +5399,7 @@
         "https://www.weightwatchers.com/us/weight-loss-medication/foundayo"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07 via the dedicated Foundayo product page at weightwatchers.com/us/weight-loss-medication/foundayo. Page explicitly states: 'Foundayo (self-pay): Starting at $149/mo for your starting dose and up to $299/mo for higher doses' and 'Programs do not include the cost of GLP-1 medications' \u2014 i.e., the membership and drug are billed separately. Foundayo offered in 6 doses: 0.8mg, 2.5mg, 5.5mg, 9mg, 14.5mg, 17.2mg. State list not published on the page \u2014 'All medical services are provided through our affiliated medical group, WeightWatchers Clinic.' Insurance coverage not available per WW's own disclosure ('Weight Watchers is not able to check insurance coverage for Foundayo at this time, but will be able to in the future'). CORRECTION: earlier Wave 5.7 removal was based on an incomplete Chrome MCP scrape that missed this page \u2014 the Foundayo offering is real and pricing is verified against WW's own product page."
+      "notes": "Live-verified 2026-04-07 via the dedicated Foundayo product page at weightwatchers.com/us/weight-loss-medication/foundayo. Page explicitly states: 'Foundayo (self-pay): Starting at $149/mo for your starting dose and up to $299/mo for higher doses' and 'Programs do not include the cost of GLP-1 medications' — i.e., the membership and drug are billed separately. Foundayo offered in 6 doses: 0.8mg, 2.5mg, 5.5mg, 9mg, 14.5mg, 17.2mg. State list not published on the page — 'All medical services are provided through our affiliated medical group, WeightWatchers Clinic.' Insurance coverage not available per WW's own disclosure ('Weight Watchers is not able to check insurance coverage for Foundayo at this time, but will be able to in the future'). CORRECTION: earlier Wave 5.7 removal was based on an incomplete Chrome MCP scrape that missed this page — the Foundayo offering is real and pricing is verified against WW's own product page."
     }
   },
   {
@@ -5451,15 +5451,15 @@
     "affiliate_network": "direct",
     "fda_warnings": [],
     "pros": [
-      "Free telehealth consultation \u2014 patients only pay the medication cost",
+      "Free telehealth consultation — patients only pay the medication cost",
       "Brand-name Mounjaro, Wegovy injection, Wegovy oral tablet, and Saxenda all available",
       "One of the few telehealth platforms offering Wegovy in both injection and oral pill form",
-      "No compounded options \u2014 every drug is FDA-approved brand"
+      "No compounded options — every drug is FDA-approved brand"
     ],
     "cons": [
       "Cash-pay pricing tracks full brand list price (~$1,000-$1,350/mo)",
       "Does not offer compounded semaglutide or tirzepatide (generally the cheaper route)",
-      "State availability not disclosed publicly \u2014 determined during intake",
+      "State availability not disclosed publicly — determined during intake",
       "Phone: 1-866-967-1977, HQ Austin TX",
       "Does NOT offer Foundayo (orforglipron)"
     ],
@@ -5472,7 +5472,7 @@
         "https://nowpatient.com/treatments"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07 via nowpatient.com/treatments. Confirmed Mounjaro, Wegovy (injection + oral tablet), and Saxenda are offered as the GLP-1 weight management catalog. Liraglutide listed in a blood-pressure-requirement table. Consultation is free per the site: 'the consultation itself is completely free' and patients 'only pay for the cost of the medication.' No published unit prices; the monthly_cost values in this entry reflect the brand manufacturer list prices (Mounjaro ~$1,069/mo, Wegovy ~$1,349/mo, Saxenda ~$1,349/mo per accessdata.fda.gov and each manufacturer's savings page) because NowPatient does not mark up the drug itself. State list not published publicly. HQ Austin, TX (1-866-967-1977). CORRECTION: Wave 5.1 removed 'nowpatient-foundayo' because the Foundayo claim was fabricated \u2014 that removal was correct, but the parent NowPatient business is a legitimate GLP-1 provider and is now restored under the corrected slug 'nowpatient' with the verified drug list."
+      "notes": "Live-verified 2026-04-07 via nowpatient.com/treatments. Confirmed Mounjaro, Wegovy (injection + oral tablet), and Saxenda are offered as the GLP-1 weight management catalog. Liraglutide listed in a blood-pressure-requirement table. Consultation is free per the site: 'the consultation itself is completely free' and patients 'only pay for the cost of the medication.' No published unit prices; the monthly_cost values in this entry reflect the brand manufacturer list prices (Mounjaro ~$1,069/mo, Wegovy ~$1,349/mo, Saxenda ~$1,349/mo per accessdata.fda.gov and each manufacturer's savings page) because NowPatient does not mark up the drug itself. State list not published publicly. HQ Austin, TX (1-866-967-1977). CORRECTION: Wave 5.1 removed 'nowpatient-foundayo' because the Foundayo claim was fabricated — that removal was correct, but the parent NowPatient business is a legitimate GLP-1 provider and is now restored under the corrected slug 'nowpatient' with the verified drug list."
     }
   }
 ]

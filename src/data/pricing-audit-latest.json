@@ -1,5 +1,5 @@
 {
-  "runDate": "2026-04-08T15:42:46.424Z",
+  "runDate": "2026-04-08T15:56:05.682Z",
   "providersAudited": 74,
   "results": [
     {
@@ -12,8 +12,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "alan-meds",
@@ -33,8 +32,7 @@
       "deltaUsd": 59,
       "deltaPct": 59.59595959595959,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 7 candidates, mode/median=$158"
     },
     {
       "slug": "amberhealth",
@@ -54,8 +52,7 @@
       "deltaUsd": 45,
       "deltaPct": 45,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 7 candidates, mode/median=$145"
     },
     {
       "slug": "amble",
@@ -69,8 +66,7 @@
       "deltaUsd": -44,
       "deltaPct": -24.581005586592177,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 1 candidates, mode/median=$135"
     },
     {
       "slug": "beyondmd",
@@ -82,8 +78,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "bliv",
@@ -99,8 +94,7 @@
       "deltaUsd": -200,
       "deltaPct": -66.88963210702342,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 3 candidates, mode/median=$99"
     },
     {
       "slug": "bmimd",
@@ -115,8 +109,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 2 candidates, mode/median=$249"
     },
     {
       "slug": "boston-medical-group",
@@ -128,8 +121,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "brello-health",
@@ -147,8 +139,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 5 candidates, mode/median=$66"
     },
     {
       "slug": "dollar-dad-club",
@@ -168,8 +159,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 7 candidates, mode/median=$89"
     },
     {
       "slug": "eden",
@@ -193,8 +183,7 @@
       "deltaUsd": -156,
       "deltaPct": -65.27196652719665,
       "severity": "MEDIUM",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern, 11 candidates, mode/median=$83"
     },
     {
       "slug": "elliemd",
@@ -209,8 +198,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=broad-dollar-sweep, 2 candidates, mode/median=$50"
     },
     {
       "slug": "empower-pharmacy",
@@ -222,8 +210,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "form-health",
@@ -235,8 +222,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "found",
@@ -253,8 +239,7 @@
       "deltaUsd": 521,
       "deltaPct": 403.8759689922481,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 4 candidates, mode/median=$650"
     },
     {
       "slug": "fridays",
@@ -272,8 +257,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=broad-dollar-sweep, 5 candidates, mode/median=$100"
     },
     {
       "slug": "g-plans",
@@ -285,8 +269,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "getrelief-rx",
@@ -306,8 +289,7 @@
       "deltaUsd": -585,
       "deltaPct": -78,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 7 candidates, mode/median=$165"
     },
     {
       "slug": "gobymeds",
@@ -330,8 +312,7 @@
       "deltaUsd": 80,
       "deltaPct": 67.22689075630252,
       "severity": "MEDIUM",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=broad-dollar-sweep, 10 candidates, mode/median=$199"
     },
     {
       "slug": "good-life-meds",
@@ -343,8 +324,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "goodrx-care",
@@ -356,8 +336,8 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "Both static fetch and browser fetch failed",
+      "error": "fetch_failed"
     },
     {
       "slug": "henry-meds",
@@ -369,8 +349,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "hers",
@@ -382,8 +361,8 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "Both static fetch and browser fetch failed",
+      "error": "fetch_failed"
     },
     {
       "slug": "hims",
@@ -395,8 +374,8 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "Both static fetch and browser fetch failed",
+      "error": "fetch_failed"
     },
     {
       "slug": "independent-wellness",
@@ -411,21 +390,23 @@
       "deltaUsd": 109,
       "deltaPct": 40.370370370370374,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 2 candidates, mode/median=$379"
     },
     {
       "slug": "ivim-health",
       "name": "Ivim Health",
       "url": "https://ivimhealth.com",
       "datasetPrice": 75,
-      "extractedPrice": null,
-      "candidates": [],
-      "deltaUsd": null,
-      "deltaPct": null,
-      "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "extractedPrice": 75,
+      "candidates": [
+        75,
+        149,
+        74
+      ],
+      "deltaUsd": 0,
+      "deltaPct": 0,
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 3 candidates, mode/median=$75"
     },
     {
       "slug": "ivy-rx",
@@ -446,8 +427,7 @@
       "deltaUsd": 4,
       "deltaPct": 2.2857142857142856,
       "severity": "OK",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=broad-dollar-sweep, 8 candidates, mode/median=$179"
     },
     {
       "slug": "jumpstartmd",
@@ -462,8 +442,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=broad-dollar-sweep, 2 candidates, mode/median=$379"
     },
     {
       "slug": "lavender-sky-health",
@@ -475,8 +454,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "lemonaid-health",
@@ -490,8 +468,7 @@
       "deltaUsd": 99,
       "deltaPct": 330,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 1 candidates, mode/median=$129"
     },
     {
       "slug": "lifemd",
@@ -511,8 +488,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=broad-dollar-sweep, 7 candidates, mode/median=$149"
     },
     {
       "slug": "livv",
@@ -531,8 +507,7 @@
       "deltaUsd": -150,
       "deltaPct": -60.24096385542169,
       "severity": "MEDIUM",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern, 6 candidates, mode/median=$99"
     },
     {
       "slug": "lumimeds",
@@ -557,8 +532,7 @@
       "deltaUsd": -17,
       "deltaPct": -12.781954887218044,
       "severity": "MEDIUM",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 12 candidates, mode/median=$116"
     },
     {
       "slug": "mdexam",
@@ -572,8 +546,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern, 1 candidates, mode/median=$225"
     },
     {
       "slug": "medvi",
@@ -585,8 +558,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "mochi-health",
@@ -607,8 +579,7 @@
       "deltaUsd": -99,
       "deltaPct": -71.73913043478261,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 8 candidates, mode/median=$39"
     },
     {
       "slug": "mojoon",
@@ -632,8 +603,7 @@
       "deltaUsd": -321,
       "deltaPct": -71.33333333333334,
       "severity": "MEDIUM",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=broad-dollar-sweep, 11 candidates, mode/median=$129"
     },
     {
       "slug": "noom",
@@ -648,8 +618,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern, 2 candidates, mode/median=$349"
     },
     {
       "slug": "nu-image-medical",
@@ -661,8 +630,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "nuform-health",
@@ -678,8 +646,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=broad-dollar-sweep, 3 candidates, mode/median=$170"
     },
     {
       "slug": "nurx",
@@ -691,8 +658,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "onlinesemaglutideorg",
@@ -708,8 +674,7 @@
       "deltaUsd": -129,
       "deltaPct": -46.236559139784944,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 3 candidates, mode/median=$150"
     },
     {
       "slug": "orderlymeds",
@@ -725,8 +690,7 @@
       "deltaUsd": 75,
       "deltaPct": 101.35135135135135,
       "severity": "HIGH",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 3 candidates, mode/median=$149"
     },
     {
       "slug": "peak-wellness",
@@ -741,8 +705,7 @@
       "deltaUsd": -84,
       "deltaPct": -33.734939759036145,
       "severity": "MEDIUM",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern, 2 candidates, mode/median=$165"
     },
     {
       "slug": "piper",
@@ -759,8 +722,7 @@
       "deltaUsd": 0,
       "deltaPct": 0,
       "severity": "OK",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=per-month-pattern-glp1-context, 4 candidates, mode/median=$135"
     },
     {
       "slug": "plushcare",
@@ -778,8 +740,7 @@
       "deltaUsd": -20,
       "deltaPct": -13.422818791946309,
       "severity": "OK",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "source=broad-dollar-sweep, 5 candidates, mode/median=$129"
     },
     {
       "slug": "pomegranate-health",
@@ -791,8 +752,7 @@
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Per-provider timeout (30000ms) exceeded",
-      "error": "timeout"
+      "evidence": "No price candidates extracted from page"
     },
     {
       "slug": "reflexmd",
@@ -823,13 +783,16 @@
       "name": "Ro",
       "url": "https://ro.co/weight-loss",
       "datasetPrice": null,
-      "extractedPrice": null,
-      "candidates": [],
+      "extractedPrice": 75,
+      "candidates": [
+        45,
+        145,
+        75
+      ],
       "deltaUsd": null,
       "deltaPct": null,
       "severity": "UNKNOWN",
-      "evidence": "Both static fetch and browser fetch failed",
-      "error": "fetch_failed"
+      "evidence": "source=broad-dollar-sweep, 3 candidates, mode/median=$75"
     },
     {
       "slug": "sesame",
@@ -845,8 +808,8 @@
       ],
       "deltaUsd": -290,
       "deltaPct": -83.0945558739255,
-      "severity": "HIGH",
-      "evidence": "source=per-month-pattern-glp1-context, 4 candidates, mode/median=$59"
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 4 candidates, mode/median=$59 | downgraded by verification 2026-04-08 (high)"
     },
     {
       "slug": "shedrx",
@@ -946,8 +909,8 @@
       ],
       "deltaUsd": 46,
       "deltaPct": 31.506849315068493,
-      "severity": "HIGH",
-      "evidence": "source=json-ld, 8 candidates, mode/median=$192"
+      "severity": "OK",
+      "evidence": "source=json-ld, 8 candidates, mode/median=$192 | downgraded by verification 2026-04-08 (high)"
     },
     {
       "slug": "viviomd",
@@ -1028,7 +991,7 @@
       "slug": "weightrx",
       "name": "WeightRx",
       "url": "https://home.weightrx.com/",
-      "datasetPrice": 99,
+      "datasetPrice": 83,
       "extractedPrice": 83,
       "candidates": [
         83,
@@ -1039,9 +1002,9 @@
         83,
         83
       ],
-      "deltaUsd": -16,
-      "deltaPct": -16.161616161616163,
-      "severity": "HIGH",
+      "deltaUsd": 0,
+      "deltaPct": 0,
+      "severity": "OK",
       "evidence": "source=per-month-pattern-glp1-context, 7 candidates, mode/median=$83"
     },
     {
@@ -1199,8 +1162,8 @@
       ],
       "deltaUsd": -75,
       "deltaPct": -50.33557046979866,
-      "severity": "HIGH",
-      "evidence": "source=per-month-pattern-glp1-context, 5 candidates, mode/median=$74"
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 5 candidates, mode/median=$74 | downgraded by verification 2026-04-08 (high)"
     },
     {
       "slug": "nowpatient",
@@ -1216,9 +1179,9 @@
     }
   ],
   "summary": {
-    "high": 17,
+    "high": 13,
     "medium": 8,
-    "ok": 6,
-    "unknown": 43
+    "ok": 11,
+    "unknown": 42
   }
 }

@@ -16,5 +16,66 @@
     "downgrade_window_days": 30,
     "comment": "Verifications older than 30 days no longer auto-downgrade severity — providers re-pricing requires re-verification."
   },
-  "entries": []
+  "entries": [
+    {
+      "slug": "sesame",
+      "verified_price_usd": 349,
+      "verified_currency": "USD",
+      "verified_drug": "compounded-semaglutide",
+      "verification_date": "2026-04-08",
+      "verification_method": "manual-web-fetch",
+      "evidence_url": "https://sesamecare.com/blog/sesame-weight-loss-announcement",
+      "evidence_quote": "$349 per month (50% off the traditional price) when self-paying at Costco Pharmacy",
+      "confidence": "high",
+      "verifier_notes": "Dataset value of $349/mo confirmed correct. The audit's $59 hit was for the unrelated 'Success by Sesame' annual subscription program, NOT for Wegovy/Ozempic. Wegovy oral pill mentioned at $149/mo, injections at $349/mo."
+    },
+    {
+      "slug": "try-yucca-health",
+      "verified_price_usd": 146,
+      "verified_currency": "USD",
+      "verified_drug": "compounded-semaglutide",
+      "verification_date": "2026-04-08",
+      "verification_method": "manual-web-fetch",
+      "evidence_url": "https://www.tryyucca.com",
+      "evidence_quote": "Starting at $146/month on the 6-month plan (first-order pricing for new patients)",
+      "confidence": "high",
+      "verifier_notes": "Dataset value of $146/mo for compounded semaglutide confirmed correct. The audit's JSON-LD $192 hit was likely a structured-data field for an unrelated SKU or default price. Tirzepatide is $258/mo on the 6-month plan, also matches the dataset entry."
+    },
+    {
+      "slug": "weightrx",
+      "verified_price_usd": 83,
+      "verified_currency": "USD",
+      "verified_drug": "compounded-semaglutide",
+      "verification_date": "2026-04-08",
+      "verification_method": "manual-web-fetch",
+      "evidence_url": "https://home.weightrx.com",
+      "evidence_quote": "$83.00 per month, pricing from $83/month, $997/year",
+      "confidence": "high",
+      "verifier_notes": "REAL DRIFT: WeightRx dropped pricing from $99/mo (old dataset value) to $83/mo. Dataset updated in this same commit. All-inclusive: medication, doctor access, labs, 48-hour home delivery."
+    },
+    {
+      "slug": "weightwatchers",
+      "verified_price_usd": 149,
+      "verified_currency": "USD",
+      "verified_drug": "brand-wegovy",
+      "verification_date": "2026-04-08",
+      "verification_method": "manual-web-fetch",
+      "evidence_url": "https://www.weightwatchers.com/us/clinic",
+      "evidence_quote": "$25 for the first month with a 12-month plan, $74/mo for remainder of the 12-month plan. Cost of GLP-1 medications not included.",
+      "confidence": "high",
+      "verifier_notes": "Dataset for WeightWatchers tracks Foundayo (orforglipron) at $149/mo starter dose / $299/mo higher doses. The audit's $74 hit was for the WW Med+ MEMBERSHIP fee, NOT the GLP-1 medication. WW explicitly states 'Cost of GLP-1 medications not included' in the membership. Dataset value confirmed correct."
+    },
+    {
+      "slug": "fella-health",
+      "verified_price_usd": null,
+      "verified_currency": "USD",
+      "verified_drug": "compounded-semaglutide",
+      "verification_date": "2026-04-08",
+      "verification_method": "manual-web-fetch",
+      "evidence_url": "https://fellahealth.com/treatments",
+      "evidence_quote": "our core program starts at less than $10 per day for everything you need to lose weight: GLP-1 medications, health assessments, and medical support",
+      "confidence": "low",
+      "verifier_notes": "FALSE POSITIVE on the regex side: the audit's $99 extraction was for ENCLOMIPHENE listed on /treatments, NOT for the GLP-1 product. Verified that. HOWEVER the actual GLP-1 monthly cost is gated behind a quiz and the only public-page reference is 'starts at less than $10/day' (≈$300/mo). The current dataset value of $999 is suspiciously high — likely a stale placeholder from when Fella was a higher-priced offering. Needs Chrome-MCP follow-up to walk the quiz and capture the actual GLP-1 starting price. Marking confidence: low, verified_price: null until that follow-up runs."
+    }
+  ]
 }

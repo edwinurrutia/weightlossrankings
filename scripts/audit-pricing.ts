@@ -557,17 +557,39 @@ async function auditProvider(provider: Provider): Promise<AuditResult> {
     return base;
   })();
 
-  const timeout = new Promise<AuditResult>((resolve) =>
-    setTimeout(() => {
+  // Timeout fires AFTER PER_PROVIDER_TIMEOUT_MS. We use a clearable
+  // timer so that if work() finishes first, the timer is cancelled
+  // and never mutates `base` retroactively. The previous version
+  // had a race where the unclearable setTimeout would fire even
+  // after work() resolved, mutating `base.evidence` to "timeout
+  // exceeded" while leaving the partial-run severity intact —
+  // producing fake HIGH signals during the 2026-04-08 audit.
+  let timeoutHandle: NodeJS.Timeout | undefined;
+  const timeout = new Promise<AuditResult>((resolve) => {
+    timeoutHandle = setTimeout(() => {
+      // On real timeout: mark UNKNOWN explicitly so a partial state
+      // doesn't bleed through as HIGH. Reset extracted/candidates
+      // to null since we can't trust the partial extraction.
+      base.severity = "UNKNOWN";
+      base.extractedPrice = null;
+      base.candidates = [];
+      base.deltaUsd = null;
+      base.deltaPct = null;
       base.error = "timeout";
       base.evidence = `Per-provider timeout (${PER_PROVIDER_TIMEOUT_MS}ms) exceeded`;
       resolve(base);
-    }, PER_PROVIDER_TIMEOUT_MS)
-  );
+    }, PER_PROVIDER_TIMEOUT_MS);
+  });
 
   try {
-    return await Promise.race([work, timeout]);
+    const result = await Promise.race([work, timeout]);
+    // Clear the timer the moment we have a result. If work() won
+    // the race, this prevents the timeout callback from firing
+    // later and mutating the result.
+    if (timeoutHandle) clearTimeout(timeoutHandle);
+    return result;
   } catch (err) {
+    if (timeoutHandle) clearTimeout(timeoutHandle);
     base.error = (err as Error).message;
     base.evidence = `Exception: ${base.error}`;
     return base;
