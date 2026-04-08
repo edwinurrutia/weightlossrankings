@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run check:providers && npm run check:tool-freshness",
+    "prebuild": "npm run check:providers && npm run check:tool-freshness && npm run check:redirects",
+    "check:redirects": "npx tsx scripts/check-redirect-loops.ts",
+    "check:redirect-chain": "npx tsx scripts/check-redirect-chain.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
