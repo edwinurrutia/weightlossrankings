@@ -7,29 +7,29 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Canonical host normalization: 301 every www.weightlossrankings.org
-      // request to weightlossrankings.org. Vercel serves both hostnames
-      // because the apex and www DNS records both point at the project,
-      // and before this rule Google was indexing www variants and marking
-      // them "Alternate page with proper canonical tag" because the
-      // <link rel="canonical"> tag (and the OpenGraph URL, the sitemap
-      // entries, and the JSON-LD organization URL) all use the bare apex.
-      // The 301 below makes the redirect happen at the edge before Next
-      // renders, so Google never sees the www variant. This eliminates
-      // the GSC warning and consolidates link equity onto a single
-      // canonical host. Pairs with the canonical declaration in
-      // src/app/layout.tsx and src/app/sitemap.ts.
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "www.weightlossrankings.org",
-          },
-        ],
-        destination: "https://weightlossrankings.org/:path*",
-        permanent: true,
-      },
+      // EMERGENCY FIX 2026-04-08: removed the previous canonical-host
+      // normalization rule (www.weightlossrankings.org → apex). It
+      // conflicted with Vercel's apex-redirects-to-www domain config,
+      // creating an infinite loop:
+      //
+      //   1. Vercel: apex → 307 → www  (set in Vercel dashboard)
+      //   2. Next.js: www → 308 → apex (this rule)
+      //   3. Vercel: apex → 307 → www
+      //   ...ERR_TOO_MANY_REDIRECTS, site totally down.
+      //
+      // Vercel is now the source of truth for host canonicalization.
+      // The current canonical (per the live redirect chain) is
+      //   https://www.weightlossrankings.org
+      // If you want to flip canonical back to the bare apex, change
+      // it in the Vercel dashboard (Settings → Domains → make apex
+      // the primary), do NOT add another redirect rule here.
+      //
+      // To verify the chain after any future canonical change:
+      //   curl -sI -L https://weightlossrankings.org | head -20
+      //   curl -sI -L https://www.weightlossrankings.org | head -20
+      // Both should land on the SAME final URL with at most ONE 30x
+      // hop. More than one 30x hop = loop = site down.
+      //
       // Spanish-language articles originally lived under the English
       // /research/ tree because that's where the registry pointed at
       // launch. We've moved them to a proper /es/research/ subdirectory

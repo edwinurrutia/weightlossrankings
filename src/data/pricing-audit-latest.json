@@ -1,7 +1,1224 @@
 {
-  "_comment": "This file is auto-written by scripts/audit-pricing.ts. It is the most recent audit snapshot, committed so the verifier (scripts/verify-pricing.ts) and CI workflows can read it. The empty initial state below is overwritten on the first audit run.",
-  "runDate": "1970-01-01T00:00:00.000Z",
-  "providersAudited": 0,
-  "results": [],
-  "summary": { "high": 0, "medium": 0, "ok": 0, "unknown": 0 }
+  "runDate": "2026-04-08T15:42:46.424Z",
+  "providersAudited": 74,
+  "results": [
+    {
+      "slug": "coreage-rx",
+      "name": "CoreAge Rx",
+      "url": "https://www.coreagerx.com",
+      "datasetPrice": 149,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "alan-meds",
+      "name": "Alan Meds",
+      "url": "https://alanmeds.com",
+      "datasetPrice": 99,
+      "extractedPrice": 158,
+      "candidates": [
+        158,
+        158,
+        158,
+        145,
+        158,
+        158,
+        145
+      ],
+      "deltaUsd": 59,
+      "deltaPct": 59.59595959595959,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "amberhealth",
+      "name": "AmberHealth",
+      "url": "https://amberhealth.com",
+      "datasetPrice": 100,
+      "extractedPrice": 145,
+      "candidates": [
+        99,
+        494,
+        174,
+        444,
+        399,
+        145,
+        145
+      ],
+      "deltaUsd": 45,
+      "deltaPct": 45,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "amble",
+      "name": "Amble",
+      "url": "https://joinamble.com",
+      "datasetPrice": 179,
+      "extractedPrice": 135,
+      "candidates": [
+        135
+      ],
+      "deltaUsd": -44,
+      "deltaPct": -24.581005586592177,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "beyondmd",
+      "name": "BeyondMD",
+      "url": "https://beyondmd.com",
+      "datasetPrice": 139,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "bliv",
+      "name": "Bliv",
+      "url": "https://joinbliv.com",
+      "datasetPrice": 299,
+      "extractedPrice": 99,
+      "candidates": [
+        58,
+        99,
+        116
+      ],
+      "deltaUsd": -200,
+      "deltaPct": -66.88963210702342,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "bmimd",
+      "name": "bmiMD",
+      "url": "https://bmimd.com",
+      "datasetPrice": null,
+      "extractedPrice": 249,
+      "candidates": [
+        149,
+        249
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "boston-medical-group",
+      "name": "Boston Medical Group",
+      "url": "https://www.bostonmedicalgroup.com/weight-loss/",
+      "datasetPrice": 66,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "brello-health",
+      "name": "Brello Health",
+      "url": "https://brellohealth.com",
+      "datasetPrice": null,
+      "extractedPrice": 66,
+      "candidates": [
+        166,
+        133,
+        66,
+        199,
+        66
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "dollar-dad-club",
+      "name": "Dollar Dad Club",
+      "url": "https://dollardadclub.com",
+      "datasetPrice": null,
+      "extractedPrice": 89,
+      "candidates": [
+        89,
+        149,
+        89,
+        89,
+        149,
+        89,
+        149
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "eden",
+      "name": "Eden",
+      "url": "https://tryeden.com",
+      "datasetPrice": 239,
+      "extractedPrice": 83,
+      "candidates": [
+        83,
+        106,
+        83,
+        106,
+        186,
+        196,
+        226,
+        246,
+        84,
+        127,
+        135
+      ],
+      "deltaUsd": -156,
+      "deltaPct": -65.27196652719665,
+      "severity": "MEDIUM",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "elliemd",
+      "name": "EllieMD",
+      "url": "https://www.elliemd.com",
+      "datasetPrice": null,
+      "extractedPrice": 50,
+      "candidates": [
+        25,
+        50
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "empower-pharmacy",
+      "name": "Empower Pharmacy",
+      "url": "https://www.empowerpharmacy.com/compound-medication/weight-management/",
+      "datasetPrice": null,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "form-health",
+      "name": "Form Health",
+      "url": "https://www.formhealth.co",
+      "datasetPrice": 1350,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "found",
+      "name": "Found",
+      "url": "https://www.joinfound.com",
+      "datasetPrice": 129,
+      "extractedPrice": 650,
+      "candidates": [
+        1100,
+        650,
+        650,
+        1100
+      ],
+      "deltaUsd": 521,
+      "deltaPct": 403.8759689922481,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "fridays",
+      "name": "Fridays",
+      "url": "https://joinfridays.com",
+      "datasetPrice": null,
+      "extractedPrice": 100,
+      "candidates": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "g-plans",
+      "name": "G-Plans",
+      "url": "https://www.g-plans.com",
+      "datasetPrice": null,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "getrelief-rx",
+      "name": "GetRelief Rx",
+      "url": "https://getreliefrx.com",
+      "datasetPrice": 750,
+      "extractedPrice": 165,
+      "candidates": [
+        165,
+        165,
+        399,
+        399,
+        165,
+        399,
+        79
+      ],
+      "deltaUsd": -585,
+      "deltaPct": -78,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "gobymeds",
+      "name": "GobyMeds",
+      "url": "https://gobymeds.com",
+      "datasetPrice": 119,
+      "extractedPrice": 199,
+      "candidates": [
+        99,
+        133,
+        139,
+        169,
+        199,
+        199,
+        116,
+        199,
+        119,
+        119
+      ],
+      "deltaUsd": 80,
+      "deltaPct": 67.22689075630252,
+      "severity": "MEDIUM",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "good-life-meds",
+      "name": "Good Life Meds",
+      "url": "https://goodlifemeds.com",
+      "datasetPrice": null,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "goodrx-care",
+      "name": "GoodRx Care",
+      "url": "https://www.goodrx.com/care",
+      "datasetPrice": null,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "henry-meds",
+      "name": "Henry Meds",
+      "url": "https://henrymeds.com",
+      "datasetPrice": 249,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "hers",
+      "name": "Hers",
+      "url": "https://www.forhers.com",
+      "datasetPrice": 199,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "hims",
+      "name": "Hims",
+      "url": "https://www.hims.com",
+      "datasetPrice": 199,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "independent-wellness",
+      "name": "Independent Wellness",
+      "url": "https://independent-wellness.com",
+      "datasetPrice": 270,
+      "extractedPrice": 379,
+      "candidates": [
+        249,
+        379
+      ],
+      "deltaUsd": 109,
+      "deltaPct": 40.370370370370374,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "ivim-health",
+      "name": "Ivim Health",
+      "url": "https://ivimhealth.com",
+      "datasetPrice": 75,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "ivy-rx",
+      "name": "Ivy Rx",
+      "url": "https://ivyrx.com",
+      "datasetPrice": 175,
+      "extractedPrice": 179,
+      "candidates": [
+        175,
+        155,
+        245,
+        199,
+        175,
+        179,
+        179,
+        179
+      ],
+      "deltaUsd": 4,
+      "deltaPct": 2.2857142857142856,
+      "severity": "OK",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "jumpstartmd",
+      "name": "JumpstartMD",
+      "url": "https://jumpstartmd.com",
+      "datasetPrice": null,
+      "extractedPrice": 379,
+      "candidates": [
+        99,
+        379
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "lavender-sky-health",
+      "name": "Lavender Sky Health",
+      "url": "https://lavenderskyhealth.com",
+      "datasetPrice": 95,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "lemonaid-health",
+      "name": "Lemonaid Health",
+      "url": "https://www.lemonaidhealth.com",
+      "datasetPrice": 30,
+      "extractedPrice": 129,
+      "candidates": [
+        129
+      ],
+      "deltaUsd": 99,
+      "deltaPct": 330,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "lifemd",
+      "name": "LifeMD",
+      "url": "https://lifemd.com",
+      "datasetPrice": null,
+      "extractedPrice": 149,
+      "candidates": [
+        149,
+        25,
+        149,
+        199,
+        149,
+        75,
+        25
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "livv",
+      "name": "Livv",
+      "url": "https://joinlivv.com",
+      "datasetPrice": 249,
+      "extractedPrice": 99,
+      "candidates": [
+        99,
+        65,
+        99,
+        30,
+        247,
+        79
+      ],
+      "deltaUsd": -150,
+      "deltaPct": -60.24096385542169,
+      "severity": "MEDIUM",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "lumimeds",
+      "name": "LumiMeds",
+      "url": "https://www.lumimeds.com",
+      "datasetPrice": 133,
+      "extractedPrice": 116,
+      "candidates": [
+        116,
+        116,
+        133,
+        89,
+        116,
+        116,
+        116,
+        116,
+        133,
+        89,
+        116,
+        116
+      ],
+      "deltaUsd": -17,
+      "deltaPct": -12.781954887218044,
+      "severity": "MEDIUM",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "mdexam",
+      "name": "MDExam",
+      "url": "https://mdexam.com",
+      "datasetPrice": null,
+      "extractedPrice": 225,
+      "candidates": [
+        225
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "medvi",
+      "name": "MEDVi",
+      "url": "https://home.medvi.org/",
+      "datasetPrice": 299,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "mochi-health",
+      "name": "Mochi Health",
+      "url": "https://joinmochi.com",
+      "datasetPrice": 138,
+      "extractedPrice": 39,
+      "candidates": [
+        79,
+        39,
+        99,
+        199,
+        79,
+        39,
+        99,
+        199
+      ],
+      "deltaUsd": -99,
+      "deltaPct": -71.73913043478261,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "mojoon",
+      "name": "Mojoon",
+      "url": "https://mojoon.com",
+      "datasetPrice": 450,
+      "extractedPrice": 129,
+      "candidates": [
+        80,
+        350,
+        290,
+        400,
+        369,
+        129,
+        189,
+        159,
+        189,
+        129,
+        199
+      ],
+      "deltaUsd": -321,
+      "deltaPct": -71.33333333333334,
+      "severity": "MEDIUM",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "noom",
+      "name": "Noom",
+      "url": "https://www.noom.com",
+      "datasetPrice": null,
+      "extractedPrice": 349,
+      "candidates": [
+        349,
+        199
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "nu-image-medical",
+      "name": "Nu Image Medical",
+      "url": "https://nuimagemedical.com",
+      "datasetPrice": null,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "nuform-health",
+      "name": "Nuform Health",
+      "url": "https://nuformhealth.com",
+      "datasetPrice": null,
+      "extractedPrice": 170,
+      "candidates": [
+        170,
+        170,
+        170
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "nurx",
+      "name": "Nurx",
+      "url": "https://www.nurx.com",
+      "datasetPrice": 179,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "onlinesemaglutideorg",
+      "name": "OnlineSemaglutide.org",
+      "url": "https://onlinesemaglutide.org",
+      "datasetPrice": 279,
+      "extractedPrice": 150,
+      "candidates": [
+        150,
+        241,
+        150
+      ],
+      "deltaUsd": -129,
+      "deltaPct": -46.236559139784944,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "orderlymeds",
+      "name": "OrderlyMeds",
+      "url": "https://orderlymeds.com",
+      "datasetPrice": 74,
+      "extractedPrice": 149,
+      "candidates": [
+        74,
+        299,
+        149
+      ],
+      "deltaUsd": 75,
+      "deltaPct": 101.35135135135135,
+      "severity": "HIGH",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "peak-wellness",
+      "name": "Peak Wellness",
+      "url": "https://trypeak.com",
+      "datasetPrice": 249,
+      "extractedPrice": 165,
+      "candidates": [
+        165,
+        149
+      ],
+      "deltaUsd": -84,
+      "deltaPct": -33.734939759036145,
+      "severity": "MEDIUM",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "piper",
+      "name": "Piper",
+      "url": "https://www.joinpiper.com",
+      "datasetPrice": 135,
+      "extractedPrice": 135,
+      "candidates": [
+        135,
+        199,
+        135,
+        135
+      ],
+      "deltaUsd": 0,
+      "deltaPct": 0,
+      "severity": "OK",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "plushcare",
+      "name": "PlushCare",
+      "url": "https://plushcare.com",
+      "datasetPrice": 149,
+      "extractedPrice": 129,
+      "candidates": [
+        30,
+        129,
+        25,
+        129,
+        129
+      ],
+      "deltaUsd": -20,
+      "deltaPct": -13.422818791946309,
+      "severity": "OK",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "pomegranate-health",
+      "name": "Pomegranate Health",
+      "url": "https://joinpomegranate.com",
+      "datasetPrice": 90,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Per-provider timeout (30000ms) exceeded",
+      "error": "timeout"
+    },
+    {
+      "slug": "reflexmd",
+      "name": "ReflexMD",
+      "url": "https://www.reflexmd.com",
+      "datasetPrice": 497,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "No price candidates extracted from page"
+    },
+    {
+      "slug": "remedy-meds",
+      "name": "Remedy Meds",
+      "url": "https://remedymeds.com",
+      "datasetPrice": 299,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "No price candidates extracted from page"
+    },
+    {
+      "slug": "ro",
+      "name": "Ro",
+      "url": "https://ro.co/weight-loss",
+      "datasetPrice": null,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Both static fetch and browser fetch failed",
+      "error": "fetch_failed"
+    },
+    {
+      "slug": "sesame",
+      "name": "Sesame",
+      "url": "https://sesamecare.com",
+      "datasetPrice": 349,
+      "extractedPrice": 59,
+      "candidates": [
+        59,
+        113,
+        59,
+        149
+      ],
+      "deltaUsd": -290,
+      "deltaPct": -83.0945558739255,
+      "severity": "HIGH",
+      "evidence": "source=per-month-pattern-glp1-context, 4 candidates, mode/median=$59"
+    },
+    {
+      "slug": "shedrx",
+      "name": "ShedRx",
+      "url": "https://tryshed.com/",
+      "datasetPrice": 199,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "No price candidates extracted from page"
+    },
+    {
+      "slug": "skinnyrx",
+      "name": "SkinnyRx",
+      "url": "https://www.skinnyrx.com",
+      "datasetPrice": 199,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "No price candidates extracted from page"
+    },
+    {
+      "slug": "strive-pharmacy",
+      "name": "Strive Pharmacy",
+      "url": "https://www.strivepharmacy.com",
+      "datasetPrice": null,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "No price candidates extracted from page"
+    },
+    {
+      "slug": "the-calibrate-clinic",
+      "name": "Oxford's Medical Weight Loss (The Calibrate Clinic)",
+      "url": "https://thecalibrateclinic.com",
+      "datasetPrice": null,
+      "extractedPrice": 50,
+      "candidates": [
+        50,
+        50
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "source=broad-dollar-sweep, 2 candidates, mode/median=$50"
+    },
+    {
+      "slug": "trimi-health",
+      "name": "Trimi Health",
+      "url": "https://trytrimi.com",
+      "datasetPrice": 99,
+      "extractedPrice": 99,
+      "candidates": [
+        125,
+        99,
+        99,
+        125
+      ],
+      "deltaUsd": 0,
+      "deltaPct": 0,
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 4 candidates, mode/median=$99"
+    },
+    {
+      "slug": "trimrx",
+      "name": "TrimRx",
+      "url": "https://trimrx.com",
+      "datasetPrice": 199,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "No price candidates extracted from page"
+    },
+    {
+      "slug": "try-yucca-health",
+      "name": "Try Yucca Health",
+      "url": "https://tryyucca.com",
+      "datasetPrice": 146,
+      "extractedPrice": 192,
+      "candidates": [
+        146,
+        146,
+        258,
+        258,
+        192,
+        192,
+        192,
+        192
+      ],
+      "deltaUsd": 46,
+      "deltaPct": 31.506849315068493,
+      "severity": "HIGH",
+      "evidence": "source=json-ld, 8 candidates, mode/median=$192"
+    },
+    {
+      "slug": "viviomd",
+      "name": "VivioMD",
+      "url": "https://viviomd.com",
+      "datasetPrice": null,
+      "extractedPrice": 299,
+      "candidates": [
+        299,
+        299,
+        398
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "source=per-month-pattern-glp1-context, 3 candidates, mode/median=$299"
+    },
+    {
+      "slug": "walgreens-weight-management",
+      "name": "Walgreens Weight Management",
+      "url": "https://www.walgreens.com/topic/virtual-healthcare/weight-loss.jsp",
+      "datasetPrice": null,
+      "extractedPrice": 149,
+      "candidates": [
+        149,
+        149,
+        149,
+        199,
+        299,
+        149,
+        149,
+        299,
+        199,
+        349,
+        299,
+        399,
+        149,
+        199,
+        349,
+        349,
+        499
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "source=per-month-pattern-glp1-context, 17 candidates, mode/median=$149"
+    },
+    {
+      "slug": "weight-watchers",
+      "name": "WeightWatchers Clinic",
+      "url": "https://www.weightwatchers.com/us/clinic",
+      "datasetPrice": null,
+      "extractedPrice": 74,
+      "candidates": [
+        74,
+        74
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "source=per-month-pattern-glp1-context, 2 candidates, mode/median=$74"
+    },
+    {
+      "slug": "weightlessrx",
+      "name": "WeightlessRx",
+      "url": "https://www.weightlessrx.com",
+      "datasetPrice": null,
+      "extractedPrice": 199,
+      "candidates": [
+        199
+      ],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "source=json-ld, 1 candidates, mode/median=$199"
+    },
+    {
+      "slug": "weightrx",
+      "name": "WeightRx",
+      "url": "https://home.weightrx.com/",
+      "datasetPrice": 99,
+      "extractedPrice": 83,
+      "candidates": [
+        83,
+        83,
+        83,
+        83,
+        83,
+        83,
+        83
+      ],
+      "deltaUsd": -16,
+      "deltaPct": -16.161616161616163,
+      "severity": "HIGH",
+      "evidence": "source=per-month-pattern-glp1-context, 7 candidates, mode/median=$83"
+    },
+    {
+      "slug": "willow",
+      "name": "Willow",
+      "url": "https://startwillow.com",
+      "datasetPrice": 299,
+      "extractedPrice": 299,
+      "candidates": [
+        299
+      ],
+      "deltaUsd": 0,
+      "deltaPct": 0,
+      "severity": "OK",
+      "evidence": "source=per-month-pattern-glp1-context, 1 candidates, mode/median=$299"
+    },
+    {
+      "slug": "noom-med",
+      "name": "Noom Med",
+      "url": "https://www.noom.com/med",
+      "datasetPrice": 99,
+      "extractedPrice": 99,
+      "candidates": [
+        99,
+        69
+      ],
+      "deltaUsd": 0,
+      "deltaPct": 0,
+      "severity": "OK",
+      "evidence": "source=broad-dollar-sweep, 2 candidates, mode/median=$99"
+    },
+    {
+      "slug": "t2d",
+      "name": "T2D.com",
+      "url": "https://t2d.com/",
+      "datasetPrice": 999,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "No price candidates extracted from page"
+    },
+    {
+      "slug": "fella-health",
+      "name": "Fella Health",
+      "url": "https://www.fellahealth.com",
+      "datasetPrice": 999,
+      "extractedPrice": 99,
+      "candidates": [
+        149,
+        45,
+        99,
+        99
+      ],
+      "deltaUsd": -900,
+      "deltaPct": -90.09009009009009,
+      "severity": "HIGH",
+      "evidence": "source=per-month-pattern-glp1-context, 4 candidates, mode/median=$99"
+    },
+    {
+      "slug": "hydramed",
+      "name": "HydraMed",
+      "url": "https://hydramed.com",
+      "datasetPrice": 179,
+      "extractedPrice": 25,
+      "candidates": [
+        25,
+        25,
+        50,
+        50,
+        100,
+        100,
+        250,
+        450,
+        700,
+        750,
+        25,
+        25
+      ],
+      "deltaUsd": -154,
+      "deltaPct": -86.03351955307262,
+      "severity": "MEDIUM",
+      "evidence": "source=broad-dollar-sweep, 12 candidates, mode/median=$25"
+    },
+    {
+      "slug": "emerge-weight-loss",
+      "name": "Emerge Weight Loss",
+      "url": "https://emergeweight.com",
+      "datasetPrice": 299,
+      "extractedPrice": 50,
+      "candidates": [
+        50,
+        50,
+        25
+      ],
+      "deltaUsd": -249,
+      "deltaPct": -83.27759197324414,
+      "severity": "MEDIUM",
+      "evidence": "source=broad-dollar-sweep, 3 candidates, mode/median=$50"
+    },
+    {
+      "slug": "invigor-medical",
+      "name": "Invigor Medical",
+      "url": "https://invigormedical.com",
+      "datasetPrice": 199,
+      "extractedPrice": 320,
+      "candidates": [
+        340,
+        220,
+        320
+      ],
+      "deltaUsd": 121,
+      "deltaPct": 60.80402010050251,
+      "severity": "HIGH",
+      "evidence": "source=per-month-pattern-glp1-context, 3 candidates, mode/median=$320"
+    },
+    {
+      "slug": "peptidesrx",
+      "name": "PeptidesRx",
+      "url": "https://getpeptidesrx.com",
+      "datasetPrice": 169,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "No price candidates extracted from page"
+    },
+    {
+      "slug": "lillydirect-foundayo",
+      "name": "LillyDirect Foundayo",
+      "url": "https://lillydirect.lilly.com/pharmacy-solutions/foundayo",
+      "datasetPrice": 25,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "Both static fetch and browser fetch failed",
+      "error": "fetch_failed"
+    },
+    {
+      "slug": "weightwatchers",
+      "name": "WeightWatchers",
+      "url": "https://www.weightwatchers.com/us/weight-loss-medication/foundayo",
+      "datasetPrice": 149,
+      "extractedPrice": 74,
+      "candidates": [
+        149,
+        74,
+        149,
+        299,
+        74
+      ],
+      "deltaUsd": -75,
+      "deltaPct": -50.33557046979866,
+      "severity": "HIGH",
+      "evidence": "source=per-month-pattern-glp1-context, 5 candidates, mode/median=$74"
+    },
+    {
+      "slug": "nowpatient",
+      "name": "NowPatient",
+      "url": "https://nowpatient.com/treatments",
+      "datasetPrice": 1069,
+      "extractedPrice": null,
+      "candidates": [],
+      "deltaUsd": null,
+      "deltaPct": null,
+      "severity": "UNKNOWN",
+      "evidence": "No price candidates extracted from page"
+    }
+  ],
+  "summary": {
+    "high": 17,
+    "medium": 8,
+    "ok": 6,
+    "unknown": 43
+  }
 }
