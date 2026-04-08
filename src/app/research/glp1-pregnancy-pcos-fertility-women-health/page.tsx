@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-pregnancy-pcos-fertility-women-health";
 
@@ -516,6 +517,35 @@ export default function PregnancyArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Can I take Wegovy or Zepbound while trying to get pregnant?",
+            answer:
+              "No. The FDA labels for Wegovy, Ozempic, Zepbound, and Mounjaro all advise discontinuing the drug at least 2 months before a planned pregnancy. Animal reproductive studies showed adverse fetal effects, and human data are insufficient to establish safety in pregnancy. Patients planning conception should stop the GLP-1 with their prescriber's guidance and pursue weight management through other means during the conception window.",
+          },
+          {
+            question: "Does semaglutide help with PCOS?",
+            answer:
+              "Indirectly, yes. Polycystic ovary syndrome (PCOS) is strongly associated with insulin resistance and obesity, and weight loss of 5-10% reliably improves PCOS symptoms (cycle regularity, ovulation, hirsutism, metabolic markers). Semaglutide is not FDA-approved specifically for PCOS, but it is increasingly prescribed off-label for PCOS-associated obesity, with growing observational evidence of benefit on cycle regularity and fertility markers.",
+          },
+          {
+            question: "What if I get pregnant while on Wegovy?",
+            answer:
+              "Stop the medication immediately and notify your prescriber. There is no FDA-approved 'safe' window during pregnancy, and the labels recommend discontinuation. Your prescriber and OB will discuss the risk-benefit calculus given your specific situation. Most patients who become pregnant unexpectedly on a GLP-1 are advised to stop the drug and have OB-led obesity management for the rest of pregnancy.",
+          },
+          {
+            question: "Can GLP-1s cause birth control failure?",
+            answer:
+              "Tirzepatide (Mounjaro/Zepbound) labels include a specific warning that the drug may reduce the effectiveness of oral contraceptives, and recommend non-oral or barrier contraception during initiation and after each dose escalation. Semaglutide does not have the same labeled warning, but the mechanism (delayed gastric emptying altering pill absorption) is plausible. Patients on tirzepatide who rely on oral birth control should discuss alternative contraception with their prescriber.",
+          },
+          {
+            question: "Is it safe to breastfeed while on a GLP-1?",
+            answer:
+              "Insufficient data. The FDA labels say to weigh the benefits of breastfeeding against the unknown risk to the infant. There are no published trials of GLP-1 use in lactating humans, and limited animal data on transfer to milk. Most clinicians recommend not initiating GLP-1 therapy during breastfeeding unless the maternal benefit clearly outweighs the unknown risk.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

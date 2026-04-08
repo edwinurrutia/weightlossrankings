@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "wegovy-ozempic-zepbound-mounjaro-brand-name-cheat-sheet";
 
@@ -433,6 +434,35 @@ export default function BrandCheatSheetArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What's the difference between Wegovy and Ozempic?",
+            answer:
+              "Wegovy and Ozempic are both manufactured by Novo Nordisk and contain the same active ingredient (semaglutide), but they are FDA-approved for different indications and at different doses. Ozempic is approved for type 2 diabetes (max dose 2.0mg weekly); Wegovy is approved for chronic weight management (max dose 2.4mg weekly) and cardiovascular risk reduction. The pen formulations are different.",
+          },
+          {
+            question: "What's the difference between Mounjaro and Zepbound?",
+            answer:
+              "Mounjaro and Zepbound are both manufactured by Eli Lilly and contain the same active ingredient (tirzepatide), but they are FDA-approved for different indications. Mounjaro is approved for type 2 diabetes; Zepbound is approved for chronic weight management and obstructive sleep apnea (added in 2024). The maximum dose for both is 15mg weekly. The pen formulations are very similar.",
+          },
+          {
+            question: "Is Wegovy the same as Ozempic for weight loss?",
+            answer:
+              "The active ingredient is the same (semaglutide), but the FDA-approved indication and the studied dose are different. Wegovy goes up to 2.4mg weekly with weight-loss data from the STEP program; Ozempic goes up to 2.0mg weekly with diabetes data from SUSTAIN. Many patients use Ozempic off-label for weight loss, but the highest published efficacy data for weight loss specifically come from the Wegovy 2.4mg dose.",
+          },
+          {
+            question: "Which GLP-1 brand is best for weight loss?",
+            answer:
+              "Head-to-head data (SURMOUNT-5) showed tirzepatide produced greater mean weight loss than semaglutide. So among the four brand pens, Zepbound (tirzepatide for weight management) has the largest published mean weight loss in a direct comparison. That said, individual response varies, side-effect profiles differ, and insurance coverage often dictates the practical choice.",
+          },
+          {
+            question: "Are Wegovy, Ozempic, Zepbound, and Mounjaro the same drug?",
+            answer:
+              "No — they are TWO different drugs sold under FOUR brand names. Semaglutide is sold as Wegovy (weight management) and Ozempic (diabetes). Tirzepatide is sold as Zepbound (weight management) and Mounjaro (diabetes). Semaglutide and tirzepatide have different mechanisms, different efficacy, and different side-effect profiles.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

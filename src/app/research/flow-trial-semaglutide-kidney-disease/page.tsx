@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "flow-trial-semaglutide-kidney-disease";
 
@@ -483,6 +484,35 @@ export default function FlowKidneyArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What did the FLOW trial show about semaglutide and kidney disease?",
+            answer:
+              "The FLOW trial (Perkovic 2024, NEJM, PMID 38785317) randomized 3,533 patients with type 2 diabetes and chronic kidney disease to semaglutide 1.0mg weekly or placebo. Semaglutide reduced the primary composite endpoint (kidney failure, ≥50% eGFR decline, kidney or cardiovascular death) by 24% over a median follow-up of 3.4 years. The trial was stopped early for efficacy.",
+          },
+          {
+            question: "Can semaglutide protect the kidneys?",
+            answer:
+              "In patients with type 2 diabetes and chronic kidney disease, yes — the FLOW trial demonstrated a 24% reduction in major kidney-related events with semaglutide vs placebo. The mechanism is multifactorial: better glycemic control, blood pressure reduction, weight loss, and likely direct anti-inflammatory effects on the kidney. Whether the same benefit extends to non-diabetic patients with CKD is being studied.",
+          },
+          {
+            question: "Is semaglutide safe in chronic kidney disease?",
+            answer:
+              "Yes, generally. Semaglutide is not renally cleared and does not require dose adjustment in patients with reduced kidney function. The FDA labels do not contraindicate its use in CKD, and the FLOW trial enrolled patients with eGFR as low as 25 mL/min/1.73m². Patients with end-stage renal disease on dialysis were not studied and should consult a nephrologist.",
+          },
+          {
+            question: "Should I take semaglutide if I have type 2 diabetes and CKD?",
+            answer:
+              "The FLOW trial provides strong evidence for kidney benefit in this population, and major guidelines (KDIGO, ADA) now recommend GLP-1 receptor agonists or SGLT2 inhibitors as part of first-line therapy for T2DM with CKD specifically because of these outcomes. Discuss the trade-offs (benefit vs side effects, cost, other medications) with your nephrologist or endocrinologist.",
+          },
+          {
+            question: "Does Wegovy or Zepbound have similar kidney data?",
+            answer:
+              "Wegovy contains the same active ingredient as Ozempic (semaglutide), and the FLOW trial result is mechanistically expected to extend to Wegovy at equivalent or higher doses. Zepbound (tirzepatide) does not yet have a dedicated kidney outcomes trial published; the SURPASS-CVOT and other ongoing trials may provide data in the coming years. As of 2026, semaglutide has the strongest evidence base for renal benefit.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

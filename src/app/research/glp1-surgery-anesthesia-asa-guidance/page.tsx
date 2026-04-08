@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-surgery-anesthesia-asa-guidance";
 
@@ -466,6 +467,35 @@ export default function GlpSurgeryArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Should I stop my GLP-1 before surgery?",
+            answer:
+              "Yes, in most cases. The American Society of Anesthesiologists (ASA) 2023 consensus guidance recommends holding once-weekly GLP-1s (semaglutide, tirzepatide) for at least one week before elective surgery requiring sedation or general anesthesia, and holding daily GLP-1s (Saxenda) on the day of surgery. The reason is delayed gastric emptying, which increases aspiration risk under anesthesia.",
+          },
+          {
+            question: "How long before surgery do I stop semaglutide?",
+            answer:
+              "The ASA 2023 guidance: hold weekly semaglutide for at least 1 week before surgery requiring sedation or general anesthesia. Some institutions extend this to 2 weeks for higher-risk procedures. Always follow the specific instructions from your surgeon and anesthesiologist — they may have institutional protocols that differ.",
+          },
+          {
+            question: "Why do I need to stop a GLP-1 before anesthesia?",
+            answer:
+              "GLP-1 receptor agonists slow gastric emptying, which means food and stomach contents may remain in the stomach far longer than the standard 6-8 hour fasting interval assumes. Multiple case reports and small series have documented patients on GLP-1s with full stomachs at intubation despite proper NPO status, increasing the risk of aspiration. Holding the drug allows gastric emptying to normalize.",
+          },
+          {
+            question: "What if I forgot to stop my GLP-1 before surgery?",
+            answer:
+              "Tell your surgical team immediately. The ASA guidance suggests that surgery may proceed with modified precautions: rapid sequence induction, longer fasting if elective, or treating the patient as 'full stomach' with appropriate aspiration precautions. Whether to delay surgery depends on the urgency and the anesthesiologist's risk assessment. Do not skip telling them — undisclosed GLP-1 use is a real safety risk.",
+          },
+          {
+            question: "When can I restart the GLP-1 after surgery?",
+            answer:
+              "Generally once you are tolerating oral intake, your bowel function has returned, and your surgical team approves restart. There is no fixed waiting period in the ASA guidance — most patients restart within 1-2 weeks of uncomplicated surgery. Restart at the same dose you were on before surgery, not the starter dose, unless the gap is long enough to warrant re-titration.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

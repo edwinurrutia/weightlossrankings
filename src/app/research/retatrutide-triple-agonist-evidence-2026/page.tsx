@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "retatrutide-triple-agonist-evidence-2026";
 
@@ -548,6 +549,35 @@ export default function RetatrutideArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What is retatrutide?",
+            answer:
+              "Retatrutide is a once-weekly injectable triple agonist developed by Eli Lilly that targets the GLP-1, GIP, and glucagon receptors simultaneously. It is the next-generation extension of the dual-agonist concept that produced tirzepatide. As of 2026 it is in late-stage development for chronic weight management and type 2 diabetes; it is not yet FDA-approved.",
+          },
+          {
+            question: "How much weight loss does retatrutide produce?",
+            answer:
+              "In the phase 2 TRIUMPH-1 trial (Jastreboff 2023, NEJM, PMID 37345787), retatrutide produced approximately 24% mean weight loss at 48 weeks at the highest dose, compared to ~21% for tirzepatide at 72 weeks in SURMOUNT-1. The phase 3 TRIUMPH program is testing retatrutide for chronic weight management at multiple doses across longer follow-up.",
+          },
+          {
+            question: "When will retatrutide be FDA-approved?",
+            answer:
+              "Eli Lilly has not announced a definitive FDA approval timeline. The TRIUMPH phase 3 program is ongoing, with results expected in the next several years. Approval (assuming positive results) would follow the standard NDA review process. Current timing estimates from analyst commentary place a possible approval in the late 2020s, but this is speculative.",
+          },
+          {
+            question: "How is retatrutide different from Wegovy and Zepbound?",
+            answer:
+              "Wegovy is a single GLP-1 agonist (semaglutide). Zepbound is a dual GLP-1 + GIP agonist (tirzepatide). Retatrutide adds a third receptor target — glucagon — which is hypothesized to increase energy expenditure beyond what GLP-1/GIP agonism alone produces. The phase 2 efficacy data support this hypothesis, but the long-term safety profile of triple agonism is still being characterized.",
+          },
+          {
+            question: "Can I get retatrutide today?",
+            answer:
+              "No, not legitimately. Retatrutide is investigational and only available through clinical trials. Any vendor claiming to sell 'retatrutide' for personal use outside of a clinical trial is selling an unapproved, unregulated product — usually mislabeled research peptides — and the FDA has issued warning letters about exactly this practice. Wait for FDA approval and a legitimate dispensing pathway.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }
