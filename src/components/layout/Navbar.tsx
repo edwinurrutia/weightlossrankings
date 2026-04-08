@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Tirzepatide", href: "/best/tirzepatide-providers" },
   { label: "Prices", href: "/price-tracker" },
   { label: "Savings Calculator", href: "/savings-calculator" },
-  { label: "Insurance Check", href: "/insurance-checker" },
+  { label: "Weight Loss Calculator", href: "/tools/glp1-weight-loss-calculator" },
 ];
 
 export default function Navbar() {
