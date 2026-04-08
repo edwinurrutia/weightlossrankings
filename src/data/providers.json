@@ -5401,5 +5401,78 @@
       "confidence": "medium",
       "notes": "Live-verified 2026-04-07 via the dedicated Foundayo product page at weightwatchers.com/us/weight-loss-medication/foundayo. Page explicitly states: 'Foundayo (self-pay): Starting at $149/mo for your starting dose and up to $299/mo for higher doses' and 'Programs do not include the cost of GLP-1 medications' \u2014 i.e., the membership and drug are billed separately. Foundayo offered in 6 doses: 0.8mg, 2.5mg, 5.5mg, 9mg, 14.5mg, 17.2mg. State list not published on the page \u2014 'All medical services are provided through our affiliated medical group, WeightWatchers Clinic.' Insurance coverage not available per WW's own disclosure ('Weight Watchers is not able to check insurance coverage for Foundayo at this time, but will be able to in the future'). CORRECTION: earlier Wave 5.7 removal was based on an incomplete Chrome MCP scrape that missed this page \u2014 the Foundayo offering is real and pricing is verified against WW's own product page."
     }
+  },
+  {
+    "_id": "nowpatient",
+    "name": "NowPatient",
+    "slug": "nowpatient",
+    "description": "NowPatient is a US-UK telehealth platform offering brand-name GLP-1 weight management access including Mounjaro, Wegovy (injection and oral tablet), and Saxenda. Consultations are free and patients pay only the cost of the prescribed medication, which means out-of-pocket tracks brand list prices (~$1,000-$1,350/mo without insurance). HQ Austin, TX.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Mounjaro (brand, cash-pay)",
+        "form": "brand",
+        "monthly_cost": 1069,
+        "drug": "tirzepatide"
+      },
+      {
+        "dose": "Wegovy injection (brand, cash-pay)",
+        "form": "brand",
+        "monthly_cost": 1349,
+        "drug": "semaglutide"
+      },
+      {
+        "dose": "Wegovy oral tablet (brand, cash-pay)",
+        "form": "brand",
+        "monthly_cost": 1349,
+        "drug": "semaglutide"
+      },
+      {
+        "dose": "Saxenda (brand, cash-pay)",
+        "form": "brand",
+        "monthly_cost": 1349,
+        "drug": "liraglutide"
+      }
+    ],
+    "scores": {
+      "value": 4,
+      "effectiveness": 8,
+      "ux": 7.5,
+      "trust": 8,
+      "accessibility": 7.5,
+      "support": 7.5
+    },
+    "features": [
+      "Brand Name",
+      "Free Consultation"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://nowpatient.com/treatments",
+    "affiliate_network": "direct",
+    "fda_warnings": [],
+    "pros": [
+      "Free telehealth consultation \u2014 patients only pay the medication cost",
+      "Brand-name Mounjaro, Wegovy injection, Wegovy oral tablet, and Saxenda all available",
+      "One of the few telehealth platforms offering Wegovy in both injection and oral pill form",
+      "No compounded options \u2014 every drug is FDA-approved brand"
+    ],
+    "cons": [
+      "Cash-pay pricing tracks full brand list price (~$1,000-$1,350/mo)",
+      "Does not offer compounded semaglutide or tirzepatide (generally the cheaper route)",
+      "State availability not disclosed publicly \u2014 determined during intake",
+      "Phone: 1-866-967-1977, HQ Austin TX",
+      "Does NOT offer Foundayo (orforglipron)"
+    ],
+    "best_for": "Brand-name GLP-1 access without a compounded route",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "WebFetch live pull",
+      "source_urls": [
+        "https://nowpatient.com/treatments"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07 via nowpatient.com/treatments. Confirmed Mounjaro, Wegovy (injection + oral tablet), and Saxenda are offered as the GLP-1 weight management catalog. Liraglutide listed in a blood-pressure-requirement table. Consultation is free per the site: 'the consultation itself is completely free' and patients 'only pay for the cost of the medication.' No published unit prices; the monthly_cost values in this entry reflect the brand manufacturer list prices (Mounjaro ~$1,069/mo, Wegovy ~$1,349/mo, Saxenda ~$1,349/mo per accessdata.fda.gov and each manufacturer's savings page) because NowPatient does not mark up the drug itself. State list not published publicly. HQ Austin, TX (1-866-967-1977). CORRECTION: Wave 5.1 removed 'nowpatient-foundayo' because the Foundayo claim was fabricated \u2014 that removal was correct, but the parent NowPatient business is a legitimate GLP-1 provider and is now restored under the corrected slug 'nowpatient' with the verified drug list."
+    }
   }
 ]
