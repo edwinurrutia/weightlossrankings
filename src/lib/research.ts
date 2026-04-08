@@ -1070,6 +1070,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutida", "Tirzepatida", "Español", "STEP-1", "SURMOUNT-1"],
   },
   {
+    slug: "rybelsus-semaglutida-oral-que-es",
+    title:
+      "Rybelsus (semaglutida oral): qué es, cómo se compara con Ozempic y por qué no es (todavía) una terapia para bajar de peso",
+    description:
+      "Guía en español sobre Rybelsus, la única pastilla oral de un agonista del receptor de GLP-1 aprobada por la FDA. Resultados verificados de PIONEER 1 (Aroda, Diabetes Care 2019, PMID 31186300) con reducciones de A1C de 0.7 a 1.4 puntos porcentuales, PIONEER 6 (Husain, NEJM 2019, PMID 31185157) con un cociente de riesgo cardiovascular de 0.79, y OASIS 1 (Knop, Lancet 2023, PMID 37385278) con una pérdida de peso del 15.1% a la dosis oral de 50 mg — una dosis que aún no está aprobada por la FDA para el manejo del peso.",
+    excerpt:
+      "Rybelsus es el nombre comercial de la semaglutida oral, aprobada por la FDA en septiembre de 2019 para el control glucémico en adultos con diabetes tipo 2. Es el primer y único agonista del receptor de GLP-1 en forma de pastilla. Contiene el mismo principio activo que Ozempic y Wegovy (semaglutida), pero en una formulación oral que requiere instrucciones de administración muy específicas (ayunas, 120 mL de agua, esperar 30 minutos) para funcionar. Esta guía recorre los datos verificados de los ensayos PIONEER 1 y PIONEER 6, las reglas de administración que no son negociables, por qué Rybelsus en sus dosis aprobadas no es una terapia para bajar de peso, y qué muestra el ensayo OASIS 1 sobre la dosis oral de 50 mg que aún está pendiente de aprobación regulatoria.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 14,
+    citations: 5,
+    tags: ["Rybelsus", "Semaglutida oral", "Diabetes", "Español", "PIONEER 1", "OASIS 1"],
+  },
+  {
     slug: "mounjaro-vs-ozempic-diabetes-surpass-2",
     title:
       "Mounjaro vs Ozempic en diabetes tipo 2: los datos del ensayo SURPASS-2",
@@ -1379,6 +1394,7 @@ export const SPANISH_RESEARCH_SLUGS: ReadonlySet<string> = new Set([
   "cuanto-peso-se-pierde-wegovy-zepbound",
   "zepbound-apnea-del-sueno-surmount-osa",
   "mounjaro-vs-ozempic-diabetes-surpass-2",
+  "rybelsus-semaglutida-oral-que-es",
 ]);
 
 export function isSpanishResearchSlug(slug: string): boolean {

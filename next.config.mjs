@@ -99,6 +99,11 @@ const nextConfig = {
         destination: "/es/research/mounjaro-vs-ozempic-diabetes-surpass-2",
         permanent: true,
       },
+      {
+        source: "/research/rybelsus-semaglutida-oral-que-es",
+        destination: "/es/research/rybelsus-semaglutida-oral-que-es",
+        permanent: true,
+      },
       // Retired /insurance-checker tool (2026-04-08). Insurance
       // formularies change too fast for a static prediction tool to
       // stay YMYL-accurate. Redirect to the rigorously sourced
