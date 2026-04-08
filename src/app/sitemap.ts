@@ -58,6 +58,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily",
       priority: 1.0,
     },
+    // /best index — newly created in 2026-04-08 schema audit follow-up
+    {
+      url: `${BASE_URL}/best`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
     // Rankings / best pages
     ...CATEGORY_KEYS.map((category) => ({
       url: `${BASE_URL}/best/${category}`,

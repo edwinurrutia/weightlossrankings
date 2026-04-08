@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/shared/JsonLd";
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
 
 export const metadata: Metadata = {
   title: "Free GLP-1 Tools & Calculators",
@@ -74,9 +78,52 @@ const TOOLS = [
   },
 ];
 
+// CollectionPage + ItemList JSON-LD for the /tools index. Tells
+// Google this is the canonical entry point for the per-tool
+// SoftwareApplication pages — strong topical-authority signal for
+// "GLP-1 calculator" / "Wegovy dose calculator" / "weight loss
+// calculator" queries. Caught in the 2026-04-08 schema audit
+// follow-up sweep.
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Free GLP-1 Tools & Calculators",
+  description:
+    "Free, evidence-based tools for patients on or considering GLP-1 weight loss medications. Dose plotters, PK simulators, pricing calculators, and clinical decision aids sourced from FDA prescribing information and PubMed primary literature.",
+  url: `${SITE_URL}/tools`,
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Weight Loss Rankings",
+    url: SITE_URL,
+  },
+  mainEntity: {
+    "@type": "ItemList",
+    name: "GLP-1 Tools & Calculators",
+    numberOfItems: TOOLS.length,
+    itemListElement: TOOLS.map((tool, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      url: `${SITE_URL}/tools/${tool.slug}`,
+      name: tool.title,
+    })),
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools` },
+  ],
+};
+
 export default function ToolsIndex() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-16">
+      <JsonLd data={collectionSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <header className="mb-12">
         <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold mb-4">
           Free tools
