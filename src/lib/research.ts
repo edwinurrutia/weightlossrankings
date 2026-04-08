@@ -1119,6 +1119,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 9,
     tags: ["Vyvanse", "Adderall", "Stimulants", "BED", "PubMed sourced"],
   },
+  {
+    slug: "hrt-perimenopause-glp1-women-weight",
+    title:
+      "HRT, Perimenopause, and GLP-1s: Weight Management in Women After 40",
+    description:
+      "Visceral fat redistribution at menopause is real (Lovejoy 2008), but the WHI Cochrane review of 28 RCTs showed HRT does not significantly change body weight. We walk through the menopausal metabolic shift, the WHI primary publication (Rossouw 2002), the NAMS 2022 hormone therapy position statement, the GLP-1 trial sex subgroup data showing women lose more weight than men on semaglutide, and the Foundayo CYP3A4 / oral contraceptive interaction.",
+    excerpt:
+      "Women lose body weight more readily than men in the GLP-1 obesity trials, but visceral fat redistribution at menopause complicates the picture. Lovejoy 2008 documented the menopausal metabolic shift: increased VAT, decreased energy expenditure. The WHI primary publication (Rossouw 2002) established the cardiovascular and breast cancer risks that limited long-term HRT use, but the Cochrane review on body weight (Norman 2000) found no significant effect of HRT on body weight per se. The NAMS 2022 hormone therapy position statement is the current standard. STEP-1 sex subgroup analysis showed women lost approximately -14% body weight on semaglutide vs men at -8%. The Foundayo (orforglipron) FDA label flags a CYP3A4 + gastric-emptying interaction with oral hormonal contraceptives requiring 30-day barrier contraception. Here is the verified evidence.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 12,
+    citations: 9,
+    tags: ["HRT", "Perimenopause", "Women's health", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
