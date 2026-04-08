@@ -58,12 +58,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily",
       priority: 1.0,
     },
-    // /best index — newly created in 2026-04-08 schema audit follow-up
+    // /best, /reviews, /alternatives, /savings indexes — all newly
+    // created in the 2026-04-08 schema audit follow-up. Each was
+    // previously a 404 even though child pages were sitemap-listed
+    // and breadcrumb-linked.
     {
       url: `${BASE_URL}/best`,
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/reviews`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/alternatives`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/savings`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
     },
     // Rankings / best pages
     ...CATEGORY_KEYS.map((category) => ({
