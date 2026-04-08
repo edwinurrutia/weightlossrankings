@@ -11,7 +11,10 @@ import { getAllCities, CITY_DRUG_SLUGS } from "@/lib/cities";
 import { SAVINGS_COMPARISONS } from "@/lib/savings-comparisons";
 import { getAllInsurers } from "@/lib/insurers";
 import { getAllPharmacies } from "@/lib/pharmacies";
-import { RESEARCH_ARTICLES } from "@/lib/research";
+import {
+  RESEARCH_ARTICLES,
+  SPANISH_RESEARCH_SLUGS,
+} from "@/lib/research";
 import { RESEARCH_CLUSTERS } from "@/lib/research-clusters";
 import { TOOLS, NON_TOOLS_INTERACTIVE_PAGES } from "@/lib/tools";
 import {
@@ -432,28 +435,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  // Spanish articles live at /es/research/[slug]; the entries that
-  // still appear in RESEARCH_ARTICLES with these slugs are published
-  // there now (the old /research/[slug] URLs 301 to /es/research/...
-  // via next.config.mjs and must NOT appear in the sitemap).
-  const SPANISH_RESEARCH_SLUGS = new Set<string>([
-    "semaglutide-para-que-sirve",
-    "tirzepatide-para-que-sirve",
-    "cuanto-tarda-glp1-en-hacer-efecto",
-    "guia-marcas-wegovy-ozempic-zepbound-mounjaro",
-    "efectos-secundarios-glp1-preguntas-respuestas",
-    "wegovy-vs-ozempic-diferencias",
-    "como-inyectar-semaglutida-guia-paso-a-paso",
-    "ozempic-precio-costo-comprar",
-    "semaglutida-efectos-secundarios-duracion",
-    "cuanto-peso-se-pierde-wegovy-zepbound",
-    "zepbound-apnea-del-sueno-surmount-osa",
-    "mounjaro-vs-ozempic-diabetes-surpass-2",
-  ]);
-
   // Dynamic: /research/[slug] — feed lastUpdated when present, else
-  // publishedDate. Excludes the Spanish slugs above; those are
-  // emitted under /es/research/[slug] with the same date precedence.
+  // publishedDate. Excludes Spanish slugs from SPANISH_RESEARCH_SLUGS
+  // (imported from src/lib/research.ts, the single source of truth);
+  // those are emitted under /es/research/[slug] with the same date
+  // precedence. The old /research/[slug] URLs 301 to /es/research/...
+  // via next.config.mjs and must NOT appear in the English sitemap.
   const researchPages: MetadataRoute.Sitemap = RESEARCH_ARTICLES.filter(
     (a) => !SPANISH_RESEARCH_SLUGS.has(a.slug),
   ).map((a) => ({

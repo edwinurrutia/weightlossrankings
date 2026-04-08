@@ -108,7 +108,7 @@ function buildSemaglutideVariants(): VariantConfig[] {
       {
         question: "Will insurance cover Wegovy or Ozempic?",
         answer:
-          "Coverage varies. Wegovy is covered by some commercial plans for obesity; Ozempic is generally covered for type 2 diabetes. Use our /insurance-checker to verify your plan.",
+          "Coverage varies. Wegovy is covered by some commercial plans for obesity; Ozempic is generally covered for type 2 diabetes. See our research breakdown at /research/glp1-insurance-coverage-medicare-medicaid-commercial to understand the landscape, and verify your specific plan by calling the number on your insurance card.",
       },
     ],
   });

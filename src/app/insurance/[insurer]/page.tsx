@@ -379,10 +379,17 @@ export default async function InsurerPage({
         <FAQSection items={faqs} />
 
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-          <CTAButton href="/insurance-checker" size="lg">
-            Personalized Coverage Check
+          <CTAButton
+            href="/research/glp1-insurance-coverage-medicare-medicaid-commercial"
+            size="lg"
+          >
+            Read the Coverage Landscape
           </CTAButton>
-          <CTAButton href="/savings-calculator" size="lg" variant="outline">
+          <CTAButton
+            href="/tools/glp1-savings-calculator"
+            size="lg"
+            variant="outline"
+          >
             Calculate Cash-Pay Savings
           </CTAButton>
         </div>

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { RESEARCH_ARTICLES } from "@/lib/research";
+import {
+  RESEARCH_ARTICLES,
+  SPANISH_RESEARCH_SLUGS,
+} from "@/lib/research";
 import JsonLd from "@/components/shared/JsonLd";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
@@ -27,9 +30,14 @@ const KIND_LABEL: Record<string, string> = {
 };
 
 export default function ResearchIndexPage() {
-  const articles = [...RESEARCH_ARTICLES].sort((a, b) =>
-    b.publishedDate.localeCompare(a.publishedDate),
-  );
+  // English research index — exclude Spanish articles. They live in
+  // RESEARCH_ARTICLES for a single source of truth but are canonically
+  // published at /es/research/[slug] and surface on the Spanish index
+  // at /es/research (reached via the "Disponible en Español" link
+  // below), not on this English-language page.
+  const articles = [...RESEARCH_ARTICLES]
+    .filter((a) => !SPANISH_RESEARCH_SLUGS.has(a.slug))
+    .sort((a, b) => b.publishedDate.localeCompare(a.publishedDate));
 
   // CollectionPage JSON-LD with hasPart array of every research
   // article. Tells Google "this page is the index for a collection

@@ -5,7 +5,7 @@ import {
   getAllProviders,
 } from "@/lib/data";
 import type { Provider } from "@/lib/types";
-import { RESEARCH_ARTICLES } from "@/lib/research";
+import { RESEARCH_ARTICLES, SPANISH_RESEARCH_SLUGS } from "@/lib/research";
 import { computeOverallScore } from "@/lib/scoring";
 import { US_STATES } from "@/lib/states";
 import { WEGOVY_MONTHLY_USD } from "@/lib/citations";
@@ -66,7 +66,15 @@ export default async function HomePage() {
   // dives — and that's the E-E-A-T signal we want first-time visitors
   // to see. Blog posts remain available at /blog but are no longer
   // surfaced on the homepage.
+  //
+  // Spanish-language articles are excluded from this English-homepage
+  // feed: they live in RESEARCH_ARTICLES so the registry stays a single
+  // source of truth, but they're canonically published at /es/research
+  // and surface under the Spanish tab on the /research index page —
+  // not on the English homepage where they'd confuse monolingual
+  // English visitors.
   const latestResearch = [...RESEARCH_ARTICLES]
+    .filter((a) => !SPANISH_RESEARCH_SLUGS.has(a.slug))
     .sort((a, b) => b.publishedDate.localeCompare(a.publishedDate))
     .slice(0, 3);
 

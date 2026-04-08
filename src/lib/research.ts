@@ -1350,3 +1350,37 @@ export function getResearchArticleBySlug(
 export function getAllResearchSlugs(): string[] {
   return RESEARCH_ARTICLES.map((a) => a.slug);
 }
+
+/**
+ * Canonical list of Spanish-language research article slugs. These
+ * entries still live in RESEARCH_ARTICLES for a single source of
+ * truth, but they are canonically published at /es/research/[slug]
+ * and MUST be excluded from English-language surfaces:
+ *
+ *   - the /research index page (English tab)
+ *   - the homepage "Latest Research" feed
+ *   - the English sitemap entries for /research/[slug]
+ *
+ * Add a new slug here whenever a Spanish article ships. The sitemap
+ * and homepage feed both import this set so there is one place to
+ * keep it in sync.
+ */
+export const SPANISH_RESEARCH_SLUGS: ReadonlySet<string> = new Set([
+  "semaglutide-para-que-sirve",
+  "tirzepatide-para-que-sirve",
+  "cuanto-tarda-glp1-en-hacer-efecto",
+  "guia-marcas-wegovy-ozempic-zepbound-mounjaro",
+  "efectos-secundarios-glp1-preguntas-respuestas",
+  "wegovy-vs-ozempic-diferencias",
+  "como-inyectar-semaglutida-guia-paso-a-paso",
+  "ozempic-precio-costo-comprar",
+  "donde-comprar-tirzepatida-mounjaro",
+  "semaglutida-efectos-secundarios-duracion",
+  "cuanto-peso-se-pierde-wegovy-zepbound",
+  "zepbound-apnea-del-sueno-surmount-osa",
+  "mounjaro-vs-ozempic-diabetes-surpass-2",
+]);
+
+export function isSpanishResearchSlug(slug: string): boolean {
+  return SPANISH_RESEARCH_SLUGS.has(slug);
+}

@@ -375,21 +375,13 @@ export const NON_TOOLS_INTERACTIVE_PAGES: ToolEntry[] = [
       sourceSummary: "WAC pricing in src/lib/citations.ts",
     },
   },
-  {
-    slug: "insurance-checker",
-    title: "Insurance Coverage Checker",
-    description: "Coverage checker by insurer.",
-    publishedDate: "2026-04-07",
-    lastUpdated: "2026-04-07",
-    sitemapPriority: 0.7,
-    changeFrequency: "monthly",
-    dataFreshness: {
-      lastVerified: "2026-04-07",
-      nextReview: "2026-07-07",
-      cadence: "quarterly",
-      sourceSummary: "src/data/insurers.json verification blocks",
-    },
-  },
+  // /insurance-checker was retired 2026-04-08. Insurance formularies
+  // change too quickly to make a static coverage-prediction tool
+  // reliably accurate for YMYL use, and the research article at
+  // /research/glp1-insurance-coverage-medicare-medicaid-commercial
+  // covers the same ground with primary-source citations and
+  // appropriate caveats. The old URL 301s to that article via
+  // next.config.mjs.
 ];
 
 export function getToolBySlug(slug: string): ToolEntry | undefined {

@@ -99,6 +99,27 @@ const nextConfig = {
         destination: "/es/research/mounjaro-vs-ozempic-diabetes-surpass-2",
         permanent: true,
       },
+      // Retired /insurance-checker tool (2026-04-08). Insurance
+      // formularies change too fast for a static prediction tool to
+      // stay YMYL-accurate. Redirect to the rigorously sourced
+      // research article on the same topic.
+      {
+        source: "/insurance-checker",
+        destination:
+          "/research/glp1-insurance-coverage-medicare-medicaid-commercial",
+        permanent: true,
+      },
+      // Retired duplicate /savings-calculator (2026-04-08) — the
+      // canonical tool lives at /tools/glp1-savings-calculator (under
+      // the standard /tools/glp1-* naming convention, with a full
+      // ToolEntry in src/lib/tools.ts, metadata schema, and the
+      // current pricing logic). The old /savings-calculator was a
+      // thinner multi-step wizard that duplicated the intent.
+      {
+        source: "/savings-calculator",
+        destination: "/tools/glp1-savings-calculator",
+        permanent: true,
+      },
       // Year-suffixed URLs are an SEO foot-gun: when 2027 rolls
       // around, every backlink to a "2026" URL turns stale and we'd
       // have to either keep the URL fresh (confusing) or 301 to a

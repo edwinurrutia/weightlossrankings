@@ -424,8 +424,8 @@ export default function InsuranceEmployerCheckerPage() {
         <h2>Related tools</h2>
         <ul>
           <li>
-            <Link href="/insurance-checker">
-              Insurance plan checker (by carrier and PBM)
+            <Link href="/research/glp1-insurance-coverage-medicare-medicaid-commercial">
+              GLP-1 insurance coverage landscape (Medicare, Medicaid &amp; commercial)
             </Link>
           </li>
           <li>
