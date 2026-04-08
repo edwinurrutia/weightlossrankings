@@ -447,6 +447,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "ozempic-precio-costo-comprar",
     "semaglutida-efectos-secundarios-duracion",
     "cuanto-peso-se-pierde-wegovy-zepbound",
+    "zepbound-apnea-del-sueno-surmount-osa",
   ]);
 
   // Dynamic: /research/[slug] — feed lastUpdated when present, else

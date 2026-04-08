@@ -1070,6 +1070,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutida", "Tirzepatida", "Español", "STEP-1", "SURMOUNT-1"],
   },
   {
+    slug: "zepbound-apnea-del-sueno-surmount-osa",
+    title:
+      "Zepbound para la apnea del sueño: los datos del ensayo SURMOUNT-OSA",
+    description:
+      "Guía en español sobre la aprobación de Zepbound (tirzepatida) por la FDA en diciembre de 2024 para la apnea obstructiva del sueño con obesidad. Resultados verificados del ensayo clínico SURMOUNT-OSA (Malhotra, NEJM 2024, PMID 38912654): reducción del índice de apnea-hipopnea de 25.3 eventos por hora en pacientes sin CPAP y 29.3 eventos por hora en pacientes con CPAP, frente a aproximadamente 5 eventos por hora con placebo. Cobertura de Medicare Part D para esta indicación específica y criterios de elegibilidad.",
+    excerpt:
+      "En diciembre de 2024 la FDA aprobó Zepbound (tirzepatida) como el primer medicamento con una indicación formal para adultos con apnea obstructiva del sueño de moderada a severa y obesidad. La aprobación se basó en el ensayo SURMOUNT-OSA publicado por Malhotra y colaboradores en New England Journal of Medicine en 2024. Esta guía en español recorre el diseño de los dos ensayos paralelos (uno en pacientes sin terapia con presión positiva y otro en pacientes con CPAP), las reducciones verificadas del índice de apnea-hipopnea (AHI), si la tirzepatida puede reemplazar a la CPAP, los efectos secundarios observados y cómo funciona la nueva cobertura de Medicare Part D para esta indicación específica — la única en la que Medicare cubre actualmente la tirzepatida.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 11,
+    citations: 4,
+    tags: ["Zepbound", "Apnea del sueño", "Español", "SURMOUNT-OSA", "Tirzepatida"],
+  },
+  {
     slug: "cuanto-peso-se-pierde-wegovy-zepbound",
     title:
       "¿Cuánto peso se pierde con Wegovy y Zepbound? Datos de STEP-1 y SURMOUNT-1",
