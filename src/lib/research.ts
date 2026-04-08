@@ -1059,6 +1059,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 14,
     tags: ["Bariatric surgery", "Weight loss surgery", "PubMed sourced"],
   },
+  {
+    slug: "exercise-pairing-glp1-lean-mass-preservation",
+    title:
+      "Exercise on a GLP-1: Pilates, Walking, HIIT, and Resistance Training for Lean Mass Preservation",
+    description:
+      "12,700+ monthly searches ask which exercise modalities work for weight loss — pilates, yoga, walking, running, HIIT, strength training. We walk through the GLP-1-specific evidence anchored on the S-LiTE trial (Lundgren NEJM 2021), the Cava 2017 lean mass preservation review, ACSM position stands, and the Saint-Maurice 2020 step count cohort, and explain why resistance training plus protein is the single highest-leverage intervention for GLP-1 patients.",
+    excerpt:
+      "Exercise pairing on a GLP-1 is one of the most-asked patient questions and the area with the strongest mitigation evidence for the lean mass loss documented in STEP-1 and SURMOUNT-1 body composition substudies. The S-LiTE trial (Lundgren NEJM 2021, n=195) randomized adults to liraglutide alone, exercise alone, or both, and the combination produced -9.5 kg vs -6.8 kg liraglutide alone vs -4.1 kg exercise alone — a 40% bigger weight loss AND a doubling of body-fat reduction. Cava 2017 (Adv Nutr) is the canonical lean-mass-preservation review. ACSM 2009 says >250 min/week of moderate cardio for clinically significant weight loss. ACSM 2011 (Garber) says minimum 2 days/week of compound resistance training. Murphy & Koehler 2022 says deficits >500 kcal/day impair lean mass gains in resistance-trained adults — directly relevant for GLP-1 patients whose appetite suppression can mask under-eating. Here is the verified evidence map.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 14,
+    citations: 11,
+    tags: ["Exercise", "Resistance training", "Lean mass", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(

@@ -63,5 +63,18 @@
     "notes": "VERIFIED via primary source: OPM PSHB program (https://www.opm.gov/healthcare-insurance/pshb/) launched Jan 1, 2025 and requires PSHB plan benefits to be equivalent to FEHB benefits, which means each carrier must cover at least one GLP-1 anti-obesity drug. Coverage specifics mirror the equivalent FEHB plan; verify in your PSHB plan brochure. Source: Government Executive coverage of PSHB Rx benefits (https://www.govexec.com/pay-benefits/2024/02/postal-service-health-benefits-program-prescription-coverage-and-open-season-2025/394298/).",
     "data_as_of": "2026-04-07",
     "confidence": "high"
+  },
+  {
+    "employer_id": "microsoft",
+    "employer_name": "Microsoft",
+    "industry": "Tech",
+    "plan_administrator": "Premera BCBS",
+    "wegovy_coverage": "Coverage requires Microsoft to elect the weight-management drug benefit under Premera medical policy 5.01.621. As of 2024-2025 verification, Wegovy is non-formulary for weight loss specifically; the cardiovascular indication (FDA March 2024) is covered under different criteria. Patients must verify current Microsoft plan election with HR.",
+    "zepbound_coverage": "Same as Wegovy: coverage available only if Microsoft has elected the weight-management drug benefit. Verify current election with HR.",
+    "ozempic_coverage": "Covered for diabetes diagnosis with prior authorization, per standard Premera formularies.",
+    "mounjaro_coverage": "Coverage for diabetes diagnosis with prior authorization. Weight-management indication (Zepbound) follows the weight-management benefit election.",
+    "notes": "Re-verified 2026-04-08: Microsoft uses Premera BCBS as plan administrator. The relevant policy is Premera Medical Policy 5.01.621 (https://www.premera.com/medicalpolicies/5.01.621.pdf), which confirms weight-management GLP-1s are covered only for employer groups that have explicitly elected the benefit. Premera's preventive drug list (https://www.premera.com/documents/022506.pdf) is publicly indexed but does not confirm anti-obesity GLP-1 coverage as part of Microsoft's elected benefit. Per the 2024 Premera provider news (https://providernews.premera.com/wegovy-coverage-with-the-new-cardiovascular-indication/), the FDA March 2024 cardiovascular indication for Wegovy created a separate coverage pathway. Microsoft's specific weight-management benefit election status as of 2026 cannot be independently confirmed from publicly indexed sources; patients should verify directly with HR. Confidence is medium because the plan administrator and policy framework are confirmed but the specific election decision is not.",
+    "data_as_of": "2026-04-08",
+    "confidence": "medium"
   }
 ]
