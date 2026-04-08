@@ -1134,6 +1134,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 9,
     tags: ["HRT", "Perimenopause", "Women's health", "PubMed sourced"],
   },
+  {
+    slug: "stress-cortisol-glp1-food-noise-evidence",
+    title:
+      "Stress, Cortisol, and Weight on a GLP-1: What the Evidence Actually Shows",
+    description:
+      "3,200+ monthly searches ask whether stress causes weight loss or weight gain. We walk through Epel 2000 (cortisol and visceral fat), Björntorp 2001 (HPA-axis mechanism), the Wardle 2011 longitudinal meta-analysis, the Spiegel 2004 sleep restriction trial showing -18% leptin and +28% ghrelin, the Cappuccio 2008 sleep meta-analysis (n=634,511), the Goyal 2014 JAMA Intern Med MBSR meta-analysis, the Salve 2019 and Lopresti 2019 ashwagandha cortisol RCTs, and the documented \"food noise\" reduction with semaglutide.",
+    excerpt:
+      "Stress eating is a real and well-documented phenomenon. Epel 2000 (PMID 11020091) showed women with central body fat secrete more cortisol under stress; Björntorp 2001 reviewed the HPA-axis-to-visceral-obesity pathway. The Cappuccio 2008 meta-analysis of 634,511 participants showed short sleep duration is independently associated with adult obesity (OR 1.55, 95% CI 1.43-1.68). Spiegel 2004 demonstrated that just 2 nights of sleep restriction reduced leptin 18%, increased ghrelin 28%, and increased craving for high-carbohydrate foods 33-45%. The Goyal 2014 JAMA Internal Medicine meta-analysis (47 trials, 3,515 participants) found moderate evidence for MBSR/mindfulness reducing anxiety and depression but only low evidence for weight effects. Ashwagandha (Salve 2019, Lopresti 2019) modestly reduces cortisol. GLP-1s reduce \"food noise\" — the intrusive food thoughts that intersect with stress eating — based on patient surveys and emerging neuroimaging data. Here is the verified evidence.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 12,
+    citations: 11,
+    tags: ["Stress", "Cortisol", "Food noise", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
