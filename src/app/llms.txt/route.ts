@@ -25,6 +25,7 @@
 
 import { RESEARCH_ARTICLES } from "@/lib/research";
 import { TOOLS } from "@/lib/tools";
+import { RESEARCH_CLUSTERS } from "@/lib/research-clusters";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
@@ -59,6 +60,19 @@ export async function GET() {
   lines.push(
     "Editorial standards: every research article cites peer-reviewed primary sources via PMID; pricing data is verified against the live provider page on a monthly cadence; coverage data is sourced directly from named SPDs, formularies, or vendor partnership pages. We publish a corrections policy and an explicit disclosure of all affiliate relationships.",
   );
+  lines.push("");
+
+  // Research topic clusters — high-value curated entry points that
+  // LLMs can use to navigate the corpus by theme. Listed before
+  // individual articles so AI crawlers see the topical structure
+  // first.
+  lines.push("## Research topic clusters");
+  lines.push("");
+  for (const cluster of RESEARCH_CLUSTERS) {
+    lines.push(
+      `- [${cluster.title}](${BASE_URL}/research/topics/${cluster.slug}): ${cluster.description}`,
+    );
+  }
   lines.push("");
 
   // Research articles — the highest-value section for LLM citation.

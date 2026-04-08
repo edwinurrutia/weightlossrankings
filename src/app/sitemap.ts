@@ -12,6 +12,7 @@ import { SAVINGS_COMPARISONS } from "@/lib/savings-comparisons";
 import { getAllInsurers } from "@/lib/insurers";
 import { getAllPharmacies } from "@/lib/pharmacies";
 import { RESEARCH_ARTICLES } from "@/lib/research";
+import { RESEARCH_CLUSTERS } from "@/lib/research-clusters";
 import { TOOLS, NON_TOOLS_INTERACTIVE_PAGES } from "@/lib/tools";
 import {
   getAllWarningLetters,
@@ -427,6 +428,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
+  // Topic cluster hub pages — index page + per-cluster pages.
+  // Auto-iterated from src/lib/research-clusters.ts so adding a
+  // new cluster automatically inserts it here.
+  const researchTopicsPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/research/topics`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    ...RESEARCH_CLUSTERS.map((c) => ({
+      url: `${BASE_URL}/research/topics/${c.slug}`,
+      lastModified: safeDate(c.lastUpdated),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    })),
+  ];
+
   // Spanish subdirectory (/es). Manually enumerated for now — once
   // more /es/* surfaces are localized, this list should grow or be
   // generated dynamically the way the English routes are.
@@ -470,6 +489,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...pharmacyPages,
     ...blogPages,
     ...researchPages,
+    ...researchTopicsPages,
     ...spanishStaticPages,
     ...spanishResearchPages,
     ...fdaWarningLetterPages,
