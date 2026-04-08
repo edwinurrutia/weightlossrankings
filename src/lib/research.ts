@@ -912,6 +912,31 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Alcohol use disorder", "PubMed sourced"],
   },
   {
+    slug: "ozempic-precio-costo-comprar",
+    title:
+      "Ozempic precio: cuánto cuesta y dónde comprar en Estados Unidos (2026)",
+    description:
+      "Guía en español completa sobre los precios de Ozempic en Estados Unidos: precio de lista (ahora $199-$499/mes tras la reducción de Novo Nordisk de agosto de 2025), tarjeta de ahorro de $25/mes para pacientes con seguro comercial y diabetes tipo 2, Programa de Asistencia al Paciente (PAP) que ofrece Ozempic GRATIS a pacientes sin seguro con ingresos menores al 200% del nivel federal de pobreza, cobertura de Medicare Parte D (Tier 3 con copago $25-$150/mes), cobertura de Medicaid, alerta crítica de la FDA sobre Ozempic falsificado (diciembre 2025), y alternativas como la semaglutida compuesta. Todos los datos verificados directamente contra ozempic.com, NovoCare, FDA MedWatch, y el análisis de cobertura de Medicaid de KFF 2026.",
+    excerpt:
+      "¿Cuánto cuesta Ozempic? La respuesta depende completamente de tu situación de seguro. Sin seguro: Novo Nordisk redujo el precio de auto-pago en agosto de 2025 a $199/mes (oferta introductoria) y luego $349-$499/mes según la dosis. Con seguro comercial y diagnóstico de diabetes tipo 2: tan solo $25/mes con la tarjeta de ahorro oficial (máximo $100 de ahorro mensual). El Programa de Asistencia al Paciente (PAP) de Novo Nordisk ofrece Ozempic COMPLETAMENTE GRATIS a pacientes sin seguro con ingresos ≤200% del nivel federal de pobreza — un beneficio que muchos pacientes no conocen. Medicare Parte D cubre Ozempic para diabetes (Tier 3, $25-$150/mes típico), aunque NO cubre Ozempic para pérdida de peso por prohibición estatutaria federal. Medicaid varía por estado pero la mayoría de los estados cubren Ozempic para diabetes tipo 2 con autorización previa — no es una cobertura federalmente uniforme y algunos estados imponen requisitos de terapia escalonada. Esta guía también incluye la alerta crítica de la FDA de diciembre de 2025 sobre plumas falsificadas de Ozempic 1 mg (lote PAR1229) y cómo identificar el producto auténtico (el texto EXP/LOT aparece arriba en los productos auténticos, a la izquierda en los falsificados). Datos verificados contra las páginas oficiales de Novo Nordisk, CMS Medicare, KFF y alertas oficiales de FDA MedWatch.",
+    kind: "data-investigation",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 14,
+    citations: 6,
+    tags: [
+      "Ozempic",
+      "Precios",
+      "Tarjeta de ahorro",
+      "PAP",
+      "Medicare",
+      "Medicaid",
+      "FDA falsificado",
+      "Español",
+      "Guía de pacientes",
+    ],
+  },
+  {
     slug: "como-inyectar-semaglutida-guia-paso-a-paso",
     title:
       "Cómo inyectar semaglutida / tirzepatida paso a paso (Wegovy, Ozempic, Zepbound, Mounjaro)",

@@ -444,6 +444,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "efectos-secundarios-glp1-preguntas-respuestas",
     "wegovy-vs-ozempic-diferencias",
     "como-inyectar-semaglutida-guia-paso-a-paso",
+    "ozempic-precio-costo-comprar",
   ]);
 
   // Dynamic: /research/[slug] — feed lastUpdated when present, else
