@@ -1014,6 +1014,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 12,
     tags: ["Loose skin", "Body composition", "Resistance training", "PubMed sourced"],
   },
+  {
+    slug: "antidepressants-weight-glp1-evidence",
+    title:
+      "Antidepressants and Weight on a GLP-1: SSRIs, SNRIs, Wellbutrin, and What the Evidence Actually Shows",
+    description:
+      "21,000+ monthly searches ask whether SSRIs, SNRIs, and Wellbutrin cause or prevent weight loss — and how they interact with semaglutide and tirzepatide. Anchored on Gafoor 2018 BMJ (n=294,719), Anderson 2002 (bupropion +weight loss), Greenway 2010 Lancet (Contrave COR-I), the EMA PRAC 2024 review, Wang 2024 Nature Medicine, and the FDA labels for Wegovy, Ozempic, Mounjaro, Zepbound, and Foundayo.",
+    excerpt:
+      "Antidepressant–weight–GLP-1 questions are one of the most-searched and least-covered topics on the entire site. The 2018 Gafoor BMJ cohort of 294,719 UK primary-care patients found a 21% higher rate of ≥5% weight gain in antidepressant users overall, but the effect varies enormously by drug — paroxetine and mirtazapine are the worst, sertraline and fluoxetine are roughly weight-neutral long-term, and bupropion (Wellbutrin) actually causes 7-10% weight loss in dedicated trials (Anderson 2002 Obes Res). The Contrave program (bupropion + naltrexone) extended this into FDA-approved obesity therapy in COR-I/II/BMOD. None of the FDA labels for Wegovy, Ozempic, Mounjaro, Zepbound, or Foundayo flag antidepressant interactions beyond the general gastric-emptying caveat. The 2024 EMA PRAC review and the Wang 2024 Nature Medicine real-world cohort (n=1.8M) both found no causal link between GLP-1s and suicidal ideation. Here is the verified evidence map.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-07",
+    lastUpdated: "2026-04-07",
+    readMinutes: 15,
+    citations: 13,
+    tags: ["Antidepressants", "Wellbutrin", "Drug interactions", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
