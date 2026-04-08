@@ -1149,6 +1149,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 11,
     tags: ["Stress", "Cortisol", "Food noise", "PubMed sourced"],
   },
+  {
+    slug: "supplements-weight-loss-glp1-evidence-grade",
+    title:
+      "Supplements for Weight Loss on a GLP-1: 16 Supplements Evidence-Graded Against PubMed",
+    description:
+      "25,700+ monthly searches ask whether berberine, lemon balm, ashwagandha, creatine, magnesium, MCT oil, collagen, cinnamon, ACV, green tea, garcinia, chromium, CLA, glucomannan, psyllium, or L-lysine cause weight loss. We grade all 16 supplements A through D against PubMed primary sources, with magnitude vs GLP-1 context.",
+    excerpt:
+      "Sixteen supplements graded A through D against verified PubMed primary sources. Only three reach grade A or B for weight loss with credible RCT evidence: berberine (Asbaghi 2020 meta -2.07 kg), MCT oil (Mumme 2015 meta -0.51 kg vs LCT), and green tea catechins (Hursel 2009 meta -1.31 kg). Glucomannan, psyllium, CLA, and apple cider vinegar reach grade B with caveats. The other 9 — lemon balm, L-lysine, ashwagandha, creatine, magnesium, collagen, cinnamon, garcinia cambogia, chromium picolinate — have grade C or D evidence (animal-only, single underpowered trial, or no human weight-loss data at all). Even the best supplements produce roughly 1-5% of GLP-1 magnitude. Marketing volume does not match evidence: lemon balm has 2,700 monthly searches and zero human weight-loss RCTs. Here is the verified evidence for each.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 18,
+    citations: 16,
+    tags: ["Supplements", "Evidence grading", "PubMed sourced", "Myth-bust"],
+  },
 ];
 
 export function getResearchArticleBySlug(
