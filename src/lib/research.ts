@@ -912,6 +912,30 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     tags: ["Semaglutide", "Alcohol use disorder", "PubMed sourced"],
   },
   {
+    slug: "wegovy-vs-ozempic-diferencias",
+    title:
+      "Wegovy vs Ozempic: diferencias, indicaciones y costo en 2026",
+    description:
+      "Guía en español de las cinco diferencias principales entre Wegovy y Ozempic: ambos contienen semaglutida y los fabrica Novo Nordisk, pero están aprobados por la FDA para indicaciones distintas, tienen dosis máximas distintas y perfiles de cobertura de seguro completamente diferentes. Claims clínicos verificados contra STEP-1 (Wilding 2021, PMID 33567185), SUSTAIN-6 (Marso 2016, PMID 27633186), SELECT (Lincoff 2023, PMID 37952131) y las etiquetas FDA de ambos productos. Incluye los precios actualizados del programa NovoCare Pharmacy de marzo de 2025.",
+    excerpt:
+      "Wegovy y Ozempic contienen el mismo ingrediente activo (semaglutida) y los fabrica la misma compañía (Novo Nordisk), pero no son el mismo medicamento. La diferencia clínica importa: Wegovy está aprobado por la FDA para el manejo crónico del peso (dosis máxima 2.4 mg semanales, estudiada en STEP-1 con 14.9% de pérdida de peso promedio a las 68 semanas) y para reducción de riesgo cardiovascular en pacientes con enfermedad cardiovascular establecida y obesidad (basada en SELECT). Ozempic está aprobado para diabetes tipo 2 (dosis máxima 2.0 mg semanales) y para reducción de riesgo cardiovascular en pacientes diabéticos con enfermedad cardiovascular establecida (basada en SUSTAIN-6, con reducción del 26% en eventos cardiovasculares mayores). Esta guía en español explica las cinco diferencias principales, incluyendo la cobertura de seguro (mucho más amplia para Ozempic por la indicación de diabetes) y los precios actualizados del programa NovoCare Pharmacy de marzo de 2025 ($349/mes sin seguro, $25/mes con tarjeta de ahorro para pacientes con seguro comercial).",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 10,
+    citations: 5,
+    tags: [
+      "Wegovy",
+      "Ozempic",
+      "Semaglutida",
+      "Español",
+      "Comparación",
+      "STEP-1",
+      "SUSTAIN-6",
+      "SELECT",
+    ],
+  },
+  {
     slug: "semaglutide-para-que-sirve",
     title: "Semaglutida: para qué sirve, cómo funciona y qué dicen los estudios clínicos",
     description:

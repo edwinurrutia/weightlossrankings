@@ -1877,21 +1877,15 @@
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Starting",
+        "dose": "Starting (all-inclusive: unlimited visits + labs)",
         "form": "compounded",
-        "monthly_cost": 270,
+        "monthly_cost": 249,
         "drug": "semaglutide"
       },
       {
-        "dose": "Starting",
+        "dose": "Starting (all-inclusive: unlimited visits + labs)",
         "form": "compounded",
-        "monthly_cost": 411,
-        "drug": "tirzepatide"
-      },
-      {
-        "dose": "Maintenance",
-        "form": "compounded",
-        "monthly_cost": 411,
+        "monthly_cost": 379,
         "drug": "tirzepatide"
       }
     ],
@@ -3094,15 +3088,23 @@
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Starting",
+        "dose": "3-month starter promo",
         "form": "compounded",
         "monthly_cost": 74,
+        "promo_price": 74,
+        "promo_code": "First 3 months ($224 paid upfront)",
         "drug": "semaglutide"
       },
       {
-        "dose": "Starting",
+        "dose": "Ongoing after starter period",
         "form": "compounded",
         "monthly_cost": 149,
+        "drug": "semaglutide"
+      },
+      {
+        "dose": "Ongoing (tirzepatide)",
+        "form": "compounded",
+        "monthly_cost": 299,
         "drug": "tirzepatide"
       }
     ],
@@ -4845,16 +4847,28 @@
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "All doses (flat price)",
+        "dose": "Monthly (no commitment)",
         "form": "compounded",
-        "drug": "semaglutide",
-        "monthly_cost": 999
+        "monthly_cost": 299,
+        "drug": "semaglutide"
       },
       {
-        "dose": "All doses (flat price)",
+        "dose": "12-month prepaid commitment",
         "form": "compounded",
-        "drug": "tirzepatide",
-        "monthly_cost": 999
+        "monthly_cost": 165,
+        "drug": "semaglutide"
+      },
+      {
+        "dose": "Monthly (no commitment)",
+        "form": "compounded",
+        "monthly_cost": 449,
+        "drug": "tirzepatide"
+      },
+      {
+        "dose": "3-month prepaid commitment",
+        "form": "compounded",
+        "monthly_cost": 399,
+        "drug": "tirzepatide"
       }
     ],
     "scores": {

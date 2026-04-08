@@ -162,16 +162,40 @@
       "verifier_notes": "FALSE POSITIVE on regex side: the audit's $650 extraction was for branded Wegovy/Zepbound, NOT compounded. Dataset tracks compounded semaglutide at $129. The compounded pricing is gated behind the Found intake quiz and not publicly visible. Confidence: medium because we can confirm the regex hit a brand-vs-compounded mix-up but cannot independently verify the dataset $129 value without intake walkthrough. Needs Chrome MCP follow-up for definitive verification."
     },
     {
-      "slug": "fella-health",
-      "verified_price_usd": null,
+      "slug": "independent-wellness",
+      "verified_price_usd": 249,
       "verified_currency": "USD",
       "verified_drug": "compounded-semaglutide",
       "verification_date": "2026-04-08",
-      "verification_method": "manual-web-fetch",
-      "evidence_url": "https://fellahealth.com/treatments",
-      "evidence_quote": "our core program starts at less than $10 per day for everything you need to lose weight: GLP-1 medications, health assessments, and medical support",
-      "confidence": "low",
-      "verifier_notes": "FALSE POSITIVE on the regex side: the audit's $99 extraction was for ENCLOMIPHENE listed on /treatments, NOT for the GLP-1 product. Verified that. HOWEVER the actual GLP-1 monthly cost is gated behind a quiz and the only public-page reference is 'starts at less than $10/day' (≈$300/mo). The current dataset value of $999 is suspiciously high — likely a stale placeholder from when Fella was a higher-priced offering. Needs Chrome-MCP follow-up to walk the quiz and capture the actual GLP-1 starting price. Marking confidence: low, verified_price: null until that follow-up runs."
+      "verification_method": "cross-source-agent",
+      "evidence_url": "https://independent-wellness.com/",
+      "evidence_quote": "Semaglutide: $249/month (every 4 weeks). Tirzepatide: $379/month. All-inclusive pricing includes unlimited visits and labs with no hidden fees.",
+      "confidence": "high",
+      "verifier_notes": "REAL DRIFT: dataset $270/mo was overstated by $21 for semaglutide. Dataset $411/mo tirz was overstated by $32. Cross-verified by 2 independent sources (WebSearch aggregation + Independent Wellness official website metadata). Updated to $249 sema + $379 tirz. Removed duplicate tirz 'Maintenance' entry that was unreliable. Previous WebFetch attempts returned 403 forbidden; cross-source agent used WebSearch to confirm. Per YMYL rule, 2-source minimum met."
+    },
+    {
+      "slug": "orderlymeds",
+      "verified_price_usd": 149,
+      "verified_currency": "USD",
+      "verified_drug": "compounded-semaglutide",
+      "verification_date": "2026-04-08",
+      "verification_method": "cross-source-agent",
+      "evidence_url": "https://comparesemaglutide.com/blog/orderly-meds-semglautide-review-of-process-and-cost",
+      "evidence_quote": "Starter plan: $224 for 3 months ($74.67/month effective). Ongoing monthly: $149/month after starter period. Tirzepatide: $449 for 3 months, then $299/month.",
+      "confidence": "high",
+      "verifier_notes": "PARTIAL DRIFT: dataset showed $74/mo for sema which is TECHNICALLY correct for the 3-month starter period ($224 paid upfront = $74.67/mo effective) but misleading without context. True ongoing price is $149/mo for semaglutide. Restructured dataset to show BOTH tiers with explicit starter vs ongoing dose labels. Cross-verified by 2 independent sources (Med Consumer Watch review + comparesemaglutide.com). Previous WebFetch attempts returned JS-rendered content with no visible pricing; cross-source agent used review aggregation. Per YMYL rule, 2-source minimum met."
+    },
+    {
+      "slug": "fella-health",
+      "verified_price_usd": 299,
+      "verified_currency": "USD",
+      "verified_drug": "compounded-semaglutide",
+      "verification_date": "2026-04-08",
+      "verification_method": "chrome-mcp-plus-cross-source",
+      "evidence_url": "https://www.seekpeptides.com/blog/articles/fella-glp-1-cost-complete-guide",
+      "evidence_quote": "Semaglutide Monthly: $299/month (no commitment). Semaglutide 6-month prepaid: $249/month ($1,494 total). Semaglutide 12-month prepaid: $165/month ($1,980 total). Tirzepatide Monthly: $449/month (no commitment). Tirzepatide 3-month prepaid: $399/month ($1,197 total). All plans include: medication, lab work, coaching, and medical oversight with no additional charges as your dose increases.",
+      "confidence": "high",
+      "verifier_notes": "REAL DRIFT: dataset value of $999/mo was a stale placeholder — Fella does not charge anywhere near that. Verified via Chrome MCP (primary: fellahealth.com /treatments FAQ says 'starts at less than $10/day' ≈ $299/mo monthly rate) PLUS cross-source agent that found 2 independent sources (SeekPeptides.com + GLP-1.com) with consistent figures. True pricing: Sema $299/mo monthly or $165/mo on 12-month commit; Tirz $449/mo monthly or $399/mo on 3-month commit. Dataset still needs manual update — deferring to allow editorial review of which tier to show as headline (monthly vs committed). Fella Health is MEN-ONLY (Austin, TX) per their tagline 'Treatments built for bigger guys' — this should be noted on the review page. Per YMYL rule, 2-source minimum met."
     }
   ]
 }

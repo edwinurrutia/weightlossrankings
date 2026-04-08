@@ -442,6 +442,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "cuanto-tarda-glp1-en-hacer-efecto",
     "guia-marcas-wegovy-ozempic-zepbound-mounjaro",
     "efectos-secundarios-glp1-preguntas-respuestas",
+    "wegovy-vs-ozempic-diferencias",
   ]);
 
   // Dynamic: /research/[slug] — feed lastUpdated when present, else
