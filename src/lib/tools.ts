@@ -299,6 +299,23 @@ export const TOOLS: ToolEntry[] = [
         "src/data/bariatric-payer-criteria.json — NIH/ASMBS/Medicare/Aetna/Cigna/UHC/BCBS/Humana per-payer source URLs",
     },
   },
+  {
+    slug: "supplement-evidence-grader",
+    title: "Supplement Evidence Grader",
+    description:
+      "16 popular weight-loss supplements graded A through D against verified PubMed primary sources. Search by name, filter by grade, see magnitude vs GLP-1 and the primary study citation for each entry.",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    sitemapPriority: 0.85,
+    changeFrequency: "monthly",
+    dataFreshness: {
+      lastVerified: "2026-04-08",
+      nextReview: "2027-04-08",
+      cadence: "annual",
+      sourceSummary:
+        "src/data/supplement-evidence.json — 16 supplements with PubMed PMID anchors verified by research subagent",
+    },
+  },
 ];
 
 /**
