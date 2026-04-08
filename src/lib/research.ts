@@ -1089,6 +1089,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 11,
     tags: ["Metformin", "Diabetes drugs", "PubMed sourced"],
   },
+  {
+    slug: "topamax-qsymia-topiramate-weight-loss",
+    title:
+      "Topamax, Qsymia, and Topiramate for Weight Loss: What the Trials Actually Show",
+    description:
+      "7,600+ monthly searches ask about topiramate dosing for weight loss. Anchored on Bray 2003 (-6.3% at 192-384 mg), Astrup 2004 (-16.5% at 192 mg maintenance), the Qsymia Phase 3 program (CONQUER -10.2 kg, EQUIP -10.9%, SEQUEL 108-week -12.1%), and the FDA label including the cognitive 'dopamax' side effect, kidney stone risk, metabolic acidosis, and the cleft palate teratogenicity that mandates the REMS program.",
+    excerpt:
+      "Topiramate (Topamax) and the phentermine + topiramate combination Qsymia are FDA-approved chronic weight management drugs that produce roughly 10% body weight loss — about two-thirds of semaglutide and half of tirzepatide. The Bray 2003 dose-ranging trial reported -6.3% at 192-384 mg daily; Astrup 2004 showed -16.5% with topiramate plus a structured maintenance phase. The Qsymia Phase 3 program (CONQUER, EQUIP, SEQUEL) showed sustained weight loss to 108 weeks with the 15/92 dose, plus a 78.7% reduction in incident type 2 diabetes. The cognitive 'dopamax' side effect (word-finding difficulty, slowed processing), kidney stone risk (10.7% in long-term users), metabolic acidosis (40-71% abnormal bicarbonate), and the cleft lip/palate teratogenicity (RR 5.16 at >100 mg) are real and shape who should and should not use it. Generic phentermine/topiramate ER launched May 2025, dropping the cost barrier substantially. Here is the verified evidence.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 14,
+    citations: 11,
+    tags: ["Topamax", "Qsymia", "Topiramate", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
