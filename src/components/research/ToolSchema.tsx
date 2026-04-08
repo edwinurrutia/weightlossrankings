@@ -161,9 +161,43 @@ export default function ToolSchema({
       }
     : null;
 
+  // BreadcrumbList JSON-LD — auto-generated from the canonical
+  // tool URL so every tool gets a Home → Tools → [Tool name]
+  // breadcrumb rich-result without each tool page having to
+  // declare it manually. The Wave 5 SEO audit found that none of
+  // the 14 tool pages were emitting BreadcrumbList, while the
+  // research articles, reviews, states, drugs, insurance, and
+  // pharmacies pages all already had them. Adding it here once
+  // retrofits all 14 tools in a single change.
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Tools",
+        item: `${SITE_URL}/tools`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name,
+        item: url,
+      },
+    ],
+  };
+
   return (
     <>
       <JsonLd data={softwareSchema} />
+      <JsonLd data={breadcrumbSchema} />
       {medicalSchema && <JsonLd data={medicalSchema} />}
     </>
   );
