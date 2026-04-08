@@ -5,6 +5,61 @@ import FeatureBadge from "./FeatureBadge";
 import StarRating from "./StarRating";
 import PricingDisplay from "./PricingDisplay";
 
+// Controlled-vocabulary trust badges that are allowed to render on the
+// card. Anything outside this whitelist is treated as free-text marketing
+// copy and suppressed from card display — those belong on the review page.
+const CARD_TRUST_BADGE_WHITELIST = new Set<string>([
+  "LegitScript Verified",
+  "PCAB Accredited",
+  "Board-Certified Clinicians",
+]);
+
+/**
+ * Derive the card pills deterministically from structured pricing data
+ * rather than the free-text features array. This keeps every card visually
+ * uniform: at most 2 drug pills + 1 form pill + 1 optional trust badge.
+ */
+function deriveCardBadges(provider: Provider): {
+  drugs: string[];
+  form: string | null;
+  trust: string | null;
+} {
+  const drugs = new Set<string>();
+  const forms = new Set<string>();
+
+  for (const p of provider.pricing ?? []) {
+    if (p.drug) {
+      // Capitalize first letter for display.
+      drugs.add(p.drug.charAt(0).toUpperCase() + p.drug.slice(1));
+    }
+    if (p.form) {
+      // "compounded" / "brand" → "Compounded" / "Brand"
+      forms.add(p.form.charAt(0).toUpperCase() + p.form.slice(1));
+    }
+  }
+
+  // Single form pill: prefer the dominant form. If a provider sells both
+  // compounded and brand, show "Compounded" (the differentiator).
+  let formLabel: string | null = null;
+  if (forms.has("Compounded")) formLabel = "Compounded";
+  else if (forms.has("Brand")) formLabel = "Brand";
+
+  // First whitelisted trust badge from the features array, if any.
+  let trustLabel: string | null = null;
+  for (const f of provider.features ?? []) {
+    if (CARD_TRUST_BADGE_WHITELIST.has(f)) {
+      trustLabel = f;
+      break;
+    }
+  }
+
+  return {
+    drugs: Array.from(drugs),
+    form: formLabel,
+    trust: trustLabel,
+  };
+}
+
 interface ProviderCardProps {
   provider: Provider;
   selectedDose?: string;
@@ -24,15 +79,16 @@ export default function ProviderCard({
     scores,
     best_for,
     pricing,
-    features,
     fda_warnings,
     affiliate_url,
     is_featured,
     slug,
   } = provider;
 
-  const visibleFeatures = features.slice(0, 4);
+  const { drugs, form, trust } = deriveCardBadges(provider);
   const hasFdaWarning = fda_warnings && fda_warnings.length > 0;
+  const hasAnyBadges =
+    drugs.length > 0 || form !== null || trust !== null || hasFdaWarning;
 
   const overall = computeOverallScore(scores);
   const fiveStar = Math.round((overall / 2) * 10) / 10;
@@ -76,12 +132,21 @@ export default function ProviderCard({
       {/* Pricing */}
       <PricingDisplay pricing={pricing} selectedDose={selectedDose} />
 
-      {/* Feature badges */}
-      {(visibleFeatures.length > 0 || hasFdaWarning) && (
+      {/* Structured badges (uniform across every card):
+          drug pills → form pill → optional trust badge → optional FDA warning.
+          Free-text marketing bullets are suppressed here and render on the
+          full review page instead. */}
+      {hasAnyBadges && (
         <div className="flex flex-wrap gap-1.5">
-          {visibleFeatures.map((feature) => (
-            <FeatureBadge key={feature} label={feature} variant="default" />
+          {form && (
+            <FeatureBadge key={`form-${form}`} label={form} variant="default" />
+          )}
+          {drugs.map((drug) => (
+            <FeatureBadge key={`drug-${drug}`} label={drug} variant="default" />
           ))}
+          {trust && (
+            <FeatureBadge key={`trust-${trust}`} label={trust} variant="highlight" />
+          )}
           {hasFdaWarning && (
             <FeatureBadge label="FDA Warning" variant="warning" />
           )}

@@ -70,9 +70,31 @@ export default function HomeHeroProviders({
   const pickScore = computeOverallScore(pick.scores);
   const pickPrice = getCheapestMonthly(pick);
   const pullQuote = pickPullQuote(pick);
-  const pickFeatures = (pick.features || [])
-    .filter((f) => !isCommodity(f))
-    .slice(0, 4);
+  // Derive structured hero chips from pricing rather than the free-text
+  // features array, matching the ProviderCard taxonomy so the home hero
+  // and state/compare cards look uniform.
+  const pickDrugs = Array.from(
+    new Set(
+      (pick.pricing ?? [])
+        .map((p) => p.drug)
+        .filter(Boolean)
+        .map((d) => d!.charAt(0).toUpperCase() + d!.slice(1))
+    )
+  );
+  const pickForms = new Set(
+    (pick.pricing ?? [])
+      .map((p) => p.form)
+      .filter(Boolean)
+      .map((f) => f!.charAt(0).toUpperCase() + f!.slice(1))
+  );
+  const pickForm = pickForms.has("Compounded")
+    ? "Compounded"
+    : pickForms.has("Brand")
+      ? "Brand"
+      : null;
+  const pickFeatures = [pickForm, ...pickDrugs].filter(
+    (x): x is string => x !== null
+  );
 
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
