@@ -1,0 +1,55 @@
+import { ImageResponse } from "next/og";
+
+export const alt =
+  "Weight Loss Rankings — GLP-1 Reconstitution Calculator: BAC water, concentration, U-100 units";
+export const size = { width: 1200, height: 630 };
+export const contentType = "image/png";
+
+export default async function Image() {
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          background:
+            "linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #6d28d9 100%)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          color: "white",
+          fontFamily: "sans-serif",
+          padding: "72px",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <div style={{ display: "flex", width: 18, height: 56, background: "#8b5cf6", borderRadius: 4 }} />
+          <div style={{ display: "flex", fontSize: 28, fontWeight: 700, letterSpacing: 2 }}>
+            WEIGHT LOSS RANKINGS
+          </div>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <div style={{ display: "flex", fontSize: 28, fontWeight: 600, opacity: 0.9, textTransform: "uppercase", letterSpacing: 2 }}>
+            USP &lt;797&gt; · ISMP 2024 · FDA labels · 133 unit tests
+          </div>
+          <div style={{ display: "flex", fontSize: 56, fontWeight: 700, lineHeight: 1.05, maxWidth: 1080 }}>
+            GLP-1 Reconstitution Calculator
+          </div>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 18, marginTop: 12 }}>
+            <div style={{ display: "flex", fontSize: 132, fontWeight: 800, letterSpacing: -3, color: "#a78bfa", lineHeight: 1 }}>
+              U-100
+            </div>
+            <div style={{ display: "flex", fontSize: 28, fontWeight: 600, opacity: 0.9, paddingBottom: 12, maxWidth: 700 }}>
+              insulin syringe units · FDA-max guards · 2000-iter fuzz-verified safety invariants
+            </div>
+          </div>
+        </div>
+        <div style={{ display: "flex", justifyContent: "space-between", opacity: 0.85, fontSize: 24 }}>
+          <div style={{ display: "flex" }}>weightlossrankings.org/tools</div>
+          <div style={{ display: "flex" }}>2026-04-07 · primary-source verified</div>
+        </div>
+      </div>
+    ),
+    size,
+  );
+}
