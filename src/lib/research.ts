@@ -1104,6 +1104,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 11,
     tags: ["Topamax", "Qsymia", "Topiramate", "PubMed sourced"],
   },
+  {
+    slug: "vyvanse-adderall-stimulants-weight-glp1",
+    title:
+      "Vyvanse, Adderall, and Stimulants for Weight: What the Evidence Shows (And Why Most of It Is Off-Label)",
+    description:
+      "Vyvanse (lisdexamfetamine) is FDA-approved for binge-eating disorder, NOT weight loss. Adderall is FDA-approved for ADHD and narcolepsy, NOT weight loss. We walk through the McElroy 2015 / 2016 / Hudson 2017 / Grilo 2024 BED trials, the cardiovascular and psychiatric warnings, the BED prevalence epidemiology (Hudson 2007, Kessler 2013), the Vyvanse generic launch (August 2023), the ongoing Adderall shortage, and how stimulants intersect with GLP-1 therapy when combined.",
+    excerpt:
+      "Vyvanse and Adderall come up constantly in patient questions about weight, but neither is FDA-approved for weight loss as a primary indication. Vyvanse is approved for moderate-severe binge-eating disorder in adults (McElroy 2015 dose-finding trial; McElroy 2016 pivotal Phase 3 trials; Hudson 2017 maintenance trial showing 3.7% LDX relapse vs 32.1% placebo). Weight loss is a documented secondary outcome (-4.9 kg at 50-70 mg). Adderall has no weight-loss approval and any weight-loss use is off-label. Both are DEA Schedule II with cardiovascular and psychiatric warnings. The Hudson 2007 NCS-R reported BED lifetime prevalence of 2.8% — strongly associated with obesity but distinct from \"I overeat sometimes.\" Combining stimulants with a GLP-1 has zero RCT data and additive cardiovascular concerns. Vyvanse generic launched August 2023; Adderall has been in shortage since 2022. Here is the verified evidence.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 12,
+    citations: 9,
+    tags: ["Vyvanse", "Adderall", "Stimulants", "BED", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
