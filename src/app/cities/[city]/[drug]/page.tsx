@@ -146,15 +146,11 @@ export default async function CityDrugPage({
   const faqs = [
     {
       question: `How do I get ${drugLabel} in ${city.city}?`,
-      answer: `${city.city} residents can get ${drugLabel} through licensed telehealth providers that ship directly to ${city.state} addresses. Most offer same-week prescriptions after a brief online consultation. Brand-name ${brandNames} can also be prescribed by local doctors at clinics including ${city.notable_clinics
-        .slice(0, 2)
-        .join(" and ")}, but waits are typically 2-3 months and out-of-pocket costs run $${brandPrice}+/mo.`,
+      answer: `${city.city} residents can get ${drugLabel} through licensed telehealth providers that ship directly to ${city.state} addresses. Brand-name ${brandNames} can also be prescribed in-person by a local clinician and filled at a retail pharmacy; out-of-pocket retail list prices are around $${brandPrice}/mo.`,
     },
     {
-      question: `What's the cheapest ${drugLabel} in ${city.city}?`,
-      answer: `Compounded ${drugLabel} through telehealth providers serving ${city.city} averages around $${avgPrice}/month — about ${Math.round(
-        ((brandPrice - avgPrice) / brandPrice) * 100
-      )}% less than brand-name ${brandNames}. Some providers offer first-month promos under $150 for new ${city.state} patients.`,
+      question: `What does ${drugLabel} cost in ${city.city}?`,
+      answer: `Compounded ${drugLabel} pricing is set at the provider level, not the city level. See the provider cards above for current monthly pricing from providers that serve ${city.state}. Brand-name ${brandNames} retails around $${brandPrice}/month without insurance.`,
     },
     {
       question: `Is compounded ${drugLabel} legal in ${city.state}?`,

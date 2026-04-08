@@ -8,7 +8,7 @@ export interface City {
   population: number;
   metro_population: number;
   obesity_rate: number;
-  notable_clinics: string[];
+  notable_clinics?: string[];
   intro: string;
 }
 

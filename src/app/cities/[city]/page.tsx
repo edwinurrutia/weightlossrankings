@@ -102,25 +102,19 @@ export default async function CityPage({
   const faqs = [
     {
       question: `How do I get GLP-1 medications in ${city.city}?`,
-      answer: `${city.city} residents have two main options: in-person obesity-medicine clinics like ${city.notable_clinics
-        .slice(0, 2)
-        .join(" and ")}, or licensed telehealth providers that ship compounded semaglutide and tirzepatide directly to your address. Telehealth is typically faster (same-week prescriptions vs 6-12 week waitlists) and more affordable, with monthly costs around $${avgPrice} versus $1,000+ for brand-name medications.`,
+      answer: `${city.city} residents can get GLP-1 medications through licensed telehealth providers that ship compounded semaglutide or tirzepatide directly to ${city.state} addresses, or by seeing a local clinician in person and filling a brand-name prescription (Wegovy, Zepbound, Ozempic, Mounjaro) at a retail pharmacy. Telehealth providers that serve ${city.state} are listed above.`,
     },
     {
-      question: `Is telehealth GLP-1 better than in-person clinics in ${city.city}?`,
-      answer: `For most ${city.city} residents, telehealth offers a better balance of cost, speed, and convenience. In-person ${city.state} programs are excellent for patients with complex medical needs or who need bariatric surgery, but for straightforward GLP-1 prescribing, telehealth providers offer same-week appointments, home delivery, and prices 70-85% lower than brand-name pharmacy pickup.`,
+      question: `Is telehealth GLP-1 legal in ${city.city}?`,
+      answer: `Yes — telehealth prescribing of GLP-1 medications is legal in ${city.state}. Licensed providers can conduct an online evaluation, prescribe semaglutide or tirzepatide when clinically appropriate, and arrange delivery to your address through a partner pharmacy.`,
     },
     {
       question: `How much does compounded semaglutide cost in ${city.city}?`,
-      answer: `Compounded semaglutide in ${city.city} averages around $${avgPrice} per month through licensed telehealth providers. Brand-name Wegovy and Zepbound typically cost $1,000-$1,350 per month without insurance. Some providers serving ${city.city} offer first-month promos starting under $150.`,
-    },
-    {
-      question: `Are there in-person GLP-1 clinics in ${city.city}?`,
-      answer: `Yes. Notable in-person options in ${city.city} include ${city.notable_clinics.join(", ")}. These academic medical centers offer comprehensive obesity medicine, but most have multi-month waitlists and can be significantly more expensive than telehealth alternatives, especially for patients without insurance coverage for weight-loss medications.`,
+      answer: `Compounded semaglutide pricing is set at the provider level, not the city level, and varies by dose and plan. See the pricing columns on each provider card above for the current monthly cost from providers that serve ${city.state}. Brand-name Wegovy and Zepbound retail list prices are $1,000-$1,350 per month without insurance.`,
     },
     {
       question: `Does insurance cover GLP-1s in ${city.city}?`,
-      answer: `Insurance coverage in ${city.city} follows ${city.state} norms. Most plans cover Ozempic and Mounjaro for type 2 diabetes diagnoses, but coverage for Wegovy and Zepbound (the obesity-indicated versions) is much more limited and typically requires prior authorization. If you're denied, compounded semaglutide through telehealth is the most affordable cash-pay alternative.`,
+      answer: `Insurance coverage in ${city.city} follows ${city.state} plan-level rules. Most commercial plans cover Ozempic and Mounjaro for type 2 diabetes diagnoses, but coverage for Wegovy and Zepbound (the obesity-indicated versions) is much more limited and typically requires prior authorization. Check your plan's formulary for the specific drug and indication you need.`,
     },
   ];
 
@@ -233,22 +227,18 @@ export default async function CityPage({
             In-Person vs Telehealth in {city.city}
           </h2>
           <p className="text-brand-text-secondary leading-relaxed">
-            {city.city} has several well-regarded in-person obesity medicine
-            programs, including {city.notable_clinics.join(", ")}. These
-            academic medical centers offer comprehensive evaluations,
-            multidisciplinary care, and bariatric surgery if needed. However,
-            they typically have 2-3 month waitlists and rarely accept cash-pay
-            patients at discounted rates.
-          </p>
-          <p className="text-brand-text-secondary leading-relaxed">
-            Telehealth GLP-1 providers serving {city.city} offer same-week
-            appointments, free shipping of compounded semaglutide and
-            tirzepatide from licensed 503A compounding pharmacies
-            <Citation source={SOURCE_FDA_503A} n={5} />, and pricing 70-85%
-            lower than brand-name medications. For most {city.city} residents,
-            telehealth is the fastest and most affordable path to starting
-            GLP-1 treatment. Medicaid and commercial insurance coverage of
-            anti-obesity GLP-1s in {city.state} varies by plan
+            Patients in {city.city} have two main paths to GLP-1 treatment:
+            an in-person obesity medicine or bariatric program, or a licensed
+            telehealth provider that ships to {city.state} addresses.
+            In-person programs are generally preferable for patients with
+            complex medical needs, those pursuing bariatric surgery, or
+            patients whose insurance covers a brand-name anti-obesity GLP-1
+            and requires in-person documentation. Telehealth is generally
+            preferable for patients seeking cash-pay compounded semaglutide
+            or tirzepatide from a 503A compounding pharmacy
+            <Citation source={SOURCE_FDA_503A} n={5} />. Medicaid and
+            commercial insurance coverage of anti-obesity GLP-1s in{" "}
+            {city.state} varies by plan
             <Citation source={SOURCE_KFF_MEDICAID} n={4} />.
           </p>
         </section>

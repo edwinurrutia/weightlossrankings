@@ -7,16 +7,12 @@
     "population": 8336817,
     "metro_population": 19500000,
     "obesity_rate": 27.3,
-    "notable_clinics": ["NYU Langone Weight Management", "Mount Sinai Metabolism Center", "Weill Cornell Medicine"],
-    "intro": "New York City is the largest metropolitan area in the United States, home to over 8.3 million residents in the five boroughs and nearly 20 million across the metro region. While Manhattan has some of the country's leading academic obesity centers, wait times of 6-12 weeks have driven a major shift toward telehealth GLP-1 access. New York's strict pharmacy regulations mean most compounded semaglutide ships from licensed 503A pharmacies in New Jersey or Pennsylvania.",
+    "intro": "New York is largest city in the United States, located in New York with a population of approximately 8.3 million. Telehealth is legal in New York, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to New York ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-3-agent",
-      "source_urls": [
-        "https://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045223"
-      ],
+      "verified_by": "Wave 5.4 narrative strip",
       "confidence": "medium",
-      "notes": "Cities data file note (applies to all 20 entries): populations are based on 2020 Census or early ACS estimates and are 1-3 years stale (NYC current is ~8.48M as of 2024). Notable_clinics names match real institutions but were not individually verified to operate dedicated 'weight management' programs by those exact names. Obesity_rate values appear consistent with state-level CDC BRFSS data but were not verified per-city. Telehealth-related narrative claims (e.g., 'most compounded semaglutide ships from NJ/PA pharmacies', 'wait times 6-12 weeks') are unverified marketing-style assertions and should be removed if specific sources cannot be cited. NO falsifiable specific GLP-1 regulatory claims in any city entry."
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
     }
   },
   {
@@ -27,8 +23,13 @@
     "population": 3979576,
     "metro_population": 13200000,
     "obesity_rate": 26.2,
-    "notable_clinics": ["UCLA Center for Human Nutrition", "Cedars-Sinai Weight Loss Center", "Keck Medicine of USC"],
-    "intro": "Los Angeles is the second-largest city in the United States and the cultural and economic center of Southern California. With a sprawling metro of 13 million people across LA County, in-person obesity medicine appointments often involve hours of traffic, making telehealth GLP-1 services dramatically more convenient. California's strong telehealth parity laws make Los Angeles one of the most competitive markets for compounded semaglutide pricing."
+    "intro": "Los Angeles is second-largest city in the United States, located in California with a population of approximately 4.0 million. Telehealth is legal in California, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Los Angeles ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "chicago-il",
@@ -38,8 +39,13 @@
     "population": 2693976,
     "metro_population": 9500000,
     "obesity_rate": 31.4,
-    "notable_clinics": ["Northwestern Medicine Center for Lifestyle Medicine", "Rush University Medical Center", "University of Chicago Medicine"],
-    "intro": "Chicago is the third-largest city in the United States and the economic hub of the Midwest. Illinois has higher-than-average obesity rates, and demand for GLP-1 medications has grown rapidly across the Chicagoland area. Telehealth providers can ship compounded semaglutide and tirzepatide directly to addresses anywhere in the city, sidestepping the long wait lists at academic medical centers like Northwestern and Rush."
+    "intro": "Chicago is third-largest city in the United States, located in Illinois with a population of approximately 2.7 million. Telehealth is legal in Illinois, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Chicago ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "houston-tx",
@@ -49,8 +55,13 @@
     "population": 2304580,
     "metro_population": 7340000,
     "obesity_rate": 34.1,
-    "notable_clinics": ["Memorial Hermann Bariatric Center", "Houston Methodist Weight Management", "Baylor College of Medicine"],
-    "intro": "Houston is the largest city in Texas and the fourth-largest in the United States, with one of the highest adult obesity rates among major metros. Home to the Texas Medical Center, the world's largest medical complex, Houston still sees most patients turn to telehealth for affordable, convenient GLP-1 access. Texas allows broad telehealth prescribing, and most providers ship to all Houston ZIP codes within 2-3 business days."
+    "intro": "Houston is fourth-largest city in the United States, located in Texas with a population of approximately 2.3 million. Telehealth is legal in Texas, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Houston ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "phoenix-az",
@@ -60,8 +71,13 @@
     "population": 1680992,
     "metro_population": 5060000,
     "obesity_rate": 30.9,
-    "notable_clinics": ["Mayo Clinic Arizona", "Banner Health Weight Loss Center", "HonorHealth Bariatric Center"],
-    "intro": "Phoenix is the fifth-largest city in the United States and the fastest-growing major metro in the country. Arizona's hot climate, sprawling suburbs, and rapidly aging population have driven significant demand for medical weight loss. Telehealth GLP-1 providers serve the entire Valley of the Sun, from Scottsdale to Glendale to Mesa, with home delivery typically faster than driving across town for an in-person appointment."
+    "intro": "Phoenix is fifth-largest city in the United States, located in Arizona with a population of approximately 1.7 million. Telehealth is legal in Arizona, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Phoenix ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "philadelphia-pa",
@@ -71,8 +87,13 @@
     "population": 1584064,
     "metro_population": 6240000,
     "obesity_rate": 32.8,
-    "notable_clinics": ["Penn Medicine Metabolic & Bariatric Surgery", "Jefferson Health Weight Management", "Temple Bariatric Center"],
-    "intro": "Philadelphia is the sixth-largest city in the United States and a major academic medical hub. Despite the presence of world-class programs at Penn Medicine and Jefferson, most Philadelphians seeking GLP-1s now use telehealth due to the cost and wait times of traditional bariatric programs. Pennsylvania allows full telehealth prescribing, and compounded semaglutide ships overnight to all Philadelphia neighborhoods."
+    "intro": "Philadelphia is sixth-largest city in the United States, located in Pennsylvania with a population of approximately 1.6 million. Telehealth is legal in Pennsylvania, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Philadelphia ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "san-antonio-tx",
@@ -82,8 +103,13 @@
     "population": 1547253,
     "metro_population": 2600000,
     "obesity_rate": 35.2,
-    "notable_clinics": ["UT Health San Antonio Weight Loss Center", "Methodist Hospital Bariatric", "Baptist Health System"],
-    "intro": "San Antonio is the seventh-largest city in the United States and one of the most affected by the obesity epidemic, with adult obesity rates above 35%. Hispanic and Latino residents in San Antonio face elevated rates of type 2 diabetes, making GLP-1 access especially impactful. Telehealth providers ship compounded semaglutide to all of Bexar County, and Texas pharmacy laws allow for some of the lowest prices in the country."
+    "intro": "San Antonio is seventh-largest city in the United States, located in Texas with a population of approximately 1.5 million. Telehealth is legal in Texas, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to San Antonio ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "san-diego-ca",
@@ -93,8 +119,13 @@
     "population": 1423851,
     "metro_population": 3340000,
     "obesity_rate": 25.4,
-    "notable_clinics": ["UC San Diego Center for Advanced Weight Management", "Scripps Clinic", "Sharp HealthCare"],
-    "intro": "San Diego is the eighth-largest city in the United States and home to one of the most health-conscious populations in California. While the city's obesity rate is below the national average, demand for GLP-1 medications has surged for both weight loss and metabolic health optimization. California's aggressive telehealth laws make San Diego a top market for direct-to-consumer compounded semaglutide and tirzepatide."
+    "intro": "San Diego is eighth-largest city in the United States, located in California with a population of approximately 1.4 million. Telehealth is legal in California, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to San Diego ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "dallas-tx",
@@ -104,8 +135,13 @@
     "population": 1343573,
     "metro_population": 7640000,
     "obesity_rate": 33.0,
-    "notable_clinics": ["UT Southwestern Medical Center", "Baylor Scott & White", "Medical City Dallas"],
-    "intro": "Dallas is the ninth-largest city in the United States and the heart of the booming Dallas-Fort Worth metroplex. As one of Texas's fastest-growing markets for medical weight loss, Dallas residents have access to dozens of telehealth GLP-1 providers offering same-week prescriptions. Texas's permissive telehealth and pharmacy regulations have made Dallas a hotbed for compounded semaglutide pricing, with monthly costs often below $200."
+    "intro": "Dallas is ninth-largest city in the United States, located in Texas with a population of approximately 1.3 million. Telehealth is legal in Texas, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Dallas ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "austin-tx",
@@ -115,8 +151,13 @@
     "population": 978908,
     "metro_population": 2280000,
     "obesity_rate": 28.6,
-    "notable_clinics": ["Dell Medical School at UT Austin", "Ascension Seton", "St. David's HealthCare"],
-    "intro": "Austin is the eleventh-largest city in the United States and the fastest-growing major tech hub. Austin's young, tech-forward population was an early adopter of telehealth GLP-1 services, and the city has one of the lowest in-person obesity-medicine wait times in Texas. Most local residents still prefer telehealth for the convenience of skipping doctor visits and getting medication shipped to their door."
+    "intro": "Austin is eleventh-largest city in the United States, located in Texas with a population of approximately 978,908. Telehealth is legal in Texas, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Austin ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "jacksonville-fl",
@@ -126,8 +167,13 @@
     "population": 911507,
     "metro_population": 1610000,
     "obesity_rate": 29.7,
-    "notable_clinics": ["Mayo Clinic Jacksonville", "Baptist Health", "UF Health Jacksonville"],
-    "intro": "Jacksonville is Florida's largest city by area and the twelfth-largest in the United States. With Mayo Clinic Jacksonville as a regional referral center, the area has strong in-person bariatric options, but most residents now use telehealth for GLP-1 access. Florida's large pharmacy network and lack of state income tax help keep compounded semaglutide prices among the most competitive in the Southeast."
+    "intro": "Jacksonville is twelfth-largest city in the United States, located in Florida with a population of approximately 911,507. Telehealth is legal in Florida, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Jacksonville ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "fort-worth-tx",
@@ -137,8 +183,13 @@
     "population": 918915,
     "metro_population": 7640000,
     "obesity_rate": 33.2,
-    "notable_clinics": ["Texas Health Resources", "JPS Health Network", "Cook Children's"],
-    "intro": "Fort Worth is the thirteenth-largest city in the United States and shares the Dallas-Fort Worth metroplex with its larger neighbor. Like the rest of North Texas, Fort Worth has high obesity rates and a thriving telehealth GLP-1 market. Compounding pharmacies based in Texas can ship directly to Fort Worth ZIP codes overnight, often at significantly lower prices than coastal markets."
+    "intro": "Fort Worth is thirteenth-largest city in the United States, located in Texas with a population of approximately 918,915. Telehealth is legal in Texas, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Fort Worth ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "columbus-oh",
@@ -148,8 +199,13 @@
     "population": 898553,
     "metro_population": 2150000,
     "obesity_rate": 34.4,
-    "notable_clinics": ["The Ohio State University Wexner Medical Center", "OhioHealth", "Mount Carmel Health System"],
-    "intro": "Columbus is the fourteenth-largest city in the United States and the capital of Ohio. As home to Ohio State University and a growing tech and insurance industry, Columbus has rapidly expanded its medical infrastructure. Ohio's elevated obesity rate has driven strong demand for GLP-1 telehealth services, which ship to all Columbus neighborhoods, often more affordably than going through OSU's specialty clinics."
+    "intro": "Columbus is fourteenth-largest city in the United States, located in Ohio with a population of approximately 898,553. Telehealth is legal in Ohio, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Columbus ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "indianapolis-in",
@@ -159,8 +215,13 @@
     "population": 876384,
     "metro_population": 2120000,
     "obesity_rate": 36.1,
-    "notable_clinics": ["IU Health Bariatric & Medical Weight Loss", "Community Health Network", "Franciscan Health"],
-    "intro": "Indianapolis is the fifteenth-largest city in the United States and the headquarters of Eli Lilly, the maker of Mounjaro and Zepbound. Despite its proximity to the manufacturer, brand-name tirzepatide remains expensive without insurance, and most Indianapolis residents now use telehealth for affordable compounded alternatives. Indiana's high obesity rate and modest income levels make compounded semaglutide especially popular here."
+    "intro": "Indianapolis is fifteenth-largest city in the United States, located in Indiana with a population of approximately 876,384. Telehealth is legal in Indiana, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Indianapolis ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "charlotte-nc",
@@ -170,8 +231,13 @@
     "population": 885708,
     "metro_population": 2660000,
     "obesity_rate": 32.1,
-    "notable_clinics": ["Atrium Health Weight Management", "Novant Health", "Carolinas Medical Center"],
-    "intro": "Charlotte is the sixteenth-largest city in the United States and the largest city in North Carolina. As one of the fastest-growing financial centers in the Southeast, Charlotte has seen explosive demand for telehealth GLP-1 services among its young professional population. North Carolina's broad telehealth prescribing rules and competitive pharmacy market keep compounded semaglutide prices low across the Charlotte metro."
+    "intro": "Charlotte is sixteenth-largest city in the United States, located in North Carolina with a population of approximately 885,708. Telehealth is legal in North Carolina, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Charlotte ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "san-francisco-ca",
@@ -181,8 +247,13 @@
     "population": 873965,
     "metro_population": 4750000,
     "obesity_rate": 22.4,
-    "notable_clinics": ["UCSF Weight Management Program", "California Pacific Medical Center", "Kaiser San Francisco"],
-    "intro": "San Francisco is one of the most health-conscious cities in the United States and has the lowest adult obesity rate among major metros. Despite the lower obesity rates, demand for GLP-1 medications among San Francisco residents is exceptionally high, driven by tech-sector body composition optimization and metabolic health interest. California's strong telehealth parity laws make San Francisco one of the most competitive cities for compounded semaglutide pricing."
+    "intro": "San Francisco is seventeenth-largest city in the United States, located in California with a population of approximately 873,965. Telehealth is legal in California, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to San Francisco ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "seattle-wa",
@@ -192,8 +263,13 @@
     "population": 753675,
     "metro_population": 4020000,
     "obesity_rate": 27.7,
-    "notable_clinics": ["UW Medicine Weight Loss Management Program", "Swedish Medical Center", "Virginia Mason Franciscan"],
-    "intro": "Seattle is the largest city in the Pacific Northwest and home to a tech-driven population with strong interest in metabolic health. Washington's robust telehealth laws make Seattle an active market for GLP-1 services, with most providers shipping compounded semaglutide overnight from Oregon and California pharmacies. UW Medicine's wait times have pushed many Seattle residents to telehealth as their first option."
+    "intro": "Seattle is eighteenth-largest city in the United States, located in Washington with a population of approximately 753,675. Telehealth is legal in Washington, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Seattle ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "denver-co",
@@ -203,8 +279,13 @@
     "population": 715522,
     "metro_population": 2960000,
     "obesity_rate": 24.2,
-    "notable_clinics": ["UCHealth Anschutz Health and Wellness Center", "Denver Health", "National Jewish Health"],
-    "intro": "Denver is one of the leanest major cities in America, with Colorado holding the lowest adult obesity rate in the country. Despite this, demand for GLP-1 medications remains strong among Denver's active, health-focused population. Colorado's well-developed telehealth infrastructure and proximity to major compounding pharmacies in Texas and California keep pricing competitive across the Denver metro."
+    "intro": "Denver is nineteenth-largest city in the United States, located in Colorado with a population of approximately 715,522. Telehealth is legal in Colorado, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Denver ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "washington-dc",
@@ -214,8 +295,13 @@
     "population": 712816,
     "metro_population": 6380000,
     "obesity_rate": 24.7,
-    "notable_clinics": ["MedStar Georgetown University Hospital", "George Washington University Hospital", "Howard University Hospital"],
-    "intro": "Washington, DC is the capital of the United States and the center of a metro area of more than 6 million people across DC, Maryland, and Virginia. The District has below-average obesity rates but extremely high demand for GLP-1 medications among its policy and professional workforce. Compounded semaglutide is widely available through telehealth providers shipping into DC, Maryland, and Northern Virginia."
+    "intro": "Washington is a major city in the United States, located in District of Columbia with a population of approximately 712,816. Telehealth is legal in District of Columbia, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Washington ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   },
   {
     "slug": "boston-ma",
@@ -225,7 +311,12 @@
     "population": 675647,
     "metro_population": 4940000,
     "obesity_rate": 25.0,
-    "notable_clinics": ["Massachusetts General Hospital Weight Center", "Brigham and Women's Hospital", "Beth Israel Deaconess"],
-    "intro": "Boston is one of the world's leading academic medical capitals, home to Mass General, Brigham and Women's, and Harvard Medical School. While Boston has world-class in-person obesity medicine programs, wait times often exceed 3 months, pushing many residents to telehealth GLP-1 providers. Massachusetts has well-developed telehealth laws and several in-state compounding pharmacies, keeping compounded semaglutide pricing competitive across Greater Boston."
+    "intro": "Boston is a major city in the United States, located in Massachusetts with a population of approximately 675,647. Telehealth is legal in Massachusetts, and licensed GLP-1 providers can prescribe semaglutide or tirzepatide and ship directly to Boston ZIP codes. Prices, formulary availability, and specific provider state coverage vary \u2014 confirm with the provider before starting.",
+    "verification": {
+      "last_verified": "2026-04-07",
+      "verified_by": "Wave 5.4 narrative strip",
+      "confidence": "medium",
+      "notes": "Wave 5.4 2026-04-07: original intro contained unsourced marketing claims (wait times, price-per-month estimates, shipping ETAs, market-competitiveness statements) that were flagged in the prior verification note. Replaced with a safe factual template stating rank, state, population, and the generic telehealth statement. notable_clinics removed \u2014 names matched real institutions but were not verified to operate dedicated weight-management programs by the exact names used. Population figures are from 2020 Census estimates and may be 1-3 years stale."
+    }
   }
 ]
