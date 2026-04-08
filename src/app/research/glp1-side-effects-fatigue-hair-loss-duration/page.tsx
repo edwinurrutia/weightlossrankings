@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-side-effects-fatigue-hair-loss-duration";
 
@@ -522,6 +523,35 @@ export default function SideEffectsDurationArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does semaglutide or tirzepatide cause hair loss?",
+            answer:
+              "Hair shedding (telogen effluvium) was reported in about 3% of Wegovy patients vs 1% of placebo in STEP 1, and about 5% of Zepbound patients vs 1% of placebo in SURMOUNT-1. The hair loss is almost always temporary, peaks 2-4 months after rapid weight loss, and is driven by the rate of weight loss rather than the drug itself — it's also seen after bariatric surgery and crash diets. Hair regrows once weight stabilizes.",
+          },
+          {
+            question: "Why am I so tired on a GLP-1?",
+            answer:
+              "Fatigue on GLP-1 therapy is typically driven by lower caloric intake, dehydration, electrolyte shifts, and reduced protein intake — not by the drug acting on the brain. Strategies that help: prioritize protein (≥1g per pound of goal weight), stay hydrated, replace electrolytes (sodium, potassium, magnesium), and don't skip meals just because hunger is gone. Persistent fatigue beyond the first few weeks should be evaluated for other causes.",
+          },
+          {
+            question: "How long do GLP-1 side effects last?",
+            answer:
+              "Nausea, constipation, and reflux are usually worst in the first 2-4 weeks after starting and after each dose escalation, then improve as the body adapts. Hair shedding peaks at 2-4 months and resolves by 6-9 months. Fatigue and energy issues typically resolve once protein, hydration, and electrolytes are addressed. Persistent severe side effects are uncommon and warrant a dose reduction or drug change.",
+          },
+          {
+            question: "Can I prevent GLP-1 hair loss?",
+            answer:
+              "There is no proven prevention, but the strongest mitigation is slowing the rate of weight loss (slower titration, higher protein intake, adequate calories) and ensuring nutritional sufficiency — protein, iron, zinc, biotin, vitamin D. Most hair loss on GLP-1s is reversible and resolves once weight stabilizes; no special treatment is required in most cases.",
+          },
+          {
+            question: "Are GLP-1 side effects worse on tirzepatide than semaglutide?",
+            answer:
+              "Head-to-head data (SURMOUNT-5) showed similar overall side-effect profiles for tirzepatide and semaglutide, with both causing predominantly GI symptoms (nausea, constipation, diarrhea). Tirzepatide may produce slightly more GI side effects at the highest doses, but the difference is small. Hair loss and fatigue rates are comparable.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "how-to-get-glp1-prescription";
 
@@ -627,6 +628,35 @@ export default function HowToGetGlp1Article() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Do I need a prescription to get a GLP-1 like Wegovy or Zepbound?",
+            answer:
+              "Yes. Wegovy, Zepbound, Ozempic, and Mounjaro are all federally controlled prescription drugs in the United States — they cannot be sold over-the-counter or imported without a valid prescription from a licensed clinician. Compounded semaglutide and tirzepatide also require a prescription, dispensed by a licensed compounding pharmacy.",
+          },
+          {
+            question: "Can I get a GLP-1 prescription online without seeing a doctor in person?",
+            answer:
+              "Yes. Telehealth providers like Sequence, Found, Hims, Ro, Calibrate, and others can prescribe GLP-1 medications after a virtual evaluation that typically includes a medical history form, height/weight, and sometimes a video visit. Most reputable telehealth providers require a recent A1C, BMI documentation, or lab work before prescribing.",
+          },
+          {
+            question: "What BMI do I need to qualify for a GLP-1 prescription?",
+            answer:
+              "FDA-approved indications: Wegovy and Zepbound for adults with BMI ≥30, or BMI ≥27 with at least one weight-related comorbidity (hypertension, type 2 diabetes, dyslipidemia, sleep apnea, etc.). Ozempic and Mounjaro are FDA-approved for type 2 diabetes only. Telehealth and compounded vendors sometimes prescribe outside FDA criteria; that's a clinical judgment call between you and the prescriber.",
+          },
+          {
+            question: "How much does a GLP-1 prescription cost without insurance?",
+            answer:
+              "Brand-name list price: ~$1,300/mo for Wegovy or Zepbound retail, $1,000-$1,200/mo for Ozempic and Mounjaro. Manufacturer savings cards drop the cost to ~$650/mo cash for Wegovy and ~$550/mo for Zepbound. Compounded semaglutide via 503A telehealth pharmacies ranges $150-$400/mo depending on dose and provider. See our pricing index for current numbers.",
+          },
+          {
+            question: "What's the fastest way to get a GLP-1 prescription?",
+            answer:
+              "Telehealth is faster than in-person primary care for most patients: a same-day or next-day async visit, electronic prescription to a contracted pharmacy, and shipment within 3-7 days. In-person paths via PCP or weight-management clinic typically take 2-6 weeks because of scheduling, prior authorization, and pharmacy stocking delays.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

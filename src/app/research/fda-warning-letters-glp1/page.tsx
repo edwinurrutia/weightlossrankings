@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import { getAllWarningLetters } from "@/lib/fda-warning-letters";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "fda-warning-letters-glp1";
 
@@ -319,6 +320,35 @@ export default function FdaWarningLettersInvestigation() {
           enforcement letters in this database concern.
         </li>
       </ul>
+      <FaqSchema
+        items={[
+          {
+            question: "Has the FDA issued warning letters about compounded GLP-1 products?",
+            answer:
+              "Yes. The FDA has issued multiple warning letters and import alerts to compounding pharmacies, online sellers, and foreign suppliers selling semaglutide and tirzepatide products that violate federal law — including unapproved salt forms, contaminated peptides, and unregistered facilities. Our database compiles publicly posted FDA enforcement actions specific to GLP-1 compounding.",
+          },
+          {
+            question: "Is it illegal to buy compounded semaglutide?",
+            answer:
+              "No. Compounded semaglutide dispensed by a state-licensed 503A pharmacy from a valid prescription is legal under section 503A of the Federal Food, Drug, and Cosmetic Act. What is illegal is selling 'research peptides' for human use, importing semaglutide salt forms (e.g., semaglutide sodium), or compounding without a prescription. The FDA enforcement actions in this database target these illegal activities, not legitimate 503A compounding.",
+          },
+          {
+            question: "Why did the FDA take Wegovy and Zepbound off the shortage list?",
+            answer:
+              "FDA declared Wegovy and Zepbound resolved from the drug shortage list in 2025 because Novo Nordisk and Eli Lilly demonstrated they could meet projected national demand. The end of shortage status changed the legal landscape for 503A and 503B compounding under sections 503A(b)(1)(D) and 503B(a)(2) of the FD&C Act, narrowing which compounded preparations can be lawfully made.",
+          },
+          {
+            question: "How can I verify a compounding pharmacy is FDA-compliant?",
+            answer:
+              "Check (1) state pharmacy board licensure, (2) FDA registration if 503B, (3) PCAB accreditation status (Pharmacy Compounding Accreditation Board — voluntary but a strong signal), (4) the FDA warning letters database (this article), and (5) state board disciplinary action records. Compounded GLP-1 from any source flagged in FDA enforcement should be avoided.",
+          },
+          {
+            question: "Are foreign-sourced semaglutide and tirzepatide safe?",
+            answer:
+              "No, in most cases. The FDA has issued multiple import alerts and warning letters about counterfeit semaglutide and tirzepatide products entering the US from foreign sellers — products lacking sterility testing, contaminated with unknown peptides, or sold as 'research chemicals not for human consumption.' Stick to US-licensed pharmacies (brand or compounded) and avoid international peptide sellers.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

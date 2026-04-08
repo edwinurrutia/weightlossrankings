@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "does-glp1-cause-liver-damage-nafld-nash-evidence";
 
@@ -465,6 +466,35 @@ export default function GlpLiverArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Do GLP-1 medications cause liver damage?",
+            answer:
+              "No — the published evidence consistently shows the opposite. Randomized controlled trials of semaglutide and tirzepatide in patients with NAFLD/NASH/MASH have demonstrated reductions in liver fat, improvement in liver enzymes, and (in the ESSENCE trial of semaglutide for MASH) histologic resolution of steatohepatitis. The FDA labels do not list liver injury as a common adverse reaction.",
+          },
+          {
+            question: "Can semaglutide help fatty liver disease (NAFLD/MASH)?",
+            answer:
+              "Yes. The phase 3 ESSENCE trial (semaglutide 2.4mg weekly) reported histologic resolution of MASH without worsening of fibrosis in a significantly higher proportion of treated patients than placebo. Semaglutide is being actively studied as a MASH treatment, and tirzepatide has shown similar liver-fat reduction in SURPASS subgroup analyses.",
+          },
+          {
+            question: "Should I get my liver enzymes checked while on a GLP-1?",
+            answer:
+              "Routine baseline ALT/AST is reasonable for any patient starting a GLP-1, especially those with metabolic risk factors. Re-checking is not formally required by the FDA labels but most clinicians follow patients with periodic metabolic panels. Persistent or worsening enzyme elevations on a GLP-1 should prompt evaluation for other causes (alcohol, hepatitis, other drugs) — they're not typically caused by the GLP-1 itself.",
+          },
+          {
+            question: "What if I already have cirrhosis or chronic liver disease?",
+            answer:
+              "GLP-1s have not been adequately studied in decompensated cirrhosis. Patients with compensated chronic liver disease (Child-Pugh A) are generally considered candidates with caution and clinician oversight. Decompensated patients should not start a GLP-1 without specialty hepatology input. Always disclose liver disease history to your prescriber before starting therapy.",
+          },
+          {
+            question: "Can a GLP-1 cause acute liver injury or hepatitis?",
+            answer:
+              "Acute drug-induced liver injury attributable to semaglutide or tirzepatide is exceedingly rare in the published literature — case reports exist but causality is often unclear because affected patients had other liver risk factors. The FDA labels do not flag hepatotoxicity as a recognized class effect. Any patient who develops jaundice, dark urine, or right-upper-quadrant pain on therapy should stop the drug and seek evaluation.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

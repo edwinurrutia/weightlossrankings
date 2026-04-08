@@ -4,6 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
 import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const HOW_TO_STEPS: HowToStep[] = [
   {
@@ -606,6 +607,35 @@ export default function TaperingGuideArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Can I just stop taking my GLP-1 cold turkey?",
+            answer:
+              "You can — semaglutide and tirzepatide are not physically addictive and there is no withdrawal syndrome — but the STEP 4 and SURMOUNT-4 trials showed substantial weight regain (about two-thirds of lost weight regained within a year) when GLP-1 therapy was stopped abruptly. A gradual taper combined with intensive lifestyle support gives a better chance of preserving the weight loss.",
+          },
+          {
+            question: "What is the recommended way to taper off semaglutide or tirzepatide?",
+            answer:
+              "There is no FDA-approved tapering protocol because the trials studied continuous use. Many clinicians step down through the lower dose levels in 4-8 week increments (e.g., Wegovy 2.4mg → 1.7mg → 1.0mg → 0.5mg → 0.25mg, then stop), monitoring weight, hunger, and metabolic markers at each step. The slower the taper, the more time you have to stabilize behaviors at each rung.",
+          },
+          {
+            question: "How much weight will I regain after stopping a GLP-1?",
+            answer:
+              "In the STEP 1 extension trial, semaglutide patients regained about two-thirds of their lost weight within 12 months of stopping. SURMOUNT-4 showed similar regain on tirzepatide. Individual results vary widely based on lifestyle behaviors, baseline metabolism, and how long you were on the drug. Regain is not inevitable but it is the statistical norm.",
+          },
+          {
+            question: "Will my appetite come back when I stop taking the GLP-1?",
+            answer:
+              "Yes, in most patients. The appetite suppression and 'food noise' reduction effects are pharmacologic — they depend on the drug being in your system. Within 1-3 weeks of the last dose, hunger and food preoccupation typically return to pre-treatment levels. This is the central reason most clinicians now think of GLP-1 therapy as long-term rather than time-limited.",
+          },
+          {
+            question: "Should I switch to a maintenance dose instead of stopping completely?",
+            answer:
+              "Some clinicians use a lower 'maintenance' dose (e.g., Wegovy 1.0mg or Zepbound 5mg) to preserve weight loss without the cost or side-effect burden of the full dose. There are no head-to-head trials proving this approach works long-term, but observationally it's common practice. Discuss the maintenance vs. taper-and-stop tradeoff with your prescriber.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }
