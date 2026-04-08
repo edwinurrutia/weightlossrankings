@@ -1164,6 +1164,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 16,
     tags: ["Supplements", "Evidence grading", "PubMed sourced", "Myth-bust"],
   },
+  {
+    slug: "tiktok-water-lemon-chia-weight-loss-myths",
+    title:
+      "Lemon Water, Chia Seeds, and TikTok Weight-Loss Myths: What the Evidence Actually Shows",
+    description:
+      "9,750+ monthly searches ask whether lemon water, chia seeds, coconut water, sparkling water, ACV, pink salt, or cinnamon coffee cause weight loss. Most have ZERO peer-reviewed RCT evidence. Water consumption itself has weak evidence (Stookey 2008, Dennis 2010). Chia seeds have one small trial (Vuksan 2017). The Abou-Khalil 2024 ACV trial was retracted in September 2025 for data integrity issues. Here is the verified myth-bust.",
+    excerpt:
+      "Eight TikTok weight-loss claims systematically evaluated against PubMed primary sources. Lemon water, coconut water, sparkling water, pink salt water (\"internal shower\"), olive-oil-before-bed, mushroom coffee, and honey water all have ZERO human RCT evidence for weight loss. Chia seeds have one small Salba-chia trial in T2D (Vuksan 2017, n=77, -1.9 kg vs -0.3 kg control). Plain water consumption has weak evidence — Stookey 2008 (n=173, increased water associated with -2.3 kg over 12 months in dieting women) and Dennis 2010 (n=48, premeal water -2 kg more in older adults at 12 weeks). The most-cited apple cider vinegar trial in adolescents (Abou-Khalil 2024 BMJ NPH) was retracted in September 2025 for improbable data characteristics. The Launholt 2020 systematic review on ACV concluded evidence is insufficient. Cinnamon has modest fasting glucose effect (Allen 2013 meta) but no weight data. Most TikTok weight-loss hacks are folklore. Here is the verified evidence.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 11,
+    citations: 7,
+    tags: ["TikTok myths", "Lemon water", "Chia seeds", "PubMed sourced", "Myth-bust"],
+  },
 ];
 
 export function getResearchArticleBySlug(
