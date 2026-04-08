@@ -712,7 +712,43 @@
       "Semaglutide",
       "Tirzepatide"
     ],
-    "states_available": [],
+    "states_available": [
+      "AK",
+      "AZ",
+      "CO",
+      "DC",
+      "DE",
+      "FL",
+      "GA",
+      "IA",
+      "ID",
+      "IL",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MN",
+      "MO",
+      "MS",
+      "MT",
+      "ND",
+      "NE",
+      "NH",
+      "NM",
+      "NY",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SD",
+      "TX",
+      "UT",
+      "VA",
+      "VT",
+      "WI",
+      "WY"
+    ],
     "affiliate_url": "https://brellohealth.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
@@ -727,12 +763,9 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "Chrome MCP live pull",
-      "source_urls": [
-        "https://brellohealth.com"
-      ],
-      "confidence": "low",
-      "notes": "Chrome MCP attempted 2026-04-07 (brellohealth.com): page is canvas/JS-heavy, no text content extractable. Title 'Brello Health | Connect with Healthcare Providers Online' suggests generic telehealth marketplace, not a GLP-1-specific provider. GLP-1 offering cannot be independently confirmed \u2014 recommend removal from provider database if still unverified on next pass."
+      "verified_by": "Chrome MCP screenshot (user-provided)",
+      "confidence": "high",
+      "notes": "User-provided screenshot 2026-04-07 of brellohealth.com live state availability map: Brello ships to 34 states + DC (all dark purple 'Available'). Unavailable: WA, CA, NV, MI, IN, WV, NC, SC, AR, AL, TN, HI, MA, CT, NJ, MD. Brello offers compounded GLP-1 (tirzepatide/semaglutide) \u2014 compounded drug disclosure visible on the same page. Page states 'Coming to More States Soon.'"
     }
   },
   {
