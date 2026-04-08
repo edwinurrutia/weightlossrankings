@@ -4,6 +4,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import SiteChrome from "@/components/layout/SiteChrome";
 import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
+import VercelAnalyticsGate from "@/components/shared/VercelAnalyticsGate";
 import CookieConsent from "@/components/shared/CookieConsent";
 import JsonLd from "@/components/shared/JsonLd";
 import FeaturedModalWrapper from "@/components/marketing/FeaturedModalWrapper";
@@ -192,6 +193,7 @@ export default async function RootLayout({
     <html lang={htmlLang} className={`${inter.variable} ${plusJakartaSans.variable}`}>
       <body className="font-sans antialiased">
         <GoogleAnalytics />
+        <VercelAnalyticsGate />
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <SiteChrome>{children}</SiteChrome>
