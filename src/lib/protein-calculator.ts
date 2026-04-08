@@ -42,7 +42,22 @@ export type ActivityLevel =
   | "very"
   | "extreme";
 
-export type Goal = "lose" | "maintain" | "gain";
+/**
+ * Four goals mapped to specific calorie targets:
+ *   - "lose": 500 kcal/day deficit (~0.45 kg/week loss, Hall 2011)
+ *   - "maintain": TDEE as-is
+ *   - "gain": 250 kcal/day surplus (lean mass gain emphasis)
+ *   - "recomp": 200 kcal/day deficit with protein at the high end —
+ *     body recomposition / "build muscle, minimize fat" goal. This
+ *     is the lowest-deficit lose-fat-while-building-muscle target
+ *     supported by the Barakat 2020 review and the Helms 2014
+ *     contest-prep literature. A 200 kcal deficit is small enough
+ *     to support muscle protein synthesis if protein intake is at
+ *     the high end of the tier (2.0-2.4 g/kg). This goal added
+ *     2026-04-08 after reviewing the Maximus Tribe TDEE calculator
+ *     which has "Build Muscle, Minimize Fat" as a 4th option.
+ */
+export type Goal = "lose" | "maintain" | "gain" | "recomp";
 
 export type ProteinTier =
   | "general-health" // 0.8 g/kg — RDA, not enough for GLP-1 patients
@@ -129,6 +144,7 @@ export function tdeeFromBmr(bmr: number, activity: ActivityLevel): number {
  * ───────────────────────────────────────────────────────────────── */
 
 const DEFICIT_KCAL_PER_DAY = 500;
+const RECOMP_DEFICIT_KCAL_PER_DAY = 200;
 const SURPLUS_KCAL_PER_DAY = 250;
 
 export function targetCaloriesFor(
@@ -143,6 +159,17 @@ export function targetCaloriesFor(
   }
   if (goal === "gain") {
     return { calories: tdee + SURPLUS_KCAL_PER_DAY, weeklyKgChange: 0.23 };
+  }
+  if (goal === "recomp") {
+    // Body recomposition — build muscle while minimizing fat. Very
+    // small deficit (200 kcal/day) is small enough to support
+    // muscle protein synthesis IF protein intake is at the high
+    // end of the tier ladder. Expected rate is ~0.2 kg/week loss;
+    // lean-mass change depends on resistance training consistency.
+    return {
+      calories: Math.max(1200, tdee - RECOMP_DEFICIT_KCAL_PER_DAY),
+      weeklyKgChange: -0.18,
+    };
   }
   return { calories: tdee, weeklyKgChange: 0 };
 }
@@ -198,7 +225,15 @@ export function selectProteinTier(input: {
   const { ageYears, activity, goal, onGlp1 } = input;
   // Baseline tier from age + activity + goal
   let baseline: ProteinTier;
-  if (goal === "lose" && (activity === "very" || activity === "extreme")) {
+  if (goal === "recomp") {
+    // Body recomposition always requires the high end of the
+    // protein range to support muscle protein synthesis in a
+    // small deficit. Anchored on Helms 2014 and Barakat 2020.
+    baseline = "high-deficit-or-trained";
+  } else if (
+    goal === "lose" &&
+    (activity === "very" || activity === "extreme")
+  ) {
     baseline = "high-deficit-or-trained";
   } else if (goal === "lose") {
     baseline = "active-or-deficit";

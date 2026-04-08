@@ -24,6 +24,8 @@ const GOAL_LABELS: Record<Goal, string> = {
   lose: "Lose weight (-500 kcal/day deficit)",
   maintain: "Maintain weight",
   gain: "Gain weight / build muscle (+250 kcal/day)",
+  recomp:
+    "Build muscle, minimize fat (body recomposition: -200 kcal/day, high-protein)",
 };
 
 export default function ProteinCalculator() {
