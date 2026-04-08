@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-alcohol-use-disorder-evidence";
 
@@ -443,6 +444,35 @@ export default function GlpAudArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does semaglutide reduce alcohol cravings?",
+            answer:
+              "Observational and small randomized data suggest yes. Patients on GLP-1s consistently report reduced alcohol cravings and reduced alcohol intake, and a small phase 2 RCT (Klausen 2022, JCI Insight, PMID 35413018) of semaglutide for alcohol use disorder showed signals of reduced heavy drinking days vs placebo. Larger RCTs are underway. The mechanism may overlap with the food-noise reduction effect — GLP-1s appear to dampen reward-driven consumption broadly.",
+          },
+          {
+            question: "Is semaglutide approved for alcohol use disorder?",
+            answer:
+              "No — as of 2026, no GLP-1 is FDA-approved for alcohol use disorder (AUD). Multiple phase 2 and phase 3 trials are ongoing (semaglutide, tirzepatide, exenatide), and the early signals are promising. Patients seeking GLP-1 therapy specifically for AUD should pursue it via a clinical trial or off-label prescribing by a clinician familiar with the evidence.",
+          },
+          {
+            question: "Should I use Wegovy to stop drinking?",
+            answer:
+              "There is not yet enough evidence to recommend Wegovy specifically for AUD. The published data are early-phase and small. Patients with diagnosed AUD should pursue evidence-based AUD treatments (naltrexone, acamprosate, behavioral therapy) as first-line, and discuss GLP-1 use with an addiction medicine clinician if appropriate. Self-prescribing or off-label use without clinical supervision is not recommended.",
+          },
+          {
+            question: "How does semaglutide affect alcohol cravings?",
+            answer:
+              "The leading hypothesis is that GLP-1 receptor agonism in the mesolimbic reward circuit (nucleus accumbens, VTA) reduces the reward signal triggered by alcohol consumption, similar to how it reduces the reward signal from highly palatable foods. Animal and small human studies support this hypothesis. The full mechanism is still being characterized.",
+          },
+          {
+            question: "Can I drink alcohol while on Wegovy?",
+            answer:
+              "There is no formal contraindication, but alcohol can amplify GI side effects (nausea, gastritis) and may worsen the early-titration discomfort. Many patients on GLP-1s naturally drink less because the cravings diminish. If you choose to drink, do so in moderation, especially during the first weeks. Heavy alcohol use is generally discouraged on any GLP-1.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

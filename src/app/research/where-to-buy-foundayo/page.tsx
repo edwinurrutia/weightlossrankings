@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "where-to-buy-foundayo";
 
@@ -432,6 +433,35 @@ export default function WhereToBuyFoundayoArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Where can I buy Foundayo (orforglipron)?",
+            answer:
+              "Foundayo is a prescription oral GLP-1 manufactured by Eli Lilly. After receiving an FDA-approved prescription from a licensed clinician, the medication is dispensed through standard pharmacy channels — major retail pharmacies, mail-order pharmacies, and Lilly's direct-fulfillment pharmacy program (where available). It cannot be purchased over-the-counter or compounded by 503A pharmacies.",
+          },
+          {
+            question: "How do I get a Foundayo prescription?",
+            answer:
+              "You need a prescription from a licensed clinician (PCP, endocrinologist, obesity medicine specialist, or telehealth provider). The clinician will evaluate whether you meet the FDA-approved criteria and submit the prescription electronically to your pharmacy. Telehealth platforms can prescribe Foundayo same-day in most states.",
+          },
+          {
+            question: "How much does Foundayo cost?",
+            answer:
+              "Pricing depends on your insurance coverage, manufacturer savings card eligibility, and which pharmacy fills the prescription. As of the FDA approval window, expect Foundayo's retail list price to be in the same range as other branded GLP-1s. Eli Lilly typically offers a manufacturer savings card to reduce out-of-pocket cost for eligible commercially-insured patients.",
+          },
+          {
+            question: "Can I get compounded orforglipron?",
+            answer:
+              "No. Compounded versions of orforglipron are not legally available — only the FDA-approved Foundayo branded product. Any vendor claiming to sell 'compounded orforglipron' is selling an unapproved unregulated product. Stick to FDA-approved Foundayo dispensed through a US-licensed pharmacy.",
+          },
+          {
+            question: "Does insurance cover Foundayo?",
+            answer:
+              "Coverage is plan-specific and varies. Because Foundayo is the first oral GLP-1 for obesity, insurer formulary placement and prior authorization criteria are still being established. The same coverage barriers that apply to Wegovy and Zepbound (employer election of weight-management benefit, BMI thresholds, step therapy) likely apply. Check your specific plan formulary and call member services for current rules.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

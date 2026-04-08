@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "step-hfpef-semaglutide-heart-failure";
 
@@ -519,6 +520,35 @@ export default function StepHfpefArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does semaglutide help heart failure?",
+            answer:
+              "In patients with HFpEF (heart failure with preserved ejection fraction) and obesity, yes. The STEP-HFpEF trial (Kosiborod 2023, NEJM, PMID 37622681) randomized 529 patients with HFpEF and obesity to semaglutide 2.4mg weekly or placebo. Semaglutide improved heart failure symptoms (KCCQ score), exercise capacity (6-minute walk distance), CRP, and weight at 52 weeks. The benefit was substantially larger than what most heart failure drugs produce.",
+          },
+          {
+            question: "What is HFpEF?",
+            answer:
+              "HFpEF is heart failure with preserved ejection fraction — a syndrome where the heart's pumping function (ejection fraction) is normal but the heart cannot fill properly during diastole. It's strongly associated with obesity, hypertension, diabetes, and aging. Treatment options have historically been limited compared to HFrEF (reduced EF), which is why the STEP-HFpEF result was a meaningful advance.",
+          },
+          {
+            question: "Is Wegovy approved for heart failure?",
+            answer:
+              "As of 2026, Wegovy is FDA-approved for chronic weight management and cardiovascular risk reduction in patients with established CVD and obesity, but not specifically labeled for HFpEF. The STEP-HFpEF and STEP-HFpEF DM trials provide strong evidence that semaglutide improves outcomes in HFpEF patients with obesity, and major heart failure guidelines (ACC/AHA, ESC) are incorporating GLP-1 use in this population.",
+          },
+          {
+            question: "Should I take Wegovy if I have heart failure?",
+            answer:
+              "If you have HFpEF and obesity, the evidence supports semaglutide as a meaningful treatment for both your weight and your heart failure symptoms. Discuss with your cardiologist — the benefits in trials (improved symptoms, exercise capacity, weight loss) are substantial. Patients with HFrEF (reduced EF) have less direct evidence; trials are ongoing.",
+          },
+          {
+            question: "Does tirzepatide also help heart failure?",
+            answer:
+              "The SUMMIT trial (Packer 2024, NEJM) showed tirzepatide improved KCCQ symptom score, 6-minute walk distance, and weight in patients with HFpEF and obesity, replicating and extending the semaglutide finding. Both GLP-1-class drugs now have phase 3 RCT evidence supporting their use in HFpEF with obesity, though neither is yet FDA-labeled for that specific indication.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

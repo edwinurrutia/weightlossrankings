@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "surmount-osa-tirzepatide-sleep-apnea";
 
@@ -460,6 +461,35 @@ export default function SurmountOsaArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does Zepbound help sleep apnea?",
+            answer:
+              "Yes — the SURMOUNT-OSA trial (Malhotra 2024, NEJM, PMID 38858710) randomized adults with moderate-to-severe obstructive sleep apnea (OSA) and obesity to tirzepatide vs placebo. After 52 weeks, tirzepatide reduced the apnea-hypopnea index (AHI) by approximately 25-30 events per hour vs placebo, with about 50% of treated patients achieving disease resolution criteria. The FDA approved Zepbound for moderate-to-severe OSA in adults with obesity in December 2024 based on these results.",
+          },
+          {
+            question: "Is Zepbound FDA-approved for sleep apnea?",
+            answer:
+              "Yes. The FDA added the moderate-to-severe obstructive sleep apnea indication to the Zepbound label in December 2024, making it the first drug approved specifically for OSA in adults with obesity. Coverage and prior authorization criteria for this indication vary by insurance plan and are evolving as the indication is new.",
+          },
+          {
+            question: "Can I stop using my CPAP if I take Zepbound?",
+            answer:
+              "Not without a sleep study and clinician guidance. The SURMOUNT-OSA trial showed substantial AHI reduction, and about half of treated patients met disease resolution criteria — but individual response varies. The right path is to start tirzepatide alongside CPAP, then have a follow-up sleep study to objectively measure your AHI before discontinuing CPAP. Stopping CPAP without verified resolution puts you at cardiovascular and neurocognitive risk.",
+          },
+          {
+            question: "Does Wegovy also help sleep apnea?",
+            answer:
+              "Wegovy has not had a dedicated phase 3 OSA trial published, and is NOT FDA-approved for OSA as of 2026. Mechanistically the weight loss should improve OSA, and observational data support this, but the FDA-approved evidence base for OSA specifically is limited to tirzepatide. If OSA is a primary indication, tirzepatide currently has the strongest evidence.",
+          },
+          {
+            question: "How much does Zepbound reduce AHI?",
+            answer:
+              "In SURMOUNT-OSA, tirzepatide reduced AHI by approximately 25-30 events per hour from baseline at 52 weeks, vs ~5 events/hour for placebo. The magnitude is comparable to or larger than what bariatric surgery produces. The reduction is durable as long as the drug is continued and weight loss is maintained.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

@@ -4,6 +4,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
 import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const HOW_TO_STEPS: HowToStep[] = [
   {
@@ -490,6 +491,35 @@ export default function FoundayoHowToTakeArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "How do you take Foundayo (orforglipron)?",
+            answer:
+              "Foundayo is taken as one oral tablet once daily, with or without food. Unlike injectable GLP-1s, there is no need to inject, no refrigeration, and no special timing window. The starter dose escalates over weeks to the target maintenance dose per the FDA prescribing information. Always follow your prescriber's specific instructions and the patient information leaflet that comes with your prescription.",
+          },
+          {
+            question: "Can I take Foundayo with food?",
+            answer:
+              "Yes. Foundayo can be taken with or without food per the prescribing information. Some patients find taking it with a small meal reduces nausea, especially during the early titration weeks. Consistency matters more than timing — pick a daily time and stick with it.",
+          },
+          {
+            question: "What if I miss a dose of Foundayo?",
+            answer:
+              "If you miss a dose and remember within several hours, take it as soon as you remember. If it's almost time for the next dose, skip the missed dose and resume your normal schedule. Do not take two doses to make up for a missed dose. Multiple missed doses in a row may warrant restarting at a lower dose to manage GI side effects — consult your prescriber.",
+          },
+          {
+            question: "Do I need to take Foundayo at the same time each day?",
+            answer:
+              "Same time daily is recommended for consistency, but the FDA label does not require a specific time of day. Pick a time that fits your routine — many patients tie it to a daily anchor (morning coffee, breakfast, before bed) to make adherence easier. Consistency improves adherence more than the specific time chosen.",
+          },
+          {
+            question: "Can I drink alcohol on Foundayo?",
+            answer:
+              "There is no formal contraindication, but alcohol can amplify GI side effects (nausea, gastritis) and may worsen the early-titration discomfort. Many patients on GLP-1s report reduced alcohol cravings and tolerance. If you drink, do so in moderation, especially during the first weeks. Heavy alcohol use is generally discouraged on any GLP-1.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }
