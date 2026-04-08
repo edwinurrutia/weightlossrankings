@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllCities } from "@/lib/cities";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import JsonLd from "@/components/shared/JsonLd";
 import SourcesPanel from "@/components/research/SourcesPanel";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
@@ -12,11 +13,40 @@ export const metadata: Metadata = {
   alternates: { canonical: "/cities" },
 };
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+
 export default function CitiesIndexPage() {
   const cities = getAllCities().sort((a, b) => b.population - a.population);
 
+  // CollectionPage + ItemList JSON-LD for the cities index. Tells
+  // Google this is the canonical entry point for the 20 city
+  // landing pages — strong topical-authority signal for "GLP-1 in
+  // [city]" queries. Caught in the 2026-04-08 schema audit.
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "GLP-1 Providers by City",
+    description:
+      "Find GLP-1 weight loss providers and compounded semaglutide options in the 20 largest US cities. Compare local pricing, telehealth availability, and provider rankings.",
+    url: `${SITE_URL}/cities`,
+    isPartOf: { "@type": "WebSite", name: "Weight Loss Rankings", url: SITE_URL },
+    inLanguage: "en-US",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: cities.length,
+      itemListElement: cities.map((city, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        url: `${SITE_URL}/cities/${city.slug}`,
+        name: city.city,
+      })),
+    },
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg">
+      <JsonLd data={collectionSchema} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },

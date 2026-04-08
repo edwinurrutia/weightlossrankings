@@ -18,6 +18,11 @@ import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import DYORCallout from "@/components/marketing/DYORCallout";
+import JsonLd from "@/components/shared/JsonLd";
+import FaqSchema from "@/components/research/FaqSchema";
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
 
 export async function generateStaticParams() {
   const slugs = await getAllProviderSlugs();
@@ -157,8 +162,30 @@ export default async function AlternativesPage({
 
   const whyLookContent = buildWhyLookSection(provider);
 
+  // ItemList schema for the alternatives list — gives Google a
+  // structured signal that this page is a curated comparison list
+  // of N items, which is the primary intent of an "X alternatives"
+  // query. Caught in the 2026-04-08 schema audit.
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${provider.name} Alternatives`,
+    description: `The top-rated alternatives to ${provider.name} ranked by our scoring algorithm.`,
+    url: `${SITE_URL}/alternatives/${slug}`,
+    itemListOrder: "https://schema.org/ItemListOrderDescending",
+    numberOfItems: alternatives.length,
+    itemListElement: alternatives.map((alt, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      url: `${SITE_URL}/reviews/${alt.slug}`,
+      name: alt.name,
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-brand-gradient-light">
+      <JsonLd data={itemListSchema} />
+      <FaqSchema items={faqItems} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FAQSection from "@/components/marketing/FAQSection";
 import SourcesPanel from "@/components/research/SourcesPanel";
+import FaqSchema from "@/components/research/FaqSchema";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 // Central-registry source ids backing the clinical / regulatory / insurance
@@ -164,9 +165,23 @@ const siteFaqs = [
   },
 ];
 
+// Flatten every FAQ section above into a single FAQPage JSON-LD
+// payload. The page that publishes patient FAQ answers about GLP-1s
+// should obviously emit FAQPage rich-result schema; this was the
+// single biggest schema gap on the site (caught in the 2026-04-08
+// SEO audit). Every entry corresponds 1:1 to a visible accordion item.
+const ALL_FAQS = [
+  ...aboutFaqs,
+  ...glpFaqs,
+  ...providerFaqs,
+  ...insuranceFaqs,
+  ...siteFaqs,
+];
+
 export default function FaqPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
+      <FaqSchema items={ALL_FAQS} />
       <h1 className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary mb-3">
         Frequently Asked Questions
       </h1>

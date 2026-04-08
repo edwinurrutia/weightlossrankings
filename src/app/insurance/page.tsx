@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllInsurers } from "@/lib/insurers";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import JsonLd from "@/components/shared/JsonLd";
 import SourcesPanel from "@/components/research/SourcesPanel";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
@@ -12,13 +13,42 @@ export const metadata: Metadata = {
   alternates: { canonical: "/insurance" },
 };
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+
 export default function InsuranceIndexPage() {
   const insurers = getAllInsurers().sort(
     (a, b) => b.member_count - a.member_count
   );
 
+  // CollectionPage + ItemList JSON-LD for the insurance index. The
+  // canonical entry point for "does [insurer] cover Wegovy/Zepbound"
+  // queries — high commercial intent. Caught in the 2026-04-08
+  // schema audit.
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "GLP-1 Insurance Coverage by Plan",
+    description:
+      "Find out if your health insurance covers Wegovy, Ozempic, Zepbound, and Mounjaro. Compare coverage rules across BCBS, UHC, Aetna, Cigna, Humana, Medicare, Medicaid, and more.",
+    url: `${SITE_URL}/insurance`,
+    isPartOf: { "@type": "WebSite", name: "Weight Loss Rankings", url: SITE_URL },
+    inLanguage: "en-US",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: insurers.length,
+      itemListElement: insurers.map((insurer, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        url: `${SITE_URL}/insurance/${insurer.slug}`,
+        name: insurer.name,
+      })),
+    },
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg">
+      <JsonLd data={collectionSchema} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },
