@@ -65,6 +65,58 @@
     "confidence": "high"
   },
   {
+    "employer_id": "brookfield",
+    "employer_name": "Brookfield",
+    "industry": "Real Estate / Asset Management",
+    "plan_administrator": "Aetna (medical) / Calibrate (weight-management vendor)",
+    "wegovy_coverage": "Fully covered via Calibrate program for Brookfield employees on Aetna PPO, Aetna EPO, or Aetna HDHP plans (no deductible required)",
+    "zepbound_coverage": "Coverage available via Calibrate program when clinically appropriate; verify current formulary with Calibrate enrollment",
+    "ozempic_coverage": "Diabetes-indication coverage flows through Brookfield's standard medical/pharmacy plan; verify with HR",
+    "mounjaro_coverage": "Diabetes-indication coverage flows through Brookfield's standard medical/pharmacy plan; verify with HR",
+    "notes": "VERIFIED 2026-04-08 via primary-vendor source: Calibrate Brookfield benefit page (https://www.joincalibrate.com/pages/brookfield), confirmed by direct WebFetch. Per the page: 'If you have an Aetna PPO, an Aetna EPO or an Aetna HDHP plan, your GLP-1 medication will be fully covered' and 'You do not have to meet your deductible — if you have one — in order for your GLP-1 medication to be covered.' Program includes GLP-1 medications (Wegovy, Saxenda) plus lifestyle coaching. Coverage applies only to Brookfield employees enrolled in qualifying Aetna plans; non-Aetna or non-clinically-eligible employees are out of scope.",
+    "data_as_of": "2026-04-08",
+    "confidence": "high"
+  },
+  {
+    "employer_id": "paychex",
+    "employer_name": "Paychex",
+    "industry": "HR / Payroll Services",
+    "plan_administrator": "Calibrate (weight-management vendor)",
+    "wegovy_coverage": "Fully covered via Calibrate program for clinically eligible Paychex employees and dependents",
+    "zepbound_coverage": "Coverage available via Calibrate program when clinically appropriate; verify current formulary with Calibrate enrollment",
+    "ozempic_coverage": "Diabetes-indication coverage flows through Paychex's standard medical/pharmacy plan; verify with HR",
+    "mounjaro_coverage": "Diabetes-indication coverage flows through Paychex's standard medical/pharmacy plan; verify with HR",
+    "notes": "VERIFIED 2026-04-08 via primary-vendor source: Calibrate Paychex benefit page (https://www.joincalibrate.com/pages/paychex). Per the Calibrate page, the virtual program is fully covered for eligible Paychex members and dependents and includes GLP-1 medications plus lifestyle coaching. Coverage applies only to clinically eligible members; weight-management coverage details for non-Calibrate-routed care are not publicly disclosed.",
+    "data_as_of": "2026-04-08",
+    "confidence": "high"
+  },
+  {
+    "employer_id": "principal",
+    "employer_name": "Principal Financial Group",
+    "industry": "Finance / Insurance",
+    "plan_administrator": "Calibrate (weight-management vendor)",
+    "wegovy_coverage": "Fully covered via Calibrate program for clinically eligible Principal employees and dependents",
+    "zepbound_coverage": "Coverage available via Calibrate program when clinically appropriate; verify current formulary with Calibrate enrollment",
+    "ozempic_coverage": "Diabetes-indication coverage flows through Principal's standard medical/pharmacy plan; verify with HR",
+    "mounjaro_coverage": "Diabetes-indication coverage flows through Principal's standard medical/pharmacy plan; verify with HR",
+    "notes": "VERIFIED 2026-04-08 via primary-vendor source: Calibrate Principal benefit page (https://www.joincalibrate.com/pages/principal). Per the Calibrate page, the virtual program is fully covered for eligible Principal members and dependents and includes GLP-1 medications plus lifestyle coaching, with reported average 17% weight loss. Coverage applies only to clinically eligible members; weight-management coverage details for non-Calibrate-routed care are not publicly disclosed.",
+    "data_as_of": "2026-04-08",
+    "confidence": "high"
+  },
+  {
+    "employer_id": "manpowergroup",
+    "employer_name": "ManpowerGroup",
+    "industry": "Staffing / HR Services",
+    "plan_administrator": "Calibrate (weight-management vendor)",
+    "wegovy_coverage": "Fully covered via Calibrate program for clinically eligible ManpowerGroup employees and dependents",
+    "zepbound_coverage": "Coverage available via Calibrate program when clinically appropriate; verify current formulary with Calibrate enrollment",
+    "ozempic_coverage": "Diabetes-indication coverage flows through ManpowerGroup's standard medical/pharmacy plan; verify with HR",
+    "mounjaro_coverage": "Diabetes-indication coverage flows through ManpowerGroup's standard medical/pharmacy plan; verify with HR",
+    "notes": "VERIFIED 2026-04-08 via primary-vendor source: Calibrate ManpowerGroup benefit page (https://www.joincalibrate.com/pages/manpowergroup). Per the Calibrate page, the program is a fully covered benefit for ManpowerGroup employees and includes GLP-1 medications plus lifestyle coaching, with reported average 18% weight loss. Coverage applies only to clinically eligible members; weight-management coverage details for non-Calibrate-routed care are not publicly disclosed.",
+    "data_as_of": "2026-04-08",
+    "confidence": "high"
+  },
+  {
     "employer_id": "microsoft",
     "employer_name": "Microsoft",
     "industry": "Tech",
