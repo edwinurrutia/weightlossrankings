@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/shared/JsonLd";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -8,9 +9,41 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+
+// AboutPage schema with mainEntity pointing to the Organization
+// (defined globally in layout.tsx). Tells Google "this page is the
+// canonical 'about' surface for the Organization entity" so the
+// brand-SERP knowledge panel can pull from this URL specifically.
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "About Weight Loss Rankings",
+  description:
+    "Weight Loss Rankings is an independent review site that evaluates GLP-1 telehealth providers, weight loss programs, and supplements.",
+  url: `${SITE_URL}/about`,
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Weight Loss Rankings",
+    url: SITE_URL,
+  },
+  mainEntity: {
+    "@type": "Organization",
+    name: "Weight Loss Rankings",
+    url: SITE_URL,
+    parentOrganization: {
+      "@type": "Organization",
+      name: "MEAS Partners, LLC",
+    },
+  },
+};
+
 export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto py-10 px-4">
+      <JsonLd data={aboutPageSchema} />
       <h1 className="font-heading text-4xl font-bold text-brand-text-primary mb-4">
         About Weight Loss Rankings
       </h1>

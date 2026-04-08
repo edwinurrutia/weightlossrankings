@@ -11,6 +11,10 @@ import EmailCapture from "@/components/shared/EmailCapture";
 import PriceLineChart from "@/components/charts/PriceLineChart";
 import EmbedThisWidget from "@/components/marketing/EmbedThisWidget";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import JsonLd from "@/components/shared/JsonLd";
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
 
 export const metadata: Metadata = {
   title: "GLP-1 Price Tracker — Monitor Provider Price History",
@@ -49,8 +53,64 @@ export default async function PriceTrackerPage() {
     "sesame",
   ];
 
+  // Dataset JSON-LD for the price-tracker. The page IS a dataset:
+  // monthly per-provider GLP-1 pricing across 12+ months of history
+  // for ~80 providers. Dataset schema is what Google Dataset Search
+  // ingests and is also a strong signal for AI tools that look for
+  // structured statistical data. Caught in the 2026-04-08 schema audit.
+  const datasetSchema = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: "GLP-1 Telehealth Provider Price History",
+    description:
+      "Monthly historical pricing for compounded semaglutide and tirzepatide across 80+ US telehealth providers. Tracks 12-month price trajectories, recent drops, and current best deals. Verified monthly against the live provider pricing pages.",
+    url: `${SITE_URL}/price-tracker`,
+    keywords: [
+      "GLP-1 pricing",
+      "compounded semaglutide cost",
+      "compounded tirzepatide cost",
+      "telehealth weight loss pricing",
+      "Wegovy alternatives pricing",
+    ],
+    creator: {
+      "@type": "Organization",
+      name: "Weight Loss Rankings",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Weight Loss Rankings",
+      url: SITE_URL,
+    },
+    license: "https://weightlossrankings.org/terms",
+    isAccessibleForFree: true,
+    inLanguage: "en-US",
+    spatialCoverage: {
+      "@type": "Place",
+      name: "United States",
+    },
+    temporalCoverage: "2024/2026",
+    variableMeasured: [
+      {
+        "@type": "PropertyValue",
+        name: "Monthly cost (USD)",
+        unitText: "USD per month",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Provider name",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Drug",
+        value: "compounded semaglutide, compounded tirzepatide",
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-brand-gradient-light">
+      <JsonLd data={datasetSchema} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },

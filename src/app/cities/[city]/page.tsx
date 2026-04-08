@@ -135,9 +135,28 @@ export default async function CityPage({
     description: `Compare ${providers.length} GLP-1 providers serving ${city.city}, ${city.state}. Compounded semaglutide from $${avgPrice}/mo.`,
   };
 
+  // ItemList enrichment so Google can render this city's provider
+  // grid as a ranked list rich result. Caught in the 2026-04-08
+  // schema audit.
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `GLP-1 Providers serving ${city.city}, ${city.state_code}`,
+    description: `Ranked GLP-1 telehealth providers available to ${city.city} residents.`,
+    itemListOrder: "https://schema.org/ItemListOrderDescending",
+    numberOfItems: providers.length,
+    itemListElement: providers.slice(0, 20).map((p, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      url: `https://weightlossrankings.org/reviews/${p.slug}`,
+      name: p.name,
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg">
       <JsonLd data={webPageJsonLd} />
+      <JsonLd data={itemListJsonLd} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },

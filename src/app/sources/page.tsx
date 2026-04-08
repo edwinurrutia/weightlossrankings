@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllCitations } from "@/lib/citations";
 import type { CitationCategory, CitationEntry } from "@/lib/citations";
+import JsonLd from "@/components/shared/JsonLd";
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
 
 export const metadata: Metadata = {
   title: "Sources & Methodology",
@@ -155,8 +159,30 @@ export default function SourcesPage() {
 
   const totalSources = all.length;
 
+  // DataCatalog JSON-LD for the master citation registry. The page
+  // is literally a structured catalog of every external source we
+  // cite — Dataset/DataCatalog is the right schema and Google's
+  // research-content surfacing uses it. Caught in the 2026-04-08
+  // schema audit.
+  const dataCatalogSchema = {
+    "@context": "https://schema.org",
+    "@type": "DataCatalog",
+    name: "Weight Loss Rankings Master Source Registry",
+    description: `Every external claim on Weight Loss Rankings traces back to a primary source. ${totalSources} entries spanning peer-reviewed clinical trials, FDA prescribing information, regulatory filings, CDC statistics, and manufacturer pricing data.`,
+    url: `${SITE_URL}/sources`,
+    inLanguage: "en-US",
+    publisher: {
+      "@type": "Organization",
+      name: "Weight Loss Rankings",
+      url: SITE_URL,
+    },
+    isAccessibleForFree: true,
+    license: "https://weightlossrankings.org/terms",
+  };
+
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <JsonLd data={dataCatalogSchema} />
       {/* Header */}
       <div className="mb-12">
         <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold mb-3">

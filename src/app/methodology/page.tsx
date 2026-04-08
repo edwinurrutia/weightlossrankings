@@ -2,7 +2,42 @@ import type { Metadata } from "next";
 import { SCORE_DIMENSIONS } from "@/lib/scoring";
 import Citation from "@/components/research/Citation";
 import SourcesPanel from "@/components/research/SourcesPanel";
+import JsonLd from "@/components/shared/JsonLd";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+
+// CreativeWork schema for the methodology page. Tells Google this is
+// the canonical document describing how Weight Loss Rankings scores
+// providers — Google's Organization knowledge panel uses
+// publishingPrinciples (which we set to /methodology in layout.tsx)
+// to find this page, and it expects a structured CreativeWork at
+// the destination. Caught in the 2026-04-08 schema audit.
+const methodologySchema = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Weight Loss Rankings Methodology",
+  description:
+    "How Weight Loss Rankings evaluates, scores, and ranks GLP-1 telehealth providers across six weighted dimensions: value, clinical effectiveness, user experience, safety and compliance, accessibility, and ongoing support.",
+  url: `${SITE_URL}/methodology`,
+  inLanguage: "en-US",
+  author: {
+    "@type": "Organization",
+    name: "Weight Loss Rankings",
+    url: SITE_URL,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Weight Loss Rankings",
+    url: SITE_URL,
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Weight Loss Rankings",
+    url: SITE_URL,
+  },
+};
 
 // Per-page citation numbering (1..n) — must match the order in sourceIds below.
 const CITE = {
@@ -57,6 +92,7 @@ const DIMENSION_DESCRIPTIONS: Record<string, string> = {
 export default function MethodologyPage() {
   return (
     <div className="max-w-3xl mx-auto py-8 px-4">
+      <JsonLd data={methodologySchema} />
       <h1 className="text-3xl font-bold text-gray-900 mb-4">
         How We Rank — Our Methodology
       </h1>

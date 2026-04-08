@@ -121,9 +121,29 @@ export default async function StatePage({
     description: `Compare ${providers.length} GLP-1 telehealth providers available in ${stateName}. Average compounded semaglutide cost: $${avgPrice}/mo.`,
   };
 
+  // ItemList enrichment so Google can render this state's provider
+  // grid as a ranked list rich result. The state pages already have
+  // WebPage + Place schema; this adds the third layer that comparison
+  // queries need. Caught in the 2026-04-08 schema audit.
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `GLP-1 Providers in ${stateName}`,
+    description: `Ranked GLP-1 telehealth providers serving ${stateName} residents.`,
+    itemListOrder: "https://schema.org/ItemListOrderDescending",
+    numberOfItems: providers.length,
+    itemListElement: providers.slice(0, 20).map((p, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      url: `https://weightlossrankings.org/reviews/${p.slug}`,
+      name: p.name,
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg">
       <JsonLd data={webPageJsonLd} />
+      <JsonLd data={itemListJsonLd} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },
