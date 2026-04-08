@@ -353,6 +353,29 @@ export default function MuscleMassArticle() {
           cardiovascular benefit appears largely independent of how
           much weight patients actually lost.
         </li>
+        <li>
+          <Link href="/research/exercise-pairing-glp1-lean-mass-preservation">
+            Exercise pairing for lean-mass preservation
+          </Link>{" "}
+          — the resistance-training protocols that the published
+          literature shows mitigate the lean-mass loss documented
+          above.
+        </li>
+        <li>
+          <Link href="/tools/glp1-protein-calculator">
+            GLP-1 protein calculator
+          </Link>{" "}
+          — calculates your daily protein target with the GLP-1
+          bump applied, anchored on the Neeland 2024 lean-mass
+          mitigation review.
+        </li>
+        <li>
+          <Link href="/research/loose-skin-after-glp1-weight-loss">
+            Loose skin after GLP-1 weight loss
+          </Link>{" "}
+          — the downstream consequence of inadequate lean-mass
+          preservation during rapid weight loss.
+        </li>
       </ul>
 
       <References

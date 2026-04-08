@@ -16,7 +16,12 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: `/research/${SLUG}`,
       languages: {
         "en-US": `/research/${SLUG}`,
-        es: "/research/guia-marcas-wegovy-ozempic-zepbound-mounjaro",
+        // Spanish hreflang must point to the canonical /es/research/
+        // path, NOT the legacy /research/ path which 301-redirects.
+        // Hreflang URLs should never be redirected — Google penalizes
+        // that as ambiguous canonicalization.
+        es: "/es/research/guia-marcas-wegovy-ozempic-zepbound-mounjaro",
+        "es-US": "/es/research/guia-marcas-wegovy-ozempic-zepbound-mounjaro",
       },
     },
     openGraph: {

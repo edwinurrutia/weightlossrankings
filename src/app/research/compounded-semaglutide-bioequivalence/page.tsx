@@ -540,6 +540,21 @@ export default function CompoundedBioequivalenceArticle() {
           — the practical patient-experience side of the same
           choice this article addresses scientifically.
         </li>
+        <li>
+          <Link href="/research/pcab-accreditation-compounding-pharmacy-investigation">
+            PCAB accreditation investigation
+          </Link>{" "}
+          — the voluntary quality framework used to filter the
+          503A pharmacies most likely to produce bioequivalent
+          preparations.
+        </li>
+        <li>
+          <Link href="/research/where-to-buy-semaglutide">
+            Where to buy semaglutide
+          </Link>{" "}
+          — the sourcing decision framework that uses the
+          bioequivalence findings above as one input.
+        </li>
       </ul>
 
       <References

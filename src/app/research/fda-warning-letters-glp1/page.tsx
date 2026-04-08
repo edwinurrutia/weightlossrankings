@@ -319,6 +319,21 @@ export default function FdaWarningLettersInvestigation() {
           delivery formats. The compounded format is what most
           enforcement letters in this database concern.
         </li>
+        <li>
+          <Link href="/research/pcab-accreditation-compounding-pharmacy-investigation">
+            PCAB accreditation investigation
+          </Link>{" "}
+          — the voluntary quality framework that is the strongest
+          forward-looking signal for which 503A pharmacies are
+          unlikely to end up on this enforcement list.
+        </li>
+        <li>
+          <Link href="/research/where-to-buy-semaglutide">
+            Where to buy semaglutide
+          </Link>{" "}
+          — patient-facing decision guide that uses this
+          enforcement database as one of the verification inputs.
+        </li>
       </ul>
       <FaqSchema
         items={[

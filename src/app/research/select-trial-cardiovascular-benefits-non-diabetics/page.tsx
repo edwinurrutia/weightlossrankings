@@ -481,6 +481,24 @@ export default function SelectTrialArticle() {
         and increasingly, is &ldquo;more than the scale shows.&rdquo;
       </p>
 
+      <p>
+        Related reading: see our{" "}
+        <Link href="/research/step-hfpef-semaglutide-heart-failure">
+          STEP-HFpEF deep-dive
+        </Link>{" "}
+        for the parallel heart failure with preserved ejection fraction
+        signal,{" "}
+        <Link href="/research/flow-trial-semaglutide-kidney-disease">
+          FLOW kidney disease trial
+        </Link>{" "}
+        for the renal outcomes story, and our{" "}
+        <Link href="/research/tirzepatide-vs-semaglutide-head-to-head">
+          tirzepatide vs semaglutide head-to-head
+        </Link>{" "}
+        for context on why tirzepatide does not yet have a published
+        cardiovascular outcomes trial of its own.
+      </p>
+
       <References items={citations} />
       <FaqSchema
         items={[

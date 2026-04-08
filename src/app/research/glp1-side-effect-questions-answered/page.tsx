@@ -73,8 +73,11 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: `/research/${SLUG}`,
       languages: {
         "en-US": `/research/${SLUG}`,
-        es: "/research/efectos-secundarios-glp1-preguntas-respuestas",
-        "es-US": "/research/efectos-secundarios-glp1-preguntas-respuestas",
+        // Spanish hreflang must point to the canonical /es/research/
+        // path, NOT the legacy /research/ path which 301-redirects.
+        // Hreflang URLs should never be redirected.
+        es: "/es/research/efectos-secundarios-glp1-preguntas-respuestas",
+        "es-US": "/es/research/efectos-secundarios-glp1-preguntas-respuestas",
       },
     },
     openGraph: {
