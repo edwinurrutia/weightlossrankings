@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "why-am-i-not-losing-weight-glp1-plateau";
 
@@ -407,6 +408,35 @@ export default function PlateauArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Why am I not losing weight on Wegovy or Zepbound?",
+            answer:
+              "There are three buckets of non-response: (1) early-titration non-response — you're still on the starter dose and the drug hasn't reached steady state; (2) technical errors in injection technique or stale pen/vial; (3) the trial-curve plateau — about 10-15% of trial participants lost less than 5% even at the maintenance dose. The first step is identifying which bucket you're in, because the fix is different for each.",
+          },
+          {
+            question: "How long does it take for a GLP-1 to start working?",
+            answer:
+              "Appetite suppression starts within hours to days. Steady-state plasma concentrations take 4-5 weeks per dose level (roughly 5 half-lives). Measurable weight loss typically begins around week 4 of the maintenance dose; meaningful loss (5% or more) is at week 16; the trial average plateau is at month 12-18. If you're at week 4 of the starter dose, you're not at steady state yet — patience is the right answer.",
+          },
+          {
+            question: "What percentage of patients don't respond to GLP-1s?",
+            answer:
+              "Approximately 10-15% of patients in the STEP-1 and SURMOUNT-1 trials lost less than 5% body weight even at the maintenance dose. This is the published 'non-responder' rate. Another 10-20% lose less than the trial average. Individual variability is large: some patients lose 25%+ while others lose almost nothing on the same dose, and the predictors of response are not fully understood.",
+          },
+          {
+            question: "Should I increase my GLP-1 dose if I'm not losing weight?",
+            answer:
+              "Discuss with your prescriber. The dose-escalation schedules in STEP-1 and SURMOUNT-1 are well-defined, and most patients escalate to the highest tolerated dose over 4-5 months. If you've completed full titration to the maintenance dose and given it 12-16 weeks at steady state without meaningful response, the conversation shifts to whether to (a) switch to a more potent agent (e.g., semaglutide → tirzepatide), (b) add a complementary intervention, or (c) accept that this drug class isn't going to deliver the results you wanted and explore alternatives.",
+          },
+          {
+            question: "Is it normal to plateau on Ozempic after losing some weight?",
+            answer:
+              "Yes. Both STEP-1 and SURMOUNT-1 show clear plateaus around month 12-18 in their published weight-loss curves. The mechanism is partly metabolic adaptation (resting energy expenditure drops as you lose weight) and partly behavioral (caloric intake creeps back up). The plateau is the body finding a new equilibrium. Continuing the drug typically maintains the loss; stopping the drug typically causes regain. Adding resistance training and protein helps preserve lean mass through the plateau.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

@@ -12,6 +12,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import PriceDistributionChart from "@/components/research/PriceDistributionChart";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-pricing-index";
 
@@ -417,6 +418,35 @@ export default function PricingIndexArticle() {
             source: "BMJ",
             year: 2024,
             pmid: "38942431",
+          },
+        ]}
+      />
+      <FaqSchema
+        items={[
+          {
+            question: "How much does compounded semaglutide cost per month in 2026?",
+            answer:
+              "Compounded semaglutide ranges from approximately $99 to $400 per month across the US telehealth market in 2026. Our pricing index tracks the median, p10 (cheapest decile), and p90 across 70+ providers and is refreshed monthly. The cheapest decile typically lands in the $99-149 range; the median is around $150-200; the p90 reaches $300-400. Brand-name Wegovy through NovoCare self-pay is $349-499/month depending on dose tier.",
+          },
+          {
+            question: "How much does compounded tirzepatide cost per month?",
+            answer:
+              "Compounded tirzepatide is typically $200-450 per month across the US telehealth market in 2026, somewhat higher than compounded semaglutide because of higher API cost. Brand-name Zepbound through LillyDirect is $299-699/month dose-tiered. Our pricing index is updated monthly with verified per-provider numbers.",
+          },
+          {
+            question: "Why is there such a wide price spread for the same drug?",
+            answer:
+              "The compounded GLP-1 telehealth market is fragmented and immature. Differences in API sourcing, 503A pharmacy compounding fees, telehealth platform overhead, marketing acquisition cost, and the level of clinical support included drive a 3-4x spread between the cheapest and most expensive providers for the same drug. Some 'cheaper' providers also strip away clinical follow-up that more expensive providers include, so the comparison is not always apples-to-apples.",
+          },
+          {
+            question: "Is compounded semaglutide cheaper than Wegovy?",
+            answer:
+              "Yes, typically. Brand-name Wegovy through NovoCare self-pay runs $349-499/month; the median compounded semaglutide is roughly $150-200/month. The trade-off is that compounded products are not FDA-approved, the supply chain quality varies, and as of February 2025 the FDA's enforcement discretion for 503A compounded semaglutide ended (with grace periods), meaning the regulatory landscape is unsettled.",
+          },
+          {
+            question: "How often is this pricing data updated?",
+            answer:
+              "The pricing index is refreshed monthly and the underlying providers.json dataset has per-entry verification metadata showing exactly when each provider was last verified and at what confidence tier. Tools that consume this data display the verification date prominently. The next monthly refresh is scheduled per the verification cadence in the freshness check script.",
           },
         ]}
       />

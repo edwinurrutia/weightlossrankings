@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-nausea-management-practical-guide";
 
@@ -467,6 +468,35 @@ export default function NauseaGuideArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "How common is nausea on Wegovy or Zepbound?",
+            answer:
+              "Nausea is the most common adverse event in GLP-1 trials. STEP-1 reported nausea in approximately 44% of semaglutide patients vs 18% on placebo. SURMOUNT-1 reported similar rates for tirzepatide. Most nausea is mild-to-moderate and concentrated in the first 4-8 weeks after starting or escalating a dose. It typically improves as the body adapts to the drug.",
+          },
+          {
+            question: "When does GLP-1 nausea peak and when does it go away?",
+            answer:
+              "Nausea typically peaks within 1-2 weeks after starting a new dose level (so after each titration step) and improves over the following 2-4 weeks as the body adapts. The first 4-week titration period is usually the worst, with subsequent dose escalations producing milder rebounds. By the time you reach the maintenance dose, nausea should be substantially reduced or absent for most patients.",
+          },
+          {
+            question: "What actually helps with GLP-1 nausea?",
+            answer:
+              "Slow dose escalation (don't push to the next dose if you're still nauseous), small frequent meals (rather than 3 large ones), avoiding high-fat meals, ginger (modest evidence), staying hydrated, and prescription antiemetics like ondansetron if needed. Eating slowly and stopping at first satiety is the highest-leverage behavioral change. Some patients use a B6 + doxylamine combination (the same anti-pregnancy-nausea protocol) off-label.",
+          },
+          {
+            question: "When should I stop the GLP-1 because of nausea?",
+            answer:
+              "Red flags that warrant calling your prescriber: persistent vomiting (multiple episodes per day), inability to keep fluids down, signs of dehydration, severe abdominal pain (especially radiating to the back — possible pancreatitis), bloody vomit, or severe constipation lasting more than 5 days. For routine moderate nausea, the answer is usually 'wait, slow titration, and use anti-nausea strategies' rather than discontinue.",
+          },
+          {
+            question: "Does nausea mean the GLP-1 is working?",
+            answer:
+              "Yes — nausea is a sign that the drug is engaging GLP-1 receptors, slowing gastric emptying, and reducing appetite. Patients with no nausea at all sometimes worry the drug isn't working. The correlation is real but not perfect; some people who don't experience nausea still lose weight effectively. Don't increase the dose to chase nausea — increase only on the prescribed schedule under your prescriber's guidance.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

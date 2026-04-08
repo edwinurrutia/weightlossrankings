@@ -5,6 +5,7 @@ import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import LiveDataCallout from "@/components/research/LiveDataCallout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "tirzepatide-vs-semaglutide-head-to-head";
 
@@ -597,6 +598,35 @@ export default function HeadToHeadArticle() {
             source: "N Engl J Med",
             year: 2023,
             pmid: "37366315",
+          },
+        ]}
+      />
+      <FaqSchema
+        items={[
+          {
+            question: "Which is more effective for weight loss: tirzepatide or semaglutide?",
+            answer:
+              "Tirzepatide produces approximately 40% more weight loss than semaglutide at their highest tested doses. SURMOUNT-1 (Jastreboff NEJM 2022) reported -20.9% body weight on tirzepatide 15 mg over 72 weeks; STEP-1 (Wilding NEJM 2021) reported -14.9% on semaglutide 2.4 mg over 68 weeks. The mechanism difference is real: tirzepatide is a dual GIP + GLP-1 receptor agonist, while semaglutide is a single GLP-1 receptor agonist.",
+          },
+          {
+            question: "What's the difference between Wegovy / Ozempic and Zepbound / Mounjaro?",
+            answer:
+              "Wegovy and Ozempic are both semaglutide; Zepbound and Mounjaro are both tirzepatide. Within each pair, the only meaningful differences are the FDA-approved indication and the dosing strength. Wegovy is FDA-approved for chronic weight management at doses up to 2.4 mg/week; Ozempic is FDA-approved for type 2 diabetes at doses up to 2.0 mg/week. Same drug, different label. Zepbound and Mounjaro have the same relationship for tirzepatide.",
+          },
+          {
+            question: "Does tirzepatide cause more side effects than semaglutide?",
+            answer:
+              "Counterintuitively, no. The SURMOUNT-1 and STEP-1 adverse event tables show similar GI side effect rates for tirzepatide 15 mg and semaglutide 2.4 mg, and at the highest doses tirzepatide actually had slightly LOWER nausea rates than semaglutide. Discontinuation rates due to adverse events were similar (~6-7%) across both drugs in their respective trials.",
+          },
+          {
+            question: "How much does tirzepatide cost per pound lost vs semaglutide?",
+            answer:
+              "Tirzepatide is more expensive per month but more efficient per pound lost. Brand-name Zepbound through LillyDirect is $299-699/month dose-tiered; Wegovy NovoCare is $349-499/month. Per pound lost, the calculation depends on how much weight each patient loses, but for the trial-average patient tirzepatide produces more total weight loss for similar monthly cost, making it slightly cheaper per pound. Use our cost-per-pound calculator for personalized math.",
+          },
+          {
+            question: "Can I switch from semaglutide to tirzepatide?",
+            answer:
+              "Yes, with appropriate clinical oversight. Switching requires re-titration to start at the lowest tirzepatide dose (2.5 mg/week) regardless of your current semaglutide dose. The full titration to 15 mg takes about 5 months. There is no formal washout period required because both drugs work via overlapping pathways. Discuss switching with your prescribing clinician.",
           },
         ]}
       />
