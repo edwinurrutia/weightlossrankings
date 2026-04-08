@@ -30,8 +30,8 @@ export interface ExternalReviews {
 
 export interface ProviderVerification {
   last_verified: string; // ISO date string YYYY-MM-DD
-  verified_by?: "manual" | "scraper" | "owner-confirmed";
-  source_urls: string[]; // URLs we used to verify pricing/features
+  verified_by?: string;
+  source_urls?: string[]; // URLs we used to verify pricing/features
   confidence: "high" | "medium" | "low";
   notes?: string;
 }

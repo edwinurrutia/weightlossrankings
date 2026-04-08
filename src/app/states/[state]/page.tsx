@@ -151,6 +151,25 @@ export default async function StatePage({
           <AffiliateDisclosure />
         </PageHero>
 
+        {/* Data confidence disclosure — state list transparency */}
+        <aside
+          className="rounded-xl border border-brand-violet/20 bg-brand-violet/5 p-4 text-sm text-brand-text-secondary"
+          aria-label="Data confidence disclosure"
+        >
+          <p className="leading-relaxed">
+            <span className="font-semibold text-brand-violet">
+              Data confidence:
+            </span>{" "}
+            Each provider listed below prescribes GLP-1 medication (confirmed
+            on their own site), but many telehealth services do not publish
+            a complete state-availability list publicly. A provider shown on
+            this page may not currently serve {stateName} — always confirm
+            state coverage directly with the provider during their signup
+            intake before ordering. We flag the confidence level on every
+            individual review page.
+          </p>
+        </aside>
+
         {/* See by medication */}
         <section className="space-y-3">
           <h2 className="text-2xl font-bold text-brand-text-primary">

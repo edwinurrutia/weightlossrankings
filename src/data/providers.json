@@ -526,12 +526,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://beyondmd.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. BeyondMD prescribes tirzepatide and other GLP-1s. Site says they \"serve most U.S. states\" but explicitly notes \"Unfortunately, our services aren't available in [certain states] at the moment\" without listing the exclusions publicly. Offices in Texas, California, Michigan. Patients should contact 866-201-6456 to confirm state availability. State list left empty pending live confirmation via signup test or support contact."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: BeyondMD prescribes tirzepatide (confirmed via patient testimonial). Site states 'serves most U.S. states' and delivers nationwide. Specific state list not disclosed \u2014 contact customerservice@beyondmd.com for state-specific availability."
     }
   },
   {
@@ -583,12 +583,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://joinbliv.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Bliv prescribes compounded semaglutide ($58/mo) and tirzepatide ($99/mo). State list NOT published on site. Patients told to contact 888-859-2882 or support@joinbliv.com to confirm availability."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: joinbliv.com offers compounded semaglutide ($58/mo) and tirzepatide ($99/mo). State availability not publicly disclosed on the site. Contact support@joinbliv.com for state-specific info."
     }
   },
   {
@@ -625,12 +625,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://bmimd.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via Chrome MCP 2026-04-07. bmiMD uses a Front-app help center (FAQ at bmimd.com/faq) with categories for \"Looking to join bmiMD\" (16 articles) and \"Current bmiMD Member\" (28 articles), but no public state list extractable. Wave 3A search-pass exclusion list (excludes AL/AR/KY/LA/MS/ND/SC) was based on Google snippets \u2014 not verified live. State availability needs signup test."
+      "notes": "Live-verified 2026-04-07: bmimd.com returns 403 (Cloudflare blocked). Unable to verify GLP-1 offering or state availability via WebFetch. Re-verify via Chrome MCP."
     }
   },
   {
@@ -727,12 +727,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://brellohealth.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Brello Health prescribes tirzepatide. HQ Houston TX. Has /states-we-operate-in page but the explicit state list is not extractable via WebFetch (likely client-side rendered). Confidence low pending Chrome verification."
+      "notes": "Live-verified 2026-04-07: brellohealth.com shows a tirzepatide bottle image but no explicit confirmation of GLP-1 prescribing service. Platform description is a marketplace connecting users with providers. Unable to confirm direct GLP-1 prescribing or state availability from public pages \u2014 needs deeper verification."
     }
   },
   {
@@ -820,12 +820,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://dollardadclub.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live attempted 2026-04-07. Dollar Dad Club FAQ page returns 404 via WebFetch. Homepage says they provide \"quality healthcare across multiple states\" without enumerating. Wave 3A search-pass claim of \"excludes AK, SC\" was unverified. Patients should contact 1-800-971-5773 or support@dollardadclub.com."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Dollar Dad Club is a men's telehealth platform offering GLP-1 treatments ($89/mo) and oral GLP-1 ($149/mo). 'Quality healthcare across multiple states' but specific state list not disclosed publicly."
     }
   },
   {
@@ -974,12 +974,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://www.elliemd.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. EllieMD prescribes a wide range of compounded GLP-1 formulations (injection + L-Carnitine, GLP-1/GIP + L-Carnitine, GLP-1 Oral Drops, GLP-1 + NAD Oral Drops, etc.). State list NOT published publicly."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: EllieMD offers multiple GLP-1 formulations including GLP-1 + L-carnitine/glycine injection, GLP-1/GIP combos, and oral GLP-1 drops with NAD. State list not disclosed publicly."
     }
   },
   {
@@ -1327,12 +1327,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://joinfridays.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch on /faq 2026-04-07. Fridays FAQ does not list specific service states or exclusions. HQ Irvine CA (17322 Murphy Ave). Wave 3A search-pass claim \"excludes only LA\" was unverified."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Fridays (joinfridays.com) offers compounded tirzepatide and semaglutide. California-based (Irvine). State list not publicly disclosed \u2014 prescriptions not guaranteed and depend on provider discretion."
     }
   },
   {
@@ -1369,12 +1369,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://www.g-plans.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. G-Plans IS a GLP-1 prescriber (in addition to nutrition/meal planning). Page explicitly states: \"Get access to Ozempic, GLP-1 injection and other great weight loss medications\" and mentions semaglutide and tirzepatide. Combines prescriptions with telehealth dieticians and personalized diet plans. State list NOT publicly published."
+      "notes": "WebFetch attempted 2026-04-07: g-plans.com (West Hollywood, CA) is primarily a diet/meal plan app \u2014 WebFetch did not confirm any GLP-1 prescribing service. May not belong in provider database at all."
     }
   },
   {
@@ -1428,12 +1428,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://getreliefrx.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. GetRelief Rx offers tirzepatide and semaglutide GLP-1/GIP weight management with ongoing support. HQ Billings MT (149 Shiloh Road Suite 7). Phone 1-888-534-5687. State list NOT publicly published."
+      "notes": "WebFetch attempted 2026-04-07: getreliefrx.com returned ECONNREFUSED on WebFetch \u2014 domain may be offline or misconfigured."
     }
   },
   {
@@ -1478,12 +1478,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://gobymeds.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. GobyMeds prescribes compounded semaglutide ($99/mo), compounded tirzepatide ($133/mo), brand Zepbound ($1,399/mo), brand Wegovy ($1,695/mo). State list NOT publicly published. Patients should contact +1 866-785-9869 or customersupport@gobymeds.com."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: GobyMeds (Dover, DE) offers compounded semaglutide ($99/mo), compounded tirzepatide ($133/mo), plus brand-name Wegovy and Zepbound. State list not disclosed publicly."
     }
   },
   {
@@ -1520,12 +1520,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://goodlifemeds.com"
       ],
       "confidence": "low",
-      "notes": "Verified live attempted 2026-04-07. goodlifemeds.com / www.goodlifemeds.com all return 404. Site appears to be down or rebranded. Wave 3A search-pass exclusion list was unverified. Recommend manual investigation \u2014 provider may be defunct."
+      "notes": "WebFetch attempted 2026-04-07: goodlifemeds.com returned 404 on WebFetch \u2014 URL may be wrong."
     }
   },
   {
@@ -1562,12 +1562,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://www.goodrx.com/care"
       ],
       "confidence": "low",
-      "notes": "Verified live attempted 2026-04-07. GoodRx Care weight-loss page returns 403 via WebFetch (Cloudflare). Cannot confirm GLP-1 prescribing status or state list via WebFetch. Needs Chrome rendering or alternate verification path."
+      "notes": "WebFetch attempted 2026-04-07: goodrx.com/care returned 403 on WebFetch (bot-blocked). Re-verify via Chrome MCP. GoodRx Care is known to operate as a telehealth marketplace but GLP-1 weight loss coverage needs separate confirmation."
     }
   },
   {
@@ -1628,12 +1628,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://henrymeds.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch + Chrome MCP 2026-04-07. Henry Meds FAQ explicitly says \"Live or have an address in one of the states we support\" but does not enumerate the state list publicly. Notes that California has \"longer fulfillment times because of additional compound testing requirements\" \u2014 confirming CA is supported. Adonis Health Inc DBA Henry Meds. Phone 909-787-2342. Wave 3A search-pass exclusion list (AL/AK/AR/HI/LA/MS/MO/SC/WV \u2014 41 states) was based on Google snippets \u2014 needs Henry Meds to publish a state page or signup test to confirm."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: GLP-1 weight management (compounded semaglutide/tirzepatide) confirmed via treatments page. State list is NOT publicly disclosed on the site or FAQ; the site only says 'Live or have an address in one of the states we support' and mentions CA has longer fulfillment due to compound testing. Specific state list would require signup intake to verify."
     }
   },
   {
@@ -2000,12 +2000,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://ivimhealth.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live attempted 2026-04-07. ivimhealth.com/faq redirects 301 to ivim.zendesk.com which returns 403. Cannot extract state list via WebFetch. Wave 3A search-pass claim \"excludes only MS\" was based on Google snippets."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Ivim Health confirmed offering compounded semaglutide ($75/mo) and tirzepatide ($149/mo), plus brand-name Zepbound, Mounjaro, Ozempic, Wegovy, Saxenda, Liraglutide. State availability not publicly disclosed \u2014 requires contact or signup intake."
     }
   },
   {
@@ -2575,12 +2575,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://www.lumimeds.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. LumiMeds prescribes compounded semaglutide ($116/mo) and tirzepatide ($133/mo). Site references state-specific provider groups (DC, SC mentioned by name) and notes \"Exclusions may apply based on the prescribed medication and state of residence.\" Specific state list NOT publicly published \u2014 patients should contact (415) 968-0890 or help@lumimeds.com to confirm. Confidence low."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: LumiMeds offers compounded semaglutide ($116/mo) and tirzepatide ($133/mo). Site acknowledges 'exclusions may apply based on prescribed medication and state of residence' with specific provider-group restrictions in DC and SC. Full state list not disclosed publicly."
     }
   },
   {
@@ -2617,12 +2617,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://mdexam.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. MD Exam prescribes semaglutide and tirzepatide (oral and injection options). HQ Miami FL (779 SW 9th Ave). Patient testimonials from FL, AL, MI. State list NOT publicly published. Patients should contact 1-833-210-4080."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: MD Exam (Miami, FL) prescribes semaglutide and tirzepatide through licensed providers. '86,000+ total patients.' State list not publicly disclosed."
     }
   },
   {
@@ -2676,12 +2676,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://home.medvi.org/"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. MEDVi works with OpenLoop Health (a network of US-licensed doctors) and FDA-regulated pharmacies. Specific state list NOT published on the homepage. Patients should contact help@medvi.org or 323-690-1564 to confirm state availability. The Wave 3 search-pass claim that MEDVi excludes ND was unreliable; rolled back to low confidence."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Medvi (Newark, DE) prescribes compounded GLP-1s produced in FDA-regulated facilities through partner network of US-licensed doctors. State list not publicly disclosed \u2014 contact help@medvi.org."
     }
   },
   {
@@ -2801,12 +2801,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://mojoon.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Mojoon describes itself as \"\u5168\u7f8e\u7b2c\u4e00\u7684\u4e2d\u6587\u5728\u7ebf\u95ee\u8bca\u5e73\u53f0\" (America's leading Chinese-language telemedicine platform). GLP-1 specifically not mentioned on the homepage. May serve Chinese-speaking patients only. Recommend categorization review or removal from primary GLP-1 directory if not actively prescribing GLP-1s."
+      "notes": "WebFetch attempted 2026-04-07: mojoon.com content returned only CSS/JS and a Chinese-language note describing it as a Chinese-language online consultation platform ('\u7f8e\u56fd\u7b2c\u4e00\u7684\u4e2d\u6587\u5728\u7ebf\u95ee\u8bca\u5e73\u53f0'). Cannot confirm English-language GLP-1 service or US state availability."
     }
   },
   {
@@ -2885,12 +2885,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://nuimagemedical.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Nu Image Medical prescribes semaglutide and other GLP-1 injections. HQ Tampa FL (5401 W Kennedy Blvd Suite 100). Operates nationally with state-licensed providers. Specific state list NOT publicly published \u2014 patients should contact 888.520.3438 or info@nuimagemedical.com."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: NuImage Medical confirmed offering GLP-1 treatment / compounded semaglutide via nuimagemedical.com. State availability not publicly disclosed \u2014 100% online prescription service, requires intake to confirm state."
     }
   },
   {
@@ -2927,12 +2927,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://nuformhealth.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. NuForm Health prescribes \"GLP-1 + Vitamin Blend\" and \"GLP-1 + B Vitamin Blend\" injection blends. HQ Troy MI (100 W Big Beaver Road, Suite 620). Phone 248-212-0080. State list NOT publicly published."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: NuForm Health (Troy, MI) offers 'GLP-1 + Vitamin Blend' and 'GLP-1 + B Vitamin Blend' injections through licensed US pharmacies. State list not publicly disclosed."
     }
   },
   {
@@ -2986,12 +2986,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://www.nurx.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Nurx prescribes GLP-1 injections and prescription pills for weight loss. Site explicitly notes \"Services not offered in every state\" and \"Medications prescribed only if clinically appropriate.\" Specific state list NOT publicly published."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Nurx offers GLP-1 injections for weight management. Site disclaimer reads 'Services not offered in every state.' Specific state list not publicly disclosed on homepage."
     }
   },
   {
@@ -3051,12 +3051,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://onlinesemaglutide.org"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Online Semaglutide prescribes compounded GLP-1 medications via \"U.S.-licensed healthcare professionals.\" HQ San Diego CA (4993 Niagara Ave Suite 206). Phone (844) 566-4571. State list NOT publicly published \u2014 patients should contact directly to verify their state."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: onlinesemaglutide.org offers compounded semaglutide and tirzepatide through US-licensed healthcare professionals. National telehealth service \u2014 specific state restrictions not disclosed publicly."
     }
   },
   {
@@ -3109,12 +3109,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://orderlymeds.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. OrderlyMeds offers compounded semaglutide and tirzepatide weight management programs. State list NOT publicly published on the homepage."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: OrderlyMeds offers online tirzepatide and semaglutide weight management programs. State availability not disclosed publicly."
     }
   },
   {
@@ -3499,12 +3499,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://joinpomegranate.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Pomegranate Health prescribes compounded tirzepatide and semaglutide via state-licensed pharmacies. Specific state list NOT publicly published \u2014 patients should contact 813-419-1189 or support@joinpomegranate.com."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Pomegranate Health (joinpomegranate.com) offers compounded semaglutide and tirzepatide. State list not disclosed publicly \u2014 contact support@joinpomegranate.com."
     }
   },
   {
@@ -3560,12 +3560,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://www.reflexmd.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Page is loading via embeddable iframe forms \u2014 homepage content is mostly JS without server-rendered service info. Need Chrome rendering to extract."
+      "notes": "Live-verified 2026-04-07: reflexmd.com homepage is JS-rendered and returns only tracking pixel / embeddables code on WebFetch. Cannot verify GLP-1 offering or state availability without browser rendering. Re-verify via Chrome MCP or direct intake flow."
     }
   },
   {
@@ -3617,12 +3617,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://remedymeds.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Remedy Meds prescribes compounded semaglutide & tirzepatide (microdose option available), plus brand Ozempic and Zepbound. FAQ has a \"What states do you serve?\" question but the answer is not extractable via WebFetch. Telehealth nationwide via licensed US pharmacies \u2014 needs Chrome rendering or signup test to confirm exact state list."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Remedy Meds offers compounded semaglutide and tirzepatide + microdose plans. Site states coverage in '49 states' with 405 licensed providers. Specific excluded state not listed on homepage \u2014 requires direct contact to confirm exact coverage."
     }
   },
   {
@@ -3659,12 +3659,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://rnkhealth.com"
       ],
       "confidence": "low",
-      "notes": "Verified live attempted 2026-04-07. rnkhealth.com 301 redirects to rnkhealthmeds.com which has an EXPIRED SSL CERTIFICATE \u2014 site is broken. Provider may be defunct or in technical disrepair. Recommend removal from directory or manual investigation."
+      "notes": "WebFetch attempted 2026-04-07: rnkhealth.com redirects to rnkhealthmeds.com which has expired SSL certificate. Unable to verify from WebFetch. Re-verify via Chrome MCP."
     }
   },
   {
@@ -3701,12 +3701,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://ro.co/weight-loss"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Ro Body Program prescribes GLP-1 treatment with provider support, insurance coordination, and educational curriculum. Specific state list NOT published on the weight-loss page. State availability marked low pending live verification via the Ro intake flow."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Ro Body Program offers GLP-1 medication as part of weight loss. Specific drug names and state list not publicly disclosed on /weight-loss page. Requires signup intake to verify state availability."
     }
   },
   {
@@ -3762,12 +3762,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://sesamecare.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Sesame offers a Weight Loss Bundle service template but did not explicitly list GLP-1 medication names on the homepage. HQ in NYC (427 Broadway). Specific state list NOT published. Confidence low pending live verification \u2014 patient may want to call 877-947-6411 to confirm."
+      "notes": "Live-verified 2026-04-07: Sesame Care offers weight loss bundle service (confirmed via page config). Specific GLP-1 drug offerings and state list not disclosed on weight-loss page \u2014 Sesame operates as a marketplace where individual providers set their own state coverage. Cannot verify specific state availability without intake flow."
     }
   },
   {
@@ -3834,12 +3834,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://tryshed.com/"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Site rebranded from ShedRx to Shed (tryshed.com); 301 redirect from shedrx.com. Offers compounded tirzepatide injections, compounded semaglutide injections, GLP-1 liquid drops, lozenges, oral tablets, plus brand Wegovy and Zepbound. \"Over 150,000 members nationwide\" but specific state list NOT published."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Shed (tryshed.com) offers compounded tirzepatide, compounded semaglutide, GLP-1 liquid drops, lozenges, oral semaglutide tablets, plus brand-name Wegovy and Zepbound. '150,000+ members nationwide.' State list not publicly disclosed."
     }
   },
   {
@@ -3885,12 +3885,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://www.skinnyrx.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Homepage returns only JavaScript tracking code via WebFetch. Cannot verify GLP-1 status or state list from server-rendered HTML. Needs Chrome rendering."
+      "notes": "WebFetch attempted 2026-04-07: skinnyrx.com serves only tracking/analytics code on WebFetch (no crawlable marketing content). Cannot verify GLP-1 offering or state list without browser rendering. Re-verify via Chrome MCP."
     }
   },
   {
@@ -3977,13 +3977,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
+      "last_verified": "2026-04-07",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://www.strivepharmacy.com"
       ],
-      "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Strive Pharmacy (Gilbert, AZ) dispenses compounded semaglutide/glycine/B12 and tirzepatide/glycine/B12. State shipping list not publicly disclosed \u2014 contact pharmacy to confirm coverage."
     }
   },
   {
@@ -4184,12 +4184,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://trimrx.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. TrimRx prescribes GLP-1 injections via licensed providers. Specific state list NOT publicly published."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: TrimRx offers GLP-1 injections prescribed by licensed providers as part of online weight loss program. Specific drug and state list not disclosed publicly."
     }
   },
   {
@@ -4478,13 +4478,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
+      "last_verified": "2026-04-07",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://www.walgreens.com/topic/virtual-healthcare/weight-loss.jsp"
       ],
       "confidence": "low",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "notes": "WebFetch attempted 2026-04-07: walgreens.com/topic/virtual-healthcare/weight-loss.jsp returned 403 (bot-blocked). Walgreens does operate a virtual weight management clinic but GLP-1 specifics need Chrome MCP verification."
     }
   },
   {
@@ -4614,12 +4614,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://www.weightlessrx.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. WeightlessRx prescribes semaglutide and tirzepatide via medical team consultation. HQ Austin TX. Specific state list NOT publicly published."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: WeightlessRx (Austin, TX) offers physician-supervised GLP-1 programs with semaglutide and tirzepatide plus coaching. State list not disclosed publicly."
     }
   },
   {
@@ -4664,12 +4664,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://home.weightrx.com/"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. WeightRx is a technology platform connecting patients with MDI Medical Group and other clinicians (not a direct prescriber). \"Trusted by 60,000+ Patients Nationwide.\" Specific state list NOT published \u2014 patients should contact support@weightrx.com or +1 866-286-4886. Site rebranded with home. subdomain."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: WeightRx is a technology platform connecting users to licensed clinicians (incl. MDI Medical Group) for compounded semaglutide and tirzepatide. '60,000+ patients nationwide.' State list not disclosed publicly \u2014 contact support@weightrx.com."
     }
   },
   {
@@ -4721,12 +4721,12 @@
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://startwillow.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Willow (startwillow.com) prescribes weekly semaglutide injection, daily semaglutide oral tablets (mint flavor), and weekly tirzepatide injection. Domain corrected from joinwillow.com (which closes socket) to startwillow.com. Specific state list NOT publicly published."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Willow (startwillow.com) offers compounded semaglutide injection, semaglutide sublingual tablets, and tirzepatide injection through US-licensed doctors. State list not disclosed publicly."
     }
   },
   {
@@ -4851,13 +4851,13 @@
     "best_for": "community support + proven system",
     "is_featured": false,
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
+      "last_verified": "2026-04-07",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://www.weightwatchers.com/us"
       ],
-      "confidence": "low",
-      "notes": "Initial seed data \u2014 needs manual verification"
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: WeightWatchers offers the Med+ program through WeightWatchers Clinic affiliate medical group, with access to brand-name Wegovy, Zepbound, Ozempic, Mounjaro, and Saxenda. State availability not publicly listed \u2014 eligibility quiz required."
     }
   },
   {
@@ -4906,12 +4906,12 @@
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://www.noom.com/med"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Noom Med (noom.com/med) is the GLP-1 prescribing program from Noom. Specific GLP-1 medications and exact state list NOT extractable from homepage (heavy CSS/JS). Wave 3A inherited \"41 states\" is unverified pending live signup test or state list page."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Site title confirms GLP-1 medication service. Detailed state availability not publicly disclosed \u2014 requires signup intake."
     }
   },
   {
@@ -4972,15 +4972,15 @@
     "best_for": "diabetic GLP-1 access",
     "is_featured": false,
     "verification": {
-      "last_verified": "2026-04-06",
-      "verified_by": "manual",
+      "last_verified": "2026-04-07",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://t2d.com/",
         "https://t2d.com/about",
         "https://t2d.com/weight-loss/get-started"
       ],
-      "confidence": "low",
-      "notes": "T2D.com publishes no pricing or states list on its public website \u2014 both are gated behind a Get Started registration flow. Pricing is set to 999 placeholder per editorial rule (never invent prices). States set to ['CA'] as a single-state placeholder pending direct outreach. Description and positioning are quoted from t2d.com/about. Company is a subsidiary of Vertical Insight Corp; co-founders are Alec Ogletree and Sean Sullivan. No FDA warning letter found in src/data/fda-warning-letters.json."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: t2d.com offers compounded semaglutide and tirzepatide with bundled prescriber, pharmacy, and home delivery. State list not disclosed publicly."
     }
   },
   {
@@ -5131,12 +5131,12 @@
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://amazing-meds.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Amazing Meds is described as an \"Online HRT and Peptide Therapy Clinic.\" Page content mostly tracking code via WebFetch \u2014 needs Chrome rendering or signup test. Whether they actively prescribe GLP-1 (semaglutide/tirzepatide) for weight loss vs other peptides is not extractable from the homepage."
+      "notes": "WebFetch attempted 2026-04-07: amazing-meds.com WebFetch returned CSS/tech markup only \u2014 tagged as 'Online HRT and Peptide Therapy Clinic.' Cannot confirm GLP-1 weight loss service specifically vs peptide therapy."
     }
   },
   {
@@ -5282,12 +5282,12 @@
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://emergeweight.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Emerge Weight Loss site is built on Wix; homepage HTML returns mostly Wix bundler code via WebFetch. Has Medical Director, Nurse Practitioner, and Board-Certified Cardiologist roles per the page. Needs Chrome rendering or signup test to confirm GLP-1 prescribing and state list."
+      "notes": "WebFetch attempted 2026-04-07: emergeweight.com WebFetch returned only HTML/CSS structure \u2014 no substantive content extractable. Cannot verify GLP-1 service or state availability."
     }
   },
   {
@@ -5348,12 +5348,12 @@
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://invigormedical.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Invigor Medical is a telehealth clinic offering Semaglutide Weight Loss. HQ Pasco WA (5226 Outlet Dr). Operates as \"telehealth clinic\" suggesting nationwide capability but specific state licensing not extractable."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: Invigor Medical (invigormedical.com, based in Pasco, WA) lists 'Semaglutide Weight Loss' as a telehealth service. Specific brand vs compounded status and state list not disclosed on public-facing pages \u2014 requires intake or direct contact."
     }
   },
   {
@@ -5416,12 +5416,12 @@
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://getpeptidesrx.com"
       ],
-      "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. PeptidesRx prescribes semaglutide (most popular) and tirzepatide via licensed US medical providers. Site says \"Telehealth services available in all states where permitted by applicable law\" but does not enumerate specific states."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-07: GetPeptidesRx (Fort Worth, TX) offers semaglutide and tirzepatide. Site states 'telehealth services available in all states where permitted by applicable law' and 'all providers are licensed in the states they serve' but does not publish a specific state list."
     }
   },
   {
@@ -5482,12 +5482,12 @@
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "verified_by": "WebFetch (unsuccessful)",
       "source_urls": [
         "https://ways2well.com"
       ],
       "confidence": "low",
-      "notes": "Verified live via WebFetch 2026-04-07. Ways2Well offers hormone optimization and replacement therapies. The homepage does NOT mention GLP-1 drugs or weight loss specifically. HQ Houston TX. UNCERTAIN whether this provider actively prescribes GLP-1s \u2014 may be hormone-therapy focused. Recommend categorization review or removal from GLP-1 directory."
+      "notes": "WebFetch attempted 2026-04-07: ways2well.com schema describes 'health optimization services, bloodwork, stem cell therapy, hormone optimization, longevity treatments' \u2014 no explicit GLP-1 weight loss service confirmed. May not be a GLP-1 provider at all."
     }
   },
   {

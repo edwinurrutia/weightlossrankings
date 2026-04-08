@@ -12,6 +12,7 @@ import JsonLd from "@/components/shared/JsonLd";
 import CTAButton from "@/components/shared/CTAButton";
 import StickyCTABar from "@/components/shared/StickyCTABar";
 import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
+import DataConfidenceBadge from "@/components/shared/DataConfidenceBadge";
 import ScoreBadge from "@/components/providers/ScoreBadge";
 import ScoreBreakdownBars from "@/components/providers/ScoreBreakdownBars";
 import PricingTable from "@/components/providers/PricingTable";
@@ -296,6 +297,14 @@ export default async function ProviderReviewPage({
                 {provider.description}
               </p>
             )}
+
+            {/* Data confidence disclosure */}
+            <DataConfidenceBadge
+              confidence={provider.verification?.confidence}
+              lastVerified={provider.verification?.last_verified}
+              verifiedBy={provider.verification?.verified_by}
+              notes={provider.verification?.notes}
+            />
 
             {/* Score badge + editorial star rating row */}
             <div className="flex items-center gap-4 flex-wrap">
