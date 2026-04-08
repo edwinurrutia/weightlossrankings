@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "step-teens-semaglutide-adolescents";
 
@@ -504,6 +505,35 @@ export default function StepTeensArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Is Wegovy approved for teenagers?",
+            answer:
+              "Yes. The FDA approved Wegovy for adolescents aged 12 and older with obesity (BMI ≥95th percentile for age and sex) in December 2022 based on the STEP TEENS trial (Weghuber 2022, NEJM, PMID 35658024). The dosing schedule and titration are the same as for adults, and the same prior-auth and coverage barriers typically apply.",
+          },
+          {
+            question: "How well does semaglutide work in teens?",
+            answer:
+              "In STEP TEENS, adolescents (12-17 years) treated with semaglutide 2.4mg weekly lost about 16% of body weight on average over 68 weeks, vs ~1% on placebo. Roughly three-quarters of treated teens achieved at least 5% weight loss and about half achieved ≥20%. The effect size is comparable to or slightly larger than what semaglutide produces in adults.",
+          },
+          {
+            question: "What are the side effects of Wegovy in teenagers?",
+            answer:
+              "Side effects in STEP TEENS were qualitatively similar to adults: predominantly GI (nausea, vomiting, diarrhea, constipation), generally mild to moderate, and most common during dose escalation. Cholelithiasis (gallstones) was reported in a small number of treated patients, consistent with the adult label. Serious adverse events were rare and similar to placebo.",
+          },
+          {
+            question: "Should my teen take Wegovy?",
+            answer:
+              "This is a decision for the teen, parents, and a pediatric obesity specialist. The American Academy of Pediatrics 2023 Clinical Practice Guideline recommends offering pharmacotherapy (including semaglutide) to adolescents 12+ with obesity as an evidence-based component of treatment, alongside intensive lifestyle support. Long-term effects in growing adolescents are still being studied.",
+          },
+          {
+            question: "Does insurance cover Wegovy for teenagers?",
+            answer:
+              "Coverage is plan-specific and often more restrictive than for adults. Many commercial plans cover Wegovy for adolescents who meet the FDA criteria with prior authorization; Medicaid coverage varies by state. The same step-therapy and BMI documentation requirements that apply to adults usually apply to teens. Appeals are common when the initial prior auth is denied.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

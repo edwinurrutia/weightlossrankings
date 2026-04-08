@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "wegovy-pen-vs-compounded-vial-practical-differences";
 
@@ -366,6 +367,35 @@ export default function WegovyPenVsCompoundedVialArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What's the difference between Wegovy pens and compounded semaglutide vials?",
+            answer:
+              "The active ingredient (semaglutide) is the same. The differences are operational: brand-name Wegovy is a single-dose, fixed-dose, factory-filled auto-injector pen made by Novo Nordisk; compounded semaglutide is dispensed by a 503A pharmacy as a multi-dose vial that the patient draws into an insulin syringe, with the dose chosen by the prescriber. Pens are easier and faster but more expensive; vials require dose math but cost much less.",
+          },
+          {
+            question: "Is compounded semaglutide the same as Wegovy?",
+            answer:
+              "The active ingredient is the same molecule. The legal, regulatory, and practical status is different: Wegovy is FDA-approved with manufacturer stability and clinical trial data; compounded semaglutide is dispensed under section 503A of the Federal Food, Drug, and Cosmetic Act based on a patient-specific prescription, not under the FDA NDA pathway. Compounded preparations do not have manufacturer stability data, and quality varies by pharmacy.",
+          },
+          {
+            question: "Why is the compounded vial so much cheaper than the Wegovy pen?",
+            answer:
+              "Compounded preparations bypass branded marketing, FDA NDA approval costs, manufacturer profit margin, and patent licensing fees. The 503A pharmacy charges for the API, sterility testing, vial filling, dispensing, and clinical oversight — but at a fraction of the brand price. The trade-off is the lack of FDA approval, no manufacturer stability data, and pharmacy-by-pharmacy quality variation.",
+          },
+          {
+            question: "Can I switch between the Wegovy pen and a compounded vial?",
+            answer:
+              "Yes — the same active ingredient at the same dose produces the same pharmacologic effect. Match the new dose to the equivalent on the new format (our GLP-1 unit converter handles the math) and confirm with your prescriber. The first dose on the new format is sometimes started slightly lower to account for any differences in absorption or technique.",
+          },
+          {
+            question: "Which is safer: the Wegovy pen or a compounded vial?",
+            answer:
+              "The Wegovy pen has the FDA's manufacturer-grade quality controls and stability data behind it. A reputable PCAB-accredited 503A compounding pharmacy operating under USP <797> can produce a high-quality preparation, but quality varies pharmacy-by-pharmacy. Verify any compounding pharmacy via state licensure, PCAB accreditation, and the FDA warning letters database before using.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

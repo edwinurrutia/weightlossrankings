@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "what-to-eat-on-glp1-diet-protein-guide";
 
@@ -493,6 +494,35 @@ export default function DietArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What should I eat on Wegovy or Zepbound?",
+            answer:
+              "The published lean-mass-preservation literature converges on three priorities for patients losing weight on a GLP-1: (1) high protein — 1.6-2.0 g per kg body weight per day, distributed evenly across meals; (2) adequate calories — don't drop so low that the body catabolizes muscle for fuel; (3) resistance training. Beyond those three, food choices are flexible — Mediterranean, lower-carb, and balanced approaches all work if they hit the protein target.",
+          },
+          {
+            question: "How much protein should I eat on a GLP-1?",
+            answer:
+              "Most published guidelines for adults losing weight while preserving lean mass land in the 1.6-2.0 g/kg/day range. The Neeland 2024 GLP-1 lean-mass mitigation review specifically recommends this range for patients on semaglutide and tirzepatide. For a 200-lb (91 kg) patient that's roughly 145-180 g of protein per day, ideally split across 3 meals at ~50-60 g each.",
+          },
+          {
+            question: "Can I do low-carb or keto on a GLP-1?",
+            answer:
+              "Yes, but watch for compounding side effects. GLP-1s already slow gastric emptying and can cause constipation; very low-carb diets can amplify constipation through reduced fiber and water binding. Patients who tolerate keto pre-GLP-1 generally do fine, but increase fiber, hydration, and electrolytes (sodium, potassium, magnesium) to compensate.",
+          },
+          {
+            question: "What foods make GLP-1 nausea worse?",
+            answer:
+              "High-fat, fried, very greasy, or very large meals consistently trigger nausea in GLP-1 patients because they slow gastric emptying further. Spicy and very sweet foods can also be problematic. Bland, lower-fat, smaller, more frequent meals are typically better tolerated, especially during the first 2-4 weeks and after each dose escalation.",
+          },
+          {
+            question: "Do I need to count calories on a GLP-1?",
+            answer:
+              "Not necessarily. GLP-1s naturally suppress appetite, so most patients eat less without tracking. The risk goes the other direction: many patients eat too little, which compounds lean-mass loss and fatigue. A reasonable practice is to track protein (hit your target every day) and let calories find their natural floor — but don't go below ~1,200/day for women or ~1,500/day for men without clinical supervision.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "select-trial-cardiovascular-benefits-non-diabetics";
 
@@ -481,6 +482,35 @@ export default function SelectTrialArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What did the SELECT trial show about Wegovy?",
+            answer:
+              "SELECT (NEJM 2023, PMID 37952131) was a 17,604-patient randomized trial of semaglutide 2.4mg weekly in adults with established cardiovascular disease and overweight/obesity but WITHOUT diabetes. Over a mean follow-up of ~40 months, semaglutide reduced the primary composite endpoint of major adverse cardiovascular events (cardiovascular death, nonfatal MI, nonfatal stroke) by 20% versus placebo. This was the first trial to show GLP-1 cardiovascular benefit in non-diabetic patients.",
+          },
+          {
+            question: "Does Wegovy reduce heart attack risk?",
+            answer:
+              "Yes — in patients with established cardiovascular disease and obesity. The SELECT trial showed a 20% relative reduction in major adverse cardiovascular events (cardiovascular death, nonfatal MI, nonfatal stroke) over ~40 months in non-diabetic patients with prior CVD. The FDA added the cardiovascular risk reduction indication to the Wegovy label in March 2024 based on these results.",
+          },
+          {
+            question: "Is the SELECT trial benefit just from weight loss?",
+            answer:
+              "Probably not entirely. The cardiovascular benefit in SELECT appeared early — within months of starting therapy — and the effect was largely independent of how much weight individual patients actually lost. This suggests semaglutide has weight-loss-independent cardiovascular effects, possibly through anti-inflammatory pathways, blood pressure reduction, or direct effects on the vascular wall. Mechanism research is ongoing.",
+          },
+          {
+            question: "Do I qualify for Wegovy under the cardiovascular indication?",
+            answer:
+              "The FDA-approved cardiovascular indication is for adults with established cardiovascular disease (prior MI, prior stroke, peripheral artery disease, or known CAD) AND overweight/obesity (BMI ≥27). Diabetes is NOT required. This indication has unlocked Medicare Part D coverage of Wegovy for eligible cardiovascular patients — Part D was previously prohibited from covering weight-loss drugs.",
+          },
+          {
+            question: "Does Zepbound have the same cardiovascular benefit?",
+            answer:
+              "The Zepbound cardiovascular outcomes trial (SURPASS-CVOT and SURMOUNT-MMO) is ongoing and results are expected in the coming years. As of 2026, tirzepatide does NOT have an FDA-approved cardiovascular risk reduction indication — only semaglutide does, based on SELECT. This is a meaningful difference for patients with established CVD considering which GLP-1 to start.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "what-happens-when-you-stop-semaglutide";
 
@@ -373,6 +374,35 @@ export default function WhatHappensWhenYouStopSemaglutideArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What happens when you stop taking semaglutide?",
+            answer:
+              "Within 1-3 weeks of the last dose, appetite and 'food noise' return to baseline. The STEP 1 extension trial showed patients regained about two-thirds of the weight they had lost within 12 months of stopping semaglutide. Cardiometabolic improvements (blood pressure, lipids, A1C) also tend to revert toward baseline as weight returns. The drug's effects are pharmacologic, not curative.",
+          },
+          {
+            question: "How fast does the weight come back after stopping Wegovy?",
+            answer:
+              "On average, about two-thirds of the lost weight returns within 12 months in the published extension trials (STEP 1 for semaglutide, SURMOUNT-4 for tirzepatide). Individual rates vary widely with diet, activity, and how long the patient was on the drug. The fastest regain typically occurs in the first 6 months as appetite returns.",
+          },
+          {
+            question: "Can you stop semaglutide cold turkey?",
+            answer:
+              "Yes — there is no withdrawal syndrome and the drug is not physically addictive. But abruptly stopping (without a taper, lifestyle reinforcement, or maintenance dose) is associated with more rapid weight regain in the published trials. Most clinicians now recommend a gradual step-down if discontinuation is planned.",
+          },
+          {
+            question: "Will my hunger come back when I stop a GLP-1?",
+            answer:
+              "Yes, in most patients. The appetite suppression and reduction in food preoccupation are pharmacologic effects of the drug — when blood levels drop after stopping, those effects fade over 1-3 weeks. Patients describe the return of hunger as the single most prominent change after stopping.",
+          },
+          {
+            question: "Can I stay on semaglutide long-term?",
+            answer:
+              "Yes. Wegovy and Ozempic have been studied in trials lasting 2+ years (SUSTAIN, STEP, SELECT), and the FDA labels do not place a duration limit on therapy. The current consensus is that obesity is a chronic relapsing condition and GLP-1s are best thought of as long-term maintenance therapy, similar to medications for hypertension or hyperlipidemia.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }
