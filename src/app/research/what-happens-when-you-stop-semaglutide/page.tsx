@@ -314,7 +314,7 @@ export default function WhatHappensWhenYouStopSemaglutideArticle() {
         <li>
           <strong>Plan for the long term.</strong> If you&apos;re budgeting
           for compounded GLP-1 therapy, budget for years, not months.
-          Our <Link href="/savings-calculator">savings calculator</Link>{" "}
+          Our <Link href="/tools/glp1-savings-calculator">savings calculator</Link>{" "}
           shows the real out-of-pocket cost over a multi-year window.
         </li>
         <li>

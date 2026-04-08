@@ -353,36 +353,23 @@ export const TOOLS: ToolEntry[] = [
 ];
 
 /**
- * Top-level / non-/tools-prefixed utility surfaces. These were
- * historically separate from the /tools tree but should still be
- * in the sitemap. Listed here so the same auto-iteration covers
- * them and the manifest is exhaustive.
+ * Top-level / non-/tools-prefixed utility surfaces. Historically
+ * this array held the root-level aliases `/savings-calculator` and
+ * `/insurance-checker`, which were emitted as sitemap URLs in
+ * addition to the canonical /tools/* versions. Both were retired
+ * on 2026-04-08:
+ *   - /savings-calculator → /tools/glp1-savings-calculator (301,
+ *     the alias was a duplicate of the canonical tool)
+ *   - /insurance-checker → /research/glp1-insurance-coverage-
+ *     medicare-medicaid-commercial (301, YMYL-accuracy reasons —
+ *     see docs/retired-tools.md for the full rationale)
+ *
+ * The array is kept as an empty export to preserve the sitemap
+ * import site without breaking the build, and so future root-level
+ * interactive pages (if any) have a clear place to register.
+ * See also: redirects in next.config.mjs.
  */
-export const NON_TOOLS_INTERACTIVE_PAGES: ToolEntry[] = [
-  {
-    slug: "savings-calculator",
-    title: "GLP-1 Savings Calculator (top-level)",
-    description:
-      "Top-level GLP-1 savings calculator alias.",
-    publishedDate: "2026-04-07",
-    lastUpdated: "2026-04-07",
-    sitemapPriority: 0.7,
-    changeFrequency: "monthly",
-    dataFreshness: {
-      lastVerified: "2026-04-07",
-      nextReview: "2026-05-06",
-      cadence: "monthly",
-      sourceSummary: "WAC pricing in src/lib/citations.ts",
-    },
-  },
-  // /insurance-checker was retired 2026-04-08. Insurance formularies
-  // change too quickly to make a static coverage-prediction tool
-  // reliably accurate for YMYL use, and the research article at
-  // /research/glp1-insurance-coverage-medicare-medicaid-commercial
-  // covers the same ground with primary-source citations and
-  // appropriate caveats. The old URL 301s to that article via
-  // next.config.mjs.
-];
+export const NON_TOOLS_INTERACTIVE_PAGES: ToolEntry[] = [];
 
 export function getToolBySlug(slug: string): ToolEntry | undefined {
   return TOOLS.find((t) => t.slug === slug);

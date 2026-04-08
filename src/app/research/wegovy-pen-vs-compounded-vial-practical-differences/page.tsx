@@ -360,7 +360,7 @@ export default function WegovyPenVsCompoundedVialArticle() {
       <p>
         For a side-by-side cost calculation specific to your dose and
         insurance situation, use our{" "}
-        <Link href="/savings-calculator">savings calculator</Link>. For
+        <Link href="/tools/glp1-savings-calculator">savings calculator</Link>. For
         the live pricing across every compounded provider we track, see
         the{" "}
         <Link href="/price-tracker">price tracker</Link>.

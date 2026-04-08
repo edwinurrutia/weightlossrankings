@@ -434,7 +434,7 @@ export default function InsuranceEmployerCheckerPage() {
             </Link>
           </li>
           <li>
-            <Link href="/savings-calculator">
+            <Link href="/tools/glp1-savings-calculator">
               GLP-1 savings calculator
             </Link>
           </li>

@@ -185,7 +185,7 @@ export default async function SavingsComparisonPage({
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },
-          { name: "Savings", url: "/savings-calculator" },
+          { name: "Savings", url: "/tools/glp1-savings-calculator" },
           { name: `${c.brand_name} vs Compounded`, url: `/savings/${c.slug}` },
         ]}
       />
@@ -357,7 +357,7 @@ export default async function SavingsComparisonPage({
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-          <CTAButton href="/savings-calculator" size="lg">
+          <CTAButton href="/tools/glp1-savings-calculator" size="lg">
             Get Personalized Savings Estimate
           </CTAButton>
           <CTAButton href="/compare" size="lg" variant="outline">

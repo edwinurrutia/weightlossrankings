@@ -221,7 +221,7 @@ export default async function HomePage() {
               Compare All Providers
             </CTAButton>
             <Link
-              href="/savings-calculator"
+              href="/tools/glp1-savings-calculator"
               className="text-white/90 hover:text-white font-semibold underline underline-offset-4"
             >
               Calculate your savings →
@@ -305,7 +305,7 @@ export default async function HomePage() {
           <GradientCTACallout
             heading="Free Tools to Save You Money"
             description="Use our savings calculator to see what you could pay — then compare providers side by side to find the best deal."
-            ctaHref="/savings-calculator"
+            ctaHref="/tools/glp1-savings-calculator"
             ctaText="Savings Calculator"
           />
           <GradientCTACallout

@@ -93,7 +93,7 @@ export default function HomeSavingsHeadline({
 
       <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
         <Link
-          href="/savings-calculator"
+          href="/tools/glp1-savings-calculator"
           className="inline-flex items-center justify-center gap-2 bg-brand-violet hover:bg-brand-violet/90 text-white font-bold text-base px-6 py-3.5 rounded-full transition-colors"
         >
           Calculate your savings

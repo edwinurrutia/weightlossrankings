@@ -268,7 +268,7 @@ export default function InsuranceCoverageAuditArticle() {
           <strong>If still denied, switch to compounded.</strong> The
           cash-pay floor is roughly half what most insurance copays
           would be even for an approved prescription. Use our{" "}
-          <Link href="/savings-calculator">savings calculator</Link> to
+          <Link href="/tools/glp1-savings-calculator">savings calculator</Link> to
           see your specific number, and our{" "}
           <Link href="/research/glp1-insurance-coverage-medicare-medicaid-commercial">
             Medicare, Medicaid, and commercial coverage deep-dive

@@ -386,7 +386,7 @@ export default async function StatePage({
             Compare All Providers
           </CTAButton>
           <CTAButton
-            href="/savings-calculator"
+            href="/tools/glp1-savings-calculator"
             size="lg"
             variant="outline"
           >
