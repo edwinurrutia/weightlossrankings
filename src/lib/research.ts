@@ -1074,6 +1074,21 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
     citations: 11,
     tags: ["Exercise", "Resistance training", "Lean mass", "PubMed sourced"],
   },
+  {
+    slug: "metformin-vs-glp1-weight-loss-evidence",
+    title:
+      "Metformin and Non-GLP-1 Diabetes Drugs for Weight Loss: What the Trials Actually Show",
+    description:
+      "26,000+ monthly searches ask whether metformin causes weight loss. The DPP, DPPOS 15-year follow-up, ADOPT, and Seifarth 2013 trials show metformin produces ~2-3 kg over 1-2 years and ~5.6% over 6 months in non-diabetic obesity — real but modest, and roughly 1/5 the magnitude of semaglutide and 1/7 of tirzepatide. Here is the verified evidence with PMIDs.",
+    excerpt:
+      "Metformin is the most-asked non-GLP-1 weight-loss drug on the internet, with 10,000+ monthly searches on the question alone. The published evidence is real but modest. The Diabetes Prevention Program (Knowler 2002, n=3,234) reported -2.1 kg vs -0.1 kg placebo over 2.8 years. The 15-year DPPOS follow-up (Apolzan 2019) reported -6.2% sustained weight loss in metformin responders. The Seifarth 2013 trial in non-diabetic obesity reported -5.8 kg over 6 months. Compared to semaglutide -14.9% (STEP-1) and tirzepatide -20.9% (SURMOUNT-1), metformin produces roughly 1/5 to 1/7 the magnitude — real, durable, cheap, and with better long-term safety data than any other obesity drug. Trulicity, ADOPT-era oral diabetes drugs, and the modern non-GLP-1 obesity landscape are all walked through here.",
+    kind: "scientific-deep-dive",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    readMinutes: 14,
+    citations: 11,
+    tags: ["Metformin", "Diabetes drugs", "PubMed sourced"],
+  },
 ];
 
 export function getResearchArticleBySlug(
