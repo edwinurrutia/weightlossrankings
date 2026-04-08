@@ -316,6 +316,23 @@ export const TOOLS: ToolEntry[] = [
         "src/data/supplement-evidence.json — 16 supplements with PubMed PMID anchors verified by research subagent",
     },
   },
+  {
+    slug: "non-glp1-drug-weight-effect-lookup",
+    title: "Non-GLP-1 Drug Weight Effect Lookup",
+    description:
+      "20 prescription drugs and their weight effects: metformin, topiramate, Qsymia, phentermine, Contrave, bupropion, Vyvanse, Adderall, Trulicity, Jardiance, Farxiga, spironolactone, HRT, sertraline, Lexapro, paroxetine, mirtazapine, vortioxetine, rosiglitazone, glyburide. Each entry verified against PubMed.",
+    publishedDate: "2026-04-08",
+    lastUpdated: "2026-04-08",
+    sitemapPriority: 0.9,
+    changeFrequency: "monthly",
+    dataFreshness: {
+      lastVerified: "2026-04-08",
+      nextReview: "2027-04-08",
+      cadence: "annual",
+      sourceSummary:
+        "src/data/non-glp1-drug-weight-effects.json — 20 drugs with PMID-anchored magnitudes verified by research subagent",
+    },
+  },
 ];
 
 /**
