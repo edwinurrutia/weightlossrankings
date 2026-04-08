@@ -10,6 +10,7 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import { getAllProviders } from "@/lib/data";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "cheapest-compounded-semaglutide";
 
@@ -379,6 +380,35 @@ export default async function CheapestCompoundedSemaglutideArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What is the cheapest compounded semaglutide?",
+            answer:
+              "Compounded semaglutide via 503A telehealth pharmacies typically ranges $150-$400/month depending on dose, vial concentration, and the specific provider. The cheapest entries in our verified pricing database are typically the entry-dose multi-dose vials from established 503A pharmacies; the higher-priced options reflect higher-dose vials, dispensing fees, and provider markup. Brand-name Wegovy via manufacturer savings card is ~$650/month — substantially more than compounded.",
+          },
+          {
+            question: "Is cheap compounded semaglutide safe?",
+            answer:
+              "Compounded semaglutide dispensed by a state-licensed 503A pharmacy from a valid prescription is legal and the safety profile depends on the pharmacy's quality controls — sterility testing, USP <797> compliance, peptide sourcing, and analytical verification. Price alone is not a safety signal; very low prices from non-US sellers, 'research peptide' sites, or unlicensed sources should be avoided. Stick to PCAB-accredited or state-licensed 503A pharmacies and verify with the FDA warning letters database.",
+          },
+          {
+            question: "Why is compounded semaglutide cheaper than Wegovy?",
+            answer:
+              "Compounded preparations are made from active pharmaceutical ingredient (API) sourced and combined by a 503A pharmacy under a patient-specific prescription, bypassing the manufacturer's branded supply chain, marketing costs, FDA approval pathway, and patent licensing. The trade-off: compounded preparations are not FDA-approved, do not have manufacturer stability data, and are subject to the regulatory framework of section 503A of the FD&C Act rather than the NDA pathway.",
+          },
+          {
+            question: "Will compounded semaglutide stay legal?",
+            answer:
+              "FDA declared Wegovy and Zepbound resolved from the drug shortage list in 2025, which narrowed the legal grounds for compounding under sections 503A(b)(1)(D) and 503B(a)(2). 503A pharmacies can still compound for individual patients under a valid prescription where clinical justification exists (e.g., a documented allergy to a brand inactive ingredient), but bulk compounding for general weight-loss use has lost its main legal basis. Pricing and availability are likely to shift as compounders adjust to the post-shortage rules.",
+          },
+          {
+            question: "Are there hidden fees with the cheapest compounded semaglutide?",
+            answer:
+              "Many telehealth providers separate the medication price from the membership fee, intake fee, prescription fee, and shipping. The advertised 'starting at' price often excludes these add-ons. Our pricing database tracks the all-in monthly cost per provider so the comparison is apples-to-apples. Always confirm what is and isn't included before signing up.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

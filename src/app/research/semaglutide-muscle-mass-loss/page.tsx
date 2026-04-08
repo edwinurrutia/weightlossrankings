@@ -5,6 +5,7 @@ import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import LiveDataCallout from "@/components/research/LiveDataCallout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "semaglutide-muscle-mass-loss";
 
@@ -473,6 +474,35 @@ export default function MuscleMassArticle() {
             source: "Med Sci Sports Exerc",
             year: 2014,
             pmid: "24576864",
+          },
+        ]}
+      />
+      <FaqSchema
+        items={[
+          {
+            question: "Does semaglutide cause muscle loss?",
+            answer:
+              "Yes — but it's largely a function of rapid weight loss, not a direct drug effect. Body composition substudies in STEP 1 (semaglutide) and SURMOUNT-1 (tirzepatide) showed about 25-40% of total weight loss came from lean tissue. The same lean-mass loss occurs after bariatric surgery and severe calorie restriction. Strategies that mitigate it: high protein intake, resistance training, slower titration, and adequate calories.",
+          },
+          {
+            question: "How much muscle do you lose on Wegovy or Zepbound?",
+            answer:
+              "DXA-based body composition analyses suggest 25-40% of total weight loss on semaglutide and tirzepatide is fat-free mass (which includes water, organ tissue, and muscle). For a patient losing 40 lb total, that's roughly 10-16 lb of fat-free mass, of which about half (5-8 lb) is skeletal muscle. The proportion can be reduced significantly with protein and resistance training.",
+          },
+          {
+            question: "How much protein should I eat on a GLP-1 to preserve muscle?",
+            answer:
+              "Published recommendations for adults losing weight while preserving lean mass range from 1.6-2.2 g of protein per kg of body weight per day (Phillips 2016, Helms 2014, ISSN 2017). The Neeland 2024 review on GLP-1 lean-mass mitigation specifically recommends targeting the higher end of this range. For a 200-lb patient that's about 145-200 g of protein daily.",
+          },
+          {
+            question: "Is the muscle loss on a GLP-1 permanent?",
+            answer:
+              "No. Skeletal muscle is highly responsive to resistance training at any age, and lost muscle can be regained with progressive overload + adequate protein after weight loss stabilizes. The stronger concern is the loss of muscle quality (intramuscular fat, neural drive) in older adults, which is harder to restore — making protein and resistance training during the active loss phase the better strategy.",
+          },
+          {
+            question: "Does resistance training prevent muscle loss on a GLP-1?",
+            answer:
+              "Resistance training does not eliminate lean-mass loss during a caloric deficit, but it dramatically reduces it. Trials in non-GLP-1 weight-loss settings consistently show that the combination of high protein + resistance training preserves about twice as much lean mass as diet alone. There is no GLP-1-specific RCT yet, but the underlying biology is the same: muscle protein synthesis responds to load and substrate regardless of why you're in a deficit.",
           },
         ]}
       />

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "glp1-insurance-coverage-medicare-medicaid-commercial";
 
@@ -484,6 +485,35 @@ export default function InsuranceCoverageArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Does Medicare cover Wegovy or Zepbound for weight loss?",
+            answer:
+              "Historically no — Medicare Part D was statutorily prohibited from covering drugs used for weight loss. The March 2024 Wegovy cardiovascular indication created a workaround: CMS now permits Part D plans to cover Wegovy when prescribed for cardiovascular risk reduction in patients with established cardiovascular disease and obesity (BMI ≥27). Coverage is plan-specific and prior authorization applies. Pure weight-loss prescribing remains excluded.",
+          },
+          {
+            question: "Does Medicaid cover GLP-1s for obesity?",
+            answer:
+              "Coverage varies by state. As of 2025, about 16 state Medicaid programs cover GLP-1s for obesity treatment with prior authorization criteria; the rest cover them only for type 2 diabetes. Check your state's Medicaid preferred drug list and prior authorization criteria, or call your member services line for the current rules.",
+          },
+          {
+            question: "Why don't all commercial insurance plans cover Wegovy and Zepbound?",
+            answer:
+              "Commercial coverage of anti-obesity medications is an OPTIONAL benefit at the employer level — employers choose whether to add weight-management drug coverage to their plan, even if their PBM has the drugs on formulary. Roughly 40-50% of large self-insured employers added GLP-1 weight-loss coverage in 2024-2025; the rest exclude weight-management indications to control cost. Coverage for the diabetes indication (Ozempic, Mounjaro for T2DM) is much more common.",
+          },
+          {
+            question: "What is a step therapy requirement for GLP-1 prior auth?",
+            answer:
+              "Step therapy means the insurer requires you to try and fail one or more 'preferred' weight-loss interventions (lifestyle program, older drug like phentermine, sometimes Saxenda) before approving Wegovy or Zepbound. The exact step requirements vary by plan. Step therapy can usually be appealed when there is documented intolerance, contraindication, or prior failure of the preferred drugs.",
+          },
+          {
+            question: "How do I appeal a GLP-1 prior authorization denial?",
+            answer:
+              "Standard appeal pathway: (1) request the written denial letter and the specific criterion you failed, (2) gather supporting documentation (BMI history, comorbidity diagnoses, prior weight-loss attempts, lab values), (3) ask your prescriber to submit a letter of medical necessity, (4) file the formal appeal within the plan's deadline (typically 60-180 days), (5) escalate to external review if the internal appeal is denied. Our prior auth letter generator drafts the medical-necessity letter for the most common scenarios.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

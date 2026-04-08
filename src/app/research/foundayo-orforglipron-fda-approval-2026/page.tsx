@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "foundayo-orforglipron-fda-approval-2026";
 
@@ -509,6 +510,35 @@ export default function FoundayoArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "What is Foundayo (orforglipron)?",
+            answer:
+              "Foundayo is the brand name for orforglipron, the first oral (pill, not injection) GLP-1 receptor agonist approved by the FDA for chronic weight management. Developed by Eli Lilly, orforglipron is a small-molecule (non-peptide) GLP-1 agonist taken once daily by mouth. It does not require refrigeration and has no injection-site adverse events because there is no injection.",
+          },
+          {
+            question: "How effective is Foundayo compared to Wegovy and Zepbound?",
+            answer:
+              "In the ATTAIN-1 phase 3 trial, orforglipron produced approximately 12-15% mean weight loss at 72 weeks at the highest doses, compared to ~15% for Wegovy (STEP 1) and ~21% for Zepbound (SURMOUNT-1) at similar timepoints. Orforglipron's efficacy is closer to Wegovy than Zepbound, but it offers the major practical advantage of being an oral once-daily pill with no cold chain.",
+          },
+          {
+            question: "Does Foundayo need to be refrigerated?",
+            answer:
+              "No. Foundayo is a small-molecule oral tablet that is stable at room temperature with no refrigeration required. This is one of the major practical advantages over the injectable GLP-1s — no cold-chain shipping, no travel ice packs, no spoiled doses, and easier global distribution.",
+          },
+          {
+            question: "When can I get Foundayo and how much does it cost?",
+            answer:
+              "Foundayo received FDA approval in 2026. Initial pricing and launch availability are managed by Eli Lilly; check current manufacturer information and your insurance plan formulary for the latest. Pricing is expected to be in the same range as the injectable GLP-1s pre-savings-card, with manufacturer assistance programs likely.",
+          },
+          {
+            question: "Is Foundayo safer than injectable GLP-1s?",
+            answer:
+              "The side-effect profile of orforglipron in the ATTAIN trials was qualitatively similar to injectable GLP-1s — predominantly GI (nausea, diarrhea, constipation) and generally dose-dependent. Some patients tolerate the oral formulation better because they avoid injection-site reactions; others find the daily dosing schedule harder to maintain than weekly injections. Long-term safety data is more limited than for semaglutide and tirzepatide simply because the drug is newer.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }

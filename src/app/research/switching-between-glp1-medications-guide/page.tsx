@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
+import FaqSchema from "@/components/research/FaqSchema";
 
 const SLUG = "switching-between-glp1-medications-guide";
 
@@ -519,6 +520,35 @@ export default function SwitchingGuideArticle() {
       </p>
 
       <References items={citations} />
+      <FaqSchema
+        items={[
+          {
+            question: "Can I switch from Wegovy to Zepbound directly?",
+            answer:
+              "Yes, but most clinicians stop one drug before starting the other rather than overlapping. There is no FDA-approved cross-titration protocol. A common approach: take the last Wegovy dose, wait 7 days (one full dosing interval), then start Zepbound at the standard 2.5mg starter dose and titrate up per the Zepbound label. Discuss the specific transition plan with your prescriber before changing.",
+          },
+          {
+            question: "Why would I switch from one GLP-1 to another?",
+            answer:
+              "Common reasons: insurance coverage changed, side effects (often GI) on the current drug, weight loss has plateaued, supply/availability issues, cost, or the new drug has stronger efficacy data for your situation. SURMOUNT-5 (head-to-head tirzepatide vs semaglutide) showed tirzepatide produced greater weight loss on average, which has driven many switches from Wegovy to Zepbound.",
+          },
+          {
+            question: "Do I have to start at the lowest dose when switching?",
+            answer:
+              "Yes — both the Wegovy and Zepbound labels say to start at the lowest dose regardless of prior GLP-1 exposure. The dose-titration schedule exists to give the GI system time to adapt to the new drug, and that adaptation does not transfer 1:1 between semaglutide and tirzepatide. Skipping the starter dose increases the chance of severe nausea and discontinuation.",
+          },
+          {
+            question: "Will I gain weight in the gap between stopping one and starting the next?",
+            answer:
+              "Probably not significantly in a 1-2 week gap. Appetite and 'food noise' typically take 1-3 weeks to fully return after stopping a GLP-1, and the appetite-suppression effects of the new drug start within the first weeks of starting. Most patients notice no meaningful change in a brief switching window. Longer gaps (4+ weeks) start to allow measurable regain.",
+          },
+          {
+            question: "Can I switch from compounded to brand-name (or vice versa)?",
+            answer:
+              "Yes. The active ingredient is the same. The main differences are concentration (compounded vials vs fixed-dose pens), the dispensing format, and the lack of an FDA-approved label for the compounded preparation. Match the new dose to the equivalent on the new format — our GLP-1 unit converter handles the math. Always confirm with your prescriber before switching formats.",
+          },
+        ]}
+      />
     </ResearchArticleLayout>
   );
 }
