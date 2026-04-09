@@ -100,18 +100,25 @@ export default function CookieConsent() {
       role="dialog"
       aria-label="Cookie consent"
       aria-live="polite"
-      className="fixed inset-x-0 bottom-0 z-[60] px-3 pb-3 sm:px-4 sm:pb-4 pointer-events-none"
+      className="fixed inset-x-0 bottom-0 z-[60] px-2 pb-2 sm:px-4 sm:pb-4 pointer-events-none"
     >
-      <div className="pointer-events-auto mx-auto max-w-3xl rounded-2xl border border-brand-violet/20 bg-white shadow-xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center gap-4">
-        <div className="flex-1 text-sm text-brand-text-secondary leading-relaxed">
+      <div className="pointer-events-auto mx-auto max-w-3xl rounded-xl sm:rounded-2xl border border-brand-violet/20 bg-white shadow-xl p-3 sm:p-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+        <div className="flex-1 text-[11px] sm:text-sm text-brand-text-secondary leading-snug sm:leading-relaxed">
           <p>
             <strong className="text-brand-text-primary">
-              We use cookies and analytics.
+              Cookies & analytics.
             </strong>{" "}
-            Weight Loss Rankings uses first-party cookies to make the site
-            work and Google Analytics to understand which pages help
-            readers most. We do not sell your data and we do not show
-            third-party ads. US visitors can opt out at any time. See our{" "}
+            <span className="hidden sm:inline">
+              Weight Loss Rankings uses first-party cookies to make the
+              site work and Google Analytics to understand which pages
+              help readers most. We do not sell your data and we do not
+              show third-party ads. US visitors can opt out at any time.
+              See our{" "}
+            </span>
+            <span className="sm:hidden">
+              First-party cookies + GA. No data sold, no third-party
+              ads.{" "}
+            </span>
             <Link
               href="/privacy"
               className="text-brand-violet underline font-semibold"
@@ -121,18 +128,18 @@ export default function CookieConsent() {
             .
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row gap-2 shrink-0">
+        <div className="flex flex-row gap-2 shrink-0">
           <button
             type="button"
             onClick={reject}
-            className="inline-flex items-center justify-center rounded-full border border-brand-violet/30 px-4 py-2.5 text-sm font-semibold text-brand-text-primary hover:border-brand-violet/60 hover:text-brand-violet transition whitespace-nowrap"
+            className="inline-flex flex-1 sm:flex-none items-center justify-center rounded-full border border-brand-violet/30 px-3 py-1.5 sm:px-4 sm:py-2.5 text-xs sm:text-sm font-semibold text-brand-text-primary hover:border-brand-violet/60 hover:text-brand-violet transition whitespace-nowrap"
           >
             Opt out
           </button>
           <button
             type="button"
             onClick={accept}
-            className="inline-flex items-center justify-center rounded-full bg-brand-violet px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-violet/90 transition whitespace-nowrap"
+            className="inline-flex flex-1 sm:flex-none items-center justify-center rounded-full bg-brand-violet px-4 py-1.5 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-bold text-white hover:bg-brand-violet/90 transition whitespace-nowrap"
           >
             Got it
           </button>
