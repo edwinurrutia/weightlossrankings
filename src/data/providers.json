@@ -675,13 +675,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-07",
+      "last_verified": "2026-04-09",
       "verified_by": "Chrome MCP live pull",
       "source_urls": [
         "https://bmimd.com"
       ],
       "confidence": "high",
-      "notes": "Chrome MCP verified 2026-04-07 (bmimd.com): compounded semaglutide $149/mo, compounded tirzepatide $249/mo, plus lipotropic MIC+B12, metformin ER, bupropion/naltrexone, sermorelin. FAQ explicitly states bmiMD 'connects patients to licensed healthcare professionals in all 50 states.' 80,000+ members."
+      "notes": "Chrome MCP verified 2026-04-07 (bmimd.com): compounded semaglutide $149/mo, compounded tirzepatide $249/mo, plus lipotropic MIC+B12, metformin ER, bupropion/naltrexone, sermorelin. FAQ explicitly states bmiMD 'connects patients to licensed healthcare professionals in all 50 states.' 80,000+ members. KATALYS APPLICATION 2026-04-09: applied to Katalys program 1332 ($100 default). Once approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1332&aff_id=12086&source=weightlossrankings&sub1=bmimd and change affiliate_network from 'Direct' to 'Katalys'."
     }
   },
   {
@@ -1318,13 +1318,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-07",
+      "last_verified": "2026-04-09",
       "verified_by": "wave-4-main-session-webfetch",
       "source_urls": [
         "https://www.joinfound.com"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. Found operates in all 50 states. Prescribes Wegovy ($650/mo), Zepbound ($650/mo), Ozempic ($1,100/mo), Mounjaro (~$1,100/mo), Saxenda, Victoza. Has interactive insurance map showing carrier availability by state."
+      "notes": "Verified live via WebFetch 2026-04-07. Found operates in all 50 states. Prescribes Wegovy ($650/mo), Zepbound ($650/mo), Ozempic ($1,100/mo), Mounjaro (~$1,100/mo), Saxenda, Victoza. Has interactive insurance map showing carrier availability by state. KATALYS APPLICATION 2026-04-09: applied to Katalys program 1162 ($260 default). Once approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1162&aff_id=12086&source=weightlossrankings&sub1=found and change affiliate_network from 'Direct' to 'Katalys'."
     }
   },
   {
@@ -2027,13 +2027,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-07",
+      "last_verified": "2026-04-09",
       "verified_by": "WebFetch live pull",
       "source_urls": [
         "https://ivimhealth.com"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Ivim Health confirmed offering compounded semaglutide ($75/mo) and tirzepatide ($149/mo), plus brand-name Zepbound, Mounjaro, Ozempic, Wegovy, Saxenda, Liraglutide. State availability not publicly disclosed — requires contact or signup intake."
+      "notes": "Live-verified 2026-04-07: Ivim Health confirmed offering compounded semaglutide ($75/mo) and tirzepatide ($149/mo), plus brand-name Zepbound, Mounjaro, Ozempic, Wegovy, Saxenda, Liraglutide. State availability not publicly disclosed — requires contact or signup intake. KATALYS APPLICATION 2026-04-09: applied to Katalys program 1390 ($60 default). Once approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1390&aff_id=12086&source=weightlossrankings&sub1=ivim-health and change affiliate_network from 'Direct' to 'Katalys'."
     }
   },
   {
@@ -2137,13 +2137,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-06",
+      "last_verified": "2026-04-09",
       "verified_by": "manual",
       "source_urls": [
         "https://ivyrx.com"
       ],
       "confidence": "medium",
-      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification."
+      "notes": "Pricing sourced from user research master list. States_available defaulted to all 50; needs scraper verification. KATALYS APPLICATION 2026-04-09: applied to Katalys program 1470 ($10 default). Once approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1470&aff_id=12086&source=weightlossrankings&sub1=ivy-rx and change affiliate_network from 'Direct' to 'Katalys'."
     }
   },
   {
@@ -4302,13 +4302,13 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-07",
+      "last_verified": "2026-04-09",
       "verified_by": "wave-4-main-session-webfetch",
       "source_urls": [
         "https://tryyucca.com"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. Yucca Health explicitly says: \"Licensed Providers in all 50 States\" and is a \"U.S.-based telehealth platform\" with \"service area: entire United States.\" Personalized compounded semaglutide+ and tirzepatide+ injections."
+      "notes": "Verified live via WebFetch 2026-04-07. Yucca Health explicitly says: \"Licensed Providers in all 50 States\" and is a \"U.S.-based telehealth platform\" with \"service area: entire United States.\" Personalized compounded semaglutide+ and tirzepatide+ injections. KATALYS APPLICATION 2026-04-09: applied to Katalys program 1460 ($300 default + EPC $7.34). Once approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1460&aff_id=12086&source=weightlossrankings&sub1=try-yucca-health and change affiliate_network from 'Direct' to 'Katalys'."
     }
   },
   {
@@ -6698,11 +6698,56 @@
       "Manufacturer Direct Pricing"
     ],
     "states_available": [
-      "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
-      "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
-      "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
-      "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
-      "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://www.goodrx.com/foundayo",
     "affiliate_network": "Direct",
@@ -6772,11 +6817,56 @@
       "One Medical Kiosk Pickup"
     ],
     "states_available": [
-      "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
-      "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
-      "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
-      "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
-      "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
     ],
     "affiliate_url": "https://pharmacy.amazon.com",
     "affiliate_network": "Direct",
@@ -6816,7 +6906,7 @@
     "name": "Trifecta Meal Delivery",
     "slug": "trifecta-meal-delivery",
     "description": "Trifecta is a prepared-meal delivery service positioned for weight loss, athletic performance, and clean-eating lifestyles. Programs include Clean Classic, Keto, Paleo, Vegan, Vegetarian, and Whole30, with each meal portion-controlled and macro-tracked. Listed here as a weight-loss program adjunct that pairs well with calorie-deficit goals from GLP-1 therapy or standalone behavioral programs.",
-    "category": "Weight Loss Program",
+    "category": "Meal Delivery",
     "pricing": [
       {
         "dose": "Per meal (preliminary)",
@@ -6862,7 +6952,7 @@
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1483"
       ],
       "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1483 (Trifecta Meal Delivery, $55 default CPA). REQUIRES a full YMYL verification pass against trifectanutrition.com before promoting confidence: confirm legal entity, exact plan pricing tiers, delivery footprint, macros + nutrition certification, any FDA / FTC adverse actions. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1483&aff_id=12086&source=weightlossrankings&sub1=trifecta-meal-delivery and change affiliate_network to 'Katalys'."
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1483 (Trifecta Meal Delivery, $55 default CPA). REQUIRES a full YMYL verification pass against trifectanutrition.com before promoting confidence: confirm legal entity, exact plan pricing tiers, delivery footprint, macros + nutrition certification, any FDA / FTC adverse actions. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1483&aff_id=12086&source=weightlossrankings&sub1=trifecta-meal-delivery and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: changed category from 'Weight Loss Program' to 'Meal Delivery' to match the /best/meal-delivery-for-weight-loss page filter (CATEGORY_MAP in src/app/best/[category]/page.tsx)."
     }
   },
   {
@@ -6870,7 +6960,7 @@
     "name": "Buoy",
     "slug": "buoy",
     "description": "Buoy is a liquid electrolyte supplement positioned as a hydration enhancer for active lifestyles, low-carb diets, and GLP-1 users — populations that lose electrolytes faster and benefit from supplemental sodium, potassium, and magnesium. Listed here as a GLP-1 companion product because electrolyte loss is a documented side effect of rapid GLP-1-mediated weight loss.",
-    "category": "Weight Loss Program",
+    "category": "Supplement",
     "pricing": [
       {
         "dose": "Monthly subscription (preliminary)",
@@ -6916,7 +7006,7 @@
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1517"
       ],
       "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1517 (Buoy, 20% commission). REQUIRES a full YMYL verification pass against justaddbuoy.com before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per serving, third-party lab testing, any FTC adverse actions, and the GLP-1-companion clinical positioning. The product is positioned as a hydration enhancer broadly — the GLP-1 companion angle is editorial framing, not necessarily the brand's own primary positioning. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1517&aff_id=12086&source=weightlossrankings&sub1=buoy and change affiliate_network to 'Katalys'."
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1517 (Buoy, 20% commission). REQUIRES a full YMYL verification pass against justaddbuoy.com before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per serving, third-party lab testing, any FTC adverse actions, and the GLP-1-companion clinical positioning. The product is positioned as a hydration enhancer broadly — the GLP-1 companion angle is editorial framing, not necessarily the brand's own primary positioning. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1517&aff_id=12086&source=weightlossrankings&sub1=buoy and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: changed category from 'Weight Loss Program' to 'Supplement' to match the /best/weight-loss-supplements page filter (CATEGORY_MAP in src/app/best/[category]/page.tsx)."
     }
   },
   {
@@ -6972,7 +7062,7 @@
     "name": "Gruns Greens",
     "slug": "gruns-greens",
     "description": "Gruns is a daily greens gummy positioned as a more palatable alternative to powdered greens and traditional multivitamins. Marketed as a nutrition-density tool that pairs with weight-loss diets and GLP-1 therapy to maintain micronutrient intake when overall food intake drops.",
-    "category": "Weight Loss Program",
+    "category": "Supplement",
     "pricing": [
       {
         "dose": "Monthly subscription (preliminary)",
@@ -7018,7 +7108,7 @@
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1430"
       ],
       "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1430 (Gruns Greens, $30 default CPA). REQUIRES a full YMYL verification pass against gruns.co before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per gummy, third-party lab testing, GMP/NSF certification, any FTC/FDA adverse actions, and the GLP-1 nutrition-companion clinical claim. Domain may also be grunsdaily.com or thegruns.com — verify on next pass. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1430&aff_id=12086&source=weightlossrankings&sub1=gruns-greens and change affiliate_network to 'Katalys'."
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1430 (Gruns Greens, $30 default CPA). REQUIRES a full YMYL verification pass against gruns.co before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per gummy, third-party lab testing, GMP/NSF certification, any FTC/FDA adverse actions, and the GLP-1 nutrition-companion clinical claim. Domain may also be grunsdaily.com or thegruns.com — verify on next pass. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1430&aff_id=12086&source=weightlossrankings&sub1=gruns-greens and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: changed category from 'Weight Loss Program' to 'Supplement' to match the /best/weight-loss-supplements page filter (CATEGORY_MAP in src/app/best/[category]/page.tsx)."
     }
   },
   {
@@ -7026,7 +7116,7 @@
     "name": "IM8 Health",
     "slug": "im8-health",
     "description": "IM8 Health is a daily health drink and supplement system co-founded by human-biology coach Gary Brecka, positioning itself as an all-in-one greens, prebiotic, probiotic, vitamin, mineral, and adaptogen blend. Marketed for energy, gut health, longevity, and metabolic support — with a high-recognition founder that drives strong brand awareness.",
-    "category": "Weight Loss Program",
+    "category": "Supplement",
     "pricing": [
       {
         "dose": "Monthly subscription (preliminary)",
@@ -7074,7 +7164,7 @@
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1428"
       ],
       "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1428 (IM8 Health, 16% commission). REQUIRES a full YMYL verification pass against im8.com before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per serving with doses, third-party lab testing certifications, any FTC/FDA adverse actions, and the metabolic-support clinical claim. Founder Gary Brecka's broader health-content portfolio includes some claims (hydrogen water, genetic interventions) that have been challenged in mainstream peer review — those need to be considered separately when evaluating the IM8 product itself. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1428&aff_id=12086&source=weightlossrankings&sub1=im8-health and change affiliate_network to 'Katalys'."
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1428 (IM8 Health, 16% commission). REQUIRES a full YMYL verification pass against im8.com before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per serving with doses, third-party lab testing certifications, any FTC/FDA adverse actions, and the metabolic-support clinical claim. Founder Gary Brecka's broader health-content portfolio includes some claims (hydrogen water, genetic interventions) that have been challenged in mainstream peer review — those need to be considered separately when evaluating the IM8 product itself. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1428&aff_id=12086&source=weightlossrankings&sub1=im8-health and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: changed category from 'Weight Loss Program' to 'Supplement' to match the /best/weight-loss-supplements page filter (CATEGORY_MAP in src/app/best/[category]/page.tsx)."
     }
   },
   {
@@ -7082,7 +7172,7 @@
     "name": "fatty15",
     "slug": "fatty15",
     "description": "fatty15 is a daily C15:0 (pentadecanoic acid) supplement marketed for cellular longevity, metabolic health, and inflammation reduction. C15:0 is an odd-chain saturated fatty acid that the company's published research positions as the first essential fatty acid to be discovered in 90+ years, with claimed effects on cell membrane stability and mitochondrial function.",
-    "category": "Weight Loss Program",
+    "category": "Supplement",
     "pricing": [
       {
         "dose": "Monthly subscription (preliminary)",
@@ -7129,7 +7219,273 @@
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1559"
       ],
       "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1559 (fatty15, 8% commission). REQUIRES a full YMYL verification pass against fatty15.com before promoting confidence: confirm legal entity (Seraphina Therapeutics Inc), exact pricing tiers, dose per capsule, third-party lab testing, the published C15:0 research portfolio, any FTC/FDA adverse actions, and the essential-fatty-acid positioning. The C15:0 essential-fatty-acid claim is the company's own published position — independent peer-reviewed consensus on whether it should be officially classified as essential is still developing. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1559&aff_id=12086&source=weightlossrankings&sub1=fatty15 and change affiliate_network to 'Katalys'."
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1559 (fatty15, 8% commission). REQUIRES a full YMYL verification pass against fatty15.com before promoting confidence: confirm legal entity (Seraphina Therapeutics Inc), exact pricing tiers, dose per capsule, third-party lab testing, the published C15:0 research portfolio, any FTC/FDA adverse actions, and the essential-fatty-acid positioning. The C15:0 essential-fatty-acid claim is the company's own published position — independent peer-reviewed consensus on whether it should be officially classified as essential is still developing. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1559&aff_id=12086&source=weightlossrankings&sub1=fatty15 and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: changed category from 'Weight Loss Program' to 'Supplement' to match the /best/weight-loss-supplements page filter (CATEGORY_MAP in src/app/best/[category]/page.tsx)."
+    }
+  },
+  {
+    "_id": "futurhealth",
+    "name": "FuturHealth",
+    "slug": "futurhealth",
+    "description": "FuturHealth is a telehealth weight management brand offering prescription weight loss medications including GLP-1 therapy. Listed in the Katalys catalog at program ID 815 with a $180 default CPA. Stub entry pending YMYL verification — exact drug formulary, pricing, states served, and pharmacy partners need a primary-source pass against the brand website.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Preliminary",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded",
+      "Weight Loss Medication"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://www.futurhealth.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Katalys-approved program at $180 default CPA — non-trivial commission",
+      "Explicitly positioned around weight loss medication (not a general telehealth catch-all)"
+    ],
+    "cons": [
+      "Stub entry — exact drug formulary, pricing tiers, states served, and pharmacy partners need a YMYL verification pass",
+      "Confidence is LOW until that pass is done",
+      "Domain not yet verified — futurhealth.com may not be the correct landing page"
+    ],
+    "best_for": "pending product verification",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.futurhealth.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/815"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 815 (FuturHealth - Weight Loss Medication, $180 default CPA). REQUIRES a full YMYL verification pass against futurhealth.com before promoting confidence: confirm legal entity, exact drug formulary (compounded vs brand-name), pricing tiers, states served, pharmacy partners, accreditations, and any FDA / FTC adverse actions. Do NOT promote this entry to any /best page or homepage hero until verified. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=815&aff_id=12086&source=weightlossrankings&sub1=futurhealth and change affiliate_network to 'Katalys'."
+    }
+  },
+  {
+    "_id": "mangorx",
+    "name": "MangoRx",
+    "slug": "mangorx",
+    "description": "MangoRx (Mangoceuticals) is a men's health telehealth platform offering compounded GLP-1 weight management alongside testosterone replacement therapy, ED treatment, and hair loss programs. Stub entry pending YMYL verification of the GLP-1-specific offering — pricing, states, pharmacy partners, and clinical workflow.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Preliminary",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Men's Health"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=647&aff_id=12086&source=weightlossrankings&sub1=mangorx",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Katalys-approved program at 14% commission — attractive on higher AOV orders",
+      "Men's-health-focused telehealth — bundled GLP-1 + TRT + ED + hair lets a single user fill multiple needs through one provider"
+    ],
+    "cons": [
+      "Stub entry — exact GLP-1 drug formulary, pricing tiers, states served, and pharmacy partners need a YMYL verification pass",
+      "Confidence is LOW until that pass is done",
+      "Cross-selling TRT alongside GLP-1s is editorially worth disclosing — readers looking specifically for weight loss may not want to be funneled into a men's-hormone broader program"
+    ],
+    "best_for": "pending product verification",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://mangorx.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/647"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 647 (MangoRx, 14% commission). REQUIRES a full YMYL verification pass against mangorx.com before promoting confidence: confirm legal entity (Mangoceuticals Inc, Nasdaq: MGRX as of 2024), exact GLP-1 drug formulary, pricing tiers, states served, pharmacy partners, accreditations, and any FDA / FTC adverse actions. Note: MangoRx is publicly traded, so SEC filings can supplement the YMYL pass. Do NOT promote this entry to any /best page or homepage hero until verified. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=647&aff_id=12086&source=weightlossrankings&sub1=mangorx and change affiliate_network to 'Katalys'. KATALYS APPROVAL 2026-04-09: program 647 APPROVED. Affiliate URL upgraded from https://mangorx.com (direct) to the Katalys tracking URL. affiliate_network changed from 'Direct' to 'Katalys'. Per the no-/go/-wrapper rule, the URL will render natively in CTA hrefs and appendKatalysSubIds() will append sub2 (page source) and sub3 (list position) at render time per the standard placement-tracking pattern."
+    }
+  },
+  {
+    "_id": "plushcare",
+    "name": "PlushCare",
+    "slug": "plushcare",
+    "description": "PlushCare is a general-medicine telehealth platform owned by Accolade that offers virtual primary care visits with US board-certified physicians, including weight management consultations and GLP-1 prescriptions where clinically appropriate. Listed in the Katalys catalog at program ID 344 with a $60 default CPA. Stub entry pending YMYL verification of the GLP-1-specific pricing and workflow.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Preliminary monthly visit",
+        "form": "brand",
+        "monthly_cost": 99
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7,
+      "ux": 8,
+      "trust": 8,
+      "accessibility": 8,
+      "support": 7.5
+    },
+    "features": [
+      "Virtual Primary Care",
+      "Weight Management",
+      "Brand",
+      "US Board-Certified Physicians"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://www.plushcare.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Owned by Accolade (NASDAQ: ACCD) — established corporate parent with publicly disclosed financials and quality controls",
+      "US board-certified physicians on every visit, not nurse practitioners or physician assistants only",
+      "Operates as a general-medicine telehealth platform — patients get a single PCP-style provider relationship rather than a single-condition funnel",
+      "Likely accepts insurance for the visit fee even when the GLP-1 medication itself is cash-pay"
+    ],
+    "cons": [
+      "Stub entry — exact GLP-1 medication formulary, pricing, and prescribing eligibility criteria need a YMYL verification pass",
+      "Confidence is LOW until that pass is done",
+      "PlushCare is a general telehealth platform — GLP-1 prescribing is one of many services and may be subject to clinician discretion rather than guaranteed at intake"
+    ],
+    "best_for": "pending product verification — likely PCP-style virtual primary care with optional GLP-1 prescribing",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.plushcare.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/344"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 344 (PlushCare, $60 default CPA). REQUIRES a full YMYL verification pass against plushcare.com before promoting confidence: confirm Accolade ownership (acquired 2021), the exact GLP-1 prescribing pathway (whether it's a guaranteed offering or clinician-discretionary), pricing tiers, insurance acceptance, states served, prescriber credentials, and any FDA / FTC adverse actions. Do NOT promote this entry to any /best page or homepage hero until verified. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=344&aff_id=12086&source=weightlossrankings&sub1=plushcare and change affiliate_network to 'Katalys'."
+    }
+  },
+  {
+    "_id": "better-u",
+    "name": "Better U",
+    "slug": "better-u",
+    "description": "Better U is a wellness telehealth brand offering weight management and metabolic health programs. Listed in the Katalys catalog at program ID 1094 with a $70 default CPA. Stub entry pending YMYL verification — exact program structure, drug formulary, pricing, and editorial fit need a primary-source pass.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Preliminary",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      }
+    ],
+    "scores": {
+      "value": 6.5,
+      "effectiveness": 6.5,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [
+      "Wellness Telehealth",
+      "Weight Management"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://www.betteru.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Katalys-approved program at $70 default CPA — moderate commission",
+      "Wellness-positioned (not pure-Rx) — may appeal to readers looking for a holistic weight-management option vs a medication-only telehealth"
+    ],
+    "cons": [
+      "Stub entry — exact program structure, drug formulary, pricing, and clinical model all need a YMYL verification pass",
+      "Confidence is LOW until that pass is done",
+      "Domain not yet verified — betteru.com may not be the correct landing page (could also be tryebetteru.com, joinbetteru.com, etc.)",
+      "Brand name is generic enough that there may be multiple unrelated \"Better U\" brands — verify corporate identity carefully"
+    ],
+    "best_for": "pending product verification",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1094"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1094 (Better U, $70 default CPA). REQUIRES a full YMYL verification pass against the brand's actual landing page before promoting confidence: confirm the correct domain (betteru.com vs trybetteru.com vs joinbetteru.com), legal entity, exact program structure, drug formulary, pricing tiers, states served, prescriber credentials, and any FDA / FTC adverse actions. CRITICAL: 'Better U' is a generic enough name that there may be multiple unrelated brands — verify corporate identity against the Katalys advertiser record before publishing. Do NOT promote this entry to any /best page or homepage hero until verified. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1094&aff_id=12086&source=weightlossrankings&sub1=better-u and change affiliate_network to 'Katalys'."
+    }
+  },
+  {
+    "_id": "betterbrand",
+    "name": "BetterBrand",
+    "slug": "betterbrand",
+    "description": "BetterBrand is a Boulder, CO supplement company offering a line of single-purpose daily supplements positioned around 'simple solutions to common health concerns.' The visible product range on the Katalys advertiser page includes Better Focus (cognitive support), Better Morning (morning energy / wake routine), and Better Lungs (respiratory support). Stub entry pending YMYL verification — exact ingredient panels, third-party testing, FDA / FTC adverse actions, and weight-loss-relevance for our /best/weight-loss-supplements page need a primary-source pass.",
+    "category": "Supplement",
+    "pricing": [
+      {
+        "dose": "Monthly subscription (preliminary)",
+        "form": "brand",
+        "monthly_cost": 50
+      }
+    ],
+    "scores": {
+      "value": 6.5,
+      "effectiveness": 6.5,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 8,
+      "support": 7
+    },
+    "features": [
+      "Daily Supplement",
+      "Single-Purpose Formulas",
+      "Direct-to-Consumer"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=287&aff_id=12086&source=weightlossrankings&sub1=betterbrand",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Single-purpose product line — each SKU targets one use case (focus, morning energy, lungs) instead of mega-stack multi-claim formulas",
+      "Boulder, CO brand with retail-grade packaging and presentation",
+      "Verticals tagged on Katalys: Health & Wellness, Health & Beauty, Nutrition, Supplements — broad health-and-wellness fit"
+    ],
+    "cons": [
+      "Stub entry — ingredient panels, third-party lab testing, FDA / FTC adverse actions, and weight-loss-specific clinical positioning all need a YMYL verification pass against betterbrand.com",
+      "Confidence is LOW until that pass is done",
+      "The product range visible at the Katalys advertiser page (Better Focus / Better Morning / Better Lungs) does NOT include an explicit weight-loss SKU — placement on /best/weight-loss-supplements depends on whether BetterBrand has a metabolism, appetite-control, or fat-loss product not visible in the screenshot, OR whether one of the existing SKUs is editorially defensible as a weight-loss adjunct",
+      "Domain not yet verified — betterbrand.com may not be the correct landing page"
+    ],
+    "best_for": "pending product verification",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.betterbrand.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/287"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 287 (BetterBrand). Per the Katalys program detail page, BetterBrand is tagged Health & Wellness + Health & Beauty + Nutrition + Supplements, headquartered in Boulder, CO. Visible products in the program detail screenshot: Better Focus, Better Morning, Better Lungs. REQUIRES a full YMYL verification pass against betterbrand.com before promoting confidence: confirm legal entity, full SKU lineup (specifically whether there's a weight-loss / metabolism / appetite SKU that justifies placement on /best/weight-loss-supplements), exact pricing tiers, ingredient panels per serving, third-party lab certifications, and any FDA / FTC adverse actions. CRITICAL: if no weight-loss-specific SKU exists, this entry should be moved off /best/weight-loss-supplements and placed in a more appropriate section, OR the editorial framing should explicitly explain why a focus / energy / lungs supplement is being listed alongside weight-loss products. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=287&aff_id=12086&source=weightlossrankings&sub1=betterbrand and change affiliate_network to 'Katalys'. Category set to 'Supplement' so the entry renders on /best/weight-loss-supplements per the CATEGORY_MAP filter in src/app/best/[category]/page.tsx. KATALYS APPROVAL 2026-04-09: program 287 APPROVED. Affiliate URL upgraded from https://www.betterbrand.com (direct) to the Katalys tracking URL. affiliate_network changed from 'Direct' to 'Katalys'. Per the no-/go/-wrapper rule, the URL will render natively in CTA hrefs and appendKatalysSubIds() will append sub2 (page source) and sub3 (list position) at render time per the standard placement-tracking pattern."
     }
   }
 ]

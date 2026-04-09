@@ -28,11 +28,18 @@ import { join } from "path";
 
 const MAX_VERIFICATION_AGE_DAYS = 180;
 
+// Categories that the runtime page filter accepts. Must stay in sync with
+// CATEGORY_MAP in src/app/best/[category]/page.tsx — when a new /best/<slug>
+// page is added, its category needs to be in this set or the schema guard
+// will reject providers attempting to use it.
 const GLP1_CATEGORIES = new Set([
   "GLP-1 Provider",
   "Weight Loss Program",
   "Compounding Pharmacy",
   "Brand Manufacturer",
+  "Supplement",         // /best/weight-loss-supplements
+  "Meal Delivery",      // /best/meal-delivery-for-weight-loss
+  "Fitness App",        // /best/fitness-apps-for-weight-loss
 ]);
 
 interface Verification {
