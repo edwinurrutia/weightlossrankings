@@ -1,6 +1,10 @@
 "use client";
 
-import { buildOutboundLink } from "@/lib/affiliate-link";
+import {
+  appendKatalysSubIds,
+  buildOutboundLink,
+  isKatalysTrackingUrl,
+} from "@/lib/affiliate-link";
 
 interface TrackedAffiliateLinkProps {
   href: string;
@@ -55,15 +59,26 @@ export default function TrackedAffiliateLink({
   children,
 }: TrackedAffiliateLinkProps) {
   const onClick = () => fireTracking(provider, source, position);
-  // Route through /go/[slug] for reliable server-side click logging.
-  // Falls back to direct UTM-tagged href if no provider slug is set
-  // (which shouldn't happen for this component, since `provider` is
-  // a required prop — but defensive in case the prop is empty).
-  const outboundHref = provider
-    ? `/go/${encodeURIComponent(provider)}?src=${encodeURIComponent(source)}${
-        typeof position === "number" ? `&pos=${position}` : ""
-      }`
-    : buildOutboundLink(href, { source, provider, position });
+  // Three rendering paths, mirroring CTAButton:
+  //
+  //  1. Katalys tracking URL → render natively with sub2/sub3 appended
+  //     so placement reaches Katalys's own reporting (no /go/ wrapper —
+  //     affiliate networks treat intermediary redirects as cloaking).
+  //
+  //  2. Known provider slug, non-tracking affiliate_url → /go/[slug]
+  //     wrapper for server-side logging.
+  //
+  //  3. Defensive fallback for empty provider prop → UTM-tagged direct.
+  let outboundHref: string;
+  if (isKatalysTrackingUrl(href)) {
+    outboundHref = appendKatalysSubIds(href, { source, position });
+  } else if (provider) {
+    outboundHref = `/go/${encodeURIComponent(provider)}?src=${encodeURIComponent(source)}${
+      typeof position === "number" ? `&pos=${position}` : ""
+    }`;
+  } else {
+    outboundHref = buildOutboundLink(href, { source, provider, position });
+  }
   return (
     <a
       href={outboundHref}

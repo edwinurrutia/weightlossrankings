@@ -1,7 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { buildOutboundLink } from "@/lib/affiliate-link";
+import {
+  appendKatalysSubIds,
+  buildOutboundLink,
+  isKatalysTrackingUrl,
+} from "@/lib/affiliate-link";
 
 type CTAButtonSize = "sm" | "md" | "lg";
 type CTAButtonVariant = "primary" | "outline" | "white";
@@ -123,10 +127,16 @@ export default function CTAButton({
     //  3. External link not tied to a known provider slug (rare —
     //     non-affiliate outbound links). Tag the href directly with
     //     UTM params and render as an <a>.
-    const isAffiliateTrackingHost = /^https:\/\/(track|db)\.revoffers\.com\//i.test(href);
+    const isAffiliateTrackingHost = isKatalysTrackingUrl(href);
     let outboundHref: string;
     if (isAffiliateTrackingHost) {
-      outboundHref = href;
+      // Render Katalys tracking URLs natively (no /go/ wrapper) but
+      // append sub2/sub3 so the placement (page source + position)
+      // reaches Katalys's reporting and we can split payouts by slot.
+      outboundHref = appendKatalysSubIds(href, {
+        source: trackSource,
+        position: trackPosition,
+      });
     } else if (trackProvider) {
       outboundHref = `/go/${encodeURIComponent(trackProvider)}?src=${encodeURIComponent(
         trackSource ?? "unknown",

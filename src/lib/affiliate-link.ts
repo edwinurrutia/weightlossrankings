@@ -144,3 +144,71 @@ function sanitizeUtm(value: string): string {
     .replace(/^-+|-+$/g, "")
     .slice(0, 80);
 }
+
+/**
+ * True if `href` is a Katalys (RevOffers) tracking URL. The Katalys
+ * network proxies all clicks through track.revoffers.com (and the
+ * legacy db.revoffers.com host) — those are the only hosts that
+ * accept the affiliate sub-ID conventions below.
+ */
+export function isKatalysTrackingUrl(href: string): boolean {
+  return /^https:\/\/(track|db)\.revoffers\.com\//i.test(href);
+}
+
+/**
+ * Append placement metadata to a Katalys tracking URL via Katalys's
+ * sub-ID slots so we can attribute conversions to a specific page
+ * placement, not just to the provider as a whole.
+ *
+ *   sub1 = provider slug          (already baked into the canonical
+ *                                  affiliate_url stored in providers.json
+ *                                  — we never overwrite it here)
+ *   sub2 = page source tag        (e.g. "homepage_top_rated", "state_ca",
+ *                                  "compare_hers_vs_ro") — set from the
+ *                                  React component rendering the CTA
+ *   sub3 = "pos-N" 1-indexed      (position within an ordered list,
+ *                                  if the CTA is part of a ranked grid)
+ *
+ * Why this exists: Katalys's reporting splits payouts by sub-ID, so by
+ * pushing placement into sub2/sub3 we get conversion data per-placement
+ * directly from Katalys without having to reconcile our internal click
+ * logs against their dashboard. CTAs that bypass the /go/[slug] wrapper
+ * (so the click reaches Katalys natively) call this helper at render
+ * time to append the sub-IDs without mutating the stored URL.
+ *
+ * This function only touches Katalys hosts. For any other URL it
+ * returns the input unchanged.
+ */
+export function appendKatalysSubIds(
+  href: string,
+  options: { source?: string; position?: number },
+): string {
+  if (!href || typeof href !== "string") return href ?? "";
+  if (!isKatalysTrackingUrl(href)) return href;
+
+  let url: URL;
+  try {
+    url = new URL(href);
+  } catch {
+    return href;
+  }
+
+  const params = url.searchParams;
+
+  // Never overwrite a sub-ID that's already on the canonical URL —
+  // some programs hard-code sub2/sub3 on the offer side and we'd be
+  // clobbering their attribution.
+  if (options.source && !params.has("sub2")) {
+    params.set("sub2", sanitizeUtm(options.source));
+  }
+  if (
+    typeof options.position === "number" &&
+    Number.isFinite(options.position) &&
+    options.position > 0 &&
+    !params.has("sub3")
+  ) {
+    params.set("sub3", `pos-${Math.floor(options.position)}`);
+  }
+
+  return url.toString();
+}
