@@ -3659,42 +3659,63 @@
     "_id": "ro",
     "name": "Ro",
     "slug": "ro",
-    "description": "Major telehealth platform offering GLP-1 weight loss through its Body Program.",
+    "description": "Ro is one of the largest direct-to-patient telehealth companies in the US and operates the most comprehensive obesity care formulary in the category — compounded semaglutide, brand-name Wegovy and Zepbound, and as of April 9 2026, Eli Lilly's new oral GLP-1 Foundayo (orforglipron) starting at $149/month for the lowest dose plus membership.",
     "category": "GLP-1 Provider",
-    "pricing": [],
+    "pricing": [
+      {
+        "dose": "Foundayo (lowest dose, cash pay)",
+        "form": "brand",
+        "drug": "orforglipron",
+        "monthly_cost": 149,
+        "note": "Additional membership fees apply"
+      }
+    ],
     "scores": {
-      "value": 6.5,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
+      "value": 7.5,
+      "effectiveness": 8,
+      "ux": 8,
+      "trust": 8,
+      "accessibility": 8.5,
+      "support": 7.5
     },
     "features": [
+      "Foundayo",
       "Semaglutide",
-      "Tirzepatide"
+      "Tirzepatide",
+      "Wegovy",
+      "Zepbound",
+      "Compounded",
+      "Brand"
     ],
     "states_available": [],
     "affiliate_url": "https://ro.co/weight-loss",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Both semaglutide and tirzepatide available"
+      "Most comprehensive GLP-1 formulary in telehealth — compounded semaglutide, brand-name Wegovy, brand-name Zepbound, and the new oral Foundayo (orforglipron) all available on one platform",
+      "Among the first telehealth providers to launch Foundayo on day one of the Lilly partner rollout (April 9 2026)",
+      "Clinician-led plan selection — 'patients connect with a licensed provider and, if appropriate, determine which GLP-1 is the best option based on their insurance coverage, the cost, and their unique clinical needs and health goals'",
+      "Nationwide delivery network — Ro reports having served patients in 'nearly every single county in the United States, including 99% of primary care deserts'",
+      "Both cash-pay and insurance-eligible options under one roof"
     ],
     "cons": [
-      "Pricing not publicly disclosed"
+      "Foundayo on Ro requires a recurring membership in addition to the $149/mo cash drug price — total monthly cost is higher than the headline number",
+      "Specific Foundayo dose-tier pricing above the lowest dose not publicly disclosed in the launch announcement — needs intake to confirm",
+      "State availability and pharmacy partners not itemized publicly — requires signup intake to verify",
+      "Like all telehealth GLP-1 providers, Ro charges separately for the program (membership) and the medication; users sometimes confuse the bundled vs. unbundled pricing models"
     ],
-    "best_for": "mainstream telehealth GLP-1 access",
+    "best_for": "broadest GLP-1 formulary including Foundayo on day-one of launch",
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-07",
-      "verified_by": "WebFetch live pull",
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
       "source_urls": [
-        "https://ro.co/weight-loss"
+        "https://ro.co/weight-loss",
+        "https://www.prnewswire.com/news-releases/ro-offers-eli-lillys-foundayo-the-newest-glp-1-innovation-302737647.html"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Ro Body Program offers GLP-1 medication as part of weight loss. Specific drug names and state list not publicly disclosed on /weight-loss page. Requires signup intake to verify state availability."
+      "notes": "Live-verified 2026-04-09 via the Ro PR Newswire announcement (NEW YORK, April 9, 2026): 'Ro, the leading direct-to-patient healthcare company, today announced eligible patients can now access Foundayo™ (orforglipron) – Eli Lilly Company's newest oral GLP-1 innovation – on the Ro platform, adding to Ro's already comprehensive formulary of FDA-approved GLP-1s.' Pricing verbatim: 'Foundayo™ on Ro starts at a cash pay price of $149 per month for the lowest dose (additional membership fees apply).' CEO quote verbatim: 'We're excited to work with Lilly to offer the newest GLP-1 pill on the market. There is no one size fits all treatment for weight management, and Foundayo™ offers patients an affordable and flexible option to meet their goals,' — Zach Reitano, co-founder and CEO of Ro. Lilly quote: Laura Steele, Group Vice President of U.S. Cardiometabolic Health at Eli Lilly. Ro is also in our Katalys pending applications list (program 359) — once approved we can swap affiliate_network from 'Direct' to 'Katalys' and set affiliate_url to https://track.revoffers.com/aff_c?offer_id=359&aff_id=12086&source=weightlossrankings&sub1=ro. NOT YET VERIFIED: the user mentioned Ro 'currently owns Weight Watchers' (Ro/Roman acquired WW in 2025) — confirm before cross-linking the two brand entries."
     }
   },
   {
@@ -6638,6 +6659,156 @@
       ],
       "confidence": "low",
       "notes": "Created 2026-04-09 from the Katalys Explore program detail page (program ID 1516, 'SHED' / by SHED). Verbatim Katalys description: 'Begin your weight loss journey for the last time with ShedRx! With health coaching, Semaglutide and Tirzepatide weight loss injections, and supplements all under one roof, ShedRx is your last weight-loss destination.' All-50-states geo claim verbatim: 'Geo: GLPs available in all 50 states.' Verticals tagged as Health & Wellness + Rx. Public payout $2.56 EPC. Initial entry uses placeholder pricing ($249 sema / $349 tirz) and direct shedrx.com URL — REQUIRES a YMYL verification pass against shedrx.com before promoting to higher confidence: confirm legal entity, pricing, pharmacy partners, accreditations, FDA history, litigation. Confidence is LOW until that pass is done. KATALYS APPLICATION STATUS: Apply flow attempted via Chrome MCP browser automation 2026-04-09 but did not visibly succeed (button still showed 'Apply To Program' after click sequence). Manual application via the Katalys partner UI is needed. Once approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1516&aff_id=12086&source=weightlossrankings&sub1=shedrx and change affiliate_network to 'Katalys'."
+    }
+  },
+  {
+    "_id": "goodrx-foundayo",
+    "name": "GoodRx (Foundayo + Zepbound KwikPen)",
+    "slug": "goodrx-foundayo",
+    "description": "GoodRx (NASDAQ: GDRX) is the largest US prescription savings platform. As of April 9, 2026, GoodRx is offering self-pay pricing for Eli Lilly's new oral GLP-1 Foundayo (orforglipron) starting at $149/month and Zepbound KwikPen (tirzepatide) starting at $299/month, redeemable at 70,000+ pharmacies nationwide via the GoodRx discount card.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Foundayo (lowest dose, self-pay)",
+        "form": "brand",
+        "drug": "orforglipron",
+        "monthly_cost": 149
+      },
+      {
+        "dose": "Zepbound KwikPen (self-pay)",
+        "form": "brand",
+        "drug": "tirzepatide",
+        "monthly_cost": 299
+      }
+    ],
+    "scores": {
+      "value": 8.5,
+      "effectiveness": 8,
+      "ux": 8.5,
+      "trust": 9,
+      "accessibility": 9.5,
+      "support": 7
+    },
+    "features": [
+      "Foundayo",
+      "Zepbound KwikPen",
+      "Brand",
+      "Self-Pay Discount Card",
+      "70,000+ Pharmacies",
+      "Manufacturer Direct Pricing"
+    ],
+    "states_available": [
+      "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
+      "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
+      "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
+      "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
+      "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
+    ],
+    "affiliate_url": "https://www.goodrx.com/foundayo",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "$149/month self-pay price for FDA-approved brand-name Foundayo (orforglipron) — matches the lowest available discounted cash price at launch and is dramatically cheaper than typical retail brand-GLP-1 pricing",
+      "$299/month self-pay for FDA-approved Zepbound KwikPen — significantly under the typical Lilly cash list price",
+      "Honored at 70,000+ US pharmacies nationwide — by far the largest brick-and-mortar redemption network of any GLP-1 distribution channel we cover",
+      "No telehealth membership fee — you bring your own prescription and present the discount card at the pharmacy counter",
+      "Brand-name FDA-approved medication, not compounded — no compounding-pharmacy quality variability or FDA non-evaluation disclaimer",
+      "Pharmaceutical manufacturer-direct pricing model — Lilly is delivering the discounted cash price directly through GoodRx, not a third-party negotiation"
+    ],
+    "cons": [
+      "Requires a valid prescription — GoodRx is a discount card, not a telehealth provider. You still need a clinician to write the script (your existing PCP, an endocrinologist, or a separate telehealth visit)",
+      "Self-pay only — does not coordinate with insurance benefits or apply toward insurance deductibles",
+      "Pricing applies only to the lowest Foundayo dose at the headline number; higher doses may carry different pricing not disclosed in the launch",
+      "Does not include compounded GLP-1s — if you want compounded semaglutide or tirzepatide, this is not the channel",
+      "GoodRx is publicly traded (NASDAQ: GDRX) and pricing is subject to change as Lilly's manufacturer-sponsored coupon program evolves"
+    ],
+    "best_for": "self-pay brand-name Foundayo and Zepbound KwikPen at retail pharmacies",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.businesswire.com/news/home/20260409583467/en/GoodRx-Expands-Access-to-Eli-Lilly-and-Companys-New-Oral-GLP-1-Foundayo-and-Zepbound-KwikPen-with-Self-Pay-Pricing-at-More-Than-70000-Pharmacies-Nationwide",
+        "https://www.goodrx.com/foundayo"
+      ],
+      "confidence": "high",
+      "notes": "Live-verified 2026-04-09 via the Business Wire announcement (SANTA MONICA, Calif., April 9, 2026 7:30 AM EDT). Verbatim from the press release: 'GoodRx (Nasdaq: GDRX), the leading platform for prescription savings in the U.S., today announced that it is working with Eli Lilly and Company to expand access to the newly FDA-approved oral GLP-1 medication, Foundayo™ (orforglipron). Eligible self-pay patients can access Foundayo through GoodRx at a starting price of $149 per month, in line with the lowest available discounted cash price at launch.' Zepbound KwikPen pricing verbatim: 'GoodRx is also offering self-pay pricing for Zepbound® (tirzepatide) KwikPen® starting at $299 per month.' Pharmacy network: '70,000+ pharmacies nationwide.' GoodRx CEO quote: 'As new GLP-1 therapies continue to expand, including oral options like Foundayo, it is critical that access evolves alongside innovation. By pairing transparent cash pricing with nationwide pharmacy access and integrated care, we are helping ensure more people understand their options and more easily start treatment.' — Wendy Barnes, President and CEO of GoodRx. Lilly quote: Laura Steele, Group Vice President of U.S. Cardiometabolic Health at Eli Lilly. NOTE: This is a SEPARATE entity from 'GoodRx Care' (the telehealth arm, slug goodrx-care, already in this dataset) — GoodRx the discount card business is what's offering Foundayo, not GoodRx Care. The two businesses are part of the same parent (GDRX) but have distinct product surfaces and different user flows."
+    }
+  },
+  {
+    "_id": "amazon-pharmacy",
+    "name": "Amazon Pharmacy",
+    "slug": "amazon-pharmacy",
+    "description": "Amazon Pharmacy (NASDAQ: AMZN) is a full-service digital pharmacy offering Eli Lilly's Foundayo (orforglipron) with same-day delivery as of April 9 2026 — $1/day ($25/month) with insurance and $5/day ($149/month) cash pay with manufacturer-sponsored coupons applied automatically. Same-day available in nearly 3,000 cities, expanding to 4,500 by year-end, plus in-office pickup at One Medical kiosks.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Foundayo (with insurance + Lilly Savings Card)",
+        "form": "brand",
+        "drug": "orforglipron",
+        "monthly_cost": 25
+      },
+      {
+        "dose": "Foundayo (cash pay)",
+        "form": "brand",
+        "drug": "orforglipron",
+        "monthly_cost": 149
+      }
+    ],
+    "scores": {
+      "value": 9,
+      "effectiveness": 8,
+      "ux": 9,
+      "trust": 9,
+      "accessibility": 9.5,
+      "support": 8
+    },
+    "features": [
+      "Foundayo",
+      "Brand",
+      "Same-Day Delivery",
+      "All 50 States",
+      "Lilly Savings Card",
+      "One Medical Kiosk Pickup"
+    ],
+    "states_available": [
+      "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
+      "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
+      "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
+      "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
+      "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
+    ],
+    "affiliate_url": "https://pharmacy.amazon.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "$1/day ($25/month) with insurance and the automatically-applied Lilly manufacturer-sponsored coupon — the cheapest brand-name Foundayo channel we've seen",
+      "Same-day delivery in nearly 3,000 US cities and towns at launch, expanding to 4,500 by year-end 2026 — most aggressive delivery footprint of any GLP-1 distribution channel",
+      "In-office, licensed-pharmacist-supported kiosks at select One Medical locations let patients walk out of an appointment with their Foundayo in hand — bypasses pharmacy lines entirely",
+      "Cash-pay $5/day ($149/month) is competitive with Ro and GoodRx for the same FDA-approved brand-name product",
+      "Real-time medication availability + transparent pricing + automatic manufacturer coupon application before checkout",
+      "Has been delivering GLP-1 medications since 2021 — operational track record on cold-chain biologic logistics",
+      "24/7 access to licensed pharmacists for clinical questions"
+    ],
+    "cons": [
+      "Requires a valid existing prescription — Amazon Pharmacy does not employ prescribing clinicians or operate a telehealth intake. You need a separate visit (your PCP, a specialty endocrinologist, or another telehealth provider) to get the Foundayo script first",
+      "Headline $25/month price requires both insurance coverage AND the Lilly Savings Card — uninsured patients pay the $149/month cash price",
+      "Same-day delivery is geographically gated — outside the ~3,000 cities, delivery falls back to next-day, two-day, or three-day depending on remoteness",
+      "Pricing is set by Lilly's manufacturer-sponsored coupon program and could change",
+      "Does not offer compounded semaglutide or tirzepatide — brand-name only",
+      "Foundayo only at launch — Amazon Pharmacy carries other GLP-1s separately but the April 2026 announcement is Foundayo-specific"
+    ],
+    "best_for": "fastest brand-name Foundayo delivery with the cheapest insured price",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.businesswire.com/news/home/20260408248131/en/Amazon-Pharmacy-to-Offer-Eli-Lilly-and-Companys-New-GLP-1-Pill-Foundayo-via-Same-Day-Delivery",
+        "https://pharmacy.amazon.com"
+      ],
+      "confidence": "high",
+      "notes": "Live-verified 2026-04-09 via the Business Wire announcement (SEATTLE, April 9, 2026 7:49 AM EDT). Verbatim from the press release: 'Amazon Pharmacy (NASDAQ: AMZN), a full-service digital pharmacy that offers fast medication delivery directly to customers' homes, now offers Eli Lilly and Company's recently approved GLP-1 medication, Foundayo™, a once daily oral treatment for adults with obesity or overweight with weight-related medical problems.' Pricing verbatim: 'With insurance, pricing starts as low as $1 per day or $25 per month. For cash pay customers, pricing is $5 per day or $149 per month. Manufacturer-sponsored coupons are applied automatically before checkout.' Same-day delivery footprint verbatim: 'Amazon Pharmacy will offer Foundayo via its Same-Day Delivery service in nearly 3,000 cities and towns, expanding to nearly 4,500 by year end. In remote areas where the nearest brick-and-mortar pharmacy can be more than a 45-minute to 60-minute drive away, next-day, two-day and three-day prescription delivery will be offered.' One Medical kiosk verbatim: 'in-office, licensed pharmacist-supported kiosks at select One Medical locations immediately after medical appointments, allowing them to skip long pharmacy lines.' Amazon quote: 'Amazon Pharmacy is reducing barriers for customers to access new weight management treatments like Foundayo. We are giving customers faster treatment options with our Same-Day Delivery offering, easy ways to save with automatically applied manufacturer coupons and the price transparency they need to make informed decisions about their care.' — Tanvi Patel, Vice President and General Manager of Amazon Pharmacy. Lilly quote: 'If prescribed, patients may be able to have Foundayo on their doorstep the same day or walk out of their doctor's office with it in-hand in Los Angeles — eliminating the waiting and uncertainty that patients may face when starting their treatment journey.' — Laura Steele, Group Vice President of U.S. Cardiometabolic Health at Eli Lilly. Operational track record: 'Amazon Pharmacy has delivered GLP-1 medications since 2021 and provides 24/7 access to licensed pharmacists.' Note: One Medical is owned by Amazon (acquired 2023), so the kiosk integration is a same-parent rollout, not a third-party partnership."
     }
   }
 ]
