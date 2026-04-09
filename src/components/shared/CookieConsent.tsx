@@ -53,18 +53,22 @@ function setConsent(value: "accepted" | "necessary"): void {
 }
 
 /**
- * Cookie consent banner.
+ * Cookie consent / privacy notice banner.
  *
  * Mounts on first render, checks localStorage for an existing decision,
  * and shows a bottom-fixed banner if the visitor has not chosen yet.
  *
  * Two choices:
- *   - "Accept all"     → enables analytics + functional cookies
- *   - "Necessary only" → only first-party session cookies, no analytics
+ *   - "Got it"         → acknowledges the notice, analytics stay on
+ *   - "Opt out"        → writes "necessary" flag that GoogleAnalytics
+ *                        reads to disable analytics_storage for this
+ *                        visitor (CCPA opt-out for US visitors)
  *
- * Respects "Necessary" cookies as always-on per GDPR/CCPA. The actual
- * gating of Google Analytics happens in the GoogleAnalytics component
- * which subscribes to onCookieConsentChange.
+ * This is a US-only site, so CCPA (opt-out) applies, not GDPR (opt-in).
+ * Google Analytics loads by default; the banner is a transparency +
+ * opt-out mechanism, not a pre-consent gate. Visitors who click "Opt
+ * out" have their decision persisted to localStorage and GA respects
+ * it via the consent-default denied path in GoogleAnalytics.tsx.
  */
 export default function CookieConsent() {
   // null = unknown (waiting on first effect), value = decided
@@ -102,12 +106,12 @@ export default function CookieConsent() {
         <div className="flex-1 text-sm text-brand-text-secondary leading-relaxed">
           <p>
             <strong className="text-brand-text-primary">
-              We use cookies.
+              We use cookies and analytics.
             </strong>{" "}
             Weight Loss Rankings uses first-party cookies to make the site
-            work and (with your consent) Google Analytics to understand
-            which pages help readers most. We do not sell your data and
-            we do not show third-party ads. See our{" "}
+            work and Google Analytics to understand which pages help
+            readers most. We do not sell your data and we do not show
+            third-party ads. US visitors can opt out at any time. See our{" "}
             <Link
               href="/privacy"
               className="text-brand-violet underline font-semibold"
@@ -123,14 +127,14 @@ export default function CookieConsent() {
             onClick={reject}
             className="inline-flex items-center justify-center rounded-full border border-brand-violet/30 px-4 py-2.5 text-sm font-semibold text-brand-text-primary hover:border-brand-violet/60 hover:text-brand-violet transition whitespace-nowrap"
           >
-            Necessary only
+            Opt out
           </button>
           <button
             type="button"
             onClick={accept}
             className="inline-flex items-center justify-center rounded-full bg-brand-violet px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-violet/90 transition whitespace-nowrap"
           >
-            Accept all
+            Got it
           </button>
         </div>
       </div>

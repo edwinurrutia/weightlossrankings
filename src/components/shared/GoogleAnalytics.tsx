@@ -2,39 +2,25 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import {
-  getCookieConsent,
-  onCookieConsentChange,
-} from "@/components/shared/CookieConsent";
 
 const GA_MEASUREMENT_ID = "G-HWDYD2CWL8";
 
 /**
- * Loads Google Analytics on every public page, with two important gates:
+ * Loads Google Analytics 4 on every public page. Skips /admin/* routes
+ * so internal traffic doesn't pollute marketing analytics.
  *
- *   1. Skips /admin/* routes so internal traffic doesn't pollute marketing
- *      analytics.
- *   2. Only loads when the visitor has actively consented via the cookie
- *      banner. Subscribes to consent changes so flipping the decision
- *      mounts/unmounts GA without a reload.
+ * This is a US-only weight loss review site. CCPA is an opt-out regime,
+ * not an opt-in regime like GDPR, so GA4 loads unconditionally on public
+ * pages and the CookieConsent banner acts as a transparency notice
+ * rather than a pre-consent gate. Visitors can always opt out of GA4
+ * tracking via Google's own Analytics Opt-out Browser Add-on or by
+ * clicking "Necessary only" in the banner, which writes a "necessary"
+ * flag that this component respects as a legal opt-out.
  */
 export default function GoogleAnalytics() {
   const pathname = usePathname();
-  const [consented, setConsented] = useState(false);
-
-  useEffect(() => {
-    setConsented(getCookieConsent() === "accepted");
-    return onCookieConsentChange((value) => {
-      setConsented(value === "accepted");
-    });
-  }, []);
 
   if (pathname?.startsWith("/admin")) {
-    return null;
-  }
-
-  if (!consented) {
     return null;
   }
 
@@ -49,7 +35,25 @@ export default function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${GA_MEASUREMENT_ID}');
+
+          // Respect an explicit CCPA opt-out ("Necessary only") from the
+          // CookieConsent banner. If present, deny analytics storage and
+          // set the GA4 property to non-personalized signals.
+          try {
+            var optOut = window.localStorage.getItem('wlr-cookie-consent') === 'necessary';
+            if (optOut) {
+              gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied'
+              });
+            }
+          } catch (e) {}
+
+          gtag('config', '${GA_MEASUREMENT_ID}', {
+            anonymize_ip: true
+          });
         `}
       </Script>
     </>
