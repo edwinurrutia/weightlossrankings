@@ -6576,5 +6576,68 @@
       "confidence": "medium",
       "notes": "Live-verified 2026-04-09. Legal entity verbatim from ToS: 'SynergyRx, a Delaware corporation located at 5830 E 2nd St, Ste 7000 #2603, Casper, WY 82609, United States.' Platform operates under the CareGLP brand. Pricing verbatim from /products: compounded semaglutide injection $199, compounded tirzepatide injection $349, compounded semaglutide oral dissolving tablet $299, compounded tirzepatide oral dissolving tablet $399, Wegovy $947, Mounjaro $947, Ozempic $499. States verbatim from FAQ: 'Our telemedicine services are available in all 50 U.S. states, subject to each state's telehealth and prescribing regulations.' 50,000+ patient claim from homepage. Medical team and pharmacies IDENTICAL to Breeze Meds and Care Bare Rx (Lion MD with Dr. Carr + Dr. Tenbrink; Belmar, Strive, Epiq Scripts, Casa Pharma Rx) — confirming the three brands are white-labeled storefronts on top of one underlying operation. The February 2017 'Synergy Rx Pharmacy' recall (San Diego, CA) on fda.gov is a DIFFERENT entity and is not relevant to synergyrx.co. CRITICAL DOMAIN NOTE: synergyrx.com is a parked domain on Sedo (for sale) — the correct telehealth brand is at synergyrx.co. No FDA warning letters found for the current SynergyRx entity as of 2026-04-09. Katalys program ID 1520, default payout not documented here (see dashboard)."
     }
+  },
+  {
+    "_id": "shedrx",
+    "name": "ShedRx",
+    "slug": "shedrx",
+    "description": "ShedRx is a telehealth weight loss provider offering compounded semaglutide and tirzepatide injections plus health coaching and supportive supplements, all 50 states. Listed program description (verbatim): 'With health coaching, Semaglutide and Tirzepatide weight loss injections, and supplements all under one roof, ShedRx is your last weight-loss destination.'",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 349
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 8.5,
+      "support": 8
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Health Coaching Included",
+      "All 50 States"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://www.shedrx.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Health coaching bundled into the program — most compounded GLP-1 providers don't offer this",
+      "Both compounded semaglutide and compounded tirzepatide injections available",
+      "Available in all 50 states per Katalys program description",
+      "Listed positioning emphasizes blood sugar stabilization and cardiovascular health alongside weight loss"
+    ],
+    "cons": [
+      "Compounded only — no FDA-approved Ozempic, Wegovy, Zepbound, or Mounjaro",
+      "Pricing on this entry is preliminary — needs live verification from the shedrx.com pricing page once we run a YMYL pass",
+      "Pharmacy partners not yet verified — confidence MEDIUM until next research pass"
+    ],
+    "best_for": "compounded GLP-1 with bundled health coaching",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.shedrx.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1516"
+      ],
+      "confidence": "low",
+      "notes": "Created 2026-04-09 from the Katalys Explore program detail page (program ID 1516, 'SHED' / by SHED). Verbatim Katalys description: 'Begin your weight loss journey for the last time with ShedRx! With health coaching, Semaglutide and Tirzepatide weight loss injections, and supplements all under one roof, ShedRx is your last weight-loss destination.' All-50-states geo claim verbatim: 'Geo: GLPs available in all 50 states.' Verticals tagged as Health & Wellness + Rx. Public payout $2.56 EPC. Initial entry uses placeholder pricing ($249 sema / $349 tirz) and direct shedrx.com URL — REQUIRES a YMYL verification pass against shedrx.com before promoting to higher confidence: confirm legal entity, pricing, pharmacy partners, accreditations, FDA history, litigation. Confidence is LOW until that pass is done. KATALYS APPLICATION STATUS: Apply flow attempted via Chrome MCP browser automation 2026-04-09 but did not visibly succeed (button still showed 'Apply To Program' after click sequence). Manual application via the Katalys partner UI is needed. Once approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1516&aff_id=12086&source=weightlossrankings&sub1=shedrx and change affiliate_network to 'Katalys'."
+    }
   }
 ]
