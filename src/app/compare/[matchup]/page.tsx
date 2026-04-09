@@ -45,13 +45,13 @@ function buildProductSchema(provider: Provider, score: number, minPrice: number 
           },
         }
       : {}),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(fiveStar),
-      reviewCount: "1",
-      bestRating: "5",
-      worstRating: "1",
-    },
+    // No AggregateRating — this is a single first-party editorial
+    // review, not an aggregate of multiple independent ratings.
+    // Google's Review snippet policy: "If the entity being reviewed
+    // controls the reviews about itself, their pages are ineligible
+    // for star review feature." Emitting AggregateRating with
+    // reviewCount=1 from our own editorial score is a documented
+    // manual-action trigger — removed 2026-04-09.
     review: {
       "@type": "Review",
       reviewRating: {

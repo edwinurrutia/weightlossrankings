@@ -208,11 +208,21 @@ export default async function PharmacyDetailPage({
   if (pharmacy.established) {
     pharmacyJsonLd.foundingDate = String(pharmacy.established);
   }
-  if (pharmacy.external_reviews?.google_score) {
+  // AggregateRating is only emitted when we have BOTH a real Google
+  // rating AND a real Google review count >= 2. Single-review
+  // aggregates are not aggregates per Google's Review snippet policy
+  // and trigger the "self-serving review" rich-result violation. The
+  // earlier `?? 1` fallback was patched out 2026-04-09 because it
+  // could silently re-introduce the manual-action trigger.
+  if (
+    pharmacy.external_reviews?.google_score &&
+    typeof pharmacy.external_reviews.google_count === "number" &&
+    pharmacy.external_reviews.google_count >= 2
+  ) {
     pharmacyJsonLd.aggregateRating = {
       "@type": "AggregateRating",
       ratingValue: pharmacy.external_reviews.google_score,
-      reviewCount: pharmacy.external_reviews.google_count ?? 1,
+      reviewCount: pharmacy.external_reviews.google_count,
       bestRating: 5,
       worstRating: 1,
     };

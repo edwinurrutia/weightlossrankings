@@ -182,24 +182,22 @@ export default async function ProviderReviewPage({
   // is less commonly picked up by Google's ratings parser.
   const overallScoreFiveStar = Math.round((overallScore / 2) * 10) / 10;
 
-  // AggregateRating sourced from our own editorial methodology.
-  // Google deprecated third-party review snippets in 2019, so only
-  // self-hosted first-party editorial reviews are eligible for SERP
-  // star rich results. Our /methodology page documents the 6-dimension
-  // scoring rubric (value, effectiveness, UX, trust, accessibility,
-  // support) and every provider has real scores in providers.json —
-  // a structured, transparent editorial review.
-  // The AggregateRating reviewCount is set to 1 (single editorial
-  // reviewer); the embedded Review below carries the full review
-  // body and the reviewBy attribution.
-  const aggregateRating = {
-    "@type": "AggregateRating",
-    ratingValue: String(overallScoreFiveStar),
-    reviewCount: "1",
-    bestRating: "5",
-    worstRating: "1",
-  };
-
+  // First-party editorial Review JSON-LD.
+  //
+  // We DO NOT emit AggregateRating here. Per Google's Review snippet
+  // policy:
+  //   "If the entity that's being reviewed controls the reviews about
+  //    itself, their pages... are ineligible for star review feature."
+  // Emitting AggregateRating with reviewCount=1 sourced from our own
+  // single editorial score was a documented manual-action trigger.
+  // Removed 2026-04-09 after the SEO audit pass surfaced the rich-
+  // result violation.
+  //
+  // The Review object below remains: that's a legitimate first-party
+  // editorial review with a single rating from a single named author
+  // (Weight Loss Rankings as the editorial entity). When we ship the
+  // E-E-A-T author infrastructure, the `author` here will switch from
+  // Organization to Person with hasCredential.
   const productJsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -232,7 +230,6 @@ export default async function ProviderReviewPage({
       datePublished: provider.verification?.last_verified ?? undefined,
       reviewBody: oneLineVerdict,
     },
-    aggregateRating,
   };
 
   const breadcrumbItems = [

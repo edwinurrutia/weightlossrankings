@@ -140,6 +140,14 @@ export default async function HomePage() {
     description:
       "Independently ranked GLP-1 telehealth providers for compounded semaglutide and tirzepatide.",
     numberOfItems: featured.length,
+    // ListItem entries are intentionally lean: just position + url +
+    // name + a Product reference. We do NOT emit nested AggregateRating
+    // here because (a) Google's Review snippet policy forbids
+    // first-party AggregateRating with reviewCount=1 (manual-action
+    // trigger), and (b) the previous version used bestRating=10 /
+    // worstRating=0 which doesn't match Google's expected 0-5 scale
+    // for the rich-result parser. The actual editorial Review lives
+    // on each /reviews/[slug] page.
     itemListElement: featured.map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,
@@ -149,15 +157,6 @@ export default async function HomePage() {
         "@type": "Product",
         name: p.name,
         url: `https://weightlossrankings.org/reviews/${p.slug}`,
-        ...(p.scores && {
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: computeOverallScore(p.scores).toFixed(1),
-            bestRating: 10,
-            worstRating: 0,
-            reviewCount: 1,
-          },
-        }),
       },
     })),
   };
