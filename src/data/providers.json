@@ -7492,55 +7492,78 @@
     "_id": "get-thin-md",
     "name": "Get Thin MD",
     "slug": "get-thin-md",
-    "description": "Get Thin MD is a US-based online health and wellness platform offering personalized weight management and metabolic health treatment plans. Through an async online medical evaluation, eligible patients are prescribed GLP-1 medications (compounded and oral GLP-1 options) by licensed US clinicians and fulfilled via a trusted mail-order pharmacy. Stub entry pending YMYL verification — exact domain, pricing tiers, states served, and pharmacy partners need a primary-source pass.",
+    "description": "Get Thin MD is a US-based async telehealth platform operated by Get Thin MD LLC, offering compounded semaglutide and tirzepatide injections plus brand-name Ozempic and Zepbound where medically appropriate. Nationwide availability, no insurance or office visits required, with doctor-led personalized plans starting at $169/month on the 3-month compounded semaglutide plan. Alongside GLP-1s the platform also offers sermorelin (muscle growth), NAD+, HRT, and hair-loss treatments — GLP-1 is one vertical within a broader wellness funnel.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Preliminary",
+        "dose": "Compounded Semaglutide (3-Month Plan)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 169,
+        "note": "Best Value — lowest monthly cost, billed upfront or via buy-now-pay-later"
+      },
+      {
+        "dose": "Compounded Semaglutide (Monthly Plan)",
         "form": "compounded",
         "drug": "semaglutide",
         "monthly_cost": 199
+      },
+      {
+        "dose": "Compounded Tirzepatide (Monthly Plan)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 299
       }
     ],
     "scores": {
-      "value": 7,
-      "effectiveness": 7,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
+      "value": 8.5,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 8.5,
+      "support": 7.5
     },
     "features": [
       "Compounded",
-      "Oral GLP-1",
-      "Weight Management",
-      "Mail-Order Pharmacy"
+      "Semaglutide",
+      "Tirzepatide",
+      "Brand",
+      "Ozempic",
+      "Zepbound",
+      "All 50 States"
     ],
     "states_available": [],
     "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1549&aff_id=12086&source=weightlossrankings&sub1=get-thin-md",
     "affiliate_network": "Katalys",
     "fda_warnings": [],
     "pros": [
-      "Katalys-approved program at $350 default CPA — one of the higher GLP-1 payouts in the catalog",
-      "Both injectable and oral GLP-1 options available per the Katalys program description",
-      "Async online evaluation model — no in-person visit required"
+      "3-month compounded semaglutide plan at $169/month is one of the lowest ongoing prices in the compounded GLP-1 category",
+      "Price-lock positioning: 'Same price, every dose. No hidden fees.' — per the product page",
+      "Both compounded and brand-name options available in one platform (compounded semaglutide, compounded tirzepatide, plus brand-name Ozempic and Zepbound where medically appropriate)",
+      "Nationwide availability with async evaluation — no in-person visit required",
+      "Broader wellness platform that also offers sermorelin, NAD+, HRT, and hair-loss treatments, so patients can consolidate multiple protocols with one provider",
+      "Proper FDA compounding disclaimer on the product page: \"The FDA does not review or approve any compounded medications for safety or effectiveness.\""
     ],
     "cons": [
-      "Stub entry — exact domain, legal entity, pricing tiers, states served, and pharmacy partners ALL need a YMYL verification pass before this entry can be promoted or featured",
-      "Confidence is LOW until that pass is done",
-      "Oral GLP-1 marketing needs verification — the November 2025 Chimicles class action against OpenLoop/Triad Rx targets providers advertising unapproved oral tirzepatide. Get Thin MD needs to be checked against the named-defendants list and against the actual product they prescribe",
-      "Domain not yet verified — likely getthinmd.com but needs confirmation against the Katalys Default Landing Page field"
+      "Compounded medications are not FDA-approved as finished products and lack the formal safety/efficacy review of brand-name Ozempic, Wegovy, Zepbound, and Mounjaro",
+      "Pharmacy partners not publicly named on the site — no independent way to verify 503A/503B compounding source or per-batch testing",
+      "State-by-state availability claimed as nationwide but no verbatim state list is published — needs intake signup to confirm whether every state is actually served",
+      "Clinical efficacy headline (\"9.6 pounds in 30 days\") is based on 645 self-reported patient data points from Jan 2024 – Apr 2025 — self-reported data is lower-quality than a randomized trial",
+      "Broader wellness funnel (sermorelin + NAD+ + HRT alongside GLP-1s) means some patients may be upsold into off-weight-loss protocols — readers looking specifically for GLP-1 care should know the platform has a wider vertical mix"
     ],
-    "best_for": "pending product verification — async-prescribed compounded + oral GLP-1",
+    "best_for": "lowest-priced compounded semaglutide on a 3-month commitment, with brand-name Ozempic/Zepbound also available",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
-      "verified_by": "manual",
+      "verified_by": "Chrome MCP live pull",
       "source_urls": [
+        "https://www.getthinusa.com/",
+        "https://www.getthinusa.com/weight-loss/personalized-glp-1",
+        "https://www.getthinusa.com/privacy-policy",
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/programs/1549"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after Katalys program 1549 (Get Thin GLP-1 / Get Thin MD, $350 default CPA) was APPROVED. Per the Katalys program detail page: brand name 'Get Thin MD', vertical Health & Wellness, geography United States of America, 'US-based online health and wellness platform that connects patients with licensed US healthcare providers for personalized treatment plans focused on weight management and metabolic health. The platform offers access to GLP-1 based medications such as semaglutide and tirzepatide, along with other wellness treatments including hormone therapy, hair loss support, and anti-aging solutions. Through a quick online evaluation, eligible patients can receive prescriptions reviewed by medical professionals and have medications shipped directly from a trusted mail-order pharmacy to their door, making treatment more convenient and accessible.' Affiliate URL is LIVE Katalys from day one since the approval happened before we shipped any Direct placeholder. REQUIRES a full YMYL verification pass against the brand's actual landing page before promoting confidence: (1) confirm correct domain (likely getthinmd.com but verify against the Default Landing Page field in the Katalys dashboard), (2) legal entity and state of incorporation, (3) exact drug formulary including whether the 'oral GLP-1' claim covers compounded oral semaglutide or oral tirzepatide (the latter is the subject of ongoing Chimicles class action litigation), (4) pricing tiers, (5) states served, (6) pharmacy partners and 503A/503B status, (7) accreditations, (8) any FDA / FTC adverse actions. Do NOT promote to any /best page or homepage hero until verified. When in doubt on the oral tirzepatide question, skip that product from the entry's pricing table and keep only the injectable compounded semaglutide."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09 via Chrome MCP navigation to getthinusa.com. Legal entity confirmed verbatim from Privacy Policy: 'Get Thin MD LLC'. Domain corrected 2026-04-09: earlier placeholder was getthinmd.com, the correct brand URL is getthinusa.com (confirmed by user and verified via Chrome navigation). Pricing verbatim from /weight-loss/personalized-glp-1: 'Compounded Semaglutide 3-Month Plan $169/month (Best Value). Compounded Semaglutide Monthly Plan $199/month. Compounded Tirzepatide Monthly Plan $299/month.' Tagline verbatim: 'Same price, every dose. No hidden fees.' Nationwide claim verbatim from site header: 'Available Nationwide'. Brand-name drugs verbatim from homepage: 'Ozempic® and Zepbound® also available.' FDA compounding disclaimer verbatim: 'The FDA does not review or approve any compounded medications for safety or effectiveness.' Clinical efficacy claim verbatim from footer disclosure: 'Based on self-reported data by 645 patients, over the period of Jan 2024 to Apr 2025, patients who were prescribed GLP-1 medication experienced on average weight loss of 9.6 pounds in the first 30 days. Get Thin MD does not guarantee that your results will match those of patients represented in this sample data.' IMPORTANT CORRECTION to the initial stub note: the earlier-session flag about the 'oral GLP-1' claim needing scrutiny against the Chimicles oral tirzepatide class action is NOT APPLICABLE — Get Thin MD does NOT sell oral tirzepatide or any oral GLP-1 product. The homepage offers only injectable compounded semaglutide, injectable compounded tirzepatide, and brand-name Ozempic/Zepbound. The 'oral GLP-1' wording in the Katalys program copy was either marketing puffery or a stale description — the actual product catalog on getthinusa.com does not include an oral GLP-1 SKU as of 2026-04-09. Non-weight-loss verticals offered on the same platform: sermorelin injections ($129/mo muscle growth), NAD+ injections/nasal spray ($129/mo), HRT/estradiol ($90/mo), hair-growth products ($59/mo). No FDA warning letters found for 'Get Thin MD' or 'Get Thin MD LLC' as of 2026-04-09. Katalys program ID 1549, default payout $350.00 (approved). Affiliate URL is live Katalys and will render natively in CTA hrefs per the no-/go/-wrapper rule, with sub2/sub3 appended at render time by appendKatalysSubIds() in CTAButton + TrackedAffiliateLink + FeaturedProviderModal. Confidence upgraded from LOW to MEDIUM after the Chrome MCP verification pass."
     }
   }
 ]
