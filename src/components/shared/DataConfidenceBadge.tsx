@@ -6,82 +6,69 @@ interface Props {
   confidence?: Confidence | string;
   lastVerified?: string;
   verifiedBy?: string;
-  notes?: string;
 }
 
 /**
- * Transparent data-confidence disclaimer. Shows users exactly how
- * recently we verified this provider's data, what method we used,
- * and when the state list / drug offering could not be independently
- * confirmed from publicly available sources.
+ * Transparent data-confidence disclosure — a single-line note telling
+ * users (a) which confidence tier this provider's data is at, (b) when
+ * we last verified it, and (c) where to read the full methodology.
  *
- * This is deliberately visible on every review page so users know
- * which fields to trust and which to re-confirm with the provider
- * directly.
+ * Previous version rendered a large purple box with the entire
+ * `verification.notes` string dumped inline. That was wrong on two
+ * counts:
+ *
+ *   1. `verification.notes` is INTERNAL-only editorial documentation
+ *      — it contains operational details like Katalys program IDs,
+ *      affiliate URL swap instructions, "promoted to hero on DATE to
+ *      test CTR", and other stuff that should never be user-facing.
+ *      Rendering it publicly was a data-leak bug.
+ *   2. The verbose canned "summary" copy + notes paragraph + heavy
+ *      purple styling was visually dominating the review page over
+ *      the actual editorial content.
+ *
+ * This version keeps the disclosure signal (confidence tier + last
+ * verified date + link to methodology) but renders it as a subtle
+ * inline line — matching the AffiliateDisclosure pattern on /compare
+ * rather than a standalone callout box.
  */
 export default function DataConfidenceBadge({
   confidence,
   lastVerified,
   verifiedBy,
-  notes,
 }: Props) {
-  if (!confidence && !lastVerified && !notes) return null;
+  if (!confidence && !lastVerified) return null;
 
   const level: Confidence =
     confidence === "high" || confidence === "medium" || confidence === "low"
       ? confidence
       : "low";
 
-  const copy = {
-    high: {
-      label: "High confidence",
-      summary:
-        "Live-verified from the provider's own site: GLP-1 service confirmed and state availability independently checked.",
-    },
-    medium: {
-      label: "Medium confidence",
-      summary:
-        "GLP-1 service confirmed on the provider's own site, but the full state availability list is not publicly disclosed — confirm directly with the provider before signing up.",
-    },
-    low: {
-      label: "Low confidence",
-      summary:
-        "We have not been able to independently verify this provider's current GLP-1 offering or state availability. Confirm directly with the provider before signing up.",
-    },
-  }[level];
+  const label =
+    level === "high"
+      ? "High confidence"
+      : level === "medium"
+        ? "Medium confidence"
+        : "Low confidence";
 
   return (
-    <aside
-      className="not-prose rounded-xl border border-brand-violet/20 bg-brand-violet/5 p-4 text-sm text-brand-text-secondary"
+    <p
+      className="not-prose text-xs text-brand-text-secondary/80 leading-relaxed"
       aria-label="Data confidence disclosure"
     >
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2">
-        <span className="inline-flex items-center rounded-full border border-brand-violet/30 bg-white px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-brand-violet">
-          {copy.label}
-        </span>
-        {lastVerified && (
-          <span className="text-xs text-brand-text-secondary">
-            Last verified {lastVerified}
-            {verifiedBy ? ` · ${verifiedBy}` : ""}
-          </span>
-        )}
-      </div>
-      <p className="leading-relaxed">
-        {copy.summary}
-      </p>
-      {notes && (
-        <p className="mt-2 text-xs leading-relaxed text-brand-text-secondary/90">
-          <span className="font-semibold">Verification notes:</span> {notes}
-        </p>
-      )}
-      <p className="mt-2 text-xs">
-        <Link
-          href="/nature-of-reviews"
-          className="text-brand-violet underline underline-offset-2 hover:text-brand-blue"
-        >
-          How we verify provider data →
-        </Link>
-      </p>
-    </aside>
+      <span className="font-semibold text-brand-text-secondary">{label}</span>
+      {lastVerified ? (
+        <>
+          {" · "}Last verified {lastVerified}
+          {verifiedBy ? ` via ${verifiedBy}` : ""}
+        </>
+      ) : null}
+      {" · "}
+      <Link
+        href="/nature-of-reviews"
+        className="text-brand-violet underline underline-offset-2 hover:text-brand-blue"
+      >
+        How we verify provider data
+      </Link>
+    </p>
   );
 }

@@ -150,7 +150,12 @@ export default function HomeHeroProviders({
               </span>
             </div>
             <h3 className="font-heading text-3xl sm:text-4xl font-bold text-brand-text-primary tracking-tight mt-3">
-              {pick.name}
+              <Link
+                href={`/reviews/${pick.slug}`}
+                className="hover:text-brand-violet transition-colors"
+              >
+                {pick.name}
+              </Link>
             </h3>
             {pick.best_for && (
               <p className="mt-2 text-sm text-brand-text-secondary">
@@ -219,6 +224,14 @@ export default function HomeHeroProviders({
               >
                 Get Started with {pick.name}
               </TrackedAffiliateLink>
+              <div className="mt-3">
+                <Link
+                  href={`/reviews/${pick.slug}`}
+                  className="text-sm text-brand-text-secondary hover:text-brand-violet transition-colors font-medium"
+                >
+                  Read our full {pick.name} review →
+                </Link>
+              </div>
             </div>
           </div>
         </article>
@@ -245,7 +258,12 @@ export default function HomeHeroProviders({
                   </span>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-brand-text-primary mt-1.5">
-                  {p.name}
+                  <Link
+                    href={`/reviews/${p.slug}`}
+                    className="hover:text-brand-violet transition-colors"
+                  >
+                    {p.name}
+                  </Link>
                 </h3>
                 {p.best_for && (
                   <p className="text-xs text-brand-text-secondary mt-1">
@@ -272,6 +290,14 @@ export default function HomeHeroProviders({
                   >
                     Get started
                   </TrackedAffiliateLink>
+                  <div className="mt-2 text-center">
+                    <Link
+                      href={`/reviews/${p.slug}`}
+                      className="text-[11px] text-brand-text-secondary hover:text-brand-violet transition-colors"
+                    >
+                      Read review →
+                    </Link>
+                  </div>
                 </div>
               </article>
             );

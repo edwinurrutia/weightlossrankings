@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Provider } from "@/lib/types";
 import { computeOverallScore } from "@/lib/scoring";
 import CTAButton from "@/components/shared/CTAButton";
@@ -113,7 +114,12 @@ export default function ProviderCard({
             </span>
           </div>
           <h3 className="text-xl font-bold text-brand-text-primary leading-tight truncate pr-2">
-            {name}
+            <Link
+              href={`/reviews/${slug}`}
+              className="hover:text-brand-violet transition-colors"
+            >
+              {name}
+            </Link>
           </h3>
           {best_for && (
             <p className="text-xs text-brand-text-secondary">
@@ -165,6 +171,17 @@ export default function ProviderCard({
       >
         Get Started
       </CTAButton>
+
+      {/* Secondary link to the full editorial review page. This is the
+          canonical internal-linking path that tells Google every
+          provider has a first-party review and lets users actually
+          find the review page without guessing the URL. */}
+      <Link
+        href={`/reviews/${slug}`}
+        className="text-xs text-center text-brand-text-secondary hover:text-brand-violet transition-colors -mt-2"
+      >
+        Read full {name} review →
+      </Link>
     </div>
   );
 }

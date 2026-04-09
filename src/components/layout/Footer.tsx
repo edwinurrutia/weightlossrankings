@@ -7,6 +7,7 @@ const footerColumns = [
     heading: "Compare",
     links: [
       { label: "All Providers", href: "/compare" },
+      { label: "Provider Reviews", href: "/reviews" },
       { label: "Best Semaglutide", href: "/best/semaglutide-providers" },
       { label: "Best Tirzepatide", href: "/best/tirzepatide-providers" },
       { label: "Best Orforglipron", href: "/best/orforglipron-providers" },

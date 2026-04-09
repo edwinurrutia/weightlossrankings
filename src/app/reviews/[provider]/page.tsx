@@ -298,12 +298,13 @@ export default async function ProviderReviewPage({
               </p>
             )}
 
-            {/* Data confidence disclosure */}
+            {/* Data confidence disclosure — subtle inline line, no
+                notes, no heavy box. verification.notes is internal-only
+                documentation and must never render publicly. */}
             <DataConfidenceBadge
               confidence={provider.verification?.confidence}
               lastVerified={provider.verification?.last_verified}
               verifiedBy={provider.verification?.verified_by}
-              notes={provider.verification?.notes}
             />
 
             {/* Score badge + editorial star rating row */}

@@ -6,6 +6,7 @@ import Logo from "@/components/shared/Logo";
 
 const navLinks = [
   { label: "Compare", href: "/compare" },
+  { label: "Reviews", href: "/reviews" },
   { label: "Semaglutide", href: "/best/semaglutide-providers" },
   { label: "Tirzepatide", href: "/best/tirzepatide-providers" },
   { label: "Savings Calculator", href: "/tools/glp1-savings-calculator" },
