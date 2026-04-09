@@ -1072,17 +1072,26 @@ export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     slug: "rybelsus-semaglutida-oral-que-es",
     title:
-      "Rybelsus (semaglutida oral): qué es, cómo se compara con Ozempic y por qué no es (todavía) una terapia para bajar de peso",
+      "Rybelsus (semaglutida oral): qué es, cómo se compara con Ozempic y por qué no es la pastilla de semaglutida para bajar de peso",
     description:
-      "Guía en español sobre Rybelsus, la única pastilla oral de un agonista del receptor de GLP-1 aprobada por la FDA. Resultados verificados de PIONEER 1 (Aroda, Diabetes Care 2019, PMID 31186300) con reducciones de A1C de 0.7 a 1.4 puntos porcentuales, PIONEER 6 (Husain, NEJM 2019, PMID 31185157) con un cociente de riesgo cardiovascular de 0.79, y OASIS 1 (Knop, Lancet 2023, PMID 37385278) con una pérdida de peso del 15.1% a la dosis oral de 50 mg — una dosis que aún no está aprobada por la FDA para el manejo del peso.",
+      "Guía en español sobre Rybelsus, la pastilla oral de semaglutida aprobada por la FDA en 2019 para diabetes tipo 2. Resultados verificados de PIONEER 1 (Aroda, Diabetes Care 2019, PMID 31186300), PIONEER 6 (Husain, NEJM 2019, PMID 31185157) y OASIS 1 (Knop, Lancet 2023, PMID 37385278). Incluye la actualización regulatoria de diciembre de 2025, cuando la FDA aprobó las tabletas de Wegovy 25 mg (oral semaglutida) para el manejo crónico del peso basándose en el ensayo OASIS 4 (Wharton, NEJM 2025, PMID 40934115) — un producto distinto de Rybelsus con una dosis e indicación diferentes.",
     excerpt:
-      "Rybelsus es el nombre comercial de la semaglutida oral, aprobada por la FDA en septiembre de 2019 para el control glucémico en adultos con diabetes tipo 2. Es el primer y único agonista del receptor de GLP-1 en forma de pastilla. Contiene el mismo principio activo que Ozempic y Wegovy (semaglutida), pero en una formulación oral que requiere instrucciones de administración muy específicas (ayunas, 120 mL de agua, esperar 30 minutos) para funcionar. Esta guía recorre los datos verificados de los ensayos PIONEER 1 y PIONEER 6, las reglas de administración que no son negociables, por qué Rybelsus en sus dosis aprobadas no es una terapia para bajar de peso, y qué muestra el ensayo OASIS 1 sobre la dosis oral de 50 mg que aún está pendiente de aprobación regulatoria.",
+      "Rybelsus es el nombre comercial de la semaglutida oral en dosis de 3, 7 y 14 mg, aprobada por la FDA en septiembre de 2019 para el control glucémico en adultos con diabetes tipo 2. Fue la primera pastilla de un agonista del receptor de GLP-1 aprobada por la FDA. Contiene el mismo principio activo que Ozempic y Wegovy (semaglutida), pero en una formulación oral que requiere instrucciones de administración muy específicas (ayunas, 120 mL de agua, esperar 30 minutos) para funcionar. El 22 de diciembre de 2025 la FDA aprobó una segunda formulación oral de semaglutida — las tabletas de Wegovy 25 mg — para el manejo crónico del peso y la reducción del riesgo cardiovascular, basándose en el ensayo OASIS 4. Es un producto distinto de Rybelsus, con dosis e indicaciones diferentes. Esta guía recorre los datos verificados de los ensayos PIONEER 1, PIONEER 6, OASIS 1 y OASIS 4, las reglas de administración que no son negociables, y por qué Rybelsus en sus dosis aprobadas sigue siendo una terapia para la diabetes tipo 2 y no para el peso.",
     kind: "scientific-deep-dive",
     publishedDate: "2026-04-08",
-    lastUpdated: "2026-04-08",
-    readMinutes: 14,
-    citations: 5,
-    tags: ["Rybelsus", "Semaglutida oral", "Diabetes", "Español", "PIONEER 1", "OASIS 1"],
+    lastUpdated: "2026-04-09",
+    readMinutes: 15,
+    citations: 7,
+    tags: [
+      "Rybelsus",
+      "Semaglutida oral",
+      "Wegovy tablets",
+      "Diabetes",
+      "Español",
+      "PIONEER 1",
+      "OASIS 1",
+      "OASIS 4",
+    ],
   },
   {
     slug: "mounjaro-vs-ozempic-diabetes-surpass-2",

@@ -8,19 +8,32 @@ import FaqSchema, { type FaqItem } from "@/components/research/FaqSchema";
 const SLUG = "rybelsus-semaglutida-oral-que-es";
 
 // FAQPage JSON-LD en español. Los datos de PIONEER 1 (PMID
-// 31186300), PIONEER 6 (PMID 31185157) y OASIS 1 (PMID 37385278)
-// fueron verificados directamente contra los resúmenes oficiales
-// en PubMed antes de la publicación.
+// 31186300), PIONEER 6 (PMID 31185157), OASIS 1 (PMID 37385278) y
+// OASIS 4 (Wharton, NEJM 2025, PMID 40934115) fueron verificados
+// directamente contra los resúmenes oficiales en PubMed antes de
+// la publicación. La aprobación del 22 de diciembre de 2025 de
+// las tabletas de Wegovy 25 mg (semaglutida oral) para el manejo
+// crónico del peso y la reducción del riesgo cardiovascular fue
+// verificada directamente contra la etiqueta oficial de la FDA
+// en accessdata.fda.gov/drugsatfda_docs/label/2025/218316Orig1s000lbl.pdf
+// (revisión 12/2025) y contra el comunicado de prensa oficial de
+// Novo Nordisk del 22 de diciembre de 2025.
 const FAQ_ITEMS: FaqItem[] = [
   {
     question: "¿Qué es Rybelsus?",
     answer:
-      "Rybelsus es el nombre comercial de la semaglutida oral, aprobada por la FDA en septiembre de 2019 para el control glucémico en adultos con diabetes tipo 2. Es el primer y único agonista del receptor de GLP-1 en forma de pastilla — todos los demás (Ozempic, Wegovy, Zepbound, Mounjaro) son inyecciones subcutáneas. Contiene el mismo principio activo que Ozempic y Wegovy (semaglutida) pero en una formulación oral que incluye el potenciador de absorción SNAC.",
+      "Rybelsus es el nombre comercial de la semaglutida oral en dosis de 3, 7 y 14 mg, aprobada por la FDA en septiembre de 2019 para el control glucémico en adultos con diabetes tipo 2. Fue la primera pastilla de un agonista del receptor de GLP-1 aprobada por la FDA. Contiene el mismo principio activo que Ozempic y Wegovy (semaglutida) pero en una formulación oral que incluye el potenciador de absorción SNAC. El 22 de diciembre de 2025 la FDA aprobó una segunda formulación oral de semaglutida — las tabletas de Wegovy 25 mg — pero para una indicación distinta (manejo crónico del peso y reducción del riesgo cardiovascular), no para diabetes.",
   },
   {
     question: "¿Rybelsus sirve para bajar de peso?",
     answer:
-      "Rybelsus en sus dosis aprobadas originalmente (3, 7 y 14 mg) tiene indicación de la FDA solo para el control glucémico en diabetes tipo 2, no para el manejo crónico del peso. En el ensayo pivote PIONEER 1 (Aroda, Diabetes Care 2019, PMID 31186300), la dosis de 14 mg produjo una pérdida de peso promedio de aproximadamente 2.6 kg a las 26 semanas en pacientes con diabetes — mucho menos que Wegovy (semaglutida 2.4 mg inyectable) que produjo una pérdida promedio del 14.9% del peso corporal a las 68 semanas. La dosis oral de 50 mg mostró una pérdida del 15.1% a las 68 semanas en el ensayo OASIS 1 (Knop, Lancet 2023, PMID 37385278). El panorama regulatorio de las formulaciones orales de semaglutida para el manejo del peso ha evolucionado rápidamente; para la situación actual consulte Drugs@FDA o pregunte a su médico.",
+      "Rybelsus en sus dosis aprobadas (3, 7 y 14 mg) tiene indicación de la FDA solo para el control glucémico en diabetes tipo 2, no para el manejo crónico del peso. En el ensayo pivote PIONEER 1 (Aroda, Diabetes Care 2019, PMID 31186300), la dosis de 14 mg produjo una pérdida de peso promedio de aproximadamente 2.6 kg a las 26 semanas en pacientes con diabetes — mucho menos que Wegovy inyectable (semaglutida 2.4 mg), que produjo una pérdida promedio del 14.9% del peso corporal a las 68 semanas. Si usted busca una pastilla de semaglutida aprobada por la FDA específicamente para bajar de peso, el producto correcto no es Rybelsus sino las tabletas de Wegovy 25 mg, aprobadas por la FDA el 22 de diciembre de 2025 basándose en el ensayo OASIS 4 (Wharton, NEJM 2025, PMID 40934115). Son dos productos distintos del mismo fabricante con el mismo principio activo pero con dosis, indicaciones y precios diferentes. Esta decisión debe tomarla con un profesional de la salud.",
+  },
+  {
+    question:
+      "¿Entonces ya hay una pastilla de semaglutida aprobada por la FDA para el manejo del peso?",
+    answer:
+      "Sí. El 22 de diciembre de 2025 la FDA aprobó las tabletas de Wegovy (oral semaglutida) con una dosis de mantenimiento de 25 mg una vez al día, para el manejo crónico del peso en adultos con obesidad (o sobrepeso con una comorbilidad relacionada) y para reducir el riesgo de eventos adversos cardiovasculares mayores (muerte cardiovascular, infarto de miocardio no fatal o accidente cerebrovascular no fatal) en adultos con enfermedad cardiovascular establecida y obesidad o sobrepeso. Esta es una aprobación distinta de Rybelsus: es una nueva solicitud de nuevo fármaco (NDA 218316), con una dosis mayor (escalada desde 1.5 mg hasta 25 mg durante 90 días), y una indicación distinta. La base de evidencia principal fue el ensayo OASIS 4 (Wharton, NEJM 2025, PMID 40934115), un ensayo aleatorizado de 71 semanas en 307 adultos sin diabetes que mostró un cambio promedio del peso corporal de −13.6% con semaglutida oral 25 mg frente a −2.2% con placebo a las 64 semanas (diferencia de −11.4 puntos porcentuales; intervalo de confianza del 95%, −13.9 a −9.0; P menor que 0.001). Las reglas de administración son las mismas que las de Rybelsus: tomar en ayunas por la mañana con hasta 120 mL de agua corriente, esperar al menos 30 minutos antes de comer, beber otros líquidos o tomar otros medicamentos.",
   },
   {
     question: "¿Rybelsus es lo mismo que Ozempic?",
@@ -101,9 +114,9 @@ export default function RybelsusSemaglutidaOralArticle() {
     {
       authors: "Novo Nordisk Inc.",
       title:
-        "RYBELSUS (semaglutide) tablets — Información de prescripción aprobada por la FDA, Sección 2 Dosis y Administración.",
-      source: "FDA Approved Labeling",
-      year: 2025,
+        "RYBELSUS (semaglutide) tablets — Información de prescripción aprobada por la FDA.",
+      source: "FDA Approved Labeling (NDA 213051)",
+      year: 2023,
       url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/213051s019lbl.pdf",
     },
     {
@@ -115,6 +128,24 @@ export default function RybelsusSemaglutidaOralArticle() {
       year: 2021,
       pmid: "33567185",
     },
+    {
+      authors: "Novo Nordisk Inc.",
+      title:
+        "WEGOVY (semaglutide) injection; WEGOVY (semaglutide) tablets — Información de prescripción aprobada por la FDA, revisión 12/2025 (NDA 218316).",
+      source: "FDA Approved Labeling",
+      year: 2025,
+      url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/218316Orig1s000lbl.pdf",
+    },
+    {
+      authors:
+        "Wharton S, Lingvay I, Bogdanski P, Duque do Vale R, Jacob S, Karlsson T, Shaji C, Rubino D, Garvey WT; OASIS 4 Study Group.",
+      title:
+        "Oral Semaglutide at a Dose of 25 mg in Adults with Overweight or Obesity.",
+      source: "N Engl J Med",
+      year: 2025,
+      pmid: "40934115",
+      doi: "10.1056/NEJMoa2500969",
+    },
   ];
 
   return (
@@ -123,41 +154,60 @@ export default function RybelsusSemaglutidaOralArticle() {
 
       <div className="mb-6 rounded-lg border border-brand-violet/20 bg-brand-violet/5 p-4 text-sm text-brand-text-secondary">
         Esta guía en español explica qué es Rybelsus (semaglutida
-        oral), en qué se diferencia de las inyecciones de Ozempic y
-        Wegovy, qué muestran los ensayos PIONEER 1 y PIONEER 6, y por
-        qué los datos del ensayo OASIS 1 a la dosis oral de 50 mg son
-        prometedores pero aún no están aprobados por la FDA para el
-        manejo del peso. Todas las cifras fueron verificadas
-        directamente contra los resúmenes oficiales en PubMed.
+        oral 3/7/14 mg), en qué se diferencia de las inyecciones de
+        Ozempic y Wegovy, qué muestran los ensayos PIONEER 1 y
+        PIONEER 6 en diabetes tipo 2, y por qué Rybelsus no es la
+        misma cosa que las nuevas tabletas de Wegovy 25 mg — una
+        segunda formulación oral de semaglutida que la FDA aprobó el
+        22 de diciembre de 2025 para el manejo crónico del peso y la
+        reducción del riesgo cardiovascular, basándose en el ensayo
+        OASIS 4. Todas las cifras clínicas y regulatorias fueron
+        verificadas directamente contra los resúmenes oficiales en
+        PubMed y contra la etiqueta oficial de la FDA.
       </div>
 
       <p data-speakable="lead">
-        Rybelsus es la única pastilla diaria de un agonista del
-        receptor de GLP-1 aprobada por la FDA. Contiene el mismo
-        principio activo que Ozempic y Wegovy (semaglutida), pero en
-        una formulación oral que requiere instrucciones de
-        administración muy específicas para funcionar. Está aprobado
-        por la FDA desde septiembre de 2019 para el control glucémico
-        en adultos con diabetes tipo 2 — no para el manejo crónico
-        del peso, aunque los ensayos clínicos con dosis mayores han
-        mostrado resultados notables en pérdida de peso que todavía
-        no han recibido aprobación regulatoria. Esta guía recorre
-        cómo funciona, qué datos respaldan su uso, cómo se compara
-        con las inyecciones de Ozempic y Wegovy, y las reglas de
-        administración que no se pueden saltar.
+        Rybelsus fue la primera pastilla de un agonista del receptor
+        de GLP-1 aprobada por la FDA. Contiene el mismo principio
+        activo que Ozempic y Wegovy (semaglutida), pero en una
+        formulación oral que requiere instrucciones de administración
+        muy específicas para funcionar. Está aprobado por la FDA
+        desde septiembre de 2019 para el control glucémico en
+        adultos con diabetes tipo 2, en dosis de 3, 7 y 14 mg — no
+        para el manejo crónico del peso. Desde el 22 de diciembre de
+        2025 existe una segunda formulación oral de semaglutida en
+        el mercado estadounidense: las tabletas de Wegovy 25 mg,
+        aprobadas para el manejo crónico del peso y la reducción del
+        riesgo cardiovascular. Son dos productos distintos del mismo
+        fabricante con el mismo principio activo pero con dosis,
+        indicaciones y marcas diferentes. Esta guía recorre cómo
+        funciona Rybelsus, qué datos respaldan su uso en diabetes,
+        cómo se compara con las inyecciones de Ozempic y Wegovy, y
+        qué cambió con la aprobación de las tabletas de Wegovy.
       </p>
 
       <h2>¿Qué es Rybelsus?</h2>
 
       <p>
         Rybelsus es el nombre comercial de la <strong>semaglutida
-        oral</strong>, fabricada por Novo Nordisk. La FDA la aprobó
-        en septiembre de 2019 con una indicación específica: mejorar
-        el control glucémico en adultos con diabetes tipo 2, como
-        complemento a la dieta y el ejercicio. Es el primer y único
-        agonista del receptor de GLP-1 en forma de pastilla — todos
-        los demás medicamentos de esta clase (Ozempic, Wegovy,
-        Zepbound, Mounjaro, Trulicity) son inyecciones subcutáneas.
+        oral en dosis de 3, 7 y 14 mg</strong>, fabricada por Novo
+        Nordisk. La FDA la aprobó en septiembre de 2019 con una
+        indicación específica: mejorar el control glucémico en
+        adultos con diabetes tipo 2, como complemento a la dieta y
+        el ejercicio. Fue la primera pastilla de un agonista del
+        receptor de GLP-1 aprobada por la FDA; todos los demás
+        medicamentos inyectables de esta clase (Ozempic, Wegovy
+        inyectable, Zepbound, Mounjaro, Trulicity) son
+        subcutáneos. El 22 de diciembre de 2025 se sumó una segunda
+        formulación oral de semaglutida al mercado estadounidense:
+        las <strong>tabletas de Wegovy 25 mg</strong>, aprobadas
+        por la FDA para el manejo crónico del peso y la reducción
+        del riesgo cardiovascular en adultos con enfermedad
+        cardiovascular establecida y obesidad o sobrepeso [6, 7].
+        Es importante no confundir los dos productos: Rybelsus y
+        las tabletas de Wegovy contienen el mismo principio activo
+        (semaglutida) pero son productos aprobados por separado con
+        dosis, indicaciones y marcas distintas.
       </p>
 
       <p>
@@ -401,21 +451,25 @@ export default function RybelsusSemaglutidaOralArticle() {
 
       <p>
         Esta es la pregunta más común sobre Rybelsus y la respuesta
-        honesta tiene varias capas. <strong>A la dosis aprobada
-        (hasta 14 mg), Rybelsus no es una terapia para el manejo
+        honesta tiene varias capas. <strong>A las dosis aprobadas
+        (3, 7 y 14 mg), Rybelsus no es una terapia para el manejo
         del peso</strong> — la pérdida de peso promedio en los
         ensayos PIONEER fue modesta (aproximadamente 2 a 3 kg en
         pacientes con diabetes), muy por debajo de lo que se
         considera un efecto clínicamente significativo para la
-        obesidad.
+        obesidad. La etiqueta oficial de Rybelsus aprobada por la
+        FDA limita su indicación al control glucémico en diabetes
+        tipo 2 y no incluye el manejo crónico del peso [4].
       </p>
 
       <p>
-        Pero en 2023 se publicó OASIS 1 (Knop et al., <em>Lancet</em>{" "}
-        2023, PMID 37385278), un ensayo fase 3 que probó una dosis
-        mucho más alta de semaglutida oral — <strong>50 mg una vez
-        al día</strong> — en 667 adultos con sobrepeso u obesidad
-        sin diabetes durante 68 semanas [3]. Los resultados:
+        Pero los datos de dosis orales mayores de semaglutida en
+        poblaciones sin diabetes son sorprendentes. En 2023 se
+        publicó OASIS 1 (Knop et al., <em>Lancet</em> 2023, PMID
+        37385278), un ensayo fase 3 que probó{" "}
+        <strong>semaglutida oral 50 mg</strong> una vez al día en
+        667 adultos con sobrepeso u obesidad sin diabetes durante
+        68 semanas [3]:
       </p>
 
       <ul>
@@ -435,19 +489,177 @@ export default function RybelsusSemaglutidaOralArticle() {
       <p>
         Esta magnitud de pérdida de peso es comparable a la que
         produce la semaglutida inyectable 2.4 mg (Wegovy, 14.9% en
-        STEP-1) [5]. <strong>Rybelsus en sus dosis aprobadas
-        originalmente (3, 7 y 14 mg) no tiene una indicación de la
-        FDA para el manejo crónico del peso</strong> — esa marca
-        está reservada exclusivamente para el control glucémico en
-        diabetes tipo 2. Novo Nordisk ha estado evaluando una dosis
-        oral mayor específicamente para obesidad basándose en los
-        datos de OASIS. El panorama regulatorio de las
-        formulaciones orales de semaglutida para el manejo del
-        peso ha evolucionado rápidamente desde 2024 y puede haber
-        cambiado después de la publicación de esta guía. Para
-        verificar la situación actual de cualquier formulación
-        oral de semaglutida aprobada por la FDA, consulte
-        directamente el buscador oficial de la FDA en{" "}
+        STEP-1) [5]. Basándose en este y otros ensayos posteriores
+        del programa OASIS, Novo Nordisk solicitó a la FDA la
+        aprobación de una formulación oral de semaglutida
+        específicamente para el manejo del peso.
+      </p>
+
+      <h2>
+        Diciembre de 2025: la FDA aprueba las tabletas de Wegovy 25 mg
+      </h2>
+
+      <p>
+        El <strong>22 de diciembre de 2025</strong> la FDA aprobó
+        las <strong>tabletas de Wegovy</strong>{" "}
+        (semaglutida oral) como la primera pastilla de un agonista
+        del receptor de GLP-1 aprobada en Estados Unidos para el
+        manejo crónico del peso [6, 7]. La aprobación corresponde
+        a la nueva solicitud de nuevo fármaco NDA 218316 — es un
+        producto distinto de Rybelsus (NDA 213051) y distinto
+        también de Wegovy inyectable (NDA 215256). Según la
+        etiqueta oficial de la FDA revisada en diciembre de 2025
+        [6], las tabletas de Wegovy están indicadas, en
+        combinación con una dieta hipocalórica y un aumento de la
+        actividad física:
+      </p>
+
+      <ul>
+        <li>
+          Para reducir el riesgo de eventos adversos cardiovasculares
+          mayores (muerte cardiovascular, infarto de miocardio no
+          fatal o accidente cerebrovascular no fatal) en adultos con
+          enfermedad cardiovascular establecida y obesidad o
+          sobrepeso.
+        </li>
+        <li>
+          Para reducir el exceso de peso corporal y mantener la
+          reducción de peso a largo plazo en adultos con obesidad, o
+          en adultos con sobrepeso en presencia de al menos una
+          comorbilidad relacionada con el peso.
+        </li>
+      </ul>
+
+      <h3>Dosis y escalada</h3>
+
+      <p>
+        La escalada de dosis de las tabletas de Wegovy aprobada por
+        la FDA es distinta de la de Rybelsus y utiliza dosis mucho
+        mayores [6]:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Días</th>
+            <th>Dosis diaria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 a 30</td>
+            <td>1.5 mg (dosis inicial)</td>
+          </tr>
+          <tr>
+            <td>31 a 60</td>
+            <td>4 mg</td>
+          </tr>
+          <tr>
+            <td>61 a 90</td>
+            <td>9 mg</td>
+          </tr>
+          <tr>
+            <td>91 en adelante</td>
+            <td>25 mg (mantenimiento)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Las reglas de administración son las mismas que las de
+        Rybelsus y no son negociables: tomar una sola tableta por
+        la mañana con el estómago vacío, con hasta 120 mL (4 onzas)
+        de agua corriente, tragar entera sin partir ni masticar, y
+        esperar al menos 30 minutos antes de comer, beber
+        cualquier otro líquido o tomar otros medicamentos orales
+        [6]. La etiqueta también indica que los pacientes que ya
+        están usando la inyección de Wegovy 2.4 mg pueden cambiar
+        a las tabletas de 25 mg una semana después de descontinuar
+        la inyección [6].
+      </p>
+
+      <h3>OASIS 4: el ensayo pivote de las tabletas de Wegovy</h3>
+
+      <p>
+        La base de evidencia principal de la aprobación fue el
+        ensayo <strong>OASIS 4</strong> (Wharton et al.,{" "}
+        <em>New England Journal of Medicine</em> 2025, PMID
+        40934115) [7]:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Diseño:</strong> ensayo aleatorizado, doble
+          ciego y controlado con placebo de 71 semanas, en 22
+          sitios de cuatro países.
+        </li>
+        <li>
+          <strong>Población:</strong> 307 adultos sin diabetes, con
+          un índice de masa corporal de al menos 30 kg/m², o al
+          menos 27 kg/m² con una comorbilidad relacionada con la
+          obesidad. 205 fueron asignados a semaglutida oral 25 mg
+          y 102 a placebo.
+        </li>
+        <li>
+          <strong>Intervención:</strong> semaglutida oral 25 mg una
+          vez al día más intervenciones de estilo de vida, frente a
+          placebo más intervenciones de estilo de vida.
+        </li>
+      </ul>
+
+      <p>
+        El resultado primario fue el cambio porcentual del peso
+        corporal a las 64 semanas. Los pacientes asignados a
+        semaglutida oral 25 mg perdieron en promedio el{" "}
+        <strong>13.6%</strong> del peso corporal, frente al{" "}
+        <strong>2.2%</strong> en el grupo placebo — una diferencia
+        de <strong>−11.4 puntos porcentuales</strong> (intervalo
+        de confianza del 95%, −13.9 a −9.0; P &lt; 0.001) [7]. La
+        proporción de pacientes que alcanzó umbrales de ≥5%, ≥10%,
+        ≥15% y ≥20% de pérdida de peso fue significativamente
+        mayor con semaglutida que con placebo (P &lt; 0.001 para
+        todos los umbrales) [7]. Los eventos adversos
+        gastrointestinales fueron más frecuentes con semaglutida
+        que con placebo (<strong>74.0% frente a 42.2%</strong>)
+        [7]. Los autores concluyeron que la semaglutida oral a una
+        dosis de 25 mg una vez al día produjo una mayor reducción
+        promedio del peso corporal que el placebo.
+      </p>
+
+      <h3>Cómo encaja todo esto</h3>
+
+      <p>
+        La consecuencia práctica de la aprobación de diciembre de
+        2025 es que ahora existen en Estados Unidos{" "}
+        <strong>dos productos orales de semaglutida</strong>{" "}
+        aprobados por la FDA, con indicaciones distintas:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Rybelsus</strong> (3, 7 o 14 mg diarios) — solo
+          para el control glucémico en diabetes tipo 2.
+        </li>
+        <li>
+          <strong>Tabletas de Wegovy</strong> (escalada hasta 25 mg
+          diarios) — para el manejo crónico del peso y la reducción
+          del riesgo cardiovascular en adultos con obesidad o
+          sobrepeso con comorbilidades.
+        </li>
+      </ul>
+
+      <p>
+        Si su objetivo clínico es el control glucémico en diabetes
+        tipo 2, el producto correcto sigue siendo Rybelsus. Si su
+        objetivo es el manejo crónico del peso con una pastilla de
+        semaglutida, el producto correcto son las tabletas de Wegovy
+        25 mg, no Rybelsus. La decisión de iniciar cualquier
+        agonista del receptor de GLP-1 debe tomarla un profesional
+        de la salud basándose en su situación clínica individual,
+        sus comorbilidades y su cobertura de seguro. Para
+        verificar la situación regulatoria actual de cualquier
+        formulación de semaglutida, puede consultar directamente
+        el buscador oficial de la FDA en{" "}
         <a
           href="https://www.accessdata.fda.gov/scripts/cder/daf/"
           className="text-brand-violet hover:underline"
@@ -455,15 +667,18 @@ export default function RybelsusSemaglutidaOralArticle() {
         >
           Drugs@FDA
         </a>
-        {" "}(busque &quot;semaglutide&quot;) o pregunte directamente
-        a su médico sobre las opciones disponibles en este momento.
-        Independientemente del producto, la decisión de iniciar
-        cualquier agonista del receptor de GLP-1 para el manejo del
-        peso debe tomarla un profesional de la salud basándose en
-        su situación clínica individual.
+        {" "}(busque &quot;semaglutide&quot;).
       </p>
 
-      <h2>Rybelsus frente a Ozempic y Wegovy</h2>
+      <h2>
+        Rybelsus, Ozempic, Wegovy inyectable y tabletas de Wegovy
+      </h2>
+
+      <p>
+        Los cuatro productos son semaglutida. Lo que cambia es la
+        forma, la dosis, la frecuencia y la indicación aprobada por
+        la FDA:
+      </p>
 
       <table>
         <thead>
@@ -471,12 +686,14 @@ export default function RybelsusSemaglutidaOralArticle() {
             <th>Característica</th>
             <th>Rybelsus</th>
             <th>Ozempic</th>
-            <th>Wegovy</th>
+            <th>Wegovy inyectable</th>
+            <th>Tabletas de Wegovy</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Principio activo</td>
+            <td>Semaglutida</td>
             <td>Semaglutida</td>
             <td>Semaglutida</td>
             <td>Semaglutida</td>
@@ -486,30 +703,50 @@ export default function RybelsusSemaglutidaOralArticle() {
             <td>Pastilla oral</td>
             <td>Inyección subcutánea</td>
             <td>Inyección subcutánea</td>
+            <td>Pastilla oral</td>
           </tr>
           <tr>
             <td>Frecuencia</td>
             <td>Una vez al día</td>
             <td>Una vez a la semana</td>
             <td>Una vez a la semana</td>
+            <td>Una vez al día</td>
           </tr>
           <tr>
             <td>Dosis aprobadas</td>
             <td>3, 7, 14 mg</td>
             <td>0.25, 0.5, 1, 2 mg</td>
             <td>0.25, 0.5, 1, 1.7, 2.4 mg</td>
+            <td>1.5, 4, 9, 25 mg</td>
           </tr>
           <tr>
             <td>Indicación FDA</td>
             <td>Diabetes tipo 2</td>
-            <td>Diabetes tipo 2; reducción de MACE en ECV establecida</td>
-            <td>Manejo crónico del peso; reducción de MACE en ECV con obesidad</td>
+            <td>
+              Diabetes tipo 2; reducción de MACE en ECV establecida
+            </td>
+            <td>
+              Manejo crónico del peso; reducción de MACE en ECV con
+              obesidad; MASH con fibrosis F2-F3
+            </td>
+            <td>
+              Manejo crónico del peso; reducción de MACE en ECV con
+              obesidad
+            </td>
+          </tr>
+          <tr>
+            <td>Año de aprobación inicial</td>
+            <td>Septiembre de 2019</td>
+            <td>Diciembre de 2017</td>
+            <td>Junio de 2021</td>
+            <td>Diciembre de 2025</td>
           </tr>
           <tr>
             <td>Restricciones de toma</td>
             <td>Ayunas + 30 min de espera</td>
             <td>Ninguna específica</td>
             <td>Ninguna específica</td>
+            <td>Ayunas + 30 min de espera</td>
           </tr>
         </tbody>
       </table>
@@ -585,11 +822,15 @@ export default function RybelsusSemaglutidaOralArticle() {
       <div className="mt-8 rounded-lg border border-brand-violet/20 bg-brand-bg-purple/30 p-4 text-sm text-brand-text-secondary">
         <strong>Aviso médico:</strong> esta guía es informativa y no
         sustituye la consulta médica. Rybelsus es un medicamento con
-        receta indicado para la diabetes tipo 2 y no está aprobado
-        por la FDA para el manejo crónico del peso. Consulte con su
-        médico antes de iniciar, modificar o suspender cualquier
-        tratamiento. Las instrucciones de administración específicas
-        de Rybelsus son esenciales para su efectividad y no deben
+        receta indicado por la FDA para la diabetes tipo 2 y no está
+        aprobado para el manejo crónico del peso. Las tabletas de
+        Wegovy 25 mg son un producto distinto con dosis,
+        indicaciones y marcas propias; aunque contienen el mismo
+        principio activo (semaglutida), no deben confundirse con
+        Rybelsus. Consulte con su médico antes de iniciar, modificar
+        o suspender cualquier tratamiento. Las instrucciones de
+        administración específicas de Rybelsus y de las tabletas de
+        Wegovy son esenciales para su efectividad y no deben
         modificarse.
       </div>
 
