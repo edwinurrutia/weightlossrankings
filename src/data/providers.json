@@ -5862,5 +5862,719 @@
       "confidence": "high",
       "notes": "Live-verified 2026-04-09. Legal entity 'FitRX, LLC dba Zealthy' confirmed via Privacy Policy on getzealthy.com. Recently renamed to Gronk Inc. per DOJ amended complaint. Pricing structure ($151 medication + $135 membership for sema; $216 + $135 for tirz) verified via try.getzealthy.com pricing page. 34-state list verified via secondary aggregator and ToS. FDA Warning Letter 717987 (2026-02-20) directly verified at fda.gov and quoted verbatim in fda_warnings. Novo Nordisk A/S et al v. Zealthy Inc. case 1:25-cv-06391 verified via dockets.justia.com and CourtListener (Aug 4, 2025 filing). DOJ/FTC case United States v. Cerebral et al 1:24-cv-21376 (amended to add Zealthy/FitRX/Gronk and Kyle Robertson) verified via DOJ press release and PACER. Founder Kyle Robertson previously founded Cerebral, which settled with FTC June 2024. EDITORIAL POSITION 2026-04-09: include in the dataset for transparent disclosure with the affiliate CTA still wired (Katalys program ID 1508 is approved for our account), but is_featured=false and ranked at the bottom — readers must see the warnings before clicking. Confidence HIGH because every adverse-action claim is sourced to a primary government or court record."
     }
+  },
+  {
+    "_id": "strut-health",
+    "name": "Strut Health",
+    "slug": "strut-health",
+    "description": "Strut Health offers LegitScript + ACHC-accredited compounded semaglutide and tirzepatide in both injectable and oral lozenge formats, shipping to 49 states. Board-certified US physicians handle prescribing with free unlimited follow-up messaging, but eligibility is gated behind a 'medical necessity' clinician determination that isn't publicly defined.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Oral lozenge",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 99
+      },
+      {
+        "dose": "Injectable",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 149
+      },
+      {
+        "dose": "Oral lozenge",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Injectable",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 199
+      }
+    ],
+    "scores": {
+      "value": 8.5,
+      "effectiveness": 7.5,
+      "ux": 8,
+      "trust": 8.5,
+      "accessibility": 8.5,
+      "support": 8
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Oral Lozenge Option",
+      "LegitScript Verified",
+      "ACHC Accredited"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=384&aff_id=12086&source=weightlossrankings&sub1=strut-health",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Both LegitScript and ACHC accreditation — pharmacy oversight standard most compounded GLP-1 providers don't advertise",
+      "Oral lozenge formulation available for semaglutide ($99/mo) and tirzepatide ($199/mo) — injection-free alternative",
+      "Transparent auto-refill pricing with 13–21% savings vs. one-off orders",
+      "Free unlimited follow-up messaging with board-certified US physicians",
+      "49 states covered (only Arkansas excluded as of September 2024)"
+    ],
+    "cons": [
+      "'Medical necessity' eligibility gate — Strut's prescribers evaluate whether treatment is medically appropriate but the criteria are not publicly defined, so users can't self-screen before paying for a consultation",
+      "Compounded only — no FDA-approved Ozempic, Wegovy, Zepbound, or Mounjaro option",
+      "Pharmacy partners not publicly named — users can't independently verify 503A/503B compounding source",
+      "No insurance accepted — cash pay only",
+      "Phone consultation requirement varies by state (not every state mandates a synchronous visit)"
+    ],
+    "best_for": "oral-lozenge compounded GLP-1 access",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://struthealth.com/",
+        "https://struthealth.com/privacy-policy",
+        "https://struthealth.com/womens-weight-loss/oral-semaglutide",
+        "https://struthealth.com/faq",
+        "https://struthealth.com/how-it-works"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity 'Strut Health, LLC' confirmed via privacy-policy footer; registered 701 Commerce Street, Dallas TX 75202. States verbatim from FAQ: 'As of September 2024, we can ship to all states except for Arkansas.' Pricing from individual product pages: oral sema $99/mo auto-refill, injectable sema $149/mo, oral tirz $199/mo, injectable tirz $199/mo. 'Medical Necessity Required' is posted verbatim on every weight loss product page but the criteria are not publicly defined — a material eligibility gate readers should know about before paying for a consultation. ACHC accreditation verified via footer link to achc.org/compounding-pharmacy/. LegitScript certification claimed on product pages. No FDA warning letters found for 'Strut Health' or 'Strut Health, LLC' in the FDA warning letters database as of 2026-04-09. No litigation found. Katalys program ID 384, default payout $125.00 + 6 payout variants. Attribution verified 2026-04-09: struthealth.com landing HTML has 5 'katalys' references and 2 'revoffers' references — strongest positive tracking signal of any Katalys advertiser we've tested. Confidence MEDIUM rather than HIGH because the 'medical necessity' gate is editorially significant and pharmacy partners are unnamed."
+    }
+  },
+  {
+    "_id": "sprout-health",
+    "name": "Sprout Health",
+    "slug": "sprout-health",
+    "description": "Sprout Health Partners offers LegitScript-certified compounded semaglutide ($249/mo) and tirzepatide ($299/mo) via a quiz-first telehealth flow with licensed clinician review, shipping compounded medication from Foothills Pharmacy or Promise Pharmacy.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 299
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 7.5,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "LegitScript Verified"
+    ],
+    "states_available": [
+      "AK",
+      "AZ",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1286&aff_id=12086&source=weightlossrankings&sub1=sprout-health",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "LegitScript certification confirmed",
+      "Both compounded semaglutide and tirzepatide available",
+      "44-state coverage via a pre-qualification quiz and licensed clinician review",
+      "Two named 503A pharmacy partners: Foothills Pharmacy and Promise Pharmacy"
+    ],
+    "cons": [
+      "Compounded only — no FDA-approved Ozempic, Wegovy, Zepbound, or Mounjaro",
+      "Not available in Alabama, Arkansas, California, Louisiana, Mississippi, or North Dakota",
+      "Relatively high base pricing ($249/mo for sema, $299/mo for tirz) compared to intro-priced competitors",
+      "Pharmacy partner accreditation details (PCAB/ACHC) not independently verified"
+    ],
+    "best_for": "LegitScript-verified compounded GLP-1 via named pharmacies",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://joinsprouthealth.com/",
+        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/compliance-actions-and-activities/warning-letters"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity 'Sprout Health Partners LLC' confirmed via joinsprouthealth.com footer. Pricing: compounded semaglutide $249/mo and tirzepatide $299/mo. Pharmacy partners Foothills Pharmacy and Promise Pharmacy. LegitScript certified. States served: 44 (excludes AL, AR, CA, LA, MS, ND). CORRECTION 2026-04-09: an earlier-session claim that Sprout Health received an FDA warning letter on 2026-03-03 as part of the mass 30-company GLP-1 telehealth enforcement action could NOT be verified — re-searched the FDA warning letters database and Sprout Health does not appear in any published recipient list of that action. The earlier claim was removed from this entry and fda_warnings is empty. If a future FDA action targets Sprout directly, update this entry with the verbatim letter URL. Katalys program ID 1286, default payout $250.00 + 2 payout variants."
+    }
+  },
+  {
+    "_id": "direct-meds",
+    "name": "Direct Meds",
+    "slug": "direct-meds",
+    "description": "Direct Meds is a Utah-based telehealth provider offering compounded semaglutide and tirzepatide in injection and sublingual formats. Listed here with full disclosure of a September 2025 FDA warning letter for misleading marketing, plus a documented pattern of customers reporting unexpected 3-month commitment charges — see warnings and cons before considering.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Sublingual",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "Injection",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 297
+      },
+      {
+        "dose": "Sublingual",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 399
+      },
+      {
+        "dose": "Injection",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 399
+      }
+    ],
+    "scores": {
+      "value": 6,
+      "effectiveness": 6,
+      "ux": 5,
+      "trust": 4,
+      "accessibility": 6,
+      "support": 5
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Sublingual Option",
+      "LegitScript Verified"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1304&aff_id=12086&source=weightlossrankings&sub1=direct-meds",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [
+      {
+        "date": "2025-09-09",
+        "description": "FDA issued a warning letter to Direct Meds on 2025-09-09 as part of an enforcement action that sent warning letters to 55 online telehealth companies / websites selling 'unapproved and misbranded' compounded GLP-1 drugs (semaglutide and tirzepatide). Specific violations cited in the Direct Meds letter include marketing compounded formulations with claims such as 'Same active ingredient as Ozempic and Wegovy' and 'Clinically proven ingredients,' which the FDA held to be false or misleading representations that the compounded product is equivalent to an FDA-approved drug. Source: https://www.aha.org/news/headline/2025-09-17-fda-discloses-warning-letters-dozens-drug-companies"
+      }
+    ],
+    "pros": [
+      "Both semaglutide and tirzepatide available in injection and sublingual formats",
+      "All-inclusive pricing with medication, consultations, supplies, and 1–2 day temperature-controlled shipping",
+      "LegitScript certification confirmed (verified December 2025)",
+      "Named 503A pharmacy partners: CraftedRx (Warrenton, MO) and ChemistryRx (Folcroft, PA)"
+    ],
+    "cons": [
+      "FDA warning letter September 9, 2025 for misleading marketing of compounded GLP-1s as equivalent to FDA-approved drugs — compliance status post-warning not publicly documented",
+      "Extensive Better Business Bureau complaint pattern (rating 1.12/5 across 226 reviews as of April 2026) documenting a hidden 3-month commitment trap: multiple users report being charged $940+ for a 3-month supply when they believed they were purchasing 1 month. Direct Meds disputes the characterization but the complaint volume is material",
+      "Katalys program name 'Direct Meds GLP-1 Offers Top Funnels' and $280 CPA payout indicate aggressive performance-marketing optimization, which can correlate with conversion-first UX patterns",
+      "Rating discrepancy: Trustpilot 4.6/5 from 7,500+ reviews vs. BBB 1.12/5 from 226 reviews — suggests either review-solicitation bias or genuine unresolved customer experience issues",
+      "Not available in Mississippi, Louisiana, or California",
+      "Compounded only — no FDA-approved Ozempic, Wegovy, Zepbound, or Mounjaro",
+      "Incorporated May 2024 — less than 2 years of operational history",
+      "Auto-renewal continues until manual email cancellation; BBB complaints report retention-department friction and hold times exceeding 15 minutes"
+    ],
+    "best_for": "listed for transparent disclosure — see FDA warning and BBB complaint pattern before considering",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://directmeds.com/",
+        "https://www.aha.org/news/headline/2025-09-17-fda-discloses-warning-letters-dozens-drug-companies",
+        "https://www.bbb.org/us/ut/draper/profile/telemedicine/direct-meds-llc-1166-90048476",
+        "https://www.bbb.org/us/ut/draper/profile/telemedicine/direct-meds-llc-1166-90048476/customer-reviews",
+        "https://www.globenewswire.com/news-release/2025/12/27/3210680/0/en/Direct-Meds-GLP-1-Medications-Platform-Maintains-LegitScript-Certification-as-New-Year-Weight-Loss-Interest-Peaks-Amid-Compounding-Regulatory-Shifts.html"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity 'Direct Meds, LLC' confirmed via BBB business profile; incorporated 2024-05-06; 14572 S 790 W #A100, Bluffdale UT 84065. CEO: Chris Armstrong. LegitScript certification verified December 2025 via GlobeNewswire press release. Pharmacy partners CraftedRx (Warrenton MO) and ChemistryRx (Folcroft PA) verified. FDA warning letter September 9, 2025 verified via AHA News coverage of the 55-company enforcement wave. BBB 1.12/5 rating with 226 reviews documenting a consistent pattern of users being charged for 3-month supplies they did not intend to order — the specific complaint cited in cons ('$940.00 for a three month supply I did not want') is verbatim from BBB customer reviews. Trustpilot 4.6/5 with 7,500+ reviews per Yahoo Finance coverage — the magnitude of that discrepancy is itself editorially significant. EDITORIAL POSITION 2026-04-09: include in the dataset with affiliate CTA wired for transparent disclosure, is_featured=false, low trust score (4). Users who find Direct Meds via comparison pages will see the FDA warning and BBB commitment-trap disclosure prominently before clicking. Katalys program ID 1304, default payout $280.00. This is a Zealthy-tier risk profile (included with full disclosure, not recommended) though with lower severity because there's no DOJ or manufacturer lawsuit."
+    }
+  },
+  {
+    "_id": "mystart-health",
+    "name": "MyStart Health",
+    "slug": "mystart-health",
+    "description": "MyStart Health offers all-inclusive compounded semaglutide and tirzepatide at $299/month with a price-lock guarantee, same-day physician consultations, and 24/7 care team access. LegitScript certified; Delaware MSO partnering with licensed US clinicians. Best-for: speed of onboarding.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "All-inclusive",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "All-inclusive",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 299
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.5,
+      "ux": 8,
+      "trust": 7,
+      "accessibility": 8,
+      "support": 8.5
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Price Lock Guarantee",
+      "LegitScript Verified",
+      "24/7 Access"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1458&aff_id=12086&source=weightlossrankings&sub1=mystart-health",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Price Lock Guarantee — base monthly rate ($299) doesn't increase even when your prescribed dose escalates",
+      "Fast onboarding: quoted 5-minute intake, 24-hour prescription turnaround, 2–4 day shipping",
+      "24/7 access to the care team with unlimited clinician messaging included",
+      "LegitScript certified",
+      "Transparent Section 503A compounding disclosure on every landing page"
+    ],
+    "cons": [
+      "Not BBB accredited — BBB rating of C+ with 10 complaints filed against the business (BBB file opened April 24, 2025), most involving shipping delays and customer service access issues in early 2026",
+      "Compounded only — no FDA-approved Ozempic, Wegovy, Zepbound, or Mounjaro",
+      "Oral tirzepatide referenced in marketing but FAQ clarifies injectable is 'currently more common' — no FDA-approved oral tirzepatide exists, and the November 2025 Chimicles class action against OpenLoop/Triad Rx over unapproved oral tirzepatide products is a cautionary data point for the category",
+      "Very recent company (incorporated May 21, 2024 per BBB) — limited operational track record",
+      "Pharmacy partners not publicly named — no independent way to verify 503A compliance",
+      "Clinical efficacy claims are based on a homepage survey of only 16 self-reporting customers"
+    ],
+    "best_for": "fastest compounded GLP-1 onboarding with a price lock",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.mystarthealth.com/",
+        "https://www.mystarthealth.com/support/faqs",
+        "https://www.mystarthealth.com/legal/medication-safety-information",
+        "https://www.mystarthealth.com/legal/disclosures",
+        "https://www.bbb.org/us/de/newark/profile/app-developers/mystart-health-llc-0251-92034286"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity 'MyStart Health LLC' (Delaware MSO) confirmed via BBB and medication safety disclosures on mystarthealth.com. Incorporated 2024-05-21. Founder/CEO: Matthew Stern. Chief Medical Advisor Dr. Ritu Chopra. Pricing $299/month all-inclusive per FAQ verbatim: 'The MyStart program starts at $299/month, excluding any discounts. This all-inclusive pricing covers physician evaluations, follow-up appointments, unlimited access to clinicians, monthly prescriptions, a 4-week or 12-week supply of medication (depending on your chosen plan), any necessary blood work, and shipping—guaranteed with no hidden fees.' Compounded-drug disclosure verbatim from disclosures page: 'These compounded medications are not approved by the U.S. Food and Drug Administration (FDA). They are not evaluated by the FDA for safety, effectiveness, or quality.' LegitScript certification claimed; BBB rating C+, file opened 2025-04-24, 10 complaints. No FDA warning letters found for MyStart Health or MyStart Health LLC as of 2026-04-09. Not named in the Chimicles oral tirzepatide class action filed November 2025 in D. Del., but the oral tirz marketing overlap warrants note. Katalys program ID 1458, default payout $200.00. Attribution verified 2026-04-09: mystarthealth.com landing HTML has 2 'katalys' references and 1 'revoffers' reference — positive tracking signal."
+    }
+  },
+  {
+    "_id": "tmates",
+    "name": "TMates",
+    "slug": "tmates",
+    "description": "TMates is a Miami-based telehealth platform offering compounded semaglutide ($199/mo) and tirzepatide ($297/mo) across all 50 states plus Puerto Rico, operating on a messaging-first model with independent licensed prescribers and third-party compounding pharmacies.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 297
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 6,
+      "ux": 6,
+      "trust": 5,
+      "accessibility": 8,
+      "support": 6
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "All 50 States + PR"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1471&aff_id=12086&source=weightlossrankings&sub1=tmates",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "All-inclusive monthly pricing covers medication, consultations, nutrition coaching, and 24/7 support with no separate membership fee",
+      "Available in all 50 US states plus Puerto Rico and other US territories",
+      "Both compounded semaglutide and tirzepatide offered",
+      "Fast stated turnaround (intake to medication delivery in 2–3 days)"
+    ],
+    "cons": [
+      "No disclosed third-party accreditations (no verified LegitScript, PCAB, ACHC, or NABP) — weaker pharmacy-oversight signal than competitors",
+      "BBB rating B+ (not accredited) with 8 complaints filed, most involving billing and cancellation friction",
+      "Trustpilot reviews show partial-refund and contact-difficulty reports, and some customer posts allege reviews have been removed",
+      "Compounded only — no FDA-approved Ozempic, Wegovy, Zepbound, or Mounjaro",
+      "Pharmacy partners not publicly named — TMates explicitly disclaims both medical practice and pharmacy dispensing responsibility, routing both to independent third parties",
+      "Also sells Schedule III testosterone products and other wellness SKUs alongside GLP-1s — worth knowing about for readers who want a GLP-1-focused provider"
+    ],
+    "best_for": "nationwide compounded GLP-1 availability including Puerto Rico",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://tmates.com/",
+        "https://www.bbb.org/us/fl/miami/profile/health-and-wellness/tmates-teammates-0633-92049702"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity 'Tmates (Teammates)' confirmed via BBB profile; registered 777 SW 9th Ave Ste 102, Miami FL 33130. Principal: Sergio Padron. BBB file opened 2025-05-12, rating B+, 8 complaints, not BBB accredited. Pricing per Consumer Health Digest and Yahoo Finance coverage: compounded semaglutide $199/mo, compounded tirzepatide $297/mo. CORRECTION 2026-04-09: an earlier-session claim that TMates offers brand-name Wegovy/Zepbound for $99 was WRONG and has been removed — TMates markets compounded formulations only, and the $99 figure likely came from a different provider's introductory promo. All-50-states-plus-PR claim verified via Your Health Magazine and Consumer Health Digest. TMates explicitly disclaims medical practice and pharmacy dispensing per Yahoo Finance: 'TMates LLC operates as a telehealth platform coordinator... The company explicitly states it does not practice medicine or any other licensed profession. Independent licensed providers handle prescribing decisions, while partner pharmacies dispense medications.' No disclosed LegitScript, PCAB, ACHC, or NABP accreditations. Also sells testosterone and other wellness products alongside GLP-1s per OpenPR coverage. No FDA warning letters found for TMates in the FDA warning letters database as of 2026-04-09 (TMates is not in the February 2026 mass enforcement list). Katalys program ID 1471, default payout $250.00. Confidence MEDIUM rather than HIGH because the accreditation gap and complaint pattern are material."
+    }
+  },
+  {
+    "_id": "breeze-meds",
+    "name": "Breeze Meds",
+    "slug": "breeze-meds",
+    "description": "Breeze Meds is a Georgia-based telehealth provider offering compounded semaglutide ($199/mo), tirzepatide ($399/mo), and NAD+ ($169/mo) across all 50 states. LegitScript certified; named medical team (Dr. Ana Lisa Carr MD, Dr. Kelly Tenbrink MD) and a 4-pharmacy compounding network (Belmar, Strive, Epiq Scripts, Casa Pharma Rx) via Lion MD.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Injection",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Injection",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 399
+      },
+      {
+        "dose": "Oral",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "Oral",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 399
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 8.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "All 50 States",
+      "LegitScript Verified",
+      "Oral Option"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1518&aff_id=12086&source=weightlossrankings&sub1=breeze-meds",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Available in all 50 US states",
+      "LegitScript certified seal displayed in footer",
+      "Publicly named medical team with NPI numbers: Dr. Ana Lisa Carr MD (NPI 1689841744) and Dr. Kelly Tenbrink MD (NPI 1346482684)",
+      "Four named 503A pharmacy partners: Belmar Pharma Solutions, Strive Pharmacy, Epiq Scripts, Casa Pharma Rx",
+      "Both injectable and oral formats available for semaglutide and tirzepatide",
+      "No FDA warning letters or litigation on record as of 2026-04-09"
+    ],
+    "cons": [
+      "Runs on the same Lion MD clinician network and the same 4 compounding pharmacies as Care Bare Rx and Synergy Rx — if you're comparing the three brands, be aware you're comparing three storefronts on top of one underlying operation, not three independent providers",
+      "Compounded medications are not FDA-approved",
+      "Compounded vs. brand-name drug sourcing is ambiguously disclosed on the product pages",
+      "Terms of Service page returns a 404 (Privacy Policy is present) — a procedural transparency gap",
+      "Insurance acceptance is not clearly disclosed beyond FSA/HSA eligibility"
+    ],
+    "best_for": "compounded GLP-1 access with named prescribers and 4-pharmacy network",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://breezemeds.com/",
+        "https://breezemeds.com/privacy-policy"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity 'Breezemeds, LLC' (Delaware) confirmed via privacy policy; ops address 134 South Avenue SE, Marietta GA 30060. All-50-states claim verbatim from FAQ: 'We service all 50 states.' Medical team verbatim: 'Dr. Ana Lisa Carr MD (NPI: 1689841744)' and 'Dr. Kelly Tenbrink MD (NPI: 1346482684)'. Four pharmacy partners verbatim: belmarpharmasolutions.com, strivepharmacy.com, epiqscripts.com, casapharmarx.com. LegitScript seal displayed in footer. No FDA warning letters or litigation found as of 2026-04-09. WHITE-LABEL CLUSTER 2026-04-09: Breeze Meds, Care Bare Rx, and Synergy Rx all use the SAME Lion MD clinician team (Dr. Carr + Dr. Tenbrink with the same NPI numbers) AND the SAME 4 compounding pharmacies (Belmar, Strive, Epiq Scripts, Casa Pharma Rx). They appear to be white-labeled storefronts on top of one underlying telehealth + compounding operation. This is disclosed in cons on each of the 3 entries so readers comparing the three know they're not comparing three independent providers. Katalys program ID 1518."
+    }
+  },
+  {
+    "_id": "care-bare-rx",
+    "name": "Care Bare Rx",
+    "slug": "care-bare-rx",
+    "description": "Care Bare Rx is an LGBTQ+-inclusive telehealth brand offering compounded semaglutide and tirzepatide starting at $199/month across all 50 states plus Puerto Rico, with brand-name Ozempic also available. Operates on the shared Lion MD clinician + 4-pharmacy network with Breeze Meds and Synergy Rx.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Ozempic",
+        "form": "brand",
+        "drug": "semaglutide",
+        "monthly_cost": 705
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7,
+      "ux": 7.5,
+      "trust": 7,
+      "accessibility": 8.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded",
+      "Brand",
+      "Semaglutide",
+      "Tirzepatide",
+      "All 50 States + PR",
+      "LGBTQ+ Inclusive"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1519&aff_id=12086&source=weightlossrankings&sub1=care-bare-rx",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Explicit LGBTQ+-inclusive, 'self-care with pride' positioning — one of the few GLP-1 telehealth brands with this framing",
+      "All 50 states + Puerto Rico coverage",
+      "Offers both compounded options ($199/mo) and brand-name Ozempic ($705/mo) — unusual flexibility in the compounded-first telehealth segment",
+      "Same named medical team as Breeze Meds and Synergy Rx: Dr. Ana Lisa Carr MD (NPI 1689841744) and Dr. Kelly Tenbrink MD (NPI 1346482684)",
+      "Four named 503A pharmacy partners (Belmar, Strive, Epiq Scripts, Casa Pharma Rx)",
+      "No FDA warnings or litigation on record"
+    ],
+    "cons": [
+      "Runs on the same Lion MD clinician network and the same 4 compounding pharmacies as Breeze Meds and Synergy Rx — the three brands are white-labeled storefronts on top of one underlying operation, not three independent providers",
+      "Compounded medications are not FDA-approved",
+      "Despite the LGBTQ+ positioning, no formal gender-affirming care pathway or HRT integration is mentioned — the inclusive framing is editorial rather than a clinical specialty",
+      "Limited accreditation transparency beyond LegitScript claim — no PCAB/ACHC seal on site",
+      "Pharmacy partners are named but per-batch third-party testing and accreditation details are not independently disclosed"
+    ],
+    "best_for": "LGBTQ+-inclusive compounded GLP-1 telehealth",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://carebarerx.com/",
+        "https://carebarerx.com/faq",
+        "https://carebarerx.com/privacy-policy"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity 'CareBareRX' (Delaware corporation) headquartered 4575 Webb Bridge Road, Suite 4345, Alpharetta GA 30005. LGBTQ+ inclusive brand framing ('self-care with pride') confirmed via homepage copy. Pricing: compounded starting at $199/mo, Ozempic from $705/mo per homepage. States: all 50 + Puerto Rico per FAQ verbatim. Medical team and pharmacy partners verbatim: 'Lion MD (led by Dr. Ana Lisa Carr and Dr. Kelly Tenbrink)' with pharmacies 'Belmar Pharmacy, Strive Pharmacy, Epiq Scripts, and Casa Pharma Rx' — these are IDENTICAL to Breeze Meds and Synergy Rx, confirming the three brands share one underlying operation. No FDA warning letters or litigation found as of 2026-04-09. Katalys program ID 1519."
+    }
+  },
+  {
+    "_id": "synergy-rx",
+    "name": "Synergy Rx",
+    "slug": "synergy-rx",
+    "description": "Synergy Rx (CareGLP platform, synergyrx.co) is a Wyoming-registered telehealth platform serving 50,000+ patients with compounded semaglutide ($199), tirzepatide ($349), and brand-name Ozempic ($499), Wegovy ($947), and Mounjaro ($947). Runs on the shared Lion MD clinician + 4-pharmacy network with Breeze Meds and Care Bare Rx.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Injection",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Injection",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 349
+      },
+      {
+        "dose": "Oral",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "Oral",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 399
+      },
+      {
+        "dose": "Ozempic",
+        "form": "brand",
+        "drug": "semaglutide",
+        "monthly_cost": 499
+      },
+      {
+        "dose": "Wegovy",
+        "form": "brand",
+        "drug": "semaglutide",
+        "monthly_cost": 947
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 8.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded",
+      "Brand",
+      "Semaglutide",
+      "Tirzepatide",
+      "All 50 States",
+      "LegitScript Verified"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1520&aff_id=12086&source=weightlossrankings&sub1=synergy-rx",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Broad drug catalog: compounded sema/tirz in both injection and oral dissolving tablet formats, plus brand-name Ozempic, Wegovy, and Mounjaro",
+      "Claims 50,000+ patients per homepage as of late 2025",
+      "All 50 US states subject to state telehealth regulations",
+      "Same named medical team as Breeze Meds and Care Bare Rx (Dr. Carr and Dr. Tenbrink via Lion MD)",
+      "Four named 503A pharmacy partners (Belmar, Strive, Epiq Scripts, Casa Pharma Rx)",
+      "LegitScript seal displayed in footer"
+    ],
+    "cons": [
+      "Runs on the same Lion MD clinician network and the same 4 compounding pharmacies as Breeze Meds and Care Bare Rx — the three brands are white-labeled storefronts on top of one underlying operation",
+      "Mandatory individual arbitration + class action waiver in ToS (30-day opt-out window from signup)",
+      "Consultation fees are non-refundable and all prescription sales are final per ToS",
+      "Platform explicitly disclaims liability for third-party pharmacy medication quality: 'SynergyRx makes no representations or warranties regarding the efficacy, safety, or outcomes of any medication provided through these third parties'",
+      "State availability is 'subject to each state's telehealth and prescribing regulations' — the full list of active states requires contacting customer service rather than being published",
+      "Do NOT confuse with the unrelated 'Synergy Rx Pharmacy' (San Diego, CA) that issued a voluntary nationwide recall in February 2017 for non-sterile compounded products — that is a different entity in a different state",
+      "Do not visit synergyrx.com — it is a parked domain on Sedo and unrelated to the telehealth brand. The correct domain is synergyrx.co"
+    ],
+    "best_for": "broadest drug catalog in the Lion MD white-label cluster",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.synergyrx.co/",
+        "https://www.synergyrx.co/terms",
+        "https://www.synergyrx.co/products"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity verbatim from ToS: 'SynergyRx, a Delaware corporation located at 5830 E 2nd St, Ste 7000 #2603, Casper, WY 82609, United States.' Platform operates under the CareGLP brand. Pricing verbatim from /products: compounded semaglutide injection $199, compounded tirzepatide injection $349, compounded semaglutide oral dissolving tablet $299, compounded tirzepatide oral dissolving tablet $399, Wegovy $947, Mounjaro $947, Ozempic $499. States verbatim from FAQ: 'Our telemedicine services are available in all 50 U.S. states, subject to each state's telehealth and prescribing regulations.' 50,000+ patient claim from homepage. Medical team and pharmacies IDENTICAL to Breeze Meds and Care Bare Rx (Lion MD with Dr. Carr + Dr. Tenbrink; Belmar, Strive, Epiq Scripts, Casa Pharma Rx) — confirming the three brands are white-labeled storefronts on top of one underlying operation. The February 2017 'Synergy Rx Pharmacy' recall (San Diego, CA) on fda.gov is a DIFFERENT entity and is not relevant to synergyrx.co. CRITICAL DOMAIN NOTE: synergyrx.com is a parked domain on Sedo (for sale) — the correct telehealth brand is at synergyrx.co. No FDA warning letters found for the current SynergyRx entity as of 2026-04-09. Katalys program ID 1520, default payout not documented here (see dashboard)."
+    }
   }
 ]
