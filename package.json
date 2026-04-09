@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "npm run check:providers && npm run check:tool-freshness && npm run check:vercel-config && npm run check:schema && npm run check:brand-pricing-freshness",
+    "postbuild": "npx tsx scripts/ping-indexnow.ts",
+    "indexnow": "INDEXNOW_FORCE=1 npx tsx scripts/ping-indexnow.ts",
     "check:redirects": "npx tsx scripts/check-redirect-loops.ts",
     "check:redirect-chain": "npx tsx scripts/check-redirect-chain.ts",
     "check:vercel-config": "npx tsx scripts/check-vercel-config.ts",
