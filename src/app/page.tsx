@@ -296,6 +296,7 @@ export default async function HomePage() {
         <HomeHeroProviders
           providers={featured}
           trackingSource="homepage_top_rated"
+          totalProviderCount={allProviders.length}
         />
       )}
 

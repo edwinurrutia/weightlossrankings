@@ -7,6 +7,13 @@ interface HomeHeroProvidersProps {
   /** Featured providers, already sorted with #1 first. */
   providers: Provider[];
   trackingSource: string;
+  /**
+   * Total number of providers in the dataset (NOT just the featured
+   * slice). Drives the "See all N+ providers" CTA. Falls back to
+   * `providers.length` if not supplied, but should always be passed
+   * from the page that knows the real count.
+   */
+  totalProviderCount?: number;
 }
 
 const formatUsd = (n: number) =>
@@ -61,8 +68,17 @@ function pickPullQuote(p: Provider): string | null {
 export default function HomeHeroProviders({
   providers,
   trackingSource,
+  totalProviderCount,
 }: HomeHeroProvidersProps) {
   if (!providers || providers.length === 0) return null;
+
+  // "See all N+ providers" — show the rounded-down dataset total
+  // (matching the headline elsewhere on the page) so the CTA reflects
+  // the real catalog size, not the size of this hero slice.
+  const seeAllCount = (() => {
+    const total = totalProviderCount ?? providers.length;
+    return Math.max(5, Math.floor(total / 5) * 5);
+  })();
 
   const [pick, ...rest] = providers;
   const runnersUp = rest.slice(0, 2);
@@ -111,7 +127,7 @@ export default function HomeHeroProviders({
           href="/compare"
           className="text-sm font-semibold text-brand-violet hover:underline"
         >
-          See all {providers.length}+ providers →
+          See all {seeAllCount}+ providers →
         </Link>
       </div>
 

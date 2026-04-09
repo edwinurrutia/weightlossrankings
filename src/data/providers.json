@@ -971,7 +971,7 @@
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/programs/1435"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. Eden FAQ explicitly states: \"We are currently able to serve GLP-1 programs to all 50 states.\" Prescribes Ozempic, Wegovy, Zepbound, Mounjaro and compounded GLP-1s. Domain is tryeden.com. 2026-04-09 update: approved on Katalys affiliate program, offer_id 1435 (Eden Health GLP-1, default payout $300.00 + 11 payout variants). Tracking routed through track.revoffers.com via /go/eden."
+      "notes": "Verified live via WebFetch 2026-04-07. Eden FAQ explicitly states: \"We are currently able to serve GLP-1 programs to all 50 states.\" Prescribes Ozempic, Wegovy, Zepbound, Mounjaro and compounded GLP-1s. Domain is tryeden.com. 2026-04-09 update: approved on Katalys affiliate program, offer_id 1435 (Eden Health GLP-1, default payout $300.00 + 11 payout variants). Tracking URL rendered natively (track.revoffers.com) with no /go/ wrapper per the Katalys no-cloaking rule."
     }
   },
   {

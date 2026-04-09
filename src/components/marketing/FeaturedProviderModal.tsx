@@ -6,6 +6,10 @@ import { usePathname } from "next/navigation";
 import { computeOverallScore } from "@/lib/scoring";
 import type { Provider } from "@/lib/types";
 import type { FeaturedModalConfig } from "@/lib/featured-modal";
+import {
+  appendKatalysSubIds,
+  isKatalysTrackingUrl,
+} from "@/lib/affiliate-link";
 
 function fireTracking(provider: string, source: string) {
   if (typeof window === "undefined") return;
@@ -177,6 +181,21 @@ export default function FeaturedProviderModal({ config, provider }: Props) {
   const overall = computeOverallScore(provider.scores);
   const trackSource = `modal_featured_${provider.slug}`;
 
+  // For Katalys (track.revoffers.com) providers, render the tracking
+  // URL directly in the anchor href — never wrap through /go/[slug].
+  // Katalys treats intermediary redirects as cloaking, and the click
+  // must originate from a same-domain anchor pointing at their
+  // tracking host. Placement metadata still reaches Katalys via
+  // sub2/sub3 (appended at render time below).
+  //
+  // For non-Katalys providers, keep the /go/<slug> wrapper so we get
+  // server-side click logging that can't be blocked by ad blockers.
+  const ctaHref = isKatalysTrackingUrl(provider.affiliate_url)
+    ? appendKatalysSubIds(provider.affiliate_url, { source: trackSource })
+    : `/go/${encodeURIComponent(provider.slug)}?src=${encodeURIComponent(
+        trackSource,
+      )}`;
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/40 backdrop-blur-sm transition-opacity duration-200"
@@ -277,15 +296,13 @@ export default function FeaturedProviderModal({ config, provider }: Props) {
           ))}
         </ul>
 
-        {/* CTA — routes through /go/[slug] for reliable server-side
-            click logging that can't be blocked by ad blockers, and
-            buildOutboundLink runs server-side at redirect time to
-            preserve UTM attribution for the destination provider. */}
+        {/* CTA — Katalys URLs render natively (no /go/ wrapper) per
+            the Katalys "no cloaking" rule; non-Katalys providers fall
+            back to the /go/[slug] wrapper for reliable server-side
+            click logging that can't be blocked by ad blockers. */}
         <a
           ref={ctaRef}
-          href={`/go/${encodeURIComponent(
-            provider.slug,
-          )}?src=${encodeURIComponent(trackSource)}`}
+          href={ctaHref}
           target="_blank"
           rel="noopener noreferrer sponsored"
           onClick={() => fireTracking(provider.slug, trackSource)}
