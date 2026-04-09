@@ -22,6 +22,64 @@ const UTM_SOURCE = "weightlossrankings";
 const UTM_MEDIUM = "referral";
 
 /**
+ * Katalys (RevOffers) publisher affiliate ID for the "MEAS Partners
+ * LLC / weightlossrankings.org" account. This is a stable account-
+ * level identifier — it does NOT rotate, does NOT vary per-offer, and
+ * is safe to commit to the repo (it's a public tracking ID, not a
+ * secret). Every tracked click needs this value in the aff_id param.
+ *
+ * Source: app.katalys.com → Settings → Partner ID (also visible in
+ * the My Programs table, Traffic Source column).
+ */
+const KATALYS_AFF_ID = "12086";
+
+/**
+ * Katalys (RevOffers) tracking link endpoint. All approved-advertiser
+ * clicks go through this host; Katalys then 302s to the advertiser's
+ * configured landing page with its own attribution cookies set.
+ */
+const KATALYS_TRACK_HOST = "https://track.revoffers.com/aff_c";
+
+/**
+ * Build a Katalys / RevOffers affiliate tracking URL for a specific
+ * advertiser offer. The return value is a fully-formed URL that can
+ * be used as a 302 target from our /go/[slug] route handler.
+ *
+ * Example: buildKatalysRedirectUrl(1286, "homepage", "sprout-health")
+ * returns:
+ *   https://track.revoffers.com/aff_c
+ *     ?offer_id=1286
+ *     &aff_id=12086
+ *     &source=homepage
+ *     &sub1=sprout-health
+ *
+ * The `source` param maps to the section of our site that generated
+ * the click (homepage, review page, compare page, etc.) and is
+ * visible in Katalys analytics for per-page performance.
+ *
+ * The `sub1` param carries the provider slug so that when multiple
+ * providers share a source page (e.g., a ranked list on the
+ * homepage), we can still distinguish which one converted.
+ *
+ * Sub2-Sub5 are available on the Katalys side but we don't currently
+ * use them. If we want to track position, split-test variant, or
+ * similar later, add sub2/sub3 params here without breaking the
+ * existing source/sub1 contract.
+ */
+export function buildKatalysRedirectUrl(
+  offerId: number,
+  source: string,
+  providerSlug: string,
+): string {
+  const url = new URL(KATALYS_TRACK_HOST);
+  url.searchParams.set("offer_id", String(offerId));
+  url.searchParams.set("aff_id", KATALYS_AFF_ID);
+  url.searchParams.set("source", sanitizeUtm(source) || "go");
+  url.searchParams.set("sub1", sanitizeUtm(providerSlug) || "unknown");
+  return url.toString();
+}
+
+/**
  * If the provider's affiliate_url already has its own tracking
  * parameters that we shouldn't overwrite, list them here. We never
  * touch query keys that already exist on the source URL — we only

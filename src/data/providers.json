@@ -951,7 +951,8 @@
       "WY"
     ],
     "affiliate_url": "https://tryeden.com",
-    "affiliate_network": "Direct",
+    "affiliate_network": "Katalys",
+    "katalys_offer_id": 1435,
     "fda_warnings": [],
     "pros": [
       "Both semaglutide and tirzepatide available",
@@ -964,13 +965,14 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-07",
+      "last_verified": "2026-04-09",
       "verified_by": "wave-4-main-session-webfetch",
       "source_urls": [
-        "https://tryeden.com"
+        "https://tryeden.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/programs/1435"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. Eden FAQ explicitly states: \"We are currently able to serve GLP-1 programs to all 50 states.\" Prescribes Ozempic, Wegovy, Zepbound, Mounjaro and compounded GLP-1s. Domain is tryeden.com (the old eden.com URL returns CSS only). Earlier Wave 3 search-pass exclusion-list claim (AR/LA/MS/NM excluded) was WRONG — Eden serves all 50 per their own page. CORRECTED."
+      "notes": "Verified live via WebFetch 2026-04-07. Eden FAQ explicitly states: \"We are currently able to serve GLP-1 programs to all 50 states.\" Prescribes Ozempic, Wegovy, Zepbound, Mounjaro and compounded GLP-1s. Domain is tryeden.com. 2026-04-09 update: approved on Katalys affiliate program, offer_id 1435 (Eden Health GLP-1, default payout $300.00 + 11 payout variants). Tracking routed through track.revoffers.com via /go/eden."
     }
   },
   {
@@ -4157,7 +4159,8 @@
     ],
     "states_available": [],
     "affiliate_url": "https://trimrx.com",
-    "affiliate_network": "Direct",
+    "affiliate_network": "Katalys",
+    "katalys_offer_id": 1515,
     "fda_warnings": [],
     "pros": [
       "Both semaglutide and tirzepatide available",
@@ -4170,13 +4173,14 @@
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-07",
+      "last_verified": "2026-04-09",
       "verified_by": "WebFetch live pull",
       "source_urls": [
-        "https://trimrx.com"
+        "https://trimrx.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/programs/1515"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: TrimRx offers GLP-1 injections prescribed by licensed providers as part of online weight loss program. Specific drug and state list not disclosed publicly."
+      "notes": "Live-verified 2026-04-07: TrimRx offers GLP-1 injections prescribed by licensed providers as part of online weight loss program. Specific drug and state list not disclosed publicly. 2026-04-09 update: approved on Katalys affiliate program, offer_id 1515 (Trim Rx, default payout $300.00). Tracking routed through track.revoffers.com via /go/trimrx."
     }
   },
   {
