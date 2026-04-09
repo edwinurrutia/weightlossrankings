@@ -5536,7 +5536,7 @@
       "State availability and pharmacy partners not publicly listed — patients learn during intake which states and pharmacies serve them"
     ],
     "best_for": "transparent all-in compounded GLP-1 pricing",
-    "is_featured": true,
+    "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
       "verified_by": "manual",
@@ -5547,7 +5547,128 @@
         "https://www.joinnovi.com/medical-consent"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-09. Legal entity Novi Health International LLC, registered 30 N Gould St, Sheridan WY 82801; ops 4131 N Central Expressway #900, Dallas TX 75204. Pricing pulled directly from joinem-equivalent landing page on joinnovi.com: 'Same active ingredient as Ozempic® and Wegovy®. from $174' and 'Same active ingredient as Mounjaro® and Zepbound® from $283'. Three-month commitment clause from ToS: 'the first month's fee as well as the monthly fee for the following two months (for a total of three (3) consecutive months) is charged at the time of purchase and is non-refundable.' No FDA warning letters found for Novi Health International LLC in the FDA warning letters database as of 2026-04-09. State list and pharmacy partners not publicly disclosed — confidence is MEDIUM rather than HIGH. Katalys program ID 1550, default payout $200.00."
+      "notes": "Live-verified 2026-04-09. Legal entity Novi Health International LLC, registered 30 N Gould St, Sheridan WY 82801; ops 4131 N Central Expressway #900, Dallas TX 75204. Pricing pulled directly from the landing page on joinnovi.com: 'Same active ingredient as Ozempic® and Wegovy®. from $174' and 'Same active ingredient as Mounjaro® and Zepbound® from $283'. Three-month commitment clause from ToS: 'the first month's fee as well as the monthly fee for the following two months (for a total of three (3) consecutive months) is charged at the time of purchase and is non-refundable.' No FDA warning letters found for Novi Health International LLC in the FDA warning letters database as of 2026-04-09. Katalys program ID 1550, default payout $200.00. ATTRIBUTION NOTE 2026-04-09: Demoted from the Editor's Pick test on 2026-04-09 after end-to-end verification showed Novi's Katalys attribution chain is broken. The track.revoffers.com redirect drops all Katalys params before reaching joinnovi.com (final landing URL is a bare /offer-v6-low) AND the joinnovi.com landing HTML contains zero katalys/revoffers/transaction_id/Tune references — only Webflow, GTM, and jQuery. No server-to-server postback path is visible. Clicks will log at Katalys but no conversion attribution is possible until the advertiser installs the tracking script or wires a postback. Keeping the entry in the dataset with is_featured=false and the affiliate_url intact — when Novi fixes their tracking we can promote them back into the hero."
+    }
+  },
+  {
+    "_id": "enhance-md",
+    "name": "Enhance MD",
+    "slug": "enhance-md",
+    "description": "Enhance MD pairs compounded semaglutide and tirzepatide with mandatory baseline metabolic labs at Quest Diagnostics and a synchronous video visit with a board-certified clinician — a more rigorous onboarding than the async-only compounded GLP-1 model most telehealth providers use. Three tiers (Core semaglutide, Advanced tirzepatide, Elite combined) plus aggressive intro pricing ($49 first month on Core).",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "GLP-1 Core",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 212,
+        "promo_price": 49,
+        "promo_code": "First Month"
+      },
+      {
+        "dose": "GLP-1 Advanced",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 280,
+        "promo_price": 99,
+        "promo_code": "First Month"
+      },
+      {
+        "dose": "GLP-1 Elite (sema + tirz)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 322,
+        "promo_price": 189,
+        "promo_code": "First Month"
+      }
+    ],
+    "scores": {
+      "value": 8.5,
+      "effectiveness": 8.5,
+      "ux": 8.5,
+      "trust": 8.5,
+      "accessibility": 9,
+      "support": 9
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Quest Diagnostics Labs Included",
+      "Video Visit Required",
+      "3-Tier Pricing"
+    ],
+    "states_available": [
+      "AK",
+      "AZ",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SD",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=738&aff_id=12086&source=weightlossrankings&sub1=enhance-md",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Baseline and ongoing metabolic lab panels (CMP, lipids, TSH, HbA1c) at Quest Diagnostics every 6 months — a rigor most compounded GLP-1 providers skip entirely",
+      "Mandatory one-on-one video visit with a US-licensed MD or NP before the first prescription — not a pure-async questionnaire model",
+      "Three pricing tiers including a combined semaglutide + tirzepatide Elite plan ($322/mo ongoing) — useful for patients plateaued on a single GLP-1",
+      "LegitScript-certified 503A pharmacy network: Tru Meds Rx, Strive Pharmacy, Pharmacy Hub",
+      "Aggressive first-month intro pricing: $49 on Core, $99 on Advanced, $189 on Elite",
+      "Unlimited clinician messaging and dose-adjustment support included"
+    ],
+    "cons": [
+      "Compounded only — no FDA-approved Ozempic, Wegovy, Zepbound, or Mounjaro option",
+      "Not available in 10 states: Alabama, Arkansas, Georgia, Hawaii, Louisiana, Mississippi, Missouri, South Carolina, Tennessee, West Virginia",
+      "Mandatory lab work adds 5–10 days to onboarding vs. async-only competitors",
+      "No insurance accepted — cash pay, HSA/FSA eligible",
+      "First-month intro pricing resets to full tier rate after 30 days — the $49/$99/$189 numbers are not the ongoing cost"
+    ],
+    "best_for": "lab-monitored compounded GLP-1 with mandatory video visit",
+    "is_featured": true,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://enhance.md/",
+        "https://enhance.md/weight-loss/",
+        "https://enhance.md/faq"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity 'Enhance.MD LLC' confirmed via ToS/FAQ: 'Enhance.MD LLC is a patient management platform that provides administrative and operational support to physicians and practitioners employed by Enhance Wellness PC and iThriveMD PC, who deliver care through a telehealth platform.' Registered 16192 Coastal Highway, Lewes, DE 19958. State list verbatim from FAQ: 'Enhance.MD is currently available in 40 states. We are not available in Alabama, Arkansas, Georgia, Hawaii, Louisiana, Mississippi, Missouri, South Carolina, Tennessee, or West Virginia.' Pharmacy partners verbatim: 'Enhance.MD partners with three licensed compounding pharmacies: Tru Meds Rx, Strive Pharmacy, and Pharmacy Hub. All three are LegitScript certified, operate as 503A pharmacies.' Pricing from /weight-loss/: Core sema $212/mo, Advanced tirz $280/mo, Elite sema+tirz $322/mo ongoing; first-month intro $49/$99/$189. No FDA warning letters found for Enhance.MD LLC in the FDA warning letters database as of 2026-04-09 (Enhance.MD does NOT appear in the February 2026 FDA mass enforcement list of 30 GLP-1 telehealth companies). The 'Turner et al v. Enhance Health, LLC' case (0:24-cv-60591) is associated with a different Florida-based ACA marketplace firm, NOT Enhance.MD LLC. Katalys program ID 738, default payout $400.00 match-all + $200.00 NAD. Attribution verified 2026-04-09 via curl: final Katalys landing URL passes utm_source, offer_id, publisher_id, and transaction_id to enhance.md; landing HTML contains 2 transaction_id references indicating URL-param-based conversion tracking (same pattern as Trim Rx). Promoted to #2 runner-up slot on 2026-04-09 to replace Novi, whose Katalys attribution chain was verified broken."
     }
   },
   {
