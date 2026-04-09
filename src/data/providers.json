@@ -6810,5 +6810,326 @@
       "confidence": "high",
       "notes": "Live-verified 2026-04-09 via the Business Wire announcement (SEATTLE, April 9, 2026 7:49 AM EDT). Verbatim from the press release: 'Amazon Pharmacy (NASDAQ: AMZN), a full-service digital pharmacy that offers fast medication delivery directly to customers' homes, now offers Eli Lilly and Company's recently approved GLP-1 medication, Foundayo™, a once daily oral treatment for adults with obesity or overweight with weight-related medical problems.' Pricing verbatim: 'With insurance, pricing starts as low as $1 per day or $25 per month. For cash pay customers, pricing is $5 per day or $149 per month. Manufacturer-sponsored coupons are applied automatically before checkout.' Same-day delivery footprint verbatim: 'Amazon Pharmacy will offer Foundayo via its Same-Day Delivery service in nearly 3,000 cities and towns, expanding to nearly 4,500 by year end. In remote areas where the nearest brick-and-mortar pharmacy can be more than a 45-minute to 60-minute drive away, next-day, two-day and three-day prescription delivery will be offered.' One Medical kiosk verbatim: 'in-office, licensed pharmacist-supported kiosks at select One Medical locations immediately after medical appointments, allowing them to skip long pharmacy lines.' Amazon quote: 'Amazon Pharmacy is reducing barriers for customers to access new weight management treatments like Foundayo. We are giving customers faster treatment options with our Same-Day Delivery offering, easy ways to save with automatically applied manufacturer coupons and the price transparency they need to make informed decisions about their care.' — Tanvi Patel, Vice President and General Manager of Amazon Pharmacy. Lilly quote: 'If prescribed, patients may be able to have Foundayo on their doorstep the same day or walk out of their doctor's office with it in-hand in Los Angeles — eliminating the waiting and uncertainty that patients may face when starting their treatment journey.' — Laura Steele, Group Vice President of U.S. Cardiometabolic Health at Eli Lilly. Operational track record: 'Amazon Pharmacy has delivered GLP-1 medications since 2021 and provides 24/7 access to licensed pharmacists.' Note: One Medical is owned by Amazon (acquired 2023), so the kiosk integration is a same-parent rollout, not a third-party partnership."
     }
+  },
+  {
+    "_id": "trifecta-meal-delivery",
+    "name": "Trifecta Meal Delivery",
+    "slug": "trifecta-meal-delivery",
+    "description": "Trifecta is a prepared-meal delivery service positioned for weight loss, athletic performance, and clean-eating lifestyles. Programs include Clean Classic, Keto, Paleo, Vegan, Vegetarian, and Whole30, with each meal portion-controlled and macro-tracked. Listed here as a weight-loss program adjunct that pairs well with calorie-deficit goals from GLP-1 therapy or standalone behavioral programs.",
+    "category": "Weight Loss Program",
+    "pricing": [
+      {
+        "dose": "Per meal (preliminary)",
+        "form": "brand",
+        "monthly_cost": 200
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 8,
+      "trust": 8,
+      "accessibility": 8,
+      "support": 7
+    },
+    "features": [
+      "Prepared Meals",
+      "Portion-Controlled",
+      "Macro-Tracked",
+      "Multiple Diet Plans"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://www.trifectanutrition.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Removes the meal-prep burden that derails most calorie-deficit attempts",
+      "Multiple plan options (Clean, Keto, Paleo, Vegan, Vegetarian, Whole30) — fits patient preference and clinical restrictions",
+      "Pairs well with GLP-1 therapy where appetite suppression makes high-effort cooking impractical"
+    ],
+    "cons": [
+      "Initial entry — pricing, geographic delivery footprint, plan tier details, and macros need a YMYL verification pass against trifectanutrition.com",
+      "Confidence is LOW until that pass is done",
+      "Per-meal pricing varies by plan and order frequency; the placeholder $200/mo here is illustrative and will be corrected on next pass"
+    ],
+    "best_for": "prepared meal delivery for weight-loss calorie control",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.trifectanutrition.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1483"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1483 (Trifecta Meal Delivery, $55 default CPA). REQUIRES a full YMYL verification pass against trifectanutrition.com before promoting confidence: confirm legal entity, exact plan pricing tiers, delivery footprint, macros + nutrition certification, any FDA / FTC adverse actions. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1483&aff_id=12086&source=weightlossrankings&sub1=trifecta-meal-delivery and change affiliate_network to 'Katalys'."
+    }
+  },
+  {
+    "_id": "buoy",
+    "name": "Buoy",
+    "slug": "buoy",
+    "description": "Buoy is a liquid electrolyte supplement positioned as a hydration enhancer for active lifestyles, low-carb diets, and GLP-1 users — populations that lose electrolytes faster and benefit from supplemental sodium, potassium, and magnesium. Listed here as a GLP-1 companion product because electrolyte loss is a documented side effect of rapid GLP-1-mediated weight loss.",
+    "category": "Weight Loss Program",
+    "pricing": [
+      {
+        "dose": "Monthly subscription (preliminary)",
+        "form": "brand",
+        "monthly_cost": 30
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7.5,
+      "accessibility": 8,
+      "support": 7
+    },
+    "features": [
+      "Electrolytes",
+      "Hydration",
+      "GLP-1 Companion",
+      "Sugar-Free"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://www.justaddbuoy.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Liquid format mixes into any beverage — easier compliance than electrolyte powders",
+      "Sugar-free / no artificial sweeteners (per brand positioning)",
+      "Useful adjunct for GLP-1 patients who experience electrolyte loss from reduced appetite and rapid weight loss"
+    ],
+    "cons": [
+      "Stub entry — exact pricing, ingredient panel per serving, and clinical positioning need a YMYL verification pass",
+      "Confidence is LOW until that pass is done",
+      "Not a substitute for prescription electrolyte management in clinically significant cases"
+    ],
+    "best_for": "GLP-1-companion electrolyte supplement",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.justaddbuoy.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1517"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1517 (Buoy, 20% commission). REQUIRES a full YMYL verification pass against justaddbuoy.com before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per serving, third-party lab testing, any FTC adverse actions, and the GLP-1-companion clinical positioning. The product is positioned as a hydration enhancer broadly — the GLP-1 companion angle is editorial framing, not necessarily the brand's own primary positioning. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1517&aff_id=12086&source=weightlossrankings&sub1=buoy and change affiliate_network to 'Katalys'."
+    }
+  },
+  {
+    "_id": "myrnk",
+    "name": "MYRNK",
+    "slug": "myrnk",
+    "description": "MYRNK is a Health & Wellness brand listed in the Katalys Explore catalog at program ID 1551 with a $50 default CPA plus 2 additional payouts. Stub entry pending product research — the brand's exact category, drug formulary, and editorial fit with Weight Loss Rankings need a YMYL verification pass before this entry is promoted from low confidence.",
+    "category": "Weight Loss Program",
+    "pricing": [
+      {
+        "dose": "Preliminary",
+        "form": "brand",
+        "monthly_cost": 99
+      }
+    ],
+    "scores": {
+      "value": 6,
+      "effectiveness": 6,
+      "ux": 6,
+      "trust": 6,
+      "accessibility": 7,
+      "support": 6
+    },
+    "features": [
+      "Health & Wellness"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://www.myrnk.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Katalys-approved program with $50 base CPA plus 2 additional payout variants — non-trivial commission structure"
+    ],
+    "cons": [
+      "Stub entry — category fit, exact product, pricing, and clinical positioning ALL need a full YMYL verification pass before this entry can be promoted or featured anywhere",
+      "Confidence is LOW until that pass is done",
+      "Domain not yet verified — myrnk.com may not be the correct landing page"
+    ],
+    "best_for": "pending product verification",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1551"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1551 (MYRNK). The product/brand is unknown — needs a full YMYL verification pass to determine category fit, legal entity, pricing, product type, and editorial positioning. Do NOT promote this entry to any /best page or homepage hero until verified. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1551&aff_id=12086&source=weightlossrankings&sub1=myrnk and change affiliate_network to 'Katalys'."
+    }
+  },
+  {
+    "_id": "gruns-greens",
+    "name": "Gruns Greens",
+    "slug": "gruns-greens",
+    "description": "Gruns is a daily greens gummy positioned as a more palatable alternative to powdered greens and traditional multivitamins. Marketed as a nutrition-density tool that pairs with weight-loss diets and GLP-1 therapy to maintain micronutrient intake when overall food intake drops.",
+    "category": "Weight Loss Program",
+    "pricing": [
+      {
+        "dose": "Monthly subscription (preliminary)",
+        "form": "brand",
+        "monthly_cost": 50
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 6.5,
+      "ux": 8,
+      "trust": 7,
+      "accessibility": 8,
+      "support": 7
+    },
+    "features": [
+      "Greens Gummy",
+      "Daily Multivitamin",
+      "Nutrition Density",
+      "GLP-1 Companion"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://gruns.co",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Gummy format is dramatically more compliance-friendly than powdered greens or capsule multivitamins",
+      "Useful for GLP-1 patients who experience reduced appetite and need a low-volume way to maintain micronutrient intake",
+      "Brand-recognition lever — Gruns has run high-visibility marketing campaigns through 2024-2025"
+    ],
+    "cons": [
+      "Stub entry — exact ingredient panel, third-party lab testing, FDA adverse actions, and pricing tiers need a YMYL verification pass",
+      "Confidence is LOW until that pass is done",
+      "Not a substitute for clinical nutrition management — greens supplements have weak evidence relative to whole-food vegetable intake"
+    ],
+    "best_for": "daily-multivitamin gummy as a GLP-1 nutrition adjunct",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://gruns.co",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1430"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1430 (Gruns Greens, $30 default CPA). REQUIRES a full YMYL verification pass against gruns.co before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per gummy, third-party lab testing, GMP/NSF certification, any FTC/FDA adverse actions, and the GLP-1 nutrition-companion clinical claim. Domain may also be grunsdaily.com or thegruns.com — verify on next pass. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1430&aff_id=12086&source=weightlossrankings&sub1=gruns-greens and change affiliate_network to 'Katalys'."
+    }
+  },
+  {
+    "_id": "im8-health",
+    "name": "IM8 Health",
+    "slug": "im8-health",
+    "description": "IM8 Health is a daily health drink and supplement system co-founded by human-biology coach Gary Brecka, positioning itself as an all-in-one greens, prebiotic, probiotic, vitamin, mineral, and adaptogen blend. Marketed for energy, gut health, longevity, and metabolic support — with a high-recognition founder that drives strong brand awareness.",
+    "category": "Weight Loss Program",
+    "pricing": [
+      {
+        "dose": "Monthly subscription (preliminary)",
+        "form": "brand",
+        "monthly_cost": 99
+      }
+    ],
+    "scores": {
+      "value": 6.5,
+      "effectiveness": 6.5,
+      "ux": 7.5,
+      "trust": 7,
+      "accessibility": 8,
+      "support": 7
+    },
+    "features": [
+      "Greens",
+      "Multivitamin",
+      "Probiotic",
+      "Adaptogen",
+      "Founder-Led Brand"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://im8.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "All-in-one daily blend reduces stack complexity vs. taking 5-10 separate supplements",
+      "High brand recognition driven by Gary Brecka's media presence — easier conversion than no-name greens brands",
+      "16% commission rate is above-average for supplement affiliate programs"
+    ],
+    "cons": [
+      "Stub entry — exact ingredient panel, doses per serving, third-party lab testing, and any FTC adverse actions need a YMYL verification pass",
+      "Confidence is LOW until that pass is done",
+      "Some of Gary Brecka's broader health claims (e.g. on hydrogen water, certain genetic interventions) have been challenged by mainstream researchers — the IM8 product itself needs to be evaluated separately from its founder's broader public statements",
+      "Not a substitute for whole-food nutrition or clinical supplementation"
+    ],
+    "best_for": "all-in-one daily greens-and-vitamin blend with founder-driven brand recognition",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://im8.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1428"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1428 (IM8 Health, 16% commission). REQUIRES a full YMYL verification pass against im8.com before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per serving with doses, third-party lab testing certifications, any FTC/FDA adverse actions, and the metabolic-support clinical claim. Founder Gary Brecka's broader health-content portfolio includes some claims (hydrogen water, genetic interventions) that have been challenged in mainstream peer review — those need to be considered separately when evaluating the IM8 product itself. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1428&aff_id=12086&source=weightlossrankings&sub1=im8-health and change affiliate_network to 'Katalys'."
+    }
+  },
+  {
+    "_id": "fatty15",
+    "name": "fatty15",
+    "slug": "fatty15",
+    "description": "fatty15 is a daily C15:0 (pentadecanoic acid) supplement marketed for cellular longevity, metabolic health, and inflammation reduction. C15:0 is an odd-chain saturated fatty acid that the company's published research positions as the first essential fatty acid to be discovered in 90+ years, with claimed effects on cell membrane stability and mitochondrial function.",
+    "category": "Weight Loss Program",
+    "pricing": [
+      {
+        "dose": "Monthly subscription (preliminary)",
+        "form": "brand",
+        "monthly_cost": 50
+      }
+    ],
+    "scores": {
+      "value": 6,
+      "effectiveness": 6,
+      "ux": 7.5,
+      "trust": 7,
+      "accessibility": 8,
+      "support": 7
+    },
+    "features": [
+      "C15:0",
+      "Longevity",
+      "Cellular Health",
+      "Inflammation"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://fatty15.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Single-ingredient supplement with a clear mechanism (C15:0 cell-membrane stability) and a published research portfolio behind it",
+      "Strong brand-recognition lever — fatty15 has run high-profile longevity-content marketing through 2024-2025",
+      "Pure C15:0 is hard to sourcefrom diet alone (mainly found in dairy fat) so supplementation has a defensible nutritional rationale for some patients"
+    ],
+    "cons": [
+      "Stub entry — exact pricing, ingredient panel, third-party lab testing, FDA / FTC adverse actions, and the longevity / metabolic claims all need a YMYL verification pass",
+      "Confidence is LOW until that pass is done",
+      "C15:0 essential-fatty-acid status is the company's own positioning; independent peer-reviewed consensus on whether it should be classified as essential is still developing",
+      "Not a weight-loss product per se — listed here because longevity / cellular health overlaps with our metabolic-health editorial scope, not because it directly causes weight loss"
+    ],
+    "best_for": "single-ingredient C15:0 longevity supplement",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://fatty15.com",
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1559"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1559 (fatty15, 8% commission). REQUIRES a full YMYL verification pass against fatty15.com before promoting confidence: confirm legal entity (Seraphina Therapeutics Inc), exact pricing tiers, dose per capsule, third-party lab testing, the published C15:0 research portfolio, any FTC/FDA adverse actions, and the essential-fatty-acid positioning. The C15:0 essential-fatty-acid claim is the company's own published position — independent peer-reviewed consensus on whether it should be officially classified as essential is still developing. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1559&aff_id=12086&source=weightlossrankings&sub1=fatty15 and change affiliate_network to 'Katalys'."
+    }
   }
 ]
