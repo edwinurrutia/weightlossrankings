@@ -34,10 +34,7 @@
 
 import { redirect } from "next/navigation";
 import providersData from "@/data/providers.json";
-import {
-  buildKatalysRedirectUrl,
-  buildOutboundLink,
-} from "@/lib/affiliate-link";
+import { buildOutboundLink } from "@/lib/affiliate-link";
 import { incrementClick } from "@/lib/kv";
 
 export const runtime = "nodejs";
@@ -47,13 +44,6 @@ interface ProviderRecord {
   slug: string;
   name?: string;
   affiliate_url?: string;
-  /**
-   * Katalys (RevOffers) offer ID. When present, the redirect routes
-   * through track.revoffers.com with our publisher aff_id so the
-   * click becomes a tracked affiliate conversion. See
-   * buildKatalysRedirectUrl() in src/lib/affiliate-link.ts.
-   */
-  katalys_offer_id?: number;
 }
 
 const providers = providersData as ProviderRecord[];
@@ -122,29 +112,23 @@ export async function GET(
     console.error("[/go] click logging failed", err);
   }
 
-  // Build the outbound URL. Two paths:
+  // Tag the outbound URL with UTM params so the destination
+  // provider's analytics still sees us as a named referrer. For
+  // providers whose affiliate_url is already an affiliate-network
+  // tracking URL (e.g. Katalys's track.revoffers.com), buildOutboundLink
+  // will safely pass through the existing offer_id/aff_id/source/sub1
+  // query params — it only adds utm_* keys that are not already set,
+  // and the affiliate network simply ignores extra utm params.
   //
-  //   1. Provider is in the Katalys (RevOffers) network and we have
-  //      an approved offer_id → route through track.revoffers.com so
-  //      the click becomes a tracked affiliate conversion. Katalys
-  //      handles the second hop to the advertiser's landing page.
-  //
-  //   2. Provider is NOT in the Katalys network (or not yet approved)
-  //      → fall through to the regular UTM-tagged outbound link so
-  //      the destination provider's own analytics still attributes
-  //      us as a named referrer.
-  //
-  // The Katalys path deliberately IGNORES position tagging — Katalys
-  // offers 5 sub params (sub1-sub5) and we only use sub1 for the
-  // provider slug today. Position is still captured server-side in
-  // our own click log via incrementClick() above.
-  const outbound = provider.katalys_offer_id
-    ? buildKatalysRedirectUrl(provider.katalys_offer_id, source, slug)
-    : buildOutboundLink(provider.affiliate_url, {
-        source,
-        provider: slug,
-        position: position ?? undefined,
-      });
+  // Most Katalys clicks don't come through this route anyway — see
+  // CTAButton.tsx, which renders track.revoffers.com URLs directly in
+  // <a href> without the /go/[slug] wrapper so Katalys's own tracking
+  // sees the click in its native form (no masking).
+  const outbound = buildOutboundLink(provider.affiliate_url, {
+    source,
+    provider: slug,
+    position: position ?? undefined,
+  });
 
   // 302 is correct here — the destination is dynamic and may change
   // (affiliate program swap, link rotation), so we don't want

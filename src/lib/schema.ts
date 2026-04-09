@@ -55,25 +55,6 @@ export const ProviderSchema = z.object({
     .array(z.string().regex(STATE_CODE, "state code must be 2 uppercase letters")),
   affiliate_url: z.string().url("affiliate_url must be a valid URL"),
   affiliate_network: z.string().optional(),
-  /**
-   * Katalys (RevOffers) affiliate program offer ID. When set, the
-   * /go/[slug] server-side redirect routes through
-   * https://track.revoffers.com/aff_c?offer_id={X}&aff_id=12086
-   * instead of the raw affiliate_url. This turns every CTA click on
-   * this provider into a tracked affiliate conversion via the
-   * Katalys publisher account "MEAS Partners LLC" (aff_id 12086).
-   *
-   * Obtain the offer_id from app.katalys.com → My Programs → column 2
-   * after brand approval. Do NOT guess — an incorrect offer_id will
-   * either 404 at Katalys or (worse) attribute clicks to a different
-   * advertiser's program.
-   *
-   * Leaving this field undefined is the correct default for any
-   * provider that is NOT in the Katalys network, or for which we do
-   * not yet have approval. Those providers continue to redirect
-   * directly to affiliate_url with UTM tagging only.
-   */
-  katalys_offer_id: z.number().int().positive().optional(),
   fda_warnings: z.array(
     z.object({
       date: z.string(),

@@ -98,29 +98,48 @@ export default function CTAButton({
   };
 
   if (external) {
-    // When the link points to a provider we know by slug, route it
-    // through /go/[slug] so we get reliable server-side click logging
-    // (the existing /api/track-click beacon can be blocked by ad
-    // blockers). The /go endpoint applies the same UTM tagging on
-    // the server before 302-ing to the real provider URL, so the
-    // destination provider's analytics still attributes the visit.
+    // Three rendering paths for the outbound href:
     //
-    // For external links that aren't tied to a known provider slug
-    // (rare — non-affiliate outbound links), fall back to tagging
-    // the href directly here.
-    const outboundHref = trackProvider
-      ? `/go/${encodeURIComponent(trackProvider)}?src=${encodeURIComponent(
-          trackSource ?? "unknown",
-        )}${
-          typeof trackPosition === "number"
-            ? `&pos=${trackPosition}`
-            : ""
-        }`
-      : buildOutboundLink(href, {
-          source: trackSource ?? "unknown",
-          provider: trackProvider,
-          position: trackPosition,
-        });
+    //  1. Affiliate-network tracking URL already baked into href
+    //     (e.g. https://track.revoffers.com/aff_c?... from Katalys).
+    //     Render DIRECTLY in the <a href> with no /go/[slug] wrapper.
+    //     Rationale: affiliate networks expect the click to originate
+    //     from a same-domain anchor pointing at their tracking host.
+    //     Wrapping with /go/[slug] technically still works (we tested
+    //     — Katalys honors the server-side 307), but some networks
+    //     treat intermediary redirects as "cloaking" or "masking" and
+    //     risk TOS issues. Rendering the tracking URL directly is the
+    //     transparent, network-preferred pattern. Server-side click
+    //     logging is skipped for these clicks — Katalys's own click
+    //     dashboard is the source of truth for affiliate conversions
+    //     anyway (and it's what the payouts are based on).
+    //
+    //  2. Known provider slug with a non-tracking affiliate_url
+    //     (e.g. https://www.hims.com). Route through /go/[slug] so we
+    //     get reliable server-side click logging bypass of ad
+    //     blockers. /go applies UTM tagging on the server before
+    //     302-ing to the real provider URL.
+    //
+    //  3. External link not tied to a known provider slug (rare —
+    //     non-affiliate outbound links). Tag the href directly with
+    //     UTM params and render as an <a>.
+    const isAffiliateTrackingHost = /^https:\/\/(track|db)\.revoffers\.com\//i.test(href);
+    let outboundHref: string;
+    if (isAffiliateTrackingHost) {
+      outboundHref = href;
+    } else if (trackProvider) {
+      outboundHref = `/go/${encodeURIComponent(trackProvider)}?src=${encodeURIComponent(
+        trackSource ?? "unknown",
+      )}${
+        typeof trackPosition === "number" ? `&pos=${trackPosition}` : ""
+      }`;
+    } else {
+      outboundHref = buildOutboundLink(href, {
+        source: trackSource ?? "unknown",
+        provider: trackProvider,
+        position: trackPosition,
+      });
+    }
     return (
       <a
         href={outboundHref}
