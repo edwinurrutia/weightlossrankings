@@ -624,16 +624,32 @@ export default async function PharmacyDetailPage({
           </p>
         </section>
 
-        {/* Verification */}
-        <section className="rounded-xl border border-brand-border bg-brand-surface/50 p-4 text-xs text-brand-text-secondary">
-          <strong className="text-brand-text-primary">
-            Data verification:
-          </strong>{" "}
-          Last verified {pharmacy.verification.last_verified} by{" "}
-          {pharmacy.verification.verified_by}. Confidence:{" "}
-          {pharmacy.verification.confidence}.
-          {pharmacy.verification.notes && <> {pharmacy.verification.notes}</>}
-        </section>
+        {/* Verification — subtle inline disclosure. Do NOT render
+            `pharmacy.verification.notes` here: that field is internal-only
+            editorial documentation (tracking IDs, swap instructions,
+            operational history) and leaking it to the public template
+            was caught + fixed on 2026-04-09 for the /reviews/[provider]
+            template. Same rule applies here. */}
+        <p className="text-xs text-brand-text-secondary/80 leading-relaxed">
+          <span className="font-semibold text-brand-text-secondary">
+            {pharmacy.verification.confidence === "high"
+              ? "High confidence"
+              : pharmacy.verification.confidence === "medium"
+                ? "Medium confidence"
+                : "Low confidence"}
+          </span>
+          {" · "}Last verified {pharmacy.verification.last_verified}
+          {pharmacy.verification.verified_by
+            ? ` via ${pharmacy.verification.verified_by}`
+            : ""}
+          {" · "}
+          <Link
+            href="/nature-of-reviews"
+            className="text-brand-violet underline underline-offset-2 hover:text-brand-blue"
+          >
+            How we verify provider data
+          </Link>
+        </p>
 
         <FAQSection items={faqs} />
 
