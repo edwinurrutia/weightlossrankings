@@ -1303,8 +1303,8 @@
       "WI",
       "WY"
     ],
-    "affiliate_url": "https://www.joinfound.com",
-    "affiliate_network": "Direct",
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1162&aff_id=12086&source=weightlossrankings&sub1=found",
+    "affiliate_network": "Katalys",
     "fda_warnings": [],
     "pros": [
       "Aggressively low monthly pricing",
@@ -1324,7 +1324,7 @@
         "https://www.joinfound.com"
       ],
       "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. Found operates in all 50 states. Prescribes Wegovy ($650/mo), Zepbound ($650/mo), Ozempic ($1,100/mo), Mounjaro (~$1,100/mo), Saxenda, Victoza. Has interactive insurance map showing carrier availability by state. KATALYS APPLICATION 2026-04-09: applied to Katalys program 1162 ($260 default). Once approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1162&aff_id=12086&source=weightlossrankings&sub1=found and change affiliate_network from 'Direct' to 'Katalys'."
+      "notes": "Verified live via WebFetch 2026-04-07. Found operates in all 50 states. Prescribes Wegovy ($650/mo), Zepbound ($650/mo), Ozempic ($1,100/mo), Mounjaro (~$1,100/mo), Saxenda, Victoza. Has interactive insurance map showing carrier availability by state. KATALYS APPLICATION 2026-04-09: applied to Katalys program 1162 ($260 default). Once approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1162&aff_id=12086&source=weightlossrankings&sub1=found and change affiliate_network from 'Direct' to 'Katalys'. KATALYS APPROVAL 2026-04-09: program 1162 (Found Health) APPROVED. Affiliate URL upgraded from https://www.joinfound.com (direct) to the Katalys tracking URL pattern. affiliate_network changed from 'Direct' to 'Katalys'. Default payout $260. Per the no-/go/-wrapper rule, the URL renders natively in CTA hrefs and appendKatalysSubIds() appends sub2/sub3 at render time."
     }
   },
   {
@@ -7486,6 +7486,61 @@
       ],
       "confidence": "low",
       "notes": "Stub entry created 2026-04-09 after applying to Katalys program 287 (BetterBrand). Per the Katalys program detail page, BetterBrand is tagged Health & Wellness + Health & Beauty + Nutrition + Supplements, headquartered in Boulder, CO. Visible products in the program detail screenshot: Better Focus, Better Morning, Better Lungs. REQUIRES a full YMYL verification pass against betterbrand.com before promoting confidence: confirm legal entity, full SKU lineup (specifically whether there's a weight-loss / metabolism / appetite SKU that justifies placement on /best/weight-loss-supplements), exact pricing tiers, ingredient panels per serving, third-party lab certifications, and any FDA / FTC adverse actions. CRITICAL: if no weight-loss-specific SKU exists, this entry should be moved off /best/weight-loss-supplements and placed in a more appropriate section, OR the editorial framing should explicitly explain why a focus / energy / lungs supplement is being listed alongside weight-loss products. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=287&aff_id=12086&source=weightlossrankings&sub1=betterbrand and change affiliate_network to 'Katalys'. Category set to 'Supplement' so the entry renders on /best/weight-loss-supplements per the CATEGORY_MAP filter in src/app/best/[category]/page.tsx. KATALYS APPROVAL 2026-04-09: program 287 APPROVED. Affiliate URL upgraded from https://www.betterbrand.com (direct) to the Katalys tracking URL. affiliate_network changed from 'Direct' to 'Katalys'. Per the no-/go/-wrapper rule, the URL will render natively in CTA hrefs and appendKatalysSubIds() will append sub2 (page source) and sub3 (list position) at render time per the standard placement-tracking pattern."
+    }
+  },
+  {
+    "_id": "get-thin-md",
+    "name": "Get Thin MD",
+    "slug": "get-thin-md",
+    "description": "Get Thin MD is a US-based online health and wellness platform offering personalized weight management and metabolic health treatment plans. Through an async online medical evaluation, eligible patients are prescribed GLP-1 medications (compounded and oral GLP-1 options) by licensed US clinicians and fulfilled via a trusted mail-order pharmacy. Stub entry pending YMYL verification — exact domain, pricing tiers, states served, and pharmacy partners need a primary-source pass.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Preliminary",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded",
+      "Oral GLP-1",
+      "Weight Management",
+      "Mail-Order Pharmacy"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1549&aff_id=12086&source=weightlossrankings&sub1=get-thin-md",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Katalys-approved program at $350 default CPA — one of the higher GLP-1 payouts in the catalog",
+      "Both injectable and oral GLP-1 options available per the Katalys program description",
+      "Async online evaluation model — no in-person visit required"
+    ],
+    "cons": [
+      "Stub entry — exact domain, legal entity, pricing tiers, states served, and pharmacy partners ALL need a YMYL verification pass before this entry can be promoted or featured",
+      "Confidence is LOW until that pass is done",
+      "Oral GLP-1 marketing needs verification — the November 2025 Chimicles class action against OpenLoop/Triad Rx targets providers advertising unapproved oral tirzepatide. Get Thin MD needs to be checked against the named-defendants list and against the actual product they prescribe",
+      "Domain not yet verified — likely getthinmd.com but needs confirmation against the Katalys Default Landing Page field"
+    ],
+    "best_for": "pending product verification — async-prescribed compounded + oral GLP-1",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/programs/1549"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-09 after Katalys program 1549 (Get Thin GLP-1 / Get Thin MD, $350 default CPA) was APPROVED. Per the Katalys program detail page: brand name 'Get Thin MD', vertical Health & Wellness, geography United States of America, 'US-based online health and wellness platform that connects patients with licensed US healthcare providers for personalized treatment plans focused on weight management and metabolic health. The platform offers access to GLP-1 based medications such as semaglutide and tirzepatide, along with other wellness treatments including hormone therapy, hair loss support, and anti-aging solutions. Through a quick online evaluation, eligible patients can receive prescriptions reviewed by medical professionals and have medications shipped directly from a trusted mail-order pharmacy to their door, making treatment more convenient and accessible.' Affiliate URL is LIVE Katalys from day one since the approval happened before we shipped any Direct placeholder. REQUIRES a full YMYL verification pass against the brand's actual landing page before promoting confidence: (1) confirm correct domain (likely getthinmd.com but verify against the Default Landing Page field in the Katalys dashboard), (2) legal entity and state of incorporation, (3) exact drug formulary including whether the 'oral GLP-1' claim covers compounded oral semaglutide or oral tirzepatide (the latter is the subject of ongoing Chimicles class action litigation), (4) pricing tiers, (5) states served, (6) pharmacy partners and 503A/503B status, (7) accreditations, (8) any FDA / FTC adverse actions. Do NOT promote to any /best page or homepage hero until verified. When in doubt on the oral tirzepatide question, skip that product from the entry's pricing table and keep only the injectable compounded semaglutide."
     }
   }
 ]
