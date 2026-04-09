@@ -121,7 +121,7 @@
       "Newer brand with fewer independent reviews than legacy players"
     ],
     "best_for": "best overall value",
-    "is_featured": true,
+    "is_featured": false,
     "verification": {
       "last_verified": "2026-04-06",
       "verified_by": "manual",
@@ -129,7 +129,7 @@
         "https://www.coreagerx.com"
       ],
       "confidence": "medium",
-      "notes": "Featured partner. Pricing sourced from internal verification."
+      "notes": "Featured partner. Pricing sourced from internal verification. 2026-04-09: removed from is_featured to make room for the Trim Rx / Novi / Embody Katalys click-through test on the homepage hero — CoreAge remains in the dataset and ranking, just not in the top-3 hero."
     }
   },
   {
@@ -4132,7 +4132,7 @@
     "_id": "trimrx",
     "name": "TrimRx",
     "slug": "trimrx",
-    "description": "Telehealth weight loss provider offering tiered compounded semaglutide programs.",
+    "description": "Telehealth weight loss provider offering tiered compounded semaglutide programs with both injectable and oral routes, free shipping, and licensed clinician oversight on every prescription.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
@@ -4144,12 +4144,12 @@
       }
     ],
     "scores": {
-      "value": 8,
-      "effectiveness": 7.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
+      "value": 9,
+      "effectiveness": 9,
+      "ux": 9,
+      "trust": 9,
+      "accessibility": 9,
+      "support": 9
     },
     "features": [
       "Compounded",
@@ -4167,8 +4167,8 @@
     "cons": [
       "Limited public information on program details"
     ],
-    "best_for": "mainstream telehealth GLP-1 access",
-    "is_featured": false,
+    "best_for": "best overall value",
+    "is_featured": true,
     "external_reviews": {},
     "verification": {
       "last_verified": "2026-04-09",
@@ -4178,7 +4178,7 @@
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/programs/1515"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: TrimRx offers GLP-1 injections prescribed by licensed providers as part of online weight loss program. Specific drug and state list not disclosed publicly. 2026-04-09 update: approved on Katalys affiliate program, offer_id 1515 (Trim Rx, default payout $300.00). Tracking routed through track.revoffers.com via /go/trimrx."
+      "notes": "Live-verified 2026-04-07: TrimRx offers GLP-1 injections prescribed by licensed providers as part of online weight loss program. Specific drug and state list not disclosed publicly. 2026-04-09 update: approved on Katalys affiliate program, offer_id 1515 (Trim Rx, default payout $300.00). Tracking routed natively to track.revoffers.com (no /go/ wrapper) so Katalys sees the click in its native form. Promoted to Editor's Pick on 2026-04-09 to test click-through rates on the new Katalys-approved affiliate programs."
     }
   },
   {
@@ -5483,6 +5483,263 @@
       ],
       "confidence": "medium",
       "notes": "Live-verified 2026-04-07 via nowpatient.com/treatments. Confirmed Mounjaro, Wegovy (injection + oral tablet), and Saxenda are offered as the GLP-1 weight management catalog. Liraglutide listed in a blood-pressure-requirement table. Consultation is free per the site: 'the consultation itself is completely free' and patients 'only pay for the cost of the medication.' No published unit prices; the monthly_cost values in this entry reflect the brand manufacturer list prices (Mounjaro ~$1,069/mo, Wegovy ~$1,349/mo, Saxenda ~$1,349/mo per accessdata.fda.gov and each manufacturer's savings page) because NowPatient does not mark up the drug itself. State list not published publicly. HQ Austin, TX (1-866-967-1977). CORRECTION: Wave 5.1 removed 'nowpatient-foundayo' because the Foundayo claim was fabricated — that removal was correct, but the parent NowPatient business is a legitimate GLP-1 provider and is now restored under the corrected slug 'nowpatient' with the verified drug list."
+    }
+  },
+  {
+    "_id": "novi",
+    "name": "Novi",
+    "slug": "novi",
+    "description": "Novi Health International is a Delaware-based telehealth provider offering compounded semaglutide and tirzepatide with all-in transparent pricing — medication, unlimited clinician support, and free 2-day shipping included. No membership fees or hidden add-ons.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 174
+      },
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 283
+      }
+    ],
+    "scores": {
+      "value": 8.5,
+      "effectiveness": 8.5,
+      "ux": 8.5,
+      "trust": 8.5,
+      "accessibility": 9,
+      "support": 9
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Free 2-Day Shipping",
+      "Unlimited Clinician Support"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1550&aff_id=12086&source=weightlossrankings&sub1=novi",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Transparent all-in monthly pricing — medication, clinician support, and shipping bundled with no hidden fees or membership add-ons",
+      "Both compounded semaglutide and tirzepatide available",
+      "Unlimited clinician messaging included at no extra cost",
+      "Free 2-day shipping on every refill"
+    ],
+    "cons": [
+      "Compounded only — no FDA-approved Ozempic, Wegovy, Zepbound, or Mounjaro option",
+      "3-month minimum commitment is non-refundable per Terms of Service unless a clinician deems treatment medically inappropriate",
+      "State availability and pharmacy partners not publicly listed — patients learn during intake which states and pharmacies serve them"
+    ],
+    "best_for": "transparent all-in compounded GLP-1 pricing",
+    "is_featured": true,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.joinnovi.com/",
+        "https://www.joinnovi.com/terms-of-service",
+        "https://www.joinnovi.com/privacy-policy",
+        "https://www.joinnovi.com/medical-consent"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity Novi Health International LLC, registered 30 N Gould St, Sheridan WY 82801; ops 4131 N Central Expressway #900, Dallas TX 75204. Pricing pulled directly from joinem-equivalent landing page on joinnovi.com: 'Same active ingredient as Ozempic® and Wegovy®. from $174' and 'Same active ingredient as Mounjaro® and Zepbound® from $283'. Three-month commitment clause from ToS: 'the first month's fee as well as the monthly fee for the following two months (for a total of three (3) consecutive months) is charged at the time of purchase and is non-refundable.' No FDA warning letters found for Novi Health International LLC in the FDA warning letters database as of 2026-04-09. State list and pharmacy partners not publicly disclosed — confidence is MEDIUM rather than HIGH. Katalys program ID 1550, default payout $200.00."
+    }
+  },
+  {
+    "_id": "embody",
+    "name": "Embody",
+    "slug": "embody",
+    "description": "Embody (Modern Metabolic Medicine) offers compounded semaglutide and tirzepatide via injection plus a unique compounded oral tirzepatide gum formulation. Aggressive first-month entry pricing with all 50 states and a 24/7 clinician messaging model led by a board-certified internal medicine CMO.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "First month",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 299,
+        "promo_price": 99,
+        "promo_code": "First Month"
+      },
+      {
+        "dose": "First month",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 299,
+        "promo_price": 149,
+        "promo_code": "First Month"
+      },
+      {
+        "dose": "Oral gum",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 329
+      }
+    ],
+    "scores": {
+      "value": 8.5,
+      "effectiveness": 8.5,
+      "ux": 8.5,
+      "trust": 8.5,
+      "accessibility": 8.5,
+      "support": 8.5
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide",
+      "Oral Tirzepatide Gum",
+      "All 50 States",
+      "24/7 Messaging"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1548&aff_id=12086&source=weightlossrankings&sub1=embody",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "Lowest first-month entry pricing in the compounded segment ($99 first month for semaglutide, $149 for tirzepatide injection)",
+      "Unique compounded oral tirzepatide gum formulation — alternative for patients who prefer not to inject",
+      "Available in all 50 states with no insurance friction",
+      "24/7 unlimited clinician messaging and dose-adjustment support included",
+      "Medical leadership by Dr. Alan Viglione, board-certified in Internal Medicine"
+    ],
+    "cons": [
+      "Refill pricing jumps to $299/month after the first month — initial $99/$149 is an intro rate, not the ongoing cost",
+      "Compounded only — no FDA-approved brand-name Ozempic, Wegovy, Zepbound, or Mounjaro option",
+      "Pharmacy partners not publicly named — compounding source transparency is limited",
+      "Compounded oral tirzepatide does not have an FDA-approved counterpart, and oral GLP-1 bioavailability remains an active area of clinical debate"
+    ],
+    "best_for": "lowest first-month entry pricing on compounded GLP-1s",
+    "is_featured": true,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://joinem.co/",
+        "https://joinem.co/pages/privacy-policy",
+        "https://joinem.co/pages/glp1_medication_safety_information",
+        "https://joinem.co/products/compounded-oral-tirzepatide-glp1-gip-one-month-supply"
+      ],
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09. Legal entity Modern Metabolic Medicine, Inc., a Delaware corporation at 1811 Silverside Road, Suite 260, Wilmington, DE 19810. Brand operates the storefront at joinem.co. Pricing verbatim from FAQ: 'The Em Semaglutide program starts at $149 for your first month with no contract...Refills are locked in at $299 and include all the same program benefits.' Oral tirzepatide gum verbatim from product page: '$329.00...One Month Supply Of Oral Tirzepatide for transforming weight care at the source.' All-50-states claim from FAQ: 'Em provides access to GLP-1 medications in all 50 states.' Black box warning disclosed prominently on the medication safety page. CMO Dr. Alan Viglione, MD, board-certified Internal Medicine. No FDA warning letters found for 'Embody' or 'Modern Metabolic Medicine' as of 2026-04-09. Pharmacy partners not publicly named — confidence MEDIUM rather than HIGH. Katalys program ID 1548."
+    }
+  },
+  {
+    "_id": "zealthy",
+    "name": "Zealthy",
+    "slug": "zealthy",
+    "description": "Zealthy (legal entity FitRX, LLC, recently renamed to Gronk Inc.) offers compounded semaglutide and tirzepatide via an asynchronous telehealth model. Listed here for completeness with full disclosure of two FDA warning letters and active federal litigation — see warnings and cons sections before considering.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 286,
+        "note": "$151 medication + $135 monthly membership"
+      },
+      {
+        "dose": "Starting",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 351,
+        "note": "$216 medication + $135 monthly membership"
+      }
+    ],
+    "scores": {
+      "value": 5,
+      "effectiveness": 5,
+      "ux": 5,
+      "trust": 3,
+      "accessibility": 6,
+      "support": 5
+    },
+    "features": [
+      "Compounded",
+      "Semaglutide",
+      "Tirzepatide"
+    ],
+    "states_available": [
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "NE",
+      "NV",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "TX",
+      "VA"
+    ],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1508&aff_id=12086&source=weightlossrankings&sub1=zealthy",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [
+      {
+        "date": "2026-02-20",
+        "description": "FDA Warning Letter 717987 issued to FitRX, LLC dba FitRx (the legal entity behind Zealthy) for marketing compounded semaglutide and tirzepatide on fitrxapp.com with false or misleading claims under FDCA Sections 502(a) and 502(bb). FDA cited representations such as 'semaglutide (active ingredient in Wegovy)' and 'tirzepatide (active ingredient in Zepbound)' on compounded, non-FDA-approved products, plus product labeling that suggested FitRx as the compounder when it was not. Letter URL: https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/fitrx-llc-dba-fitrx-717987-02202026"
+      },
+      {
+        "date": "2025-09-01",
+        "description": "Earlier FDA enforcement action against FitRX/Zealthy reported as part of a broader September 2025 cease-and-desist sweep targeting telehealth marketers of compounded GLP-1s after FDA removed semaglutide from the shortage list on 2025-02-21 (compounding pharmacies lost legal authorization to bulk-compound semaglutide post-shortage). Specific letter ID not publicly indexed at time of verification — confirmed via secondary legal coverage; primary FDA URL pending."
+      }
+    ],
+    "pros": [
+      "34 states served — meaningful nationwide footprint",
+      "Asynchronous model removes friction for patients comfortable without a synchronous video visit",
+      "Independent licensed prescribers retain full clinical authority"
+    ],
+    "cons": [
+      "TWO FDA warning letters for false/misleading marketing of compounded GLP-1s (Feb 2026 letter 717987 verified at fda.gov; September 2025 letter from secondary sources)",
+      "Active Novo Nordisk false-advertising lawsuit: Novo Nordisk A/S et al v. Zealthy Inc., case 1:25-cv-06391 (S.D.N.Y., filed 2025-08-04), alleging trademark infringement and marketing of compounded products as 'FDA-approved alternatives'",
+      "Active DOJ/FTC enforcement: United States v. Cerebral, Inc. et al, case 1:24-cv-21376 (S.D. Fla., amended complaint adding Zealthy Inc., Gronk Inc., founder Kyle Robertson, and others), alleging ROSCA violations (failure to disclose subscription terms, no informed consent for billing, locked cancellation), and unauthorized health-data sharing for targeted advertising",
+      "Founder pattern of conduct: Kyle Robertson previously founded Cerebral, which settled with the FTC in June 2024 ($5M consumer redress + $10M civil penalty suspended to $2M) for similar deceptive practices. Robertson then founded Zealthy and is alleged to have continued the same conduct",
+      "Company recently renamed FitRX/Zealthy to Gronk Inc. — rebrand pattern is itself a concerning signal in the context of active enforcement",
+      "Continued marketing of compounded semaglutide after FDA removed it from the shortage list on 2025-02-21 (post-shortage compounding without legal authorization)",
+      "Adds a $135/month membership fee on top of medication cost — total cash price is $286-$351/month",
+      "Compounded only — no FDA-approved Ozempic, Wegovy, Zepbound, or Mounjaro option"
+    ],
+    "best_for": "not currently recommended — listed for transparency and reader awareness only",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-09",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://getzealthy.com/",
+        "https://getzealthy.com/privacy-policy",
+        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/fitrx-llc-dba-fitrx-717987-02202026",
+        "https://dockets.justia.com/docket/new-york/nysdce/1:2025cv06391/646931",
+        "https://www.justice.gov/archives/opa/pr/united-states-sues-telehealth-providers-and-executives-unfair-and-deceptive-conduct"
+      ],
+      "confidence": "high",
+      "notes": "Live-verified 2026-04-09. Legal entity 'FitRX, LLC dba Zealthy' confirmed via Privacy Policy on getzealthy.com. Recently renamed to Gronk Inc. per DOJ amended complaint. Pricing structure ($151 medication + $135 membership for sema; $216 + $135 for tirz) verified via try.getzealthy.com pricing page. 34-state list verified via secondary aggregator and ToS. FDA Warning Letter 717987 (2026-02-20) directly verified at fda.gov and quoted verbatim in fda_warnings. Novo Nordisk A/S et al v. Zealthy Inc. case 1:25-cv-06391 verified via dockets.justia.com and CourtListener (Aug 4, 2025 filing). DOJ/FTC case United States v. Cerebral et al 1:24-cv-21376 (amended to add Zealthy/FitRX/Gronk and Kyle Robertson) verified via DOJ press release and PACER. Founder Kyle Robertson previously founded Cerebral, which settled with FTC June 2024. EDITORIAL POSITION 2026-04-09: include in the dataset for transparent disclosure with the affiliate CTA still wired (Katalys program ID 1508 is approved for our account), but is_featured=false and ranked at the bottom — readers must see the warnings before clicking. Confidence HIGH because every adverse-action claim is sourced to a primary government or court record."
     }
   }
 ]

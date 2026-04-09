@@ -34,7 +34,11 @@
 
 import { redirect } from "next/navigation";
 import providersData from "@/data/providers.json";
-import { buildOutboundLink } from "@/lib/affiliate-link";
+import {
+  appendKatalysSubIds,
+  buildOutboundLink,
+  isKatalysTrackingUrl,
+} from "@/lib/affiliate-link";
 import { incrementClick } from "@/lib/kv";
 
 export const runtime = "nodejs";
@@ -124,11 +128,22 @@ export async function GET(
   // CTAButton.tsx, which renders track.revoffers.com URLs directly in
   // <a href> without the /go/[slug] wrapper so Katalys's own tracking
   // sees the click in its native form (no masking).
-  const outbound = buildOutboundLink(provider.affiliate_url, {
-    source,
-    provider: slug,
-    position: position ?? undefined,
-  });
+  // For Katalys (RevOffers) URLs, append the placement metadata as
+  // sub2/sub3 sub-IDs so Katalys's own dashboard can split conversions
+  // by source page and list position. Skip buildOutboundLink for these
+  // — Katalys ignores utm_* params and we want a clean canonical URL.
+  // For non-Katalys URLs, fall through to the UTM tagger so the
+  // destination provider's analytics still sees us as a named referrer.
+  const outbound = isKatalysTrackingUrl(provider.affiliate_url)
+    ? appendKatalysSubIds(provider.affiliate_url, {
+        source,
+        position: position ?? undefined,
+      })
+    : buildOutboundLink(provider.affiliate_url, {
+        source,
+        provider: slug,
+        position: position ?? undefined,
+      });
 
   // 302 is correct here — the destination is dynamic and may change
   // (affiliate program swap, link rotation), so we don't want
