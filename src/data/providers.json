@@ -8022,5 +8022,113 @@
       "confidence": "medium",
       "notes": "YMYL re-verification 2026-04-09. Co-founders: Anne Fulenwider & Monica Molenaar. Drug formulary VERIFIED on the public Weight Care page: brand-name Zepbound from $349/mo, brand-name Wegovy from $199/mo, oral Wegovy (semaglutide pill), compounded semaglutide, compounded tirzepatide, compounded liraglutide from $80/mo. 48-state availability with explicit Louisiana + Mississippi exclusion CONFIRMED. Initial consultation: $49 (separate from medication cost). Promo code STARTGLP1 = $50 off first month. All consulting doctors certified by The Menopause Society (10+ years experience). No FDA warning letters or litigation found. Promoted LOW → MEDIUM. Single broadest GLP-1 formulary in the catalog. Trust + value subscores raised to 7.5 based on Menopause Society credential + transparent broad pricing."
     }
+  },
+  {
+    "_id": "wellorithm",
+    "name": "Wellorithm",
+    "slug": "wellorithm",
+    "description": "Wellorithm (wellorithm.com) is a US telehealth offering compounded semaglutide and compounded tirzepatide injections via partner clinicians and US pharmacies. Positioned around 'Find The Proper Medication For You, Effortlessly.' Stub entry pending YMYL verification.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded semaglutide (preliminary)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Compounded tirzepatide (preliminary)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 299
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://wellorithm.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Both compounded semaglutide and compounded tirzepatide injections available",
+      "Clean, straightforward landing page with visible product cards"
+    ],
+    "cons": [
+      "Stub entry — exact pricing, states served, pharmacy partners, accreditations, and clinical workflow need a YMYL verification pass",
+      "Confidence is LOW until that pass is done"
+    ],
+    "best_for": "compounded GLP-1 access (pending verification)",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://wellorithm.com"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-10. Katalys affiliate application submitted — pending approval. Once approved, swap affiliate_url to the Katalys tracking URL and change affiliate_network to 'Katalys'. REQUIRES a full YMYL verification pass: confirm legal entity, exact pricing tiers, states served, pharmacy partners, accreditations, and any FDA/FTC adverse actions."
+    }
+  },
+  {
+    "_id": "hone-health",
+    "name": "Hone Health",
+    "slug": "hone-health",
+    "description": "Hone Health (honehealth.com) is a men's health telehealth platform offering hormone optimization, weight management, and metabolic health programs. GLP-1 prescribing is part of a broader wellness offering alongside testosterone, thyroid, and longevity protocols. Stub entry pending YMYL verification.",
+    "category": "Weight Loss Program",
+    "pricing": [
+      {
+        "dose": "Weight management program (preliminary)",
+        "form": "brand",
+        "monthly_cost": 199
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [
+      "Men's Health",
+      "Hormone Optimization",
+      "Weight Management",
+      "Metabolic Health"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://honehealth.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Men's health specialty platform — serves a demographic that most GLP-1 telehealths don't specifically target",
+      "Broader wellness offering (hormone, thyroid, metabolic) alongside weight management"
+    ],
+    "cons": [
+      "Stub entry — exact GLP-1 formulary, pricing, states served, and clinical workflow need a YMYL verification pass",
+      "Confidence is LOW until that pass is done",
+      "Weight management is one of several offerings — not a GLP-1-specialty funnel"
+    ],
+    "best_for": "men seeking weight management as part of a broader hormone + metabolic health program (pending verification)",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://honehealth.com"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-10. Katalys affiliate application submitted — pending approval. Once approved, swap affiliate_url to the Katalys tracking URL and change affiliate_network to 'Katalys'. REQUIRES a full YMYL verification pass: confirm legal entity, exact GLP-1 drug formulary, pricing tiers, states served, pharmacy partners, accreditations, and any FDA/FTC adverse actions."
+    }
   }
 ]
