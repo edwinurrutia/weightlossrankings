@@ -849,7 +849,7 @@ function ComparePageInner() {
             className="absolute inset-0 bg-black/40"
             onClick={() => setMobileFiltersOpen(false)}
           />
-          <div className="relative ml-auto w-full max-w-sm bg-white h-full shadow-xl flex flex-col">
+          <div className="relative ml-auto w-full max-w-sm bg-white shadow-xl flex flex-col" style={{ height: '100dvh' }}>
             <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
               <h2 className="text-lg font-bold font-heading text-brand-text-primary">
                 Filters
@@ -902,10 +902,10 @@ function ComparePageInner() {
                 onReset={resetFilters}
               />
             </div>
-            <div className="px-5 py-4 border-t border-gray-100">
+            <div className="px-5 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] border-t border-gray-100 bg-white">
               <button
                 onClick={() => setMobileFiltersOpen(false)}
-                className="w-full px-4 py-3.5 bg-brand-primary text-white font-semibold rounded-xl hover:bg-brand-primary/90 transition text-base"
+                className="w-full px-4 py-3.5 bg-brand-violet text-white font-semibold rounded-xl hover:bg-brand-violet/90 transition text-base"
               >
                 Show {filtered.length} providers
               </button>
