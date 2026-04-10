@@ -8130,5 +8130,56 @@
       "confidence": "low",
       "notes": "Stub entry created 2026-04-10. Katalys affiliate application submitted — pending approval. Once approved, swap affiliate_url to the Katalys tracking URL and change affiliate_network to 'Katalys'. REQUIRES a full YMYL verification pass: confirm legal entity, exact GLP-1 drug formulary, pricing tiers, states served, pharmacy partners, accreditations, and any FDA/FTC adverse actions."
     }
+  },
+  {
+    "_id": "dudemeds",
+    "name": "DudeMeds",
+    "slug": "dudemeds",
+    "description": "DudeMeds (dudemeds.com) is a men's telehealth platform offering GLP-1 weight loss medications alongside ED, hair loss, and testosterone programs. Stub entry pending YMYL verification.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "GLP-1 program (preliminary)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [
+      "Men's Health",
+      "GLP-1 Weight Loss",
+      "Compounded"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://www.dudemeds.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Men's health branding — targets a demographic that most GLP-1 telehealths don't specifically address",
+      "GLP-1 alongside ED, hair loss, and testosterone in one provider relationship"
+    ],
+    "cons": [
+      "Stub entry — exact GLP-1 formulary, pricing, states served, pharmacy partners, and clinical workflow need a YMYL verification pass",
+      "Confidence is LOW until that pass is done"
+    ],
+    "best_for": "men seeking GLP-1 access as part of a broader men's health telehealth (pending verification)",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.dudemeds.com"
+      ],
+      "confidence": "low",
+      "notes": "Stub entry created 2026-04-10. REQUIRES a full YMYL verification pass: confirm legal entity, exact GLP-1 drug formulary (compounded vs brand), pricing tiers, states served, pharmacy partners, accreditations, and any FDA/FTC adverse actions."
+    }
   }
 ]
