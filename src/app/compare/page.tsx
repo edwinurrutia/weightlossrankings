@@ -417,6 +417,17 @@ function ComparePageInner() {
       out.sort((a, b) => a.name.localeCompare(b.name));
     }
 
+    // Affiliate CTR test: bubble Katalys-network providers to the top
+    // of the list (within each sort mode) so we can measure which
+    // affiliate programs get clicked. The within-group ordering is
+    // preserved — Katalys providers stay sorted by score/price/name
+    // among themselves, and non-Katalys providers keep their order too.
+    // TODO: remove this once the CTR test concludes and revert to
+    // pure editorial ranking.
+    const katalys = out.filter((p) => p.affiliate_network === "Katalys");
+    const others = out.filter((p) => p.affiliate_network !== "Katalys");
+    out = [...katalys, ...others];
+
     return out;
   }, [
     allProviders,
