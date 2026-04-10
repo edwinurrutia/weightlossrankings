@@ -9939,5 +9939,84 @@
       "confidence": "medium",
       "notes": "User confirmed as GLP-1 provider 2026-04-10. WebFetch returned blank/single-word page \u2014 fully JS-rendered. Needs Chrome MCP verification."
     }
+  },
+  {
+    "_id": "amrx",
+    "name": "AM Rx",
+    "slug": "amrx",
+    "description": "AM Rx (getamrx.com) is a telehealth platform operated by FitRX, LLC (also operates Zealthy and FitRx). Offers compounded semaglutide from $151/mo quarterly and brand-name GLP-1s (Ozempic, Wegovy, Zepbound, Mounjaro) with insurance coordination as low as $25/mo. Video and async consultations available. HSA/FSA accepted.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Brand GLP-1 with insurance",
+        "form": "brand",
+        "drug": "semaglutide",
+        "monthly_cost": 25,
+        "note": "With insurance coordination"
+      },
+      {
+        "dose": "Compounded Semaglutide (quarterly)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 151
+      }
+    ],
+    "scores": {
+      "value": 6,
+      "effectiveness": 7,
+      "ux": 6,
+      "trust": 4,
+      "accessibility": 7,
+      "support": 4.5
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Ozempic",
+      "Wegovy",
+      "Zepbound",
+      "Mounjaro",
+      "Insurance Coordination"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://getamrx.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [
+      "FDA warning letter to FitRX LLC (Sept 2025) for misbranding compounded GLP-1 products",
+      "FDA warning letter to FitRX LLC dba FitRx (Feb 20, 2026) citing violations of Sections 502(a) and 502(bb) of the FD&C Act \u2014 product labels identified FitRx as the compounder when it was not"
+    ],
+    "pros": [
+      "Insurance coordination for brand-name GLP-1s \u2014 as low as $25/mo",
+      "All four major brand-name GLP-1s available (Ozempic, Wegovy, Zepbound, Mounjaro)",
+      "HSA and FSA accepted",
+      "Video visits available (not just async) with providers averaging 10+ years experience",
+      "Compounded semaglutide from $151/mo quarterly"
+    ],
+    "cons": [
+      "Active FTC/DOJ lawsuit for deceptive billing and subscription practices (ROSCA violations)",
+      "Two FDA warning letters (Sept 2025, Feb 2026) for misbranding compounded GLP-1 products",
+      "Novo Nordisk false advertising lawsuit (Aug 2025)",
+      "Parent entity Zealthy has BBB D- rating with 2,370+ complaints",
+      "Trustpilot 2.0/5 \u2014 85% one-star reviews citing billing disputes and unreachable support",
+      "No visible LegitScript certification or PCAB accreditation",
+      "No named pharmacy partners \u2014 compounding source not disclosed",
+      "No FDA compounding disclaimer on the website",
+      "State availability not publicly disclosed",
+      "Founder Kyle Robertson previously ran Cerebral, which settled FTC charges for similar practices",
+      "Same corporate entity (FitRX LLC) as Zealthy and FitRx \u2014 shares regulatory history"
+    ],
+    "best_for": "patients with insurance seeking brand-name GLP-1 access (review regulatory warnings carefully)",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch multi-page scrape",
+      "source_urls": [
+        "https://getamrx.com",
+        "https://getamrx.com/weight-loss",
+        "https://getamrx.com/faqs",
+        "https://getamrx.com/terms-of-use"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. Operated by FitRX LLC dba AM Rx, 30 Irving Pl Floor 7, New York NY 10003. Same entity as Zealthy and FitRx. Founder: Kyle Robertson (also founded Cerebral). Compounded semaglutide from $151/mo quarterly. Brand GLP-1s with insurance from $25/mo. REGULATORY: Active FTC/DOJ lawsuit (ROSCA violations), two FDA warning letters (Sept 2025 misbranding, Feb 2026 Sections 502(a)/502(bb)), Novo Nordisk false advertising suit (Aug 2025). BBB D- (Zealthy, 2,370 complaints). Trustpilot 2.0/5 (27 reviews, 85% one-star). No LegitScript, no PCAB, no named pharmacy, no compounding disclaimer on site. State list not disclosed."
+    }
   }
 ]
