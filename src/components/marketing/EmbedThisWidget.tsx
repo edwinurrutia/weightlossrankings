@@ -144,7 +144,7 @@ export default function EmbedThisWidget({
             </>
           ) : (
             <>
-              <span aria-hidden="true">📋</span> Copy code
+              Copy code
             </>
           )}
         </button>

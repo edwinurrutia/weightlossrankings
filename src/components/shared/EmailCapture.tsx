@@ -57,7 +57,7 @@ export default function EmailCapture({
       <div
         className={`rounded-2xl bg-brand-success/10 border border-brand-success/30 p-6 text-center ${className}`}
       >
-        <p className="text-2xl mb-2">✅</p>
+        <p className="text-2xl mb-2 text-brand-success font-bold">Done</p>
         <p className="font-semibold text-brand-success">{successHeading}</p>
         <p className="text-sm text-brand-text-secondary mt-1">
           {successMessage}

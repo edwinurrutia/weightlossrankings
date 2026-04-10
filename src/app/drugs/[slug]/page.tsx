@@ -309,8 +309,8 @@ export default async function DrugPage({
 
         <PageHero
           badges={[
-            { icon: "✅", text: "FDA Reviewed" },
-            { icon: "📅", text: `Updated ${updatedDate}` },
+            { icon: "", text: "FDA Reviewed" },
+            { icon: "", text: `Updated ${updatedDate}` },
           ]}
           title={
             <>

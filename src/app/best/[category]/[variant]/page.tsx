@@ -208,8 +208,8 @@ export default async function VariantPage({
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
         <PageHero
           badges={[
-            { icon: "📅", text: `Updated ${updatedDate}` },
-            { icon: "✅", text: "Expert Reviewed" },
+            { icon: "", text: `Updated ${updatedDate}` },
+            { icon: "", text: "Expert Reviewed" },
           ]}
           title={
             <>

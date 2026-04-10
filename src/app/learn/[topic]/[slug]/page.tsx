@@ -165,8 +165,8 @@ export default async function LearnArticlePage({
         </nav>
 
         <div className="flex flex-wrap gap-2">
-          <TrustBadge icon="📅" text={`Published ${formatDate(article.published_date)}`} />
-          <TrustBadge icon="🔄" text={`Updated ${formatDate(article.updated_date)}`} />
+          <TrustBadge icon="" text={`Published ${formatDate(article.published_date)}`} />
+          <TrustBadge icon="" text={`Updated ${formatDate(article.updated_date)}`} />
         </div>
 
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-brand-text-primary leading-tight">

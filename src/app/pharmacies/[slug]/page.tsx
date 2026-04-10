@@ -466,7 +466,7 @@ export default async function PharmacyDetailPage({
             >
               <div className="flex items-center gap-2">
                 <span className="text-xl">
-                  {pharmacy.produces_semaglutide ? "✅" : "—"}
+                  {pharmacy.produces_semaglutide ? "Yes" : "—"}
                 </span>
                 <div>
                   <div className="font-semibold text-brand-text-primary">
@@ -489,7 +489,7 @@ export default async function PharmacyDetailPage({
             >
               <div className="flex items-center gap-2">
                 <span className="text-xl">
-                  {pharmacy.produces_tirzepatide ? "✅" : "—"}
+                  {pharmacy.produces_tirzepatide ? "Yes" : "—"}
                 </span>
                 <div>
                   <div className="font-semibold text-brand-text-primary">

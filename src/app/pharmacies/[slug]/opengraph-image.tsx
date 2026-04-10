@@ -81,7 +81,7 @@ export default async function Image({
           </div>
           {location && (
             <div style={{ fontSize: 36, opacity: 0.85, marginTop: 8 }}>
-              {`📍 ${location}`}
+              {location}
             </div>
           )}
         </div>
