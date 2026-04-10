@@ -17,6 +17,7 @@ import Breadcrumb from "@/components/shared/Breadcrumb";
 import Citation from "@/components/research/Citation";
 import SourcesPanel from "@/components/research/SourcesPanel";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
+import { RESEARCH_ARTICLES, isSpanishResearchSlug } from "@/lib/research";
 
 export function generateStaticParams() {
   return getAllDrugSlugs();
@@ -34,6 +35,17 @@ export async function generateMetadata({
   const title = `${drugData.name} Guide: Cost, Side Effects & Where to Get It`;
   const description = `Everything you need to know about ${drugData.name}: FDA status, how it works, dosing schedule, side effects, clinical trial results, and where to get it at the best price.`;
 
+  // Use the editorial verification date as the modifiedTime signal for
+  // Google's medical-content crawler. We intentionally do NOT use
+  // Date.now() here — that would falsely mark the page as "updated"
+  // on every deploy even when the FDA label and trial data haven't
+  // been re-verified. verification.last_verified is the only honest
+  // freshness signal we have, and it's set by the editorial team when
+  // they cross-check primary sources.
+  const drugVerifiedDate =
+    (drugData as { verification?: { last_verified?: string } }).verification
+      ?.last_verified ?? undefined;
+
   return {
     title,
     description,
@@ -44,6 +56,7 @@ export async function generateMetadata({
       url: `/drugs/${drug}`,
       type: "article",
       siteName: "Weight Loss Rankings",
+      ...(drugVerifiedDate ? { modifiedTime: drugVerifiedDate } : {}),
     },
     twitter: {
       card: "summary_large_image",
@@ -284,12 +297,85 @@ export default async function DrugPage({
     drugSchema.approvalStatus = `FDA-approved ${drugData.approval_date}`;
   }
 
+  // Freshness signal for Google's medical content crawler. We use the
+  // drug entry's verification.last_verified date (the date the editorial
+  // team last cross-checked the FDA label + trial data) as the
+  // authoritative dateModified. This is more honest than using today's
+  // date, which would falsely imply the content was reviewed on every
+  // deploy. Schema.org/Drug doesn't have a dateModified property of its
+  // own, so we emit a parallel MedicalWebPage wrapper that does.
+  const drugVerifiedDate =
+    (drugData as { verification?: { last_verified?: string } }).verification
+      ?.last_verified ?? drugData.approval_date ?? undefined;
+
+  // MedicalWebPage wraps the Drug schema in a medical-content-specific
+  // container that Google uses for the medical knowledge panel and
+  // health E-E-A-T scoring. It's separate from the Drug schema and
+  // surfaces the editorial review metadata (dateModified, reviewedBy,
+  // lastReviewed) that Drug alone doesn't expose.
+  const medicalWebPageSchema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: `${drugData.name} Guide: Cost, Side Effects & Where to Get It`,
+    description: drugData.description,
+    url: `https://weightlossrankings.org/drugs/${drug}`,
+    about: {
+      "@type": "Drug",
+      name: drugData.name,
+      nonProprietaryName: drugData.generic_name,
+    },
+    medicalAudience: [
+      { "@type": "MedicalAudience", audienceType: "Patient" },
+      { "@type": "MedicalAudience", audienceType: "Caregiver" },
+    ],
+    specialty: "Endocrinology",
+    ...(drugVerifiedDate ? { dateModified: drugVerifiedDate } : {}),
+    ...(drugVerifiedDate ? { lastReviewed: drugVerifiedDate } : {}),
+    reviewedBy: {
+      "@type": "Organization",
+      name: "Weight Loss Rankings Editorial Team",
+      url: "https://weightlossrankings.org/editorial-policy",
+    },
+  };
+
+  // Related research: find articles that mention this drug's name or
+  // generic name in their tags or title. Excludes articles that are
+  // obviously unrelated. Sorted by lastUpdated desc, limit 6.
+  //
+  // Language filter: /drugs/[slug] is the English route — Spanish
+  // drug guides live at /es/drugs/[slug]. We exclude Spanish research
+  // articles from the English drug page's Related Research list so
+  // we never send an English reader to a /es/research/... page they
+  // can't read. Spanish drug pages will mirror this logic when they
+  // ship, filtering the other direction.
+  const drugNameLower = drugData.name.toLowerCase();
+  const genericLower = drugData.generic_name.toLowerCase();
+  const brandNamesLower = drugData.brand_names.map((b) => b.toLowerCase());
+  const relatedResearch = RESEARCH_ARTICLES.filter((article) => {
+    if (isSpanishResearchSlug(article.slug)) return false;
+    const haystack = (
+      article.title +
+      " " +
+      article.description +
+      " " +
+      article.tags.join(" ")
+    ).toLowerCase();
+    return (
+      haystack.includes(drugNameLower) ||
+      haystack.includes(genericLower) ||
+      brandNamesLower.some((b) => haystack.includes(b))
+    );
+  })
+    .sort((a, b) => (b.lastUpdated || "").localeCompare(a.lastUpdated || ""))
+    .slice(0, 6);
+
   const topProvider = topProviders[0];
   const topProviderMinPrice = topProvider ? getMinPrice(topProvider) : null;
 
   return (
     <main className="min-h-screen bg-brand-bg pb-24 lg:pb-0">
       <JsonLd data={drugSchema} />
+      <JsonLd data={medicalWebPageSchema} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },
@@ -617,6 +703,51 @@ export default async function DrugPage({
             </div>
           </div>
         </section>
+
+        {/* Related Research — internal cross-links from this drug
+            to the research articles that cover it. Pure internal-
+            linking SEO: gives search engines a crawl path from the
+            drug hub to its supporting scientific deep-dives and
+            vice versa, and gives readers a natural next step after
+            the drug overview. */}
+        {relatedResearch.length > 0 && (
+          <section
+            aria-labelledby="related-research-heading"
+            className="space-y-4"
+          >
+            <h2
+              id="related-research-heading"
+              className="text-xl font-bold text-brand-text-primary"
+            >
+              Related Research on {drugData.name}
+            </h2>
+            <p className="text-sm text-brand-text-secondary">
+              Deep-dive articles from our research desk with primary-source
+              trial data, FDA label verification, and editorial analysis.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {relatedResearch.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/research/${article.slug}`}
+                  className="group block rounded-xl border border-brand-violet/10 bg-white p-4 shadow-sm transition hover:border-brand-violet/40 hover:shadow-md"
+                >
+                  <div className="text-sm font-semibold text-brand-text-primary group-hover:text-brand-violet">
+                    {article.title}
+                  </div>
+                  <div className="mt-1 text-xs text-brand-text-secondary line-clamp-2">
+                    {article.description}
+                  </div>
+                  <div className="mt-2 flex items-center gap-2 text-[11px] text-brand-text-secondary/70">
+                    <span>{article.readMinutes} min read</span>
+                    <span aria-hidden>·</span>
+                    <span>{article.citations} citations</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         <FAQSection items={faqItems} />
 
