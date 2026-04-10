@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run check:providers && npm run check:tool-freshness && npm run check:vercel-config && npm run check:schema && npm run check:brand-pricing-freshness",
+    "prebuild": "npm run check:providers && npm run check:tool-freshness && npm run check:vercel-config && npm run check:schema && npm run check:brand-pricing-freshness && npm run check:research-dates",
+    "check:research-dates": "npx tsx scripts/check-research-dates.ts",
     "postbuild": "npx tsx scripts/ping-indexnow.ts",
     "indexnow": "INDEXNOW_FORCE=1 npx tsx scripts/ping-indexnow.ts",
     "check:redirects": "npx tsx scripts/check-redirect-loops.ts",
