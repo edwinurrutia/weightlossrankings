@@ -129,14 +129,16 @@ export default function EditorialPolicyPage() {
             </p>
             <p>
               We are actively seeking a credentialed medical reviewer
-              (MD, PharmD, NP, RN, or RD) to join the editorial team.
-              When that role is filled, the byline on every clinical
-              article will switch from &ldquo;Editorially reviewed (not
-              clinically reviewed)&rdquo; to &ldquo;Medically reviewed by
-              [Name, Credentials]&rdquo; automatically — the infrastructure is
-              already in place. If you are a credentialed clinician
-              interested in this role,{" "}
-              <Link href="/contact">contact us</Link>.
+              (MD, PharmD, NP, RN, or RD) to join the editorial team
+              on a freelance / consultant basis. When that role is
+              filled, the byline on every clinical article will switch
+              from &ldquo;Editorially reviewed (not clinically
+              reviewed)&rdquo; to &ldquo;Medically reviewed by [Name,
+              Credentials]&rdquo; automatically — the infrastructure
+              is already in place. If you are a credentialed clinician
+              interested in this role, see the open posting on our{" "}
+              <Link href="/careers">Careers page</Link> for details
+              and how to apply.
             </p>
 
             <h2>The 125% verification standard</h2>

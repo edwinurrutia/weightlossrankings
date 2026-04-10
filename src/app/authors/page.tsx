@@ -157,7 +157,10 @@ export default function AuthorsIndexPage() {
           {/* Hiring callout — honest disclosure that we are seeking
               a credentialed clinician for medical review. Per Google's
               YMYL framework, transparent disclosure of gaps is a
-              stronger trust signal than hiding them. */}
+              stronger trust signal than hiding them. The role is
+              listed on the /careers page as a freelance/consultant
+              engagement, not a full-time position — both pages
+              reference each other so the messaging stays consistent. */}
           <section className="rounded-xl border border-brand-violet/15 bg-brand-violet/5 p-6">
             <h2 className="font-heading text-lg font-bold text-brand-text-primary mb-2">
               We are seeking a credentialed medical reviewer
@@ -165,18 +168,18 @@ export default function AuthorsIndexPage() {
             <p className="text-sm text-brand-text-secondary leading-relaxed">
               Weight Loss Rankings is actively looking to add a licensed
               clinician (MD, PharmD, NP, RN, or RD) to the editorial team
-              as a medical reviewer. Until that role is filled, all
-              clinical content is editorially reviewed against primary
+              as a freelance medical reviewer. Until that role is filled,
+              all clinical content is editorially reviewed against primary
               sources (FDA prescribing information, PubMed-indexed
               research, regulatory filings) but is not clinically reviewed
               by a licensed practitioner.{" "}
               <Link
-                href="/contact"
+                href="/careers"
                 className="text-brand-violet underline underline-offset-2 hover:text-brand-blue"
               >
-                Get in touch
+                See the open role on our Careers page
               </Link>{" "}
-              if you are interested.
+              for details, compensation model, and how to apply.
             </p>
           </section>
         </div>

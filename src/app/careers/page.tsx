@@ -112,16 +112,62 @@ export default function CareersPage() {
         <h2 className="font-heading text-2xl font-bold text-brand-text-primary pt-4">
           Open roles
         </h2>
-        <div className="rounded-2xl bg-brand-violet/5 border border-brand-violet/20 p-6">
+
+        {/* Medical reviewer is genuinely open as a freelance/consultant
+            engagement and actively recruited from the /authors page.
+            Listed here as a real role so the messaging matches across
+            both pages. */}
+        <div className="rounded-2xl bg-brand-violet/5 border border-brand-violet/20 p-6 space-y-3">
+          <p className="font-semibold text-brand-text-primary">
+            Open · Medical Reviewer (Freelance / Consultant)
+          </p>
+          <p className="text-sm leading-relaxed">
+            We are actively looking for a board-certified clinician
+            (MD, PharmD, NP, RN, or RD) with experience in obesity
+            medicine, endocrinology, or pharmacy to review our research
+            articles, drug guides, and provider reviews on a freelance
+            or consultant basis. The role is asynchronous, paid per
+            article reviewed, and fits naturally alongside an active
+            clinical practice. When the role is filled, the byline on
+            every YMYL article switches from{" "}
+            <em>&ldquo;Editorially reviewed (not clinically reviewed)&rdquo;</em>{" "}
+            to{" "}
+            <em>
+              &ldquo;Medically reviewed by [Your Name],
+              [Credentials]&rdquo;
+            </em>{" "}
+            with a link to your{" "}
+            <Link
+              href="/authors"
+              className="text-brand-violet underline underline-offset-2 hover:text-brand-blue"
+            >
+              author bio page
+            </Link>
+            .
+          </p>
+          <p className="text-sm leading-relaxed">
+            Interested? Email us with subject line{" "}
+            <strong className="text-brand-text-primary">
+              &ldquo;Medical Reviewer&rdquo;
+            </strong>{" "}
+            (see &ldquo;Get in touch&rdquo; below) and include your
+            credentials, license state(s), specialty, and a sentence
+            on why this matters to you.
+          </p>
+        </div>
+
+        <div className="rounded-2xl bg-gray-50 border border-gray-200 p-6">
           <p className="font-semibold text-brand-text-primary mb-1">
-            No open full-time roles right now.
+            Other roles · Project basis
           </p>
           <p className="text-sm">
-            We maintain a list of freelance contributors and consultants we
-            work with periodically. If any of the profiles above describes
-            you, we&apos;d love to hear from you — even if we don&apos;t
-            have a project open today, we keep warm leads on file for when
-            we do.
+            We maintain a list of freelance writers, data engineers,
+            and growth contributors we work with periodically. We do
+            not have full-time W-2 roles open right now, but if any of
+            the contributor profiles above describes you,
+            we&apos;d love to hear from you — even if we don&apos;t
+            have a project open today, we keep warm leads on file for
+            when we do.
           </p>
         </div>
 
