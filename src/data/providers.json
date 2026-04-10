@@ -1415,59 +1415,69 @@
     "_id": "getrelief-rx",
     "name": "GetRelief Rx",
     "slug": "getrelief-rx",
-    "description": "Premium-priced telehealth provider offering compounded GLP-1 medications.",
+    "description": "Get Relief RX, LLC (getreliefrx.com) is a Billings, Montana-based telehealth offering compounded SUBLINGUAL semaglutide (6mg, 9mg) and compounded SUBLINGUAL tirzepatide (7.5mg, 13mg, 16mg). NPI 1306697834. BBB accredited (A rating, March 2026). Free online assessment by licensed provider. Multi-state operations (20+ states). Sublingual drops only — no injectable or FDA-approved brand-name options.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Starting",
+        "dose": "Tirzepatide 16mg kickoff (sublingual)",
         "form": "compounded",
-        "monthly_cost": 750,
-        "note": "Range up to $1000/mo",
-        "drug": "semaglutide"
+        "drug": "tirzepatide",
+        "monthly_cost": 179,
+        "note": "$369-$399/mo after initial; $30 off promo x3 months"
       },
       {
-        "dose": "Starting",
+        "dose": "Semaglutide 9mg (sublingual)",
         "form": "compounded",
-        "monthly_cost": 750,
-        "note": "Range up to $1000/mo",
-        "drug": "tirzepatide"
+        "drug": "semaglutide",
+        "monthly_cost": 269,
+        "note": "$299-$329/mo after initial; $30 off promo x3 months"
       }
     ],
     "scores": {
-      "value": 5,
-      "effectiveness": 7.5,
+      "value": 6.5,
+      "effectiveness": 5.5,
       "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
+      "trust": 5,
+      "accessibility": 6.5,
+      "support": 6.5
     },
     "features": [
-      "Compounded",
-      "Semaglutide",
-      "Tirzepatide"
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Sublingual Only",
+      "BBB Accredited",
+      "20+ States"
     ],
     "states_available": [],
     "affiliate_url": "https://getreliefrx.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Both semaglutide and tirzepatide available",
-      "Compounded GLP-1 access"
+      "Both compounded semaglutide and tirzepatide available at publicly displayed pricing — no login wall to see costs",
+      "BBB accredited with A rating (March 2026); NPI 1306697834 is independently verifiable",
+      "Free online assessment — no upfront consultation fee before prescribing decision"
     ],
     "cons": [
-      "Premium pricing relative to market"
+      "SUBLINGUAL ONLY — no injectable option. Sublingual compounded semaglutide and tirzepatide have NOT been tested in human pharmacokinetic studies; mouse models suggest 5-8x higher doses needed to match subcutaneous bioavailability. Readers should understand this is NOT the same delivery method studied in STEP/SURMOUNT trials.",
+      "REGULATORY FLAG: GetReliefRX continues to offer compounded tirzepatide as of April 2026, after FDA ended enforcement discretion for tirzepatide compounding (March 19, 2025 for 503B, April 22, 2025 for 503A). The legal basis may be state-level exemptions, but this is not publicly disclosed on the site.",
+      "No LegitScript, PCAB, or NABP certifications identified — BBB accreditation is not a pharmacy-specific compliance credential",
+      "Prescriber credentials are described generically as 'licensed clinicians' without specifying MD/DO/NP/PA breakdown"
     ],
-    "best_for": "comprehensive concierge care",
+    "best_for": "buyers specifically seeking sublingual (non-injectable) compounded GLP-1 drops who understand the bioavailability trade-offs and lack of human PK data for this formulation",
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-07",
-      "verified_by": "Chrome MCP live pull",
+      "last_verified": "2026-04-10",
+      "verified_by": "YMYL multi-source pass",
       "source_urls": [
-        "https://getreliefrx.com"
+        "https://getreliefrx.com",
+        "https://shop.getreliefrx.com/product/tirzepatide-16mg-kickoff/",
+        "https://shop.getreliefrx.com/product/generic-semaglutide-9mg/",
+        "https://www.bbb.org/us/mt/billings/profile/pharmaceutical-manufacturing/get-relief-rx-llc-1296-1000188422",
+        "https://getreliefrx.com/getreliefrx-privacy-policy-telehealth-data-patient-information/"
       ],
       "confidence": "medium",
-      "notes": "Chrome MCP verified 2026-04-07 (getreliefrx.com): homepage title 'GLP-1/GIP Weight Management Online | Tirzepatide | GetReliefRX' confirms tirzepatide weight management program. Patient intake gated behind health assessment — state list not publicly disclosed."
+      "notes": "YMYL re-verification 2026-04-10. CRITICAL CORRECTION: prior entry had pricing at $750-$1000/mo ('premium-priced') — this was WRONG. Actual pricing from the public shop pages: tirzepatide 16mg kickoff $179, then $369-$399/mo; semaglutide 9mg $269, then $299-$329/mo. Legal entity confirmed: Get Relief RX, LLC, 149 Shiloh Road Suite 7, Billings MT 59106 (Montana incorporation). NPI 1306697834. BBB accredited March 9 2026, A rating, 1 TCPA complaint documented. Product is SUBLINGUAL ONLY (drops under tongue) — not injectable. This is a material editorial distinction because sublingual compounded semaglutide/tirzepatide has no published human pharmacokinetic data; mouse models require 5-8x dose increase for bioavailability parity with subcutaneous injection (per GoodRx and Belcourt et al. 2026 in J Am Coll Clin Pharm). REGULATORY FLAG: company offers compounded tirzepatide in April 2026 after FDA ended enforcement discretion March 19 2025 — legal basis unclear (may be state-level exemptions). No FDA warning letters found specifically naming this entity. No class action litigation found. 20+ states served per telehealth consent policy but excluded states not enumerated. Effectiveness subscore lowered to 5.5 to reflect unproven sublingual bioavailability. Trust subscore lowered to 5 to reflect the tirzepatide regulatory ambiguity + no pharmacy-specific accreditations. Held at MEDIUM confidence — sufficient for directory listing but any /best/* or homepage placement MUST include the sublingual bioavailability caveat and the post-discretion regulatory flag."
     }
   },
   {
