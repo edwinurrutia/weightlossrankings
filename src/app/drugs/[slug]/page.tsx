@@ -25,9 +25,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ drug: string }>;
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { drug } = await params;
+  const { slug: drug } = await params;
   const drugData = getDrugBySlug(drug);
   if (!drugData) return {};
 
@@ -67,9 +67,9 @@ function filterProvidersByDrug(providers: Provider[]): Provider[] {
 export default async function DrugPage({
   params,
 }: {
-  params: Promise<{ drug: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { drug } = await params;
+  const { slug: drug } = await params;
   const drugData = getDrugBySlug(drug);
 
   if (!drugData) {

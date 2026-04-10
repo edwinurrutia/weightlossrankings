@@ -12,9 +12,9 @@ export const contentType = "image/png";
 export default async function Image({
   params,
 }: {
-  params: Promise<{ drug: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { drug: slug } = await params;
+  const { slug } = await params;
   const drug = getDrugBySlug(slug);
 
   const name = drug?.name ?? "GLP-1 Drug";
