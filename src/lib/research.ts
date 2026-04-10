@@ -54,6 +54,24 @@ export interface ResearchArticle {
   citations: number;
   /** Tag chips shown on the index card. */
   tags: string[];
+  /**
+   * Slug of the byline author from src/data/authors.ts. Optional —
+   * when not set, falls back to DEFAULT_AUTHOR_SLUG (eli-marsden) so
+   * every article gets a real human byline without per-article edits.
+   * Set explicitly when an article is written by a contributor other
+   * than the founding editor.
+   */
+  author?: string;
+  /**
+   * Slug of the medical reviewer from src/data/authors.ts. Optional —
+   * when not set, the article surfaces an "Editorially reviewed (not
+   * clinically reviewed)" disclosure on the visible byline AND in
+   * MedicalWebPage.reviewedBy. Set this once we hire a credentialed
+   * clinician (MD, PharmD, NP, RN, RD) so the article gets a true
+   * "Medically reviewed by [Name, Credentials]" line. The clinician's
+   * record must exist in src/data/authors.ts with isClinician: true.
+   */
+  medicalReviewer?: string;
 }
 
 export const RESEARCH_ARTICLES: ResearchArticle[] = [

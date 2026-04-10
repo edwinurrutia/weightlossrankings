@@ -2,6 +2,12 @@ import Link from "next/link";
 import type { ResearchArticle } from "@/lib/research";
 import JsonLd from "@/components/shared/JsonLd";
 import DYORCallout from "@/components/marketing/DYORCallout";
+import AuthorByline from "@/components/shared/AuthorByline";
+import {
+  getAuthorBySlug,
+  getDefaultAuthor,
+  type Author,
+} from "@/data/authors";
 
 interface ResearchArticleLayoutProps {
   article: ResearchArticle;
@@ -12,6 +18,22 @@ interface ResearchArticleLayoutProps {
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+
+/**
+ * Build the JSON-LD Person reference for an author. We use @id to
+ * point at the same canonical /authors/[slug]#person identifier the
+ * /authors/[slug] page emits, so Google's parser can reconcile the
+ * two and treat them as one entity.
+ */
+function buildPersonRef(author: Author) {
+  return {
+    "@type": "Person",
+    "@id": `${SITE_URL}/authors/${author.slug}#person`,
+    name: author.name,
+    url: `${SITE_URL}/authors/${author.slug}`,
+    jobTitle: author.jobTitle,
+  };
+}
 
 // Tags that mark an article as YMYL health content. When an article
 // has any of these tags, ResearchArticleLayout emits a MedicalWebPage
@@ -81,6 +103,24 @@ export default function ResearchArticleLayout({
   const dateModified =
     dataAsOf ?? article.lastUpdated ?? article.publishedDate;
 
+  // Resolve the author from the article registry. Defaults to Eli
+  // Marsden (DEFAULT_AUTHOR_SLUG) when an article doesn't specify an
+  // author override — opts every existing article into a real human
+  // byline immediately without per-article manual edits. New articles
+  // can override by setting `author: "<slug>"` on the registry record.
+  const author =
+    getAuthorBySlug(article.author ?? null) ?? getDefaultAuthor();
+  // Optional medical reviewer — currently always null because we
+  // don't yet have a credentialed clinician on staff. The infra is
+  // wired so we just populate `medicalReviewer` on the article record
+  // when we hire someone.
+  const medicalReviewer =
+    getAuthorBySlug(article.medicalReviewer ?? null) ?? null;
+  const authorPersonRef = buildPersonRef(author);
+  const reviewerPersonRef = medicalReviewer
+    ? buildPersonRef(medicalReviewer)
+    : null;
+
   // Research articles use ScholarlyArticle (a more specific Article
   // subtype) because they are first-party data investigations and
   // scientific deep-dives, not editorial blog posts. ScholarlyArticle
@@ -94,11 +134,12 @@ export default function ResearchArticleLayout({
     image: `${SITE_URL}/research/${article.slug}/opengraph-image`,
     datePublished: article.publishedDate,
     dateModified,
-    author: {
-      "@type": "Organization",
-      name: "Weight Loss Rankings",
-      url: SITE_URL,
-    },
+    // Named human author per Google's E-E-A-T guidance for YMYL
+    // medical content. Resolves to a Person reference whose @id
+    // matches the /authors/[slug]#person canonical so Google's
+    // Knowledge Graph can reconcile the byline with the author bio
+    // page in one entity.
+    author: authorPersonRef,
     publisher: {
       "@type": "Organization",
       name: "Weight Loss Rankings",
@@ -214,11 +255,14 @@ export default function ResearchArticleLayout({
         // add a separate `reviewedDate` field for periodic editorial
         // re-reviews vs minor copy edits.
         lastReviewed: dateModified,
-        reviewedBy: {
-          "@type": "Organization",
-          name: "Weight Loss Rankings",
-          url: SITE_URL,
-        },
+        // reviewedBy resolves to the medical reviewer Person if one
+        // is set on the article, otherwise falls back to the author
+        // (named human, not Organization). Per Google's YMYL E-E-A-T
+        // framework, named-Person reviewedBy is meaningfully stronger
+        // than Organization-only attribution. When we hire a
+        // credentialed clinician, set article.medicalReviewer and
+        // this field will switch automatically.
+        reviewedBy: reviewerPersonRef ?? authorPersonRef,
         // mainContentOfPage limits the indexable selectors so the
         // crawler can ignore boilerplate (back link, share buttons,
         // related-research footer).
@@ -269,37 +313,25 @@ export default function ResearchArticleLayout({
           {article.description}
         </p>
 
-        {/* Byline + meta row */}
-        <div className="mt-7 pt-5 border-t border-brand-violet/10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-brand-text-secondary">
-          <span>
-            By the{" "}
-            <strong className="text-brand-text-primary">
-              Weight Loss Rankings
-            </strong>{" "}
-            editorial team
-          </span>
-          <span>·</span>
+        {/* Named author byline strip — links to /authors/[slug] bio
+            page, surfaces medical reviewer (or honest "editorially
+            reviewed" disclosure when none), and shows last-reviewed
+            date. Replaces the previous Organization-only "By the
+            Weight Loss Rankings editorial team" line that was a YMYL
+            E-E-A-T weak point. */}
+        <AuthorByline
+          author={author}
+          medicalReviewer={medicalReviewer}
+          publishedDate={article.publishedDate}
+          lastReviewed={dateModified}
+          className="mt-7"
+        />
+
+        {/* Secondary meta row — read time + citations */}
+        <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-brand-text-secondary">
           <span>{article.readMinutes} min read</span>
           <span>·</span>
           <span>{article.citations} citations</span>
-          <span>·</span>
-          <span>
-            Published{" "}
-            <strong className="text-brand-text-primary">
-              {article.publishedDate}
-            </strong>
-          </span>
-          {dateModified !== article.publishedDate && (
-            <>
-              <span>·</span>
-              <span>
-                Updated{" "}
-                <strong className="text-brand-text-primary">
-                  {dateModified}
-                </strong>
-              </span>
-            </>
-          )}
         </div>
 
         {/* Tag chips */}

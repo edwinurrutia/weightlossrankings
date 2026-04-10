@@ -60,9 +60,16 @@ function buildProductSchema(provider: Provider, score: number, minPrice: number 
         bestRating: "5",
         worstRating: "1",
       },
+      // Named human author per Google's E-E-A-T guidance for YMYL.
+      // The Person reference uses the same canonical @id as the
+      // /authors/[slug]#person identifier so Google's Knowledge
+      // Graph reconciles the byline with the author bio page.
       author: {
-        "@type": "Organization",
-        name: "Weight Loss Rankings",
+        "@type": "Person",
+        "@id": `${SITE_URL}/authors/eli-marsden#person`,
+        name: "Eli Marsden",
+        url: `${SITE_URL}/authors/eli-marsden`,
+        jobTitle: "Founding Editor",
       },
       datePublished: provider.verification?.last_verified ?? undefined,
     },

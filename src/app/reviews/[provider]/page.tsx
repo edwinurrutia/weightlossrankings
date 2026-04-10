@@ -27,6 +27,8 @@ import RelatedProvidersSection from "@/components/marketing/RelatedProvidersSect
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import FdaWarningFlag from "@/components/marketing/FdaWarningFlag";
+import AuthorByline from "@/components/shared/AuthorByline";
+import { getDefaultAuthor } from "@/data/authors";
 import { getWarningLetterByProviderSlug } from "@/lib/fda-warning-letters";
 import SourcesPanel from "@/components/research/SourcesPanel";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
@@ -182,6 +184,13 @@ export default async function ProviderReviewPage({
   // is less commonly picked up by Google's ratings parser.
   const overallScoreFiveStar = Math.round((overallScore / 2) * 10) / 10;
 
+  // Provider reviews are first-party editorial reviews authored by
+  // the founding editor (Eli Marsden). When we onboard contributing
+  // reviewers we'll thread a per-provider author override through
+  // the Provider type; until then, every review is bylined to the
+  // default editor.
+  const reviewAuthor = getDefaultAuthor();
+
   // First-party editorial Review JSON-LD.
   //
   // We DO NOT emit AggregateRating here. Per Google's Review snippet
@@ -223,9 +232,16 @@ export default async function ProviderReviewPage({
         bestRating: "5",
         worstRating: "1",
       },
+      // Named human author per Google's E-E-A-T guidance for YMYL.
+      // The Person reference uses the same canonical @id as the
+      // /authors/[slug]#person identifier so Google's Knowledge
+      // Graph can reconcile the byline with the author bio page.
       author: {
-        "@type": "Organization",
-        name: "Weight Loss Rankings",
+        "@type": "Person",
+        "@id": `https://weightlossrankings.org/authors/${reviewAuthor.slug}#person`,
+        name: reviewAuthor.name,
+        url: `https://weightlossrankings.org/authors/${reviewAuthor.slug}`,
+        jobTitle: reviewAuthor.jobTitle,
       },
       datePublished: provider.verification?.last_verified ?? undefined,
       reviewBody: oneLineVerdict,
@@ -294,6 +310,20 @@ export default async function ProviderReviewPage({
                 {provider.description}
               </p>
             )}
+
+            {/* Named author byline strip — links to /authors/[slug]
+                bio page, surfaces medical reviewer (or honest
+                "editorially reviewed" disclosure when none), and shows
+                last-reviewed date. Replaces the prior anonymous review
+                model — every provider review is now explicitly bylined
+                to a named human editor per Google's YMYL E-E-A-T
+                guidance. */}
+            <AuthorByline
+              author={reviewAuthor}
+              medicalReviewer={null}
+              publishedDate={provider.verification?.last_verified}
+              lastReviewed={provider.verification?.last_verified}
+            />
 
             {/* Data confidence disclosure — subtle inline line, no
                 notes, no heavy box. verification.notes is internal-only
