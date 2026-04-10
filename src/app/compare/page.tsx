@@ -249,7 +249,7 @@ function PillButton({
       onClick={onClick}
       className={`inline-flex items-center gap-1 px-3.5 py-2 rounded-full text-[13px] font-medium transition-colors ${
         active
-          ? "bg-brand-primary text-white"
+          ? "bg-brand-violet text-white"
           : "bg-gray-50 text-brand-text-primary border border-gray-200"
       }`}
     >
@@ -265,7 +265,7 @@ function PillButton({
 
 function MobileFilterControls(props: FilterControlsProps) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {/* Search — 16px font prevents iOS zoom */}
       <div>
         <div className="text-[11px] font-bold uppercase tracking-wider text-brand-text-secondary mb-1.5">
@@ -276,7 +276,7 @@ function MobileFilterControls(props: FilterControlsProps) {
           value={props.searchQuery}
           onChange={(e) => props.setSearchQuery(e.target.value)}
           placeholder="Provider name..."
-          className="w-full px-3.5 py-2.5 border-[1.5px] border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary"
+          className="w-full px-3.5 py-2.5 border-[1.5px] border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-brand-violet/30 focus:border-brand-violet"
         />
       </div>
 
@@ -368,7 +368,7 @@ function MobileFilterControls(props: FilterControlsProps) {
           step={10}
           value={props.priceMax}
           onChange={(e) => props.setPriceMax(Number(e.target.value))}
-          className="w-full accent-brand-primary h-2 rounded-lg appearance-none bg-gray-200 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-7 [&::-webkit-slider-thumb]:h-7 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-brand-primary [&::-webkit-slider-thumb]:shadow-md"
+          className="w-full accent-brand-violet h-2 rounded-lg appearance-none bg-gray-200 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-7 [&::-webkit-slider-thumb]:h-7 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-brand-violet [&::-webkit-slider-thumb]:shadow-md"
         />
         <div className="flex justify-between text-xs text-brand-text-secondary mt-1">
           <span>${PRICE_MIN}</span>
