@@ -3372,7 +3372,7 @@
     "_id": "plushcare",
     "name": "PlushCare",
     "slug": "plushcare",
-    "description": "Established primary-care telehealth platform offering GLP-1 weight loss programs.",
+    "description": "Established virtual primary-care telehealth platform (subsidiary of Transcarent, Inc., a Delaware corporation, alongside Accolade, 2nd.MD, and 98point6 by Transcarent). PlushCare offers virtual visits with US board-certified physicians at $30 insured / $129 self-pay per appointment, with GLP-1 prescribing as a clinician-discretionary option within the broader primary-care relationship.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
@@ -3391,92 +3391,57 @@
       }
     ],
     "scores": {
-      "value": 8.5,
-      "effectiveness": 7.5,
+      "value": 7.5,
+      "effectiveness": 7,
       "ux": 7,
-      "trust": 7,
+      "trust": 5.5,
       "accessibility": 7.5,
       "support": 7
     },
     "features": [
-      "Compounded",
-      "Semaglutide",
-      "Tirzepatide"
+      "Virtual Primary Care",
+      "Brand Wegovy",
+      "Brand Zepbound",
+      "Brand Ozempic",
+      "Brand Mounjaro",
+      "Brand Saxenda",
+      "All 50 States"
     ],
     "states_available": [
-      "AL",
-      "AK",
-      "AZ",
-      "AR",
-      "CA",
-      "CO",
-      "CT",
-      "DE",
-      "FL",
-      "GA",
-      "HI",
-      "ID",
-      "IL",
-      "IN",
-      "IA",
-      "KS",
-      "KY",
-      "LA",
-      "ME",
-      "MD",
-      "MA",
-      "MI",
-      "MN",
-      "MS",
-      "MO",
-      "MT",
-      "NE",
-      "NV",
-      "NH",
-      "NJ",
-      "NM",
-      "NY",
-      "NC",
-      "ND",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UT",
-      "VT",
-      "VA",
-      "WA",
-      "WV",
-      "WI",
-      "WY"
+      "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
+      "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
+      "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
+      "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
+      "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
     ],
     "affiliate_url": "https://plushcare.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Aggressively low monthly pricing",
-      "Both semaglutide and tirzepatide available",
-      "Compounded GLP-1 access"
+      "All 50 states per the homepage",
+      "Appointments with US board-certified physicians (not nurse practitioners only)",
+      "Operates as virtual primary care, so the same provider can write GLP-1 prescriptions alongside other primary-care needs",
+      "Owned by Transcarent (post-Accolade-acquisition), a venture-backed health platform with named corporate parent"
     ],
     "cons": [
-      "Limited public information on program details"
+      "ACTIVE LITIGATION: California class action alleging deceptive subscription enrollment and unauthorized post-cancellation charges on the $19.99/month membership. Material disclosure for any reader signing up.",
+      "GLP-1 prescribing is clinician-discretionary at the visit level — not a guaranteed offering at intake",
+      "BBB rating reflects an ongoing pattern of complaints around the membership cancellation flow"
     ],
-    "best_for": "mainstream telehealth GLP-1 access",
+    "best_for": "readers who want a primary-care relationship with GLP-1 prescribing as one option, AND who read the class-action disclosure and verify the cancellation flow before subscribing",
     "is_featured": false,
     "external_reviews": {},
     "verification": {
-      "last_verified": "2026-04-07",
-      "verified_by": "wave-4-main-session-webfetch",
+      "last_verified": "2026-04-09",
+      "verified_by": "wave-4-main-session-webfetch + 2026-04-09 YMYL pass",
       "source_urls": [
-        "https://plushcare.com"
+        "https://plushcare.com",
+        "https://plushcare.com/privacy",
+        "https://www.accolade.com/newsroom/accolade-acquisition-close-plushcare/",
+        "https://transcarent.com/press-releases/transcarent-to-acquire-accolade"
       ],
-      "confidence": "high",
-      "notes": "Verified live via WebFetch 2026-04-07. PlushCare homepage explicitly states \"Appointments are available in all 50 states.\" Prescribes Wegovy, Zepbound, Saxenda, Mounjaro, Ozempic."
+      "confidence": "medium",
+      "notes": "Verified live via WebFetch 2026-04-07: PlushCare homepage explicitly states 'Appointments are available in all 50 states.' Prescribes Wegovy, Zepbound, Saxenda, Mounjaro, Ozempic. YMYL re-verification 2026-04-09: corporate ownership traced — PlushCare is now a subsidiary of Transcarent, Inc. (Delaware), per the privacy policy: 'Transcarent and its affiliated companies, Accolade, Accolade Care, PlushCare, 2nd.MD, and 98point6 by Transcarent.' Transcarent acquired Accolade in 2025 ($621M deal) and PlushCare came along through Accolade's 2021 acquisition. ACTIVE LITIGATION (material): California class action alleging deceptive subscription enrollment and unauthorized post-cancellation charges on the $19.99/month membership; widespread BBB complaint pattern (2.09/5 stars at time of review). GLP-1 prescribing is clinician-discretionary, not guaranteed at intake. Confidence DOWNGRADED from HIGH → MEDIUM specifically because of the litigation + billing-complaint pattern; trust subscore lowered to 5.5. Do NOT feature on homepage hero or /best/* lists while the class action is unresolved."
     }
   },
   {
@@ -3848,7 +3813,7 @@
         "https://tryshed.com/"
       ],
       "confidence": "medium",
-      "notes": "Live-verified 2026-04-07: Shed (tryshed.com) offers compounded tirzepatide, compounded semaglutide, GLP-1 liquid drops, lozenges, oral semaglutide tablets, plus brand-name Wegovy and Zepbound. '150,000+ members nationwide.' State list not publicly disclosed."
+      "notes": "Live-verified 2026-04-07: Shed (tryshed.com) offers compounded tirzepatide, compounded semaglutide, GLP-1 liquid drops, lozenges, oral semaglutide tablets, plus brand-name Wegovy and Zepbound. '150,000+ members nationwide.' State list not publicly disclosed. YMYL re-verification 2026-04-09: legal entity confirmed as Shed Holdings, LLC, 10813 S River Front Pkwy, Ste 550, South Jordan, UT 84095 (per ToS). LegitScript certified. Async questionnaire workflow with 'independent physician-owned or licensed professional entities.' Pricing is hidden behind a portal login on the live site (friction for reader confidence). Pharmacy partners are NOT publicly named — material gap for YMYL disclosure. No FDA warning letters or litigation found in 2024-2026 search. Held at MEDIUM confidence pending pricing transparency and named-pharmacy disclosure before any /best or homepage placement."
     }
   },
   {
@@ -6599,69 +6564,6 @@
     }
   },
   {
-    "_id": "shedrx",
-    "name": "ShedRx",
-    "slug": "shedrx",
-    "description": "ShedRx is a telehealth weight loss provider offering compounded semaglutide and tirzepatide injections plus health coaching and supportive supplements, all 50 states. Listed program description (verbatim): 'With health coaching, Semaglutide and Tirzepatide weight loss injections, and supplements all under one roof, ShedRx is your last weight-loss destination.'",
-    "category": "GLP-1 Provider",
-    "pricing": [
-      {
-        "dose": "Starting",
-        "form": "compounded",
-        "drug": "semaglutide",
-        "monthly_cost": 249
-      },
-      {
-        "dose": "Starting",
-        "form": "compounded",
-        "drug": "tirzepatide",
-        "monthly_cost": 349
-      }
-    ],
-    "scores": {
-      "value": 7.5,
-      "effectiveness": 7.5,
-      "ux": 7.5,
-      "trust": 7.5,
-      "accessibility": 8.5,
-      "support": 8
-    },
-    "features": [
-      "Compounded",
-      "Semaglutide",
-      "Tirzepatide",
-      "Health Coaching Included",
-      "All 50 States"
-    ],
-    "states_available": [],
-    "affiliate_url": "https://www.shedrx.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Health coaching bundled into the program — most compounded GLP-1 providers don't offer this",
-      "Both compounded semaglutide and compounded tirzepatide injections available",
-      "Available in all 50 states per Katalys program description",
-      "Listed positioning emphasizes blood sugar stabilization and cardiovascular health alongside weight loss"
-    ],
-    "cons": [
-      "Compounded only — no FDA-approved Ozempic, Wegovy, Zepbound, or Mounjaro",
-      "Pricing on this entry is preliminary — needs live verification from the shedrx.com pricing page once we run a YMYL pass",
-      "Pharmacy partners not yet verified — confidence MEDIUM until next research pass"
-    ],
-    "best_for": "compounded GLP-1 with bundled health coaching",
-    "is_featured": false,
-    "verification": {
-      "last_verified": "2026-04-09",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://www.shedrx.com",
-        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1516"
-      ],
-      "confidence": "low",
-      "notes": "Created 2026-04-09 from the Katalys Explore program detail page (program ID 1516, 'SHED' / by SHED). Verbatim Katalys description: 'Begin your weight loss journey for the last time with ShedRx! With health coaching, Semaglutide and Tirzepatide weight loss injections, and supplements all under one roof, ShedRx is your last weight-loss destination.' All-50-states geo claim verbatim: 'Geo: GLPs available in all 50 states.' Verticals tagged as Health & Wellness + Rx. Public payout $2.56 EPC. Initial entry uses placeholder pricing ($249 sema / $349 tirz) and direct shedrx.com URL — REQUIRES a YMYL verification pass against shedrx.com before promoting to higher confidence: confirm legal entity, pricing, pharmacy partners, accreditations, FDA history, litigation. Confidence is LOW until that pass is done. KATALYS APPLICATION STATUS: Apply flow attempted via Chrome MCP browser automation 2026-04-09 but did not visibly succeed (button still showed 'Apply To Program' after click sequence). Manual application via the Katalys partner UI is needed. Once approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1516&aff_id=12086&source=weightlossrankings&sub1=shedrx and change affiliate_network to 'Katalys'."
-    }
-  },
-  {
     "_id": "goodrx-foundayo",
     "name": "GoodRx (Foundayo + Zepbound KwikPen)",
     "slug": "goodrx-foundayo",
@@ -6951,15 +6853,15 @@
         "https://www.trifectanutrition.com",
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1483"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1483 (Trifecta Meal Delivery, $55 default CPA). REQUIRES a full YMYL verification pass against trifectanutrition.com before promoting confidence: confirm legal entity, exact plan pricing tiers, delivery footprint, macros + nutrition certification, any FDA / FTC adverse actions. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1483&aff_id=12086&source=weightlossrankings&sub1=trifecta-meal-delivery and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: changed category from 'Weight Loss Program' to 'Meal Delivery' to match the /best/meal-delivery-for-weight-loss page filter (CATEGORY_MAP in src/app/best/[category]/page.tsx)."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. Legal entity confirmed: Trifecta Nutrition, Inc. (incorporated July 28, 2015), Sacramento CA, 530-564-8388. Live trifectanutrition.com confirmed. Plans: Keto, Paleo, Clean, Vegetarian, Vegan, Whole30, designed by registered dietitians and chefs. 'Organic, responsibly sourced ingredients' positioning. Nationwide delivery (free express shipping to US addresses). Per-meal SKU pricing requires walk-through of the shop portal (custom plan builder) — placeholder $200/mo will be refined on the next price-pricing pass. No FDA/FTC adverse actions identified. No regulatory red flags. Promoted LOW → MEDIUM on the strength of named legal entity + verifiable corporate registration + clean regulatory record. Held at MEDIUM until exact per-plan pricing SKUs are scraped. Once Katalys program 1483 ($55 default CPA) is approved, swap affiliate_url to the Katalys tracking URL with appendKatalysSubIds() at render time."
     }
   },
   {
     "_id": "buoy",
     "name": "Buoy",
     "slug": "buoy",
-    "description": "Buoy is a liquid electrolyte supplement positioned as a hydration enhancer for active lifestyles, low-carb diets, and GLP-1 users — populations that lose electrolytes faster and benefit from supplemental sodium, potassium, and magnesium. Listed here as a GLP-1 companion product because electrolyte loss is a documented side effect of rapid GLP-1-mediated weight loss.",
+    "description": "Buoy (justaddbuoy.com) is a liquid electrolyte drop with 87+ trace minerals, vitamins, and antioxidants from an ocean-electrolyte and whole-food base. Buoy markets itself as a general hydration and electrolyte product, NOT as a weight-loss or GLP-1-specific product — we list it here because electrolyte loss is a documented side effect of rapid GLP-1-mediated weight loss, but readers should know the GLP-1 framing is editorial, not the brand's own primary positioning.",
     "category": "Supplement",
     "pricing": [
       {
@@ -7005,56 +6907,76 @@
         "https://www.justaddbuoy.com",
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1517"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1517 (Buoy, 20% commission). REQUIRES a full YMYL verification pass against justaddbuoy.com before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per serving, third-party lab testing, any FTC adverse actions, and the GLP-1-companion clinical positioning. The product is positioned as a hydration enhancer broadly — the GLP-1 companion angle is editorial framing, not necessarily the brand's own primary positioning. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1517&aff_id=12086&source=weightlossrankings&sub1=buoy and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: changed category from 'Weight Loss Program' to 'Supplement' to match the /best/weight-loss-supplements page filter (CATEGORY_MAP in src/app/best/[category]/page.tsx)."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. justaddbuoy.com confirmed live. Product is electrolyte drops with '87+ trace minerals, vitamins & antioxidants' on an ocean-electrolyte and whole-food base, sugar-free with no synthetic sweeteners. Subscription pricing ('Every 12 Weeks' plans) — exact per-bottle SKUs not visible without going through the cart flow. CRITICAL EDITORIAL NOTE: Buoy does NOT market itself as a 'GLP-1 hydration companion' on its own website. The GLP-1 framing in our description is editorial inference based on the well-documented electrolyte-loss side effect of rapid GLP-1 weight loss — not the brand's own positioning. Description has been updated to disclose this. No FDA/FTC adverse actions identified. Promoted LOW → MEDIUM. Held at MEDIUM until brand independently confirms positioning OR until we have a clinical-evidence section that defends the editorial framing on its own merits."
     }
   },
   {
     "_id": "myrnk",
-    "name": "MYRNK",
+    "name": "RNK Health",
     "slug": "myrnk",
-    "description": "MYRNK is a Health & Wellness brand listed in the Katalys Explore catalog at program ID 1551 with a $50 default CPA plus 2 additional payouts. Stub entry pending product research — the brand's exact category, drug formulary, and editorial fit with Weight Loss Rankings need a YMYL verification pass before this entry is promoted from low confidence.",
-    "category": "Weight Loss Program",
+    "description": "RNK Health (myrnk.com) is a GLP-1 + longevity telehealth platform offering compounded tirzepatide, compounded semaglutide (injectable and oral), NAD+ (injectable, nasal, liposomal), sermorelin, enclomiphene, and a DNA Blueprint test panel. Medical operations are based in Des Moines, IA; pharmacy fulfillment is in Springville, UT.",
+    "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Preliminary",
-        "form": "brand",
-        "monthly_cost": 99
+        "dose": "Compounded Tirzepatide (starting)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 297
+      },
+      {
+        "dose": "Compounded Semaglutide injectable (starting)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 197
+      },
+      {
+        "dose": "Compounded Semaglutide oral (starting)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 198
       }
     ],
     "scores": {
-      "value": 6,
-      "effectiveness": 6,
-      "ux": 6,
-      "trust": 6,
+      "value": 7.5,
+      "effectiveness": 7.5,
+      "ux": 7,
+      "trust": 7,
       "accessibility": 7,
-      "support": 6
+      "support": 7
     },
     "features": [
-      "Health & Wellness"
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Oral GLP-1 Option",
+      "NAD+ Add-On",
+      "DNA Biomarker Testing"
     ],
     "states_available": [],
-    "affiliate_url": "https://www.myrnk.com",
+    "affiliate_url": "https://myrnk.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Katalys-approved program with $50 base CPA plus 2 additional payout variants — non-trivial commission structure"
+      "Both injectable and oral compounded semaglutide formats — wider format optionality than most stub entries in the cluster",
+      "GLP-1 + longevity stack (NAD+, sermorelin, enclomiphene, DNA testing) lets one provider serve readers also interested in performance/longevity adjacencies",
+      "Pricing is publicly displayed — $297/mo tirzepatide, $197/mo injectable semaglutide, $198/mo oral semaglutide"
     ],
     "cons": [
-      "Stub entry — category fit, exact product, pricing, and clinical positioning ALL need a full YMYL verification pass before this entry can be promoted or featured anywhere",
-      "Confidence is LOW until that pass is done",
-      "Domain not yet verified — myrnk.com may not be the correct landing page"
+      "States served not enumerated on the public landing page — needs direct confirmation before any state-page placement",
+      "Pharmacy partner not publicly named beyond a Springville, UT fulfillment reference",
+      "Compounded only on the GLP-1 side — no FDA-approved Wegovy/Zepbound brand-name option"
     ],
-    "best_for": "pending product verification",
+    "best_for": "compounded GLP-1 buyers also interested in NAD+, peptide, or longevity add-ons in the same provider relationship",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
       "verified_by": "manual",
       "source_urls": [
+        "https://myrnk.com",
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1551"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1551 (MYRNK). The product/brand is unknown — needs a full YMYL verification pass to determine category fit, legal entity, pricing, product type, and editorial positioning. Do NOT promote this entry to any /best page or homepage hero until verified. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1551&aff_id=12086&source=weightlossrankings&sub1=myrnk and change affiliate_network to 'Katalys'."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09 — CATEGORY CORRECTION: prior stub had this listed as 'Weight Loss Program' with placeholder $99 pricing. Live myrnk.com is a real GLP-1 telehealth platform operated by 'RNK Health' (also reachable at rnkhealthmeds.com) with verified compounded GLP-1 pricing: tirzepatide $297/mo, injectable semaglutide $197/mo, oral semaglutide $198/mo. Adjacencies include NAD+ ($129/mo), sermorelin ($129/mo), enclomiphene ($189/mo), DNA Blueprint biomarker test ($399/mo). Medical provider in Des Moines, IA; pharmacy in Springville, UT. No FDA warning letters found 2024-2026. Promoted LOW → MEDIUM. States served and pharmacy partner identity still need direct confirmation before promoting further or placing on /best/* lists. Once Katalys program 1551 ($50 default CPA + 2 payouts) is approved, swap affiliate_url to the Katalys tracking URL with appendKatalysSubIds() at render time."
     }
   },
   {
@@ -7107,15 +7029,15 @@
         "https://gruns.co",
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1430"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1430 (Gruns Greens, $30 default CPA). REQUIRES a full YMYL verification pass against gruns.co before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per gummy, third-party lab testing, GMP/NSF certification, any FTC/FDA adverse actions, and the GLP-1 nutrition-companion clinical claim. Domain may also be grunsdaily.com or thegruns.com — verify on next pass. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1430&aff_id=12086&source=weightlossrankings&sub1=gruns-greens and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: changed category from 'Weight Loss Program' to 'Supplement' to match the /best/weight-loss-supplements page filter (CATEGORY_MAP in src/app/best/[category]/page.tsx)."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. Domain confirmed: gruns.co (NOT grunsdaily.com — that returned ECONNREFUSED). Legal entity: Ü Snacks (also styled 'U Snacks'), United States. Product is a daily superfood gummy multivitamin in 28-pack pouches. Ingredient stack VERIFIED on site: 21 vitamins/minerals (A, B6, B12, C, D3, E, K2, biotin, folate, niacin, zinc, iron) + organic vegetables (kale, spinach, broccoli) + fruits (blueberry, strawberry, apple) + mushrooms + 6g inulin prebiotic + adaptogens + antioxidants + herbs. Pectin base, gluten-free, dairy-free, nut-free, vegan, no synthetic sweeteners/dyes. Claims: NSF certified, GMP facility, third-party tested. Pricing: Subscribe & Save from $59.99 (Low Sugar) down from $79.99. NOTE: One independent lab report (Oct 2025, Lead Safe Mama) found trace lead — standard supplement quality concern, not a regulatory violation. No FDA warning letters. No FTC enforcement. Promoted LOW → MEDIUM. Once Katalys program 1430 ($30 default CPA) is approved, swap affiliate_url to the Katalys tracking URL with appendKatalysSubIds() at render time."
     }
   },
   {
     "_id": "im8-health",
     "name": "IM8 Health",
     "slug": "im8-health",
-    "description": "IM8 Health is a daily health drink and supplement system co-founded by human-biology coach Gary Brecka, positioning itself as an all-in-one greens, prebiotic, probiotic, vitamin, mineral, and adaptogen blend. Marketed for energy, gut health, longevity, and metabolic support — with a high-recognition founder that drives strong brand awareness.",
+    "description": "IM8 Health is a daily health drink and supplement system co-founded by David Beckham and Prenetics CEO Danny Yeung, positioning itself as an all-in-one greens, prebiotic, probiotic, vitamin, mineral, and adaptogen blend. Marketed for energy, gut health, longevity, and metabolic support. Distributed in the US by Prenetics Global Limited.",
     "category": "Supplement",
     "pricing": [
       {
@@ -7137,7 +7059,7 @@
       "Multivitamin",
       "Probiotic",
       "Adaptogen",
-      "Founder-Led Brand"
+      "NSF Certified for Sport"
     ],
     "states_available": [],
     "affiliate_url": "https://im8.com",
@@ -7145,16 +7067,16 @@
     "fda_warnings": [],
     "pros": [
       "All-in-one daily blend reduces stack complexity vs. taking 5-10 separate supplements",
-      "High brand recognition driven by Gary Brecka's media presence — easier conversion than no-name greens brands",
-      "16% commission rate is above-average for supplement affiliate programs"
+      "NSF Certified for Sport — independent third-party testing for banned-substance contamination and label accuracy",
+      "Scientific advisory board includes Dr. James L. Green (former NASA Chief Scientist) and Dr. Dawn Mussallem (Mayo Clinic)"
     ],
     "cons": [
-      "Stub entry — exact ingredient panel, doses per serving, third-party lab testing, and any FTC adverse actions need a YMYL verification pass",
-      "Confidence is LOW until that pass is done",
-      "Some of Gary Brecka's broader health claims (e.g. on hydrogen water, certain genetic interventions) have been challenged by mainstream researchers — the IM8 product itself needs to be evaluated separately from its founder's broader public statements",
-      "Not a substitute for whole-food nutrition or clinical supplementation"
+      "Newer brand (US launched December 2024) — long-term outcome data does not exist yet",
+      "Not a weight-loss product — marketed as general wellness/longevity, not a metabolic-support therapy",
+      "Not a substitute for whole-food nutrition or clinical supplementation",
+      "Exact ingredient doses per serving and full ingredient panel still need to be pulled off-site before featuring"
     ],
-    "best_for": "all-in-one daily greens-and-vitamin blend with founder-driven brand recognition",
+    "best_for": "all-in-one daily greens-and-vitamin blend with independent third-party (NSF) quality testing",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
@@ -7163,8 +7085,8 @@
         "https://im8.com",
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1428"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1428 (IM8 Health, 16% commission). REQUIRES a full YMYL verification pass against im8.com before promoting confidence: confirm legal entity, exact pricing tiers, ingredient panel per serving with doses, third-party lab testing certifications, any FTC/FDA adverse actions, and the metabolic-support clinical claim. Founder Gary Brecka's broader health-content portfolio includes some claims (hydrogen water, genetic interventions) that have been challenged in mainstream peer review — those need to be considered separately when evaluating the IM8 product itself. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1428&aff_id=12086&source=weightlossrankings&sub1=im8-health and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: changed category from 'Weight Loss Program' to 'Supplement' to match the /best/weight-loss-supplements page filter (CATEGORY_MAP in src/app/best/[category]/page.tsx)."
+      "confidence": "medium",
+      "notes": "Live-verified 2026-04-09 via https://im8.com and https://prenetics.gcs-web.com/news-releases/news-release-details/prenetics-unveils-im8-us-consumers-co-founding-partner-david. CRITICAL CORRECTION 2026-04-09: prior stub entry named Gary Brecka as co-founder — this was wrong. The real co-founders are David Beckham and Danny Yeung (CEO of Prenetics Global Limited, the parent entity). Product is NSF Certified for Sport per im8.com. Scientific advisory board named on site includes Dr. James L. Green (former NASA Chief Scientist) and Dr. Dawn Mussallem (Mayo Clinic). Formula marketed as 90+ ingredients across 9 organ systems — exact per-serving doses still not on the public landing page and need to be pulled from the Nutrition Facts panel before we claim specific ingredient amounts. No FDA/FTC adverse actions found. Promoted LOW → MEDIUM on the strength of NSF certification + named advisory board + verified corporate ownership (Prenetics is publicly listed on NASDAQ: PRE), held at MEDIUM until per-serving ingredient doses are independently verified. Once Katalys application (program 1428, 16% commission) is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1428&aff_id=12086&source=weightlossrankings&sub1=im8-health and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: category is 'Supplement' to match /best/weight-loss-supplements CATEGORY_MAP."
     }
   },
   {
@@ -7218,15 +7140,15 @@
         "https://fatty15.com",
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1559"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1559 (fatty15, 8% commission). REQUIRES a full YMYL verification pass against fatty15.com before promoting confidence: confirm legal entity (Seraphina Therapeutics Inc), exact pricing tiers, dose per capsule, third-party lab testing, the published C15:0 research portfolio, any FTC/FDA adverse actions, and the essential-fatty-acid positioning. The C15:0 essential-fatty-acid claim is the company's own published position — independent peer-reviewed consensus on whether it should be officially classified as essential is still developing. Once Katalys application is approved, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1559&aff_id=12086&source=weightlossrankings&sub1=fatty15 and change affiliate_network to 'Katalys'. RECATEGORIZED 2026-04-09: changed category from 'Weight Loss Program' to 'Supplement' to match the /best/weight-loss-supplements page filter (CATEGORY_MAP in src/app/best/[category]/page.tsx)."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. Legal entity confirmed: Seraphina Therapeutics Inc., 2850 Womble Road, Suite 100-600, San Diego CA 92106. Single-ingredient C15:0 (pentadecanoic acid) supplement, vegan capsules. REGULATORY: GRAS status (Generally Recognized as Safe) awarded by FDA for FA15 in June 2021 — verifiable via FDA's GRAS notice inventory. Published research exists in peer-reviewed journals (e.g. PMC10649853 on longevity-enhancing pentadecanoic acid activity; Journal of Nutrition 2024 RCT on overweight/obesity). Inc. 5000 #1 Fastest-Growing Supplement Company 2025 (3,031% growth 2021–2024). EDITORIAL FLAG: the 'first essential fatty acid in 90+ years' framing is COMPANY-DRIVEN MARKETING, not peer-reviewed scientific consensus. C15:0 has not met the formal IOM/NIH criteria for 'essentiality' classification. The claim should be qualified accordingly any time we cite it. No FDA warning letters. No FTC enforcement actions. Promoted LOW → MEDIUM on the strength of GRAS approval + verifiable corporate registration + published research portfolio. Editorial rule: any /best/* placement MUST clarify that the 'essential' framing is company positioning, not regulatory classification. Once Katalys program 1559 (8% commission) is approved, swap affiliate_url to the Katalys tracking URL with appendKatalysSubIds() at render time."
     }
   },
   {
     "_id": "futurhealth",
     "name": "FuturHealth",
     "slug": "futurhealth",
-    "description": "FuturHealth is a telehealth weight management brand offering prescription weight loss medications including GLP-1 therapy. Listed in the Katalys catalog at program ID 815 with a $180 default CPA. Stub entry pending YMYL verification — exact drug formulary, pricing, states served, and pharmacy partners need a primary-source pass against the brand website.",
+    "description": "FuturHealth Inc. is a San Diego-based telehealth weight management brand offering brand-name Ozempic, Wegovy, Mounjaro, and Zepbound plus clinician-discretionary compounded GLP-1/GIP combinations, dispensed through US-based licensed pharmacies. The platform layers digital coaching and registered-dietitian nutrition guidance on top of the medication.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
@@ -7237,41 +7159,52 @@
       }
     ],
     "scores": {
-      "value": 7,
+      "value": 6.5,
       "effectiveness": 7,
       "ux": 7,
-      "trust": 7,
+      "trust": 5.5,
       "accessibility": 7.5,
       "support": 7
     },
     "features": [
-      "Compounded",
-      "Weight Loss Medication"
+      "Brand Wegovy",
+      "Brand Zepbound",
+      "Brand Ozempic",
+      "Brand Mounjaro",
+      "Compounded GLP-1",
+      "RD Nutrition Coaching",
+      "LegitScript Certified",
+      "HITRUST Certified"
     ],
     "states_available": [],
-    "affiliate_url": "https://www.futurhealth.com",
+    "affiliate_url": "https://landing.fh.co",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Katalys-approved program at $180 default CPA — non-trivial commission",
-      "Explicitly positioned around weight loss medication (not a general telehealth catch-all)"
+      "LegitScript Certified and HITRUST Certified — two independently verifiable telehealth/health-data trust marks",
+      "Both brand-name (Ozempic, Wegovy, Mounjaro, Zepbound) and clinician-discretionary compounded options on one platform",
+      "Bundled registered-dietitian nutrition guidance — most pure-Rx telehealths leave nutrition support to the patient"
     ],
     "cons": [
-      "Stub entry — exact drug formulary, pricing tiers, states served, and pharmacy partners need a YMYL verification pass",
-      "Confidence is LOW until that pass is done",
-      "Domain not yet verified — futurhealth.com may not be the correct landing page"
+      "ACTIVE LITIGATION: Wilson v. FuturHealth Inc., U.S. District Court Southern District of California, Case No. 3:2025cv00157, alleging unauthorized access to G-Plans subscriber data on/before October 16, 2024 and asserting CCPA, medical-confidentiality, and negligence claims. Material disclosure for any reader signing up.",
+      "BBB complaint pattern: multiple consumer reports of recurring unauthorized charges (e.g. $396/month) without medication being received — verify cancellation flow before subscribing",
+      "Pharmacy partners are described as 'licensed, U.S.-based pharmacies' but no specific 503A/503B partners are publicly named",
+      "Pricing is not displayed on the public landing page — visible only after qualification questionnaire/portal login",
+      "Clinical platform is white-labeled on top of SteadyMD and OpenLoop infrastructure — FuturHealth is the front-end brand, not the first-party prescribing entity"
     ],
-    "best_for": "pending product verification",
+    "best_for": "readers who want both brand-name and compounded GLP-1 options on one platform with registered-dietitian nutrition coaching, AND are willing to read the data-breach litigation disclosure before signing up",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
       "verified_by": "manual",
       "source_urls": [
-        "https://www.futurhealth.com",
+        "https://landing.fh.co",
+        "https://landing.fh.co/privacy",
+        "https://dockets.justia.com/docket/california/casdce/3:2025cv00157/803013",
         "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/815"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 815 (FuturHealth - Weight Loss Medication, $180 default CPA). REQUIRES a full YMYL verification pass against futurhealth.com before promoting confidence: confirm legal entity, exact drug formulary (compounded vs brand-name), pricing tiers, states served, pharmacy partners, accreditations, and any FDA / FTC adverse actions. Do NOT promote this entry to any /best page or homepage hero until verified. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=815&aff_id=12086&source=weightlossrankings&sub1=futurhealth and change affiliate_network to 'Katalys'."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. Legal entity confirmed: FuturHealth Inc., 325 W Washington St Suite 2-944, San Diego CA 92103. LegitScript Certified + HITRUST Certified per landing.fh.co privacy page. Drugs offered: brand-name Ozempic, Wegovy, Mounjaro, Zepbound, plus clinician-discretionary compounded GLP-1/GIP combos. Pharmacy partners are 'licensed, U.S.-based pharmacies' (no named entities publicly disclosed). Clinical infrastructure is white-labeled on SteadyMD + OpenLoop. ACTIVE LITIGATION (material): Wilson v. FuturHealth Inc., Case No. 3:2025cv00157 (S.D. Cal.) alleging unauthorized access to G-Plans subscriber data on/before Oct 16 2024. Plus widespread BBB complaint pattern around recurring unauthorized charges. Confidence held at MEDIUM (not promoted higher) specifically because of the litigation + billing complaint pattern; trust subscore lowered from default to 5.5 to reflect this. Do NOT featuring on homepage hero or /best/* lists while the data-breach litigation is unresolved. Once Katalys program 815 ($180 CPA) is approved, swap affiliate_url to the Katalys tracking URL with appendKatalysSubIds() at render time."
     }
   },
   {
@@ -7325,167 +7258,6 @@
       ],
       "confidence": "low",
       "notes": "Stub entry created 2026-04-09 after applying to Katalys program 647 (MangoRx, 14% commission). REQUIRES a full YMYL verification pass against mangorx.com before promoting confidence: confirm legal entity (Mangoceuticals Inc, Nasdaq: MGRX as of 2024), exact GLP-1 drug formulary, pricing tiers, states served, pharmacy partners, accreditations, and any FDA / FTC adverse actions. Note: MangoRx is publicly traded, so SEC filings can supplement the YMYL pass. Do NOT promote this entry to any /best page or homepage hero until verified. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=647&aff_id=12086&source=weightlossrankings&sub1=mangorx and change affiliate_network to 'Katalys'. KATALYS APPROVAL 2026-04-09: program 647 APPROVED. Affiliate URL upgraded from https://mangorx.com (direct) to the Katalys tracking URL. affiliate_network changed from 'Direct' to 'Katalys'. Per the no-/go/-wrapper rule, the URL will render natively in CTA hrefs and appendKatalysSubIds() will append sub2 (page source) and sub3 (list position) at render time per the standard placement-tracking pattern."
-    }
-  },
-  {
-    "_id": "plushcare",
-    "name": "PlushCare",
-    "slug": "plushcare",
-    "description": "PlushCare is a general-medicine telehealth platform owned by Accolade that offers virtual primary care visits with US board-certified physicians, including weight management consultations and GLP-1 prescriptions where clinically appropriate. Listed in the Katalys catalog at program ID 344 with a $60 default CPA. Stub entry pending YMYL verification of the GLP-1-specific pricing and workflow.",
-    "category": "GLP-1 Provider",
-    "pricing": [
-      {
-        "dose": "Preliminary monthly visit",
-        "form": "brand",
-        "monthly_cost": 99
-      }
-    ],
-    "scores": {
-      "value": 7.5,
-      "effectiveness": 7,
-      "ux": 8,
-      "trust": 8,
-      "accessibility": 8,
-      "support": 7.5
-    },
-    "features": [
-      "Virtual Primary Care",
-      "Weight Management",
-      "Brand",
-      "US Board-Certified Physicians"
-    ],
-    "states_available": [],
-    "affiliate_url": "https://www.plushcare.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Owned by Accolade (NASDAQ: ACCD) — established corporate parent with publicly disclosed financials and quality controls",
-      "US board-certified physicians on every visit, not nurse practitioners or physician assistants only",
-      "Operates as a general-medicine telehealth platform — patients get a single PCP-style provider relationship rather than a single-condition funnel",
-      "Likely accepts insurance for the visit fee even when the GLP-1 medication itself is cash-pay"
-    ],
-    "cons": [
-      "Stub entry — exact GLP-1 medication formulary, pricing, and prescribing eligibility criteria need a YMYL verification pass",
-      "Confidence is LOW until that pass is done",
-      "PlushCare is a general telehealth platform — GLP-1 prescribing is one of many services and may be subject to clinician discretion rather than guaranteed at intake"
-    ],
-    "best_for": "pending product verification — likely PCP-style virtual primary care with optional GLP-1 prescribing",
-    "is_featured": false,
-    "verification": {
-      "last_verified": "2026-04-09",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://www.plushcare.com",
-        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/344"
-      ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 344 (PlushCare, $60 default CPA). REQUIRES a full YMYL verification pass against plushcare.com before promoting confidence: confirm Accolade ownership (acquired 2021), the exact GLP-1 prescribing pathway (whether it's a guaranteed offering or clinician-discretionary), pricing tiers, insurance acceptance, states served, prescriber credentials, and any FDA / FTC adverse actions. Do NOT promote this entry to any /best page or homepage hero until verified. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=344&aff_id=12086&source=weightlossrankings&sub1=plushcare and change affiliate_network to 'Katalys'."
-    }
-  },
-  {
-    "_id": "better-u",
-    "name": "Better U",
-    "slug": "better-u",
-    "description": "Better U is a wellness telehealth brand offering weight management and metabolic health programs. Listed in the Katalys catalog at program ID 1094 with a $70 default CPA. Stub entry pending YMYL verification — exact program structure, drug formulary, pricing, and editorial fit need a primary-source pass.",
-    "category": "GLP-1 Provider",
-    "pricing": [
-      {
-        "dose": "Preliminary",
-        "form": "compounded",
-        "drug": "semaglutide",
-        "monthly_cost": 199
-      }
-    ],
-    "scores": {
-      "value": 6.5,
-      "effectiveness": 6.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7,
-      "support": 7
-    },
-    "features": [
-      "Wellness Telehealth",
-      "Weight Management"
-    ],
-    "states_available": [],
-    "affiliate_url": "https://www.betteru.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Katalys-approved program at $70 default CPA — moderate commission",
-      "Wellness-positioned (not pure-Rx) — may appeal to readers looking for a holistic weight-management option vs a medication-only telehealth"
-    ],
-    "cons": [
-      "Stub entry — exact program structure, drug formulary, pricing, and clinical model all need a YMYL verification pass",
-      "Confidence is LOW until that pass is done",
-      "Domain not yet verified — betteru.com may not be the correct landing page (could also be tryebetteru.com, joinbetteru.com, etc.)",
-      "Brand name is generic enough that there may be multiple unrelated \"Better U\" brands — verify corporate identity carefully"
-    ],
-    "best_for": "pending product verification",
-    "is_featured": false,
-    "verification": {
-      "last_verified": "2026-04-09",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/1094"
-      ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 1094 (Better U, $70 default CPA). REQUIRES a full YMYL verification pass against the brand's actual landing page before promoting confidence: confirm the correct domain (betteru.com vs trybetteru.com vs joinbetteru.com), legal entity, exact program structure, drug formulary, pricing tiers, states served, prescriber credentials, and any FDA / FTC adverse actions. CRITICAL: 'Better U' is a generic enough name that there may be multiple unrelated brands — verify corporate identity against the Katalys advertiser record before publishing. Do NOT promote this entry to any /best page or homepage hero until verified. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=1094&aff_id=12086&source=weightlossrankings&sub1=better-u and change affiliate_network to 'Katalys'."
-    }
-  },
-  {
-    "_id": "betterbrand",
-    "name": "BetterBrand",
-    "slug": "betterbrand",
-    "description": "BetterBrand is a Boulder, CO supplement company offering a line of single-purpose daily supplements positioned around 'simple solutions to common health concerns.' The visible product range on the Katalys advertiser page includes Better Focus (cognitive support), Better Morning (morning energy / wake routine), and Better Lungs (respiratory support). Stub entry pending YMYL verification — exact ingredient panels, third-party testing, FDA / FTC adverse actions, and weight-loss-relevance for our /best/weight-loss-supplements page need a primary-source pass.",
-    "category": "Supplement",
-    "pricing": [
-      {
-        "dose": "Monthly subscription (preliminary)",
-        "form": "brand",
-        "monthly_cost": 50
-      }
-    ],
-    "scores": {
-      "value": 6.5,
-      "effectiveness": 6.5,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 8,
-      "support": 7
-    },
-    "features": [
-      "Daily Supplement",
-      "Single-Purpose Formulas",
-      "Direct-to-Consumer"
-    ],
-    "states_available": [],
-    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=287&aff_id=12086&source=weightlossrankings&sub1=betterbrand",
-    "affiliate_network": "Katalys",
-    "fda_warnings": [],
-    "pros": [
-      "Single-purpose product line — each SKU targets one use case (focus, morning energy, lungs) instead of mega-stack multi-claim formulas",
-      "Boulder, CO brand with retail-grade packaging and presentation",
-      "Verticals tagged on Katalys: Health & Wellness, Health & Beauty, Nutrition, Supplements — broad health-and-wellness fit"
-    ],
-    "cons": [
-      "Stub entry — ingredient panels, third-party lab testing, FDA / FTC adverse actions, and weight-loss-specific clinical positioning all need a YMYL verification pass against betterbrand.com",
-      "Confidence is LOW until that pass is done",
-      "The product range visible at the Katalys advertiser page (Better Focus / Better Morning / Better Lungs) does NOT include an explicit weight-loss SKU — placement on /best/weight-loss-supplements depends on whether BetterBrand has a metabolism, appetite-control, or fat-loss product not visible in the screenshot, OR whether one of the existing SKUs is editorially defensible as a weight-loss adjunct",
-      "Domain not yet verified — betterbrand.com may not be the correct landing page"
-    ],
-    "best_for": "pending product verification",
-    "is_featured": false,
-    "verification": {
-      "last_verified": "2026-04-09",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://www.betterbrand.com",
-        "https://app.katalys.com/pub/a877bf31-a6c5-4629-aedf-09b3255a65de/explore/287"
-      ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 after applying to Katalys program 287 (BetterBrand). Per the Katalys program detail page, BetterBrand is tagged Health & Wellness + Health & Beauty + Nutrition + Supplements, headquartered in Boulder, CO. Visible products in the program detail screenshot: Better Focus, Better Morning, Better Lungs. REQUIRES a full YMYL verification pass against betterbrand.com before promoting confidence: confirm legal entity, full SKU lineup (specifically whether there's a weight-loss / metabolism / appetite SKU that justifies placement on /best/weight-loss-supplements), exact pricing tiers, ingredient panels per serving, third-party lab certifications, and any FDA / FTC adverse actions. CRITICAL: if no weight-loss-specific SKU exists, this entry should be moved off /best/weight-loss-supplements and placed in a more appropriate section, OR the editorial framing should explicitly explain why a focus / energy / lungs supplement is being listed alongside weight-loss products. Once Katalys application is approved AND the YMYL pass is complete, swap affiliate_url to https://track.revoffers.com/aff_c?offer_id=287&aff_id=12086&source=weightlossrankings&sub1=betterbrand and change affiliate_network to 'Katalys'. Category set to 'Supplement' so the entry renders on /best/weight-loss-supplements per the CATEGORY_MAP filter in src/app/best/[category]/page.tsx. KATALYS APPROVAL 2026-04-09: program 287 APPROVED. Affiliate URL upgraded from https://www.betterbrand.com (direct) to the Katalys tracking URL. affiliate_network changed from 'Direct' to 'Katalys'. Per the no-/go/-wrapper rule, the URL will render natively in CTA hrefs and appendKatalysSubIds() will append sub2 (page source) and sub3 (list position) at render time per the standard placement-tracking pattern."
     }
   },
   {
@@ -7570,14 +7342,20 @@
     "_id": "nativemed",
     "name": "NativeMed",
     "slug": "nativemed",
-    "description": "NativeMed is a US-based telehealth provider offering compounded semaglutide and compounded tirzepatide as cash-pay GLP-1 weight loss treatment. Stub entry pending YMYL verification.",
+    "description": "NativeMed, LLC (nativemed.net) is a Miami, FL-based cash-pay telehealth provider offering compounded semaglutide at promotional $149/mo (regular $299) and compounded tirzepatide at promotional $183/mo (regular $399), plus NAD+ and several non-weight-loss generics. LegitScript certified.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Preliminary",
+        "dose": "Compounded semaglutide (sale)",
         "form": "compounded",
         "drug": "semaglutide",
-        "monthly_cost": 199
+        "monthly_cost": 149
+      },
+      {
+        "dose": "Compounded tirzepatide (sale)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 183
       }
     ],
     "scores": {
@@ -7589,40 +7367,44 @@
       "support": 7
     },
     "features": [
-      "Compounded",
-      "Semaglutide",
-      "Tirzepatide"
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "LegitScript Certified",
+      "Cash Pay"
     ],
     "states_available": [],
     "affiliate_url": "https://www.nativemed.net",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Listed in both competitor GLP-1 directories (compareglp1medication.com and glp1planet.com)",
-      "US-based telehealth with cash-pay model",
-      "Offers both compounded semaglutide and tirzepatide"
+      "LegitScript certified per the homepage footer (independently verifiable)",
+      "Promotional pricing publicly displayed: $149/mo semaglutide, $183/mo tirzepatide (sale from $299/$399 regular)",
+      "Async questionnaire workflow with synchronous visit triggered when state law requires it"
     ],
     "cons": [
-      "Stub entry — exact drug formulary, pricing tiers, states served, and pharmacy partners need a YMYL verification pass",
-      "Confidence is LOW until that pass is done"
+      "Pharmacy partners are NOT publicly named — material gap for YMYL disclosure (described only as 'USA-based pharmacies' / 'accredited pharmacies')",
+      "States served list is not publicly enumerated",
+      "Pricing displayed as promotional sale price — readers should confirm whether the $149/$183 holds beyond the first month or escalates to the $299/$399 'regular' price",
+      "Trustpilot reviews displayed on homepage — we do NOT cite Trustpilot as a primary source per editorial policy"
     ],
-    "best_for": "pending product verification",
+    "best_for": "buyers comfortable with sub-$200 promotional compounded GLP-1 pricing who can verify pharmacy partner identity directly with NativeMed support before subscribing",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
       "verified_by": "manual",
       "source_urls": [
-        "https://www.nativemed.net"
+        "https://www.nativemed.net",
+        "https://www.nativemed.net/pages/privacy-policy"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 from the competitor brand gap crawl (docs/competitor-brand-gap-2026-04-09.md). NativeMed appeared in both competitor directories. REQUIRES a full YMYL verification pass against nativemed.net before promoting confidence: confirm legal entity, exact pricing tiers, states served, pharmacy partners, accreditations, clinical workflow, and any FDA / FTC adverse actions. Do NOT promote to any /best page or homepage hero until verified."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. Legal entity confirmed: NativeMed, LLC (per Privacy Policy effective Jan 10, 2024). Mailing address: 66 W Flagler St, Suite 900, Miami FL 33130. Pharmacy address (per Pharmacy Providers page): 9960 Northwest 116th Way, Medley, FL 33178. Drug formulary verified: compounded semaglutide $149/mo (sale, $299 reg), compounded tirzepatide $183/mo (sale, $399 reg), plus NAD+, sildenafil, trazodone, tadalafil. LegitScript badge in footer. Async workflow with state-triggered synchronous visit. No FDA warning letters or litigation found. Pharmacy partners are not publicly named (material gap). States served list not publicly enumerated. Promoted LOW → MEDIUM on the strength of named legal entity + LegitScript + transparent pricing. Held at MEDIUM until pharmacy partners and state list are confirmed."
     }
   },
   {
     "_id": "super-healthy-rx",
     "name": "Super Healthy Rx",
     "slug": "super-healthy-rx",
-    "description": "Super Healthy Rx is a US telehealth provider offering compounded semaglutide and compounded tirzepatide via US board-certified physicians and accredited compounding pharmacies. Starting pricing per competitor sources: sema $299/mo, tirz $399/mo.",
+    "description": "Super Healthy Rx (superhealthyrx.com) is operated by Natural Smart Health LLC and offers compounded semaglutide at $299/mo and compounded tirzepatide at $399/mo via fully licensed and insured physicians. Workflow includes a synchronous visit if state law requires.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
@@ -7673,27 +7455,27 @@
         "https://superhealthyrx.com"
       ],
       "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 from the competitor brand gap crawl. Pricing ($299 sema / $399 tirz) is reported from competitor directory scans and needs to be verified against the actual superhealthyrx.com landing page. REQUIRES a full YMYL verification pass: confirm legal entity, verify pricing, check states served, identify named pharmacy partners, verify LegitScript / PCAB / ACHC accreditation claims, check FDA warning letters. Do NOT promote until verified."
+      "notes": "YMYL re-verification 2026-04-09. Legal entity confirmed: 'Natural Smart Health LLC, DBA Super Healthy RX' (per Privacy Policy). Drug formulary VERIFIED on the public landing page: compounded semaglutide $299/mo, compounded tirzepatide $399/mo (regular pricing displayed, no promotional discount visible). Workflow: online questionnaire + state-triggered synchronous visit. No accreditation badges (LegitScript / PCAB / ACHC / NABP) visible on homepage or footer — material gap. Pharmacy partners NOT named ('partner with the largest compound pharmacies in the United States'). Prescriber type not specified (MD/DO/NP/PA). Sparser legal/regulatory disclosure than NativeMed. No FDA warning letters or litigation found. Held at LOW confidence — minimum bar for MEDIUM is at least one verifiable accreditation OR named pharmacy partner, and Super Healthy Rx provides neither. Do NOT feature on /best/* pages."
     }
   },
   {
     "_id": "priority-meds",
     "name": "Priority Meds",
     "slug": "priority-meds",
-    "description": "Priority Meds is a Clearwater, Florida-based cash-pay telehealth provider offering compounded semaglutide bundled with B12 and compounded tirzepatide bundled with B6. Uses flat-dose pricing (no dose-escalation price increases).",
+    "description": "Priority Meds LLC (prioritymeds.com), 13575 58th St N Ste 200, Clearwater, FL 33760, is a 100% online, flat-dose-pricing cash-pay telehealth provider offering compounded semaglutide ($98.99–$112.99/mo with B12) and compounded tirzepatide ($170.99/mo with B6). All dosages billed at the same price across the escalation schedule.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Preliminary",
+        "dose": "Compounded semaglutide (with B12)",
         "form": "compounded",
         "drug": "semaglutide",
-        "monthly_cost": 199
+        "monthly_cost": 113
       },
       {
-        "dose": "Preliminary",
+        "dose": "Compounded tirzepatide (with B6)",
         "form": "compounded",
         "drug": "tirzepatide",
-        "monthly_cost": 299
+        "monthly_cost": 171
       }
     ],
     "scores": {
@@ -7731,115 +7513,71 @@
       "source_urls": [
         "https://prioritymeds.com"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09 from the competitor brand gap crawl. REQUIRES a full YMYL verification pass against prioritymeds.com: confirm the B12/B6 co-formulation claims, exact pricing tiers, states served, pharmacy partners, accreditations, and any FDA / FTC adverse actions. The B-vitamin bundling is a marketing differentiator but needs clinical-evidence review (B12 co-administration with GLP-1s has thin published evidence for efficacy). Do NOT promote to /best pages until verified."
-    }
-  },
-  {
-    "_id": "multimedrx",
-    "name": "MultiMedRx",
-    "slug": "multimedrx",
-    "description": "MultiMedRx is a brand-name GLP-1 distribution telehealth provider offering Ozempic, Wegovy, and Zepbound with locations in Newport Beach, CA and Reno, NV. Registered NPI 1538565072.",
-    "category": "GLP-1 Provider",
-    "pricing": [
-      {
-        "dose": "Preliminary",
-        "form": "brand",
-        "drug": "semaglutide",
-        "monthly_cost": 950
-      }
-    ],
-    "scores": {
-      "value": 7,
-      "effectiveness": 7,
-      "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
-    },
-    "features": [
-      "Brand",
-      "Ozempic",
-      "Wegovy",
-      "Zepbound"
-    ],
-    "states_available": [],
-    "affiliate_url": "https://multimedrx.com",
-    "affiliate_network": "Direct",
-    "fda_warnings": [],
-    "pros": [
-      "Brand-name-only distribution (no compounded formulations)",
-      "Registered NPI 1538565072 — independently verifiable provider credential",
-      "Listed in glp1planet competitor directory"
-    ],
-    "cons": [
-      "Stub entry — exact pricing, insurance acceptance, and states served need a YMYL verification pass",
-      "Confidence is LOW until that pass is done",
-      "Brand-name-only model means cash prices track manufacturer list pricing unless insurance is accepted"
-    ],
-    "best_for": "brand-name-only GLP-1 distribution (pending verification)",
-    "is_featured": false,
-    "verification": {
-      "last_verified": "2026-04-09",
-      "verified_by": "manual",
-      "source_urls": [
-        "https://multimedrx.com"
-      ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09. Brand-name-only distribution is a distinct segment from our compounded GLP-1 default — worth treating as its own editorial angle. REQUIRES YMYL verification: confirm pricing, insurance acceptance, states served, the NPI 1538565072 registration, and any adverse actions. Do NOT promote until verified."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. Legal entity confirmed: PRIORITY MEDS LLC, 13575 58th St N Ste 200, Clearwater FL 33760. Phone: 844-764-0646. Drug formulary VERIFIED: compounded semaglutide $98.99/mo (or $112.99/mo bundled with B12), available dosages 0.25–2.5mg, ALL DOSAGES SAME PRICE. Compounded tirzepatide $170.99/mo bundled with B6, available dosages 2.5–15mg, all dosages same price. Webflow-hosted, last published 2026-03-19. Footer disclaimer: 'PriorityMeds does not directly dispense medication or provide medical services; all clinical decisions are solely made by independent providers' — operates as a marketplace/referral platform on top of '503A State Board Regulated compound pharmacies' (specific partners not named). EDITORIAL FLAG: B-vitamin co-compounding (B12 with semaglutide, B6 with tirzepatide) is a MARKETING differentiator, NOT a clinical-evidence-supported synergy. B12/B6 supplementation may support energy in patients experiencing GLP-1 fatigue, but there is no robust RCT evidence that B-vitamin co-administration enhances weight loss. The bundling is supportive care framing. No FDA warning letters or litigation found. Promoted LOW → MEDIUM on the strength of named legal entity + transparent flat-dose pricing + named operating address. Held at MEDIUM until pharmacy partners are named. Editorial rule: any /best/* placement MUST clarify that the B-vitamin bundling is supportive care, not a clinically proven weight-loss enhancer."
     }
   },
   {
     "_id": "healthicare",
     "name": "Healthicare",
     "slug": "healthicare",
-    "description": "Healthicare offers both brand-name (Ozempic, Wegovy, Mounjaro, Zepbound) and compounded semaglutide and tirzepatide via a Beluga Health provider backend dispensed through F&F Pharmacies. The Beluga+F&F backend is shared across multiple white-label telehealth front-ends.",
+    "description": "Healthicare (healthicare.com) is a 'powered by Bask' telehealth front-end offering compounded semaglutide from $147.90/mo and compounded tirzepatide from $224.40/mo, plus brand-name Ozempic, Wegovy, Mounjaro, and Zepbound from $1,199.99–$1,299.99 first month. Available in 44 US states (excludes CA, NV, NJ, NC, TX, MA, MS, NH, WV, DE). Clinical operations are run by Beluga Health (named clinician: Dr. Jonah Mink) and prescriptions are dispensed by F&F Pharmacies Inc. dba Jungle Jim's Pharmacy in Fairfield, OH.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Preliminary",
+        "dose": "Compounded semaglutide (first dose)",
         "form": "compounded",
         "drug": "semaglutide",
-        "monthly_cost": 199
+        "monthly_cost": 148
       },
       {
-        "dose": "Preliminary",
+        "dose": "Compounded tirzepatide (first dose)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 224
+      },
+      {
+        "dose": "Brand Ozempic / Wegovy / Mounjaro / Zepbound (first month)",
         "form": "brand",
         "drug": "semaglutide",
-        "monthly_cost": 950
+        "monthly_cost": 1200
       }
     ],
     "scores": {
-      "value": 7,
+      "value": 7.5,
       "effectiveness": 7,
       "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
+      "trust": 6.5,
+      "accessibility": 7,
       "support": 7
     },
     "features": [
-      "Compounded",
-      "Brand",
-      "Semaglutide",
-      "Tirzepatide",
-      "Ozempic",
-      "Wegovy"
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Brand Ozempic",
+      "Brand Wegovy",
+      "Brand Mounjaro",
+      "Brand Zepbound",
+      "44 States",
+      "Bask Backend"
     ],
     "states_available": [],
     "affiliate_url": "https://healthicare.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Offers both brand-name and compounded GLP-1s",
-      "Beluga Health provider backend is a known multi-state telehealth clinician network",
-      "Dispensed by F&F Pharmacies (compounding pharmacy)"
+      "Both compounded and full brand-name GLP-1 menu (Ozempic, Wegovy, Mounjaro, Zepbound) on one platform",
+      "Pharmacy partner is publicly named: F&F Pharmacies Inc. dba Jungle Jim's Pharmacy, 5484 Dixie Highway, Fairfield, OH 45014, (877) 858-3784",
+      "Clinical lead is publicly named: Dr. Jonah Mink, 618.740.4204, Beluga Health",
+      "Compounded semaglutide first dose at $147.90/mo is on the lower end of the segment"
     ],
     "cons": [
-      "Stub entry — exact pricing, states served, and the specific Beluga/F&F relationship need a YMYL verification pass",
-      "Confidence is LOW until that pass is done",
-      "Healthicare runs on the Beluga Health + F&F Pharmacies backend, which is shared across multiple white-label telehealth front-ends. If you're comparing Healthicare against another brand that also uses Beluga+F&F, be aware you may be comparing two storefronts on top of one underlying operation. We're mapping this cluster separately"
+      "WHITE-LABEL DISCLOSURE: Healthicare runs on the 'Bask' backend, which means the medical provider (Beluga Health / Dr. Jonah Mink) and pharmacy (F&F Pharmacies / Jungle Jim's) are shared with other front-end brands in the segment. If you're comparing Healthicare against another brand that also uses Beluga + F&F, you may be comparing two storefronts on top of one underlying operation.",
+      "Not available in 6 states: CA, NV, NJ, NC, TX, MA, MS, NH, WV, DE (verify the explicit list before sending readers)",
+      "Brand-name first-month pricing of $1,199.99–$1,299.99 is at or above retail without insurance — most of the value here is on the compounded tier",
+      "Brand ownership: 'Sunshine Health Studios Inc.' is referenced in the footer — relationship to the healthicare.com domain owner needs independent confirmation"
     ],
-    "best_for": "pending product verification",
+    "best_for": "buyers who want a transparent, named-clinician + named-pharmacy compounded GLP-1 option in 44 states, with full disclosure that the backend (Beluga + F&F) is shared with other front-end brands",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
@@ -7847,26 +7585,32 @@
       "source_urls": [
         "https://healthicare.com"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09. FOLLOW-UP RESEARCH NEEDED: map the Beluga Health + F&F Pharmacies white-label cluster the same way we mapped the Lion MD cluster (Breeze Meds / Care Bare Rx / Synergy Rx). Healthicare is one surface — there are likely several more brands running on the same backend. The cluster disclosure bar is verbatim identity proof (same NPIs + same named pharmacies), not circumstantial similarity. Do NOT promote until verified."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. healthicare.com confirmed live (Cloudflare-cached). 'Powered by Bask' per site footer. Medical provider explicitly named: Beluga Health, with named clinician Dr. Jonah Mink (618.740.4204, www.belugahealth.com). Pharmacy partner explicitly named: F&F Pharmacies Inc. dba Jungle Jim's Pharmacy, 5484 Dixie Highway, Fairfield, OH 45014, (877) 858-3784. Drug formulary VERIFIED: compounded semaglutide $147.90/mo first dose, compounded tirzepatide $224.40/mo, brand Ozempic/Wegovy/Mounjaro/Zepbound $1,199.99–$1,299.99 first month. 44-state availability claim with 6 explicit exclusions (CA, NV, NJ, NC, TX, MA, MS, NH, WV, DE) per site. WHITE-LABEL CLUSTER FINDING: the Beluga Health + F&F Pharmacies backend is shared across multiple front-end brands ('powered by Bask'). FOLLOW-UP: grep providers.json for any other entry that names Dr. Jonah Mink, Beluga Health, or F&F Pharmacies / Jungle Jim's so we can map the full cluster the same way we mapped Lion MD (Breeze / Care Bare / Synergy Rx). The disclosure bar for cluster-naming is verbatim NPI + named pharmacy match — Healthicare meets that bar against any other brand that names the same Dr. Mink + same pharmacy. Promoted LOW → MEDIUM. Trust subscore lowered to 6.5 to reflect the white-label backend (not penalized further because the disclosure is publicly explicit on Healthicare's own pages — the brand is honest about the architecture)."
     }
   },
   {
     "_id": "readyrx",
     "name": "ReadyRx",
     "slug": "readyrx",
-    "description": "ReadyRx is a US telehealth provider offering compounded semaglutide and compounded tirzepatide via LegitScript-certified FDA-registered compounding pharmacies. 5,000+ members per competitor sources.",
+    "description": "ReadyRx (readyrx.com) is a LegitScript-certified US telehealth provider offering compounded semaglutide from $179/mo and compounded tirzepatide from $255/mo, plus NAD+, sermorelin, glutathione, MIC+B12, and metformin. Marketed as serving 5,000+ members across all 50 states with batch lab testing for potency, sterility, pH, and endotoxicity.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Preliminary",
+        "dose": "Compounded semaglutide (starting)",
         "form": "compounded",
         "drug": "semaglutide",
-        "monthly_cost": 199
+        "monthly_cost": 179
+      },
+      {
+        "dose": "Compounded tirzepatide (starting)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 255
       }
     ],
     "scores": {
-      "value": 7,
+      "value": 7.5,
       "effectiveness": 7,
       "ux": 7,
       "trust": 7,
@@ -7874,34 +7618,37 @@
       "support": 7
     },
     "features": [
-      "Compounded",
-      "Semaglutide",
-      "Tirzepatide",
-      "LegitScript Verified"
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "LegitScript Certified",
+      "Batch Lab Testing",
+      "All 50 States"
     ],
     "states_available": [],
     "affiliate_url": "https://www.readyrx.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "LegitScript-certified per competitor sources",
-      "FDA-registered compounding pharmacies per competitor sources",
-      "5,000+ member scale per glp1planet competitor directory"
+      "LegitScript certified — directly verifiable via the badge link in the footer",
+      "Batch lab testing claim covers four standard QA categories (potency, sterility, pH, endotoxicity) — these are the right metrics for compounded injectables",
+      "Pricing publicly displayed: $179/mo semaglutide, $255/mo tirzepatide"
     ],
     "cons": [
-      "Stub entry — exact drug formulary, pricing tiers, states served, and pharmacy partners need a YMYL verification pass",
-      "Confidence is LOW until that pass is done"
+      "Specific FDA-registered pharmacy partner names are not disclosed publicly — claim is generic ('FDA-registered compounding pharmacies')",
+      "Clinical staff are described as 'Licensed, board-certified clinicians' but no individual NPIs or names are published on the homepage",
+      "5,000+ member figure is sourced from a competitor directory, not independently audited"
     ],
-    "best_for": "pending product verification",
+    "best_for": "compounded GLP-1 buyers who want LegitScript certification and explicit batch lab testing claims at a sub-$200 starting price",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
       "verified_by": "manual",
       "source_urls": [
-        "https://www.readyrx.com"
+        "https://www.readyrx.com",
+        "https://www.legitscript.com/websites/?checker_keywords=readyrx.com"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09. REQUIRES a YMYL verification pass against readyrx.com: verify LegitScript certification, confirm the FDA-registered pharmacy claim, check pricing tiers, states served, and any adverse actions."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. readyrx.com confirmed live (Cloudflare-cached). LegitScript certification badge links directly to legitscript.com lookup — independently verifiable. Public pricing API surfaces compounded semaglutide from $179/mo and compounded tirzepatide from $255/mo. Batch lab testing claim covers four standard QA metrics (potency, sterility, pH, endotoxicity). Claims 50-state availability and 5,000+ members. Pharmacy partners and individual clinician NPIs are NOT publicly named — material gap before featuring on /best/* pages. Promoted LOW → MEDIUM on the strength of LegitScript + transparent pricing + lab testing detail. Held at MEDIUM until pharmacy partner names and clinician NPIs can be confirmed."
     }
   },
   {
@@ -7964,8 +7711,8 @@
       "source_urls": [
         "https://agelessrx.com"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09. AgelessRx is an established brand (several years operational) — YMYL verification should be straightforward against agelessrx.com. Confirm Michigan legal entity, pricing, states served, and whether Wegovy is insurance-routed or cash-pay."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. agelessrx.com confirmed live (WP Engine hosting). Legal address: 2370 E Stadium Blvd #2049, Ann Arbor, MI 48104. Phone: 650-503-9990. Email: info@agelessrx.com. Patient portal at customer.agelessrx.com. Named medical team on the public site: Dr. Stefanie Morgan PhD (VP Operations & Applied Science), Dr. Jenell Decker MD (Medical Director, Board Certified Family Medicine), Dr. Terry Grossman MD (Medical Advisor), Dr. Mirna Jadan MD (Assistant Medical Director), Dr. Aaron Stecker DO (Telehealth Physician). Drug formulary: compounded semaglutide and tirzepatide, brand-name Wegovy, plus NAD+, glutathione, sermorelin, metformin, LDN, tretinoin. XPRIZE Healthspan semi-finalist (2024) per site claim. Press citations on site: Forbes, NY Times, Washington Post, Wall Street Journal, USA Today. Pricing not publicly displayed (requires login or assessment). Promoted LOW → MEDIUM on the strength of named, credentialed medical team + multi-year operating history + verifiable Ann Arbor address + named XPRIZE credential. Held at MEDIUM until per-clinician NPI numbers are independently confirmed before any /best/* placement."
     }
   },
   {
@@ -8021,68 +7768,73 @@
       "source_urls": [
         "https://pushhealth.com"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09. Push Health is an established US telehealth — YMYL pass should be straightforward. Confirm the 55k+ pharmacy network claim, LegitScript certification, pricing model (cash vs insurance), and states served."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. pushhealth.com confirmed live. Push Health, Inc. (Delaware, founded 2013) operates a provider-to-patient telehealth connector. Homepage VERBATIM: 'Integrated with Quest Diagnostics and over 55,000 pharmacies' — the 55K+ pharmacy claim is substantiated by primary source. LegitScript certification CONFIRMED via footer link on homepage. Brand-name GLP-1 only (Ozempic, Mounjaro, Zepbound) — no compounded option. Pricing is NOT publicly displayed; the platform claims '100% price transparency' but actual rates require account creation. States served not enumerated. Promoted LOW → MEDIUM on the strength of LegitScript + verifiable pharmacy network + 12+ year operating history. Held at MEDIUM until pricing tiers and state list can be confirmed directly."
     }
   },
   {
     "_id": "wisp",
     "name": "Wisp",
     "slug": "wisp",
-    "description": "Wisp is a US telehealth provider offering sublingual compounded semaglutide with metabolic support coaching. Semaglutide-only (no tirzepatide).",
+    "description": "Wisp (hellowisp.com) is a US telehealth provider whose weight care vertical offers brand-name Wegovy, Zepbound, and Saxenda alongside a compounded sublingual semaglutide drops formulation at $225/month. Reviews are completed by board-certified providers within 24-72 hours. Wisp is LegitScript certified.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Sublingual",
+        "dose": "Compounded sublingual semaglutide drops",
         "form": "compounded",
         "drug": "semaglutide",
-        "monthly_cost": 199
+        "monthly_cost": 225
       }
     ],
     "scores": {
       "value": 7,
-      "effectiveness": 7,
-      "ux": 7,
+      "effectiveness": 6.5,
+      "ux": 7.5,
       "trust": 7,
       "accessibility": 7.5,
       "support": 7
     },
     "features": [
-      "Compounded",
-      "Semaglutide",
-      "Sublingual"
+      "Brand Wegovy",
+      "Brand Zepbound",
+      "Brand Saxenda",
+      "Compounded Sublingual Semaglutide",
+      "LegitScript Certified",
+      "Board-Certified Providers"
     ],
     "states_available": [],
     "affiliate_url": "https://hellowisp.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Sublingual formulation is a differentiator in the compounded GLP-1 segment",
-      "US-licensed providers, HIPAA compliant per competitor sources",
-      "Metabolic support coaching bundled with medication"
+      "Wider GLP-1 menu than the prior stub suggested — both branded injectables (Wegovy, Zepbound, Saxenda) AND the compounded sublingual option",
+      "LegitScript certified, board-certified providers (Dr. Shannon Chatham DO, Andrea Sleeth WHNP-BC publicly named)",
+      "Wisp's product page uses appropriately cautious language around sublingual: 'lab tests using human-derived tissues suggest it may begin working' and 'effectiveness in patients may vary' — disclosure is more rigorous than most compounded GLP-1 marketing"
     ],
     "cons": [
-      "Semaglutide only — no tirzepatide option",
-      "Sublingual compounded semaglutide has limited published bioavailability data vs injectable — clinical-evidence review needed before editorial recommendation",
-      "Stub entry — pricing and states served need YMYL verification"
+      "EFFECTIVENESS CAVEAT: sublingual compounded semaglutide has not been tested in humans — Wisp's own product page explicitly states this. Injectables (Wegovy, Zepbound, Saxenda) on the same platform have FDA safety/efficacy data; sublingual does not.",
+      "Pharmacy partners not publicly named",
+      "States served list not publicly enumerated"
     ],
-    "best_for": "sublingual compounded semaglutide (pending verification)",
+    "best_for": "buyers who want a board-certified telehealth platform offering both branded injectables AND a sublingual alternative — with full disclosure that the sublingual form is not human-tested",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
       "verified_by": "manual",
       "source_urls": [
-        "https://hellowisp.com"
+        "https://hellowisp.com",
+        "https://hellowisp.com/shop/weight-care",
+        "https://hellowisp.com/products/compounded-sublingual-semaglutide"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09. IMPORTANT: sublingual compounded semaglutide is a contested formulation — the injectable form has FDA safety/efficacy data but sublingual has far less published bioavailability research. The YMYL verification pass needs to specifically check Wisp's clinical evidence claims and whether the sublingual product is marketed with appropriate caveats. Do NOT promote to /best pages without that review."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. CORRECTED prior framing: Wisp is NOT semaglutide-only. The /shop/weight-care page lists branded Wegovy, Zepbound, and Saxenda alongside the compounded sublingual semaglutide drops ($225/mo). LegitScript certification confirmed in the footer. Wisp's own sublingual product page contains the following verbatim caveats: 'While lab tests using human-derived tissues suggest it may begin working within 15-30 minutes, it has not yet been tested within the human body' and 'Because of this, the effectiveness of this formulation in patients may vary' and 'Compounded drugs are not FDA approved and do not undergo FDA safety, efficacy, or quality review.' This is materially MORE cautious labeling than is typical in the compounded telehealth segment. No specific FDA warning letter to Wisp was found in the Sept 2025 (50+ companies) or Feb 2026 (30 telehealth companies) sweeps. No litigation found. Promoted LOW → MEDIUM. effectiveness subscore lowered to 6.5 to reflect that the differentiator product (sublingual) lacks human bioavailability data. Editorial rule: any /best/* placement MUST include the 'sublingual not human-tested; injectables available as alternative' caveat verbatim."
     }
   },
   {
     "_id": "k-health",
     "name": "K Health",
     "slug": "k-health",
-    "description": "K Health is a large US telehealth platform offering a weight management program with GLP-1 access via a Cigna insurance partnership. Strong consumer brand recognition.",
+    "description": "K Health is a large enterprise telehealth platform built around an AI intake layer plus board-certified physician review. It is a primary-care-first product with health-system integrations (Cedars-Sinai, Hartford HealthCare, Hackensack Meridian) — GLP-1 prescribing is one clinical option within general primary care, not a dedicated weight-loss funnel.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
@@ -8093,56 +7845,58 @@
       }
     ],
     "scores": {
-      "value": 7,
-      "effectiveness": 7,
+      "value": 6.5,
+      "effectiveness": 6.5,
       "ux": 7,
-      "trust": 7,
-      "accessibility": 7.5,
-      "support": 7
+      "trust": 6.5,
+      "accessibility": 7,
+      "support": 6.5
     },
     "features": [
-      "Brand",
-      "Cigna Partnership",
-      "Weight Management Program"
+      "AI Intake + Physician Review",
+      "Primary Care",
+      "Brand-Name GLP-1 Option",
+      "Health-System Integrations"
     ],
     "states_available": [],
     "affiliate_url": "https://www.khealth.com/weight/",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Established US telehealth with strong consumer brand recognition",
-      "Cigna insurance partnership — patients with Cigna coverage may access GLP-1 at insured pricing",
-      "Listed in both competitor directories"
+      "Established US telehealth with health-system integrations (Cedars-Sinai, Hartford HealthCare, Hackensack Meridian)",
+      "AI intake reduces upfront friction for users who don't want to sit through a long questionnaire before seeing a clinician",
+      "Primary-care relationship rather than a single-condition funnel — useful for users who want one provider managing multiple conditions"
     ],
     "cons": [
-      "GLP-1 is one of many K Health offerings — not a GLP-1-specialty funnel",
-      "Cigna partnership means non-Cigna patients may have different pricing / access",
-      "Stub entry — exact GLP-1 formulary, pricing tiers, and states need YMYL verification"
+      "Not a GLP-1 specialty platform — weight management is ancillary to primary care, and GLP-1 prescribing is clinician-discretionary at the visit level",
+      "Pricing for GLP-1 specifically is not displayed publicly — needs direct confirmation from K Health support before placing readers",
+      "States served list and pharmacy partners are not publicly enumerated"
     ],
-    "best_for": "Cigna-insured patients seeking GLP-1 access (pending verification)",
+    "best_for": "users who want general primary care with GLP-1 prescribing as one available option, not a single-condition weight-loss funnel",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
       "verified_by": "manual",
       "source_urls": [
-        "https://www.khealth.com/weight/"
+        "https://www.khealth.com/",
+        "https://khealth.com/online-medical-weight-loss/"
       ],
       "confidence": "low",
-      "notes": "Stub entry created 2026-04-09. K Health is a large general telehealth — YMYL pass needs to specifically verify the GLP-1 sub-program, Cigna partnership terms, and what non-insured patients actually pay."
+      "notes": "YMYL re-verification 2026-04-09. CRITICAL CORRECTION: prior stub claimed a 'Cigna insurance partnership' as the access channel for GLP-1. That claim could NOT be verified anywhere on khealth.com or in K Health's public press releases. Search results show Cigna partnerships with Omada (lifestyle management), NOT with K Health directly. The Cigna claim has been REMOVED from this entry — both from the description and the features list — pending direct verification with K Health. K Health is correctly characterized as an enterprise primary-care AI telehealth platform with GLP-1 prescribing as one ancillary service, not a GLP-1 specialty brand. Confidence held at LOW until direct GLP-1 pricing, states served, and partnership/insurance claims can be verified with K Health support. Do NOT feature on /best/* pages or homepage hero."
     }
   },
   {
     "_id": "midi-health",
     "name": "Midi Health",
     "slug": "midi-health",
-    "description": "Midi Health is a nationwide 50-state telehealth platform focused on women in menopause and perimenopause. Prescribes GLP-1 weight management medications as part of a broader metabolic health program. Accepts insurance.",
+    "description": "Midi Health is a nationwide 50-state menopause and perimenopause telehealth platform. GLP-1 prescribing is offered as a clinician-discretionary metabolic-health adjunct within the menopause care framework — not as a standalone weight-loss product. Accepts commercial insurance but does NOT accept Medicare, Medicaid, or Medi-Cal.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Preliminary",
-        "form": "brand",
+        "dose": "Compounded semaglutide (uninsured starting)",
+        "form": "compounded",
         "drug": "semaglutide",
-        "monthly_cost": 300
+        "monthly_cost": 128
       }
     ],
     "scores": {
@@ -8150,96 +7904,106 @@
       "effectiveness": 7,
       "ux": 7,
       "trust": 7,
-      "accessibility": 7.5,
+      "accessibility": 6.5,
       "support": 7
     },
     "features": [
-      "Brand",
-      "Compounded",
-      "Menopause Focus",
+      "Menopause Specialty",
+      "Compounded Semaglutide",
       "All 50 States",
-      "Insurance Accepted"
+      "Commercial Insurance Accepted"
     ],
     "states_available": [],
     "affiliate_url": "https://www.joinmidi.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Nationwide availability in all 50 states",
-      "Accepts insurance — differentiator vs most cash-pay-only GLP-1 telehealth",
-      "Menopause + metabolic health specialty framing — useful for women in the demographic where GLP-1 efficacy and weight gain overlap most"
+      "Nationwide availability in all 50 states (verified on the public homepage)",
+      "Accepts commercial insurance — differentiator vs most cash-pay-only GLP-1 telehealth",
+      "Menopause + metabolic health specialty framing — useful for women in the demographic where GLP-1 efficacy and weight regulation overlap most",
+      "Compounded semaglutide pricing starts at $127.90/mo for uninsured patients per the public pricing/insurance page"
     ],
     "cons": [
-      "Menopause-focused — may not be the right fit for men or younger women seeking GLP-1s",
-      "GLP-1 is one of several Midi offerings",
-      "Stub entry — exact GLP-1 formulary and pricing need YMYL verification"
+      "Does NOT accept Medicare, Medicaid, or Medi-Cal — eliminates roughly 40% of the insured US adult population",
+      "GLP-1 prescribing is clinician-discretionary inside a broader menopause care plan, NOT a guaranteed offering at intake — readers signing up purely for GLP-1 access may not get it",
+      "Menopause-focused — not the right fit for men or younger women whose primary need is weight loss"
     ],
-    "best_for": "women in menopause / perimenopause seeking GLP-1 care",
+    "best_for": "women in menopause / perimenopause with commercial insurance who want GLP-1 prescribing as part of a broader hormone + metabolic care plan, not as a standalone weight-loss product",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
       "verified_by": "manual",
       "source_urls": [
-        "https://www.joinmidi.com"
+        "https://www.joinmidi.com",
+        "https://www.joinmidi.com/pricing-insurance"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09. Midi is a well-regarded menopause telehealth — YMYL pass should confirm the GLP-1 prescribing pathway, insurance coordination, exact drugs available (brand vs compounded), and states served."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. All 50 states CONFIRMED on the public homepage. Insurance acceptance CONFIRMED with major caveat: 'Midi is not covered by Medicare, Medicaid, or Medi-Cal' (verbatim from /pricing-insurance). Compounded semaglutide pricing starts at $127.90/mo for uninsured patients. GLP-1 prescribing is clinician-discretionary within a menopause care framework — patient testimonials reference GLP-1 alongside HRT, not as a standalone offering. Promoted LOW → MEDIUM with the explicit framing that this is a menopause specialty platform, NOT a general GLP-1 provider. accessibility subscore lowered to 6.5 to reflect the Medicare/Medicaid exclusion."
     }
   },
   {
     "_id": "alloy",
     "name": "Alloy",
     "slug": "alloy",
-    "description": "Alloy is a menopause-focused telehealth brand offering a weight care program that includes brand-name Zepbound and Wegovy plus compounded semaglutide, tirzepatide, and liraglutide. 48 states (not available in Louisiana or Mississippi).",
+    "description": "Alloy (myalloy.com) is a menopause-focused telehealth brand whose Weight Care program offers brand-name Zepbound (from $349/mo), brand-name Wegovy (from $199/mo), oral Wegovy (semaglutide pill), compounded semaglutide, compounded tirzepatide, and compounded liraglutide (from $80/mo). Initial consultation is $49 (separate from medication cost). All consulting doctors are certified by The Menopause Society. Available in 48 states (not Louisiana or Mississippi for the Weight Care program).",
     "category": "GLP-1 Provider",
     "pricing": [
       {
-        "dose": "Preliminary",
-        "form": "compounded",
-        "drug": "semaglutide",
-        "monthly_cost": 199
-      },
-      {
-        "dose": "Preliminary",
+        "dose": "Brand Wegovy (starting)",
         "form": "brand",
         "drug": "semaglutide",
-        "monthly_cost": 650,
+        "monthly_cost": 199,
         "note": "Wegovy"
+      },
+      {
+        "dose": "Brand Zepbound (starting)",
+        "form": "brand",
+        "drug": "tirzepatide",
+        "monthly_cost": 349,
+        "note": "Zepbound"
+      },
+      {
+        "dose": "Compounded liraglutide (starting)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 80,
+        "note": "Liraglutide"
       }
     ],
     "scores": {
-      "value": 7,
-      "effectiveness": 7,
+      "value": 7.5,
+      "effectiveness": 7.5,
       "ux": 7,
-      "trust": 7,
+      "trust": 7.5,
       "accessibility": 7.5,
-      "support": 7
+      "support": 7.5
     },
     "features": [
-      "Compounded",
-      "Brand",
-      "Semaglutide",
-      "Tirzepatide",
-      "Wegovy",
-      "Zepbound",
-      "Liraglutide",
-      "Menopause Focus"
+      "Brand Wegovy",
+      "Brand Zepbound",
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Compounded Liraglutide",
+      "Oral Wegovy",
+      "Menopause Society Certified Doctors",
+      "48 States"
     ],
     "states_available": [],
     "affiliate_url": "https://www.myalloy.com",
     "affiliate_network": "Direct",
     "fda_warnings": [],
     "pros": [
-      "Broad GLP-1 formulary including Zepbound, Wegovy, compounded sema, tirz, and liraglutide",
-      "48-state coverage",
-      "Menopause specialty framing — addresses a demographic where GLP-1 care intersects with hormone therapy"
+      "Broadest GLP-1 formulary in our catalog: brand Wegovy + brand Zepbound + oral Wegovy + compounded semaglutide + compounded tirzepatide + compounded liraglutide",
+      "All consulting doctors are certified by The Menopause Society — only ~1,000 such certified practitioners exist among ~20,000 OB-GYNs in the US",
+      "Brand-name Wegovy starting at $199/mo and compounded liraglutide starting at $80/mo cover both ends of the price/access spectrum",
+      "STARTGLP1 promo code knocks $50 off the first month per the public site"
     ],
     "cons": [
-      "Not available in Louisiana or Mississippi",
-      "Menopause-focused — targets women in a specific life stage, not a general GLP-1 telehealth",
-      "Stub entry — exact pricing and insurance coordination need YMYL verification"
+      "Not available in Louisiana or Mississippi (verified) — readers in those two states should be routed elsewhere",
+      "Initial consultation is $49 and is separate from medication cost — readers should know there's a non-refundable upfront fee",
+      "Menopause-specialty framing — best fit for women in menopause/perimenopause, not the right product for men or younger women whose primary need is weight loss"
     ],
-    "best_for": "women in menopause with comprehensive GLP-1 formulary needs (pending verification)",
+    "best_for": "women in menopause/perimenopause who want a Menopause Society-certified clinician AND the broadest brand+compounded GLP-1 formulary in our directory",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
@@ -8247,8 +8011,8 @@
       "source_urls": [
         "https://www.myalloy.com"
       ],
-      "confidence": "low",
-      "notes": "Stub entry created 2026-04-09. Alloy has one of the broader GLP-1 formularies of any telehealth in our catalog (compounded sema + compounded tirz + Wegovy + Zepbound + liraglutide). YMYL pass should verify the formulary claim, confirm the 48-state list (especially the LA/MS exclusions), and check pricing tiers."
+      "confidence": "medium",
+      "notes": "YMYL re-verification 2026-04-09. Co-founders: Anne Fulenwider & Monica Molenaar. Drug formulary VERIFIED on the public Weight Care page: brand-name Zepbound from $349/mo, brand-name Wegovy from $199/mo, oral Wegovy (semaglutide pill), compounded semaglutide, compounded tirzepatide, compounded liraglutide from $80/mo. 48-state availability with explicit Louisiana + Mississippi exclusion CONFIRMED. Initial consultation: $49 (separate from medication cost). Promo code STARTGLP1 = $50 off first month. All consulting doctors certified by The Menopause Society (10+ years experience). No FDA warning letters or litigation found. Promoted LOW → MEDIUM. Single broadest GLP-1 formulary in the catalog. Trust + value subscores raised to 7.5 based on Menopause Society credential + transparent broad pricing."
     }
   }
 ]
