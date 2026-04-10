@@ -485,7 +485,7 @@ function ComparePageInner() {
             Compare Weight Loss Providers
           </h1>
           <p className="text-lg text-brand-text-secondary mb-3">
-            Filter, sort, and compare 50+ GLP-1 providers, weight loss programs,
+            Filter, sort, and compare 100+ GLP-1 providers, weight loss programs,
             and tools side by side.
           </p>
           <p className="text-sm text-brand-text-secondary max-w-3xl mb-4">

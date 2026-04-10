@@ -6,7 +6,7 @@ import { sortProvidersByRank } from "@/lib/scoring";
 export const metadata: Metadata = {
   title: "Compare GLP-1 Providers, Programs & Prices",
   description:
-    "Compare 50+ GLP-1 telehealth providers, weight loss programs, and supplements side by side. Filter by price, features, insurance acceptance, and more.",
+    "Compare 100+ GLP-1 telehealth providers, weight loss programs, and supplements side by side. Filter by price, features, insurance acceptance, and more.",
   alternates: {
     canonical: "/compare",
   },
@@ -41,7 +41,7 @@ export default async function CompareLayout({
     "@type": "CollectionPage",
     name: "Compare GLP-1 Providers, Programs & Prices",
     description:
-      "Compare 50+ GLP-1 telehealth providers, weight loss programs, and supplements side by side. Filter by price, features, insurance acceptance, and more.",
+      "Compare 100+ GLP-1 telehealth providers, weight loss programs, and supplements side by side. Filter by price, features, insurance acceptance, and more.",
     url: `${SITE_URL}/compare`,
     isPartOf: {
       "@type": "WebSite",
