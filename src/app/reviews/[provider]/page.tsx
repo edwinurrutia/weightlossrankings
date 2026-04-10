@@ -33,6 +33,7 @@ import { getDefaultAuthor } from "@/data/authors";
 import { getWarningLetterByProviderSlug } from "@/lib/fda-warning-letters";
 import SourcesPanel from "@/components/research/SourcesPanel";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
+import { getAllDrugs } from "@/lib/drugs";
 
 // Drug-aware citation selection. Foundational regulatory + pricing
 // sources apply to every review; clinical-trial and FDA-label citations
@@ -164,6 +165,47 @@ export default async function ProviderReviewPage({
       .filter((p) => p.slug !== provider.slug)
       .slice(0, 3);
   }
+
+  // Drugs offered — derive the unique set of drug slugs this provider
+  // actually prescribes so we can render a "Drugs Offered" section
+  // that cross-links to /drugs/[slug]. This is both a UX improvement
+  // (users can click a drug name and jump to the clinical guide) and
+  // a pure internal-linking SEO win (provider pages pass link equity
+  // to drug pages). The data is sourced from two structured fields:
+  //   1. pricing[].drug — molecule-level identifier ("semaglutide", etc.)
+  //   2. features[]     — brand names ("Wegovy", "Ozempic", etc.)
+  // Both are cross-referenced against the drugs.json registry to
+  // produce canonical, deduped links with no fabricated entries.
+  const allDrugs = getAllDrugs();
+  const drugsOfferedBySlug = new Map<
+    string,
+    { slug: string; name: string; genericName: string }
+  >();
+  const pricingDrugs = new Set(
+    (provider.pricing ?? [])
+      .map((p) => p.drug?.toLowerCase())
+      .filter((d): d is string => !!d)
+  );
+  const featureStringLower = (provider.features ?? [])
+    .join(" ")
+    .toLowerCase();
+  for (const drug of allDrugs) {
+    const molMatch = pricingDrugs.has(drug.generic_name.toLowerCase());
+    const brandMatch = drug.brand_names.some((b) =>
+      featureStringLower.includes(b.toLowerCase())
+    );
+    // Also match the drug's own name against features (covers
+    // "Semaglutide", "Tirzepatide" as feature tags).
+    const nameMatch = featureStringLower.includes(drug.name.toLowerCase());
+    if (molMatch || brandMatch || nameMatch) {
+      drugsOfferedBySlug.set(drug.slug, {
+        slug: drug.slug,
+        name: drug.name,
+        genericName: drug.generic_name,
+      });
+    }
+  }
+  const drugsOffered = Array.from(drugsOfferedBySlug.values());
 
   // One-line verdict based on strongest score dimension
   let oneLineVerdict: string;
@@ -442,6 +484,40 @@ export default async function ProviderReviewPage({
             </h2>
             <ScoreBreakdownBars scores={provider.scores} />
           </section>
+
+          {/* Drugs Offered — cross-links to the clinical drug guides
+              for every GLP-1 this provider prescribes. Derived from
+              structured pricing.drug + features[] fields cross-
+              referenced against drugs.json. Pure internal-linking
+              SEO + UX improvement (users can read the clinical
+              profile of any drug before purchasing). */}
+          {drugsOffered.length > 0 && (
+            <section className="bg-white rounded-2xl border border-brand-violet/10 shadow-sm p-6 md:p-8 flex flex-col gap-4">
+              <h2 className="font-heading text-xl font-bold text-brand-text-primary">
+                Drugs Offered
+              </h2>
+              <p className="text-sm text-brand-text-secondary">
+                {provider.name} prescribes the following GLP-1
+                medications. Tap a drug to read our clinical guide
+                with FDA label info, dosing schedules, side effects,
+                and trial data.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {drugsOffered.map((d) => (
+                  <Link
+                    key={d.slug}
+                    href={`/drugs/${d.slug}`}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-brand-violet/30 bg-brand-violet/5 px-4 py-2 text-sm font-medium text-brand-violet transition hover:bg-brand-violet hover:text-white"
+                  >
+                    {d.name}
+                    <span aria-hidden className="text-xs">
+                      →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Pricing table */}
           {provider.pricing && provider.pricing.length > 0 && (
