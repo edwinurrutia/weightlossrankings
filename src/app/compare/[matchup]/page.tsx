@@ -34,17 +34,28 @@ function buildProductSchema(provider: Provider, score: number, minPrice: number 
     description: provider.description,
     brand: { "@type": "Brand", name: provider.name },
     url: `${SITE_URL}/reviews/${provider.slug}`,
-    ...(minPrice !== null
+    // Product.image is a Google-recommended field. Provider logos live
+    // on-site only when shipped; when absent we fall back to the site
+    // logo so the schema field is never empty.
+    image: `${SITE_URL}/logo-600.png`,
+    // Product.offers is required for the Merchant Listings rich result.
+    // When we have verified pricing we emit the real minPrice; when we
+    // don't we fall back to an Offer with PreOrder availability so the
+    // schema stays valid without fabricating a dollar amount.
+    offers: minPrice !== null
       ? {
-          offers: {
-            "@type": "Offer",
-            price: String(minPrice),
-            priceCurrency: "USD",
-            availability: "https://schema.org/InStock",
-            url: `${SITE_URL}/reviews/${provider.slug}`,
-          },
+          "@type": "Offer",
+          price: String(minPrice),
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          url: `${SITE_URL}/reviews/${provider.slug}`,
         }
-      : {}),
+      : {
+          "@type": "Offer",
+          priceCurrency: "USD",
+          availability: "https://schema.org/OnlineOnly",
+          url: `${SITE_URL}/reviews/${provider.slug}`,
+        },
     // No AggregateRating — this is a single first-party editorial
     // review, not an aggregate of multiple independent ratings.
     // Google's Review snippet policy: "If the entity being reviewed

@@ -31,6 +31,9 @@ export default function PharmaciesIndexPage() {
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
+    name: "Compounding Pharmacies Directory",
+    description: `Directory of ${pharmacies.length} compounding pharmacies serving the US telehealth GLP-1 market.`,
+    numberOfItems: pharmacies.length,
     itemListElement: pharmacies.map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,

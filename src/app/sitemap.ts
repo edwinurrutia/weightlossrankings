@@ -15,6 +15,7 @@ import {
   RESEARCH_ARTICLES,
   SPANISH_RESEARCH_SLUGS,
 } from "@/lib/research";
+import { AUTHORS } from "@/data/authors";
 import { RESEARCH_CLUSTERS } from "@/lib/research-clusters";
 import { TOOLS, NON_TOOLS_INTERACTIVE_PAGES } from "@/lib/tools";
 import {
@@ -247,6 +248,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.4,
     },
+    // E-E-A-T anchor pages — shipped 2026-04-09 in the deep SEO audit
+    // follow-up. Each is referenced from Organization schema's
+    // publishingPrinciples / correctionsPolicy / masthead properties
+    // in src/app/layout.tsx and from author bylines on every YMYL
+    // article, so they MUST be in the sitemap or Google will find
+    // them via crawl but treat them as secondary. Priority 0.6 since
+    // they carry the site-wide trust signal.
+    {
+      url: `${BASE_URL}/editorial-policy`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/corrections`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/authors`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
     {
       url: `${BASE_URL}/code-of-conduct`,
       lastModified: now,
@@ -301,6 +327,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Suppress unused-import warning — we kept the slug helper for the
   // type signature even though we now read full letter records.
   void getAllWarningLetterSlugs;
+
+  // Dynamic: /authors/[slug] — one entry per named editorial contributor.
+  // Author bio pages are the landing target for every article byline and
+  // carry the ProfilePage + Person JSON-LD that Google reads for E-E-A-T
+  // attribution, so they need to be crawlable via sitemap, not just via
+  // byline links.
+  const authorPages: MetadataRoute.Sitemap = AUTHORS.map((author) => ({
+    url: `${BASE_URL}/authors/${author.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
 
   // Dynamic: /reviews/[provider]
   const providerSlugs = await getAllProviderSlugs();
@@ -497,6 +535,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticPages,
+    ...authorPages,
     ...reviewPages,
     ...alternativesPages,
     ...drugPages,

@@ -110,6 +110,7 @@ export default async function StatePage({
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `Best GLP-1 Providers in ${stateName} (2026)`,
+    url: `https://weightlossrankings.org/states/${slug}`,
     about: {
       "@type": "Place",
       name: stateName,

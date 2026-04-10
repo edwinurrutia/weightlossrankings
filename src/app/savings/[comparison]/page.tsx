@@ -104,6 +104,7 @@ export default async function SavingsComparisonPage({
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `${c.brand_name} vs Compounded ${genericTitle}: 2026 Savings`,
+    url: `https://weightlossrankings.org/savings/${c.slug}`,
     description: `Save up to $${monthlySavings.toLocaleString()}/month switching from ${c.brand_name} to compounded ${c.generic_name}.`,
   };
 
@@ -115,6 +116,7 @@ export default async function SavingsComparisonPage({
     description: `Brand-name ${c.generic_name} for chronic weight management.`,
     brand: { "@type": "Brand", name: c.brand_name },
     category: "Prescription medication",
+    image: `https://weightlossrankings.org/logo-600.png`,
     offers: {
       "@type": "Offer",
       price: String(c.brand_monthly_price),
@@ -153,6 +155,7 @@ export default async function SavingsComparisonPage({
     name: `Compounded ${genericTitle}`,
     description: `503A-pharmacy compounded ${c.generic_name} from licensed US telehealth providers, typically priced ${savingsPct}% below brand.`,
     category: "Prescription medication",
+    image: `https://weightlossrankings.org/logo-600.png`,
     offers: {
       "@type": "AggregateOffer",
       lowPrice: String(compoundedLow),

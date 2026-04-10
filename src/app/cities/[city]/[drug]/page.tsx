@@ -170,6 +170,7 @@ export default async function CityDrugPage({
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `${drugLabel} in ${city.city}, ${city.state_code} (2026)`,
+    url: `https://weightlossrankings.org/cities/${city.slug}/${drugSlug}`,
     about: {
       "@type": "Place",
       name: `${city.city}, ${city.state}`,

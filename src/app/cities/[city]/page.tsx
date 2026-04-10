@@ -122,6 +122,7 @@ export default async function CityPage({
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `GLP-1 Weight Loss in ${city.city}, ${city.state_code} (2026)`,
+    url: `https://weightlossrankings.org/cities/${city.slug}`,
     about: {
       "@type": "Place",
       name: `${city.city}, ${city.state}`,

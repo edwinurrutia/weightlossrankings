@@ -214,12 +214,19 @@ export default async function ProviderReviewPage({
     name: provider.name,
     description: provider.description,
     brand: { "@type": "Brand", name: provider.name },
-    ...(displayPrice !== null && provider.affiliate_url
+    // Product.image is a Google-recommended field even when the Review
+    // is the primary rich-result target. Provider logo assets aren't
+    // shipped on-site yet, so the site logo is the honest fallback.
+    image: `https://weightlossrankings.org/logo-600.png`,
+    // offers is conditional on displayPrice + affiliate_url being set.
+    // When neither is available we still emit an Offer with
+    // OnlineOnly availability so the schema field isn't empty — that
+    // was a recommended-field warning before this commit.
+    offers: displayPrice !== null && provider.affiliate_url
       ? {
-          offers: {
-            "@type": "Offer",
-            price: String(displayPrice),
-            priceCurrency: "USD",
+          "@type": "Offer",
+          price: String(displayPrice),
+          priceCurrency: "USD",
             // Refined availability per the deep SEO audit:
             //   - All-50-states (or unspecified state list): InStock
             //   - State-restricted (1-49 states): LimitedAvailability
@@ -251,9 +258,13 @@ export default async function ProviderReviewPage({
                   })),
                 }
               : {}),
-          },
         }
-      : {}),
+      : {
+          "@type": "Offer",
+          priceCurrency: "USD",
+          availability: "https://schema.org/OnlineOnly",
+          url: provider.affiliate_url || `https://weightlossrankings.org/reviews/${provider.slug}`,
+        },
     review: {
       "@type": "Review",
       reviewRating: {

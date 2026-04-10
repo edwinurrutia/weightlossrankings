@@ -220,6 +220,7 @@ export default async function DrugPage({
     "@context": "https://schema.org",
     "@type": "Drug",
     name: drugData.name,
+    alternateName: drugData.brand_names,
     description: drugData.description,
     nonProprietaryName: drugData.generic_name,
     activeIngredient: drugData.generic_name,

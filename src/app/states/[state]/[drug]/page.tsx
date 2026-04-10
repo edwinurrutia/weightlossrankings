@@ -228,6 +228,7 @@ export default async function StateDrugPage({
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `${meta.label} in ${stateName} (2026)`,
+    url: `https://weightlossrankings.org/states/${stateData.slug}/${drug}`,
     about: {
       "@type": "Place",
       name: stateName,

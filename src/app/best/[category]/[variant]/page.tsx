@@ -190,6 +190,9 @@ export default async function VariantPage({
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
+    name: cfg.h1,
+    description: `Ranked list of ${sorted.length} providers matching ${cfg.h1.toLowerCase()}.`,
+    numberOfItems: sorted.length,
     itemListElement: sorted.map((provider, index) => ({
       "@type": "ListItem",
       position: index + 1,

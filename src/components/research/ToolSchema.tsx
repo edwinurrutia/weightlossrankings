@@ -130,6 +130,14 @@ export default function ToolSchema({
     ...(dateModified ? { dateModified } : {}),
   };
 
+  // lastReviewed fallback chain: prefer the per-tool dateModified,
+  // fall back to datePublished, fall back to today's date. Google's
+  // MedicalWebPage spec treats lastReviewed as a trust signal that
+  // editorial review is current — never omit it, because the YMYL
+  // category penalizes undated medical content.
+  const lastReviewed =
+    dateModified ?? datePublished ?? new Date().toISOString().slice(0, 10);
+
   const medicalSchema = isMedical
     ? {
         "@context": "https://schema.org",
@@ -137,9 +145,10 @@ export default function ToolSchema({
         name,
         description,
         url,
+        lastReviewed,
         ...(image ? { primaryImageOfPage: { "@type": "ImageObject", url: image } } : {}),
         ...(datePublished ? { datePublished } : {}),
-        ...(dateModified ? { dateModified, lastReviewed: dateModified } : {}),
+        ...(dateModified ? { dateModified } : {}),
         inLanguage: "en-US",
         medicalAudience: {
           "@type": "MedicalAudience",

@@ -46,14 +46,21 @@ export default function HowToSchema({
   image,
 }: HowToSchemaProps) {
   if (!steps || steps.length === 0) return null;
+  // totalTime fallback: Google lists totalTime as a recommended field
+  // on HowTo. When callers don't pass an explicit duration, we compute
+  // a reasonable estimate of ~2 minutes per step in ISO 8601 duration
+  // format. Callers that know the real time (e.g. titration ladders)
+  // still override with the exact value.
+  const computedTotalTime =
+    totalTime ?? `PT${Math.max(steps.length * 2, 1)}M`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
     name,
     description,
+    totalTime: computedTotalTime,
     ...(url ? { url } : {}),
     ...(image ? { image } : {}),
-    ...(totalTime ? { totalTime } : {}),
     step: steps.map((s, i) => ({
       "@type": "HowToStep",
       position: i + 1,

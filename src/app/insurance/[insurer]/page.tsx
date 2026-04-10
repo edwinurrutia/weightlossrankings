@@ -158,6 +158,7 @@ export default async function InsurerPage({
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `Does ${insurer.name} Cover GLP-1 Medications? (2026)`,
+    url: `https://weightlossrankings.org/insurance/${insurer.slug}`,
     description: `${insurer.name} GLP-1 coverage rules for Wegovy, Ozempic, Zepbound, and Mounjaro in 2026.`,
   };
 
