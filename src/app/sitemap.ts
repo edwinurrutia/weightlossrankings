@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import {
   getAllProviderSlugs,
-  getAllProviders,
   getAllBlogPosts,
 } from "@/lib/data";
 import { getAllDrugSlugs } from "@/lib/drugs";
@@ -386,30 +385,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   );
 
-  // Dynamic: /compare/[matchup] — all pairs within the same category
-  const allProviders = await getAllProviders();
+  // Dynamic: /compare/[matchup]
+  //
+  // REMOVED FROM SITEMAP 2026-04-10 per GSC crawl-budget analysis.
+  // With 108 providers the cartesian product generates 5,158 matchup
+  // URLs. Submitting all of them on a new domain (11 indexed pages out
+  // of 5,919 total) was drowning Google's crawl queue — 87% of the
+  // sitemap was thin programmatic matchups, causing Google to throttle
+  // indexing of our high-value research, review, and drug pages.
+  //
+  // The /compare pages still exist, still render, still pass internal
+  // link equity, and can still be found by Googlebot via crawling
+  // internal links. They just aren't on the priority list Google reads
+  // from the sitemap.
+  //
+  // Plan: re-add the TOP 20-50 most-searched matchups once Google has
+  // indexed the core 760 pages and the domain has established trust.
+  // Monitor GSC "Discovered - currently not indexed" queue drain rate
+  // as the leading indicator.
   const comparePages: MetadataRoute.Sitemap = [];
-  const categoryGroups = allProviders.reduce<Record<string, string[]>>(
-    (acc, provider) => {
-      const cat = provider.category ?? "uncategorized";
-      if (!acc[cat]) acc[cat] = [];
-      acc[cat].push(provider.slug);
-      return acc;
-    },
-    {}
-  );
-  for (const slugs of Object.values(categoryGroups)) {
-    for (let i = 0; i < slugs.length; i++) {
-      for (let j = i + 1; j < slugs.length; j++) {
-        comparePages.push({
-          url: `${BASE_URL}/compare/${slugs[i]}-vs-${slugs[j]}`,
-          lastModified: now,
-          changeFrequency: "daily",
-          priority: 0.9,
-        });
-      }
-    }
-  }
 
   // Dynamic: /best/[category]/[variant] — dose, form, insurance variant pages
   const variantPages: MetadataRoute.Sitemap = getAllVariantPaths().map(
