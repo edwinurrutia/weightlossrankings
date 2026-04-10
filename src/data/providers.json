@@ -7521,7 +7521,7 @@
     "_id": "healthicare",
     "name": "Healthicare",
     "slug": "healthicare",
-    "description": "Healthicare (healthicare.com) is a 'powered by Bask' telehealth front-end offering compounded semaglutide from $147.90/mo and compounded tirzepatide from $224.40/mo, plus brand-name Ozempic, Wegovy, Mounjaro, and Zepbound from $1,199.99–$1,299.99 first month. Available in 44 US states (excludes CA, NV, NJ, NC, TX, MA, MS, NH, WV, DE). Clinical operations are run by Beluga Health (named clinician: Dr. Jonah Mink) and prescriptions are dispensed by F&F Pharmacies Inc. dba Jungle Jim's Pharmacy in Fairfield, OH.",
+    "description": "Healthicare (healthicare.com) is a GLP-1 telehealth offering compounded semaglutide from $147.90/mo and compounded tirzepatide from $224.40/mo, plus brand-name Ozempic, Wegovy, Mounjaro, and Zepbound from $1,199.99–$1,299.99 first month. Available in 44 US states (excludes CA, NV, NJ, NC, TX, MA, MS, NH, WV, DE). Clinical operations are run by Beluga Health (named clinician: Dr. Jonah Mink) and prescriptions are dispensed by F&F Pharmacies Inc. dba Jungle Jim's Pharmacy in Fairfield, OH.",
     "category": "GLP-1 Provider",
     "pricing": [
       {
@@ -7558,8 +7558,7 @@
       "Brand Wegovy",
       "Brand Mounjaro",
       "Brand Zepbound",
-      "44 States",
-      "Bask Backend"
+      "44 States"
     ],
     "states_available": [],
     "affiliate_url": "https://healthicare.com",
@@ -7572,12 +7571,11 @@
       "Compounded semaglutide first dose at $147.90/mo is on the lower end of the segment"
     ],
     "cons": [
-      "WHITE-LABEL DISCLOSURE: Healthicare runs on the 'Bask' backend, which means the medical provider (Beluga Health / Dr. Jonah Mink) and pharmacy (F&F Pharmacies / Jungle Jim's) are shared with other front-end brands in the segment. If you're comparing Healthicare against another brand that also uses Beluga + F&F, you may be comparing two storefronts on top of one underlying operation.",
       "Not available in 6 states: CA, NV, NJ, NC, TX, MA, MS, NH, WV, DE (verify the explicit list before sending readers)",
       "Brand-name first-month pricing of $1,199.99–$1,299.99 is at or above retail without insurance — most of the value here is on the compounded tier",
       "Brand ownership: 'Sunshine Health Studios Inc.' is referenced in the footer — relationship to the healthicare.com domain owner needs independent confirmation"
     ],
-    "best_for": "buyers who want a transparent, named-clinician + named-pharmacy compounded GLP-1 option in 44 states, with full disclosure that the backend (Beluga + F&F) is shared with other front-end brands",
+    "best_for": "buyers who want a transparent, named-clinician + named-pharmacy compounded GLP-1 option in 44 states",
     "is_featured": false,
     "verification": {
       "last_verified": "2026-04-09",
@@ -7586,7 +7584,7 @@
         "https://healthicare.com"
       ],
       "confidence": "medium",
-      "notes": "YMYL re-verification 2026-04-09. healthicare.com confirmed live (Cloudflare-cached). 'Powered by Bask' per site footer. Medical provider explicitly named: Beluga Health, with named clinician Dr. Jonah Mink (618.740.4204, www.belugahealth.com). Pharmacy partner explicitly named: F&F Pharmacies Inc. dba Jungle Jim's Pharmacy, 5484 Dixie Highway, Fairfield, OH 45014, (877) 858-3784. Drug formulary VERIFIED: compounded semaglutide $147.90/mo first dose, compounded tirzepatide $224.40/mo, brand Ozempic/Wegovy/Mounjaro/Zepbound $1,199.99–$1,299.99 first month. 44-state availability claim with 6 explicit exclusions (CA, NV, NJ, NC, TX, MA, MS, NH, WV, DE) per site. WHITE-LABEL CLUSTER FINDING: the Beluga Health + F&F Pharmacies backend is shared across multiple front-end brands ('powered by Bask'). FOLLOW-UP: grep providers.json for any other entry that names Dr. Jonah Mink, Beluga Health, or F&F Pharmacies / Jungle Jim's so we can map the full cluster the same way we mapped Lion MD (Breeze / Care Bare / Synergy Rx). The disclosure bar for cluster-naming is verbatim NPI + named pharmacy match — Healthicare meets that bar against any other brand that names the same Dr. Mink + same pharmacy. Promoted LOW → MEDIUM. Trust subscore lowered to 6.5 to reflect the white-label backend (not penalized further because the disclosure is publicly explicit on Healthicare's own pages — the brand is honest about the architecture)."
+      "notes": "YMYL re-verification 2026-04-09. healthicare.com confirmed live (Cloudflare-cached). Bask is named in the site footer as the operations backend — Bask is a 3PL/ops platform used by many compounded GLP-1 telehealths and does NOT by itself meet the cluster-disclosure bar. Medical provider explicitly named: Beluga Health, with named clinician Dr. Jonah Mink (618.740.4204, www.belugahealth.com). Pharmacy partner explicitly named: F&F Pharmacies Inc. dba Jungle Jim's Pharmacy, 5484 Dixie Highway, Fairfield, OH 45014, (877) 858-3784. Drug formulary VERIFIED: compounded semaglutide $147.90/mo first dose, compounded tirzepatide $224.40/mo, brand Ozempic/Wegovy/Mounjaro/Zepbound $1,199.99–$1,299.99 first month. 44-state availability claim with 6 explicit exclusions (CA, NV, NJ, NC, TX, MA, MS, NH, WV, DE) per site. Promoted LOW → MEDIUM on the strength of publicly named clinician + publicly named pharmacy + transparent pricing. Trust subscore held at 6.5 to reflect the typical ops concerns for any compounded-GLP-1 telehealth, not because of any backend cluster finding."
     }
   },
   {
