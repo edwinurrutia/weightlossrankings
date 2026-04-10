@@ -151,12 +151,29 @@ export default async function RootLayout({
       email: "hello@weightlossrankings.org",
       availableLanguage: "English",
     },
-    publishingPrinciples: "https://weightlossrankings.org/methodology",
+    // publishingPrinciples now points at the dedicated /editorial-
+    // policy page (shipped 2026-04-09) which documents the named
+    // human author, the 125% verification standard, the source
+    // hierarchy, and the AI tooling disclosure. Per Google's YMYL
+    // E-E-A-T guidance, this is the canonical "how was the content
+    // created" anchor that publishingPrinciples is supposed to
+    // resolve to — it used to point at /methodology, which only
+    // documents the scoring rubric, not the editorial process.
+    publishingPrinciples: "https://weightlossrankings.org/editorial-policy",
     actionableFeedbackPolicy: "https://weightlossrankings.org/contact",
-    correctionsPolicy: "https://weightlossrankings.org/methodology",
+    // correctionsPolicy now points at the dedicated /corrections page
+    // (shipped 2026-04-09) which documents the corrections workflow,
+    // verification standards, and the visible correction-stamp format.
+    // Used to point at /methodology, which never had a corrections
+    // section.
+    correctionsPolicy: "https://weightlossrankings.org/corrections",
     diversityPolicy: "https://weightlossrankings.org/about",
     ethicsPolicy: "https://weightlossrankings.org/disclosure",
-    masthead: "https://weightlossrankings.org/about",
+    masthead: "https://weightlossrankings.org/authors",
+    // ownershipFundingInfo discloses the legal parent entity (MEAS
+    // Partners LLC) and the affiliate-supported business model — a
+    // YMYL trust signal Google reads from the Organization schema.
+    ownershipFundingInfo: "https://weightlossrankings.org/disclosure",
     sameAs: [],
   };
 
