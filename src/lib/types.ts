@@ -73,6 +73,28 @@ export interface Drug {
   approval_date?: string;
   dosing_schedule: { week_range: string; dose: string }[];
   clinical_trial_summary?: string;
+  /**
+   * Schema.org Drug enrichment fields. All optional — when populated
+   * they get emitted into the Drug JSON-LD on /drugs/[slug] for richer
+   * medical knowledge graph indexing per the deep SEO audit
+   * recommendation. Each field maps directly to a Schema.org Drug
+   * property:
+   *
+   *   drug_class       → schema:Drug.drugClass
+   *   dosage_form      → schema:Drug.dosageForm
+   *   admin_route      → schema:Drug.administrationRoute
+   *   available_strength → schema:Drug.availableStrength
+   *   manufacturer     → schema:Drug.manufacturer (Organization)
+   *   prescribing_info → schema:Drug.prescribingInfo (URL to FDA label)
+   *   indication       → schema:Drug.indication
+   */
+  drug_class?: string;
+  dosage_form?: string;
+  admin_route?: string;
+  available_strength?: string[];
+  manufacturer?: { name: string; url?: string };
+  prescribing_info?: string;
+  indication?: string;
 }
 
 export interface Category {

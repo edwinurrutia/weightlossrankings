@@ -9,11 +9,27 @@ import {
   getDefaultAuthor,
   type Author,
 } from "@/data/authors";
+import { getCitation } from "@/lib/citations";
 
 interface ResearchArticleLayoutProps {
   article: ResearchArticle;
   /** Live "data as of" date string. Falls back to publishedDate. */
   dataAsOf?: string;
+  /**
+   * Optional list of citation registry IDs from src/lib/citations.ts.
+   * When provided, each citation is emitted as a structured
+   * `citation` object on the ScholarlyArticle JSON-LD with the
+   * canonical PubMed/DOI URL — Google's Knowledge Graph reads this
+   * as evidence of primary-source verification and links the article
+   * back to the cited publications. Replaces the previous
+   * citationCount-only signal which only told Google how many
+   * sources existed without identifying which ones.
+   *
+   * Pass the same array to <SourcesPanel sourceIds={...}/> below the
+   * article body so the visible source list and the structured data
+   * stay in sync.
+   */
+  sourceIds?: string[];
   children: React.ReactNode;
 }
 
@@ -77,6 +93,121 @@ function isHealthContent(article: ResearchArticle): boolean {
 }
 
 /**
+ * Map article tags to Schema.org MedicalCondition entities for the
+ * MedicalWebPage `about` array. Each tag that maps to a condition
+ * adds a structured MedicalCondition reference Google's medical
+ * knowledge graph can use to link the article to the condition's
+ * canonical entity. Multiple conditions are emitted as an array
+ * (Schema.org `about` accepts multiple values).
+ *
+ * Why this exists separately from HEALTH_CONTENT_TAGS: that allow-
+ * list gates whether MedicalWebPage is emitted at all, while this
+ * map identifies which specific MedicalConditions the article is
+ * about. Most YMYL articles touch multiple conditions (e.g., a
+ * GLP-1 cardiovascular safety review touches both Type 2 Diabetes
+ * and Cardiovascular Disease).
+ */
+const TAG_TO_MEDICAL_CONDITION: Record<string, { name: string; code?: string; codingSystem?: string; sameAs?: string }> = {
+  "Type 2 Diabetes": {
+    name: "Type 2 Diabetes Mellitus",
+    code: "E11",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Type_2_diabetes",
+  },
+  "Diabetes": {
+    name: "Diabetes Mellitus",
+    code: "E11",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Diabetes",
+  },
+  "Obesity": {
+    name: "Obesity",
+    code: "E66",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Obesity",
+  },
+  "Sleep apnea": {
+    name: "Obstructive Sleep Apnea",
+    code: "G47.33",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Obstructive_sleep_apnea",
+  },
+  "Cardiovascular": {
+    name: "Cardiovascular Disease",
+    code: "I25",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Cardiovascular_disease",
+  },
+  "Heart failure": {
+    name: "Heart Failure",
+    code: "I50",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Heart_failure",
+  },
+  "PCOS": {
+    name: "Polycystic Ovary Syndrome",
+    code: "E28.2",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Polycystic_ovary_syndrome",
+  },
+  "Liver safety": {
+    name: "Non-alcoholic Fatty Liver Disease",
+    code: "K76.0",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Non-alcoholic_fatty_liver_disease",
+  },
+  "Cancer": {
+    name: "Medullary Thyroid Cancer",
+    code: "C73",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Medullary_thyroid_cancer",
+  },
+  "MTC": {
+    name: "Medullary Thyroid Cancer",
+    code: "C73",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Medullary_thyroid_cancer",
+  },
+  "Hypoglycemia": {
+    name: "Hypoglycemia",
+    code: "E16.2",
+    codingSystem: "ICD-10",
+    sameAs: "https://en.wikipedia.org/wiki/Hypoglycemia",
+  },
+  "Pregnancy": {
+    name: "Pregnancy",
+    sameAs: "https://en.wikipedia.org/wiki/Pregnancy",
+  },
+};
+
+function buildMedicalConditionsFromTags(tags: string[]) {
+  const seen = new Set<string>();
+  const conditions: Array<Record<string, unknown>> = [];
+  for (const tag of tags) {
+    const cond = TAG_TO_MEDICAL_CONDITION[tag];
+    if (cond && !seen.has(cond.name)) {
+      seen.add(cond.name);
+      const node: Record<string, unknown> = {
+        "@type": "MedicalCondition",
+        name: cond.name,
+      };
+      if (cond.code && cond.codingSystem) {
+        node.code = {
+          "@type": "MedicalCode",
+          codeValue: cond.code,
+          codingSystem: cond.codingSystem,
+        };
+      }
+      if (cond.sameAs) {
+        node.sameAs = cond.sameAs;
+      }
+      conditions.push(node);
+    }
+  }
+  return conditions;
+}
+
+/**
  * Shared chrome for every /research/[slug] piece. Provides:
  *   - Editorial header (eyebrow, title, byline, freshness stamp)
  *   - Schema.org Article JSON-LD for Google rich results
@@ -89,6 +220,7 @@ function isHealthContent(article: ResearchArticle): boolean {
 export default function ResearchArticleLayout({
   article,
   dataAsOf,
+  sourceIds,
   children,
 }: ResearchArticleLayoutProps) {
   // dateModified resolution order:
@@ -165,6 +297,47 @@ export default function ResearchArticleLayout({
     // citations rank higher in Scholar and in Google's medical
     // knowledge graph. We expose ours via citationCount.
     citationCount: article.citations,
+    // Structured citation array — when the article passes
+    // sourceIds, each citation is emitted as a ScholarlyArticle
+    // reference with the canonical PubMed/DOI URL. This tells
+    // Google's Knowledge Graph WHICH primary sources we cite,
+    // not just how many. Optional — articles without sourceIds
+    // continue to ship the citationCount-only signal.
+    ...(sourceIds && sourceIds.length > 0
+      ? {
+          citation: sourceIds.map((id) => {
+            const entry = getCitation(id);
+            const url = entry.pmid
+              ? `https://pubmed.ncbi.nlm.nih.gov/${entry.pmid}/`
+              : entry.doi
+                ? `https://doi.org/${entry.doi}`
+                : entry.url;
+            return {
+              "@type": "ScholarlyArticle",
+              headline: entry.label,
+              publisher: {
+                "@type": "Organization",
+                name: entry.publisher,
+              },
+              url,
+              ...(entry.pmid
+                ? {
+                    identifier: {
+                      "@type": "PropertyValue",
+                      propertyID: "PMID",
+                      value: entry.pmid,
+                    },
+                  }
+                : {}),
+              ...(entry.doi
+                ? {
+                    sameAs: `https://doi.org/${entry.doi}`,
+                  }
+                : {}),
+            };
+          }),
+        }
+      : {}),
     // Mark the headline + lead description as speakable so voice
     // assistants and Discover audio surface this content.
     speakable: {
@@ -232,20 +405,26 @@ export default function ResearchArticleLayout({
           "@type": "MedicalAudience",
           audienceType: "Patient",
         },
-        // about: the medical condition or treatment the page covers.
-        // We use a generic Drug entity referencing the GLP-1 RA class
-        // because most of our YMYL articles cover the class as a
-        // whole rather than a single named drug.
-        about: {
-          "@type": "Drug",
-          name: "GLP-1 receptor agonists",
-          alternateName: [
-            "Glucagon-like peptide-1 receptor agonists",
-            "Semaglutide",
-            "Tirzepatide",
-            "Orforglipron",
-          ],
-        },
+        // about: the medical entities the page covers. Always
+        // includes the GLP-1 receptor agonist drug class. When the
+        // article tags map to specific MedicalConditions (Type 2
+        // Diabetes, Obesity, Sleep Apnea, etc.), those are added
+        // alongside the Drug entity so Google's medical knowledge
+        // graph can link the article to both the drug and the
+        // conditions it discusses.
+        about: [
+          {
+            "@type": "Drug",
+            name: "GLP-1 receptor agonists",
+            alternateName: [
+              "Glucagon-like peptide-1 receptor agonists",
+              "Semaglutide",
+              "Tirzepatide",
+              "Orforglipron",
+            ],
+          },
+          ...buildMedicalConditionsFromTags(article.tags),
+        ],
         // primaryImageOfPage uses the per-route OG image
         primaryImageOfPage: {
           "@type": "ImageObject",

@@ -220,8 +220,37 @@ export default async function ProviderReviewPage({
             "@type": "Offer",
             price: String(displayPrice),
             priceCurrency: "USD",
-            availability: "https://schema.org/InStock",
+            // Refined availability per the deep SEO audit:
+            //   - All-50-states (or unspecified state list): InStock
+            //   - State-restricted (1-49 states): LimitedAvailability
+            //     plus an areaServed array of US state codes
+            // Schema.org/Offer.availability accepts both InStock and
+            // LimitedAvailability; LimitedAvailability tells Google's
+            // SERP rich-result parser that the product is not
+            // universally available, which is more accurate than
+            // pretending every state is served.
+            availability:
+              !provider.states_available ||
+              provider.states_available.length === 0 ||
+              provider.states_available.length >= 50
+                ? "https://schema.org/InStock"
+                : "https://schema.org/LimitedAvailability",
             url: provider.affiliate_url,
+            // areaServed only emitted when there's a real, non-empty,
+            // non-universal state list. Each state is rendered as a
+            // structured Place / State entity rather than a flat
+            // string so Google can geocode it.
+            ...(provider.states_available &&
+            provider.states_available.length > 0 &&
+            provider.states_available.length < 50
+              ? {
+                  areaServed: provider.states_available.map((stateCode) => ({
+                    "@type": "State",
+                    name: stateCode,
+                    addressCountry: "US",
+                  })),
+                }
+              : {}),
           },
         }
       : {}),

@@ -249,6 +249,40 @@ export default async function DrugPage({
     }));
   }
 
+  // ── Schema.org Drug enrichment fields (added 2026-04-09 per the
+  // deep SEO audit). Each field maps to a documented Schema.org Drug
+  // property and is sourced from the FDA prescribing information for
+  // each drug. These properties feed Google's medical knowledge graph
+  // and the "About this result" panel for queries about specific drugs.
+  if (drugData.drug_class) {
+    drugSchema.drugClass = drugData.drug_class;
+  }
+  if (drugData.dosage_form) {
+    drugSchema.dosageForm = drugData.dosage_form;
+  }
+  if (drugData.admin_route) {
+    drugSchema.administrationRoute = drugData.admin_route;
+  }
+  if (drugData.available_strength && drugData.available_strength.length > 0) {
+    drugSchema.availableStrength = drugData.available_strength;
+  }
+  if (drugData.manufacturer) {
+    drugSchema.manufacturer = {
+      "@type": "Organization",
+      name: drugData.manufacturer.name,
+      ...(drugData.manufacturer.url ? { url: drugData.manufacturer.url } : {}),
+    };
+  }
+  if (drugData.prescribing_info) {
+    drugSchema.prescribingInfo = drugData.prescribing_info;
+  }
+  if (drugData.indication) {
+    drugSchema.indication = drugData.indication;
+  }
+  if (drugData.approval_date) {
+    drugSchema.approvalStatus = `FDA-approved ${drugData.approval_date}`;
+  }
+
   const topProvider = topProviders[0];
   const topProviderMinPrice = topProvider ? getMinPrice(topProvider) : null;
 

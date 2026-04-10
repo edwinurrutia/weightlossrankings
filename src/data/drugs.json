@@ -11,24 +11,24 @@
     ],
     "description": "Semaglutide is a GLP-1 receptor agonist approved by the FDA for both type 2 diabetes management and chronic weight management. It has become one of the most prescribed medications in the United States, with clinical trials demonstrating weight loss of up to 15% of body weight.",
     "how_it_works": "Semaglutide mimics the naturally occurring hormone GLP-1 (glucagon-like peptide-1), which is released after eating. It activates GLP-1 receptors in the brain to reduce appetite and increase feelings of fullness, while also slowing gastric emptying so food stays in the stomach longer. These combined effects lead to reduced caloric intake and meaningful, sustained weight loss.",
-    "side_effects": "Common: nausea, vomiting, diarrhea, constipation, abdominal pain, decreased appetite, headache, fatigue. Serious (rare): pancreatitis, gallbladder disease, kidney problems, diabetic retinopathy complications, increased heart rate. Rare thyroid C-cell tumors observed in animal studies \u2014 contraindicated in patients with personal or family history of MTC or MEN2.",
+    "side_effects": "Common: nausea, vomiting, diarrhea, constipation, abdominal pain, decreased appetite, headache, fatigue. Serious (rare): pancreatitis, gallbladder disease, kidney problems, diabetic retinopathy complications, increased heart rate. Rare thyroid C-cell tumors observed in animal studies — contraindicated in patients with personal or family history of MTC or MEN2.",
     "fda_status": "FDA-approved for type 2 diabetes as Ozempic (2017) and Rybelsus (2019); FDA-approved for chronic weight management as Wegovy (2021)",
     "approval_date": "2021-06-04",
     "dosing_schedule": [
       {
-        "week_range": "Weeks 1\u20134",
+        "week_range": "Weeks 1–4",
         "dose": "0.25mg/week"
       },
       {
-        "week_range": "Weeks 5\u20138",
+        "week_range": "Weeks 5–8",
         "dose": "0.5mg/week"
       },
       {
-        "week_range": "Weeks 9\u201312",
+        "week_range": "Weeks 9–12",
         "dose": "1.0mg/week"
       },
       {
-        "week_range": "Weeks 13\u201316",
+        "week_range": "Weeks 13–16",
         "dose": "1.7mg/week"
       },
       {
@@ -46,7 +46,26 @@
       ],
       "confidence": "high",
       "notes": "STEP-1 trial figures (N=1961, 14.9% vs 2.4%, 86.4% vs 31.5%) match published Wilding et al. NEJM 2021 (PMID 33567185). Wegovy approval date 2021-06-04 confirmed. Note: this entry conflates Ozempic (T2D, 2017), Wegovy (obesity, 2021) and Rybelsus (oral T2D, 2019) under one 'Semaglutide' molecule entry — fda_status text correctly disambiguates."
-    }
+    },
+    "drug_class": "GLP-1 receptor agonist",
+    "dosage_form": "Subcutaneous injection / Oral tablet",
+    "admin_route": "Subcutaneous injection (Ozempic, Wegovy) / Oral (Rybelsus)",
+    "available_strength": [
+      "0.25 mg/0.5 mL",
+      "0.5 mg/0.5 mL",
+      "1 mg/0.5 mL",
+      "1.7 mg/0.75 mL",
+      "2.4 mg/0.75 mL",
+      "3 mg tablet",
+      "7 mg tablet",
+      "14 mg tablet"
+    ],
+    "manufacturer": {
+      "name": "Novo Nordisk A/S",
+      "url": "https://www.novonordisk.com"
+    },
+    "prescribing_info": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf",
+    "indication": "Chronic weight management in adults with obesity (BMI ≥30) or overweight (BMI ≥27) with at least one weight-related comorbid condition; type 2 diabetes mellitus glycemic control"
   },
   {
     "_id": "tirzepatide",
@@ -64,23 +83,23 @@
     "approval_date": "2023-11-08",
     "dosing_schedule": [
       {
-        "week_range": "Weeks 1\u20134",
+        "week_range": "Weeks 1–4",
         "dose": "2.5mg/week"
       },
       {
-        "week_range": "Weeks 5\u20138",
+        "week_range": "Weeks 5–8",
         "dose": "5mg/week"
       },
       {
-        "week_range": "Weeks 9\u201312",
+        "week_range": "Weeks 9–12",
         "dose": "7.5mg/week"
       },
       {
-        "week_range": "Weeks 13\u201316",
+        "week_range": "Weeks 13–16",
         "dose": "10mg/week"
       },
       {
-        "week_range": "Weeks 17\u201320",
+        "week_range": "Weeks 17–20",
         "dose": "12.5mg/week"
       },
       {
@@ -88,7 +107,7 @@
         "dose": "15mg/week (max maintenance)"
       }
     ],
-    "clinical_trial_summary": "In the SURMOUNT-1 trial (N=2,539), tirzepatide at the 15mg dose achieved an average weight loss of 22.5% over 72 weeks \u2014 nearly double the results seen with semaglutide. Participants on 10mg lost an average of 21.4%, and those on 5mg lost 15.0%, all versus 2.5% placebo.",
+    "clinical_trial_summary": "In the SURMOUNT-1 trial (N=2,539), tirzepatide at the 15mg dose achieved an average weight loss of 22.5% over 72 weeks — nearly double the results seen with semaglutide. Participants on 10mg lost an average of 21.4%, and those on 5mg lost 15.0%, all versus 2.5% placebo.",
     "verification": {
       "last_verified": "2026-04-07",
       "verified_by": "wave-3-agent",
@@ -98,7 +117,24 @@
       ],
       "confidence": "high",
       "notes": "SURMOUNT-1 figures (Jastreboff et al. NEJM 2022, PMID 35658024) match: 15mg=22.5%, 10mg=21.4%, 5mg=15.0%, placebo=2.4% (file rounds to 2.5%). N=2,539 confirmed. Mounjaro (T2D) approved May 2022, Zepbound (obesity) approved Nov 8 2023. Approval_date in this combined entry reflects the obesity (Zepbound) approval."
-    }
+    },
+    "drug_class": "GIP and GLP-1 receptor agonist (dual incretin)",
+    "dosage_form": "Subcutaneous injection",
+    "admin_route": "Subcutaneous injection (KwikPen and single-dose vial)",
+    "available_strength": [
+      "2.5 mg/0.5 mL",
+      "5 mg/0.5 mL",
+      "7.5 mg/0.5 mL",
+      "10 mg/0.5 mL",
+      "12.5 mg/0.5 mL",
+      "15 mg/0.5 mL"
+    ],
+    "manufacturer": {
+      "name": "Eli Lilly and Company",
+      "url": "https://www.lilly.com"
+    },
+    "prescribing_info": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/217806s000lbl.pdf",
+    "indication": "Chronic weight management in adults with obesity or overweight with at least one weight-related comorbidity; type 2 diabetes mellitus glycemic control"
   },
   {
     "_id": "wegovy",
@@ -108,26 +144,26 @@
     "brand_names": [
       "Wegovy"
     ],
-    "description": "Wegovy is the brand-name formulation of semaglutide 2.4mg, specifically FDA-approved for chronic weight management in adults with obesity (BMI \u226530) or overweight (BMI \u226527) with at least one weight-related condition. It is a weekly subcutaneous injection developed by Novo Nordisk.",
-    "how_it_works": "Wegovy delivers semaglutide 2.4mg \u2014 the highest approved dose \u2014 via once-weekly self-injection. It mimics the GLP-1 hormone to signal fullness to the brain, slow stomach emptying, and reduce overall caloric intake. The higher 2.4mg dose was specifically engineered to maximize the weight-loss effect beyond the 1mg dose used for diabetes.",
-    "side_effects": "Common: nausea (44%), diarrhea (30%), vomiting (24%), constipation (24%), abdominal pain (20%), headache, fatigue. Side effects typically peak during dose escalation and diminish within 4\u20138 weeks. Serious (rare): pancreatitis, gallstones, kidney injury, heart rate increase, suicidal ideation (under review by FDA).",
+    "description": "Wegovy is the brand-name formulation of semaglutide 2.4mg, specifically FDA-approved for chronic weight management in adults with obesity (BMI ≥30) or overweight (BMI ≥27) with at least one weight-related condition. It is a weekly subcutaneous injection developed by Novo Nordisk.",
+    "how_it_works": "Wegovy delivers semaglutide 2.4mg — the highest approved dose — via once-weekly self-injection. It mimics the GLP-1 hormone to signal fullness to the brain, slow stomach emptying, and reduce overall caloric intake. The higher 2.4mg dose was specifically engineered to maximize the weight-loss effect beyond the 1mg dose used for diabetes.",
+    "side_effects": "Common: nausea (44%), diarrhea (30%), vomiting (24%), constipation (24%), abdominal pain (20%), headache, fatigue. Side effects typically peak during dose escalation and diminish within 4–8 weeks. Serious (rare): pancreatitis, gallstones, kidney injury, heart rate increase, suicidal ideation (under review by FDA).",
     "fda_status": "FDA-approved for chronic weight management in adults with obesity or overweight with comorbidity (June 2021); FDA-approved for cardiovascular risk reduction in adults with established CVD (March 2024)",
     "approval_date": "2021-06-04",
     "dosing_schedule": [
       {
-        "week_range": "Weeks 1\u20134",
+        "week_range": "Weeks 1–4",
         "dose": "0.25mg/week"
       },
       {
-        "week_range": "Weeks 5\u20138",
+        "week_range": "Weeks 5–8",
         "dose": "0.5mg/week"
       },
       {
-        "week_range": "Weeks 9\u201312",
+        "week_range": "Weeks 9–12",
         "dose": "1.0mg/week"
       },
       {
-        "week_range": "Weeks 13\u201316",
+        "week_range": "Weeks 13–16",
         "dose": "1.7mg/week"
       },
       {
@@ -145,7 +181,23 @@
       ],
       "confidence": "high",
       "notes": "Wegovy approval 2021-06-04 confirmed. CV indication added March 2024. SELECT trial N=17,604 and 20% MACE reduction match Lincoff et al. NEJM 2023 (PMID 37952131). Side effect frequencies (nausea 44%, etc.) match FDA label section 6 adverse reactions table."
-    }
+    },
+    "drug_class": "GLP-1 receptor agonist",
+    "dosage_form": "Subcutaneous injection",
+    "admin_route": "Subcutaneous injection (single-dose pre-filled pen)",
+    "available_strength": [
+      "0.25 mg/0.5 mL",
+      "0.5 mg/0.5 mL",
+      "1 mg/0.5 mL",
+      "1.7 mg/0.75 mL",
+      "2.4 mg/0.75 mL"
+    ],
+    "manufacturer": {
+      "name": "Novo Nordisk A/S",
+      "url": "https://www.novonordisk.com"
+    },
+    "prescribing_info": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf",
+    "indication": "Chronic weight management in adults with obesity (BMI ≥30) or overweight (BMI ≥27) with at least one weight-related comorbidity; cardiovascular risk reduction in adults with obesity and established cardiovascular disease"
   },
   {
     "_id": "ozempic",
@@ -156,13 +208,13 @@
       "Ozempic"
     ],
     "description": "Ozempic is the brand-name formulation of semaglutide FDA-approved for type 2 diabetes management, though it has become widely prescribed off-label for weight loss. It is available in doses of 0.5mg, 1mg, and 2mg weekly, and is manufactured by Novo Nordisk. Ozempic also carries an FDA indication to reduce cardiovascular risk in adults with type 2 diabetes and heart disease.",
-    "how_it_works": "Ozempic activates GLP-1 receptors to stimulate glucose-dependent insulin secretion, suppress glucagon, and reduce blood sugar levels. The same mechanism that controls blood glucose also suppresses appetite and slows gastric emptying, producing significant weight loss as a secondary effect. At 1\u20132mg doses, Ozempic delivers strong appetite suppression comparable to Wegovy's lower dose range.",
+    "how_it_works": "Ozempic activates GLP-1 receptors to stimulate glucose-dependent insulin secretion, suppress glucagon, and reduce blood sugar levels. The same mechanism that controls blood glucose also suppresses appetite and slows gastric emptying, producing significant weight loss as a secondary effect. At 1–2mg doses, Ozempic delivers strong appetite suppression comparable to Wegovy's lower dose range.",
     "side_effects": "Common: nausea, vomiting, diarrhea, stomach pain, constipation. Injection site reactions are common in early weeks. Serious (rare): pancreatitis, diabetic retinopathy worsening, kidney injury, hypoglycemia when combined with sulfonylureas or insulin. Thyroid C-cell tumor risk noted in animal studies.",
     "fda_status": "FDA-approved for glycemic control in type 2 diabetes (December 2017); FDA-approved to reduce cardiovascular risk in adults with T2DM and established CVD (2020). Weight loss is off-label use.",
     "approval_date": "2017-12-05",
     "dosing_schedule": [
       {
-        "week_range": "Weeks 1\u20134",
+        "week_range": "Weeks 1–4",
         "dose": "0.25mg/week"
       },
       {
@@ -178,7 +230,7 @@
         "dose": "2mg/week (max)"
       }
     ],
-    "clinical_trial_summary": "In the SUSTAIN-6 cardiovascular trial, Ozempic reduced the risk of major cardiovascular events by 26% vs. placebo (Marso et al. NEJM 2016, PMID 27633186). For weight loss specifically, the STEP-8 head-to-head trial (Rubino et al. JAMA 2022, PMID 34962517) used semaglutide 2.4 mg \u2014 the Wegovy dose, not the Ozempic 1 mg dose \u2014 and showed 15.8% weight loss vs 6.4% for liraglutide 3 mg. Ozempic itself is FDA-approved only for type 2 diabetes; Wegovy is the FDA-approved semaglutide for chronic weight management.",
+    "clinical_trial_summary": "In the SUSTAIN-6 cardiovascular trial, Ozempic reduced the risk of major cardiovascular events by 26% vs. placebo (Marso et al. NEJM 2016, PMID 27633186). For weight loss specifically, the STEP-8 head-to-head trial (Rubino et al. JAMA 2022, PMID 34962517) used semaglutide 2.4 mg — the Wegovy dose, not the Ozempic 1 mg dose — and showed 15.8% weight loss vs 6.4% for liraglutide 3 mg. Ozempic itself is FDA-approved only for type 2 diabetes; Wegovy is the FDA-approved semaglutide for chronic weight management.",
     "verification": {
       "last_verified": "2026-04-07",
       "verified_by": "wave-3-agent",
@@ -187,7 +239,22 @@
       ],
       "confidence": "medium",
       "notes": "Ozempic T2D approval December 2017 confirmed. SUSTAIN-6 26% MACE reduction matches Marso et al. NEJM 2016 (PMID 27633186). FLAG: STEP-8 was a semaglutide-vs-liraglutide trial but used semaglutide 2.4mg (Wegovy dose), not Ozempic 1mg as stated. Rubino et al. JAMA 2022 (PMID 34962517) showed 15.8% weight loss for semaglutide 2.4mg vs 6.4% for liraglutide 3mg. The trial summary text incorrectly attributes the 15.8% figure to 'Ozempic 1mg' — RECOMMEND CORRECTING."
-    }
+    },
+    "drug_class": "GLP-1 receptor agonist",
+    "dosage_form": "Subcutaneous injection",
+    "admin_route": "Subcutaneous injection (multi-dose pre-filled pen)",
+    "available_strength": [
+      "0.25 mg/0.5 mL",
+      "0.5 mg/0.5 mL",
+      "1 mg/0.5 mL",
+      "2 mg/1.5 mL"
+    ],
+    "manufacturer": {
+      "name": "Novo Nordisk A/S",
+      "url": "https://www.novonordisk.com"
+    },
+    "prescribing_info": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/209637lbl.pdf",
+    "indication": "Glycemic control in type 2 diabetes mellitus; cardiovascular risk reduction in adults with type 2 diabetes and established cardiovascular disease"
   },
   {
     "_id": "mounjaro",
@@ -198,29 +265,29 @@
       "Mounjaro"
     ],
     "description": "Mounjaro is the brand-name formulation of tirzepatide FDA-approved for type 2 diabetes, manufactured by Eli Lilly. It is prescribed weekly by injection and has become extremely popular off-label for weight loss given its superior efficacy data. Like Ozempic, Mounjaro is often prescribed for weight management while awaiting broader obesity indications.",
-    "how_it_works": "Mounjaro's tirzepatide activates both GIP and GLP-1 receptors \u2014 making it a \"dual agonist\" or \"twincretin.\" For diabetes, this dual action powerfully lowers blood sugar by increasing insulin secretion and reducing glucagon. The same pathways simultaneously reduce appetite, slow gastric emptying, and appear to act directly on fat cells \u2014 producing the highest weight loss rates of any approved medication.",
-    "side_effects": "Common: nausea (12\u201318%), diarrhea (13\u201316%), vomiting (5\u20139%), constipation (5\u20137%), decreased appetite, abdominal pain, injection site reactions. Side effects typically improve after the first 4\u20138 weeks. Serious (rare): pancreatitis, gallbladder disease, hypoglycemia, acute kidney injury.",
+    "how_it_works": "Mounjaro's tirzepatide activates both GIP and GLP-1 receptors — making it a \"dual agonist\" or \"twincretin.\" For diabetes, this dual action powerfully lowers blood sugar by increasing insulin secretion and reducing glucagon. The same pathways simultaneously reduce appetite, slow gastric emptying, and appear to act directly on fat cells — producing the highest weight loss rates of any approved medication.",
+    "side_effects": "Common: nausea (12–18%), diarrhea (13–16%), vomiting (5–9%), constipation (5–7%), decreased appetite, abdominal pain, injection site reactions. Side effects typically improve after the first 4–8 weeks. Serious (rare): pancreatitis, gallbladder disease, hypoglycemia, acute kidney injury.",
     "fda_status": "FDA-approved for type 2 diabetes (May 2022). Off-label use for weight loss is common; the weight management indication is covered by Zepbound (FDA-approved November 2023).",
     "approval_date": "2022-05-13",
     "dosing_schedule": [
       {
-        "week_range": "Weeks 1\u20134",
+        "week_range": "Weeks 1–4",
         "dose": "2.5mg/week"
       },
       {
-        "week_range": "Weeks 5\u20138",
+        "week_range": "Weeks 5–8",
         "dose": "5mg/week"
       },
       {
-        "week_range": "Weeks 9\u201312",
+        "week_range": "Weeks 9–12",
         "dose": "7.5mg/week"
       },
       {
-        "week_range": "Weeks 13\u201316",
+        "week_range": "Weeks 13–16",
         "dose": "10mg/week"
       },
       {
-        "week_range": "Weeks 17\u201320",
+        "week_range": "Weeks 17–20",
         "dose": "12.5mg/week"
       },
       {
@@ -228,7 +295,7 @@
         "dose": "15mg/week (max)"
       }
     ],
-    "clinical_trial_summary": "In the SURPASS-2 trial, Mounjaro (tirzepatide 15mg) reduced HbA1c by 2.46 percentage points and produced 12.4 lbs more weight loss than semaglutide 1mg. Sub-analyses showed 41% of participants achieved an HbA1c below 5.7% \u2014 essentially normal blood sugar levels.",
+    "clinical_trial_summary": "In the SURPASS-2 trial, Mounjaro (tirzepatide 15mg) reduced HbA1c by 2.46 percentage points and produced 12.4 lbs more weight loss than semaglutide 1mg. Sub-analyses showed 41% of participants achieved an HbA1c below 5.7% — essentially normal blood sugar levels.",
     "verification": {
       "last_verified": "2026-04-07",
       "verified_by": "wave-3-agent",
@@ -237,7 +304,24 @@
       ],
       "confidence": "high",
       "notes": "Mounjaro T2D approval May 13, 2022 confirmed (Drugs@FDA NDA 215866). SURPASS-2 results match Frias et al. NEJM 2021 (PMID 34170647): tirzepatide 15mg HbA1c reduction 2.46% (vs semaglutide 1mg). Side effect frequencies match FDA label."
-    }
+    },
+    "drug_class": "GIP and GLP-1 receptor agonist (dual incretin)",
+    "dosage_form": "Subcutaneous injection",
+    "admin_route": "Subcutaneous injection (single-dose pre-filled pen)",
+    "available_strength": [
+      "2.5 mg/0.5 mL",
+      "5 mg/0.5 mL",
+      "7.5 mg/0.5 mL",
+      "10 mg/0.5 mL",
+      "12.5 mg/0.5 mL",
+      "15 mg/0.5 mL"
+    ],
+    "manufacturer": {
+      "name": "Eli Lilly and Company",
+      "url": "https://www.lilly.com"
+    },
+    "prescribing_info": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/215866s000lbl.pdf",
+    "indication": "Glycemic control in adults with type 2 diabetes mellitus"
   },
   {
     "_id": "zepbound",
@@ -247,30 +331,30 @@
     "brand_names": [
       "Zepbound"
     ],
-    "description": "Zepbound is the brand-name formulation of tirzepatide 2.5\u201315mg specifically FDA-approved for chronic weight management, launched by Eli Lilly in late 2023. It is chemically identical to Mounjaro but approved specifically for obesity treatment, making it eligible for different insurance coverage pathways and savings programs.",
+    "description": "Zepbound is the brand-name formulation of tirzepatide 2.5–15mg specifically FDA-approved for chronic weight management, launched by Eli Lilly in late 2023. It is chemically identical to Mounjaro but approved specifically for obesity treatment, making it eligible for different insurance coverage pathways and savings programs.",
     "how_it_works": "Zepbound works through tirzepatide's dual GIP/GLP-1 mechanism to reduce appetite through both central brain signals and peripheral metabolic effects. GLP-1 activation creates feelings of fullness and slows digestion; GIP activation may additionally enhance fat metabolism and energy expenditure. This twin-hormone approach produces more weight loss than any single-pathway agent.",
     "side_effects": "Common: nausea (31%), diarrhea (23%), vomiting (13%), constipation (12%), abdominal pain (9%), injection site redness. Nausea is most common during dose escalation and typically resolves within a month of each new dose. Serious (rare): pancreatitis, cholelithiasis (gallstones), suicidal ideation monitoring recommended, thyroid tumor risk noted in animal models.",
-    "fda_status": "FDA-approved for chronic weight management in adults with obesity (BMI \u226530) or overweight (BMI \u226527) with at least one weight-related comorbidity (November 2023)",
+    "fda_status": "FDA-approved for chronic weight management in adults with obesity (BMI ≥30) or overweight (BMI ≥27) with at least one weight-related comorbidity (November 2023)",
     "approval_date": "2023-11-08",
     "dosing_schedule": [
       {
-        "week_range": "Weeks 1\u20134",
+        "week_range": "Weeks 1–4",
         "dose": "2.5mg/week"
       },
       {
-        "week_range": "Weeks 5\u20138",
+        "week_range": "Weeks 5–8",
         "dose": "5mg/week"
       },
       {
-        "week_range": "Weeks 9\u201312",
+        "week_range": "Weeks 9–12",
         "dose": "7.5mg/week"
       },
       {
-        "week_range": "Weeks 13\u201316",
+        "week_range": "Weeks 13–16",
         "dose": "10mg/week"
       },
       {
-        "week_range": "Weeks 17\u201320",
+        "week_range": "Weeks 17–20",
         "dose": "12.5mg/week"
       },
       {
@@ -278,7 +362,7 @@
         "dose": "15mg/week (maintenance)"
       }
     ],
-    "clinical_trial_summary": "In the SURMOUNT-1 trial, Zepbound (tirzepatide 15mg) produced an average weight loss of 22.5% (about 52 lbs) over 72 weeks \u2014 the highest of any anti-obesity medication ever studied. At 10mg, participants lost 21.4%; at 5mg, they lost 15.0%. 91% of participants lost at least 5% of body weight at the 15mg dose.",
+    "clinical_trial_summary": "In the SURMOUNT-1 trial, Zepbound (tirzepatide 15mg) produced an average weight loss of 22.5% (about 52 lbs) over 72 weeks — the highest of any anti-obesity medication ever studied. At 10mg, participants lost 21.4%; at 5mg, they lost 15.0%. 91% of participants lost at least 5% of body weight at the 15mg dose.",
     "verification": {
       "last_verified": "2026-04-07",
       "verified_by": "wave-3-agent",
@@ -287,7 +371,24 @@
       ],
       "confidence": "high",
       "notes": "Zepbound obesity approval Nov 8, 2023 confirmed (Drugs@FDA NDA 217806). SURMOUNT-1 figures match Jastreboff et al. NEJM 2022 (PMID 35658024). 91% achieving ≥5% weight loss at 15mg matches published trial data."
-    }
+    },
+    "drug_class": "GIP and GLP-1 receptor agonist (dual incretin)",
+    "dosage_form": "Subcutaneous injection",
+    "admin_route": "Subcutaneous injection (single-dose pre-filled pen and vial)",
+    "available_strength": [
+      "2.5 mg/0.5 mL",
+      "5 mg/0.5 mL",
+      "7.5 mg/0.5 mL",
+      "10 mg/0.5 mL",
+      "12.5 mg/0.5 mL",
+      "15 mg/0.5 mL"
+    ],
+    "manufacturer": {
+      "name": "Eli Lilly and Company",
+      "url": "https://www.lilly.com"
+    },
+    "prescribing_info": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/217806s000lbl.pdf",
+    "indication": "Chronic weight management in adults with obesity (BMI ≥30) or overweight (BMI ≥27) with at least one weight-related comorbidity; obstructive sleep apnea in adults with obesity"
   },
   {
     "_id": "foundayo",
@@ -326,6 +427,22 @@
       ],
       "confidence": "high",
       "notes": "Foundayo (orforglipron) FDA approval April 1, 2026 confirmed via Lilly investor relations and multiple secondary sources. Efficacy estimand 12.4% and treatment-regimen estimand 11.1% match Lilly's release. ATTAIN-1 NCT05869903 trial registry valid. Foundayo approved under FDA's National Priority Voucher Program."
-    }
+    },
+    "drug_class": "GLP-1 receptor agonist (oral non-peptide small molecule)",
+    "dosage_form": "Oral tablet",
+    "admin_route": "Oral, once daily",
+    "available_strength": [
+      "3 mg tablet",
+      "6 mg tablet",
+      "12 mg tablet",
+      "24 mg tablet",
+      "36 mg tablet"
+    ],
+    "manufacturer": {
+      "name": "Eli Lilly and Company",
+      "url": "https://www.lilly.com"
+    },
+    "prescribing_info": "https://www.lilly.com/news/press-releases/foundayo-fda-approval",
+    "indication": "Chronic weight management in adults with obesity, or overweight with at least one weight-related comorbidity"
   }
 ]
