@@ -4,8 +4,57 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
 import FaqSchema from "@/components/research/FaqSchema";
+import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
 
 const SLUG = "compounded-glp1-reconstitution-mixing-guide";
+
+// HowTo JSON-LD — each step maps 1:1 to the visible <ol> in the
+// "Step-by-step reconstitution" section of the article body. Google
+// requires every HowTo step to correspond to on-page content, so
+// the `text` here is a short summary of the visible strong/em
+// instructions in the ordered list.
+const HOW_TO_STEPS: HowToStep[] = [
+  {
+    name: "Wash hands and lay out supplies",
+    text: "Wash hands with soap and water, then dry. Set out the lyophilized vial, bacteriostatic water, reconstitution syringe, alcohol pads, and a sharps container on a clean flat surface.",
+  },
+  {
+    name: "Inspect both vials",
+    text: "The drug vial should contain a dry white or off-white powder cake with no discoloration. The bacteriostatic water should be clear with no particulates. If either looks wrong, call the pharmacy.",
+  },
+  {
+    name: "Wipe both vial stoppers with alcohol",
+    text: "Wipe both stoppers with a fresh alcohol pad and let the alcohol air-dry for 10–15 seconds. Do not blow on it.",
+  },
+  {
+    name: "Draw the bacteriostatic water",
+    text: "Use the reconstitution syringe to draw the exact volume specified by the pharmacy (commonly 2–5 mL). Tap the syringe and expel air bubbles before injecting.",
+  },
+  {
+    name: "Inject the water into the drug vial slowly",
+    text: "Insert the needle at a 45-degree angle to reduce coring and slowly stream the water against the vial wall — not directly onto the powder cake — to avoid foaming and peptide shear.",
+  },
+  {
+    name: "Discard the syringe in a sharps container",
+    text: "Withdraw the syringe and dispose of it in a sharps container. Do not recap the needle.",
+  },
+  {
+    name: "Dissolve the powder by gentle rotation",
+    text: "Roll the vial gently between your hands in a circular motion for 30–60 seconds. Do NOT shake — shaking foams the solution and shears the peptide, reducing potency.",
+  },
+  {
+    name: "Inspect the reconstituted solution",
+    text: "The finished solution should be clear or very lightly opalescent with no visible particles. If it is cloudy or has particles, do not use it — call the pharmacy.",
+  },
+  {
+    name: "Label the vial with reconstitution date and BUD",
+    text: "Write the reconstitution date and the pharmacy-assigned beyond-use date (BUD) on the vial. This is the one label you should never skip.",
+  },
+  {
+    name: "Refrigerate between doses",
+    text: "Store the reconstituted vial at 2–8°C (36–46°F) between doses, unless the pharmacy specifically instructs otherwise.",
+  },
+];
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -70,6 +119,14 @@ export default function ReconstitutionArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <HowToSchema
+        name="How to Reconstitute a Compounded GLP-1 Vial"
+        description="Step-by-step reconstitution procedure for lyophilized compounded semaglutide or tirzepatide vials using bacteriostatic water, from hand-washing through refrigerated storage."
+        steps={HOW_TO_STEPS}
+        url="https://weightlossrankings.org/research/compounded-glp1-reconstitution-mixing-guide"
+        image="https://weightlossrankings.org/research/compounded-glp1-reconstitution-mixing-guide/opengraph-image"
+        totalTime="PT10M"
+      />
       <p data-speakable="lead">
         Most compounded GLP-1 vials ship as a ready-to-inject liquid
         solution. A minority ship as <strong>lyophilized powder</strong>{" "}

@@ -5,8 +5,36 @@ import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
 import InjectionSitesDiagram from "@/components/research/InjectionSitesDiagram";
 import FaqSchema from "@/components/research/FaqSchema";
+import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
 
 const SLUG = "where-to-inject-semaglutide-tirzepatide-guide";
+
+// HowTo steps correspond to the visible injection technique
+// instructions in the article body, sourced from the FDA-approved
+// IFU documents for Wegovy, Ozempic, Zepbound, and Mounjaro. Google
+// requires every HowTo step to map to on-page content.
+const HOW_TO_STEPS: HowToStep[] = [
+  {
+    name: "Choose an FDA-approved site",
+    text: "Pick one of the three FDA-approved sites: abdomen (at least 2 inches from the navel), front of thigh, or back of the upper arm. All three are equivalent for semaglutide and tirzepatide absorption.",
+  },
+  {
+    name: "Rotate the site between doses",
+    text: "Use a different site each week to prevent lipohypertrophy (lumpy tissue that slows absorption). Rotate in a pattern you can track — left abdomen, right abdomen, left thigh, right thigh, etc.",
+  },
+  {
+    name: "Clean the site with alcohol and let it dry",
+    text: "Wipe the injection site with an alcohol pad and let the alcohol air-dry completely. Wet alcohol stings on injection and can dilute the dose at the injection point.",
+  },
+  {
+    name: "Insert the needle at 90 degrees",
+    text: "Press the auto-injector pen firmly flat against the skin so the needle enters at a 90-degree angle. This is the labeled angle for all current subcutaneous GLP-1 pens.",
+  },
+  {
+    name: "Hold the pen in place for the full dose delivery",
+    text: "Hold the pen steady against the skin for the full dose duration indicated by the device (typically 5–10 seconds) and the post-injection hold time. Do not withdraw early — it wastes the dose.",
+  },
+];
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -92,6 +120,14 @@ export default function InjectionGuideArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <HowToSchema
+        name="Where and How to Inject Semaglutide and Tirzepatide"
+        description="Step-by-step injection technique for the three FDA-approved subcutaneous sites (abdomen, front of thigh, back of upper arm), sourced from the Wegovy, Ozempic, Zepbound, and Mounjaro Instructions for Use."
+        steps={HOW_TO_STEPS}
+        url="https://weightlossrankings.org/research/where-to-inject-semaglutide-tirzepatide-guide"
+        image="https://weightlossrankings.org/research/where-to-inject-semaglutide-tirzepatide-guide/opengraph-image"
+        totalTime="PT3M"
+      />
       <p data-speakable="lead">
         Most GLP-1 telehealth providers ship a vial and a syringe with
         a one-line dosing instruction and almost no detail about where

@@ -2,6 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
+import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
+
+// HowTo steps match the "General switching principles" <ol> in the
+// article body. Google requires every step to correspond to visible
+// on-page content — these four map 1:1 to the four principles.
+const HOW_TO_STEPS: HowToStep[] = [
+  {
+    name: "Do not combine GLP-1s",
+    text: "Both Wegovy and Zepbound labels explicitly say not to use the drug with any other GLP-1 receptor agonist. When switching, the old drug stops and the new drug starts — no overlap.",
+  },
+  {
+    name: "Time the switch to your next scheduled injection",
+    text: "Semaglutide and tirzepatide are weekly drugs with 5–7 day half-lives. Skip the next dose of the old drug and take the first dose of the new drug in its place at the natural weekly injection point.",
+  },
+  {
+    name: "Restart the titration ramp on the new drug",
+    text: "Even at maintenance on the old drug, start the new drug at its lowest approved dose (0.25 mg semaglutide or 2.5 mg tirzepatide) and follow the standard 4-week ramp. Skipping the ramp produces severe nausea.",
+  },
+  {
+    name: "Expect slower weight loss during the re-titration",
+    text: "During the 16–20 weeks it takes to re-titrate to maintenance on the new drug, weight loss slows significantly — you may even see small early regain. The curve usually catches up at maintenance dose.",
+  },
+];
 import References from "@/components/research/References";
 import FaqSchema from "@/components/research/FaqSchema";
 
@@ -73,6 +96,14 @@ export default function SwitchingGuideArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <HowToSchema
+        name="How to Switch Between GLP-1 Medications Safely"
+        description="The four general switching principles for moving between semaglutide, tirzepatide, Wegovy, Ozempic, Zepbound, Mounjaro, and Foundayo — sourced from the FDA prescribing information."
+        steps={HOW_TO_STEPS}
+        url="https://weightlossrankings.org/research/switching-between-glp1-medications-guide"
+        image="https://weightlossrankings.org/research/switching-between-glp1-medications-guide/opengraph-image"
+        totalTime="PT15M"
+      />
       <p data-speakable="lead">
         Switching between GLP-1 medications is increasingly common:
         patients plateau on semaglutide and want to try tirzepatide,

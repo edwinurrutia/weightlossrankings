@@ -4,8 +4,36 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References from "@/components/research/References";
 import FaqSchema from "@/components/research/FaqSchema";
+import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
 
 const SLUG = "what-to-eat-on-glp1-diet-protein-guide";
+
+// HowTo steps correspond 1:1 to the visible <ol> in the "Meal
+// timing and structure" section of the article body (sourced from
+// Wharton 2022 clinical practice guidance). Google requires HowTo
+// steps to map to visible on-page content.
+const HOW_TO_STEPS: HowToStep[] = [
+  {
+    name: "Eat smaller, more frequent meals",
+    text: "Three very small meals plus 1–2 small snacks is usually better tolerated than two large meals on a GLP-1. Smaller gastric volumes reduce the nausea trigger from slowed gastric emptying.",
+  },
+  {
+    name: "Stop eating when you feel full",
+    text: "Fullness on a GLP-1 comes much earlier than before. Ignoring that first fullness signal triggers nausea within the hour. Retrain your stop signals — stop when full, not when the plate is empty.",
+  },
+  {
+    name: "Eat protein first at every meal",
+    text: "Eat the protein portion of every meal before the carbs and vegetables. If you fill up halfway through, at least you got the protein in — critical for preserving lean mass during weight loss.",
+  },
+  {
+    name: "Eat slowly",
+    text: "GLP-1s delay the brain's fullness signal slightly. Fast eating produces overeating followed by nausea. Aim for 20–30 minutes per meal to stay in sync with your updated satiety signals.",
+  },
+  {
+    name: "Hydrate between meals, not during",
+    text: "Large amounts of water with meals fill the already-slow-emptying stomach faster and trigger nausea. Drink water 30 minutes before or 30 minutes after meals instead.",
+  },
+];
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -83,6 +111,14 @@ export default function DietArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <HowToSchema
+        name="How to Eat on a GLP-1: Meal Timing and Structure"
+        description="Five evidence-based meal timing and structure rules for patients on semaglutide, tirzepatide, Wegovy, Ozempic, Zepbound, Mounjaro, or Foundayo — sourced from Wharton 2022 clinical practice guidance."
+        steps={HOW_TO_STEPS}
+        url="https://weightlossrankings.org/research/what-to-eat-on-glp1-diet-protein-guide"
+        image="https://weightlossrankings.org/research/what-to-eat-on-glp1-diet-protein-guide/opengraph-image"
+        totalTime="PT25M"
+      />
       <p data-speakable="lead">
         GLP-1 therapy reduces caloric intake automatically — appetite
         drops, meals get smaller, snacking mostly stops. The problem

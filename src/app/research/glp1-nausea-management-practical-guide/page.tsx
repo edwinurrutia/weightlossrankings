@@ -4,8 +4,40 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
 import FaqSchema from "@/components/research/FaqSchema";
+import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
 
 const SLUG = "glp1-nausea-management-practical-guide";
+
+// HowTo steps correspond 1:1 to the six <h3> numbered subsections
+// under "What the evidence actually supports for management" in the
+// article body. Google requires each HowTo step to map to visible
+// on-page content.
+const HOW_TO_STEPS: HowToStep[] = [
+  {
+    name: "Slow the titration",
+    text: "If nausea hits hard on a dose step, spend an extra 2–4 weeks at the current dose before advancing. The FDA labels explicitly allow extending the titration period at the prescriber's discretion.",
+  },
+  {
+    name: "Eat smaller, more frequent meals",
+    text: "Switch from 3 large meals to 5–6 small ones. Smaller gastric volumes reduce the stretching sensation that triggers nausea on slowed GLP-1 gastric emptying.",
+  },
+  {
+    name: "Avoid high-fat trigger foods",
+    text: "Fried food, greasy meat, heavy cream sauces, and full-fat dairy all slow gastric emptying further. Cutting these is the single biggest dietary lever for reducing GLP-1 nausea.",
+  },
+  {
+    name: "Hydrate with electrolytes",
+    text: "GLP-1 nausea and vomiting can cause dehydration that makes the nausea worse. Replace fluids with electrolyte drinks, not just water, to keep sodium and potassium in range.",
+  },
+  {
+    name: "Time the injection for the evening",
+    text: "Some patients tolerate the peak-level nausea better if they inject in the evening so the peak hits during sleep rather than during a workday or meal.",
+  },
+  {
+    name: "Use anti-nausea medication when appropriate",
+    text: "Ondansetron (Zofran) and promethazine are the two most-studied anti-nausea drugs for GLP-1-related nausea. Both require a prescription and should be used under clinician guidance, not indefinitely.",
+  },
+];
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -98,6 +130,14 @@ export default function NauseaGuideArticle() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <HowToSchema
+        name="How to Manage GLP-1 Nausea"
+        description="Evidence-based techniques for reducing nausea on semaglutide, tirzepatide, Wegovy, Ozempic, Zepbound, and Mounjaro — sourced from FDA labels and clinical guidance on GLP-1 tolerability."
+        steps={HOW_TO_STEPS}
+        url="https://weightlossrankings.org/research/glp1-nausea-management-practical-guide"
+        image="https://weightlossrankings.org/research/glp1-nausea-management-practical-guide/opengraph-image"
+        totalTime="PT20M"
+      />
       <p
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"

@@ -4,8 +4,36 @@ import { getResearchArticleBySlug } from "@/lib/research";
 import ResearchArticleLayout from "@/components/research/ResearchArticleLayout";
 import References, { Cite } from "@/components/research/References";
 import FaqSchema from "@/components/research/FaqSchema";
+import HowToSchema, { type HowToStep } from "@/components/research/HowToSchema";
 
 const SLUG = "how-to-get-glp1-prescription";
+
+// HowTo steps match the four Path sections in the article body.
+// Each step text summarizes the visible H2 + first paragraph that
+// follows in the article. Google requires every step to correspond
+// to on-page content; these do.
+const HOW_TO_STEPS: HowToStep[] = [
+  {
+    name: "Confirm you are eligible",
+    text: "Check whether you meet the FDA label criteria: BMI ≥ 30, or BMI ≥ 27 with at least one weight-related comorbidity (hypertension, type 2 diabetes, dyslipidemia, sleep apnea, cardiovascular disease).",
+  },
+  {
+    name: "Path 1 — Go through your insurance",
+    text: "Call your insurer's pharmacy benefit line, ask whether Wegovy, Zepbound, or Mounjaro is on formulary, and get the prior authorization requirements. Then book a PCP or endocrinologist visit and bring the PA form.",
+  },
+  {
+    name: "Path 2 — Use a brand-name direct-pay program",
+    text: "If insurance won't cover it, use NovoCare Pharmacy for Wegovy or LillyDirect for Zepbound. Both are self-pay and require no insurance or prior authorization. Prescription still comes from your own clinician.",
+  },
+  {
+    name: "Path 3 — Compounded telehealth",
+    text: "If brand direct-pay is still too expensive, a compounded telehealth provider can prescribe a 503A-compounded semaglutide or tirzepatide after an online consultation. Verify the provider is LegitScript certified.",
+  },
+  {
+    name: "Avoid Path 4 — research peptides and grey-market sellers",
+    text: "Do NOT buy 'research peptides,' gym-supply GLP-1s, or unsourced injectables. The FDA has warned repeatedly that these are unregulated, frequently counterfeit, and have caused serious adverse events.",
+  },
+];
 
 export async function generateMetadata(): Promise<Metadata> {
   const article = getResearchArticleBySlug(SLUG)!;
@@ -99,6 +127,14 @@ export default function HowToGetGlp1Article() {
 
   return (
     <ResearchArticleLayout article={article}>
+      <HowToSchema
+        name="How to Get a GLP-1 Prescription: The 3 Legitimate Paths"
+        description="Step-by-step guide to getting a GLP-1 prescription in 2026: insurance-covered brand-name, manufacturer direct-pay (NovoCare / LillyDirect), or LegitScript-certified compounded telehealth. Includes eligibility check and paths to avoid."
+        steps={HOW_TO_STEPS}
+        url="https://weightlossrankings.org/research/how-to-get-glp1-prescription"
+        image="https://weightlossrankings.org/research/how-to-get-glp1-prescription/opengraph-image"
+        totalTime="PT30M"
+      />
       <p
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
