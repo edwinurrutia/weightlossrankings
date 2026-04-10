@@ -13,6 +13,7 @@ import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import Breadcrumb from "@/components/shared/Breadcrumb";
 import Citation from "@/components/research/Citation";
 import SourcesPanel from "@/components/research/SourcesPanel";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
@@ -262,6 +263,14 @@ export default async function DrugPage({
         ]}
       />
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
+        <Breadcrumb
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Drug Guides", href: "/drugs" },
+            { label: drugData.name },
+          ]}
+          className="mb-0"
+        />
 
         <PageHero
           badges={[

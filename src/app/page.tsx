@@ -299,6 +299,37 @@ export default async function HomePage() {
         />
       )}
 
+      {/* ── Browse all reviews CTA ──
+          Internal-linking fix for the /reviews index orphan flagged
+          in the deep SEO audit (2026-04-09). The /reviews index page
+          existed in the sitemap but had zero inbound links from any
+          discoverable surface, so Google was treating it as low
+          priority. This explicit CTA distributes link equity to
+          /reviews on every homepage view and gives readers a path
+          into the full reviews index without going through the
+          /compare filter UI. */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div className="rounded-2xl border border-brand-violet/20 bg-brand-violet/5 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="flex flex-col gap-2">
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-brand-text-primary">
+              Browse all {allProviders.length} editorial reviews
+            </h2>
+            <p className="text-sm text-brand-text-secondary leading-relaxed max-w-2xl">
+              Every provider in our dataset has a first-party editorial
+              review with a six-dimension score, verified pricing, state
+              coverage, and primary-source citations. Read what we found
+              before signing up.
+            </p>
+          </div>
+          <Link
+            href="/reviews"
+            className="inline-flex items-center justify-center bg-brand-violet hover:bg-brand-violet/90 text-white font-semibold text-sm px-5 py-3 rounded-full transition-colors whitespace-nowrap"
+          >
+            Browse Reviews →
+          </Link>
+        </div>
+      </section>
+
       {/* ── Tools Banner ── */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="grid gap-6 md:grid-cols-2">

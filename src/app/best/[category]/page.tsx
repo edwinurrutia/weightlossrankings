@@ -11,6 +11,7 @@ import JsonLd from "@/components/shared/JsonLd";
 import PageHero from "@/components/marketing/PageHero";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import Breadcrumb from "@/components/shared/Breadcrumb";
 import DYORCallout from "@/components/marketing/DYORCallout";
 import Citation from "@/components/research/Citation";
 import SourcesPanel from "@/components/research/SourcesPanel";
@@ -354,6 +355,14 @@ export default async function RankingsPage({
         ]}
       />
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
+        <Breadcrumb
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Best", href: "/best" },
+            { label },
+          ]}
+          className="mb-0"
+        />
 
         <PageHero
           title={

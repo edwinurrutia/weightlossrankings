@@ -14,6 +14,7 @@ import AffiliateDisclosure from "@/components/shared/AffiliateDisclosure";
 import JsonLd from "@/components/shared/JsonLd";
 import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
+import Breadcrumb from "@/components/shared/Breadcrumb";
 import Citation from "@/components/research/Citation";
 import SourcesPanel from "@/components/research/SourcesPanel";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
@@ -293,18 +294,17 @@ export default async function PharmacyDetailPage({
       />
 
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
-        {/* Breadcrumb link */}
-        <nav className="text-sm text-brand-text-secondary">
-          <Link href="/" className="hover:text-brand-violet">
-            Home
-          </Link>
-          {" › "}
-          <Link href="/pharmacies" className="hover:text-brand-violet">
-            Pharmacies
-          </Link>
-          {" › "}
-          <span className="text-brand-text-primary">{pharmacy.name}</span>
-        </nav>
+        {/* Visible breadcrumb (shared component, replaces the
+            hand-rolled inline nav for consistency with other detail
+            templates). Paired with BreadcrumbSchema JSON-LD above. */}
+        <Breadcrumb
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Pharmacies", href: "/pharmacies" },
+            { label: pharmacy.name },
+          ]}
+          className="mb-0"
+        />
 
         <header className="flex flex-col gap-4">
           <p className="text-xs uppercase tracking-[0.18em] text-brand-violet font-bold">

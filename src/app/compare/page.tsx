@@ -484,6 +484,24 @@ function ComparePageInner() {
             filters to narrow by category, price, and features, then sort by our
             independent score, lowest price, or alphabetically.
           </p>
+          {/* /compare → /reviews bridge — internal-linking fix from
+              the deep SEO audit. The /reviews index page used to have
+              zero inbound links from /compare even though /compare is
+              the higher-traffic landing page. This callout distributes
+              link equity to /reviews and gives readers a path into
+              the editorial reviews when they want depth instead of
+              the filter UI. */}
+          <p className="text-sm text-brand-text-secondary max-w-3xl mb-4">
+            New to comparing?{" "}
+            <a
+              href="/reviews"
+              className="text-brand-violet font-semibold underline underline-offset-2 hover:text-brand-blue"
+            >
+              Start with our editorial reviews →
+            </a>{" "}
+            Each one has a six-dimension score, primary-source citations,
+            and a verified pricing table.
+          </p>
           <AffiliateDisclosure />
           {activeFilterCount > 0 && (
             <div className="mt-4">

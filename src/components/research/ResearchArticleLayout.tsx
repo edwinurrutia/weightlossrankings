@@ -3,6 +3,7 @@ import type { ResearchArticle } from "@/lib/research";
 import JsonLd from "@/components/shared/JsonLd";
 import DYORCallout from "@/components/marketing/DYORCallout";
 import AuthorByline from "@/components/shared/AuthorByline";
+import Breadcrumb from "@/components/shared/Breadcrumb";
 import {
   getAuthorBySlug,
   getDefaultAuthor,
@@ -288,12 +289,16 @@ export default function ResearchArticleLayout({
       <JsonLd data={breadcrumbSchema} />
       {medicalWebPageSchema && <JsonLd data={medicalWebPageSchema} />}
 
-      {/* Breadcrumb + back link */}
-      <nav className="mb-6 text-xs text-brand-text-secondary">
-        <Link href="/research" className="hover:text-brand-violet">
-          ← All research
-        </Link>
-      </nav>
+      {/* Visible breadcrumb — paired with the BreadcrumbList JSON-LD
+          above. Distributes PageRank up to /research and /research/topics
+          on every article view. */}
+      <Breadcrumb
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Research", href: "/research" },
+          { label: article.title },
+        ]}
+      />
 
       {/* Header */}
       <header className="mb-10">

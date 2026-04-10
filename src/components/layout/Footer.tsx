@@ -8,9 +8,11 @@ const footerColumns = [
     links: [
       { label: "All Providers", href: "/compare" },
       { label: "Provider Reviews", href: "/reviews" },
+      { label: "Alternatives", href: "/alternatives" },
       { label: "Best Semaglutide", href: "/best/semaglutide-providers" },
       { label: "Best Tirzepatide", href: "/best/tirzepatide-providers" },
       { label: "Best Orforglipron", href: "/best/orforglipron-providers" },
+      { label: "Best Supplements", href: "/best/weight-loss-supplements" },
       { label: "Best Programs", href: "/best/weight-loss-programs" },
     ],
   },
@@ -22,6 +24,7 @@ const footerColumns = [
       { label: "By Drug", href: "/drugs" },
       { label: "By Insurance", href: "/insurance" },
       { label: "By Pharmacy", href: "/pharmacies" },
+      { label: "FDA Warning Letters", href: "/fda-warning-letters" },
     ],
   },
   {
@@ -45,8 +48,9 @@ const footerColumns = [
       { label: "Blog", href: "/blog" },
       { label: "Research", href: "/research" },
       { label: "Drug Guides", href: "/drugs" },
-      { label: "FDA Warning Letters", href: "/fda-warning-letters" },
       { label: "Methodology", href: "/methodology" },
+      { label: "Editorial Policy", href: "/editorial-policy" },
+      { label: "Corrections", href: "/corrections" },
       { label: "Sources", href: "/sources" },
       { label: "FAQ", href: "/faq" },
     ],
@@ -55,6 +59,7 @@ const footerColumns = [
     heading: "Company",
     links: [
       { label: "About", href: "/about" },
+      { label: "Editorial Team", href: "/authors" },
       { label: "Contact", href: "/contact" },
       { label: "Careers", href: "/careers" },
       { label: "Press", href: "/press" },

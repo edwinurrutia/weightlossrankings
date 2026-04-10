@@ -28,6 +28,7 @@ import FAQSection from "@/components/marketing/FAQSection";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import FdaWarningFlag from "@/components/marketing/FdaWarningFlag";
 import AuthorByline from "@/components/shared/AuthorByline";
+import Breadcrumb from "@/components/shared/Breadcrumb";
 import { getDefaultAuthor } from "@/data/authors";
 import { getWarningLetterByProviderSlug } from "@/lib/fda-warning-letters";
 import SourcesPanel from "@/components/research/SourcesPanel";
@@ -281,6 +282,16 @@ export default async function ProviderReviewPage({
 
       <main className="min-h-screen bg-brand-gradient-light pb-24 lg:pb-0">
         <div className="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-10">
+          {/* Visible breadcrumb — paired with BreadcrumbSchema JSON-LD
+              above. Distributes PageRank up to /reviews on every view. */}
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Reviews", href: "/reviews" },
+              { label: provider.name },
+            ]}
+            className="mb-0"
+          />
           {(() => {
             const warningLetter = getWarningLetterByProviderSlug(provider.slug);
             return warningLetter ? (
