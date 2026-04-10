@@ -226,6 +226,161 @@ function FilterControls(props: FilterControlsProps) {
   );
 }
 
+/* ------------------------------------------------------------------ */
+/*  Mobile-only pill/chip filter controls                              */
+/*  Large touch targets (44px+), wrapping pills instead of radios/    */
+/*  checkboxes.  Only rendered inside the mobile drawer (<lg).        */
+/* ------------------------------------------------------------------ */
+
+function PillButton({
+  active,
+  onClick,
+  children,
+  multiSelect,
+}: {
+  active: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+  multiSelect?: boolean;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-medium transition-colors ${
+        active
+          ? "bg-brand-primary text-white"
+          : "bg-gray-50 text-brand-text-primary border border-gray-200"
+      }`}
+    >
+      {multiSelect && active && (
+        <svg className="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 14 14" fill="none">
+          <path d="M2.5 7.5L5.5 10.5L11.5 3.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )}
+      {children}
+    </button>
+  );
+}
+
+function MobileFilterControls(props: FilterControlsProps) {
+  return (
+    <div className="space-y-6">
+      {/* Search — 16px font prevents iOS zoom */}
+      <div>
+        <div className="text-xs font-bold uppercase tracking-wider text-brand-text-secondary mb-2.5">
+          Search
+        </div>
+        <input
+          type="text"
+          value={props.searchQuery}
+          onChange={(e) => props.setSearchQuery(e.target.value)}
+          placeholder="Provider name..."
+          className="w-full px-4 py-3 border-[1.5px] border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary"
+        />
+      </div>
+
+      {/* Category — single-select pills */}
+      <div>
+        <div className="text-xs font-bold uppercase tracking-wider text-brand-text-secondary mb-2.5">
+          Category
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {CATEGORY_OPTIONS.map((opt) => (
+            <PillButton
+              key={opt.value}
+              active={props.selectedCategory === opt.value}
+              onClick={() => props.setSelectedCategory(opt.value)}
+            >
+              {opt.label}
+            </PillButton>
+          ))}
+        </div>
+      </div>
+
+      {/* Drug — single-select pills */}
+      <div>
+        <div className="text-xs font-bold uppercase tracking-wider text-brand-text-secondary mb-2.5">
+          Drug
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {DRUG_OPTIONS.map((opt) => (
+            <PillButton
+              key={opt.value}
+              active={props.selectedDrug === opt.value}
+              onClick={() => props.setSelectedDrug(opt.value)}
+            >
+              {opt.label}
+            </PillButton>
+          ))}
+        </div>
+      </div>
+
+      {/* Form — multi-select pills */}
+      <div>
+        <div className="text-xs font-bold uppercase tracking-wider text-brand-text-secondary mb-2.5">
+          Form
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {FORM_OPTIONS.map((form) => (
+            <PillButton
+              key={form}
+              active={props.selectedForms.includes(form)}
+              onClick={() => props.toggleForm(form)}
+              multiSelect
+            >
+              {form === "compounded" ? "Compounded" : "Brand Name"}
+            </PillButton>
+          ))}
+        </div>
+      </div>
+
+      {/* Features — multi-select pills */}
+      {props.topFeatures.length > 0 && (
+        <div>
+          <div className="text-xs font-bold uppercase tracking-wider text-brand-text-secondary mb-2.5">
+            Features
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {props.topFeatures.map((feature) => (
+              <PillButton
+                key={feature}
+                active={props.selectedFeatures.includes(feature)}
+                onClick={() => props.toggleFeature(feature)}
+                multiSelect
+              >
+                {feature}
+              </PillButton>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Price — larger slider with custom thumb */}
+      <div>
+        <div className="text-xs font-bold uppercase tracking-wider text-brand-text-secondary mb-2.5">
+          Max Price
+        </div>
+        <input
+          type="range"
+          min={PRICE_MIN}
+          max={PRICE_MAX}
+          step={10}
+          value={props.priceMax}
+          onChange={(e) => props.setPriceMax(Number(e.target.value))}
+          className="w-full accent-brand-primary h-2 rounded-lg appearance-none bg-gray-200 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-7 [&::-webkit-slider-thumb]:h-7 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-brand-primary [&::-webkit-slider-thumb]:shadow-md"
+        />
+        <div className="flex justify-between text-sm text-brand-text-secondary mt-2">
+          <span>${PRICE_MIN}</span>
+          <span className="font-bold text-brand-text-primary">
+            ${props.priceMax}/mo
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ComparePageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -687,7 +842,7 @@ function ComparePageInner() {
         </div>
       </div>
 
-      {/* Mobile filter drawer */}
+      {/* Mobile filter drawer — pill/chip controls for touch */}
       {mobileFiltersOpen && (
         <div className="lg:hidden fixed inset-0 z-50 flex">
           <div
@@ -699,28 +854,38 @@ function ComparePageInner() {
               <h2 className="text-lg font-bold font-heading text-brand-text-primary">
                 Filters
               </h2>
-              <button
-                onClick={() => setMobileFiltersOpen(false)}
-                className="p-2 text-brand-text-secondary hover:text-brand-text-primary"
-                aria-label="Close filters"
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <div className="flex items-center gap-3">
+                {activeFilterCount > 0 && (
+                  <button
+                    onClick={resetFilters}
+                    className="text-sm font-semibold text-brand-primary"
+                  >
+                    Reset
+                  </button>
+                )}
+                <button
+                  onClick={() => setMobileFiltersOpen(false)}
+                  className="p-2 -mr-2 text-brand-text-secondary hover:text-brand-text-primary"
+                  aria-label="Close filters"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-            <div className="flex-1 overflow-y-auto px-5 py-4">
-              <FilterControls
+            <div className="flex-1 overflow-y-auto px-5 py-5">
+              <MobileFilterControls
                 searchQuery={searchQuery}
                 setSearchQuery={setSearchQuery}
                 selectedCategory={selectedCategory}
@@ -740,7 +905,7 @@ function ComparePageInner() {
             <div className="px-5 py-4 border-t border-gray-100">
               <button
                 onClick={() => setMobileFiltersOpen(false)}
-                className="w-full px-4 py-3 bg-brand-primary text-white font-semibold rounded-lg hover:bg-brand-primary/90 transition"
+                className="w-full px-4 py-3.5 bg-brand-primary text-white font-semibold rounded-xl hover:bg-brand-primary/90 transition text-base"
               >
                 Show {filtered.length} providers
               </button>
