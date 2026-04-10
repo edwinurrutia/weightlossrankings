@@ -10018,5 +10018,1599 @@
       "confidence": "medium",
       "notes": "WebFetch verified 2026-04-10. Operated by FitRX LLC dba AM Rx, 30 Irving Pl Floor 7, New York NY 10003. Same entity as Zealthy and FitRx. Founder: Kyle Robertson (also founded Cerebral). Compounded semaglutide from $151/mo quarterly. Brand GLP-1s with insurance from $25/mo. REGULATORY: Active FTC/DOJ lawsuit (ROSCA violations), two FDA warning letters (Sept 2025 misbranding, Feb 2026 Sections 502(a)/502(bb)), Novo Nordisk false advertising suit (Aug 2025). BBB D- (Zealthy, 2,370 complaints). Trustpilot 2.0/5 (27 reviews, 85% one-star). No LegitScript, no PCAB, no named pharmacy, no compounding disclaimer on site. State list not disclosed."
     }
+  },
+  {
+    "_id": "ivologist",
+    "name": "Ivologist",
+    "slug": "ivologist",
+    "description": "Ivologist offers compounded semaglutide and tirzepatide starting at $33/week (12-week plans). LegitScript certified. Available in all 50 states. Also offers hormone therapy, hair regrowth, IV therapy, and longevity treatments. Over 20,000 patients served.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded Semaglutide (7 weeks)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 159,
+        "note": "$279 for 7 weeks"
+      },
+      {
+        "dose": "Compounded Semaglutide (11 weeks)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 145,
+        "note": "$399 for 11 weeks"
+      },
+      {
+        "dose": "Compounded Semaglutide (23 weeks)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 156,
+        "note": "$899 for 23 weeks"
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 8.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "LegitScript Verified"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://ivologist.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "LegitScript certified",
+      "All 50 states coverage",
+      "No monthly contracts, memberships, or autodrafts",
+      "$70 consultation fee upfront \u2014 transparent pricing",
+      "Over 20,000 patients served",
+      "Both semaglutide and tirzepatide available"
+    ],
+    "cons": [
+      "No legal entity name or physical address disclosed on site",
+      "Broader platform \u2014 not a GLP-1 specialist",
+      "Consultation fee ($70) on top of medication cost"
+    ],
+    "best_for": "patients seeking contract-free compounded GLP-1 with nationwide coverage",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://ivologist.com",
+        "https://ivologist.com/semaglutide"
+      ],
+      "confidence": "high",
+      "notes": "WebFetch verified 2026-04-10. LegitScript certified. 'Nationwide service across all 50 states.' Semaglutide 7wk $279, 11wk $399, 23wk $899. $70 consultation fee. No monthly contracts. Compounded medications disclaimer present. San Antonio/El Paso area codes. No legal entity name disclosed. Over 20,000 patients served."
+    }
+  },
+  {
+    "_id": "precision-telemed",
+    "name": "Precision Telemed",
+    "slug": "precision-telemed",
+    "description": "Precision Telemed (Precision Health Digital LLC) offers compounded semaglutide ($149/mo) and compounded tirzepatide ($199/mo) with month-to-month pricing, no subscription required. LegitScript certified. Available in all 50 states. All medications include Certificate of Analysis confirming potency and purity.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded Semaglutide",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 149
+      },
+      {
+        "dose": "Compounded Tirzepatide",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 199
+      }
+    ],
+    "scores": {
+      "value": 8,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 8,
+      "accessibility": 8.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "LegitScript Verified",
+      "Certificate of Analysis"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://precisiontelemed.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Transparent flat pricing \u2014 semaglutide $149/mo, tirzepatide $199/mo",
+      "Month-to-month, no subscription required",
+      "LegitScript certified, HIPAA compliant",
+      "All 50 states coverage",
+      "Certificate of Analysis (CofA) for potency and purity on all medications",
+      "Named legal entity with physical address (Tampa, FL)"
+    ],
+    "cons": [
+      "Compounded only \u2014 no brand-name options",
+      "Broader platform (TRT, NAD+, hair loss, ED)"
+    ],
+    "best_for": "transparent month-to-month compounded GLP-1 with pharmacy quality documentation",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://precisiontelemed.com"
+      ],
+      "confidence": "high",
+      "notes": "WebFetch verified 2026-04-10. Precision Health Digital LLC, 3030 N Rocky Point Drive W Suite 150, Tampa FL 33607. Operates with Doctors Now PC. LegitScript certified, HIPAA compliant. 'Available in all 50 states.' Semaglutide $149/mo, tirzepatide $199/mo. Month-to-month, no subscription. CofA on all meds. Also offers TRT, Sermorelin, NAD+, hair loss, ED."
+    }
+  },
+  {
+    "_id": "amp-health",
+    "name": "AMP Health",
+    "slug": "amp-health",
+    "description": "AMP Health offers compounded semaglutide (injectable and oral) from $199/mo and tirzepatide from $309/mo, plus a $79/mo subscription fee. Brand Wegovy listed but out of stock. 30-day satisfaction guarantee.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded Semaglutide",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199,
+        "note": "Plus $79/mo subscription"
+      },
+      {
+        "dose": "Oral Semaglutide",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199,
+        "note": "Plus $79/mo subscription"
+      },
+      {
+        "dose": "Compounded Tirzepatide",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 309,
+        "note": "Plus $79/mo subscription"
+      }
+    ],
+    "scores": {
+      "value": 6,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 6,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Oral Semaglutide",
+      "Compounded Tirzepatide"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://myamphealth.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Both injectable and oral semaglutide formats",
+      "Tirzepatide available",
+      "30-day satisfaction guarantee",
+      "Personal nutrition plan and health coaching included"
+    ],
+    "cons": [
+      "$79/mo subscription fee on top of medication costs (total $278-$388/mo)",
+      "No visible LegitScript or PCAB accreditation",
+      "No physical address disclosed",
+      "State availability not disclosed",
+      "Brand Wegovy listed but out of stock"
+    ],
+    "best_for": "patients wanting oral semaglutide with coaching support",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://myamphealth.com"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. Compounded semaglutide (injectable + oral) $199/mo, tirzepatide $309/mo, all plus $79/mo subscription. Brand Wegovy listed at $1,799/mo but out of stock. 30-day satisfaction guarantee. Claims 1000+ patients, 10+ years experience. No LegitScript, no PCAB, no physical address, no state list disclosed."
+    }
+  },
+  {
+    "_id": "bloommd",
+    "name": "Bloom MD",
+    "slug": "bloommd",
+    "description": "Bloom MD (bloommd.com) is a telehealth platform for weight loss, longevity, and wellness. User-confirmed GLP-1 offering. Site is Shopify JS-rendered \u2014 product details not extractable via WebFetch.",
+    "category": "GLP-1 Provider",
+    "pricing": [],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [],
+    "states_available": [],
+    "affiliate_url": "https://bloommd.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [],
+    "cons": [
+      "Pending full verification \u2014 site is JS-rendered Shopify"
+    ],
+    "best_for": "pending verification",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://bloommd.com"
+      ],
+      "confidence": "medium",
+      "notes": "User confirmed as GLP-1 provider 2026-04-10. WebFetch could only extract Shopify framework code and Thorne supplements. GLP-1 product pages not accessible via scraping. Phone: 801.436.7272 (Utah). Needs Chrome MCP verification for complete data."
+    }
+  },
+  {
+    "_id": "good-girl-rx",
+    "name": "Good Girl Rx",
+    "slug": "good-girl-rx",
+    "description": "Good Girl Rx (Good Girl LLC) offers compounded semaglutide and tirzepatide in injectable, microdose, and oral dissolving tablet (ODT) formats. Brand-name Ozempic, Wegovy, Zepbound, Mounjaro also listed (limited availability). LegitScript certified. Dispensed by licensed 503A/503B pharmacies. Founded by Savannah Chrisley.",
+    "category": "GLP-1 Provider",
+    "pricing": [],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7.5,
+      "trust": 7.5,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Microdose Options",
+      "Oral Dissolving Tablets",
+      "LegitScript Verified",
+      "503A/503B Pharmacies"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://goodgirlrx.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "LegitScript certified",
+      "Multiple formats: injectable, microdose, and ODT pills for both semaglutide and tirzepatide",
+      "Dispensed by licensed 503A or 503B pharmacies",
+      "Brand-name options available (Ozempic, Wegovy, Zepbound, Mounjaro \u2014 limited)",
+      "Named legal entity with Nashville address",
+      "Financing via Affirm, Klarna, Afterpay"
+    ],
+    "cons": [
+      "Pricing not publicly displayed \u2014 requires completing intake quiz",
+      "State availability not disclosed",
+      "Founded January 2025 \u2014 very new brand",
+      "Celebrity-founded (Savannah Chrisley) \u2014 brand credibility vs clinical credibility"
+    ],
+    "best_for": "patients seeking multiple compounded GLP-1 formats with pharmacy quality standards",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://goodgirlrx.com"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. Good Girl LLC, 1005 17th Avenue South Suite 900, Nashville TN 37212, Tax ID 33-2873053. Founded by Savannah Chrisley, January 2025. LegitScript certified. Compounded semaglutide + tirzepatide in injectable, microdose, and ODT formats. Brand GLP-1s listed (limited availability). 503A/503B pharmacy dispensing. Pricing not disclosed publicly. Financing: Affirm, Klarna, Afterpay."
+    }
+  },
+  {
+    "_id": "concierge-md-la",
+    "name": "Concierge MD LA",
+    "slug": "concierge-md-la",
+    "description": "Concierge MD LA offers semaglutide ($199/mo) and tirzepatide ($299/mo) alongside brand-name Ozempic, Mounjaro, Zepbound, and Wegovy ($1,999/mo each). In-home and telemedicine services available in LA, NY, and 25+ cities.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Semaglutide",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Tirzepatide",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "Ozempic / Mounjaro / Zepbound / Wegovy",
+        "form": "brand",
+        "drug": "semaglutide",
+        "monthly_cost": 1999
+      }
+    ],
+    "scores": {
+      "value": 6.5,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 6.5,
+      "accessibility": 6.5,
+      "support": 7
+    },
+    "features": [
+      "Semaglutide",
+      "Tirzepatide",
+      "Ozempic",
+      "Wegovy",
+      "Zepbound",
+      "Mounjaro",
+      "In-Home Service"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://conciergemdla.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Both compounded and brand-name GLP-1 options",
+      "In-home medical services in major cities",
+      "Competitive compounded pricing ($199/$299)",
+      "Broader concierge medicine services available"
+    ],
+    "cons": [
+      "No visible LegitScript or PCAB accreditation",
+      "No physical address disclosed",
+      "Limited to LA, NY, and 25+ cities \u2014 not nationwide",
+      "Site returns 403 on many subpages",
+      "Brand-name options at $1,999/mo \u2014 very high"
+    ],
+    "best_for": "patients in major cities wanting concierge in-home GLP-1 access",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://conciergemdla.com"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. Semaglutide $199/mo, tirzepatide $299/mo, brand GLP-1s $1,999/mo each. 'LA, NY & 25+ other cities' \u2014 not nationwide. In-home + telemedicine. No LegitScript, no address disclosed. Site returns 403 on about/weight-loss pages. Broader concierge platform (IV, peptides, HRT, labs, vaccines)."
+    }
+  },
+  {
+    "_id": "arc-1",
+    "name": "Arc-1",
+    "slug": "arc-1",
+    "description": "Arc-1 offers compounded semaglutide (from $249.99) and compounded tirzepatide (from $299.99) as per-dose purchases, not monthly subscriptions. Longevity-focused platform also offering ED medication, B12, NAD+, Rapamycin, Sermorelin, and Metformin.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded Semaglutide 0.5mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 250
+      },
+      {
+        "dose": "Compounded Semaglutide 1mg",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 350
+      },
+      {
+        "dose": "Compounded Tirzepatide 2.5mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 300
+      },
+      {
+        "dose": "Compounded Tirzepatide 5mg",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 400
+      }
+    ],
+    "scores": {
+      "value": 5.5,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 6,
+      "accessibility": 7,
+      "support": 6.5
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://arc-1.co",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Both compounded semaglutide and tirzepatide available",
+      "Per-dose purchasing \u2014 no subscription or membership required",
+      "25% off + free shipping promotional offer",
+      "Broader longevity formulary (Rapamycin, NAD+, Sermorelin)"
+    ],
+    "cons": [
+      "No visible LegitScript or PCAB accreditation",
+      "No legal entity name or address disclosed",
+      "State availability not disclosed",
+      "Pricing is per-dose not monthly \u2014 higher doses are very expensive ($1,085-$1,585 for semaglutide 1.75-2.5mg)",
+      "No named clinicians or pharmacy partners"
+    ],
+    "best_for": "patients seeking per-dose compounded GLP-1 without subscriptions",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://arc-1.co"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. Compounded semaglutide from $249.99 (0.5mg) to $1,584.99 (2.5mg). Compounded tirzepatide from $299.99 (2.5mg) to $399.99 (5mg). Per-dose pricing, not monthly subscription. 25% off promo. Longevity platform: ED, B12, NAD+, Rapamycin, Sermorelin, Enclomiphene, Metformin, Glutathione. No LegitScript, no entity name, no address, no state list."
+    }
+  },
+  {
+    "_id": "fitish",
+    "name": "Fitish",
+    "slug": "fitish",
+    "description": "Fitish offers compounded semaglutide ($219/28 days) and compounded tirzepatide ($339/28 days) including consultation and shipping. LegitScript certified. Ships to all US states. Also offers GLP-1 microdosing.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded Semaglutide (28-day)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 219
+      },
+      {
+        "dose": "Compounded Tirzepatide (28-day)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 339
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7.5,
+      "accessibility": 8,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Microdose Options",
+      "Oral Tablets",
+      "LegitScript Verified"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://fitish.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "LegitScript certified",
+      "Ships to all US states",
+      "Price includes consult, shipping, and medication",
+      "Injectable and oral tablet formats",
+      "Microdosing option available"
+    ],
+    "cons": [
+      "No physical address disclosed",
+      "Broader wellness/beauty brand \u2014 GLP-1 is one product line",
+      "Compounded only \u2014 no brand-name options"
+    ],
+    "best_for": "all-inclusive compounded GLP-1 with nationwide shipping",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://fitish.com"
+      ],
+      "confidence": "high",
+      "notes": "WebFetch verified 2026-04-10. LegitScript certified. 'Ships to all US states.' Semaglutide $219/28 days, tirzepatide $339/28 days (includes consult + shipping + medication). Compounded sema+tirz injectable and oral tablets, plus microdosing. Wellness/beauty brand (Fitish RX). No address disclosed."
+    }
+  },
+  {
+    "_id": "lovelymeds",
+    "name": "LovelyMeds",
+    "slug": "lovelymeds",
+    "description": "LovelyMeds (lovelymeds.com) \u2014 GLP-1 telehealth provider. User-confirmed. Site returned 403 to automated scraping.",
+    "category": "GLP-1 Provider",
+    "pricing": [],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [],
+    "states_available": [],
+    "affiliate_url": "https://www.lovelymeds.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [],
+    "cons": [
+      "Pending full verification \u2014 site blocks automated scraping"
+    ],
+    "best_for": "pending verification",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://www.lovelymeds.com"
+      ],
+      "confidence": "medium",
+      "notes": "User confirmed as GLP-1 provider 2026-04-10. WebFetch returned 403 on all pages. Needs Chrome MCP verification."
+    }
+  },
+  {
+    "_id": "nicerx",
+    "name": "NiceRx",
+    "slug": "nicerx",
+    "description": "NiceRx (NiceRx LLC) offers compounded semaglutide ($199/mo) and compounded tirzepatide ($299/mo) with first-month promos. LegitScript approved. Available in 46 states (not AK, MS, NJ, KS). Founded 2022 by Rob Stransky. Every batch tested for sterility and potency.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded Semaglutide",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199,
+        "note": "First month $99 with promo"
+      },
+      {
+        "dose": "Compounded Tirzepatide",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 299,
+        "note": "First month $199 with promo"
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 8,
+      "accessibility": 8,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Microdose Options",
+      "LegitScript Verified"
+    ],
+    "states_available": [
+      "AL",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://www.nicerx.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "LegitScript approved",
+      "Named legal entity (NiceRx LLC) with Boca Raton FL address",
+      "First-month discount on both drugs",
+      "Every batch tested for sterility and potency",
+      "46-state coverage",
+      "Microdose options available",
+      "Founded 2022 \u2014 established track record"
+    ],
+    "cons": [
+      "Not available in Alaska, Mississippi, New Jersey, Kansas",
+      "Compounded only \u2014 no brand-name options",
+      "Broader platform (anti-aging, NAD+, B12)"
+    ],
+    "best_for": "patients seeking batch-tested compounded GLP-1 with transparent entity disclosure",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://www.nicerx.com"
+      ],
+      "confidence": "high",
+      "notes": "WebFetch verified 2026-04-10. NiceRx LLC, 4834 NW 2nd Ave Unit #427, Boca Raton FL 33431. Phone: 866-407-0777. Founded 2022 by Rob Stransky. LegitScript approved. 'Available in all states except Alaska, Mississippi, New Jersey, and Kansas.' Semaglutide $199/mo (first month $99), tirzepatide $299/mo (first month $199). 'Every batch is tested for sterility and potency.' Also offers anti-aging (NAD+, B12, glutathione), Sermorelin."
+    }
+  },
+  {
+    "_id": "rxion-health",
+    "name": "RxION Health",
+    "slug": "rxion-health",
+    "description": "RxION Health offers compounded semaglutide and tirzepatide including microdosing. LegitScript certified. Also offers anti-aging and sexual health treatments.",
+    "category": "GLP-1 Provider",
+    "pricing": [],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7.5,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Microdose Options",
+      "LegitScript Verified"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://tryrxion.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "LegitScript certified",
+      "Both semaglutide and tirzepatide with microdosing",
+      "HIPAA compliant",
+      "Claims 'FDA-Regulated Medications'"
+    ],
+    "cons": [
+      "Pricing not publicly displayed",
+      "State availability not disclosed",
+      "No physical address",
+      "No named pharmacy partners"
+    ],
+    "best_for": "pending full pricing verification",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://tryrxion.com"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. LegitScript certified, HIPAA compliant. Compounded semaglutide + tirzepatide + microdosing. Also references brand Wegovy and Zepbound in nav. Pricing page 404. No address, no state list, no named pharmacy. Broader platform: weight loss, anti-aging, sexual health."
+    }
+  },
+  {
+    "_id": "weightcare",
+    "name": "WeightCare",
+    "slug": "weightcare",
+    "description": "WeightCare offers compounded semaglutide ($249\u2013$399/mo) and tirzepatide ($349/mo) dispensed by FDA-registered, PCAB-accredited pharmacies. Based in Ft. Lauderdale, FL. Claims 85,000+ members since 2022. Quality testing documentation (potency + sterility per USP 797).",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Semaglutide Lite/Essentials",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "Semaglutide Select",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "Semaglutide Weight Loss",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 399
+      },
+      {
+        "dose": "Semaglutide Micro-Dose",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 249
+      },
+      {
+        "dose": "Tirzepatide Essentials",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 349
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 8,
+      "accessibility": 7,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Microdose Options",
+      "PCAB-Accredited Pharmacies"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://joinweightcare.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "PCAB-accredited pharmacy partners \u2014 strongest pharmacy quality signal",
+      "Quality testing: potency and sterility per USP 797 standards",
+      "85,000+ members since 2022 \u2014 established patient base",
+      "Multiple program tiers for semaglutide",
+      "Health coaching, dietitians, fitness trainers included",
+      "Physical address in Ft. Lauderdale FL"
+    ],
+    "cons": [
+      "No LegitScript certification on the site itself",
+      "State availability not explicitly listed",
+      "Pricing above average ($249\u2013$399/mo for semaglutide)",
+      "Compounded only \u2014 no brand-name options"
+    ],
+    "best_for": "patients prioritizing pharmacy quality standards (PCAB) with coaching support",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://joinweightcare.com"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. Address: 2950 Griffin Rd, Ft. Lauderdale FL 33316 (schema) / 1126 South Federal Highway 931 Fort Lauderdale FL 33316. Shopify store. PCAB-accredited pharmacy partners (stated). USP 797 quality testing. Semaglutide $249-$399/mo, tirzepatide $349/mo. 85,000+ members since 2022. No LegitScript on site. State list not disclosed. Includes dietitians, fitness trainers, health coaches."
+    }
+  },
+  {
+    "_id": "injectco",
+    "name": "Injectco",
+    "slug": "injectco",
+    "description": "Injectco is a Dallas-based medspa offering compounded GLP-1 prescriptions shipped from licensed US partner pharmacies. $1,249 for 6-8 month supply at starting dose (as low as $156/mo on payment plan). Founded July 2021.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "GLP-1 (6-8 month supply)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 156,
+        "note": "$1,249 upfront or payment plan"
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 6.5,
+      "trust": 6.5,
+      "accessibility": 6,
+      "support": 7
+    },
+    "features": [
+      "Compounded GLP-1"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://injectco.com/glp-1-management/",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Physical address in Dallas TX",
+      "Founded July 2021 \u2014 established",
+      "Bulk pricing ($1,249 for 6-8 months) can be cost-effective",
+      "Payment plan available ($156/mo)"
+    ],
+    "cons": [
+      "Does not specify which GLP-1 drug (semaglutide vs tirzepatide)",
+      "No LegitScript or PCAB accreditation",
+      "Primarily a medspa (Botox, fillers, hair restoration)",
+      "May be Texas-only \u2014 unclear if telehealth ships nationally",
+      "No named pharmacy partners"
+    ],
+    "best_for": "Dallas-area patients seeking bulk GLP-1 pricing from an established medspa",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://injectco.com/glp-1-management/"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. Injectco, 2520 N Carroll Ave, Dallas TX 75204. Founded July 2021. GLP-1 $1,249 for 6-8 month supply ($156/mo on payment plan). Does not specify semaglutide vs tirzepatide. Texas locations (Dallas, Fort Worth, Plano, Austin, etc). Unclear if ships nationally. No LegitScript, no PCAB. Primarily medspa (Botox, fillers, hair). Staff: BSN, RN, CPN credentials."
+    }
+  },
+  {
+    "_id": "vitafusions-iv",
+    "name": "VitaFusions IV",
+    "slug": "vitafusions-iv",
+    "description": "VitaFusions IV (vitafusionsiv.com) offers semaglutide and medical weight loss services in Dallas, TX. User-confirmed GLP-1 provider. Site is JS-rendered.",
+    "category": "GLP-1 Provider",
+    "pricing": [],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [
+      "Semaglutide"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://vitafusionsiv.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Semaglutide confirmed from page metadata"
+    ],
+    "cons": [
+      "Pending full verification \u2014 site is JS-rendered"
+    ],
+    "best_for": "pending verification",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "manual",
+      "source_urls": [
+        "https://vitafusionsiv.com"
+      ],
+      "confidence": "medium",
+      "notes": "User confirmed as GLP-1 provider 2026-04-10. Page title references 'Semaglutide & Medical Weight Loss Services in Dallas, TX.' Site is JS-rendered, content not extractable via WebFetch. Needs Chrome MCP verification."
+    }
+  },
+  {
+    "_id": "queen-rx",
+    "name": "Queen RX",
+    "slug": "queen-rx",
+    "description": "Queen RX offers compounded GLP-1 treatment (semaglutide, tirzepatide, liraglutide) at $299/quarter (~$100/mo). Available in 45 states (not KS, LA, MS, NM, WV).",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded GLP-1 (quarterly)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 100,
+        "note": "$299 per quarter"
+      }
+    ],
+    "scores": {
+      "value": 8,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 6,
+      "accessibility": 7.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Compounded Liraglutide"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KY",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://www.joinqueenrx.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "$299/quarter (~$100/mo) \u2014 among the lowest GLP-1 pricing in the dataset",
+      "Three GLP-1 options: semaglutide, tirzepatide, and liraglutide",
+      "45-state coverage"
+    ],
+    "cons": [
+      "No LegitScript or PCAB accreditation",
+      "No legal entity name or address disclosed",
+      "No named pharmacy partners",
+      "Not available in KS, LA, MS, NM, WV"
+    ],
+    "best_for": "budget-conscious patients seeking low-cost compounded GLP-1",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://www.joinqueenrx.com"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. $299/quarter for compounded GLP-1 (semaglutide, tirzepatide, liraglutide). 'Available in all states except Kansas, Louisiana, Mississippi, New Mexico and West Virginia.' Partners with 'state-licensed U.S. pharmacies.' No LegitScript, no PCAB, no entity name, no address. Contact: support@joinqueenrx.com."
+    }
+  },
+  {
+    "_id": "elevated-health",
+    "name": "Elevated Health",
+    "slug": "elevated-health",
+    "description": "Elevated Health offers compounded semaglutide ($176/mo) and compounded tirzepatide ($238/mo). $100 off first month promotional offer. Also offers oral semaglutide.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded Semaglutide",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 176
+      },
+      {
+        "dose": "Compounded Tirzepatide",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 238
+      }
+    ],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 6,
+      "accessibility": 7,
+      "support": 6.5
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Oral Semaglutide"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://elevatedhealth.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Competitive pricing \u2014 semaglutide $176/mo, tirzepatide $238/mo",
+      "$100 off first month",
+      "Oral semaglutide option"
+    ],
+    "cons": [
+      "No LegitScript or PCAB accreditation",
+      "No legal entity or address disclosed",
+      "State availability not disclosed",
+      "Shopify storefront \u2014 limited clinical infrastructure signals"
+    ],
+    "best_for": "affordable compounded GLP-1 with oral option",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://elevatedhealth.com"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. Semaglutide $176/mo, tirzepatide $238/mo. $100 off first month promo. Also offers oral semaglutide. Shopify storefront. No LegitScript, no PCAB, no entity name, no address, no state list. Also offers Energy+Mood and Strength+Vitality categories."
+    }
+  },
+  {
+    "_id": "mdtw",
+    "name": "MD Total Wellness",
+    "slug": "mdtw",
+    "description": "MD Total Wellness is a wellness clinic in Brea, CA offering semaglutide alongside hormone therapy, skin rejuvenation, and pelvic floor treatments. Local clinic with telehealth capabilities.",
+    "category": "Weight Loss Program",
+    "pricing": [],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 6,
+      "support": 7
+    },
+    "features": [
+      "Semaglutide"
+    ],
+    "states_available": [
+      "CA"
+    ],
+    "affiliate_url": "https://mdtw.co",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Physical clinic with named address",
+      "Semaglutide confirmed"
+    ],
+    "cons": [
+      "Local clinic in Brea, CA \u2014 not a nationwide telehealth provider",
+      "Pricing not publicly available",
+      "Site is JS-rendered \u2014 limited details extractable"
+    ],
+    "best_for": "Orange County CA patients seeking in-person GLP-1 access",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://mdtw.co"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. MD Total Wellness, 255 W Central Ave #203, Brea CA 92821. Local wellness/aesthetics clinic. Semaglutide confirmed from page title. Site JS-rendered \u2014 pricing and drug details not extractable. Also offers hormone therapy, skin rejuvenation, pelvic floor. Primarily local, not nationwide telehealth."
+    }
+  },
+  {
+    "_id": "levers-health",
+    "name": "Levers Health",
+    "slug": "levers-health",
+    "description": "Levers Health (Levers Health LLC) offers compounded semaglutide (from $247/mo) and tirzepatide (from $296/mo), plus low-dose/microdose GLP-1 for longevity. Positioned as personalized performance medicine.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded Semaglutide",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 247
+      },
+      {
+        "dose": "Compounded Tirzepatide",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 296
+      },
+      {
+        "dose": "Low/Microdose GLP-1",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 246
+      }
+    ],
+    "scores": {
+      "value": 6.5,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 6.5,
+      "accessibility": 7,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Microdose Options"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://levers.health",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Named LLC entity",
+      "Microdose GLP-1 option for longevity",
+      "Both semaglutide and tirzepatide"
+    ],
+    "cons": [
+      "No LegitScript or PCAB accreditation",
+      "No physical address disclosed",
+      "State availability not disclosed",
+      "FAQ/terms pages return 404",
+      "Above-average pricing ($247\u2013$296/mo)"
+    ],
+    "best_for": "patients interested in GLP-1 microdosing for longevity",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://levers.health"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. Levers Health LLC. Semaglutide from $247/mo, tirzepatide from $296/mo, microdose GLP-1 from $246/mo. Also NAD+ $247, Sermorelin $247, Lipotropic B-12 $137. No LegitScript, no PCAB, no address, no state list. FAQ/terms 404. 'Personalized Performance Medicine' platform."
+    }
+  },
+  {
+    "_id": "curex",
+    "name": "Curex",
+    "slug": "curex",
+    "description": "Curex (Curex, Inc.) offers compounded semaglutide ($149/mo) and tirzepatide ($199/mo) in injectable and oral dissolving tablet formats. LegitScript certified. Available in 43+ states. No membership fee. Miami and NYC offices. Originally an allergy immunotherapy company.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded Semaglutide",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 149
+      },
+      {
+        "dose": "Compounded Tirzepatide",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 199
+      }
+    ],
+    "scores": {
+      "value": 8,
+      "effectiveness": 7.5,
+      "ux": 8,
+      "trust": 8,
+      "accessibility": 8,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Oral Dissolving Tablets",
+      "LegitScript Verified"
+    ],
+    "states_available": [
+      "AL",
+      "AZ",
+      "CA",
+      "CO",
+      "DE",
+      "FL",
+      "GA",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://getcurex.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "LegitScript certified",
+      "Named entity (Curex, Inc.) with two offices \u2014 Miami FL and NYC",
+      "Competitive pricing: semaglutide $149/mo, tirzepatide $199/mo",
+      "No membership fee ever",
+      "Injectable and oral dissolving tablet formats",
+      "Third-party lab testing via FDA/DEA certified labs",
+      "Works with LabCorp and Quest Diagnostics",
+      "43+ state coverage with transparent exclusion list"
+    ],
+    "cons": [
+      "Not available in AK, AR, CT, HI, MA, NM, MO",
+      "Compounded only \u2014 explicitly states 'We don't prescribe Ozempic, Wegovy, Zepbound, or Mounjaro'",
+      "Primary business is allergy immunotherapy \u2014 GLP-1 is a newer vertical"
+    ],
+    "best_for": "affordable compounded GLP-1 with strong corporate transparency and pharmacy testing",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://getcurex.com"
+      ],
+      "confidence": "high",
+      "notes": "WebFetch verified 2026-04-10. Curex, Inc., 777 Brickell Ave #500-95053, Miami FL 33131 and 95 5th Ave Floor 4, New York NY 10003. LegitScript certified. Semaglutide $149/mo, tirzepatide $199/mo. No membership fee. Injectable + ODT formats. Not available in AK, AR, CT, HI, MA, NM, MO. Third-party testing via FDA/DEA certified labs. LabCorp + Quest partnerships. Primary business: allergy immunotherapy."
+    }
+  },
+  {
+    "_id": "betterme-rx",
+    "name": "BetterMe Rx",
+    "slug": "betterme-rx",
+    "description": "BetterMe Rx offers compounded semaglutide ($199/mo) and tirzepatide ($299/mo) in both injectable and oral daily tablet formats. LegitScript verified. All 50 states. Six named pharmacy partners with phone numbers \u2014 strongest pharmacy transparency in the dataset.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Compounded Semaglutide (3-month plan)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Oral Compounded Semaglutide (3-month)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 199
+      },
+      {
+        "dose": "Compounded Tirzepatide (3-month plan)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 299
+      },
+      {
+        "dose": "Oral Compounded Tirzepatide (3-month)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 299
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.5,
+      "ux": 7.5,
+      "trust": 8,
+      "accessibility": 8.5,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Oral Daily Tablets",
+      "LegitScript Verified"
+    ],
+    "states_available": [
+      "AL",
+      "AK",
+      "AZ",
+      "AR",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "ID",
+      "IL",
+      "IN",
+      "IA",
+      "KS",
+      "KY",
+      "LA",
+      "ME",
+      "MD",
+      "MA",
+      "MI",
+      "MN",
+      "MS",
+      "MO",
+      "MT",
+      "NE",
+      "NV",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "NC",
+      "ND",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VT",
+      "VA",
+      "WA",
+      "WV",
+      "WI",
+      "WY"
+    ],
+    "affiliate_url": "https://bettermerx.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "LegitScript verified",
+      "All 50 states coverage",
+      "Six named pharmacy partners with phone numbers \u2014 exceptional transparency",
+      "Both injectable and oral daily tablet formats for sema and tirz",
+      "Multi-month discounts (3-month and 6-month plans)",
+      "Affiliated with Telegra MD and Dr Telx telehealth networks"
+    ],
+    "cons": [
+      "No formal corporate entity name or address disclosed",
+      "Compounded only \u2014 no brand-name options",
+      "Broader platform (HRT, ED, NAD+, Sermorelin, skincare)"
+    ],
+    "best_for": "patients who value pharmacy transparency \u2014 six named compounding partners",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://bettermerx.com"
+      ],
+      "confidence": "high",
+      "notes": "WebFetch verified 2026-04-10. LegitScript verified. 'Serves patients in all 50 U.S. states.' Semaglutide $199/mo (3-month $597), tirzepatide $299/mo (3-month $897). Injectable + oral daily tablets. SIX named pharmacies: EpiqScripts (Richardson TX), Valiant RX (Ypsilanti MI), GoGoMeds (Southgate KY), The Pharmacy Hub (Miami FL), Emerald Compounding (Tampa FL), Belmar Pharmacy (Odessa FL), plus Striker (Katy TX). Affiliated with Telegra MD and Dr Telx. No corporate entity/address."
+    }
+  },
+  {
+    "_id": "aquavita-nextgen",
+    "name": "AquaVita NextGen",
+    "slug": "aquavita-nextgen",
+    "description": "AquaVita NextGen (AquaVita Wellness & Medspa) offers compounded semaglutide and tirzepatide (ODT tablets). Licensed providers in AZ, CA, FL, TX, NV. Medical Director: Dr. Steve Groke. Lake Forest, CA.",
+    "category": "GLP-1 Provider",
+    "pricing": [],
+    "scores": {
+      "value": 7,
+      "effectiveness": 7,
+      "ux": 7,
+      "trust": 7,
+      "accessibility": 6,
+      "support": 7
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "Oral Dissolving Tablets"
+    ],
+    "states_available": [
+      "AZ",
+      "CA",
+      "FL",
+      "TX",
+      "NV"
+    ],
+    "affiliate_url": "https://aquavitanextgen.com",
+    "affiliate_network": "Direct",
+    "fda_warnings": [],
+    "pros": [
+      "Physical address in Lake Forest CA",
+      "Named medical director (Dr. Steve Groke)",
+      "Both semaglutide and tirzepatide including ODT tablets",
+      "Compounding disclaimer present on site"
+    ],
+    "cons": [
+      "Only 5 states (AZ, CA, FL, TX, NV)",
+      "Pricing not publicly displayed ($00.0 placeholders)",
+      "No LegitScript or PCAB accreditation",
+      "Primarily a local medspa expanding into telehealth"
+    ],
+    "best_for": "patients in AZ/CA/FL/TX/NV seeking medspa-backed GLP-1 with a named medical director",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-10",
+      "verified_by": "WebFetch",
+      "source_urls": [
+        "https://aquavitanextgen.com"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-10. AquaVita Wellness & Medspa, 23321 El Toro Rd Suite G, Lake Forest CA. Phone: (949) 688-1876. Medical Director: Dr. Steve Groke (emergency medicine). Founder: Blair Zhang (MBA). Compounded semaglutide (weekly injection) + tirzepatide (daily ODT tablets). 'Licensed providers in Arizona, California, Florida, Texas, and Nevada.' Pricing shows $00.0 placeholders. No LegitScript, no PCAB. Also offers facials, HydraFacial, PicoWay."
+    }
   }
 ]
