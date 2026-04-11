@@ -66,15 +66,117 @@ export async function generateMetadata({
   };
 }
 
-function getMinPrice(provider: Provider): number | null {
-  if (!provider.pricing || provider.pricing.length === 0) return null;
-  return Math.min(...provider.pricing.map((p) => p.monthly_cost));
+// Drug slug classification used to filter providers and price rows
+// per drug page. Maps each /drugs/[slug] URL to:
+//   - the generic molecule the drug belongs to (lowercased)
+//   - whether the slug is a brand page (Wegovy, Ozempic, etc.) that
+//     should only match brand-form pricing rows, or a molecule page
+//     (semaglutide, tirzepatide) that should match all forms
+//   - the exact brand string to look for in features[] / pricing[].dose
+//
+// Previously the page reported the same offerCount / lowPrice /
+// highPrice for every drug because filterProvidersByDrug returned
+// all 154 GLP-1 providers regardless of slug. That made
+// /drugs/foundayo falsely report "$25 low from 113 providers" —
+// valid schema but dishonest pricing data.
+interface DrugSlugProfile {
+  molecule: "semaglutide" | "tirzepatide" | "orforglipron" | "liraglutide" | null;
+  brandName: string | null; // null = molecule page, matches all forms
 }
 
-// For v1, include all GLP-1 providers for all drugs.
-// In a future iteration, filter by drug-specific features (e.g., "Semaglutide" or "Tirzepatide" in provider.features).
-function filterProvidersByDrug(providers: Provider[]): Provider[] {
-  return providers.filter((p) => p.category === "GLP-1 Provider");
+const DRUG_SLUG_PROFILES: Record<string, DrugSlugProfile> = {
+  // Molecule pages — match any form of the molecule
+  semaglutide: { molecule: "semaglutide", brandName: null },
+  tirzepatide: { molecule: "tirzepatide", brandName: null },
+  // Brand pages — match only brand-form rows for the molecule OR
+  // providers whose features[] explicitly mention the brand name
+  wegovy: { molecule: "semaglutide", brandName: "Wegovy" },
+  ozempic: { molecule: "semaglutide", brandName: "Ozempic" },
+  rybelsus: { molecule: "semaglutide", brandName: "Rybelsus" },
+  zepbound: { molecule: "tirzepatide", brandName: "Zepbound" },
+  mounjaro: { molecule: "tirzepatide", brandName: "Mounjaro" },
+  // Foundayo (orforglipron) is a brand of its own molecule — brand
+  // and molecule coincide because there's no compounded orforglipron.
+  foundayo: { molecule: "orforglipron", brandName: "Foundayo" },
+};
+
+function getProfileForSlug(slug: string): DrugSlugProfile {
+  return (
+    DRUG_SLUG_PROFILES[slug] ?? { molecule: null, brandName: null }
+  );
+}
+
+// Returns the price rows on a provider that are actually relevant
+// to the given drug slug. A molecule page returns all rows for that
+// molecule (compounded + brand). A brand page returns only the
+// brand-form rows for that molecule, OR all molecule rows if the
+// provider's features[] explicitly lists the brand (which means
+// they carry the brand-name version).
+function getRelevantPricingForDrug(
+  provider: Provider,
+  profile: DrugSlugProfile,
+): Provider["pricing"] {
+  if (!provider.pricing || provider.pricing.length === 0) return [];
+  if (!profile.molecule) return provider.pricing;
+  const featuresLower = (provider.features ?? [])
+    .join(" ")
+    .toLowerCase();
+  const brandLower = profile.brandName?.toLowerCase() ?? null;
+  const providerMentionsBrand =
+    brandLower !== null && featuresLower.includes(brandLower);
+
+  return provider.pricing.filter((row) => {
+    // Row must match the target molecule (via pricing[].drug, if set)
+    // OR be brand-form from a provider that explicitly mentions the
+    // brand in its features (covers brand drugs stored in features[]
+    // without drug= on the row itself).
+    const rowDrug = row.drug?.toLowerCase() ?? null;
+    if (rowDrug !== null && rowDrug !== profile.molecule) return false;
+
+    if (profile.brandName === null) {
+      // Molecule page — any form is fine
+      return true;
+    }
+
+    // Brand page logic:
+    //   1. If row.form is explicitly "brand" AND either (a) the
+    //      provider's features include the brand, or (b) the row's
+    //      dose string mentions the brand name.
+    //   2. If the provider's features explicitly list the brand,
+    //      count all brand-form rows for the matching molecule.
+    if (row.form !== "brand") return false;
+    const doseMentions = row.dose
+      ?.toLowerCase()
+      .includes(brandLower ?? "") ?? false;
+    return providerMentionsBrand || doseMentions;
+  });
+}
+
+// Cheapest monthly cost for the rows relevant to this drug slug.
+function getMinPriceForDrug(
+  provider: Provider,
+  profile: DrugSlugProfile,
+): number | null {
+  const rows = getRelevantPricingForDrug(provider, profile);
+  if (rows.length === 0) return null;
+  return Math.min(
+    ...rows.map((p) => p.promo_price ?? p.monthly_cost),
+  );
+}
+
+// Filter GLP-1 providers to those with at least one price row
+// matching this drug slug. Brand pages get only providers that
+// actually carry the brand; molecule pages get every provider that
+// carries any form of the molecule.
+function filterProvidersByDrug(
+  providers: Provider[],
+  profile: DrugSlugProfile,
+): Provider[] {
+  return providers.filter((p) => {
+    if (p.category !== "GLP-1 Provider") return false;
+    const rows = getRelevantPricingForDrug(p, profile);
+    return rows.length > 0;
+  });
 }
 
 export default async function DrugPage({
@@ -90,14 +192,23 @@ export default async function DrugPage({
   }
 
   const allProviders = await getAllProviders();
-  const glp1Providers = filterProvidersByDrug(allProviders);
+  const drugProfile = getProfileForSlug(drug);
+  const glp1Providers = filterProvidersByDrug(allProviders, drugProfile);
 
   // Sort by score desc with verification tiebreak for the grid (top 6).
   const topProviders = sortProvidersByRank(glp1Providers).slice(0, 6);
 
-  // For cost comparison table: sort all GLP-1 providers by cheapest price ascending
+  // For cost comparison table: sort by cheapest DRUG-SPECIFIC price
+  // (not all-drug min price). This is the honest per-drug price
+  // signal used in both the visible table and the AggregateOffer
+  // schema emitted for Google. Previously the schema reported the
+  // same $25–$1350 range on every drug page because the filter
+  // returned all GLP-1 providers and minPrice was cross-molecule.
   const providersWithPrice = glp1Providers
-    .map((p) => ({ provider: p, minPrice: getMinPrice(p) }))
+    .map((p) => ({
+      provider: p,
+      minPrice: getMinPriceForDrug(p, drugProfile),
+    }))
     .filter((item) => item.minPrice !== null)
     .sort((a, b) => (a.minPrice as number) - (b.minPrice as number));
 
@@ -444,7 +555,9 @@ export default async function DrugPage({
     .slice(0, 6);
 
   const topProvider = topProviders[0];
-  const topProviderMinPrice = topProvider ? getMinPrice(topProvider) : null;
+  const topProviderMinPrice = topProvider
+    ? getMinPriceForDrug(topProvider, drugProfile)
+    : null;
 
   return (
     <main className="min-h-screen bg-brand-bg pb-24 lg:pb-0">
@@ -752,8 +865,8 @@ export default async function DrugPage({
                         {provider.name}
                       </td>
                       <td className="py-3 px-5 text-brand-text-secondary hidden sm:table-cell capitalize">
-                        {provider.pricing.find(
-                          (p) => p.monthly_cost === minPrice
+                        {getRelevantPricingForDrug(provider, drugProfile).find(
+                          (p) => (p.promo_price ?? p.monthly_cost) === minPrice
                         )?.form ?? "—"}
                       </td>
                       <td className="py-3 px-5 text-right font-bold text-brand-text-primary">
