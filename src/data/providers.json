@@ -11612,5 +11612,109 @@
       "confidence": "medium",
       "notes": "WebFetch verified 2026-04-10. AquaVita Wellness & Medspa, 23321 El Toro Rd Suite G, Lake Forest CA. Phone: (949) 688-1876. Medical Director: Dr. Steve Groke (emergency medicine). Founder: Blair Zhang (MBA). Compounded semaglutide (weekly injection) + tirzepatide (daily ODT tablets). 'Licensed providers in Arizona, California, Florida, Texas, and Nevada.' Pricing shows $00.0 placeholders. No LegitScript, no PCAB. Also offers facials, HydraFacial, PicoWay."
     }
+  },
+  {
+    "_id": "tonik-wellness",
+    "name": "Tonik Wellness",
+    "slug": "tonik-wellness",
+    "description": "Tonik Wellness (Tonik Wellness, LLC) offers compounded semaglutide ($149\u2013$225/mo) and compounded tirzepatide ($229\u2013$349/mo) with tiered monthly/quarterly/annual pricing. LegitScript verified. Lab work + video visit required. Partners with Strive Pharmacy and Olympia Pharmacy. Named medical director (Joel Jones, DO) and clinical director (Shawn Thurston, FNP). Broader men's health / longevity platform also offering TRT, peptides, and metabolic therapies.",
+    "category": "GLP-1 Provider",
+    "pricing": [
+      {
+        "dose": "Semaglutide (annual)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 149,
+        "note": "$1,788 billed yearly"
+      },
+      {
+        "dose": "Semaglutide (quarterly)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 165,
+        "note": "$495 every 3 months"
+      },
+      {
+        "dose": "Semaglutide (monthly)",
+        "form": "compounded",
+        "drug": "semaglutide",
+        "monthly_cost": 225
+      },
+      {
+        "dose": "Tirzepatide (annual)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 229,
+        "note": "$2,748 billed yearly"
+      },
+      {
+        "dose": "Tirzepatide (quarterly)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 249,
+        "note": "$747 every 3 months"
+      },
+      {
+        "dose": "Tirzepatide (monthly)",
+        "form": "compounded",
+        "drug": "tirzepatide",
+        "monthly_cost": 349
+      }
+    ],
+    "scores": {
+      "value": 7.5,
+      "effectiveness": 7.5,
+      "ux": 7,
+      "trust": 7.5,
+      "accessibility": 7,
+      "support": 7.5
+    },
+    "features": [
+      "Compounded Semaglutide",
+      "Compounded Tirzepatide",
+      "LegitScript Verified",
+      "Strive Pharmacy",
+      "Olympia Pharmacy",
+      "Labs Required",
+      "Video Visit"
+    ],
+    "states_available": [],
+    "affiliate_url": "https://track.revoffers.com/aff_c?offer_id=1567&aff_id=12086&source=weightlossrankings&sub1=tonik-wellness",
+    "affiliate_network": "Katalys",
+    "fda_warnings": [],
+    "pros": [
+      "LegitScript verified \u2014 strongest pharmacy compliance signal",
+      "Lab work required up front \u2014 more rigorous than async-only competitors",
+      "Live video consult with a named clinician (not async questionnaire only)",
+      "Two named 503A compounding pharmacy partners: Strive Pharmacy (AZ, CA, CO, FL, TX, UT) and Olympia Pharmacy (Orlando FL)",
+      "Named medical director (Joel Jones, DO) and clinical director (Shawn Thurston, FNP) \u2014 real clinical governance",
+      "Competitive annual pricing: semaglutide $149/mo, tirzepatide $229/mo (billed yearly)",
+      "Transparent tiered pricing (monthly / quarterly / annual) with no hidden membership fee"
+    ],
+    "cons": [
+      "State availability not disclosed publicly \u2014 must go through intake to find out",
+      "Semaglutide listed as 'out of stock' on the product page at time of verification",
+      "Compounded-drug FDA-non-approval disclaimer not found on public-facing pages (YMYL gap)",
+      "Many core pages return 404 (/faq, /how-it-works, /shipping, /contact, product/tirzepatide)",
+      "No published phone number",
+      "No insurance / HSA / FSA acceptance information surfaced",
+      "Broader longevity catalog includes ivermectin, rapamycin, and methylene blue \u2014 positions brand in 'bro-wellness' bucket that may erode trust with clinically-cautious users",
+      "Founded 2024 \u2014 short track record; very thin Trustpilot footprint"
+    ],
+    "best_for": "patients who want lab-required clinical GLP-1 care with named pharmacy partners and transparent multi-month pricing",
+    "is_featured": false,
+    "verification": {
+      "last_verified": "2026-04-11",
+      "verified_by": "WebFetch + multi-agent verification",
+      "source_urls": [
+        "https://tonikwellness.com",
+        "https://tonikwellness.com/weight-loss",
+        "https://tonikwellness.com/about",
+        "https://tonikwellness.com/terms-of-service",
+        "https://tonikwellness.com/product/semaglutide"
+      ],
+      "confidence": "medium",
+      "notes": "WebFetch verified 2026-04-11. Tonik Wellness, LLC, 1 N Johnston Ave C238, Hamilton NJ 08609 (Terms lists 08022 \u2014 ZIP typo). Founded 2024, CEO Shane de Lumeau. Medical Director Joel Jones DO, Clinical Director Shawn Thurston FNP. LegitScript certified. Pharmacy partners: Strive Pharmacy (AZ, CA, CO, FL, TX, UT) and Olympia Pharmacy (Orlando FL) \u2014 both 503A compounding pharmacies. Semaglutide $149/$165/$225 per month (annual/quarterly/monthly). Tirzepatide $229/$249/$349 per month. Workflow: intake + labs \u2192 video visit \u2192 licensed pharmacy ships. Broader platform also sells TRT, peptides, NAD+, metformin, phentermine, rapamycin, methylene blue, ivermectin. Governing law: Colorado (unusual \u2014 entity is in NJ). KATALYS APPROVAL 2026-04-11: program 1587 approved. offer_id pending capture from the Katalys dashboard \u2014 once user pastes the generated tracking URL, swap affiliate_url from the direct URL to the track.revoffers.com tracking URL. affiliate_network set to 'Katalys' in anticipation. WEAKNESSES: state list not disclosed, semaglutide out of stock at time of check, FDA compounding disclaimer missing from public pages, /faq /how-it-works /shipping /contact all 404 (site is under-built), no phone number published."
+    }
   }
 ]

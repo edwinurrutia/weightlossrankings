@@ -117,7 +117,9 @@ export default function BrandCheatSheetArticle() {
         <tbody>
           <tr>
             <td>
-              <strong>Wegovy</strong>
+              <Link href="/drugs/wegovy">
+                <strong>Wegovy</strong>
+              </Link>
             </td>
             <td>Semaglutide 2.4 mg</td>
             <td>Novo Nordisk</td>
@@ -126,7 +128,9 @@ export default function BrandCheatSheetArticle() {
           </tr>
           <tr>
             <td>
-              <strong>Ozempic</strong>
+              <Link href="/drugs/ozempic">
+                <strong>Ozempic</strong>
+              </Link>
             </td>
             <td>Semaglutide (lower doses)</td>
             <td>Novo Nordisk</td>
@@ -135,7 +139,9 @@ export default function BrandCheatSheetArticle() {
           </tr>
           <tr>
             <td>
-              <strong>Rybelsus</strong>
+              <Link href="/drugs/semaglutide">
+                <strong>Rybelsus</strong>
+              </Link>
             </td>
             <td>Semaglutide (oral peptide)</td>
             <td>Novo Nordisk</td>
@@ -144,7 +150,9 @@ export default function BrandCheatSheetArticle() {
           </tr>
           <tr>
             <td>
-              <strong>Zepbound</strong>
+              <Link href="/drugs/zepbound">
+                <strong>Zepbound</strong>
+              </Link>
             </td>
             <td>Tirzepatide</td>
             <td>Eli Lilly</td>
@@ -153,7 +161,9 @@ export default function BrandCheatSheetArticle() {
           </tr>
           <tr>
             <td>
-              <strong>Mounjaro</strong>
+              <Link href="/drugs/mounjaro">
+                <strong>Mounjaro</strong>
+              </Link>
             </td>
             <td>Tirzepatide</td>
             <td>Eli Lilly</td>
@@ -162,7 +172,9 @@ export default function BrandCheatSheetArticle() {
           </tr>
           <tr>
             <td>
-              <strong>Foundayo</strong>
+              <Link href="/drugs/foundayo">
+                <strong>Foundayo</strong>
+              </Link>
             </td>
             <td>Orforglipron (small molecule)</td>
             <td>Eli Lilly</td>
