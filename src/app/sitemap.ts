@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import {
   getAllProviderSlugs,
+  getAllProviders,
   getAllBlogPosts,
 } from "@/lib/data";
-import { getAllDrugSlugs } from "@/lib/drugs";
+import { getAllDrugSlugs, getAllDrugs } from "@/lib/drugs";
 import { US_STATES } from "@/lib/states";
 import { getAllVariantPaths } from "@/lib/variants";
 import { getAllCities, CITY_DRUG_SLUGS } from "@/lib/cities";
@@ -50,6 +51,23 @@ const CATEGORY_KEYS = [
   "fitness-apps-for-weight-loss",
 ];
 
+// Static per-section lastmod dates. Bumped manually when the content
+// of a section materially changes. Using a fixed constant instead of
+// `new Date()` prevents every deploy from stamping every sitemap URL
+// with the current timestamp, which Google treats as a noisy/unreliable
+// freshness signal and penalizes with reduced crawl budget.
+//
+// Rule: bump these when you genuinely change the underlying content
+// template or data for that section. Do NOT bump on unrelated deploys.
+const STATE_PAGES_LASTMOD = new Date("2026-04-08T00:00:00Z"); // state split + sortProvidersByRank
+const CITY_PAGES_LASTMOD = new Date("2026-04-06T00:00:00Z"); // cities cleanup in Wave 5.4
+const VARIANT_PAGES_LASTMOD = new Date("2026-04-09T00:00:00Z"); // per-variant OG images
+const SAVINGS_PAGES_LASTMOD = new Date("2026-04-09T00:00:00Z");
+const INSURER_PAGES_LASTMOD = new Date("2026-04-07T00:00:00Z");
+const PHARMACY_PAGES_LASTMOD = new Date("2026-04-07T00:00:00Z");
+const AUTHOR_PAGES_LASTMOD = new Date("2026-04-06T00:00:00Z"); // E-E-A-T author infra shipped
+const HUB_PAGES_LASTMOD = new Date("2026-04-11T00:00:00Z"); // today — hubs reflect sitewide state
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
@@ -57,7 +75,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "daily",
       priority: 1.0,
     },
@@ -67,46 +85,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // and breadcrumb-linked.
     {
       url: `${BASE_URL}/best`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/reviews`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/alternatives`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.85,
     },
     {
       url: `${BASE_URL}/savings`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.85,
     },
     // Rankings / best pages
     ...CATEGORY_KEYS.map((category) => ({
       url: `${BASE_URL}/best/${category}`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     })),
     // Compare landing
     {
       url: `${BASE_URL}/compare`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "daily" as const,
       priority: 0.9,
     },
     // /tools index page
     {
       url: `${BASE_URL}/tools`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.85,
     },
@@ -132,118 +150,118 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     {
       url: `${BASE_URL}/dose-timeline`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${BASE_URL}/price-tracker`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${BASE_URL}/blog`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/research`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.85,
     },
     // Listing pages
     {
       url: `${BASE_URL}/drugs`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/states`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/cities`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/insurance`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/pharmacies`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     // Trust pages
     {
       url: `${BASE_URL}/sources`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/methodology`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/about`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/press`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/disclosure`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/nature-of-reviews`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/advertise`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.5,
     },
     // Legal & info pages
     {
       url: `${BASE_URL}/faq`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${BASE_URL}/contact`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "yearly" as const,
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/careers`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.4,
     },
@@ -256,55 +274,55 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // they carry the site-wide trust signal.
     {
       url: `${BASE_URL}/editorial-policy`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/corrections`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/authors`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/code-of-conduct`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "yearly" as const,
       priority: 0.4,
     },
     {
       url: `${BASE_URL}/medical-disclaimer`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "yearly" as const,
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/privacy`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "yearly" as const,
       priority: 0.3,
     },
     {
       url: `${BASE_URL}/terms`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "yearly" as const,
       priority: 0.3,
     },
     {
       url: `${BASE_URL}/trademarks`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "yearly" as const,
       priority: 0.3,
     },
     {
       url: `${BASE_URL}/fda-warning-letters`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
@@ -334,35 +352,69 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // byline links.
   const authorPages: MetadataRoute.Sitemap = AUTHORS.map((author) => ({
     url: `${BASE_URL}/authors/${author.slug}`,
-    lastModified: now,
+    lastModified: AUTHOR_PAGES_LASTMOD,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
   // Dynamic: /reviews/[provider]
+  //
+  // Per-URL lastmod sourced from each provider's verification.last_verified
+  // date (the date the editorial team last cross-checked the provider's
+  // website, pricing, and regulatory status). This gives Google an
+  // honest per-URL freshness signal instead of the "everything modified
+  // right now" noise from sitemap-wide `now`. Google's crawl scheduler
+  // uses sitemap lastmod accuracy as an input to how much crawl budget
+  // to spend on a domain — uniform "now" stamps across 700+ URLs were
+  // almost certainly contributing to our 11/852-indexed ratio.
+  const allProvidersForSitemap = await getAllProviders();
   const providerSlugs = await getAllProviderSlugs();
+  const providerLastModBySlug = new Map<string, Date>();
+  for (const p of allProvidersForSitemap) {
+    if (p.slug) {
+      providerLastModBySlug.set(p.slug, safeDate(p.verification?.last_verified));
+    }
+  }
   const reviewPages: MetadataRoute.Sitemap = providerSlugs.map(({ slug }) => ({
     url: `${BASE_URL}/reviews/${slug}`,
-    lastModified: now,
+    lastModified: providerLastModBySlug.get(slug) ?? now,
     changeFrequency: "monthly",
     priority: 0.8,
   }));
 
-  // Dynamic: /alternatives/[provider]
+  // Dynamic: /alternatives/[provider] — alternatives listing is a
+  // derivative of the same underlying provider data, so the lastmod
+  // tracks the same verification date as the review page.
   const alternativesPages: MetadataRoute.Sitemap = providerSlugs.map(
     ({ slug }) => ({
       url: `${BASE_URL}/alternatives/${slug}`,
-      lastModified: now,
+      lastModified: providerLastModBySlug.get(slug) ?? now,
       changeFrequency: "monthly",
       priority: 0.7,
     })
   );
 
   // Dynamic: /drugs/[drug]
+  //
+  // Per-URL lastmod sourced from each drug's verification.last_verified
+  // date (the date the editorial team last re-checked the FDA label and
+  // pivotal trial references). Drug pages change less often than
+  // provider pages, so the honest freshness signal is usually older.
+  const allDrugsForSitemap = getAllDrugs();
+  const drugLastModBySlug = new Map<string, Date>();
+  for (const d of allDrugsForSitemap) {
+    drugLastModBySlug.set(
+      d.slug,
+      safeDate(
+        (d as { verification?: { last_verified?: string } }).verification
+          ?.last_verified ?? d.approval_date
+      )
+    );
+  }
   const drugSlugs = getAllDrugSlugs();
   const drugPages: MetadataRoute.Sitemap = drugSlugs.map(({ slug }) => ({
     url: `${BASE_URL}/drugs/${slug}`,
-    lastModified: now,
+    lastModified: drugLastModBySlug.get(slug) ?? now,
     changeFrequency: "monthly",
     priority: 0.7,
   }));
@@ -370,7 +422,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Dynamic: /states/[state]
   const statePages: MetadataRoute.Sitemap = US_STATES.map((state) => ({
     url: `${BASE_URL}/states/${state.slug}`,
-    lastModified: now,
+    lastModified: STATE_PAGES_LASTMOD,
     changeFrequency: "monthly",
     priority: 0.7,
   }));
@@ -379,7 +431,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const stateDrugPages: MetadataRoute.Sitemap = US_STATES.flatMap((state) =>
     (["semaglutide", "tirzepatide"] as const).map((drug) => ({
       url: `${BASE_URL}/states/${state.slug}/${drug}`,
-      lastModified: now,
+      lastModified: STATE_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.75,
     }))
@@ -409,7 +461,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const variantPages: MetadataRoute.Sitemap = getAllVariantPaths().map(
     ({ category, variant }) => ({
       url: `${BASE_URL}/best/${category}/${variant}`,
-      lastModified: now,
+      lastModified: VARIANT_PAGES_LASTMOD,
       changeFrequency: "weekly",
       priority: 0.85,
     }),
@@ -419,7 +471,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const allCities = getAllCities();
   const cityPages: MetadataRoute.Sitemap = allCities.map((c) => ({
     url: `${BASE_URL}/cities/${c.slug}`,
-    lastModified: now,
+    lastModified: CITY_PAGES_LASTMOD,
     changeFrequency: "monthly",
     priority: 0.75,
   }));
@@ -428,7 +480,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const cityDrugPages: MetadataRoute.Sitemap = allCities.flatMap((c) =>
     CITY_DRUG_SLUGS.map((drug) => ({
       url: `${BASE_URL}/cities/${c.slug}/${drug}`,
-      lastModified: now,
+      lastModified: CITY_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }))
@@ -437,7 +489,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Dynamic: /savings/[comparison] — 4 brand-vs-compounded pages
   const savingsPages: MetadataRoute.Sitemap = SAVINGS_COMPARISONS.map((c) => ({
     url: `${BASE_URL}/savings/${c.slug}`,
-    lastModified: now,
+    lastModified: SAVINGS_PAGES_LASTMOD,
     changeFrequency: "weekly",
     priority: 0.85,
   }));
@@ -445,7 +497,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Dynamic: /insurance/[insurer] — 10 insurer coverage pages
   const insurerPages: MetadataRoute.Sitemap = getAllInsurers().map((i) => ({
     url: `${BASE_URL}/insurance/${i.slug}`,
-    lastModified: now,
+    lastModified: INSURER_PAGES_LASTMOD,
     changeFrequency: "monthly",
     priority: 0.8,
   }));
@@ -453,7 +505,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Dynamic: /pharmacies/[slug]
   const pharmacyPages: MetadataRoute.Sitemap = getAllPharmacies().map((p) => ({
     url: `${BASE_URL}/pharmacies/${p.slug}`,
-    lastModified: now,
+    lastModified: PHARMACY_PAGES_LASTMOD,
     changeFrequency: "monthly",
     priority: 0.7,
   }));
@@ -488,7 +540,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const researchTopicsPages: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}/research/topics`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
@@ -506,13 +558,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const spanishStaticPages: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}/es`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/es/research`,
-      lastModified: now,
+      lastModified: HUB_PAGES_LASTMOD,
       changeFrequency: "weekly",
       priority: 0.85,
     },

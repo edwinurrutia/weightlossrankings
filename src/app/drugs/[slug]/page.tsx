@@ -101,11 +101,39 @@ export default async function DrugPage({
     .filter((item) => item.minPrice !== null)
     .sort((a, b) => (a.minPrice as number) - (b.minPrice as number));
 
-  const updatedDate = new Date().toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
+  // Honest "Updated" date. The drug page is a live view over
+  // providers.json (cost comparison table + top provider grid) plus
+  // the editorially-verified drug record. Using Date.now() here
+  // would stamp every page with today's date on every deploy —
+  // "fake freshness" that YMYL quality algorithms penalize.
+  //
+  // We use the site-wide most-recent verification date instead. It's
+  // honest (it's a real date, sourced from the editorial verification
+  // system) and it's typically within the last few days because we
+  // re-verify providers constantly. The drug's own verification date
+  // takes precedence — if the drug was re-verified more recently than
+  // the most-recent provider verification, use that.
+  const drugVerifiedRaw =
+    (drugData as { verification?: { last_verified?: string } }).verification
+      ?.last_verified ?? null;
+  const siteLatest = getLatestVerificationDate();
+  // Compare as lexicographic YYYY-MM-DD — works because both are
+  // in ISO date format at source.
+  const latestContentDate =
+    drugVerifiedRaw && siteLatest && drugVerifiedRaw > siteLatest
+      ? drugVerifiedRaw
+      : siteLatest ?? drugVerifiedRaw ?? null;
+  const updatedDate = latestContentDate
+    ? new Date(latestContentDate + "T00:00:00").toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      })
+    : new Date().toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      });
 
   const formattedApprovalDate = drugData.approval_date
     ? new Date(drugData.approval_date + "T00:00:00").toLocaleDateString(

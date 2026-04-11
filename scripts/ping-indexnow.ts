@@ -35,6 +35,7 @@
  */
 
 import providersData from "../src/data/providers.json" assert { type: "json" };
+import drugsData from "../src/data/drugs.json" assert { type: "json" };
 
 const INDEXNOW_KEY =
   "63dc0f54cc7753b30da2b6954b725db6b7e1ee470621a664bafbe4d26cc4b279";
@@ -51,6 +52,10 @@ const BATCH_SIZE = 1_000;
 interface Provider {
   slug: string;
   category?: string;
+}
+
+interface Drug {
+  slug: string;
 }
 
 function buildUrlList(): string[] {
@@ -106,6 +111,37 @@ function buildUrlList(): string[] {
   const providers = providersData as Provider[];
   for (const p of providers) {
     urls.add(`${BASE}/reviews/${p.slug}`);
+    // /alternatives/[provider] — same underlying data, same
+    // update cadence as the review page. Cheap to submit.
+    urls.add(`${BASE}/alternatives/${p.slug}`);
+  }
+
+  // Every drug guide page. These are refreshed whenever we add a
+  // new provider (the cost comparison table pulls live data from
+  // providers.json), so they merit a crawl ping on every deploy.
+  const drugs = drugsData as Drug[];
+  for (const d of drugs) {
+    urls.add(`${BASE}/drugs/${d.slug}`);
+  }
+
+  // State/drug combo pages — 50 states × 2 drugs = 100 URLs.
+  // Updated whenever any provider's state list changes.
+  const stateCodes = [
+    "alabama", "alaska", "arizona", "arkansas", "california",
+    "colorado", "connecticut", "delaware", "florida", "georgia",
+    "hawaii", "idaho", "illinois", "indiana", "iowa", "kansas",
+    "kentucky", "louisiana", "maine", "maryland", "massachusetts",
+    "michigan", "minnesota", "mississippi", "missouri", "montana",
+    "nebraska", "nevada", "new-hampshire", "new-jersey", "new-mexico",
+    "new-york", "north-carolina", "north-dakota", "ohio", "oklahoma",
+    "oregon", "pennsylvania", "rhode-island", "south-carolina",
+    "south-dakota", "tennessee", "texas", "utah", "vermont",
+    "virginia", "washington", "west-virginia", "wisconsin", "wyoming",
+  ];
+  for (const state of stateCodes) {
+    urls.add(`${BASE}/states/${state}`);
+    urls.add(`${BASE}/states/${state}/semaglutide`);
+    urls.add(`${BASE}/states/${state}/tirzepatide`);
   }
 
   return Array.from(urls);
