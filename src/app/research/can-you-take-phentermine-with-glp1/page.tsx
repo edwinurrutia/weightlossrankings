@@ -150,7 +150,7 @@ export default function PhentermineComboArticle() {
         FDA-approved indication is short-term (12 week) use as part
         of a comprehensive weight management plan for adults with
         BMI ≥ 30, or BMI ≥ 27 with weight-related comorbidities —
-        the same eligibility threshold as Wegovy and Zepbound. It
+        the same eligibility threshold as <Link href="/drugs/wegovy">Wegovy</Link> and <Link href="/drugs/zepbound">Zepbound</Link>. It
         is a DEA Schedule IV controlled substance because of its
         amphetamine-related abuse potential.
       </p>

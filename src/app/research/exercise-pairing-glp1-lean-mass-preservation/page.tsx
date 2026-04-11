@@ -181,7 +181,7 @@ export default function ExerciseGlp1Article() {
       <p>
         The STEP-1<Cite n={3} /> and SURMOUNT-1 body composition
         substudies showed that approximately 25-45% of total weight
-        loss on semaglutide and tirzepatide is lean tissue when
+        loss on <Link href="/drugs/semaglutide">semaglutide</Link> and <Link href="/drugs/tirzepatide">tirzepatide</Link> is lean tissue when
         patients do not intervene with protein and resistance
         training. Neeland and colleagues<Cite n={3} /> reviewed the
         full GLP-1 lean mass literature in 2024 and concluded that

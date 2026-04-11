@@ -207,7 +207,7 @@ export default function DietArticle() {
         <Link href="/research/semaglutide-muscle-mass-loss">
           semaglutide and muscle mass deep-dive
         </Link>
-        , is that up to 40% of total weight lost on semaglutide can
+        , is that up to 40% of total weight lost on <Link href="/drugs/semaglutide">semaglutide</Link> can
         be lean mass in patients who don&apos;t prioritize protein
         and resistance training.
       </p>

@@ -154,7 +154,7 @@ export default function GlpCancerArticle() {
         Cancer is the single most common patient-anxiety question
         about GLP-1s, driven mostly by the FDA black-box warning for
         medullary thyroid carcinoma (MTC) on the front page of the
-        Wegovy<Cite n={1} /> and Zepbound<Cite n={2} /> labels.
+        <Link href="/drugs/wegovy">Wegovy</Link><Cite n={1} /> and <Link href="/drugs/zepbound">Zepbound</Link><Cite n={2} /> labels.
         That warning is real, comes from rodent studies, and has not
         been demonstrated in humans. The pancreatic cancer signal has
         been investigated in multiple large cohorts and found to be
@@ -177,7 +177,7 @@ export default function GlpCancerArticle() {
       </p>
       <ul>
         <li>
-          Semaglutide and tirzepatide cause thyroid C-cell tumors at
+          <Link href="/drugs/semaglutide">Semaglutide</Link> and <Link href="/drugs/tirzepatide">tirzepatide</Link> cause thyroid C-cell tumors at
           clinically relevant exposures in rats. It is unknown
           whether these drugs cause thyroid C-cell tumors, including
           medullary thyroid carcinoma (MTC), in humans, as the human

@@ -471,7 +471,7 @@ export default function WaterMythsArticle() {
       </p>
       <p>
         Compare to STEP-1 (Wilding NEJM 2021)<Cite n={7} />:
-        semaglutide 2.4 mg produced &minus;14.9% body weight at 68
+        <Link href="/drugs/semaglutide">semaglutide</Link> 2.4 mg produced &minus;14.9% body weight at 68
         weeks. For a 100 kg starting weight, that&apos;s
         &minus;15 kg. Even chia plus a calorie-restricted diet
         produces ~10% of that magnitude in the best published
@@ -536,8 +536,8 @@ export default function WaterMythsArticle() {
         </li>
         <li>
           <strong>FDA-approved obesity pharmacotherapy</strong>
-          &mdash; semaglutide (STEP-1: &minus;14.9%), tirzepatide
-          (SURMOUNT-1: &minus;20.9%), Foundayo (ATTAIN-1:
+          &mdash; semaglutide (STEP-1: &minus;14.9%), <Link href="/drugs/tirzepatide">tirzepatide</Link>
+          (SURMOUNT-1: &minus;20.9%), <Link href="/drugs/foundayo">Foundayo</Link> (ATTAIN-1:
           &minus;12.4%), or Qsymia (CONQUER: &minus;9.8%)
         </li>
         <li>

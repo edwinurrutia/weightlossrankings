@@ -181,7 +181,7 @@ export default function InsuranceCoverageAuditArticle() {
 
       <p>
         Most of the insurers in our audit answer &ldquo;does your plan
-        cover Wegovy?&rdquo; with some version of &ldquo;it depends on
+        cover <Link href="/drugs/wegovy">Wegovy</Link>?&rdquo; with some version of &ldquo;it depends on
         your specific plan, your employer&apos;s formulary choices, and
         your prior auth determination.&rdquo; That sounds reasonable until
         you realize what it means in practice: a single insurer can offer
@@ -200,7 +200,7 @@ export default function InsuranceCoverageAuditArticle() {
         </li>
         <li>
           <strong>Indication restriction.</strong> Many plans cover
-          semaglutide as Ozempic for type 2 diabetes (where the cost
+          <Link href="/drugs/semaglutide">semaglutide</Link> as <Link href="/drugs/ozempic">Ozempic</Link> for type 2 diabetes (where the cost
           basis is established and the FDA indication is clear) but
           exclude or heavily restrict semaglutide as Wegovy for weight
           loss alone. Same drug, same molecule, two different
@@ -211,7 +211,7 @@ export default function InsuranceCoverageAuditArticle() {
           <strong>Step therapy.</strong> Your prior auth may require
           documented failure of cheaper alternatives first
           (phentermine, orlistat, liraglutide) before the insurer will
-          approve semaglutide or tirzepatide. The step therapy
+          approve semaglutide or <Link href="/drugs/tirzepatide">tirzepatide</Link>. The step therapy
           requirements vary by insurer and by plan.
         </li>
         <li>
@@ -254,7 +254,7 @@ export default function InsuranceCoverageAuditArticle() {
       <ol>
         <li>
           <strong>Try insurance first.</strong> If your insurance covers
-          Wegovy or Zepbound at a copay below ~$200/month, that&apos;s
+          Wegovy or <Link href="/drugs/zepbound">Zepbound</Link> at a copay below ~$200/month, that&apos;s
           almost always the right answer. Brand-name drugs with insurance
           beat compounded out-of-pocket.
         </li>

@@ -87,9 +87,9 @@ export default function MicrodoseArticle() {
         patient search term (~1,200/mo for the semaglutide query
         specifically, plus related terms). The term itself is not
         formally defined in the clinical literature — it generally
-        refers to using semaglutide or tirzepatide at a dose{" "}
+        refers to using <Link href="/drugs/semaglutide">semaglutide</Link> or <Link href="/drugs/tirzepatide">tirzepatide</Link> at a dose{" "}
         <em>below the FDA-approved maintenance</em> (2.4 mg for
-        Wegovy, 15 mg for Zepbound) with the goal of getting some
+        <Link href="/drugs/wegovy">Wegovy</Link>, 15 mg for <Link href="/drugs/zepbound">Zepbound</Link>) with the goal of getting some
         of the appetite-suppression and weight-loss effect at a
         lower-cost, lower-side-effect profile. This article answers
         what the published trial data actually shows about

@@ -216,9 +216,9 @@ export default function LooseSkinArticle() {
       </p>
       <p>
         For context on the magnitude that GLP-1s can produce: STEP-1
-        reported a mean weight loss of 14.9% body weight on semaglutide
+        reported a mean weight loss of 14.9% body weight on <Link href="/drugs/semaglutide">semaglutide</Link>
         2.4 mg over 68 weeks<Cite n={7} />, and SURMOUNT-1 reported 20.9%
-        on tirzepatide 15 mg over 72 weeks<Cite n={8} />. For a starting
+        on <Link href="/drugs/tirzepatide">tirzepatide</Link> 15 mg over 72 weeks<Cite n={8} />. For a starting
         weight of 105 kg (the trial mean), that&apos;s ~16 kg and ~22 kg
         respectively. Most GLP-1 patients in the trials did not cross the
         50-kg threshold associated with the worst skin outcomes &mdash;
@@ -486,7 +486,7 @@ export default function LooseSkinArticle() {
           <strong>Lose at a sustainable pace.</strong> Faster is not
           better for skin outcomes; rate of loss is an independent risk
           factor in the bariatric literature<Cite n={3} />. The dose
-          escalation schedules for Wegovy and Zepbound are designed
+          escalation schedules for <Link href="/drugs/wegovy">Wegovy</Link> and <Link href="/drugs/zepbound">Zepbound</Link> are designed
           partly for tolerance, but the slow ramp also has the side
           benefit of letting the body adapt structurally.
         </li>

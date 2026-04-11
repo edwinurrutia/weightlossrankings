@@ -318,7 +318,7 @@ export default function ReconstitutionArticle() {
         </thead>
         <tbody>
           <tr>
-            <td>5 mg semaglutide</td>
+            <td>5 mg <Link href="/drugs/semaglutide">semaglutide</Link></td>
             <td>2 mL</td>
             <td>2.5 mg/mL</td>
           </tr>
@@ -333,7 +333,7 @@ export default function ReconstitutionArticle() {
             <td>2.5 mg/mL</td>
           </tr>
           <tr>
-            <td>20 mg tirzepatide</td>
+            <td>20 mg <Link href="/drugs/tirzepatide">tirzepatide</Link></td>
             <td>2 mL</td>
             <td>10 mg/mL</td>
           </tr>
@@ -427,13 +427,13 @@ export default function ReconstitutionArticle() {
         </li>
         <li>
           If you&apos;re on commercial insurance that covers
-          Wegovy or Zepbound, the brand-name pens are pre-filled
+          <Link href="/drugs/wegovy">Wegovy</Link> or <Link href="/drugs/zepbound">Zepbound</Link>, the brand-name pens are pre-filled
           and require no reconstitution at all. The
           patient-experience difference is meaningful.
         </li>
         <li>
           If cost is the reason you&apos;re on lyophilized powder
-          in the first place, the new Foundayo (orforglipron)
+          in the first place, the new <Link href="/drugs/foundayo">Foundayo (orforglipron)</Link>
           approval includes a $149/month self-pay tier that may
           be price-competitive. See our{" "}
           <Link href="/research/foundayo-orforglipron-fda-approval-2026">

@@ -248,7 +248,7 @@ export default function SupplementsArticle() {
         anchors the diabetes side. The Liu 2010 PK study
         <Cite n={3} /> showed approximately 0.36% oral
         bioavailability in rats &mdash; the bottleneck that limits
-        any &ldquo;nature&apos;s Ozempic&rdquo; magnitude argument.
+        any &ldquo;nature&apos;s <Link href="/drugs/ozempic">Ozempic</Link>&rdquo; magnitude argument.
       </p>
       <p>
         <strong>Grade: A</strong>. Real, replicable, well-characterized
@@ -717,11 +717,11 @@ export default function SupplementsArticle() {
       <h2>Comparator anchors: GLP-1 magnitudes</h2>
       <ul>
         <li>
-          <strong>Semaglutide 2.4 mg (STEP-1):</strong> &minus;14.9%
+          <Link href="/drugs/semaglutide"><strong>Semaglutide 2.4 mg (STEP-1):</strong></Link> &minus;14.9%
           body weight at 68 weeks<Cite n={15} />
         </li>
         <li>
-          <strong>Tirzepatide 15 mg (SURMOUNT-1):</strong>{" "}
+          <Link href="/drugs/tirzepatide"><strong>Tirzepatide 15 mg (SURMOUNT-1):</strong></Link>{" "}
           &minus;20.9% at 72 weeks<Cite n={16} />
         </li>
       </ul>

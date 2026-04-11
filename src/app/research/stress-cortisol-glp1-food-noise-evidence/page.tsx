@@ -481,7 +481,7 @@ export default function CortisolArticle() {
         persistent, unwanted, dysphoric thoughts about food that
         occupy attention and drive eating behavior. Patient surveys
         suggest that before starting a GLP-1, ~62% of patients
-        report constant food-related thoughts; on semaglutide, that
+        report constant food-related thoughts; on <Link href="/drugs/semaglutide">semaglutide</Link>, that
         proportion drops to ~16%.
       </p>
       <p>

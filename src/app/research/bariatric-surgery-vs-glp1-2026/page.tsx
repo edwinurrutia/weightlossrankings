@@ -182,8 +182,8 @@ export default function BariatricVsGlp1Article() {
         SLEEVEPASS<Cite n={4} /><Cite n={5} /> and SM-BOSS<Cite n={6} />{" "}
         sleeve-vs-bypass head-to-head trials &mdash; showing sustained
         25-30% body weight loss at 10 years and a roughly 40% reduction
-        in all-cause mortality. GLP-1s have produced 14.9% (semaglutide,
-        STEP-1)<Cite n={13} /> and 20.9% (tirzepatide, SURMOUNT-1)
+        in all-cause mortality. GLP-1s have produced 14.9% (<Link href="/drugs/semaglutide">semaglutide</Link>,
+        STEP-1)<Cite n={13} /> and 20.9% (<Link href="/drugs/tirzepatide">tirzepatide</Link>, SURMOUNT-1)
         <Cite n={14} /> weight loss in 68-72 week trials, plus
         cardiovascular benefit in SELECT, but no comparable long-term
         mortality data yet. Recent real-world comparisons show bariatric
@@ -460,8 +460,8 @@ export default function BariatricVsGlp1Article() {
       </ul>
       <p>
         Compared to the recurring cost of GLP-1 therapy at brand-name
-        prices ($349-$499/month for Wegovy NovoCare, $299-$699/month
-        for Zepbound LillyDirect, $149/month for Foundayo, or
+        prices ($349-$499/month for <Link href="/drugs/wegovy">Wegovy</Link> NovoCare, $299-$699/month
+        for <Link href="/drugs/zepbound">Zepbound</Link> LillyDirect, $149/month for <Link href="/drugs/foundayo">Foundayo</Link>, or
         $125-$300/month for compounded semaglutide or tirzepatide), the
         total 5-year cost of GLP-1 therapy can equal or exceed the cost
         of surgery, especially at brand-name pricing. Our{" "}

@@ -156,7 +156,7 @@ export default function TopamaxArticle() {
         <strong>10% sustained body weight loss</strong> at the
         15 mg phentermine / 92 mg topiramate dose, plus a 78.7%
         reduction in incident type 2 diabetes. That magnitude is{" "}
-        <strong>two-thirds of semaglutide and half of tirzepatide</strong>.
+        <strong>two-thirds of <Link href="/drugs/semaglutide">semaglutide</Link> and half of <Link href="/drugs/tirzepatide">tirzepatide</Link></strong>.
         The cognitive &ldquo;dopamax&rdquo; side effect, kidney
         stone risk (10.7% in long-term users), metabolic acidosis
         (40-71% abnormal bicarbonate), and the cleft palate
@@ -475,8 +475,8 @@ export default function TopamaxArticle() {
         </li>
       </ul>
       <p>
-        At ~$50-100/month generic vs $149/month for Foundayo
-        through LillyDirect or $349-499/month for Wegovy NovoCare,
+        At ~$50-100/month generic vs $149/month for <Link href="/drugs/foundayo">Foundayo</Link>
+        through LillyDirect or $349-499/month for <Link href="/drugs/wegovy">Wegovy</Link> NovoCare,
         Qsymia is now competitive on price with the cheapest oral
         GLP-1, while delivering roughly two-thirds the weight loss.
         For patients without GLP-1 access this is a meaningful

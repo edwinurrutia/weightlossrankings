@@ -150,8 +150,8 @@ export default async function PriceMovementArticle() {
   return (
     <ResearchArticleLayout article={article} dataAsOf={latestEnd}>
       <p data-speakable="lead">
-        Weight Loss Rankings has tracked monthly cash prices for compounded
-        semaglutide across the largest US telehealth providers since{" "}
+        Weight Loss Rankings has tracked monthly cash prices for compounded{" "}
+        <Link href="/drugs/semaglutide">semaglutide</Link> across the largest US telehealth providers since{" "}
         {formatMonth(earliestStart)}. As of {formatMonth(latestEnd)}, our
         dataset contains <strong>{totalDataPoints} monthly observations</strong>{" "}
         across {trajectories.length} providers spanning roughly{" "}
@@ -243,7 +243,7 @@ export default async function PriceMovementArticle() {
           <p>
             That convergence is the most editorially significant pattern in
             the data. Compounded semaglutide doesn&apos;t have a regulated
-            cost basis the way brand-name Wegovy does — every provider is
+            cost basis the way brand-name <Link href="/drugs/wegovy">Wegovy</Link> does — every provider is
             free to set whatever price the market will bear, and the
             wholesale active pharmaceutical ingredient cost is roughly the
             same for everyone. The fact that the spread has narrowed

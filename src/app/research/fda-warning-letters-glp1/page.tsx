@@ -213,7 +213,7 @@ export default function FdaWarningLettersInvestigation() {
           marketing language that uses words like &ldquo;safe,&rdquo;
           &ldquo;FDA-approved,&rdquo; or &ldquo;FDA-registered&rdquo; in
           contexts that misrepresent the regulatory status of compounded
-          drugs. Compounded semaglutide is not FDA-approved, no matter how
+          drugs. Compounded <Link href="/drugs/semaglutide">semaglutide</Link> is not FDA-approved, no matter how
           the website phrases it.
         </li>
         <li>
@@ -252,7 +252,7 @@ export default function FdaWarningLettersInvestigation() {
           facility? If not, which state board of pharmacy licenses them?
         </li>
         <li>
-          What is the exact form of semaglutide or tirzepatide in your
+          What is the exact form of semaglutide or <Link href="/drugs/tirzepatide">tirzepatide</Link> in your
           product — base molecule, sodium salt, or acetate salt? FDA has
           warned that salt forms are not the same active ingredient as the
           base molecule used in approved drugs.

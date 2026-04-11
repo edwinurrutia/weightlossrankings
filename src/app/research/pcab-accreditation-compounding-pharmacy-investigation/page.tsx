@@ -430,7 +430,7 @@ export default function PcabInvestigation() {
         </li>
         <li>
           <strong>What is the form of the active ingredient?</strong>{" "}
-          Specifically: is it the semaglutide base molecule, or a
+          Specifically: is it the <Link href="/drugs/semaglutide">semaglutide</Link> base molecule, or a
           salt form (sodium or acetate)? Salt forms are not the
           same active ingredient as the base molecule used in
           FDA-approved semaglutide products, and FDA has flagged
