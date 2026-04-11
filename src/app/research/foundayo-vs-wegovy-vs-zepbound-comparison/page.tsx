@@ -144,11 +144,11 @@ export default function FoundayoComparisonArticle() {
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
       >
-        On April 1, 2026, the FDA approved Foundayo (orforglipron),
+        On April 1, 2026, the FDA approved <Link href="/drugs/foundayo">Foundayo</Link> (orforglipron),
         the first oral non-peptide GLP-1 receptor agonist for
         chronic weight management<Cite n={1} />. It enters a market
-        dominated by two injectable heavyweights: Wegovy
-        (semaglutide 2.4 mg) and Zepbound (tirzepatide 15 mg). The
+        dominated by two injectable heavyweights: <Link href="/drugs/wegovy">Wegovy</Link>
+        {" "}(<Link href="/drugs/semaglutide">semaglutide</Link> 2.4 mg) and <Link href="/drugs/zepbound">Zepbound</Link> (<Link href="/drugs/tirzepatide">tirzepatide</Link> 15 mg). The
         three drugs differ on every dimension that matters to a
         patient — effect size, delivery, price, titration, side
         effects, and access. This is the head-to-head with the
@@ -179,7 +179,7 @@ export default function FoundayoComparisonArticle() {
         </li>
         <li>
           <strong>Have type 2 diabetes too?</strong> Zepbound
-          (tirzepatide is also Mounjaro for diabetes — proven
+          (tirzepatide is also <Link href="/drugs/mounjaro">Mounjaro</Link> for diabetes — proven
           A1C reduction).
         </li>
       </ul>

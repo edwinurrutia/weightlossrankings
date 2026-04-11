@@ -128,7 +128,7 @@ export default function WhatIsOrforglipronArticle() {
         data-speakable="lead"
       >
         Orforglipron is the first oral GLP-1 pill approved for weight
-        loss. Its US brand name is <strong>Foundayo</strong>, it is
+        loss. Its US brand name is <Link href="/drugs/foundayo"><strong>Foundayo</strong></Link>, it is
         made by <strong>Eli Lilly and Company</strong>, and the FDA
         approved it on <strong>April 1, 2026</strong> for chronic
         weight management in adults with obesity or overweight with
@@ -177,7 +177,7 @@ export default function WhatIsOrforglipronArticle() {
         <strong>non-peptide, small-molecule GLP-1 receptor agonist</strong>
         <Cite n={1} />. Translated into plain language: it binds
         and activates the same receptor (the glucagon-like peptide-1
-        receptor) that semaglutide, tirzepatide, liraglutide, and
+        receptor) that <Link href="/drugs/semaglutide">semaglutide</Link>, <Link href="/drugs/tirzepatide">tirzepatide</Link>, liraglutide, and
         every other GLP-1 weight-loss drug binds and activates — but
         unlike those drugs, it is not a peptide. That single
         chemistry distinction is the reason orforglipron can be
@@ -210,13 +210,13 @@ export default function WhatIsOrforglipronArticle() {
       <p>
         Orforglipron is manufactured and marketed by{" "}
         <strong>Eli Lilly and Company</strong>, the Indianapolis-based
-        pharmaceutical company that also makes Mounjaro and Zepbound
+        pharmaceutical company that also makes <Link href="/drugs/mounjaro">Mounjaro</Link> and <Link href="/drugs/zepbound">Zepbound</Link>
         (the brand names for tirzepatide, the injectable dual GIP/GLP-1
         agonist FDA-approved for type 2 diabetes and chronic weight
         management, respectively)<Cite n={2} />. Lilly is one of the
         two companies that effectively created the modern incretin
         weight-loss market — the other being Novo Nordisk, which
-        makes semaglutide (Ozempic, Wegovy, Rybelsus).
+        makes semaglutide (<Link href="/drugs/ozempic">Ozempic</Link>, <Link href="/drugs/wegovy">Wegovy</Link>, Rybelsus).
       </p>
       <p>
         Lilly&apos;s strategic rationale for developing an oral

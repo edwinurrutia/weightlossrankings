@@ -93,7 +93,7 @@ export default function WhereToBuyFoundayoArticle() {
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
       >
-        Foundayo (orforglipron) — Eli Lilly&apos;s first oral GLP-1
+<Link href="/drugs/foundayo">Foundayo</Link> (orforglipron) — Eli Lilly&apos;s first oral GLP-1
         for weight loss — was FDA-approved on April 1, 2026 and
         commercial dispensing started on April 6, 2026<Cite n={1} />.
         Five days into the rollout, the provider directory is small
@@ -123,7 +123,7 @@ export default function WhereToBuyFoundayoArticle() {
       <ul>
         <li>
           <strong>What it is:</strong> Eli Lilly&apos;s own self-pay
-          pharmacy channel. The same channel that dispenses Zepbound
+          pharmacy channel. The same channel that dispenses <Link href="/drugs/zepbound">Zepbound</Link>
           for direct-pay patients. LillyDirect is the actual
           dispensing pharmacy for every other Foundayo channel we
           have verified.

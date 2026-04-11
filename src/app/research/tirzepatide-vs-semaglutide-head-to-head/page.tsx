@@ -54,7 +54,7 @@ export default function HeadToHeadArticle() {
       </div>
 
       <p>
-        Semaglutide (Wegovy) and tirzepatide (Zepbound) are the two
+<Link href="/drugs/semaglutide">Semaglutide</Link> (<Link href="/drugs/wegovy">Wegovy</Link>) and <Link href="/drugs/tirzepatide">tirzepatide</Link> (<Link href="/drugs/zepbound">Zepbound</Link>) are the two
         injectable weight-loss medications most patients are choosing
         between in 2026. They&apos;re mechanistically similar &mdash; both
         are once-weekly subcutaneous injections that target the body&apos;s

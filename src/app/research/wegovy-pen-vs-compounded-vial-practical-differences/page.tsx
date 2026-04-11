@@ -62,7 +62,7 @@ export default function WegovyPenVsCompoundedVialArticle() {
   return (
     <ResearchArticleLayout article={article}>
       <p data-speakable="lead">
-        Brand-name Wegovy and compounded semaglutide contain the same active
+        Brand-name <Link href="/drugs/wegovy">Wegovy</Link> and compounded <Link href="/drugs/semaglutide">semaglutide</Link> contain the same active
         molecule when both are prepared correctly. But the delivery format
         is completely different — Wegovy ships in a pre-filled multi-dose
         injector pen designed for patients with no syringe experience,
@@ -308,7 +308,7 @@ export default function WegovyPenVsCompoundedVialArticle() {
         Compounded semaglutide is only legally permitted while
         brand-name semaglutide remains on the FDA drug shortage list.
         If the FDA removes semaglutide from the shortage list — as it
-        did temporarily with tirzepatide in late 2024 before
+        did temporarily with <Link href="/drugs/tirzepatide">tirzepatide</Link> in late 2024 before
         re-listing — every compounded semaglutide telehealth provider
         becomes legally restricted overnight. Compounded patients
         should know that this is a regulatory possibility, not a

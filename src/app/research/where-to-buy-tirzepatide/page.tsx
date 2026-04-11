@@ -129,9 +129,9 @@ export default function WhereToBuyTirzepatideArticle() {
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
       >
-        Tirzepatide is sold in the United States under two brand
-        names — <strong>Zepbound</strong> (FDA-approved for chronic
-        weight management)<Cite n={1} /> and <strong>Mounjaro</strong>{" "}
+        <Link href="/drugs/tirzepatide">Tirzepatide</Link> is sold in the United States under two brand
+        names — <strong><Link href="/drugs/zepbound">Zepbound</Link></strong> (FDA-approved for chronic
+        weight management)<Cite n={1} /> and <strong><Link href="/drugs/mounjaro">Mounjaro</Link></strong>{" "}
         (FDA-approved for type 2 diabetes only)<Cite n={2} />. It is
         also still legally available as a 503A compounded
         injectable through telehealth platforms, even though the
@@ -332,7 +332,7 @@ export default function WhereToBuyTirzepatideArticle() {
 
       <h2>Which channel is cheapest?</h2>
       <p>
-        Like semaglutide, the cheapest path depends on your
+        Like <Link href="/drugs/semaglutide">semaglutide</Link>, the cheapest path depends on your
         insurance status and which form of tirzepatide you are
         willing to take. Here is the rough hierarchy in 2026:
       </p>
@@ -407,7 +407,7 @@ export default function WhereToBuyTirzepatideArticle() {
       </ul>
       <p>
         For a deeper comparison of both brands plus a head-to-head
-        with Wegovy, see our{" "}
+        with <Link href="/drugs/wegovy">Wegovy</Link>, see our{" "}
         <Link href="/research/foundayo-vs-wegovy-vs-zepbound-comparison">
           Foundayo vs Wegovy vs Zepbound comparison
         </Link>

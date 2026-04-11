@@ -120,9 +120,9 @@ export default function WhereToBuySemaglutideArticle() {
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
       >
-        Semaglutide is sold in the United States under three brand
-        names — <strong>Wegovy</strong> (FDA-approved for chronic
-        weight management)<Cite n={1} />, <strong>Ozempic</strong>{" "}
+<Link href="/drugs/semaglutide">Semaglutide</Link> is sold in the United States under three brand
+        names — <Link href="/drugs/wegovy"><strong>Wegovy</strong></Link> (FDA-approved for chronic
+        weight management)<Cite n={1} />, <Link href="/drugs/ozempic"><strong>Ozempic</strong></Link>{" "}
         (FDA-approved for type 2 diabetes)<Cite n={2} />, and{" "}
         <strong>Rybelsus</strong> (oral tablet for type 2 diabetes).
         It is also still legally available as a 503A compounded

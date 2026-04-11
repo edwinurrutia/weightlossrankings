@@ -117,11 +117,11 @@ export default function FoundayoHowToTakeArticle() {
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
       >
-        Foundayo (orforglipron) is the first oral, non-peptide GLP-1
+        <Link href="/drugs/foundayo">Foundayo</Link> (orforglipron) is the first oral, non-peptide GLP-1
         receptor agonist approved by the FDA for chronic weight
         management, cleared on <strong>April 1, 2026</strong> based on
         the ATTAIN-1 phase 3 trial<Cite n={1} /><Cite n={2} />. Unlike
-        Wegovy and Zepbound it is a daily tablet, and unlike Rybelsus
+        <Link href="/drugs/wegovy">Wegovy</Link> and <Link href="/drugs/zepbound">Zepbound</Link> it is a daily tablet, and unlike <Link href="/drugs/semaglutide">Rybelsus</Link>
         (oral semaglutide) it is a small molecule rather than a peptide,
         which is why the FDA-approved Foundayo label allows it to be
         taken <strong>any time of day, with or without food, with no
@@ -387,7 +387,7 @@ export default function FoundayoHowToTakeArticle() {
         <li>
           <strong>Choose an injectable (Wegovy or Zepbound) if:</strong>{" "}
           you want the highest possible average weight loss (the
-          tirzepatide trials produced ~21% mean loss at the 15 mg dose
+          <Link href="/drugs/tirzepatide">tirzepatide</Link> trials produced ~21% mean loss at the 15 mg dose
           vs Foundayo&apos;s ~11.1% at the labeled maintenance dose
           <Cite n={1} />), you know you will not reliably take a daily
           tablet, or you are already happy on once-weekly dosing.

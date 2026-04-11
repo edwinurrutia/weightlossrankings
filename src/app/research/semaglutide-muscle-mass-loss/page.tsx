@@ -33,7 +33,7 @@ export default function MuscleMassArticle() {
       <p>
         Every weight-loss intervention &mdash; surgical, pharmaceutical, or
         dietary &mdash; takes some of the weight from lean tissue rather
-        than fat. The interesting question is how much. For semaglutide,
+        than fat. The interesting question is how much. For <Link href="/drugs/semaglutide">semaglutide</Link>,
         the answer matters because the drug is increasingly prescribed to
         populations where preserving muscle is medically important: older
         adults, post-menopausal women, and people with type 2 diabetes who
@@ -67,7 +67,7 @@ export default function MuscleMassArticle() {
         from several sources. The most directly comparable is the
         SURMOUNT-1 body-composition sub-study (Look et al., Diabetes
         Obes Metab 2025), which used DEXA in 160 participants from the
-        tirzepatide pivotal obesity trial. At week 72, the tirzepatide
+        <Link href="/drugs/tirzepatide">tirzepatide</Link> pivotal obesity trial. At week 72, the tirzepatide
         arm lost 21.3% of body weight, with fat mass falling 33.9% and
         lean mass falling 10.9%. Roughly 75% of the weight lost was
         fat mass and 25% was lean mass &mdash; and the same ~75/25
@@ -341,7 +341,7 @@ export default function MuscleMassArticle() {
           <Link href="/research/glp1-side-effects-what-trials-actually-showed">
             GLP-1 side effects from the RCT adverse-event tables
           </Link>{" "}
-          — including the &ldquo;Ozempic face&rdquo; discussion and
+          — including the &ldquo;<Link href="/drugs/ozempic">Ozempic</Link> face&rdquo; discussion and
           how it relates to the lean-mass loss documented above.
         </li>
         <li>

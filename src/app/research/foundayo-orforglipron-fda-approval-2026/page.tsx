@@ -90,12 +90,12 @@ export default function FoundayoArticle() {
   return (
     <ResearchArticleLayout article={article}>
       <p data-speakable="lead">
-        On April 1, 2026, the FDA approved Foundayo (orforglipron),
+        On April 1, 2026, the FDA approved <Link href="/drugs/foundayo">Foundayo</Link> (orforglipron),
         Eli Lilly&apos;s once-daily oral GLP-1 pill, for chronic
         weight management in adults with obesity or overweight with
         weight-related medical problems [1]. Foundayo is the first
         non-peptide, small-molecule GLP-1 receptor agonist ever
-        approved for weight loss. Unlike Rybelsus (oral semaglutide),
+        approved for weight loss. Unlike <Link href="/drugs/semaglutide">Rybelsus</Link> (oral semaglutide),
         which is a peptide formulated with an absorption enhancer
         and must be taken on an empty stomach with strict water
         restrictions, Foundayo is a true small molecule that can be
@@ -104,7 +104,7 @@ export default function FoundayoArticle() {
         story. We walk through the verified ATTAIN-1 phase 3 trial
         data, the dosing schedule, the launch pricing, the safety
         profile, and how Foundayo compares head-to-head with the
-        injectable semaglutide and tirzepatide already on the market.
+        injectable semaglutide and <Link href="/drugs/tirzepatide">tirzepatide</Link> already on the market.
       </p>
 
       <h2>What Foundayo is, mechanically</h2>
@@ -242,7 +242,7 @@ export default function FoundayoArticle() {
 
       <p>
         The comparison most patients will want to make: Foundayo vs
-        Wegovy (semaglutide 2.4 mg weekly) vs Zepbound (tirzepatide
+        <Link href="/drugs/wegovy">Wegovy</Link> (semaglutide 2.4 mg weekly) vs <Link href="/drugs/zepbound">Zepbound</Link> (tirzepatide
         15 mg weekly). These are not direct head-to-head trials —
         they&apos;re separate trials with different populations and
         designs — but the trial-arm magnitudes give a useful framing:
