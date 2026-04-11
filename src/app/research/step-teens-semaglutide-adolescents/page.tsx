@@ -98,7 +98,7 @@ export default function StepTeensArticle() {
         bar that most families never reach. The STEP-TEENS trial,
         published in the New England Journal of Medicine on November 2,
         2022 [1], changed that calculus. 201 adolescents aged 12-17
-        randomized to weekly semaglutide 2.4 mg or placebo for 68 weeks
+        randomized to weekly <Link href="/drugs/semaglutide">semaglutide</Link> 2.4 mg or placebo for 68 weeks
         produced a <strong>16.7-percentage-point separation in BMI
         change</strong> — the largest pharmacological pediatric weight
         loss result ever recorded. The FDA approved the adolescent
@@ -358,7 +358,7 @@ export default function StepTeensArticle() {
       <h2>The FDA approval and the AAP endorsement</h2>
 
       <p>
-        The FDA approved Wegovy (semaglutide 2.4 mg) for chronic weight
+        The FDA approved <Link href="/drugs/wegovy">Wegovy</Link> (semaglutide 2.4 mg) for chronic weight
         management in adolescents 12 years and older with obesity on
         December 23, 2022 [2] — less than two months after STEP-TEENS
         was published. The approval expanded the existing Wegovy
@@ -384,7 +384,7 @@ export default function StepTeensArticle() {
       <h2>Tirzepatide for adolescents: still in trial</h2>
 
       <p>
-        Tirzepatide is not yet FDA-approved for use in adolescents.
+        <Link href="/drugs/tirzepatide">Tirzepatide</Link> is not yet FDA-approved for use in adolescents.
         Eli Lilly is running a phase 3 trial called{" "}
         <strong>SURMOUNT-ADOLESCENTS-2</strong> (NCT06439277) [5] in
         adolescents 12-17 with obesity and at least two weight-related

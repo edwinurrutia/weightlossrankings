@@ -139,7 +139,7 @@ export default function AlcoholArticle() {
         data-speakable="lead"
       >
         Two thousand patients a month type &ldquo;can you drink on
-        semaglutide&rdquo; or &ldquo;can you drink on tirzepatide&rdquo;
+        <Link href="/drugs/semaglutide">semaglutide</Link>&rdquo; or &ldquo;can you drink on <Link href="/drugs/tirzepatide">tirzepatide</Link>&rdquo;
         into Google. The short answer: there is no FDA contraindication
         for alcohol with any GLP-1, but the real-world story is more
         interesting. Most patients report a marked drop in tolerance,
@@ -155,8 +155,8 @@ export default function AlcoholArticle() {
       <h2>Is alcohol contraindicated on a GLP-1?</h2>
       <p>
         No. Alcohol is not listed in Section 7 (Drug Interactions) of
-        the Wegovy<Cite n={1} />, Zepbound<Cite n={2} />, Ozempic, or
-        Mounjaro prescribing information. There is no formal
+        the <Link href="/drugs/wegovy">Wegovy</Link><Cite n={1} />, <Link href="/drugs/zepbound">Zepbound</Link><Cite n={2} />, <Link href="/drugs/ozempic">Ozempic</Link>, or
+        <Link href="/drugs/mounjaro">Mounjaro</Link> prescribing information. There is no formal
         prohibition. But that&apos;s not the same as &ldquo;safe in
         any quantity for everyone.&rdquo;
       </p>

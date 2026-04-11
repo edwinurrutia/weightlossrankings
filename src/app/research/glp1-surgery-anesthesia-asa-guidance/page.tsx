@@ -133,8 +133,8 @@ export default function GlpSurgeryArticle() {
         for 6-8 hours and clear liquids for 2 hours — was built around the
         normal gastric emptying time of a healthy adult<Cite n={7} />. GLP-1
         receptor agonists slow that emptying substantially: published
-        gastric emptying half-times in patients on semaglutide and
-        tirzepatide are roughly two to four times longer than baseline.
+        gastric emptying half-times in patients on <Link href="/drugs/semaglutide">semaglutide</Link> and
+        <Link href="/drugs/tirzepatide">tirzepatide</Link> are roughly two to four times longer than baseline.
         Both the Wegovy<Cite n={5} /> and Zepbound<Cite n={6} /> US
         prescribing information explicitly warn about delayed gastric
         emptying in their Section 5 Warnings and Precautions. The clinical
@@ -181,12 +181,12 @@ export default function GlpSurgeryArticle() {
       </p>
       <ul>
         <li>
-          <strong>Daily-dose GLP-1s</strong> (oral Rybelsus, oral Foundayo)
+          <strong>Daily-dose GLP-1s</strong> (oral <Link href="/drugs/semaglutide">Rybelsus</Link>, oral <Link href="/drugs/foundayo">Foundayo</Link>)
           — hold the dose on the day of the procedure.
         </li>
         <li>
-          <strong>Weekly-dose GLP-1s</strong> (Wegovy, Ozempic, Zepbound,
-          Mounjaro) — hold the dose for one week before the procedure.
+          <strong>Weekly-dose GLP-1s</strong> (<Link href="/drugs/wegovy">Wegovy</Link>, <Link href="/drugs/ozempic">Ozempic</Link>, <Link href="/drugs/zepbound">Zepbound</Link>,
+          <Link href="/drugs/mounjaro">Mounjaro</Link>) — hold the dose for one week before the procedure.
         </li>
         <li>
           Consider delaying the procedure if the patient experiences

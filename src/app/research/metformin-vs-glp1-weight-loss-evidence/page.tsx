@@ -152,8 +152,8 @@ export default function MetforminArticle() {
         <strong> &minus;6.2%</strong> sustained weight loss in
         metformin responders &mdash; durable but small. The Seifarth
         2013 trial<Cite n={5} /> in non-diabetic obesity reported
-        &minus;5.6% over 6 months. Compared to semaglutide
-        &minus;14.9% (STEP-1)<Cite n={10} /> and tirzepatide
+        &minus;5.6% over 6 months. Compared to <Link href="/drugs/semaglutide">semaglutide</Link>
+        &minus;14.9% (STEP-1)<Cite n={10} /> and <Link href="/drugs/tirzepatide">tirzepatide</Link>
         &minus;20.9% (SURMOUNT-1)<Cite n={11} />, metformin produces
         roughly <strong>1/5 to 1/7 the magnitude</strong>. It is
         cheap, generic, has 60+ years of safety data, and has the

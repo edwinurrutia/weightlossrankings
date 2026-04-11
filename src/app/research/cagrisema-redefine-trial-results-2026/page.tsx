@@ -95,8 +95,8 @@ export default function CagrisemaArticle() {
       <p data-speakable="lead">
         CagriSema is Novo Nordisk&apos;s next-generation injectable
         weight-loss combination — cagrilintide (an amylin analog)
-        plus semaglutide 2.4 mg (the same GLP-1 agonist already
-        marketed as Wegovy). The hypothesis is mechanistic: amylin
+        plus <Link href="/drugs/semaglutide">semaglutide</Link> 2.4 mg (the same GLP-1 agonist already
+        marketed as <Link href="/drugs/wegovy">Wegovy</Link>). The hypothesis is mechanistic: amylin
         and GLP-1 are independent appetite-regulating gut hormones
         with non-overlapping receptor systems, so combining them
         should produce additive weight loss beyond what either
@@ -225,7 +225,7 @@ export default function CagrisemaArticle() {
           fell short of that bar, and the stock dropped sharply on
           the readout. The clinical relevance is that CagriSema
           beats semaglutide alone but does <em>not</em> match the
-          tirzepatide effect size from SURMOUNT-1 (~20.9% at 72
+          <Link href="/drugs/tirzepatide">tirzepatide</Link> effect size from SURMOUNT-1 (~20.9% at 72
           weeks).
         </li>
       </ol>
@@ -372,7 +372,7 @@ export default function CagrisemaArticle() {
             <td>Approved</td>
           </tr>
           <tr>
-            <td>Zepbound (tirzepatide 15 mg)</td>
+            <td><Link href="/drugs/zepbound">Zepbound</Link> (tirzepatide 15 mg)</td>
             <td>GLP-1 + GIP</td>
             <td>−20.9% (SURMOUNT-1)</td>
             <td>Approved</td>
@@ -386,7 +386,7 @@ export default function CagrisemaArticle() {
             <td>NDA pending</td>
           </tr>
           <tr>
-            <td>Foundayo (orforglipron)</td>
+            <td><Link href="/drugs/foundayo">Foundayo</Link> (orforglipron)</td>
             <td>Oral small-molecule GLP-1</td>
             <td>−11.1% (Foundayo PI, 17.2 mg)</td>
             <td>Approved Apr 2026</td>

@@ -111,7 +111,7 @@ export default function GlpAudArticle() {
   return (
     <ResearchArticleLayout article={article}>
       <p data-speakable="lead">
-        Patient-reported and case-series accounts of semaglutide reducing
+        Patient-reported and case-series accounts of <Link href="/drugs/semaglutide">semaglutide</Link> reducing
         alcohol cravings have made the rounds on TikTok and in the lay
         press for two years. The trial-level evidence is much narrower
         than the social-media coverage suggests. As of early 2026,{" "}
@@ -186,7 +186,7 @@ export default function GlpAudArticle() {
         proof-of-concept study, not a definitive efficacy trial. Second,
         the dose used (1.0 mg) is below the typical weight-loss dose,
         which means the trial doesn&apos;t directly answer what the 2.4
-        mg Wegovy dose would do for AUD outcomes — it could be more
+        mg <Link href="/drugs/wegovy">Wegovy</Link> dose would do for AUD outcomes — it could be more
         effective, less effective, or have a different side-effect
         profile.
       </p>
@@ -244,7 +244,7 @@ export default function GlpAudArticle() {
         general reward-system dampening that affects multiple
         substances of abuse, not just food. The Quddos et al. 2023
         Scientific Reports analysis of patients with obesity on
-        semaglutide and tirzepatide reported reduced alcohol
+        semaglutide and <Link href="/drugs/tirzepatide">tirzepatide</Link> reported reduced alcohol
         consumption as a self-reported secondary observation [6],
         which is consistent with this mechanism but does not
         constitute trial-level evidence.

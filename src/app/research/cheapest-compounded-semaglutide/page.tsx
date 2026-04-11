@@ -96,11 +96,11 @@ export default async function CheapestCompoundedSemaglutideArticle() {
   return (
     <ResearchArticleLayout article={article} dataAsOf={verifiedDate}>
       <p data-speakable="lead">
-        The cheapest compounded semaglutide on the cash-pay telehealth market
+        The cheapest compounded <Link href="/drugs/semaglutide">semaglutide</Link> on the cash-pay telehealth market
         as of {verifiedDate} sits at <strong>{formatUsd(floorPrice)} per
         month</strong>, advertised by {floorProviders.length === 1 ? "one provider" : `${floorProviders.length} providers`} we
         track. That&apos;s only {floorVsMedian}% of the market median of{" "}
-        {formatUsd(stats.median)}, and a small fraction of brand-name Wegovy
+        {formatUsd(stats.median)}, and a small fraction of brand-name <Link href="/drugs/wegovy">Wegovy</Link>
         cash-pay pricing. We verified each floor-price provider against our
         pricing index and pharmacy database to answer one question: is the
         floor price legitimate, or are there hidden gotchas?

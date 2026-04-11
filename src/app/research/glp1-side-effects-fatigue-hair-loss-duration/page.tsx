@@ -126,8 +126,8 @@ export default function SideEffectsDurationArticle() {
         </li>
         <li>
           <strong>Peak intensity:</strong> first 1-2 weeks after
-          any dose increase. The starter dose (0.25 mg semaglutide,
-          2.5 mg tirzepatide) is tolerated by most patients; the
+          any dose increase. The starter dose (0.25 mg <Link href="/drugs/semaglutide">semaglutide</Link>,
+          2.5 mg <Link href="/drugs/tirzepatide">tirzepatide</Link>) is tolerated by most patients; the
           first two escalations (to 0.5 mg and 1.0 mg semaglutide;
           to 5 mg and 7.5 mg tirzepatide) tend to produce the
           strongest GI symptoms.
@@ -169,7 +169,7 @@ export default function SideEffectsDurationArticle() {
       </p>
 
       <p>
-        Specific reported rates from the STEP-1 and Wegovy label
+        Specific reported rates from the STEP-1 and <Link href="/drugs/wegovy">Wegovy</Link> label
         adverse reactions table [1, 3]:
       </p>
 
@@ -182,7 +182,7 @@ export default function SideEffectsDurationArticle() {
       </ul>
 
       <p>
-        From the SURMOUNT-1 and Zepbound label [2, 4]:
+        From the SURMOUNT-1 and <Link href="/drugs/zepbound">Zepbound</Link> label [2, 4]:
       </p>
 
       <ul>

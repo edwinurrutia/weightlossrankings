@@ -119,7 +119,7 @@ export default function StepHfpefArticle() {
         population [6, 8]. The SGLT2 inhibitors changed that with
         EMPEROR-Preserved (2021) [4] and DELIVER (2022) [5]. Then in
         2023, the STEP-HFpEF trial published in NEJM showed that
-        semaglutide 2.4 mg in patients with HFpEF and obesity
+        <Link href="/drugs/semaglutide">semaglutide</Link> 2.4 mg in patients with HFpEF and obesity
         improved both heart failure symptoms and functional capacity
         on top of producing meaningful weight loss [1]. STEP-HFpEF
         DM extended that finding to patients who also have type 2
@@ -180,7 +180,7 @@ export default function StepHfpefArticle() {
         </li>
         <li>
           <strong>Drug:</strong> Semaglutide 2.4 mg subcutaneously
-          once weekly (the Wegovy weight-management dose)
+          once weekly (the <Link href="/drugs/wegovy">Wegovy</Link> weight-management dose)
         </li>
         <li>
           <strong>Duration:</strong> 52 weeks of active treatment

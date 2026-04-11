@@ -198,8 +198,8 @@ export default function Sglt2VsGlp1Article() {
       >
         SGLT2 inhibitors (empagliflozin/Jardiance, dapagliflozin/Farxiga,
         canagliflozin/Invokana) and GLP-1 receptor agonists
-        (semaglutide/Ozempic/Wegovy, tirzepatide/Mounjaro/Zepbound,
-        orforglipron/Foundayo) are the two type-2 diabetes drug classes
+        (<Link href="/drugs/semaglutide">semaglutide</Link>/<Link href="/drugs/ozempic">Ozempic</Link>/<Link href="/drugs/wegovy">Wegovy</Link>, <Link href="/drugs/tirzepatide">tirzepatide</Link>/<Link href="/drugs/mounjaro">Mounjaro</Link>/<Link href="/drugs/zepbound">Zepbound</Link>,
+        orforglipron/<Link href="/drugs/foundayo">Foundayo</Link>) are the two type-2 diabetes drug classes
         that earned cardiovascular and kidney outcome indications over
         the last decade. Patient questions about which class causes more
         weight loss, which has the bigger heart-failure benefit, and

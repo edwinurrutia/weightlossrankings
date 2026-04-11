@@ -145,8 +145,8 @@ export default function NauseaGuideArticle() {
         Nausea is the most common GLP-1 side effect and the single biggest
         reason patients quit therapy. The headline numbers from the
         registration trials sound alarming: <strong>44.2%</strong> of
-        patients on semaglutide 2.4 mg in STEP-1 reported nausea<Cite n={1} />
-        , and <strong>29.0%</strong> of patients on tirzepatide 15 mg in
+        patients on <Link href="/drugs/semaglutide">semaglutide</Link> 2.4 mg in STEP-1 reported nausea<Cite n={1} />
+        , and <strong>29.0%</strong> of patients on <Link href="/drugs/tirzepatide">tirzepatide</Link> 15 mg in
         SURMOUNT-1 reported nausea per the Zepbound FDA label adverse
         reactions table<Cite n={2} /><Cite n={5} />. But those are cumulative
         rates over 68-72 weeks of treatment, and almost all of the nausea
@@ -164,12 +164,12 @@ export default function NauseaGuideArticle() {
       </p>
       <ul>
         <li>
-          <strong>Semaglutide 2.4 mg (Wegovy)</strong> — 44.2% nausea, 24.8%
+          <Link href="/drugs/wegovy"><strong>Semaglutide 2.4 mg (Wegovy)</strong></Link> — 44.2% nausea, 24.8%
           vomiting, 31.5% diarrhea, 23.4% constipation. Mostly mild to
           moderate. ~4.5% discontinued the drug for any GI side effect.
         </li>
         <li>
-          <strong>Tirzepatide 15 mg (Zepbound)</strong> — 29.0% nausea,
+          <Link href="/drugs/zepbound"><strong>Tirzepatide 15 mg (Zepbound)</strong></Link> — 29.0% nausea,
           12.2% vomiting, 21.2% diarrhea, 11.7% constipation per the
           Zepbound FDA label Section 6 Adverse Reactions table. Mostly
           mild to moderate. ~4.3% discontinued for any GI side effect.
@@ -417,7 +417,7 @@ export default function NauseaGuideArticle() {
           tolerable than the 15 mg dose.
         </li>
         <li>
-          <strong>Try Foundayo (orforglipron)</strong> — the new oral
+          <Link href="/drugs/foundayo"><strong>Try Foundayo (orforglipron)</strong></Link> — the new oral
           GLP-1 has a different titration schedule and may suit some
           patients who couldn&apos;t tolerate injectables.
         </li>

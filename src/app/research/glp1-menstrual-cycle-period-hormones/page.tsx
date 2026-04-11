@@ -157,7 +157,7 @@ export default function MenstrualArticle() {
         (temporary cycle irregularity in women with very low body
         fat), and sometimes via a separate mechanism entirely (the
         gastric-emptying interaction with oral contraceptives that
-        the FDA flags on the Foundayo and Wegovy labels). This
+        the FDA flags on the <Link href="/drugs/foundayo">Foundayo</Link> and <Link href="/drugs/wegovy">Wegovy</Link> labels). This
         article walks through each scenario and the practical
         guidance.
       </p>
@@ -291,10 +291,10 @@ export default function MenstrualArticle() {
         approach this differently for injectable vs oral GLP-1s:
       </p>
 
-      <h3>Injectable GLP-1s (Wegovy, Ozempic, Zepbound, Mounjaro)</h3>
+      <h3>Injectable GLP-1s (Wegovy, <Link href="/drugs/ozempic">Ozempic</Link>, <Link href="/drugs/zepbound">Zepbound</Link>, <Link href="/drugs/mounjaro">Mounjaro</Link>)</h3>
       <p>
-        Pharmacokinetic studies of injectable semaglutide and
-        tirzepatide have NOT demonstrated a clinically meaningful
+        Pharmacokinetic studies of injectable <Link href="/drugs/semaglutide">semaglutide</Link> and
+        <Link href="/drugs/tirzepatide">tirzepatide</Link> have NOT demonstrated a clinically meaningful
         reduction in oral contraceptive bioavailability<Cite n={1} />.
         The Wegovy and Zepbound labels mention the theoretical
         concern but do not require backup contraception. Most

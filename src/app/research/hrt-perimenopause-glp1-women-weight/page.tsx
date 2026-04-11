@@ -139,11 +139,11 @@ export default function HrtArticle() {
         statement<Cite n={4} /> sets the current framework: HRT is
         most beneficial for women under 60 or within 10 years of
         menopause, with vasomotor symptoms and bone protection as
-        primary indications. The Foundayo (orforglipron) FDA label
+        primary indications. The <Link href="/drugs/foundayo">Foundayo</Link> (orforglipron) FDA label
         <Cite n={8} /> flags a CYP3A4 plus gastric-emptying
         interaction with oral hormonal contraceptives that requires
         30-day barrier contraception around initiation and dose
-        escalations. Tirzepatide has a similar 20% reduction in
+        escalations. <Link href="/drugs/tirzepatide">Tirzepatide</Link> has a similar 20% reduction in
         oral contraceptive exposure after the 5 mg dose<Cite n={9} />.
         Here is the verified evidence.
       </p>
@@ -320,7 +320,7 @@ export default function HrtArticle() {
       </p>
       <ul>
         <li>
-          <strong>Women on semaglutide 2.4 mg:</strong> approximately
+          <strong>Women on <Link href="/drugs/semaglutide">semaglutide</Link> 2.4 mg:</strong> approximately
           &minus;14% body weight loss
         </li>
         <li>
@@ -360,12 +360,12 @@ export default function HrtArticle() {
         <li>
           <strong>Oral estrogen</strong> may be modestly affected
           by GLP-1 gastric emptying delay. Direct PK interaction
-          studies are limited; clinical guidance from Wegovy and
-          Ozempic labels does not flag a specific oral estrogen
+          studies are limited; clinical guidance from <Link href="/drugs/wegovy">Wegovy</Link> and
+          <Link href="/drugs/ozempic">Ozempic</Link> labels does not flag a specific oral estrogen
           interaction beyond the general gastric emptying note.
         </li>
         <li>
-          <strong>Tirzepatide (Mounjaro / Zepbound)</strong> reduces
+          <strong>Tirzepatide (<Link href="/drugs/mounjaro">Mounjaro</Link> / <Link href="/drugs/zepbound">Zepbound</Link>)</strong> reduces
           oral contraceptive exposure by approximately 20% after
           the 5 mg dose<Cite n={9} />. The label recommends barrier
           contraception or switching to non-oral contraception for

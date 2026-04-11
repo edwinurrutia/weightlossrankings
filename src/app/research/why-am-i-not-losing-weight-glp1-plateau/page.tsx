@@ -87,9 +87,9 @@ export default function PlateauArticle() {
         &ldquo;Why am I not losing weight on semaglutide?&rdquo; is a
         high-volume patient search (~1,400/mo) for a reason: the
         STEP-1 trial reported that roughly 14% of participants on
-        semaglutide 2.4 mg lost less than 5% of body weight over 68
+        <Link href="/drugs/semaglutide">semaglutide</Link> 2.4 mg lost less than 5% of body weight over 68
         weeks [1], and SURMOUNT-1 reported that roughly 9% of
-        tirzepatide 15 mg participants fell into the same bucket
+        <Link href="/drugs/tirzepatide">tirzepatide</Link> 15 mg participants fell into the same bucket
         [2]. Non-response is real, documented, and distinct from
         the much larger group of patients who think they&apos;re
         non-responders but are actually in one of three addressable
@@ -227,7 +227,7 @@ export default function PlateauArticle() {
       <h3>Error 3: Wrong-dose pen</h3>
 
       <p>
-        For brand-name Wegovy and Ozempic pens, each pen delivers a
+        For brand-name <Link href="/drugs/wegovy">Wegovy</Link> and <Link href="/drugs/ozempic">Ozempic</Link> pens, each pen delivers a
         specific fixed dose. Patients occasionally end up with a
         starter-dose pen (0.25 mg) when they should be on a
         maintenance pen (2.4 mg) and the pharmacy tech or the
@@ -312,7 +312,7 @@ export default function PlateauArticle() {
         </li>
         <li>
           <strong>Verify you&apos;re on the maintenance dose.</strong>{" "}
-          Wegovy maintenance is 2.4 mg. Zepbound maintenance is
+          Wegovy maintenance is 2.4 mg. <Link href="/drugs/zepbound">Zepbound</Link> maintenance is
           15 mg. If you&apos;re not at maintenance yet, the
           conversation is about completing titration, not about
           plateau.

@@ -101,7 +101,7 @@ export default function SelectTrialArticle() {
         receptor agonist had been done in patients with type 2 diabetes.
         That changed when the SELECT trial published in the New England
         Journal of Medicine in November 2023, showing that weekly
-        semaglutide 2.4 mg cut major adverse cardiovascular events by 20%
+        <Link href="/drugs/semaglutide">semaglutide</Link> 2.4 mg cut major adverse cardiovascular events by 20%
         in <strong>non-diabetic</strong> adults with overweight or obesity
         and established cardiovascular disease [1]. SELECT is now the
         single largest piece of evidence for thinking of GLP-1 therapy as
@@ -333,7 +333,7 @@ export default function SelectTrialArticle() {
         <Link href="/research/glp1-side-effects-what-trials-actually-showed">
           GLP-1 side effects investigation
         </Link>{" "}
-        for the broader gallbladder discussion. The Wegovy label notes
+        for the broader gallbladder discussion. The <Link href="/drugs/wegovy">Wegovy</Link> label notes
         that &ldquo;acute gallbladder events were associated with weight
         reduction,&rdquo; which is consistent with this being a
         consequence of any major weight loss intervention rather than a
@@ -349,7 +349,7 @@ export default function SelectTrialArticle() {
           <strong>No increased pancreatitis signal.</strong> Acute
           pancreatitis occurred at similar rates in both arms,
           consistent with the obesity-only trials and the recent
-          tirzepatide meta-analyses.
+          <Link href="/drugs/tirzepatide">tirzepatide</Link> meta-analyses.
         </li>
         <li>
           <strong>No retinopathy signal.</strong> Diabetic retinopathy

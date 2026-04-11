@@ -75,7 +75,7 @@ export default function WhatHappensWhenYouStopSemaglutideArticle() {
   return (
     <ResearchArticleLayout article={article}>
       <p data-speakable="lead">
-        Semaglutide isn&apos;t like an antibiotic. You don&apos;t take a course
+        <Link href="/drugs/semaglutide">Semaglutide</Link> isn&apos;t like an antibiotic. You don&apos;t take a course
         and stay better. Three large randomized trials —{" "}
         <strong>STEP-4</strong>, the <strong>STEP-1 extension</strong>, and{" "}
         <strong>SURMOUNT-4</strong> for tirzepatide — have specifically
@@ -203,8 +203,8 @@ export default function WhatHappensWhenYouStopSemaglutideArticle() {
       <h2>SURMOUNT-4: the same story for tirzepatide</h2>
 
       <p>
-        Tirzepatide (the dual GIP/GLP-1 agonist sold as Zepbound for
-        weight loss and Mounjaro for type 2 diabetes) is a meaningfully
+        <Link href="/drugs/tirzepatide">Tirzepatide</Link> (the dual GIP/GLP-1 agonist sold as <Link href="/drugs/zepbound">Zepbound</Link> for
+        weight loss and <Link href="/drugs/mounjaro">Mounjaro</Link> for type 2 diabetes) is a meaningfully
         more effective drug than semaglutide on the primary efficacy
         endpoint, but the withdrawal pattern looks essentially the same.
         SURMOUNT-4, published in JAMA in 2024 by Aronne and colleagues [4],
@@ -290,7 +290,7 @@ export default function WhatHappensWhenYouStopSemaglutideArticle() {
         most patients, GLP-1 weight loss is not a cure — it&apos;s a
         disease management strategy that requires ongoing therapy to
         maintain the benefit. This is exactly why the FDA-approved
-        Wegovy indication explicitly states the drug is for weight
+        <Link href="/drugs/wegovy">Wegovy</Link> indication explicitly states the drug is for weight
         reduction <em>and weight maintenance</em>, with the implication
         that maintenance therapy is expected to be long-term.
       </p>

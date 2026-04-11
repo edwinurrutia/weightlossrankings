@@ -96,8 +96,8 @@ export default function GlpPipelineArticle() {
     <ResearchArticleLayout article={article}>
       <p data-speakable="lead">
         The US weight-loss drug market in early 2026 is dominated by
-        Eli Lilly (Zepbound, Mounjaro, and now Foundayo) and Novo
-        Nordisk (Wegovy, Ozempic, and the pending CagriSema). But the
+        Eli Lilly (<Link href="/drugs/zepbound">Zepbound</Link>, <Link href="/drugs/mounjaro">Mounjaro</Link>, and now <Link href="/drugs/foundayo">Foundayo</Link>) and Novo
+        Nordisk (<Link href="/drugs/wegovy">Wegovy</Link>, <Link href="/drugs/ozempic">Ozempic</Link>, and the pending CagriSema). But the
         pipeline behind those four products is bigger than most
         patients realize. This article walks through the verified
         published evidence for the three most-watched late-stage
@@ -152,7 +152,7 @@ export default function GlpPipelineArticle() {
         and gastric emptying delay) and the glucagon receptor
         (driving increased energy expenditure and lipolysis). The
         glucagon arm is the same mechanistic addition that makes
-        retatrutide&apos;s effect size larger than tirzepatide&apos;s
+        retatrutide&apos;s effect size larger than <Link href="/drugs/tirzepatide">tirzepatide</Link>&apos;s
         — survodutide is a dual agonist version of that idea
         (without the GIP arm).
       </p>
@@ -167,7 +167,7 @@ export default function GlpPipelineArticle() {
         the highest dose at 46 weeks, with a roughly linear
         dose-response curve and a GI adverse-event profile broadly
         consistent with the GLP-1 class. The 19% magnitude is
-        meaningfully larger than what semaglutide produces at the
+        meaningfully larger than what <Link href="/drugs/semaglutide">semaglutide</Link> produces at the
         Wegovy dose and approximately matches what tirzepatide
         produces at 15 mg, supporting the case for moving directly
         to phase 3 with the higher doses.

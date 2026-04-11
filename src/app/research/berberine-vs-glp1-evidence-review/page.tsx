@@ -143,13 +143,13 @@ export default function BerberineVsGlp1Article() {
         data-speakable="lead"
       >
         Berberine has been marketed on TikTok and across the supplement
-        industry as &ldquo;nature&apos;s Ozempic.&rdquo; The peer-reviewed
+        industry as &ldquo;nature&apos;s <Link href="/drugs/ozempic">Ozempic</Link>.&rdquo; The peer-reviewed
         evidence tells a much narrower story. The largest meta-analysis of
         berberine and body weight found a mean weight reduction of
         <strong> &minus;2.07 kg</strong> across 12 randomized trials averaging
         about 12 weeks of follow-up<Cite n={2} />. The pivotal STEP-1 trial of
-        semaglutide reported <strong>&minus;14.9% body weight</strong> over 68
-        weeks<Cite n={10} />, and the SURMOUNT-1 trial of tirzepatide 15 mg
+        <Link href="/drugs/semaglutide">semaglutide</Link> reported <strong>&minus;14.9% body weight</strong> over 68
+        weeks<Cite n={10} />, and the SURMOUNT-1 trial of <Link href="/drugs/tirzepatide">tirzepatide</Link> 15 mg
         reported <strong>&minus;20.9%</strong> over 72 weeks<Cite n={11} />.
         That is a roughly 7- to 10-fold gap in absolute magnitude. There is no
         peer-reviewed randomized trial that has ever compared berberine
@@ -445,7 +445,7 @@ export default function BerberineVsGlp1Article() {
       <ol>
         <li>
           <strong>Cost.</strong> A bottle of berberine costs $15-30/month. A
-          year on Wegovy or Zepbound at brand-name pricing through their
+          year on <Link href="/drugs/wegovy">Wegovy</Link> or <Link href="/drugs/zepbound">Zepbound</Link> at brand-name pricing through their
           self-pay programs is $1,800-8,400/year (
           <Link href="/research/glp1-pricing-index">
             see our compounded GLP-1 pricing index
@@ -454,7 +454,7 @@ export default function BerberineVsGlp1Article() {
           to look for cheaper options.
         </li>
         <li>
-          <strong>Wanting to avoid an injection.</strong> Foundayo
+          <strong>Wanting to avoid an injection.</strong> <Link href="/drugs/foundayo">Foundayo</Link>
           (orforglipron) is now FDA-approved as the first oral non-peptide
           GLP-1 receptor agonist (
           <Link href="/research/what-is-orforglipron-foundayo">

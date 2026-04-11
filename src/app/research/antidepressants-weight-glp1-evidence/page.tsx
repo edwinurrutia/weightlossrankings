@@ -179,8 +179,8 @@ export default function AntidepressantsArticle() {
         effect varies enormously by drug, with paroxetine and
         mirtazapine on one end and bupropion (which causes 7-10%
         weight <em>loss</em>)<Cite n={4} /> on the other. None of the
-        FDA labels for Wegovy, Ozempic, Mounjaro, Zepbound, or
-        Foundayo flag pharmacokinetic interactions with any
+        FDA labels for <Link href="/drugs/wegovy">Wegovy</Link>, <Link href="/drugs/ozempic">Ozempic</Link>, <Link href="/drugs/mounjaro">Mounjaro</Link>, <Link href="/drugs/zepbound">Zepbound</Link>, or
+        <Link href="/drugs/foundayo">Foundayo</Link> flag pharmacokinetic interactions with any
         antidepressant beyond the general gastric-emptying note. And
         the 2024 EMA PRAC review and the Wang 2024 Nature Medicine
         cohort of 1.8 million patients<Cite n={11} /> both concluded
@@ -378,7 +378,7 @@ export default function AntidepressantsArticle() {
       <h2>The suicidality signal: what the EMA and a 1.8M-patient cohort actually found</h2>
       <p>
         In 2023 and 2024, scattered post-marketing reports of suicidal
-        ideation in patients on semaglutide and liraglutide prompted
+        ideation in patients on <Link href="/drugs/semaglutide">semaglutide</Link> and liraglutide prompted
         the European Medicines Agency&apos;s Pharmacovigilance Risk
         Assessment Committee (PRAC) to open a formal review. The
         review covered 11 GLP-1 products including Ozempic, Wegovy,

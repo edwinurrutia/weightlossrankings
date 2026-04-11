@@ -129,7 +129,7 @@ export default function RetatrutideArticle() {
       <ul>
         <li>
           <strong>GLP-1 receptor:</strong> activated by
-          semaglutide and tirzepatide. Reduces appetite, slows
+          <Link href="/drugs/semaglutide">semaglutide</Link> and <Link href="/drugs/tirzepatide">tirzepatide</Link>. Reduces appetite, slows
           gastric emptying, increases insulin secretion in a
           glucose-dependent manner, and signals satiety in
           hindbrain reward circuits.
@@ -384,19 +384,19 @@ export default function RetatrutideArticle() {
         </thead>
         <tbody>
           <tr>
-            <td>Wegovy (semaglutide 2.4 mg)</td>
+            <td><Link href="/drugs/wegovy">Wegovy</Link> (semaglutide 2.4 mg)</td>
             <td>GLP-1</td>
             <td>−14.9% (STEP-1, 68 wk)</td>
             <td>Approved</td>
           </tr>
           <tr>
-            <td>Zepbound (tirzepatide 15 mg)</td>
+            <td><Link href="/drugs/zepbound">Zepbound</Link> (tirzepatide 15 mg)</td>
             <td>GLP-1 + GIP</td>
             <td>−20.9% (SURMOUNT-1, 72 wk)</td>
             <td>Approved</td>
           </tr>
           <tr>
-            <td>Foundayo (orforglipron)</td>
+            <td><Link href="/drugs/foundayo">Foundayo</Link> (orforglipron)</td>
             <td>Oral small-molecule GLP-1</td>
             <td>−11.1% (Foundayo PI, 17.2 mg, 72 wk)</td>
             <td>Approved Apr 2026</td>

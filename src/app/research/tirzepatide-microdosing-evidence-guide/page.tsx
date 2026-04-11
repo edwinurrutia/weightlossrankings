@@ -94,7 +94,7 @@ export default function TirzMicrodoseArticle() {
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
       >
-        Tirzepatide microdosing — using doses below the FDA-approved
+        <Link href="/drugs/tirzepatide">Tirzepatide</Link> microdosing — using doses below the FDA-approved
         2.5 mg starting dose — has become a popular strategy in
         patient communities, mostly for cost reasons (compounded
         vials are priced per mg) and side effect tolerance. The
@@ -133,7 +133,7 @@ export default function TirzMicrodoseArticle() {
       </ul>
       <p>
         None of these is FDA-approved as a maintenance regimen for
-        Zepbound or Mounjaro<Cite n={4} /><Cite n={5} />. The
+        <Link href="/drugs/zepbound">Zepbound</Link> or <Link href="/drugs/mounjaro">Mounjaro</Link><Cite n={4} /><Cite n={5} />. The
         first and third are completely off-label; the second is on
         the label as a starter dose only.
       </p>
@@ -280,7 +280,7 @@ export default function TirzMicrodoseArticle() {
             Insurance and brand-name programs do not cover
             microdosing.
           </strong>{" "}
-          Wegovy NovoCare, Zepbound LillyDirect, and most insurance
+          <Link href="/drugs/wegovy">Wegovy</Link> NovoCare, Zepbound LillyDirect, and most insurance
           formularies dispense in standard label doses only.
           Microdosing is essentially a compounded-pharmacy-only
           phenomenon.
@@ -310,7 +310,7 @@ export default function TirzMicrodoseArticle() {
         </li>
         <li>
           <strong>
-            Ask about Foundayo (oral orforglipron) as an alternative.
+            Ask about <Link href="/drugs/foundayo">Foundayo</Link> (oral orforglipron) as an alternative.
           </strong>{" "}
           The new oral GLP-1 has a different titration schedule and
           more granular dose levels. For some cost-sensitive
@@ -365,7 +365,7 @@ export default function TirzMicrodoseArticle() {
           Patient motivations for microdosing are real (cost,
           tolerance, maintenance), and there are sometimes better
           on-label alternatives (lower labeled dose, switching to
-          Foundayo, switching to compounded semaglutide).
+          Foundayo, switching to compounded <Link href="/drugs/semaglutide">semaglutide</Link>).
         </li>
         <li>
           If you choose to microdose, do it with your prescriber, a
