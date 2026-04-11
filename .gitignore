@@ -41,3 +41,9 @@ next-env.d.ts
 # superpowers
 .superpowers/
 .vercel
+
+# Google Ads creative assets — generated locally by
+# scripts/generate-ad-images.mjs. Never commit these; they are
+# uploaded directly to Google Ads and should not be discoverable
+# via a public URL on the site.
+ad-assets/
