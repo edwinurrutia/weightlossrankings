@@ -131,7 +131,7 @@ export default function HowLongDoesGlp1TakeToWorkArticle() {
         effects begin within hours of the first injection, before the
         drug has even reached steady-state plasma levels [3, 5].
         Patients typically report feeling fuller faster within the
-        first 1-3 days of the first 0.25 mg semaglutide dose, with
+        first 1-3 days of the first 0.25 mg <Link href="/drugs/semaglutide">semaglutide</Link> dose, with
         the effect strengthening as the dose escalates and as plasma
         concentration accumulates.
       </p>
@@ -157,11 +157,11 @@ export default function HowLongDoesGlp1TakeToWorkArticle() {
 
       <ul>
         <li>
-          <strong>Semaglutide (Wegovy, Ozempic):</strong> ~7 days
+          <strong>Semaglutide (<Link href="/drugs/wegovy">Wegovy</Link>, <Link href="/drugs/ozempic">Ozempic</Link>):</strong> ~7 days
           elimination half-life [3]
         </li>
         <li>
-          <strong>Tirzepatide (Zepbound, Mounjaro):</strong> ~5 days
+          <strong><Link href="/drugs/tirzepatide">Tirzepatide</Link> (<Link href="/drugs/zepbound">Zepbound</Link>, <Link href="/drugs/mounjaro">Mounjaro</Link>):</strong> ~5 days
           elimination half-life [4]
         </li>
       </ul>

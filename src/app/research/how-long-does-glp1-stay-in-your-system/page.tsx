@@ -143,8 +143,8 @@ export default function HowLongGlp1StaysArticle() {
         data-speakable="lead"
       >
         Three thousand patients a month type &ldquo;how long does
-        semaglutide stay in your system&rdquo; or the equivalent
-        question for tirzepatide into Google. The honest answer
+        <Link href="/drugs/semaglutide">semaglutide</Link> stay in your system&rdquo; or the equivalent
+        question for <Link href="/drugs/tirzepatide">tirzepatide</Link> into Google. The honest answer
         comes directly from the FDA labels: semaglutide&apos;s
         elimination half-life is about <strong>1 week</strong>{" "}
         (around 168 hours)<Cite n={1} /> and tirzepatide&apos;s is
@@ -152,7 +152,7 @@ export default function HowLongGlp1StaysArticle() {
         pharmacokinetic threshold for &ldquo;fully out of the
         body&rdquo; is five half-lives — about <strong>5 weeks</strong>{" "}
         for semaglutide and about <strong>25 days</strong> for
-        tirzepatide. Orforglipron (Foundayo), the new oral GLP-1,
+        tirzepatide. Orforglipron (<Link href="/drugs/foundayo">Foundayo</Link>), the new oral GLP-1,
         clears far faster — about <strong>6 days</strong> — because
         its half-life is only 29-49 hours<Cite n={6} />.
       </p>
@@ -177,7 +177,7 @@ export default function HowLongGlp1StaysArticle() {
               <td className="py-2 pr-4">
                 <strong>Semaglutide</strong>
                 <br />
-                (Wegovy, Ozempic, Rybelsus)
+                (<Link href="/drugs/wegovy">Wegovy</Link>, <Link href="/drugs/ozempic">Ozempic</Link>, Rybelsus)
               </td>
               <td className="py-2 pr-4">~1 week (~168 h)<Cite n={1} /></td>
               <td className="py-2 pr-4">~5 weeks</td>
@@ -187,7 +187,7 @@ export default function HowLongGlp1StaysArticle() {
               <td className="py-2 pr-4">
                 <strong>Tirzepatide</strong>
                 <br />
-                (Zepbound, Mounjaro)
+                (<Link href="/drugs/zepbound">Zepbound</Link>, <Link href="/drugs/mounjaro">Mounjaro</Link>)
               </td>
               <td className="py-2 pr-4">~5 days (~120 h)<Cite n={4} /></td>
               <td className="py-2 pr-4">~25 days</td>

@@ -178,8 +178,8 @@ export default function SideEffectQAArticle() {
         </Link>{" "}
         covers the headline GI tolerability numbers from STEP-1 and
         SURMOUNT-1. This article answers the specific Q&amp;A queries
-        patients search for: <em>does semaglutide cause headaches</em>{" "}
-        (yes — 14.2% in STEP-1 vs 10% placebo), <em>does tirzepatide
+        patients search for: <Link href="/drugs/semaglutide"><em>does semaglutide cause headaches</em></Link>{" "}
+        (yes — 14.2% in STEP-1 vs 10% placebo), <em>does <Link href="/drugs/tirzepatide">tirzepatide</Link>
         cause sulfur burps</em> (yes — slowed gastric emptying changes
         the bacterial fermentation profile), <em>does semaglutide
         cause depression</em> (no signal in the 2024 EMA review of
@@ -187,7 +187,7 @@ export default function SideEffectQAArticle() {
         exists), <em>does GLP-1 cause brain fog</em> (an emerging FDA
         pharmacovigilance signal as of 2025). Every rate is sourced
         from the STEP-1 and SURMOUNT-1 NEJM publications and the
-        Wegovy and Zepbound FDA prescribing information [1, 2, 3, 4].
+        <Link href="/drugs/wegovy">Wegovy</Link> and <Link href="/drugs/zepbound">Zepbound</Link> FDA prescribing information [1, 2, 3, 4].
       </p>
 
       <h2>The verified rate table</h2>
@@ -631,7 +631,7 @@ export default function SideEffectQAArticle() {
         </li>
         <li>
           <strong>Visual changes in T2D patients</strong> — possible
-          diabetic retinopathy progression on Ozempic/Mounjaro.
+          diabetic retinopathy progression on <Link href="/drugs/ozempic">Ozempic</Link>/<Link href="/drugs/mounjaro">Mounjaro</Link>.
         </li>
         <li>
           <strong>Neck lump, hoarseness, or trouble swallowing</strong>{" "}

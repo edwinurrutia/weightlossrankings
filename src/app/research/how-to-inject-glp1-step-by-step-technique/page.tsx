@@ -186,8 +186,8 @@ export default function InjectionTechniqueArticle() {
 
       <h2>Where to inject (the FDA-approved sites)</h2>
       <p>
-        The Wegovy<Cite n={1} />, Ozempic<Cite n={2} />, Zepbound<Cite n={3} />,
-        and Mounjaro<Cite n={4} /> labels all approve the same three
+        The <Link href="/drugs/wegovy">Wegovy</Link><Cite n={1} />, <Link href="/drugs/ozempic">Ozempic</Link><Cite n={2} />, <Link href="/drugs/zepbound">Zepbound</Link><Cite n={3} />,
+        and <Link href="/drugs/mounjaro">Mounjaro</Link><Cite n={4} /> labels all approve the same three
         injection sites:
       </p>
       <ul>
@@ -339,7 +339,7 @@ export default function InjectionTechniqueArticle() {
       <p>
         If your prescription is dispensed as a multi-dose vial (less
         common for brand-name GLP-1s but common for compounded
-        semaglutide and tirzepatide), you draw up each dose yourself.
+        <Link href="/drugs/semaglutide">semaglutide</Link> and <Link href="/drugs/tirzepatide">tirzepatide</Link>), you draw up each dose yourself.
         The technique is the same as drawing up insulin from a vial:
       </p>
       <ol>

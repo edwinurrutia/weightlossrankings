@@ -116,7 +116,7 @@ export default function GlpLiverArticle() {
       >
         No — GLP-1 receptor agonists do not typically cause liver
         damage, and in the randomized trials that have looked
-        specifically at the liver, semaglutide and tirzepatide do
+        specifically at the liver, <Link href="/drugs/semaglutide">semaglutide</Link> and <Link href="/drugs/tirzepatide">tirzepatide</Link> do
         something closer to the opposite: they reduce liver fat,
         lower ALT and AST, and in dedicated phase 2 trials improve
         the histology of metabolic dysfunction-associated
@@ -135,7 +135,7 @@ export default function GlpLiverArticle() {
       <h2>Why patients ask this question</h2>
       <p>
         The fear of liver damage on a GLP-1 usually comes from three
-        places. First, the Wegovy<Cite n={7} /> and Zepbound<Cite n={8} /> labels
+        places. First, the <Link href="/drugs/wegovy">Wegovy</Link><Cite n={7} /> and <Link href="/drugs/zepbound">Zepbound</Link><Cite n={8} /> labels
         carry a pancreatitis precaution in Section 5, and many
         patients conflate &ldquo;pancreas&rdquo; with &ldquo;liver&rdquo;
         (they sit adjacent to each other under the right ribs and both

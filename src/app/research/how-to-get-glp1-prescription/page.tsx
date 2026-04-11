@@ -139,12 +139,12 @@ export default function HowToGetGlp1Article() {
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
       >
-        Most patients searching &ldquo;how to get semaglutide&rdquo;
+        Most patients searching &ldquo;how to get <Link href="/drugs/semaglutide">semaglutide</Link>&rdquo;
         don&apos;t realize there are at least four legitimate paths
         to a GLP-1 prescription in the US in 2026 — each with
         different costs, different paperwork, and different waiting
         times. This is the buyer funnel: insurance, brand-name
-        direct-pay, compounded telehealth, and the new oral Foundayo
+        direct-pay, compounded telehealth, and the new oral <Link href="/drugs/foundayo">Foundayo</Link>
         route. Plus the red flags that mean you&apos;re looking at an
         illegitimate seller, not a real pharmacy.
       </p>
@@ -152,7 +152,7 @@ export default function HowToGetGlp1Article() {
       <h2>Step 1: Are you eligible at all?</h2>
       <p>
         The FDA-approved indication for chronic weight management with
-        Wegovy<Cite n={1} /> and Zepbound<Cite n={2} /> is identical:
+        <Link href="/drugs/wegovy">Wegovy</Link><Cite n={1} /> and <Link href="/drugs/zepbound">Zepbound</Link><Cite n={2} /> is identical:
       </p>
       <ul>
         <li>
@@ -250,7 +250,7 @@ export default function HowToGetGlp1Article() {
       <h3>1a. Check if your plan covers GLP-1s for weight management</h3>
       <p>
         Most commercial insurance plans cover GLP-1s for type 2
-        diabetes (Ozempic, Mounjaro). Far fewer cover them for weight
+        diabetes (<Link href="/drugs/ozempic">Ozempic</Link>, <Link href="/drugs/mounjaro">Mounjaro</Link>). Far fewer cover them for weight
         management (Wegovy, Zepbound). Coverage varies by employer,
         not just by carrier — Aetna at one employer might cover
         Wegovy with prior authorization while Aetna at a different
@@ -413,7 +413,7 @@ export default function HowToGetGlp1Article() {
 
       <h2>Path 3 — Compounded telehealth</h2>
       <p>
-        Compounded semaglutide and tirzepatide are made by 503A
+        Compounded semaglutide and <Link href="/drugs/tirzepatide">tirzepatide</Link> are made by 503A
         compounding pharmacies, not by Novo Nordisk or Lilly. They
         are typically prescribed and dispensed through telehealth
         platforms that bundle the prescriber visit, the medication,

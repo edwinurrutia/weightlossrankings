@@ -76,7 +76,7 @@ export default function SurmountOsaArticle() {
         roughly two-thirds of patients prescribed CPAP don&apos;t tolerate
         it long-term. The SURMOUNT-OSA trial, published in the New
         England Journal of Medicine on October 3, 2024 [1], changed
-        that. Tirzepatide cut the apnea-hypopnea index by 25–29 events
+        that. <Link href="/drugs/tirzepatide">Tirzepatide</Link> cut the apnea-hypopnea index by 25–29 events
         per hour from a baseline of around 50, both in patients
         actively using CPAP and patients who weren&apos;t. The FDA
         followed with what its own press release describes as the
@@ -274,7 +274,7 @@ export default function SurmountOsaArticle() {
 
       <p>
         Following SURMOUNT-OSA&apos;s positive primary endpoint
-        result, the FDA approved Zepbound (tirzepatide) for the
+        result, the FDA approved <Link href="/drugs/zepbound">Zepbound</Link> (tirzepatide) for the
         treatment of moderate-to-severe obstructive sleep apnea in
         adults with obesity. The FDA&apos;s own press release
         describes this as the first medication ever approved by the
@@ -413,7 +413,7 @@ export default function SurmountOsaArticle() {
           specific populations.
         </li>
         <li>
-          <strong>Semaglutide for OSA.</strong> No semaglutide-
+          <Link href="/drugs/semaglutide"><strong>Semaglutide for OSA.</strong></Link> No semaglutide-
           specific OSA trial has been published. It&apos;s plausible
           that semaglutide produces comparable benefits given its
           effective weight loss profile, but absent direct trial

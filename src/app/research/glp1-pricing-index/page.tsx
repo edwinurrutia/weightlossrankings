@@ -74,7 +74,7 @@ export default function PricingIndexArticle() {
     <ResearchArticleLayout article={article} dataAsOf={verifiedDate}>
       <p>
         Compounded GLP-1 medications have rewritten the cash-pay weight-loss
-        market. A year ago, brand-name Wegovy at roughly{" "}
+        market. A year ago, brand-name <Link href="/drugs/wegovy">Wegovy</Link> at roughly{" "}
         {formatUsd(WEGOVY_MONTHLY)}/month was the only injectable semaglutide
         most uninsured Americans could access. Today, {semaProviderCount} of
         the {TOTAL_PROVIDERS} telehealth providers we track offer compounded
@@ -98,8 +98,8 @@ export default function PricingIndexArticle() {
 
       <p>
         Across our entire telehealth dataset, here&apos;s what people are
-        actually paying per month for compounded semaglutide and tirzepatide
-        — the same active ingredients in Wegovy and Zepbound respectively:
+        actually paying per month for compounded <Link href="/drugs/semaglutide">semaglutide</Link> and <Link href="/drugs/tirzepatide">tirzepatide</Link>
+        — the same active ingredients in Wegovy and <Link href="/drugs/zepbound">Zepbound</Link> respectively:
       </p>
 
       <div className="not-prose grid sm:grid-cols-2 gap-4 my-8">

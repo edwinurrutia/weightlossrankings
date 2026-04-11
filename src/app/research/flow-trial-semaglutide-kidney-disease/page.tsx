@@ -109,7 +109,7 @@ export default function FlowKidneyArticle() {
   return (
     <ResearchArticleLayout article={article}>
       <p data-speakable="lead">
-        On January 28, 2025, the FDA approved Ozempic (semaglutide
+        On January 28, 2025, the FDA approved <Link href="/drugs/ozempic">Ozempic</Link> (<Link href="/drugs/semaglutide">semaglutide</Link>
         1.0 mg) to reduce the risk of kidney disease worsening,
         kidney failure, and cardiovascular death in adults with type
         2 diabetes and chronic kidney disease [3]. It was the first
@@ -324,7 +324,7 @@ export default function FlowKidneyArticle() {
       <p>
         Two practical points about the approval. First, it applies
         specifically to <strong>Ozempic (semaglutide 1.0 mg)</strong>{" "}
-        — the diabetes-dose product, not the higher-dose Wegovy
+        — the diabetes-dose product, not the higher-dose <Link href="/drugs/wegovy">Wegovy</Link>
         (semaglutide 2.4 mg) used for chronic weight management.
         Second, it applies only to patients who already have type 2
         diabetes; FLOW did not enroll non-diabetic CKD patients, and
@@ -475,7 +475,7 @@ export default function FlowKidneyArticle() {
         <Link href="/research/wegovy-pen-vs-compounded-vial-practical-differences">
           Wegovy vs compounded vial comparison
         </Link>
-        . And for the head-to-head comparison with tirzepatide, see
+        . And for the head-to-head comparison with <Link href="/drugs/tirzepatide">tirzepatide</Link>, see
         our{" "}
         <Link href="/research/tirzepatide-vs-semaglutide-head-to-head">
           tirzepatide vs semaglutide deep-dive

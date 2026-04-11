@@ -89,14 +89,14 @@ export default function StorageGuideArticle() {
       <p data-speakable="lead">
         GLP-1 storage rules are not common knowledge and the FDA
         labels are buried inside multi-page prescribing information
-        PDFs. Patients consistently search for &ldquo;does semaglutide
+        PDFs. Patients consistently search for &ldquo;does <Link href="/drugs/semaglutide">semaglutide</Link>
         need to be refrigerated,&rdquo; &ldquo;how long does
-        tirzepatide last in the fridge,&rdquo; and &ldquo;does
+        <Link href="/drugs/tirzepatide">tirzepatide</Link> last in the fridge,&rdquo; and &ldquo;does
         semaglutide expire&rdquo; — and the answers are different
         for each drug, different for unopened vs in-use pens, and
         different again for compounded vials. This reference walks
-        through the actual approved storage rules for Wegovy, Ozempic,
-        Zepbound, and Mounjaro pens, the typical compounding-pharmacy
+        through the actual approved storage rules for <Link href="/drugs/wegovy">Wegovy</Link>, <Link href="/drugs/ozempic">Ozempic</Link>,
+        <Link href="/drugs/zepbound">Zepbound</Link>, and <Link href="/drugs/mounjaro">Mounjaro</Link> pens, the typical compounding-pharmacy
         beyond-use-date assignments, what to do if your medication
         was accidentally frozen or left at room temperature too long,
         and how to fly with a GLP-1.

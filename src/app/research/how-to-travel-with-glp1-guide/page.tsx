@@ -128,8 +128,8 @@ export default function TravelGuideArticle() {
         answered questions in weight-loss medicine. The pens are
         refrigerated drugs, but they are also explicitly designed to
         survive a window of room temperature — and that window is
-        different for each drug. Wegovy gives you 28 days. Zepbound
-        and Mounjaro give you 21. Ozempic gives you 56. Foundayo, the
+        different for each drug. <Link href="/drugs/wegovy">Wegovy</Link> gives you 28 days. <Link href="/drugs/zepbound">Zepbound</Link>
+        and <Link href="/drugs/mounjaro">Mounjaro</Link> give you 21. <Link href="/drugs/ozempic">Ozempic</Link> gives you 56. <Link href="/drugs/foundayo">Foundayo</Link>, the
         new oral pill, gives you forever, because it doesn&apos;t need
         a fridge at all. This guide pulls every number directly from
         the FDA-approved prescribing information for each drug, walks
@@ -143,7 +143,7 @@ export default function TravelGuideArticle() {
       <h2>Why GLP-1s need a fridge in the first place</h2>
 
       <p>
-        Semaglutide and tirzepatide are peptide drugs — long chains of
+        <Link href="/drugs/semaglutide">Semaglutide</Link> and <Link href="/drugs/tirzepatide">tirzepatide</Link> are peptide drugs — long chains of
         amino acids that fold into a specific three-dimensional shape
         to bind the GLP-1 receptor. Heat, freezing, and prolonged room
         temperature all encourage that chain to unfold, aggregate, or

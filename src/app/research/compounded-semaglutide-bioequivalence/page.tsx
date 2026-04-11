@@ -31,12 +31,12 @@ export default function CompoundedBioequivalenceArticle() {
   return (
     <ResearchArticleLayout article={article} dataAsOf={dataAsOf}>
       <p>
-        Compounded semaglutide is, by some estimates, the most prescribed
+        Compounded <Link href="/drugs/semaglutide">semaglutide</Link> is, by some estimates, the most prescribed
         weight-loss medication in the United States that doesn&apos;t
         legally exist as an FDA-approved drug. Tens of thousands of vials
         a week ship from compounding pharmacies through telehealth
         intermediaries, sold at a fraction of the cash price of brand-name
-        Wegovy or Ozempic. The marketing on both sides of the debate is
+        <Link href="/drugs/wegovy">Wegovy</Link> or <Link href="/drugs/ozempic">Ozempic</Link>. The marketing on both sides of the debate is
         loud and confident: telehealth companies imply the molecule is
         identical to what Novo Nordisk sells, and Novo Nordisk implies
         compounded versions are unregulated and dangerous. Neither

@@ -132,7 +132,7 @@ export default function InjectionGuideArticle() {
         Most GLP-1 telehealth providers ship a vial and a syringe with
         a one-line dosing instruction and almost no detail about where
         on the body the injection actually goes. The FDA prescribing
-        information for Wegovy, Ozempic, Zepbound, and Mounjaro all
+        information for <Link href="/drugs/wegovy">Wegovy</Link>, <Link href="/drugs/ozempic">Ozempic</Link>, <Link href="/drugs/zepbound">Zepbound</Link>, and <Link href="/drugs/mounjaro">Mounjaro</Link> all
         approve the same three subcutaneous injection sites — the
         abdomen, the front of the thigh, and the back of the upper
         arm [1, 2, 3, 4]. Patient-reported soreness, ease of self-

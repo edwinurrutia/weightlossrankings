@@ -135,7 +135,7 @@ export default function OrforgliproSideEffectsArticle() {
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
       >
-        The most common Foundayo (orforglipron) side effects are{" "}
+        The most common <Link href="/drugs/foundayo">Foundayo</Link> (orforglipron) side effects are{" "}
         <strong>
           nausea, diarrhea, vomiting, constipation, and decreased
           appetite
@@ -150,7 +150,7 @@ export default function OrforgliproSideEffectsArticle() {
         allergic reactions, and pregnancy<Cite n={1} />. This article
         walks through what the FDA Foundayo label and the ATTAIN-1
         phase 3 trial actually report, how those rates compare to
-        injectable Wegovy and Zepbound, and the practical questions
+        injectable <Link href="/drugs/wegovy">Wegovy</Link> and <Link href="/drugs/zepbound">Zepbound</Link>, and the practical questions
         patients keep searching for.
       </p>
 
@@ -191,7 +191,7 @@ export default function OrforgliproSideEffectsArticle() {
         The exact percentage point rates patients should consult are
         in Section 6 (Adverse Reactions) of the FDA Foundayo
         Prescribing Information<Cite n={1} />. The qualitative pattern
-        is identical to what semaglutide and tirzepatide produce in
+        is identical to what <Link href="/drugs/semaglutide">semaglutide</Link> and <Link href="/drugs/tirzepatide">tirzepatide</Link> produce in
         their respective trials: GI events are dose-dependent, peak
         in the days after a titration step, and taper as the body
         adapts. The FDA label is the source of truth — when in doubt,
@@ -296,8 +296,8 @@ export default function OrforgliproSideEffectsArticle() {
 
       <p>
         Foundayo carries the same boxed warning as every other
-        FDA-approved GLP-1 receptor agonist — Wegovy, Ozempic,
-        Zepbound, Mounjaro, Saxenda, Trulicity, Victoza, Rybelsus —
+        FDA-approved GLP-1 receptor agonist — Wegovy, <Link href="/drugs/ozempic">Ozempic</Link>,
+        Zepbound, <Link href="/drugs/mounjaro">Mounjaro</Link>, Saxenda, Trulicity, Victoza, Rybelsus —
         for thyroid C-cell tumors, including medullary thyroid
         carcinoma (MTC)<Cite n={1} /><Cite n={3} /><Cite n={4} />.
         Foundayo is contraindicated in patients with a personal or

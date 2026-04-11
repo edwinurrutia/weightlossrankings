@@ -106,10 +106,10 @@ export default function SwitchingGuideArticle() {
       />
       <p data-speakable="lead">
         Switching between GLP-1 medications is increasingly common:
-        patients plateau on semaglutide and want to try tirzepatide,
-        commercial insurance starts covering Zepbound so patients
-        move off Wegovy, a compounded vial supply problem pushes
-        patients back to brand-name pens, or the new Foundayo (oral
+        patients plateau on <Link href="/drugs/semaglutide">semaglutide</Link> and want to try <Link href="/drugs/tirzepatide">tirzepatide</Link>,
+        commercial insurance starts covering <Link href="/drugs/zepbound">Zepbound</Link> so patients
+        move off <Link href="/drugs/wegovy">Wegovy</Link>, a compounded vial supply problem pushes
+        patients back to brand-name pens, or the new <Link href="/drugs/foundayo">Foundayo</Link> (oral
         orforglipron) becomes an option for patients who hate
         injections. Each switching scenario has a different
         protocol, a different washout period, and different
@@ -214,7 +214,7 @@ export default function SwitchingGuideArticle() {
         This is the most-searched switching scenario (~600 combined
         monthly Google queries for &ldquo;can you switch from
         semaglutide to tirzepatide&rdquo; and variants). Typical
-        patient profile: on Wegovy 2.4 mg or Ozempic for weight
+        patient profile: on Wegovy 2.4 mg or <Link href="/drugs/ozempic">Ozempic</Link> for weight
         loss, plateaued or wants larger effect, insurance now
         covers Zepbound.
       </p>
@@ -381,7 +381,7 @@ export default function SwitchingGuideArticle() {
           ).
         </li>
         <li>
-          <strong>Zepbound/Mounjaro → compounded tirzepatide:</strong>{" "}
+          <strong>Zepbound/<Link href="/drugs/mounjaro">Mounjaro</Link> → compounded tirzepatide:</strong>{" "}
           Same molecule. Same dose continuation. Same operational
           change to the vial-and-syringe format.
         </li>

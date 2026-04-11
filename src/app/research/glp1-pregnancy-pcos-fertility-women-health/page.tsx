@@ -102,8 +102,8 @@ export default function PregnancyArticle() {
     <ResearchArticleLayout article={article}>
       <p data-speakable="lead">
         GLP-1 weight loss drugs are <strong>contraindicated in
-        pregnancy</strong> and the FDA labels for Wegovy, Ozempic,
-        Zepbound, Mounjaro, and Foundayo all recommend
+        pregnancy</strong> and the FDA labels for <Link href="/drugs/wegovy">Wegovy</Link>, <Link href="/drugs/ozempic">Ozempic</Link>,
+        <Link href="/drugs/zepbound"> Zepbound</Link>, <Link href="/drugs/mounjaro">Mounjaro</Link>, and <Link href="/drugs/foundayo">Foundayo</Link> all recommend
         discontinuation before planned conception — Wegovy
         specifically says <em>at least 2 months before a planned
         pregnancy</em> [1, 2, 6]. But the women&apos;s health story is
@@ -135,7 +135,7 @@ export default function PregnancyArticle() {
       <p>
         The Wegovy label says: &ldquo;Based on animal reproduction
         studies, there may be potential risks to the fetus from
-        exposure to semaglutide during pregnancy... Weight loss
+        exposure to <Link href="/drugs/semaglutide">semaglutide</Link> during pregnancy... Weight loss
         offers no benefit to a pregnant patient and may cause fetal
         harm... Discontinue WEGOVY in pregnant patients.&rdquo; The
         label specifies discontinuation <strong>at least 2 months
@@ -170,7 +170,7 @@ export default function PregnancyArticle() {
         narrative language is the operative guidance.
       </p>
 
-      <h3>Zepbound and Mounjaro (tirzepatide)</h3>
+      <h3>Zepbound and Mounjaro (<Link href="/drugs/tirzepatide">tirzepatide</Link>)</h3>
 
       <p>
         The Zepbound label uses similar language: &ldquo;Available

@@ -109,7 +109,7 @@ export default function TaperingGuideArticle() {
       />
       <p data-speakable="lead">
         There is <strong>no FDA-approved tapering schedule</strong>{" "}
-        for semaglutide or tirzepatide. The Wegovy and Zepbound
+        for <Link href="/drugs/semaglutide">semaglutide</Link> or <Link href="/drugs/tirzepatide">tirzepatide</Link>. The <Link href="/drugs/wegovy">Wegovy</Link> and <Link href="/drugs/zepbound">Zepbound</Link>
         prescribing information both treat discontinuation as
         &ldquo;simply stop&rdquo; [4, 5]. But the clinical reality
         is more complicated: the STEP-4 trial [1] showed that
@@ -270,7 +270,7 @@ export default function TaperingGuideArticle() {
       <ul>
         <li>
           Continued cost — whether brand-name insurance coverage,
-          compounded vial pricing, or the new Foundayo $149/month
+          compounded vial pricing, or the new <Link href="/drugs/foundayo">Foundayo</Link> $149/month
           option
         </li>
         <li>
@@ -453,7 +453,7 @@ export default function TaperingGuideArticle() {
           <strong>Pancreatitis.</strong> Acute pancreatitis is a
           Section 5 Warning and Precaution on the GLP-1 labels —
           not a boxed warning. (The only boxed warning on Wegovy,
-          Ozempic, Zepbound, and Mounjaro is for thyroid C-cell
+          <Link href="/drugs/ozempic">Ozempic</Link>, Zepbound, and <Link href="/drugs/mounjaro">Mounjaro</Link> is for thyroid C-cell
           tumors / medullary thyroid carcinoma [4, 5].) Confirmed
           acute pancreatitis is a hard stop — do not resume.
         </li>

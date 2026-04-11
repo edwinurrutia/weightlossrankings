@@ -151,7 +151,7 @@ export default function InsuranceCoverageArticle() {
         Coverage for GLP-1 weight loss drugs is the most fragmented
         category in US pharmacy benefits. Medicare Part D is barred by
         federal statute from covering any drug used for weight loss,
-        with one narrow exception that opened in 2024 for Wegovy
+        with one narrow exception that opened in 2024 for <Link href="/drugs/wegovy">Wegovy</Link>
         prescribed to reduce cardiovascular risk. Medicaid coverage
         varies state by state and only a minority of state programs
         cover GLP-1s for obesity. Commercial coverage depends entirely
@@ -179,7 +179,7 @@ export default function InsuranceCoverageArticle() {
 
       <p>
         On March 8, 2024, the FDA approved a supplemental indication
-        for Wegovy (semaglutide 2.4 mg) to reduce the risk of major
+        for Wegovy (<Link href="/drugs/semaglutide">semaglutide</Link> 2.4 mg) to reduce the risk of major
         adverse cardiovascular events (cardiovascular death, non-fatal
         myocardial infarction, and non-fatal stroke) in adults with
         established cardiovascular disease and either obesity or
@@ -216,7 +216,7 @@ export default function InsuranceCoverageArticle() {
         </li>
         <li>
           It applies only to Wegovy and only to the cardiovascular
-          risk reduction indication. It does not extend to Zepbound,
+          risk reduction indication. It does not extend to <Link href="/drugs/zepbound">Zepbound</Link>,
           Saxenda, or any other anti-obesity GLP-1, none of which has
           a non-weight-loss FDA indication that would qualify them as
           a Part D drug for that use.
@@ -239,7 +239,7 @@ export default function InsuranceCoverageArticle() {
 
       <p>
         On January 28, 2025, the FDA approved a supplemental indication
-        for Ozempic (semaglutide injection 0.5 mg, 1 mg, and 2 mg) to
+        for <Link href="/drugs/ozempic">Ozempic</Link> (semaglutide injection 0.5 mg, 1 mg, and 2 mg) to
         reduce the risk of sustained eGFR decline, end-stage kidney
         disease, and cardiovascular death in adults with type 2
         diabetes and chronic kidney disease <Cite n={6}/>. The approval
@@ -256,7 +256,7 @@ export default function InsuranceCoverageArticle() {
         exclusion entirely. Medicare Part D plans cover Ozempic for
         eligible T2D patients (with or without CKD) as a standard
         diabetes medication, subject to plan-level prior authorization.
-        The same logic applies to Mounjaro (tirzepatide) for type 2
+        The same logic applies to <Link href="/drugs/mounjaro">Mounjaro</Link> (<Link href="/drugs/tirzepatide">tirzepatide</Link>) for type 2
         diabetes. Neither drug is covered by Part D when prescribed
         for chronic weight management.
       </p>

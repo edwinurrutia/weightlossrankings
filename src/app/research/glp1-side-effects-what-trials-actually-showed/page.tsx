@@ -89,9 +89,9 @@ export default function GLP1SideEffectsArticle() {
         the gut issues most patients actually experience or overstates the
         rare risks (pancreatitis, thyroid cancer) that almost never occur in
         practice. This article does neither. We pulled the actual
-        adverse-event tables from the STEP-1 (semaglutide) and SURMOUNT-1
-        (tirzepatide) Phase 3 trials, plus the 2025 FDA-approved
-        prescribing labels for Wegovy and Zepbound, and walk through each
+        adverse-event tables from the STEP-1 (<Link href="/drugs/semaglutide">semaglutide</Link>) and SURMOUNT-1
+        (<Link href="/drugs/tirzepatide">tirzepatide</Link>) Phase 3 trials, plus the 2025 FDA-approved
+        prescribing labels for <Link href="/drugs/wegovy">Wegovy</Link> and <Link href="/drugs/zepbound">Zepbound</Link>, and walk through each
         side effect category with verified percentages. Every percentage is
         cited to its source PMID. Bonus: a counterintuitive finding the lay
         press has missed.
@@ -387,7 +387,7 @@ export default function GLP1SideEffectsArticle() {
         fresh needle each time all reduce the rate.
       </p>
 
-      <h2>&ldquo;Ozempic face&rdquo;: not actually a documented adverse event</h2>
+      <h2>&ldquo;<Link href="/drugs/ozempic">Ozempic</Link> face&rdquo;: not actually a documented adverse event</h2>
 
       <p>
         The widely-reported &ldquo;Ozempic face&rdquo; phenomenon — facial

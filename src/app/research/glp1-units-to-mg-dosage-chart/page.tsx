@@ -145,7 +145,7 @@ export default function Glp1UnitsToMgDosageChartArticle() {
         className="text-xl text-brand-text-secondary leading-relaxed"
         data-speakable="lead"
       >
-        Compounded semaglutide and tirzepatide are prescribed in
+        Compounded <Link href="/drugs/semaglutide">semaglutide</Link> and <Link href="/drugs/tirzepatide">tirzepatide</Link> are prescribed in
         milligrams but drawn into the syringe in <strong>units</strong>{" "}
         — and getting that conversion wrong is one of the most common
         compounded GLP-1 dosing errors. The reason is that the vial is
@@ -226,7 +226,7 @@ export default function Glp1UnitsToMgDosageChartArticle() {
       <h2>Semaglutide: complete units-by-dose reference table</h2>
       <p>
         For each FDA-style titration dose of semaglutide (0.25 mg
-        starter through 2.4 mg Wegovy maintenance dose<Cite n={1} />),
+        starter through 2.4 mg <Link href="/drugs/wegovy">Wegovy</Link> maintenance dose<Cite n={1} />),
         here are the unit measurements at every common compounded
         concentration. Read across the row for your dose, find your
         vial concentration column, and that is the unit mark to draw
@@ -276,7 +276,7 @@ export default function Glp1UnitsToMgDosageChartArticle() {
       <h2>Tirzepatide: complete units-by-dose reference table</h2>
       <p>
         Same format for tirzepatide, covering the standard
-        FDA-titration doses from 2.5 mg starter through 15 mg Zepbound
+        FDA-titration doses from 2.5 mg starter through 15 mg <Link href="/drugs/zepbound">Zepbound</Link>
         maintenance<Cite n={3} /><Cite n={4} />.
       </p>
 
@@ -409,7 +409,7 @@ export default function Glp1UnitsToMgDosageChartArticle() {
       <p>
         Note that 5.0 mg and 12.5 mg of semaglutide both exceed the
         2.4 mg Wegovy maximum FDA-labeled dose<Cite n={1} /> and the
-        2.0 mg Ozempic maximum dose<Cite n={2} />. If you are drawing
+        2.0 mg <Link href="/drugs/ozempic">Ozempic</Link> maximum dose<Cite n={2} />. If you are drawing
         50 units and your vial is 10 mg/mL or 25 mg/mL, stop and
         verify with your prescriber before injecting.
       </p>
@@ -634,7 +634,7 @@ export default function Glp1UnitsToMgDosageChartArticle() {
         <strong>Important disclaimer.</strong> This article is
         educational and does not constitute medical advice. The
         conversion math is verified against FDA-approved labels for
-        Wegovy, Ozempic, Zepbound, and Mounjaro and against the
+        Wegovy, Ozempic, Zepbound, and <Link href="/drugs/mounjaro">Mounjaro</Link> and against the
         BD U-100 insulin syringe specification, but the clinical
         decision of what dose to inject is the prescriber&apos;s and
         the patient&apos;s responsibility. Always verify your vial

@@ -156,7 +156,7 @@ export default function GlpBloodPressureArticle() {
         renal mechanisms. They also <em>raise</em> resting heart
         rate by about 2-4 bpm in most patients, an effect that is
         in the FDA labels and worth knowing about. The 2023 SELECT
-        cardiovascular outcomes trial showed that semaglutide 2.4
+        cardiovascular outcomes trial showed that <Link href="/drugs/semaglutide">semaglutide</Link> 2.4
         mg reduced major adverse cardiovascular events by 20% in
         patients with obesity and pre-existing CV disease. This
         article walks through the trial-by-trial blood pressure
@@ -187,7 +187,7 @@ export default function GlpBloodPressureArticle() {
         </li>
       </ul>
 
-      <h3>SURMOUNT-1 (tirzepatide 15 mg)<Cite n={2} /></h3>
+      <h3>SURMOUNT-1 (<Link href="/drugs/tirzepatide">tirzepatide</Link> 15 mg)<Cite n={2} /></h3>
       <ul>
         <li>
           Mean systolic BP change: <strong>−7.2 mmHg</strong> on
@@ -235,8 +235,8 @@ export default function GlpBloodPressureArticle() {
         GLP-1 receptor agonists in type 2 diabetes (n=12,469
         patients). The pooled effect: a mean systolic BP reduction
         of 2.2 mmHg vs placebo across older GLP-1s at lower doses.
-        At the higher doses now used for weight management (Wegovy
-        2.4 mg, Zepbound 15 mg), the BP effect is roughly 2-3 times
+        At the higher doses now used for weight management (<Link href="/drugs/wegovy">Wegovy</Link>
+        2.4 mg, <Link href="/drugs/zepbound">Zepbound</Link> 15 mg), the BP effect is roughly 2-3 times
         larger.
       </p>
 
@@ -437,7 +437,7 @@ export default function GlpBloodPressureArticle() {
         On the strength of SELECT, the FDA added a labeled
         cardiovascular benefit indication to Wegovy in 2024 — the
         first weight-loss drug with formal cardiovascular outcome
-        labeling. Zepbound and Foundayo do not yet have this
+        labeling. Zepbound and <Link href="/drugs/foundayo">Foundayo</Link> do not yet have this
         indication; their cardiovascular outcome trials are
         either still running (SURPASS-CVOT for tirzepatide) or
         haven&apos;t been initiated.
