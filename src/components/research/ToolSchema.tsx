@@ -154,8 +154,18 @@ export default function ToolSchema({
           "@type": "MedicalAudience",
           audienceType: "Patient",
         },
+        // Schema.org type: DrugClass (https://schema.org/DrugClass) —
+        // "a class of medical drugs, e.g., statins." GLP-1 receptor
+        // agonists is a drug class, not a specific product. DrugClass
+        // is NOT in Google's Product rich-result pipeline, so it does
+        // not trigger the "Either offers, review, or aggregateRating
+        // should be specified" error that Drug does. If a caller
+        // passes a specific branded drug via medicalAbout it will
+        // still render as DrugClass; that's a minor semantic compromise
+        // but is accurate for most tool use cases (half-life
+        // calculators, dose converters, etc. cover the whole class).
         about: {
-          "@type": "Drug",
+          "@type": "DrugClass",
           ...(medicalAbout ?? DEFAULT_GLP1_DRUG),
         },
         reviewedBy: {

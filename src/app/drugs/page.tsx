@@ -33,15 +33,20 @@ export default function DrugsIndexPage() {
     inLanguage: "en-US",
     isPartOf: { "@type": "WebSite", name: "Weight Loss Rankings", url: SITE_URL },
     publisher: { "@type": "Organization", name: "Weight Loss Rankings", url: SITE_URL },
+    // hasPart uses WebPage references (not Drug) so each child page
+    // is discoverable without triggering Google's Product rich-result
+    // validation. Previously we emitted @type: Drug here without
+    // offers/review/aggregateRating, which Google flagged as a
+    // Product Snippets error. The ItemList in mainEntity below still
+    // conveys the full list of drugs to the crawler, and each Drug
+    // page emits its own full Drug + MedicalWebPage schema at the
+    // leaf level with real offers from the provider dataset.
     hasPart: drugs.map((d) => ({
-      "@type": "Drug",
+      "@type": "WebPage",
       "@id": `${SITE_URL}/drugs/${d.slug}`,
       name: d.name,
       url: `${SITE_URL}/drugs/${d.slug}`,
       description: d.description,
-      ...(d.brand_names && d.brand_names.length > 0
-        ? { alternateName: d.brand_names }
-        : {}),
     })),
     mainEntity: {
       "@type": "ItemList",

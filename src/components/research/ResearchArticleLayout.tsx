@@ -409,12 +409,23 @@ export default function ResearchArticleLayout({
         // includes the GLP-1 receptor agonist drug class. When the
         // article tags map to specific MedicalConditions (Type 2
         // Diabetes, Obesity, Sleep Apnea, etc.), those are added
-        // alongside the Drug entity so Google's medical knowledge
-        // graph can link the article to both the drug and the
-        // conditions it discusses.
+        // alongside the DrugClass entity so Google's medical
+        // knowledge graph can link the article to both the drug
+        // class and the conditions it discusses.
+        //
+        // Schema.org type: DrugClass (https://schema.org/DrugClass) —
+        // "a class of medical drugs, e.g., statins." This is the
+        // canonical type for "GLP-1 receptor agonists" as a category,
+        // not a specific product. Critically, DrugClass is NOT in
+        // Google's Product rich-result pipeline, so it does not
+        // require offers/review/aggregateRating the way Drug does.
+        // Using @type: Drug here caused the GSC Product Snippets
+        // error "Either offers, review, or aggregateRating should be
+        // specified" flagged on 2026-04-11 — fixed by switching to
+        // the semantically correct DrugClass.
         about: [
           {
-            "@type": "Drug",
+            "@type": "DrugClass",
             name: "GLP-1 receptor agonists",
             alternateName: [
               "Glucagon-like peptide-1 receptor agonists",

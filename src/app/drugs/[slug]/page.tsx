@@ -325,6 +325,47 @@ export default async function DrugPage({
     drugSchema.approvalStatus = `FDA-approved ${drugData.approval_date}`;
   }
 
+  // offers — real AggregateOffer sourced from providersWithPrice
+  // (computed earlier for the Cost Comparison table). Required by
+  // Google's Product rich-result pipeline when @type is Drug, or
+  // Google flags the schema with "Either offers, review, or
+  // aggregateRating should be specified" as seen in GSC 2026-04-11
+  // on /research/hrt-perimenopause-glp1-women-weight.
+  //
+  // Using AggregateOffer (not Offer) because the Drug is offered at
+  // many prices across many providers — Google prefers the aggregate
+  // when offerCount > 1. lowPrice/highPrice come from the full
+  // sorted array so the range matches what renders on the page.
+  const cheapestProvider = providersWithPrice[0];
+  if (cheapestProvider && cheapestProvider.minPrice !== null) {
+    const highestProvider = providersWithPrice[providersWithPrice.length - 1];
+    // priceValidUntil: rolling 90-day window from the editorial
+    // verification date. Google requires this on Offer — using a
+    // real verification-tied window keeps the freshness signal
+    // honest while satisfying the schema requirement.
+    const priceValidBase = drugVerifiedRaw
+      ? new Date(drugVerifiedRaw + "T00:00:00")
+      : new Date();
+    priceValidBase.setDate(priceValidBase.getDate() + 90);
+    drugSchema.offers = {
+      "@type": "AggregateOffer",
+      priceCurrency: "USD",
+      lowPrice: cheapestProvider.minPrice,
+      highPrice: highestProvider?.minPrice ?? cheapestProvider.minPrice,
+      offerCount: providersWithPrice.length,
+      availability: "https://schema.org/InStock",
+      url: `https://weightlossrankings.org/drugs/${drug}`,
+      priceValidUntil: priceValidBase.toISOString().slice(0, 10),
+    };
+  }
+
+  // Give the Drug schema a canonical @id so MedicalWebPage.about can
+  // reference it by @id instead of re-declaring a duplicate Drug
+  // entity (which also triggered the Product Snippets error before
+  // this pass). The @id uses a fragment so the Drug is a named node
+  // within the page graph.
+  drugSchema["@id"] = `https://weightlossrankings.org/drugs/${drug}#drug`;
+
   // Freshness signal for Google's medical content crawler. We use the
   // drug entry's verification.last_verified date (the date the editorial
   // team last cross-checked the FDA label + trial data) as the
@@ -347,10 +388,15 @@ export default async function DrugPage({
     name: `${drugData.name} Guide: Cost, Side Effects & Where to Get It`,
     description: drugData.description,
     url: `https://weightlossrankings.org/drugs/${drug}`,
+    // Reference the top-level Drug schema by @id instead of
+    // redeclaring a duplicate Drug entity. This avoids emitting the
+    // same Drug twice (once at the top level with full fields +
+    // offers, once here as a nested stub) — Google flags duplicate
+    // Drug entities on the same page as separate Products for rich-
+    // result validation, which caused the "offers/review/
+    // aggregateRating" error on the wider site before this pass.
     about: {
-      "@type": "Drug",
-      name: drugData.name,
-      nonProprietaryName: drugData.generic_name,
+      "@id": `https://weightlossrankings.org/drugs/${drug}#drug`,
     },
     medicalAudience: [
       { "@type": "MedicalAudience", audienceType: "Patient" },
