@@ -109,15 +109,17 @@ export default function CookieConsent() {
               Cookies & analytics.
             </strong>{" "}
             <span className="hidden sm:inline">
-              Weight Loss Rankings uses first-party cookies to make the
-              site work and Google Analytics to understand which pages
-              help readers most. We do not sell your data and we do not
-              show third-party ads. US visitors can opt out at any time.
-              See our{" "}
+              Weight Loss Rankings uses first-party cookies and Google
+              Analytics to understand which pages help readers most. We
+              do not sell or share your data for advertising, and we do
+              not run display-ad or programmatic-ad networks. We do earn
+              affiliate commissions when readers click through to partner
+              providers — this never affects our editorial scoring. US
+              visitors can opt out at any time. See our{" "}
             </span>
             <span className="sm:hidden">
-              First-party cookies + GA. No data sold, no third-party
-              ads.{" "}
+              First-party cookies + GA. No data sold, no display ads.
+              Affiliate-supported.{" "}
             </span>
             <Link
               href="/privacy"
