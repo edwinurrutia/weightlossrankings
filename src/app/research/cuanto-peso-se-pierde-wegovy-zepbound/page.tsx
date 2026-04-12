@@ -56,6 +56,7 @@ export async function generateMetadata(): Promise<Metadata> {
         "en-US": "/research/glp1-weight-loss-calculator",
         "es-US": `/es/research/${SLUG}`,
         es: `/es/research/${SLUG}`,
+        "x-default": "/research/glp1-weight-loss-calculator",
       },
     },
     openGraph: {

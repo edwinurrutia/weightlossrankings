@@ -22,6 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
         // that as ambiguous canonicalization.
         es: "/es/research/guia-marcas-wegovy-ozempic-zepbound-mounjaro",
         "es-US": "/es/research/guia-marcas-wegovy-ozempic-zepbound-mounjaro",
+        "x-default": `/research/${SLUG}`,
       },
     },
     openGraph: {

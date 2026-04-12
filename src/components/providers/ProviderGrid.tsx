@@ -1,3 +1,4 @@
+import { memo } from "react";
 import type { Provider } from "@/lib/types";
 import ProviderCard from "./ProviderCard";
 
@@ -7,7 +8,7 @@ interface ProviderGridProps {
   trackingSource?: string;
 }
 
-export default function ProviderGrid({
+function ProviderGridImpl({
   providers,
   selectedDose,
   trackingSource = "unknown",
@@ -39,3 +40,11 @@ export default function ProviderGrid({
     </div>
   );
 }
+
+// Memoized to prevent the grid from rebuilding its child array when
+// an unrelated parent state changes (e.g., filter drawer open/close
+// on the compare page). Paired with the memoized ProviderCard, this
+// keeps the render cost proportional to the number of cards that
+// actually entered/left the filtered set, not the total 154.
+const ProviderGrid = memo(ProviderGridImpl);
+export default ProviderGrid;

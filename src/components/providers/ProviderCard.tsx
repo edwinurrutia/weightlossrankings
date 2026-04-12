@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Link from "next/link";
 import type { Provider } from "@/lib/types";
 import { computeOverallScore } from "@/lib/scoring";
@@ -69,7 +70,7 @@ interface ProviderCardProps {
   position?: number;
 }
 
-export default function ProviderCard({
+function ProviderCardImpl({
   provider,
   selectedDose,
   trackingSource = "unknown",
@@ -185,3 +186,15 @@ export default function ProviderCard({
     </div>
   );
 }
+
+// React.memo prevents the 154 provider cards on /compare from re-
+// rendering when the user types in the search box or drags the price
+// slider. Props are referentially stable (the Provider object comes
+// from a singleton providers.json import), so a default shallow
+// comparison is sufficient — we don't need a custom areEqual. This
+// is the single highest-impact CWV fix on the compare page: it turns
+// every filter keystroke from "re-render all 154 cards" into
+// "re-render only the cards that actually changed in or out of the
+// filtered set."
+const ProviderCard = memo(ProviderCardImpl);
+export default ProviderCard;

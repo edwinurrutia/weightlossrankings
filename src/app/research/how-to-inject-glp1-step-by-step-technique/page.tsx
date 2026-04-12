@@ -60,7 +60,15 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: { absolute: article.title },
     description: article.description,
-    alternates: { canonical: `/research/${SLUG}` },
+    alternates: {
+      canonical: `/research/${SLUG}`,
+      languages: {
+        "en-US": `/research/${SLUG}`,
+        es: `/es/research/como-inyectar-semaglutida-guia-paso-a-paso`,
+        "es-US": `/es/research/como-inyectar-semaglutida-guia-paso-a-paso`,
+        "x-default": `/research/${SLUG}`,
+      },
+    },
     openGraph: {
       title: { absolute: article.title },
       description: article.description,

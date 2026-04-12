@@ -17,6 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
       languages: {
         "en-US": `/research/${SLUG}`,
         "es-US": "/es/research/cuanto-tarda-glp1-en-hacer-efecto",
+        "x-default": `/research/${SLUG}`,
       },
     },
     openGraph: {

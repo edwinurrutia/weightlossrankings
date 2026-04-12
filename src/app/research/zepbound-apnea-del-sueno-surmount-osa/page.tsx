@@ -49,6 +49,7 @@ export async function generateMetadata(): Promise<Metadata> {
         "en-US": "/research/glp1-side-effects-what-trials-actually-showed",
         "es-US": `/es/research/${SLUG}`,
         es: `/es/research/${SLUG}`,
+        "x-default": "/research/glp1-side-effects-what-trials-actually-showed",
       },
     },
     openGraph: {

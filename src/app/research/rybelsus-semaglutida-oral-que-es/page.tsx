@@ -68,6 +68,7 @@ export async function generateMetadata(): Promise<Metadata> {
         "en-US": "/drugs/semaglutide",
         "es-US": `/es/research/${SLUG}`,
         es: `/es/research/${SLUG}`,
+        "x-default": "/drugs/semaglutide",
       },
     },
     openGraph: {

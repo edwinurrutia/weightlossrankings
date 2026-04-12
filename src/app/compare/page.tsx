@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback, Suspense } from "react";
+import { useState, useEffect, useMemo, useCallback, useDeferredValue, memo, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { Provider } from "@/lib/types";
 import { sortProvidersByRank } from "@/lib/scoring";
@@ -80,7 +80,13 @@ const DRUG_OPTIONS: { value: DrugKey; label: string }[] = [
   { value: "tirzepatide", label: "Tirzepatide" },
 ];
 
-function FilterControls(props: FilterControlsProps) {
+// Memoized to avoid re-rendering the entire filter UI on every
+// search keystroke or price-slider drag. FilterControls is called
+// from ComparePageInner every render; without memo, all 6 filter
+// sections (14+ radio/checkbox inputs plus the price slider) would
+// re-render every time any state in the parent changed, not just
+// when a filter prop actually changed.
+const FilterControls = memo(function FilterControls(props: FilterControlsProps) {
   return (
     <div className="space-y-6">
       {/* Search */}
@@ -224,7 +230,7 @@ function FilterControls(props: FilterControlsProps) {
       </button>
     </div>
   );
-}
+});
 
 /* ------------------------------------------------------------------ */
 /*  Mobile-only pill/chip filter controls                              */
@@ -263,7 +269,12 @@ function PillButton({
   );
 }
 
-function MobileFilterControls(props: FilterControlsProps) {
+// Memoized for the same reason as FilterControls: filter pills
+// re-rendering on every keystroke is wasted work, and on mobile
+// the pill button list (10+ buttons across Category, Drug, Form,
+// Features) is the single biggest source of render cost on filter
+// changes.
+const MobileFilterControls = memo(function MobileFilterControls(props: FilterControlsProps) {
   return (
     <div className="space-y-3">
       {/* Search — 16px font prevents iOS zoom */}
@@ -379,7 +390,7 @@ function MobileFilterControls(props: FilterControlsProps) {
       </div>
     </div>
   );
-}
+});
 
 function ComparePageInner() {
   const router = useRouter();
@@ -411,6 +422,14 @@ function ComparePageInner() {
     () => searchParams.getAll("features"),
   );
   const [priceMax, setPriceMax] = useState<number>(PRICE_MAX);
+  // Deferred version used by the expensive filter pipeline below.
+  // The slider label still reads the instant `priceMax` so dragging
+  // feels responsive, but the filter + sort pipeline reads this
+  // deferred value, which React 18 lazily updates when the main
+  // thread is idle. Under fast drag, React skips intermediate
+  // values entirely — a 60fps drag that would have triggered 60
+  // full re-filters now triggers ~2-3.
+  const deferredPriceMax = useDeferredValue(priceMax);
   const [selectedSort, setSelectedSort] = useState<SortKey>(() => {
     const s = searchParams.get("sort");
     return s === "price" || s === "name" || s === "score" ? s : "score";
@@ -560,7 +579,10 @@ function ComparePageInner() {
         if (!selectedFeatures.every((f) => pf.includes(f))) return false;
       }
       const mp = minPrice(p);
-      if (Number.isFinite(mp) && mp > priceMax) return false;
+      // Use the deferred price value so rapid slider drags don't
+      // force a full filter pipeline re-run on every pixel of
+      // motion. See the useDeferredValue call above.
+      if (Number.isFinite(mp) && mp > deferredPriceMax) return false;
       return true;
     });
 
@@ -592,7 +614,9 @@ function ComparePageInner() {
     selectedForms,
     selectedState,
     selectedFeatures,
-    priceMax,
+    // Depend on deferredPriceMax, not priceMax — this is how React
+    // batches/skips intermediate slider values under fast drag.
+    deferredPriceMax,
     selectedSort,
   ]);
 

@@ -12,7 +12,15 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: { absolute: article.title },
     description: article.description,
-    alternates: { canonical: `/research/${SLUG}` },
+    alternates: {
+      canonical: `/research/${SLUG}`,
+      languages: {
+        "en-US": `/research/${SLUG}`,
+        es: `/es/research/semaglutida-efectos-secundarios-duracion`,
+        "es-US": `/es/research/semaglutida-efectos-secundarios-duracion`,
+        "x-default": `/research/${SLUG}`,
+      },
+    },
     openGraph: {
       title: { absolute: article.title },
       description: article.description,

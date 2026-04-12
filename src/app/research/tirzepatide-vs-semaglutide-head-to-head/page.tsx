@@ -27,6 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
         // hreflang reciprocity check passes for both pairs.
         "es-US": "/es/research/semaglutide-para-que-sirve",
         "es": "/es/research/tirzepatide-para-que-sirve",
+        "x-default": `/research/${SLUG}`,
       },
     },
     openGraph: {

@@ -18,6 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       languages: {
         "en-US": "/research/tirzepatide-vs-semaglutide-head-to-head",
         "es-US": `/research/${SLUG}`,
+        "x-default": "/research/tirzepatide-vs-semaglutide-head-to-head",
       },
     },
     openGraph: {

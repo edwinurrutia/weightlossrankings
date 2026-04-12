@@ -74,6 +74,7 @@ export async function generateMetadata(): Promise<Metadata> {
         "en-US": "/research/glp1-side-effect-questions-answered",
         "es-US": `/research/${SLUG}`,
         es: `/research/${SLUG}`,
+        "x-default": "/research/glp1-side-effect-questions-answered",
       },
     },
     openGraph: {
