@@ -152,8 +152,8 @@ export default function DrugLookupPage() {
       <ToolSchema
         name="Non-GLP-1 Drug Weight Effect Lookup"
         description="20 prescription drugs and their documented weight effects, anchored on PubMed primary sources. Search by name, filter by direction (loss / neutral / gain) and drug class. Includes interaction notes for combining with a GLP-1."
-        url="https://weightlossrankings.org/tools/non-glp1-drug-weight-effect-lookup"
-        image="https://weightlossrankings.org/tools/non-glp1-drug-weight-effect-lookup/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/non-glp1-drug-weight-effect-lookup"
+        image="https://www.weightlossrankings.org/tools/non-glp1-drug-weight-effect-lookup/opengraph-image"
         isMedical={true}
         datePublished="2026-04-08"
       />

@@ -123,8 +123,8 @@ export default function ReconstitutionArticle() {
         name="How to Reconstitute a Compounded GLP-1 Vial"
         description="Step-by-step reconstitution procedure for lyophilized compounded semaglutide or tirzepatide vials using bacteriostatic water, from hand-washing through refrigerated storage."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/research/compounded-glp1-reconstitution-mixing-guide"
-        image="https://weightlossrankings.org/research/compounded-glp1-reconstitution-mixing-guide/opengraph-image"
+        url="https://www.weightlossrankings.org/research/compounded-glp1-reconstitution-mixing-guide"
+        image="https://www.weightlossrankings.org/research/compounded-glp1-reconstitution-mixing-guide/opengraph-image"
         totalTime="PT10M"
       />
       <p data-speakable="lead">

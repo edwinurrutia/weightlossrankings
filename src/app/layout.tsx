@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   description:
     "Independent rankings and reviews of GLP-1 telehealth providers, weight loss programs, and supplements. Compare prices, read expert reviews, find the best option.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org"
   ),
   keywords: [
     "GLP-1 providers",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://weightlossrankings.org",
+    url: "https://www.weightlossrankings.org",
     siteName: "Weight Loss Rankings",
     title:
       "Weight Loss Rankings | Compare GLP-1 Providers, Prices & Reviews 2026",
@@ -125,10 +125,10 @@ export default async function RootLayout({
     "@type": "Organization",
     name: "Weight Loss Rankings",
     alternateName: ["WLR", "weightlossrankings.org"],
-    url: "https://weightlossrankings.org",
+    url: "https://www.weightlossrankings.org",
     logo: {
       "@type": "ImageObject",
-      url: "https://weightlossrankings.org/logo-600.png",
+      url: "https://www.weightlossrankings.org/logo-600.png",
       width: 600,
       height: 600,
     },
@@ -159,21 +159,21 @@ export default async function RootLayout({
     // created" anchor that publishingPrinciples is supposed to
     // resolve to — it used to point at /methodology, which only
     // documents the scoring rubric, not the editorial process.
-    publishingPrinciples: "https://weightlossrankings.org/editorial-policy",
-    actionableFeedbackPolicy: "https://weightlossrankings.org/contact",
+    publishingPrinciples: "https://www.weightlossrankings.org/editorial-policy",
+    actionableFeedbackPolicy: "https://www.weightlossrankings.org/contact",
     // correctionsPolicy now points at the dedicated /corrections page
     // (shipped 2026-04-09) which documents the corrections workflow,
     // verification standards, and the visible correction-stamp format.
     // Used to point at /methodology, which never had a corrections
     // section.
-    correctionsPolicy: "https://weightlossrankings.org/corrections",
-    diversityPolicy: "https://weightlossrankings.org/about",
-    ethicsPolicy: "https://weightlossrankings.org/disclosure",
-    masthead: "https://weightlossrankings.org/authors",
+    correctionsPolicy: "https://www.weightlossrankings.org/corrections",
+    diversityPolicy: "https://www.weightlossrankings.org/about",
+    ethicsPolicy: "https://www.weightlossrankings.org/disclosure",
+    masthead: "https://www.weightlossrankings.org/authors",
     // ownershipFundingInfo discloses the legal parent entity (MEAS
     // Partners LLC) and the affiliate-supported business model — a
     // YMYL trust signal Google reads from the Organization schema.
-    ownershipFundingInfo: "https://weightlossrankings.org/disclosure",
+    ownershipFundingInfo: "https://www.weightlossrankings.org/disclosure",
     sameAs: [],
   };
 
@@ -184,7 +184,7 @@ export default async function RootLayout({
     "@type": "WebSite",
     name: "Weight Loss Rankings",
     alternateName: "WLR",
-    url: "https://weightlossrankings.org",
+    url: "https://www.weightlossrankings.org",
     description:
       "Independent rankings and reviews of GLP-1 telehealth providers, compounded semaglutide and tirzepatide, and the weight loss telehealth market.",
     publisher: {
@@ -192,7 +192,7 @@ export default async function RootLayout({
       name: "Weight Loss Rankings",
       logo: {
         "@type": "ImageObject",
-        url: "https://weightlossrankings.org/logo-600.png",
+        url: "https://www.weightlossrankings.org/logo-600.png",
       },
     },
     potentialAction: {
@@ -200,7 +200,7 @@ export default async function RootLayout({
       target: {
         "@type": "EntryPoint",
         urlTemplate:
-          "https://weightlossrankings.org/compare?q={search_term_string}",
+          "https://www.weightlossrankings.org/compare?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },

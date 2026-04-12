@@ -84,8 +84,8 @@ export default function GlpUnitConverterPage() {
       <ToolSchema
         name="GLP-1 Unit to mg Converter"
         description="Convert prescribed milligrams of compounded semaglutide or tirzepatide to insulin syringe units (and back) at any vial concentration. Includes a reconstitution (BAC water) calculator for lyophilized vials. FDA prescribing information cited."
-        url="https://weightlossrankings.org/tools/glp1-unit-converter"
-        image="https://weightlossrankings.org/tools/glp1-unit-converter/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/glp1-unit-converter"
+        image="https://www.weightlossrankings.org/tools/glp1-unit-converter/opengraph-image"
         isMedical={true}
         datePublished="2026-04-07"
       />

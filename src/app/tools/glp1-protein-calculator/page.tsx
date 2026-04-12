@@ -129,8 +129,8 @@ export default function ProteinCalculatorPage() {
       <ToolSchema
         name="GLP-1 Protein & Macro Calculator"
         description="Daily protein target, BMR, TDEE, and macro split for patients on or starting a GLP-1 receptor agonist. Anchored on Bauer 2013 PROT-AGE, Longland 2016, ISSN 2017, Neeland 2024 GLP-1 lean mass mitigation review, and the Mifflin-St Jeor BMR equation."
-        url="https://weightlossrankings.org/tools/glp1-protein-calculator"
-        image="https://weightlossrankings.org/tools/glp1-protein-calculator/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/glp1-protein-calculator"
+        image="https://www.weightlossrankings.org/tools/glp1-protein-calculator/opengraph-image"
         isMedical={true}
         datePublished="2026-04-07"
       />

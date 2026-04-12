@@ -95,7 +95,7 @@ export default function PenLeftoverCalculatorPage() {
       <ToolSchema
         name="GLP-1 Pen Leftover Units Calculator"
         description="Free GLP-1 pen leftover calculator. Track how many doses remain in your Ozempic or Saxenda multi-dose pen, with FDA-label fill volumes and dose counts. Explains why Wegovy, Zepbound, and Mounjaro pens are single-dose."
-        url="https://weightlossrankings.org/tools/glp1-pen-leftover-calculator"
+        url="https://www.weightlossrankings.org/tools/glp1-pen-leftover-calculator"
         isMedical={true}
         applicationCategory="HealthApplication"
         datePublished="2026-04-07"

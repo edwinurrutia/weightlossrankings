@@ -4,7 +4,7 @@ import { RESEARCH_CLUSTERS, getClusterArticles } from "@/lib/research-clusters";
 import JsonLd from "@/components/shared/JsonLd";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 export const metadata: Metadata = {
   title: "Research Topics — GLP-1 Cardiovascular, Safety, Pricing & More",

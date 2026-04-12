@@ -61,13 +61,13 @@ export default async function TopicPillarPage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://weightlossrankings.org",
+        item: "https://www.weightlossrankings.org",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Learn",
-        item: "https://weightlossrankings.org/learn",
+        item: "https://www.weightlossrankings.org/learn",
       },
       {
         "@type": "ListItem",

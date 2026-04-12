@@ -122,8 +122,8 @@ export default function BariatricEligibilityCheckerPage() {
       <ToolSchema
         name="Bariatric Surgery Eligibility Checker"
         description="Bariatric surgery eligibility under NIH 1991, ASMBS 2022, Medicare NCD 100.1, and major US commercial payers (Aetna, Cigna, UHC, BCBS, Humana). Every payer entry traces to the published clinical policy bulletin."
-        url="https://weightlossrankings.org/tools/bariatric-surgery-eligibility-checker"
-        image="https://weightlossrankings.org/tools/bariatric-surgery-eligibility-checker/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/bariatric-surgery-eligibility-checker"
+        image="https://www.weightlossrankings.org/tools/bariatric-surgery-eligibility-checker/opengraph-image"
         isMedical={true}
         datePublished="2026-04-07"
       />

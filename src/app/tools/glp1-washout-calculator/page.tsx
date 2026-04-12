@@ -72,8 +72,8 @@ export default function WashoutCalculatorPage() {
       <ToolSchema
         name="GLP-1 Washout Calculator"
         description="Free GLP-1 washout calculator. Pick your drug (semaglutide, tirzepatide, orforglipron, or retatrutide) and see exactly how long until 50%, 25%, 10%, 5%, 1% remain after your last dose. Built on FDA-label half-life values, with clinical scenarios for switching, surgery, pregnancy planning, and trial enrollment."
-        url="https://weightlossrankings.org/tools/glp1-washout-calculator"
-        image="https://weightlossrankings.org/tools/glp1-washout-calculator/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/glp1-washout-calculator"
+        image="https://www.weightlossrankings.org/tools/glp1-washout-calculator/opengraph-image"
         isMedical={true}
         datePublished="2026-04-07"
       />

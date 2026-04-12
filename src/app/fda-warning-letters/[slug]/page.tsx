@@ -90,14 +90,14 @@ export default async function FdaWarningLetterDetailPage({
     author: {
       "@type": "Organization",
       name: "Weight Loss Rankings",
-      url: "https://weightlossrankings.org",
+      url: "https://www.weightlossrankings.org",
     },
     publisher: {
       "@type": "Organization",
       name: "Weight Loss Rankings",
       logo: {
         "@type": "ImageObject",
-        url: "https://weightlossrankings.org/logo-600.png",
+        url: "https://www.weightlossrankings.org/logo-600.png",
         width: 600,
         height: 600,
       },

@@ -72,8 +72,8 @@ export default function WeightLossCalculatorPage() {
       <ToolSchema
         name="GLP-1 Weight Loss Calculator"
         description="STEP-1, SURMOUNT-1, and ATTAIN-1 trial-data-backed predictor. Enter your starting weight and target week to see week-by-week predicted weight loss across all FDA-approved GLP-1 weight loss medications."
-        url="https://weightlossrankings.org/tools/glp1-weight-loss-calculator"
-        image="https://weightlossrankings.org/tools/glp1-weight-loss-calculator/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/glp1-weight-loss-calculator"
+        image="https://www.weightlossrankings.org/tools/glp1-weight-loss-calculator/opengraph-image"
         isMedical={true}
         datePublished="2026-04-07"
       />

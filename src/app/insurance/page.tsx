@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 export default function InsuranceIndexPage() {
   const insurers = getAllInsurers().sort(

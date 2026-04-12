@@ -3,7 +3,7 @@ import Link from "next/link";
 import JsonLd from "@/components/shared/JsonLd";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 export const metadata: Metadata = {
   title: "Free GLP-1 Tools & Calculators",

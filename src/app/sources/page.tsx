@@ -5,7 +5,7 @@ import type { CitationCategory, CitationEntry } from "@/lib/citations";
 import JsonLd from "@/components/shared/JsonLd";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 export const metadata: Metadata = {
   title: "Sources & Methodology",
@@ -177,7 +177,7 @@ export default function SourcesPage() {
       url: SITE_URL,
     },
     isAccessibleForFree: true,
-    license: "https://weightlossrankings.org/terms",
+    license: "https://www.weightlossrankings.org/terms",
   };
 
   return (

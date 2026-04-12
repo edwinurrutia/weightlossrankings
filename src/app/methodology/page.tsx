@@ -6,7 +6,7 @@ import JsonLd from "@/components/shared/JsonLd";
 import { getLatestVerificationDate } from "@/lib/pricing-analytics";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 // CreativeWork schema for the methodology page. Tells Google this is
 // the canonical document describing how Weight Loss Rankings scores

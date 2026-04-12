@@ -147,8 +147,8 @@ export default function InjectionTechniqueArticle() {
         name="How to Inject a GLP-1 (Wegovy, Ozempic, Zepbound, Mounjaro)"
         description="Step-by-step injection technique for GLP-1 receptor agonist pre-filled auto-injector pens, sourced from the FDA-approved prescribing information for each drug."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/research/how-to-inject-glp1-step-by-step-technique"
-        image="https://weightlossrankings.org/research/how-to-inject-glp1-step-by-step-technique/opengraph-image"
+        url="https://www.weightlossrankings.org/research/how-to-inject-glp1-step-by-step-technique"
+        image="https://www.weightlossrankings.org/research/how-to-inject-glp1-step-by-step-technique/opengraph-image"
         totalTime="PT5M"
       />
       <p

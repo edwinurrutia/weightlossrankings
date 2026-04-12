@@ -104,8 +104,8 @@ export default function GlpDosePlotterPage() {
       <ToolSchema
         name="GLP-1 Dose & Concentration Plotter"
         description="Interactive pharmacokinetic simulator. Visualize how semaglutide, tirzepatide, orforglipron, and retatrutide build up in the body across the standard titration schedule. Sourced from FDA prescribing information and the published pharmacokinetic literature."
-        url="https://weightlossrankings.org/tools/glp1-dose-plotter"
-        image="https://weightlossrankings.org/tools/glp1-dose-plotter/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/glp1-dose-plotter"
+        image="https://www.weightlossrankings.org/tools/glp1-dose-plotter/opengraph-image"
         isMedical={true}
         datePublished="2026-04-07"
       />

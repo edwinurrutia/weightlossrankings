@@ -79,8 +79,8 @@ export default function BmiCalculatorPage() {
       <ToolSchema
         name="GLP-1 BMI Calculator"
         description="BMI calculator with a GLP-1 outcome overlay. See your current WHO BMI category, your Wegovy/Zepbound FDA eligibility, and what BMI category you would land in at each trial endpoint (STEP-1, SURMOUNT-1, ATTAIN-1)."
-        url="https://weightlossrankings.org/tools/glp1-bmi-calculator"
-        image="https://weightlossrankings.org/tools/glp1-bmi-calculator/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/glp1-bmi-calculator"
+        image="https://www.weightlossrankings.org/tools/glp1-bmi-calculator/opengraph-image"
         isMedical={true}
         datePublished="2026-04-07"
       />

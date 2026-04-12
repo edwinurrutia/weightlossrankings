@@ -72,8 +72,8 @@ export default function DrugInteractionCheckerPage() {
       <ToolSchema
         name="GLP-1 Drug Interaction Checker"
         description="Free GLP-1 drug interaction checker. Search any medication to see how it interacts with Wegovy, Ozempic, Zepbound, Mounjaro, or Foundayo. Severity-tiered results with FDA prescribing-information citations and clear what-to-do guidance."
-        url="https://weightlossrankings.org/tools/glp1-drug-interaction-checker"
-        image="https://weightlossrankings.org/tools/glp1-drug-interaction-checker/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/glp1-drug-interaction-checker"
+        image="https://www.weightlossrankings.org/tools/glp1-drug-interaction-checker/opengraph-image"
         isMedical={true}
         datePublished="2026-04-07"
       />

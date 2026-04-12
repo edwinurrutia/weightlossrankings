@@ -39,7 +39,7 @@ import { RESEARCH_ARTICLES } from "@/lib/research";
 import { getAllWarningLetters } from "@/lib/fda-warning-letters";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 const PUBLICATION_NAME = "Weight Loss Rankings";
 const PUBLICATION_LANGUAGE = "en";

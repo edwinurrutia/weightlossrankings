@@ -74,13 +74,13 @@ export default async function BlogPostPage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://weightlossrankings.org",
+        item: "https://www.weightlossrankings.org",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://weightlossrankings.org/blog",
+        item: "https://www.weightlossrankings.org/blog",
       },
       {
         "@type": "ListItem",
@@ -103,7 +103,7 @@ export default async function BlogPostPage({
     ? {
         "@type": "Organization",
         name: "Weight Loss Rankings",
-        url: "https://weightlossrankings.org",
+        url: "https://www.weightlossrankings.org",
       }
     : {
         "@type": "Person",
@@ -115,7 +115,7 @@ export default async function BlogPostPage({
         worksFor: {
           "@type": "Organization",
           name: "Weight Loss Rankings",
-          url: "https://weightlossrankings.org",
+          url: "https://www.weightlossrankings.org",
         },
       };
 
@@ -133,7 +133,7 @@ export default async function BlogPostPage({
       name: "Weight Loss Rankings",
       logo: {
         "@type": "ImageObject",
-        url: "https://weightlossrankings.org/logo-600.png",
+        url: "https://www.weightlossrankings.org/logo-600.png",
         width: 600,
         height: 600,
       },

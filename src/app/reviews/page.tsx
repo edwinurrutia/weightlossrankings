@@ -5,7 +5,7 @@ import { sortProvidersByRank } from "@/lib/scoring";
 import JsonLd from "@/components/shared/JsonLd";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 export const metadata: Metadata = {
   title: "GLP-1 Provider Reviews — Independent Editorial Reviews",

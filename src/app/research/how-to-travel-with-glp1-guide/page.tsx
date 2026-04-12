@@ -120,8 +120,8 @@ export default function TravelGuideArticle() {
         name="How to Travel With a GLP-1 (Wegovy, Ozempic, Zepbound, Mounjaro, Foundayo)"
         description="Step-by-step guide to traveling with a GLP-1 receptor agonist — TSA rules, cooler bag setup, time zone schedule, and what to do if a pen warms up. Sourced from each drug's FDA prescribing information storage section."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/research/how-to-travel-with-glp1-guide"
-        image="https://weightlossrankings.org/research/how-to-travel-with-glp1-guide/opengraph-image"
+        url="https://www.weightlossrankings.org/research/how-to-travel-with-glp1-guide"
+        image="https://www.weightlossrankings.org/research/how-to-travel-with-glp1-guide/opengraph-image"
       />
       <p data-speakable="lead">
         Traveling with a GLP-1 is one of the most-asked, least-clearly-

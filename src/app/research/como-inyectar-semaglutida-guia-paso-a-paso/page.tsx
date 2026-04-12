@@ -142,8 +142,8 @@ export default function ComoInyectarSemaglutidaArticle() {
         name="Cómo inyectar semaglutida / tirzepatida paso a paso (Wegovy, Ozempic, Zepbound, Mounjaro)"
         description="Guía en español paso a paso para la técnica de inyección subcutánea de agonistas del receptor de GLP-1, basada en la información de prescripción aprobada por la FDA para Wegovy, Ozempic, Zepbound y Mounjaro."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/es/research/como-inyectar-semaglutida-guia-paso-a-paso"
-        image="https://weightlossrankings.org/research/como-inyectar-semaglutida-guia-paso-a-paso/opengraph-image"
+        url="https://www.weightlossrankings.org/es/research/como-inyectar-semaglutida-guia-paso-a-paso"
+        image="https://www.weightlossrankings.org/research/como-inyectar-semaglutida-guia-paso-a-paso/opengraph-image"
         totalTime="PT5M"
       />
       <p

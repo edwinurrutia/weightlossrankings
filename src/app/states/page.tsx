@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 // CollectionPage + ItemList JSON-LD for the states index. Tells
 // Google this is the canonical entry point for the 50 state-specific

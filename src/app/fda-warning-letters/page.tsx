@@ -63,13 +63,13 @@ export default function FdaWarningLettersIndexPage() {
     "@type": "Dataset",
     name: "FDA Warning Letters: Compounded GLP-1 Telehealth Providers",
     description: PAGE_DESCRIPTION,
-    url: "https://weightlossrankings.org/fda-warning-letters",
+    url: "https://www.weightlossrankings.org/fda-warning-letters",
     creator: {
       "@type": "Organization",
       name: "Weight Loss Rankings",
     },
     license:
-      "https://weightlossrankings.org/terms",
+      "https://www.weightlossrankings.org/terms",
     isAccessibleForFree: true,
     dateModified: freshness,
     distribution: letters.map((l) => ({

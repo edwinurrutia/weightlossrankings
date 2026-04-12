@@ -45,7 +45,7 @@ export const dynamic = "force-static";
 export const revalidate = 3600;
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 export default async function PriceTrackerEmbedPage() {
   const [allProviders, recentChanges, bestDeals] = await Promise.all([

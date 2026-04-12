@@ -129,8 +129,8 @@ export default function SupplementEvidenceGraderPage() {
       <ToolSchema
         name="Supplement Evidence Grader"
         description="16 popular weight-loss supplements graded A through D against verified PubMed primary sources. Search by name, filter by grade, see magnitude vs GLP-1 and the primary study citation for each entry."
-        url="https://weightlossrankings.org/tools/supplement-evidence-grader"
-        image="https://weightlossrankings.org/tools/supplement-evidence-grader/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/supplement-evidence-grader"
+        image="https://www.weightlossrankings.org/tools/supplement-evidence-grader/opengraph-image"
         isMedical={true}
         datePublished="2026-04-08"
       />

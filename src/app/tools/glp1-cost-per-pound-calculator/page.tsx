@@ -142,7 +142,7 @@ export default function CostPerPoundCalculatorPage() {
       <ToolSchema
         name="GLP-1 Cost Per Pound Lost Calculator"
         description="Convert any GLP-1 monthly price into dollars per pound lost using STEP-1, SURMOUNT-1, ATTAIN-1, and SCALE trial data. Compare Wegovy, Zepbound, Foundayo, and Saxenda by efficiency."
-        url="https://weightlossrankings.org/tools/glp1-cost-per-pound-calculator"
+        url="https://www.weightlossrankings.org/tools/glp1-cost-per-pound-calculator"
         isMedical={true}
         datePublished="2026-04-07"
       />

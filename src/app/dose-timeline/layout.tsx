@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 // HowTo schema for the GLP-1 titration timeline. The page is
 // literally a step-by-step ladder showing what dose to take in

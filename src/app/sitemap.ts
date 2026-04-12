@@ -35,7 +35,7 @@ function safeDate(input: string | undefined | null): Date {
 }
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 const CATEGORY_KEYS = [
   "semaglutide-providers",

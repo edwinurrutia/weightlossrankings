@@ -36,7 +36,7 @@ import JsonLd from "@/components/shared/JsonLd";
 import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 export function generateStaticParams() {
   return AUTHORS.map((a) => ({ slug: a.slug }));

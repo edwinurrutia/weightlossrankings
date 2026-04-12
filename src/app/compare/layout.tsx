@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 // Server-side schema for the compare page. The page itself is a
 // client component (interactive filters/sort), so the schema lives

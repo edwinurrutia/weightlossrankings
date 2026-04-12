@@ -114,7 +114,7 @@ export default function PriorAuthLetterGeneratorPage() {
       <ToolSchema
         name="GLP-1 Prior Authorization Letter Generator"
         description="Free GLP-1 prior authorization letter generator. Build a Wegovy, Zepbound, Saxenda, or Foundayo PA letter template using FDA-label language and pivotal trial citations."
-        url="https://weightlossrankings.org/tools/glp1-prior-auth-letter-generator"
+        url="https://www.weightlossrankings.org/tools/glp1-prior-auth-letter-generator"
         isMedical={true}
         datePublished="2026-04-07"
       />

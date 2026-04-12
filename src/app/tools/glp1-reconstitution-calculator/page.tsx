@@ -102,8 +102,8 @@ export default function ReconstitutionCalculatorPage() {
       <ToolSchema
         name="GLP-1 Reconstitution Calculator"
         description="Reconstitution math for compounded GLP-1 vials. Computes concentration (mg/mL), volume per dose, U-100 insulin syringe units, doses per vial, and surfaces FDA maximum-dose guards plus ISMP-aligned safety warnings."
-        url="https://weightlossrankings.org/tools/glp1-reconstitution-calculator"
-        image="https://weightlossrankings.org/tools/glp1-reconstitution-calculator/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/glp1-reconstitution-calculator"
+        image="https://www.weightlossrankings.org/tools/glp1-reconstitution-calculator/opengraph-image"
         isMedical={true}
         datePublished="2026-04-07"
       />

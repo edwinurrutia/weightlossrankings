@@ -71,8 +71,8 @@ export default function InsuranceEmployerCheckerPage() {
       <ToolSchema
         name="Insurance Employer Checker"
         description="Verified employer GLP-1 coverage benchmarks (Amazon, FedEx, JPMorgan Chase, Microsoft, Federal Government, USPS) plus a DIY guide to checking your own employer's pharmacy benefit."
-        url="https://weightlossrankings.org/tools/insurance-employer-checker"
-        image="https://weightlossrankings.org/tools/insurance-employer-checker/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/insurance-employer-checker"
+        image="https://www.weightlossrankings.org/tools/insurance-employer-checker/opengraph-image"
         isMedical={false}
         datePublished="2026-04-08"
       />

@@ -131,8 +131,8 @@ export default function HowToGetGlp1Article() {
         name="How to Get a GLP-1 Prescription: The 3 Legitimate Paths"
         description="Step-by-step guide to getting a GLP-1 prescription in 2026: insurance-covered brand-name, manufacturer direct-pay (NovoCare / LillyDirect), or LegitScript-certified compounded telehealth. Includes eligibility check and paths to avoid."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/research/how-to-get-glp1-prescription"
-        image="https://weightlossrankings.org/research/how-to-get-glp1-prescription/opengraph-image"
+        url="https://www.weightlossrankings.org/research/how-to-get-glp1-prescription"
+        image="https://www.weightlossrankings.org/research/how-to-get-glp1-prescription/opengraph-image"
         totalTime="PT30M"
       />
       <p

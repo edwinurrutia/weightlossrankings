@@ -51,7 +51,7 @@ const CITATIONS = [
       "GLP-1 Compounded Pricing Index 2026.",
     source: "Internal pricing index — live dataset",
     year: 2026,
-    url: "https://weightlossrankings.org/research/glp1-pricing-index",
+    url: "https://www.weightlossrankings.org/research/glp1-pricing-index",
   },
   {
     authors: "U.S. Food and Drug Administration.",
@@ -69,8 +69,8 @@ export default function SavingsCalculatorPage() {
       <ToolSchema
         name="GLP-1 Savings Calculator"
         description="Compare every GLP-1 access path — brand-name with insurance, NovoCare ($199 / $349 / $499 tiers), LillyDirect Zepbound dose-specific vials ($299–$699), compounded vials, and Foundayo at $149/month — and see your monthly, yearly, and 5-year savings or extra cost."
-        url="https://weightlossrankings.org/tools/glp1-savings-calculator"
-        image="https://weightlossrankings.org/tools/glp1-savings-calculator/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/glp1-savings-calculator"
+        image="https://www.weightlossrankings.org/tools/glp1-savings-calculator/opengraph-image"
         isMedical={false}
         datePublished="2026-04-07"
       />

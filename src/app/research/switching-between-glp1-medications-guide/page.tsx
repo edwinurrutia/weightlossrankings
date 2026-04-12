@@ -100,8 +100,8 @@ export default function SwitchingGuideArticle() {
         name="How to Switch Between GLP-1 Medications Safely"
         description="The four general switching principles for moving between semaglutide, tirzepatide, Wegovy, Ozempic, Zepbound, Mounjaro, and Foundayo — sourced from the FDA prescribing information."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/research/switching-between-glp1-medications-guide"
-        image="https://weightlossrankings.org/research/switching-between-glp1-medications-guide/opengraph-image"
+        url="https://www.weightlossrankings.org/research/switching-between-glp1-medications-guide"
+        image="https://www.weightlossrankings.org/research/switching-between-glp1-medications-guide/opengraph-image"
         totalTime="PT15M"
       />
       <p data-speakable="lead">

@@ -109,8 +109,8 @@ export default function FoundayoHowToTakeArticle() {
         name="How to Take Foundayo (Orforglipron) Daily"
         description="Step-by-step guide to taking Foundayo, the first oral non-peptide GLP-1 receptor agonist for weight management. Sourced from the Foundayo prescribing information."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/research/how-to-take-foundayo-orforglipron-guide"
-        image="https://weightlossrankings.org/research/how-to-take-foundayo-orforglipron-guide/opengraph-image"
+        url="https://www.weightlossrankings.org/research/how-to-take-foundayo-orforglipron-guide"
+        image="https://www.weightlossrankings.org/research/how-to-take-foundayo-orforglipron-guide/opengraph-image"
         totalTime="PT5M"
       />
       <p

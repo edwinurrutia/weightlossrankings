@@ -35,7 +35,7 @@
  */
 
 const HOSTS_TO_CHECK = [
-  "https://weightlossrankings.org",
+  "https://www.weightlossrankings.org",
   "https://www.weightlossrankings.org",
 ];
 

@@ -34,7 +34,7 @@ interface ResearchArticleLayoutProps {
 }
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 /**
  * Build the JSON-LD Person reference for an author. We use @id to

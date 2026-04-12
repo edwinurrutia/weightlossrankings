@@ -519,7 +519,7 @@ export default async function DrugPage({
     reviewedBy: {
       "@type": "Organization",
       name: "Weight Loss Rankings Editorial Team",
-      url: "https://weightlossrankings.org/editorial-policy",
+      url: "https://www.weightlossrankings.org/editorial-policy",
     },
   };
 

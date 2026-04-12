@@ -115,8 +115,8 @@ export default function DietArticle() {
         name="How to Eat on a GLP-1: Meal Timing and Structure"
         description="Five evidence-based meal timing and structure rules for patients on semaglutide, tirzepatide, Wegovy, Ozempic, Zepbound, Mounjaro, or Foundayo — sourced from Wharton 2022 clinical practice guidance."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/research/what-to-eat-on-glp1-diet-protein-guide"
-        image="https://weightlossrankings.org/research/what-to-eat-on-glp1-diet-protein-guide/opengraph-image"
+        url="https://www.weightlossrankings.org/research/what-to-eat-on-glp1-diet-protein-guide"
+        image="https://www.weightlossrankings.org/research/what-to-eat-on-glp1-diet-protein-guide/opengraph-image"
         totalTime="PT25M"
       />
       <p data-speakable="lead">

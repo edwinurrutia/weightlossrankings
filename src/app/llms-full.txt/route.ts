@@ -34,7 +34,7 @@ import { RESEARCH_ARTICLES } from "@/lib/research";
 import { TOOLS } from "@/lib/tools";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 export const dynamic = "force-static";
 export const revalidate = 86400;

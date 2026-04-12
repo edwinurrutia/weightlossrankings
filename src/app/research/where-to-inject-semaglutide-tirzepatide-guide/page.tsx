@@ -124,8 +124,8 @@ export default function InjectionGuideArticle() {
         name="Where and How to Inject Semaglutide and Tirzepatide"
         description="Step-by-step injection technique for the three FDA-approved subcutaneous sites (abdomen, front of thigh, back of upper arm), sourced from the Wegovy, Ozempic, Zepbound, and Mounjaro Instructions for Use."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/research/where-to-inject-semaglutide-tirzepatide-guide"
-        image="https://weightlossrankings.org/research/where-to-inject-semaglutide-tirzepatide-guide/opengraph-image"
+        url="https://www.weightlossrankings.org/research/where-to-inject-semaglutide-tirzepatide-guide"
+        image="https://www.weightlossrankings.org/research/where-to-inject-semaglutide-tirzepatide-guide/opengraph-image"
         totalTime="PT3M"
       />
       <p data-speakable="lead">

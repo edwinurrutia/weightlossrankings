@@ -134,8 +134,8 @@ export default function NauseaGuideArticle() {
         name="How to Manage GLP-1 Nausea"
         description="Evidence-based techniques for reducing nausea on semaglutide, tirzepatide, Wegovy, Ozempic, Zepbound, and Mounjaro — sourced from FDA labels and clinical guidance on GLP-1 tolerability."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/research/glp1-nausea-management-practical-guide"
-        image="https://weightlossrankings.org/research/glp1-nausea-management-practical-guide/opengraph-image"
+        url="https://www.weightlossrankings.org/research/glp1-nausea-management-practical-guide"
+        image="https://www.weightlossrankings.org/research/glp1-nausea-management-practical-guide/opengraph-image"
         totalTime="PT20M"
       />
       <p

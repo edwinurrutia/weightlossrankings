@@ -105,7 +105,7 @@ export default function TaperingGuideArticle() {
         name="How to Taper Off a GLP-1 (Wegovy, Ozempic, Zepbound, Mounjaro) Safely"
         description="Step-by-step guide to discontinuing a GLP-1 receptor agonist while minimizing rebound weight regain. Covers the dose-step-down protocol, lean mass preservation, weight tracking, and the rebound red flags that mean you should call your prescriber."
         steps={HOW_TO_STEPS}
-        url="https://weightlossrankings.org/research/how-to-taper-off-glp1-safely-guide"
+        url="https://www.weightlossrankings.org/research/how-to-taper-off-glp1-safely-guide"
       />
       <p data-speakable="lead">
         There is <strong>no FDA-approved tapering schedule</strong>{" "}

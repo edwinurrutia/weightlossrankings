@@ -23,7 +23,7 @@ interface BreadcrumbSchemaProps {
  */
 export default function BreadcrumbSchema({
   items,
-  baseUrl = "https://weightlossrankings.org",
+  baseUrl = "https://www.weightlossrankings.org",
 }: BreadcrumbSchemaProps) {
   if (!items || items.length === 0) return null;
 

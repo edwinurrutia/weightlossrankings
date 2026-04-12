@@ -14,7 +14,7 @@ import BreadcrumbSchema from "@/components/marketing/BreadcrumbSchema";
 import JsonLd from "@/components/shared/JsonLd";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 export const metadata: Metadata = {
   title: "GLP-1 Price Tracker — Monitor Provider Price History",
@@ -82,7 +82,7 @@ export default async function PriceTrackerPage() {
       name: "Weight Loss Rankings",
       url: SITE_URL,
     },
-    license: "https://weightlossrankings.org/terms",
+    license: "https://www.weightlossrankings.org/terms",
     isAccessibleForFree: true,
     inLanguage: "en-US",
     spatialCoverage: {

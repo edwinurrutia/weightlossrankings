@@ -55,7 +55,7 @@ import { getAllWarningLetters } from "@/lib/fda-warning-letters";
 import { getAllVariantPaths } from "@/lib/variants";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://weightlossrankings.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.weightlossrankings.org";
 
 const CATEGORY_KEYS = [
   "semaglutide-providers",

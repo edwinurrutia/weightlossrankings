@@ -105,8 +105,8 @@ export default function ExerciseConfiguratorPage() {
       <ToolSchema
         name="GLP-1 Exercise Pairing Configurator"
         description="Personalized weekly exercise template for patients on (or starting) a GLP-1 receptor agonist. Generates a research-backed weekly plan with resistance days, cardio minutes, step target, and protein guidance based on fitness level, age, goal, and time on the drug."
-        url="https://weightlossrankings.org/tools/glp1-exercise-pairing-configurator"
-        image="https://weightlossrankings.org/tools/glp1-exercise-pairing-configurator/opengraph-image"
+        url="https://www.weightlossrankings.org/tools/glp1-exercise-pairing-configurator"
+        image="https://www.weightlossrankings.org/tools/glp1-exercise-pairing-configurator/opengraph-image"
         isMedical={true}
         datePublished="2026-04-08"
       />
